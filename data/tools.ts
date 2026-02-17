@@ -1,0 +1,274 @@
+import type { Tool } from "@/lib/types";
+
+export const tools: Tool[] = [
+  {
+    id: "d41f50a2-3b7c-4f7e-8c73-1b8d0b0fe21a",
+    name: "Notion",
+    description: "문서, 업무, 가벼운 데이터베이스를 통합하는 모듈형 워크스페이스입니다.",
+    problemContexts: [
+      "작업이 여러 곳에 흩어져 있다",
+      "팀 지식이 너무 많은 도구에 분산되어 있다",
+      "프로젝트를 한곳에서 관리하고 싶다"
+    ],
+    whyExist: "공유 폴더만으로는 한계가 생기면서, 노트와 업무, 지식을 함께 관리하는 운영 시스템이 필요해졌습니다.",
+    impact: {
+      judgmentSpeed: 6,
+      thinkingDepth: 7,
+      executionDensity: 6,
+      collaborationClarity: 5
+    },
+    bestCase: "우선순위와 의사결정 이력이 투명하게 보이는 공통 작업 맥락을 빠르게 만들 수 있습니다.",
+    worstCase: "문서는 많아지지만 결론이 쌓이지 않는 거대한 위키로 변질될 수 있습니다.",
+    verdictBadges: {
+      timeSaver: true,
+      thinkCarefully: true,
+      lockinRisk: true
+    },
+    alternatives: ["Linear + Google Docs", "Plain markdown + Git"],
+    createdAt: "2024-02-01T10:00:00Z",
+    updatedAt: "2024-02-01T10:00:00Z"
+  },
+  {
+    id: "55d7ad1a-4c1c-4e58-a2d6-40a00d092e2a",
+    name: "Figma",
+    description: "디자인 협업과 프로토타이핑을 위한 협업 플랫폼입니다.",
+    problemContexts: [
+      "디자인 피드백 루프가 느리다",
+      "제품 관점을 팀이 함께 정리해야 한다",
+      "직군 간 정렬이 계속 흔들린다"
+    ],
+    whyExist: "디자인 작업이 개인 PC에 고립되지 않고, 팀 단위 협업 프로세스로 돌아가야 했기 때문입니다.",
+    impact: {
+      judgmentSpeed: 7,
+      thinkingDepth: 6,
+      executionDensity: 8,
+      collaborationClarity: 9
+    },
+    bestCase: "디자인을 공통 대화로 바꿔 제품, 개발, 리더십 간 해석 차이를 크게 줄일 수 있습니다.",
+    worstCase: "소유권 없는 피드백이 과도하게 쌓이면 의사결정이 댓글 뒤에 묻힐 수 있습니다.",
+    verdictBadges: {
+      timeSaver: true,
+      thinkCarefully: false,
+      lockinRisk: true
+    },
+    alternatives: ["Pen + paper workshops", "Adobe XD"],
+    createdAt: "2024-02-02T10:00:00Z",
+    updatedAt: "2024-02-02T10:00:00Z"
+  },
+  {
+    id: "ef6b79b4-7c1e-4df0-95f1-9011f412e1cb",
+    name: "Slack",
+    description: "실시간 팀 커뮤니케이션 허브입니다.",
+    problemContexts: [
+      "팀 커뮤니케이션이 자주 끊긴다",
+      "중요한 맥락이 이메일에서 유실된다",
+      "더 빠른 협업 조율이 필요하다"
+    ],
+    whyExist: "이메일만으로는 속도를 따라가기 어려워, 빠른 조율과 맥락 공유를 위한 실시간 공간이 필요해졌습니다.",
+    impact: {
+      judgmentSpeed: 8,
+      thinkingDepth: 4,
+      executionDensity: 7,
+      collaborationClarity: 6
+    },
+    bestCase: "신호를 눈에 보이게 유지해 대기 시간을 줄이고 정렬 속도를 높일 수 있습니다.",
+    worstCase: "알림 중심 흐름이 과해지면 깊은 사고와 몰입 업무를 방해할 수 있습니다.",
+    verdictBadges: {
+      timeSaver: true,
+      thinkCarefully: true,
+      lockinRisk: true
+    },
+    alternatives: ["Twist", "Async standups + email"],
+    createdAt: "2024-02-03T10:00:00Z",
+    updatedAt: "2024-02-03T10:00:00Z"
+  },
+  {
+    id: "f33e7f82-0d1c-4f57-9c5f-9a8e8e251e88",
+    name: "Linear",
+    description: "빠른 제품 팀을 위한 이슈 트래킹 도구입니다.",
+    problemContexts: [
+      "무엇이 중요한지 자주 놓친다",
+      "제품 실행 흐름이 산만하다",
+      "계획 정밀도를 높여야 한다"
+    ],
+    whyExist: "기존 티켓 시스템이 현대 팀의 속도를 따라가지 못하면서, 선명한 실행 관리가 경쟁력이 되었기 때문입니다.",
+    impact: {
+      judgmentSpeed: 7,
+      thinkingDepth: 5,
+      executionDensity: 8,
+      collaborationClarity: 7
+    },
+    bestCase: "무엇을 왜 출시하는지 모두가 같은 기준으로 볼 수 있는 선명한 실행 체계를 만듭니다.",
+    worstCase: "처리량은 늘어나지만 제품의 본질적 불확실성을 가리는 방향으로 흐를 수 있습니다.",
+    verdictBadges: {
+      timeSaver: true,
+      thinkCarefully: false,
+      lockinRisk: false
+    },
+    alternatives: ["Trello", "Shortcut"],
+    createdAt: "2024-02-04T10:00:00Z",
+    updatedAt: "2024-02-04T10:00:00Z"
+  },
+  {
+    id: "58dc3f0a-6e9d-4f21-a7c5-2e2186a42e8f",
+    name: "Airtable",
+    description: "운영 데이터와 지식 관리를 위한 유연한 데이터베이스-스프레드시트 하이브리드입니다.",
+    problemContexts: [
+      "가벼운 내부 운영 도구가 필요하다",
+      "데이터가 너무 많은 스프레드시트에 흩어져 있다",
+      "운영이 임시방편으로 돌아간다"
+    ],
+    whyExist: "엔지니어링 리소스 없이도 데이터베이스 수준의 구조를 쓰고 싶어하는 팀 수요가 커졌기 때문입니다.",
+    impact: {
+      judgmentSpeed: 6,
+      thinkingDepth: 6,
+      executionDensity: 6,
+      collaborationClarity: 5
+    },
+    bestCase: "비개발자도 빠르게 구조화된 워크플로우를 만들고 운영할 수 있습니다.",
+    worstCase: "통제가 없는 상태로 확장되면 취약한 패치워크가 되어 유지보수가 어려워집니다.",
+    verdictBadges: {
+      timeSaver: true,
+      thinkCarefully: true,
+      lockinRisk: true
+    },
+    alternatives: ["Google Sheets + AppScript", "Retool"],
+    createdAt: "2024-02-05T10:00:00Z",
+    updatedAt: "2024-02-05T10:00:00Z"
+  },
+  {
+    id: "a1aa1f1d-67f8-4dbd-aec0-2ed51b932d0a",
+    name: "Miro",
+    description: "워크숍과 아이데이션을 위한 협업 화이트보드입니다.",
+    problemContexts: [
+      "워크숍이 평면적으로 느껴진다",
+      "원격 브레인스토밍 에너지가 부족하다",
+      "전략을 시각화하기 어렵다"
+    ],
+    whyExist: "원격 팀이 실시간으로 시각 사고를 공유하고 공동 제작할 수 있는 공간이 필요했기 때문입니다.",
+    impact: {
+      judgmentSpeed: 5,
+      thinkingDepth: 7,
+      executionDensity: 4,
+      collaborationClarity: 7
+    },
+    bestCase: "추상적인 논의를 시각화해 실행 전에 정렬 품질을 높일 수 있습니다.",
+    worstCase: "결론 없이 스티키 노트만 늘어나는 회의 보드가 될 위험이 있습니다.",
+    verdictBadges: {
+      timeSaver: false,
+      thinkCarefully: true,
+      lockinRisk: false
+    },
+    alternatives: ["Physical workshops", "FigJam"],
+    createdAt: "2024-02-06T10:00:00Z",
+    updatedAt: "2024-02-06T10:00:00Z"
+  },
+  {
+    id: "b559d3ef-7c52-4ed0-9e84-2f5b1a9775b4",
+    name: "Zapier",
+    description: "코드 없이 여러 앱을 연결해 자동화하는 플랫폼입니다.",
+    problemContexts: [
+      "수작업 인수인계로 속도가 떨어진다",
+      "개발 리소스 없이 빠른 자동화가 필요하다",
+      "반복 입력 작업이 많다"
+    ],
+    whyExist: "개발자 대기열을 기다리지 않고도 현업이 직접 자동화를 구축할 필요가 커졌기 때문입니다.",
+    impact: {
+      judgmentSpeed: 7,
+      thinkingDepth: 4,
+      executionDensity: 9,
+      collaborationClarity: 5
+    },
+    bestCase: "저부가가치 업무를 줄여 병목 없이 운영 흐름을 유지할 수 있습니다.",
+    worstCase: "소유권 없는 자동화 체인이 늘어나면 장애 시 복구가 어려워질 수 있습니다.",
+    verdictBadges: {
+      timeSaver: true,
+      thinkCarefully: true,
+      lockinRisk: true
+    },
+    alternatives: ["Make", "n8n"],
+    createdAt: "2024-02-07T10:00:00Z",
+    updatedAt: "2024-02-07T10:00:00Z"
+  },
+  {
+    id: "6b6f9d15-0a05-4c34-8a6b-4d6b5a6ae7ea",
+    name: "Jasper",
+    description: "마케팅/콘텐츠 팀을 위한 AI 글쓰기 보조 도구입니다.",
+    problemContexts: [
+      "콘텐츠 백로그가 너무 빠르게 쌓인다",
+      "브랜드 톤앤매너가 들쭉날쭉하다",
+      "초안 작성 속도를 높여야 한다"
+    ],
+    whyExist: "마케팅 팀이 속도를 유지하면서도 더 많은 콘텐츠를 생산해야 했기 때문입니다.",
+    impact: {
+      judgmentSpeed: 8,
+      thinkingDepth: 3,
+      executionDensity: 7,
+      collaborationClarity: 4
+    },
+    bestCase: "초안 작성 시간을 줄여 사람이 전략적 편집과 메시지 완성도에 집중할 수 있습니다.",
+    worstCase: "표준화된 문구가 늘어나 브랜드의 미묘한 톤이 약해질 수 있습니다.",
+    verdictBadges: {
+      timeSaver: true,
+      thinkCarefully: true,
+      lockinRisk: false
+    },
+    alternatives: ["Human editorial sprints", "Grammarly"],
+    createdAt: "2024-02-08T10:00:00Z",
+    updatedAt: "2024-02-08T10:00:00Z"
+  },
+  {
+    id: "d07d34fb-2cd2-4fcb-95dd-e1fceaa52d27",
+    name: "Gong",
+    description: "영업 대화 분석 기반의 수익 인텔리전스 플랫폼입니다.",
+    problemContexts: [
+      "영업 통화가 블랙박스처럼 관리된다",
+      "코칭이 경험담 중심으로 이루어진다",
+      "딜 가시성을 더 높여야 한다"
+    ],
+    whyExist: "CRM 메모만으로는 한계가 있어, 데이터 기반 코칭과 영업 대화 가시성이 필요했기 때문입니다.",
+    impact: {
+      judgmentSpeed: 6,
+      thinkingDepth: 6,
+      executionDensity: 6,
+      collaborationClarity: 7
+    },
+    bestCase: "정성적 대화를 코칭 신호로 전환해 딜 성과 개선에 직접 기여할 수 있습니다.",
+    worstCase: "감시받는 느낌이 강해지면 팀 신뢰와 진정성이 훼손될 수 있습니다.",
+    verdictBadges: {
+      timeSaver: false,
+      thinkCarefully: true,
+      lockinRisk: true
+    },
+    alternatives: ["Manual call reviews", "Chorus"],
+    createdAt: "2024-02-09T10:00:00Z",
+    updatedAt: "2024-02-09T10:00:00Z"
+  },
+  {
+    id: "e357c35d-bfd4-4c14-aad0-9910de98837f",
+    name: "Replit",
+    description: "AI 코파일럿을 포함한 브라우저 기반 개발 환경입니다.",
+    problemContexts: [
+      "빠른 프로토타이핑이 필요하다",
+      "엔지니어 온보딩이 오래 걸린다",
+      "코딩 입문 장벽이 높다"
+    ],
+    whyExist: "환경 설정 부담 없이 즉시 개발을 시작하고, AI 보조를 함께 활용하려는 요구가 커졌기 때문입니다.",
+    impact: {
+      judgmentSpeed: 7,
+      thinkingDepth: 5,
+      executionDensity: 8,
+      collaborationClarity: 6
+    },
+    bestCase: "개발 환경 준비 시간을 줄여 아이디어를 수분 내 검증할 수 있습니다.",
+    worstCase: "기반 아키텍처 이해 없이 데모 중심 개발로 흐를 위험이 있습니다.",
+    verdictBadges: {
+      timeSaver: true,
+      thinkCarefully: true,
+      lockinRisk: false
+    },
+    alternatives: ["Local dev environments", "GitHub Codespaces"],
+    createdAt: "2024-02-10T10:00:00Z",
+    updatedAt: "2024-02-10T10:00:00Z"
+  }
+];
