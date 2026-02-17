@@ -2,7 +2,7 @@
 
 A judgment-driven review and curation platform for SaaS and AI tools. This MVP emphasizes human impact, cognitive trade-offs, and problem-first discovery.
 
-## Whatâ€™s included
+## What¡¯s included
 - **Next.js UI** with landing, search, tool review, and about pages.
 - **Judgment-first data model** with human impact scores and verdict badges.
 - **API routes** for tools, search, and admin creation with validation.
