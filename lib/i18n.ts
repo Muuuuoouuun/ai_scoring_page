@@ -86,7 +86,15 @@ export const dictionary = {
     workGuide: "실무 사용 추천 가이드",
     howToUse: "어떻게 쓰나",
     tips: "추천 팁",
-    scoreLabels: ["기능 완성도", "UI/UX", "에러/안정성", "쾌적도", "가격 합리성"]
+    scoreLabels: ["기능 완성도", "UI/UX", "에러/안정성", "쾌적도", "가격 합리성"],
+    tabReview: "리뷰",
+    tabDiscussion: "토론",
+    tabCommunity: "커뮤니티",
+    navCommunity: "커뮤니티",
+    communityHeadline: "함께 판단을 공유하세요",
+    communitySubline: "최신 리뷰, 인기 툴에 대한 토론, 실무 경험을 나눕니다.",
+    latestReviews: "최신 / 인기 리뷰",
+    popularDiscussions: "인기 토론"
   },
   en: {
     navSearch: "Search",
@@ -173,7 +181,15 @@ export const dictionary = {
     workGuide: "Practical usage guide",
     howToUse: "How to use",
     tips: "Tip",
-    scoreLabels: ["Functionality", "UI/UX", "Reliability", "Comfort", "Pricing fairness"]
+    scoreLabels: ["Functionality", "UI/UX", "Reliability", "Comfort", "Pricing fairness"],
+    tabReview: "Review",
+    tabDiscussion: "Discussion",
+    tabCommunity: "Community",
+    navCommunity: "Community",
+    communityHeadline: "Share your judgment",
+    communitySubline: "Latest reviews, popular tool discussions, and field experiences.",
+    latestReviews: "Latest / Popular Reviews",
+    popularDiscussions: "Popular Discussions"
   }
 } as const;
 

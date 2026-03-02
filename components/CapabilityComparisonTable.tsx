@@ -13,12 +13,12 @@ export function CapabilityComparisonTable({
   const { t } = useLanguage();
 
   return (
-    <section className="card">
-      <strong>{t.comparisonTitle}</strong>
+    <section className="card feature-card">
+      <strong>🎯 {t.comparisonTitle}</strong>
       <div className="comparison-table" role="table" aria-label="도구 기능 비교표">
         <div className="comparison-head" role="row">
           <span>{t.comparisonTarget}</span>
-          <span>
+          <span className="highlight-better">
             {toolName} {t.comparisonBetter}
           </span>
           <span>
@@ -28,8 +28,8 @@ export function CapabilityComparisonTable({
         {rows.map((row) => (
           <div key={row.competitor} className="comparison-row" role="row">
             <strong>{row.competitor}</strong>
-            <span>{row.worksBetterHere}</span>
-            <span>{row.weakerHere}</span>
+            <span className="highlight-better-text">{row.worksBetterHere}</span>
+            <span className="text-muted">{row.weakerHere}</span>
           </div>
         ))}
       </div>

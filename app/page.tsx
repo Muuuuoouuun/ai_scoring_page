@@ -14,16 +14,16 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
-      <PrinciplesBar />
       <ProblemCategoryList />
       <section className="section">
-        <h2>{t.featuredTitle}</h2>
+        <h2 className="section-title">{t.featuredTitle}</h2>
         <div className="grid grid-3">
           {featured.map((tool) => (
             <ToolCard key={tool.id} tool={tool} />
           ))}
         </div>
       </section>
+      <PrinciplesBar />
     </main>
   );
 }

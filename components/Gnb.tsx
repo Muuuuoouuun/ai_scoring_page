@@ -13,6 +13,7 @@ export function Gnb() {
       </Link>
       <div className="nav-links">
         <Link href="/search">{t.navSearch}</Link>
+        <Link href="/community">{t.navCommunity}</Link>
         <Link href="/about">{t.navAbout}</Link>
       </div>
       <div className="lang-switch" aria-label="Language switch">

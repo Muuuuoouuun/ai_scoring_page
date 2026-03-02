@@ -105,24 +105,30 @@ export default function SearchClient({
   return (
     <div className="section">
       <div className="search-panel" aria-label={lang === "ko" ? "도구 검색 및 필터" : "Search and filter tools"}>
-        <label>
-          {t.searchKeyword}
+        <div className="search-form-group">
+          <label className="search-form-label" htmlFor="search-keyword">
+            {t.searchKeyword}
+          </label>
           <input
+            id="search-keyword"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder={t.searchKeywordPlaceholder}
             aria-label={t.searchKeyword}
           />
-        </label>
-        <label>
-          {t.searchProblem}
+        </div>
+        <div className="search-form-group">
+          <label className="search-form-label" htmlFor="search-problem">
+            {t.searchProblem}
+          </label>
           <input
+            id="search-problem"
             value={problem}
             onChange={(event) => setProblem(event.target.value)}
             placeholder={t.searchProblemPlaceholder}
             aria-label={t.searchProblem}
           />
-        </label>
+        </div>
         <div className="chip-group" role="list" aria-label={lang === "ko" ? "빠른 문제 상황" : "Quick contexts"}>
           {problemContexts.map((context) => (
             <button
@@ -135,9 +141,9 @@ export default function SearchClient({
             </button>
           ))}
         </div>
-        <fieldset>
-          <legend>{t.searchFilterLegend}</legend>
-          <div className="badge-list badge-filter">
+        <fieldset className="search-fieldset">
+          <legend className="search-fieldset-legend">{t.searchFilterLegend}</legend>
+          <div className="badge-filter">
             {[
               { id: "timeSaver", label: t.verdict[0], description: badgeDescriptions[lang][0] },
               { id: "thinkCarefully", label: t.verdict[1], description: badgeDescriptions[lang][1] },
@@ -149,8 +155,10 @@ export default function SearchClient({
                   checked={badges.includes(badge.id)}
                   onChange={() => toggleBadge(badge.id)}
                 />
-                <span>{badge.label}</span>
-                <small>{badge.description}</small>
+                <div className="badge-option-content">
+                  <span>{badge.label}</span>
+                  <small>{badge.description}</small>
+                </div>
               </label>
             ))}
           </div>

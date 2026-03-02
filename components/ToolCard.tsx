@@ -16,10 +16,10 @@ export function ToolCard({ tool }: { tool: Tool }) {
         <strong>{tool.name}</strong>
       </div>
       <div>
-        <p>{tool.description}</p>
+        <p className="tool-card-desc">{tool.description}</p>
       </div>
       <VerdictBadgeList badges={tool.verdictBadges} />
-      <div>
+      <div className="tool-card-footer">
         <Link className="tool-link" href={`/tools/${tool.id}`}>
           {t.readReview}
         </Link>

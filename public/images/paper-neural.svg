@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Paper Texture noise -->
+    <filter id="paperNoise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch" result="noise" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0, 0 0.98 0 0 0, 0 0.95 0 0 0, 0 0 0 0.04 0" in="noise" result="coloredNoise" />
+      <feBlend in="SourceGraphic" in2="coloredNoise" mode="multiply" />
+    </filter>
+
+    <!-- Warm ivory gradient -->
+    <linearGradient id="ivoryBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFCF9" />
+      <stop offset="50%" stop-color="#F7F5EF" />
+      <stop offset="100%" stop-color="#EFECE5" />
+    </linearGradient>
+
+    <!-- Pencil line styling (rough edge simulation via turbulence) -->
+    <filter id="pencilStroke">
+      <feTurbulence type="fractalNoise" baseFrequency="0.2" numOctaves="2" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+
+  <!-- Base Paper -->
+  <rect width="100%" height="100%" fill="url(#ivoryBg)" filter="url(#paperNoise)" />
+
+  <!-- Flowing Pencil Neural Waves (Left to Right) -->
+  <g fill="none" stroke="#2B2D33" stroke-width="0.8" opacity="0.4" filter="url(#pencilStroke)">
+    
+    <!-- Organic flowing lines (Signal) -->
+    <path d="M-50,300 C150,200 250,400 450,250 C550,175 600,320 700,200" />
+    <path d="M-50,320 C180,250 220,450 480,280 C580,210 620,350 720,220" />
+    <path d="M-50,280 C120,150 280,350 420,220 C520,140 650,280 750,180" />
+    <path d="M-50,340 C200,300 180,480 500,310 C600,240 580,380 740,240" />
+    <path d="M-50,260 C100,100 300,300 400,190 C480,100 680,250 800,120" />
+    <path d="M-50,360 C250,350 150,550 550,340 C650,270 550,420 760,260" />
+
+    <!-- Structuring Network (Right Side Chaos to Order) -->
+    <!-- Nodes -->
+    <g fill="#2B2D33" stroke="none">
+      <circle cx="700" cy="200" r="3" />
+      <circle cx="720" cy="220" r="2.5" />
+      <circle cx="750" cy="180" r="3.5" />
+      <circle cx="740" cy="240" r="2" />
+      <circle cx="800" cy="120" r="3" />
+      <circle cx="760" cy="260" r="2" />
+      
+      <circle cx="850" cy="150" r="4.5" />
+      <circle cx="820" cy="280" r="3" />
+      <circle cx="880" cy="200" r="5" />
+      <circle cx="920" cy="100" r="4" />
+      <circle cx="950" cy="250" r="3.5" />
+      <circle cx="980" cy="180" r="6" />
+      <circle cx="890" cy="320" r="2.5" />
+    </g>
+
+    <g stroke-width="0.5" opacity="0.6">
+      <line x1="700" y1="200" x2="850" y2="150" />
+      <line x1="750" y1="180" x2="850" y2="150" />
+      <line x1="800" y1="120" x2="850" y2="150" />
+      <line x1="800" y1="120" x2="920" y2="100" />
+      <line x1="850" y1="150" x2="880" y2="200" />
+      <line x1="850" y1="150" x2="920" y2="100" />
+      <line x1="720" y1="220" x2="880" y2="200" />
+      <line x1="740" y1="240" x2="820" y2="280" />
+      <line x1="760" y1="260" x2="820" y2="280" />
+      <line x1="820" y1="280" x2="880" y2="200" />
+      <line x1="820" y1="280" x2="890" y2="320" />
+      <line x1="880" y1="200" x2="950" y2="250" />
+      <line x1="880" y1="200" x2="980" y2="180" />
+      <line x1="920" y1="100" x2="980" y2="180" />
+      <line x1="890" y1="320" x2="950" y2="250" />
+      <line x1="950" y1="250" x2="1050" y2="300" />
+      <line x1="980" y1="180" x2="1050" y2="150" />
+      <line x1="920" y1="100" x2="1050" y2="50" />
+      <line x1="890" y1="320" x2="1050" y2="400" />
+    </g>
+  </g>
+</svg>

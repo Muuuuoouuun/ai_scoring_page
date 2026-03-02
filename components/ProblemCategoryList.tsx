@@ -8,16 +8,18 @@ export function ProblemCategoryList() {
 
   return (
     <section className="section">
-      <h2>{t.problemTitle}</h2>
-      <div className="grid grid-3">
+      <div className="section-head text-center">
+        <h2>{t.problemTitle}</h2>
+        <p className="text-muted">{t.problemDesc}</p>
+      </div>
+      <div className="problem-chip-grid">
         {t.problems.map((problem) => (
           <Link
-            className="card"
+            className="problem-chip"
             key={problem}
             href={`/search?problem=${encodeURIComponent(problem)}`}
           >
-            <strong>{problem}</strong>
-            <p>{t.problemDesc}</p>
+            {problem}
           </Link>
         ))}
       </div>
