@@ -10,6 +10,30 @@ const formatDate = (iso: string, locale: string) =>
     timeStyle: "short"
   }).format(new Date(iso));
 
+const TRUST_WEIGHT: Record<string, number> = {
+  "1년 이상": 3,
+  "6개월-1년": 2,
+  "1-6개월": 1,
+  "1개월 미만": 0
+};
+
+function TrustBadge({ review }: { review: UserReview }) {
+  const weight =
+    review.usagePeriod != null ? (TRUST_WEIGHT[review.usagePeriod] ?? 0) : 0;
+  if (!review.role && !review.teamSize && !review.usagePeriod) return null;
+  return (
+    <div className="review-trust-meta">
+      {review.role ? <span className="trust-chip">{review.role}</span> : null}
+      {review.teamSize ? <span className="trust-chip">{review.teamSize}</span> : null}
+      {review.usagePeriod ? (
+        <span className={`trust-chip trust-chip--period trust-weight-${weight}`}>
+          {review.usagePeriod}
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
 export function OneLineReviewForm({ toolId }: { toolId: string }) {
   const { lang, t } = useLanguage();
   const [nickname, setNickname] = useState("");
@@ -18,6 +42,9 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
   const [rating, setRating] = useState(4);
   const [hoverRating, setHoverRating] = useState(0);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const [role, setRole] = useState("");
+  const [teamSize, setTeamSize] = useState("");
+  const [usagePeriod, setUsagePeriod] = useState("");
   const [reviews, setReviews] = useState<UserReview[]>([]);
   const [saved, setSaved] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -50,7 +77,9 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
           line: line.trim(),
           detail: detail.trim() || undefined,
           rating,
-          imageUrl: undefined // image upload requires a file storage backend
+          role: role.trim() || undefined,
+          teamSize: teamSize || undefined,
+          usagePeriod: usagePeriod || undefined
         })
       });
       if (!res.ok) return;
@@ -60,6 +89,9 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
       setLine("");
       setDetail("");
       setRating(4);
+      setRole("");
+      setTeamSize("");
+      setUsagePeriod("");
       setImagePreview(null);
       if (fileInputRef.current) fileInputRef.current.value = "";
       setSaved(true);
@@ -69,6 +101,14 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
     }
   };
 
+  const teamSizeOptions = lang === "ko"
+    ? ["1-10명", "10-50명", "50-200명", "200명+"]
+    : ["1-10", "10-50", "50-200", "200+"];
+
+  const usagePeriodOptions = lang === "ko"
+    ? ["1개월 미만", "1-6개월", "6개월-1년", "1년 이상"]
+    : ["< 1 month", "1-6 months", "6-12 months", "1+ year"];
+
   return (
     <section className="card review-form-card">
       <strong>{t.reviewWrite}</strong>
@@ -77,7 +117,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
         <span className="form-field-label">{t.nickname}</span>
         <input
           value={nickname}
-          onChange={(event) => setNickname(event.target.value)}
+          onChange={(e) => setNickname(e.target.value)}
           maxLength={24}
           placeholder={t.nicknamePlaceholder}
         />
@@ -87,7 +127,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
         <span className="form-field-label">{t.oneLine}</span>
         <input
           value={line}
-          onChange={(event) => setLine(event.target.value)}
+          onChange={(e) => setLine(e.target.value)}
           maxLength={120}
           placeholder={t.oneLinePlaceholder}
         />
@@ -97,10 +137,41 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
         <span className="form-field-label">{t.detail}</span>
         <textarea
           value={detail}
-          onChange={(event) => setDetail(event.target.value)}
+          onChange={(e) => setDetail(e.target.value)}
           rows={4}
           placeholder={t.detailPlaceholder}
         />
+      </div>
+
+      {/* 신뢰도 메타 필드 */}
+      <div className="form-row-3">
+        <div className="form-field">
+          <span className="form-field-label">{t.reviewRole}</span>
+          <input
+            value={role}
+            onChange={(e) => setRole(e.target.value)}
+            maxLength={50}
+            placeholder={t.reviewRolePlaceholder}
+          />
+        </div>
+        <div className="form-field">
+          <span className="form-field-label">{t.reviewTeamSize}</span>
+          <select value={teamSize} onChange={(e) => setTeamSize(e.target.value)}>
+            <option value="">{t.filterAll}</option>
+            {teamSizeOptions.map((opt) => (
+              <option key={opt} value={opt}>{opt}</option>
+            ))}
+          </select>
+        </div>
+        <div className="form-field">
+          <span className="form-field-label">{t.reviewUsagePeriod}</span>
+          <select value={usagePeriod} onChange={(e) => setUsagePeriod(e.target.value)}>
+            <option value="">{t.filterAll}</option>
+            {usagePeriodOptions.map((opt) => (
+              <option key={opt} value={opt}>{opt}</option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div className="form-field">
@@ -197,11 +268,9 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
               </strong>
               <time dateTime={review.createdAt}>{formatDate(review.createdAt, lang === "ko" ? "ko-KR" : "en-US")}</time>
             </div>
-
+            <TrustBadge review={review} />
             <p>{review.line}</p>
-
             {review.detail ? <small>{review.detail}</small> : null}
-
             {review.imageUrl && (
               <div className="review-item-images">
                 <img src={review.imageUrl} alt="Review attachment" />

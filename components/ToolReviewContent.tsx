@@ -10,6 +10,7 @@ import { AlternativesSection } from "@/components/AlternativesSection";
 import { ToolCard } from "@/components/ToolCard";
 import { ScoreBreakdownCard } from "@/components/ScoreBreakdownCard";
 import { CapabilityComparisonTable } from "@/components/CapabilityComparisonTable";
+import { FeatureChecklistSection } from "@/components/FeatureChecklistSection";
 import { PatchNotesSection } from "@/components/PatchNotesSection";
 import { OneLineReviewForm } from "@/components/OneLineReviewForm";
 import { WorkUsageGuide } from "@/components/WorkUsageGuide";
@@ -73,6 +74,7 @@ export function ToolReviewContent({
 
           <aside className="review-sidebar-column">
             <ImpactMeterGrid impact={tool.impact} />
+            <FeatureChecklistSection checklist={insight.featureChecklist} />
             <CapabilityComparisonTable toolName={tool.name} rows={insight.comparisons} />
             <WorkUsageGuide playbook={insight.workPlaybook} />
             <AlternativesSection alternatives={tool.alternatives} />

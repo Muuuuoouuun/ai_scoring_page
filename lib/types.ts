@@ -34,6 +34,10 @@ export type UserReview = {
   detail?: string;
   rating: number;
   imageUrl?: string;
+  // 신뢰도 메타 (커뮤니티 가중치용)
+  role?: string;
+  teamSize?: string;
+  usagePeriod?: string;
   createdAt: string;
 };
 
@@ -45,6 +49,8 @@ export type PatchUpdate = {
   errorRisk: string;
   authorId?: string;
   patchDate: string;
+  impact?: "high" | "medium" | "low";
+  isOutage?: boolean;
   createdAt: string;
 };
 
