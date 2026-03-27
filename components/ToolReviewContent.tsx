@@ -35,18 +35,21 @@ export function ToolReviewContent({
 
       <div className="tabs-nav">
         <button
+          data-tab="review"
           className={`tab-btn ${activeTab === "review" ? "active" : ""}`}
           onClick={() => setActiveTab("review")}
         >
           {t.tabReview}
         </button>
         <button
+          data-tab="discussion"
           className={`tab-btn ${activeTab === "discussion" ? "active" : ""}`}
           onClick={() => setActiveTab("discussion")}
         >
           {t.tabDiscussion}
         </button>
         <button
+          data-tab="community"
           className={`tab-btn ${activeTab === "community" ? "active" : ""}`}
           onClick={() => setActiveTab("community")}
         >

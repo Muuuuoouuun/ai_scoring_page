@@ -1758,5 +1758,259 @@ textarea {
   background: rgba(37, 99, 235, 0.05);
   padding: 0.5rem;
   border-radius: 8px;
+
   border: 1px dashed rgba(37, 99, 235, 0.2);
+}
+/* =========================================
+   Auth Pages
+   ========================================= */
+
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.5rem;
+  min-width: 180px;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: var(--ink);
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-weight: 500;
+  transition: background 0.15s;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background: rgba(37, 99, 235, 0.06);
+  color: var(--accent);
+}
+
+/* =========================================
+   Admin Dashboard
+   ========================================= */
+
+.admin-table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.admin-table th {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.admin-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tr:hover td {
+  background: rgba(37, 99, 235, 0.02);
+}
+
+.danger-button {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #dc2626;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.15s;
+}
+
+.danger-button:hover {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+/* =========================================
+   Community Rank
+   ========================================= */
+
+.rank-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.75rem;
+}
+
+.rank-position {
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+.rank-user-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.rank-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+}
+
+/* =========================================
+   Compare Page
+   ========================================= */
+
+.compare-grid {
+  display: grid;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.compare-header-cell {
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  border-bottom: 1px solid var(--border);
+}
+
+.compare-tool-header {
+  text-align: center;
+  border-left: 1px solid var(--border);
+}
+
+.compare-section-label {
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  padding: 0.75rem 0 0.25rem;
+  margin-top: 1rem;
+}
+
+.compare-row {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.compare-label {
+  padding: 0.875rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.compare-cell {
+  padding: 0.875rem 1.25rem;
+  border-left: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+}
+
+/* =========================================
+   Beginner Path
+   ========================================= */
+
+.beginner-path-card {
+  gap: 0;
+}
+
+.beginner-path-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 0;
+}
+
+.beginner-step-badge {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-top: 0.2rem;
+}
+
+/* =========================================
+   Discussion Thread
+   ========================================= */
+
+.discussion-thread {
+  gap: 0.75rem;
+}
+
+.discussion-replies {
+  border-top: 1px solid var(--border);
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.discussion-reply {
+  padding: 0.75rem 1rem;
+  background: rgba(37, 99, 235, 0.04);
+  border-radius: 10px;
+  border-left: 2px solid rgba(37, 99, 235, 0.2);
+}
+
+/* =========================================
+   Problem chip active state
+   ========================================= */
+
+.problem-chip.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* =========================================
+   Nav links responsive
+   ========================================= */
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
 }
