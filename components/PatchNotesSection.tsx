@@ -2,9 +2,13 @@
 
 import { useEffect, useMemo, useState } from "react";
 import type { PatchNote } from "@/lib/insights";
+import type { PatchUpdate } from "@/lib/types";
 import { useLanguage } from "@/components/LanguageProvider";
+import { ADMIN_USER_ID } from "@/lib/admin";
 
-const storageKey = (toolId: string) => `g2-company-patch-notes-${toolId}`;
+function toPatchNote(p: PatchUpdate): PatchNote {
+  return { date: p.patchDate, title: p.title, change: p.change, errorRisk: p.errorRisk };
+}
 
 export function PatchNotesSection({
   toolId,
@@ -17,31 +21,45 @@ export function PatchNotesSection({
   const [title, setTitle] = useState("");
   const [change, setChange] = useState("");
   const [errorRisk, setErrorRisk] = useState("");
-  const [localNotes, setLocalNotes] = useState<PatchNote[]>([]);
+  const [serverNotes, setServerNotes] = useState<PatchNote[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [saved, setSaved] = useState(false);
 
-  const combinedNotes = useMemo(() => [...localNotes, ...notes], [localNotes, notes]);
+  const combinedNotes = useMemo(
+    () => [...serverNotes, ...notes],
+    [serverNotes, notes]
+  );
 
   useEffect(() => {
-    const raw = localStorage.getItem(storageKey(toolId));
-    if (!raw) return;
-    const parsed = JSON.parse(raw) as PatchNote[];
-    setLocalNotes(parsed);
+    fetch(`/api/patch-notes?toolId=${encodeURIComponent(toolId)}`)
+      .then((res) => res.json())
+      .then((data) => setServerNotes((data.patches ?? []).map(toPatchNote)))
+      .catch(() => {});
   }, [toolId]);
 
-  const onAdd = () => {
-    if (!title || !change || !errorRisk) return;
-    const entry: PatchNote = {
-      date: new Date().toISOString().slice(0, 10),
-      title,
-      change,
-      errorRisk
-    };
-    const next = [entry, ...localNotes];
-    setLocalNotes(next);
-    localStorage.setItem(storageKey(toolId), JSON.stringify(next));
-    setTitle("");
-    setChange("");
-    setErrorRisk("");
+  const onAdd = async () => {
+    if (!title || !change || !errorRisk || loading) return;
+    setLoading(true);
+    try {
+      const res = await fetch("/api/patch-notes", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Admin-Token": ADMIN_USER_ID
+        },
+        body: JSON.stringify({ toolId, title, change, errorRisk })
+      });
+      if (!res.ok) return;
+      const { patch } = await res.json();
+      setServerNotes((prev) => [toPatchNote(patch), ...prev]);
+      setTitle("");
+      setChange("");
+      setErrorRisk("");
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2000);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -80,8 +98,13 @@ export function PatchNotesSection({
           rows={3}
           placeholder={t.patchRiskInput}
         />
-        <button className="secondary-button" type="button" onClick={onAdd}>
-          {t.patchAdd}
+        <button
+          className="secondary-button"
+          type="button"
+          onClick={onAdd}
+          disabled={loading}
+        >
+          {saved ? `✓ ${t.saved}` : t.patchAdd}
         </button>
       </div>
     </section>

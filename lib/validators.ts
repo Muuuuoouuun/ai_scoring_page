@@ -1,5 +1,22 @@
 import { z } from "zod";
 
+export const reviewSchema = z.object({
+  toolId: z.string().uuid(),
+  nickname: z.string().min(1).max(24).default("Anonymous"),
+  line: z.string().min(1).max(120),
+  detail: z.string().max(1000).optional(),
+  rating: z.number().int().min(1).max(5),
+  imageUrl: z.string().url().optional()
+});
+
+export const patchNoteSchema = z.object({
+  toolId: z.string().uuid(),
+  title: z.string().min(2).max(100),
+  change: z.string().min(5).max(1000),
+  errorRisk: z.string().min(5).max(1000),
+  patchDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional()
+});
+
 export const toolSchema = z.object({
   name: z.string().min(2),
   description: z.string().min(10),

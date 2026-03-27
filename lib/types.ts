@@ -25,3 +25,35 @@ export type Tool = {
   createdAt: string;
   updatedAt: string;
 };
+
+export type UserReview = {
+  id: string;
+  toolId: string;
+  nickname: string;
+  line: string;
+  detail?: string;
+  rating: number;
+  imageUrl?: string;
+  createdAt: string;
+};
+
+export type PatchUpdate = {
+  id: string;
+  toolId: string;
+  title: string;
+  change: string;
+  errorRisk: string;
+  authorId?: string;
+  patchDate: string;
+  createdAt: string;
+};
+
+export type AuditLog = {
+  id: string;
+  actorId: string;
+  action: "CREATE_REVIEW" | "CREATE_PATCH_NOTE";
+  resourceType: string;
+  resourceId: string;
+  payload?: unknown;
+  createdAt: string;
+};
