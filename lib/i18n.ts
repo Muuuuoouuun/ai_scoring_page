@@ -94,7 +94,35 @@ export const dictionary = {
     communityHeadline: "함께 판단을 공유하세요",
     communitySubline: "최신 리뷰, 인기 툴에 대한 토론, 실무 경험을 나눕니다.",
     latestReviews: "최신 / 인기 리뷰",
-    popularDiscussions: "인기 토론"
+    popularDiscussions: "인기 토론",
+    // Phase 2: Feature Checklist
+    featureChecklistTitle: "대표 기능 / 안 되는 기능",
+    coreFeaturesLabel: "잘 되는 것",
+    limitationsLabel: "안 되거나 약한 것",
+    featureSupported: "지원",
+    featurePartial: "부분 지원",
+    featureUnsupported: "미지원",
+    // Phase 2: Patch impact
+    patchImpact: "영향도",
+    patchImpactHigh: "높음",
+    patchImpactMedium: "보통",
+    patchImpactLow: "낮음",
+    patchIsOutage: "서비스 장애",
+    // Phase 2: Search filters
+    filterTeamSize: "팀 규모",
+    filterWorkType: "업무 유형",
+    filterDifficulty: "도입 난이도",
+    filterAll: "전체",
+    teamSizes: ["1-10명", "10-100명", "100명+"],
+    workTypes: ["엔지니어링", "디자인", "마케팅", "운영/기획", "영업"],
+    difficulties: ["쉬움", "보통", "어려움"],
+    // Phase 2: Review trust metadata
+    reviewRole: "직무/역할",
+    reviewRolePlaceholder: "예: PM, 마케터, 개발자",
+    reviewTeamSize: "팀 규모",
+    reviewUsagePeriod: "사용 기간",
+    // Phase 2: ToolCard shortDiff
+    shortDiffLabel: "vs 대안"
   },
   en: {
     navSearch: "Search",
@@ -189,7 +217,30 @@ export const dictionary = {
     communityHeadline: "Share your judgment",
     communitySubline: "Latest reviews, popular tool discussions, and field experiences.",
     latestReviews: "Latest / Popular Reviews",
-    popularDiscussions: "Popular Discussions"
+    popularDiscussions: "Popular Discussions",
+    featureChecklistTitle: "What it does / What it can't do",
+    coreFeaturesLabel: "Core strengths",
+    limitationsLabel: "Limitations",
+    featureSupported: "Supported",
+    featurePartial: "Partial",
+    featureUnsupported: "Not supported",
+    patchImpact: "Impact",
+    patchImpactHigh: "High",
+    patchImpactMedium: "Medium",
+    patchImpactLow: "Low",
+    patchIsOutage: "Service outage",
+    filterTeamSize: "Team size",
+    filterWorkType: "Work type",
+    filterDifficulty: "Onboarding",
+    filterAll: "All",
+    teamSizes: ["1-10", "10-100", "100+"],
+    workTypes: ["Engineering", "Design", "Marketing", "Operations", "Sales"],
+    difficulties: ["Easy", "Medium", "Hard"],
+    reviewRole: "Role",
+    reviewRolePlaceholder: "e.g., PM, Marketer, Engineer",
+    reviewTeamSize: "Team size",
+    reviewUsagePeriod: "Usage period",
+    shortDiffLabel: "vs alternatives"
   }
 } as const;
 

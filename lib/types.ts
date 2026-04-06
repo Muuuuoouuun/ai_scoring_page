@@ -25,3 +25,41 @@ export type Tool = {
   createdAt: string;
   updatedAt: string;
 };
+
+export type UserReview = {
+  id: string;
+  toolId: string;
+  nickname: string;
+  line: string;
+  detail?: string;
+  rating: number;
+  imageUrl?: string;
+  // 신뢰도 메타 (커뮤니티 가중치용)
+  role?: string;
+  teamSize?: string;
+  usagePeriod?: string;
+  createdAt: string;
+};
+
+export type PatchUpdate = {
+  id: string;
+  toolId: string;
+  title: string;
+  change: string;
+  errorRisk: string;
+  authorId?: string;
+  patchDate: string;
+  impact?: "high" | "medium" | "low";
+  isOutage?: boolean;
+  createdAt: string;
+};
+
+export type AuditLog = {
+  id: string;
+  actorId: string;
+  action: "CREATE_REVIEW" | "CREATE_PATCH_NOTE";
+  resourceType: string;
+  resourceId: string;
+  payload?: unknown;
+  createdAt: string;
+};

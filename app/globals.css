@@ -1760,3 +1760,189 @@ textarea {
   border-radius: 8px;
   border: 1px dashed rgba(37, 99, 235, 0.2);
 }
+/* ─── Phase 2: Feature Checklist ─── */
+.feature-checklist-card {
+  padding: 1.5rem;
+}
+
+.feature-checklist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .feature-checklist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature-col-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+
+.feature-col-title--good { color: #16a34a; }
+.feature-col-title--bad  { color: #dc2626; }
+
+.feature-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.feature-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.feature-icon {
+  font-size: 0.8rem;
+  font-weight: 800;
+  min-width: 1.1rem;
+  line-height: 1.5;
+}
+
+.feature-supported .feature-icon { color: #16a34a; }
+.feature-partial   .feature-icon { color: #d97706; }
+.feature-unsupported .feature-icon { color: #dc2626; }
+
+.feature-name { font-weight: 600; }
+
+.feature-note {
+  color: var(--muted);
+  font-size: 0.78rem;
+  display: block;
+  margin-top: 0.1rem;
+}
+
+/* ─── Phase 2: ToolCard shortDiff ─── */
+.tool-card-diff {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.35rem;
+  line-height: 1.4;
+}
+
+.tool-card-diff-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin-right: 0.4rem;
+}
+
+/* ─── Phase 2: Patch impact badges ─── */
+.patch-note-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.patch-impact-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.impact-high   { background: rgba(239,68,68,0.12);  color: #dc2626; }
+.impact-medium { background: rgba(245,158,11,0.12); color: #d97706; }
+.impact-low    { background: rgba(22,163,74,0.12);  color: #16a34a; }
+
+.patch-outage-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(239,68,68,0.08);
+  color: #dc2626;
+  border: 1px solid rgba(239,68,68,0.25);
+}
+
+.patch-form-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.patch-impact-select {
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  font-size: 0.875rem;
+}
+
+.patch-outage-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+/* ─── Phase 2: Review trust meta ─── */
+.review-trust-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.35rem 0 0.5rem;
+}
+
+.trust-chip {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: var(--badge);
+  color: var(--accent);
+}
+
+.trust-chip--period.trust-weight-3 { background: rgba(22,163,74,0.12);  color: #16a34a; }
+.trust-chip--period.trust-weight-2 { background: rgba(37,99,235,0.10);  color: var(--accent); }
+.trust-chip--period.trust-weight-1 { background: rgba(107,114,128,0.10); color: var(--muted); }
+.trust-chip--period.trust-weight-0 { background: rgba(107,114,128,0.07); color: var(--muted); }
+
+/* ─── Phase 2: Search meta filters ─── */
+.meta-filter-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .meta-filter-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Phase 2: Review form 3-col ─── */
+.form-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .form-row-3 {
+    grid-template-columns: 1fr;
+  }
+}

@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import type { Tool } from "@/lib/types";
 import { ToolCard } from "@/components/ToolCard";
 import { useLanguage } from "@/components/LanguageProvider";
+import { getToolMeta } from "@/lib/insights";
 
 const badgeDescriptions = {
   ko: [
@@ -19,7 +20,28 @@ const badgeDescriptions = {
   ]
 } as const;
 
-const formatProblem = (problem: string) => problem;
+const TEAM_SIZE_META: Record<string, string[]> = {
+  "1-10명": ["1-10"],
+  "10-100명": ["10-100"],
+  "100명+": ["100+"],
+  "1-10": ["1-10"],
+  "10-100": ["10-100"],
+  "100+": ["100+"]
+};
+
+const WORK_TYPE_META: Record<string, string> = {
+  "엔지니어링": "engineering", "Engineering": "engineering",
+  "디자인": "design", "Design": "design",
+  "마케팅": "marketing", "Marketing": "marketing",
+  "운영/기획": "operations", "Operations": "operations",
+  "영업": "sales", "Sales": "sales"
+};
+
+const DIFFICULTY_META: Record<string, string> = {
+  "쉬움": "easy", "Easy": "easy",
+  "보통": "medium", "Medium": "medium",
+  "어려움": "hard", "Hard": "hard"
+};
 
 export default function SearchClient({
   tools,
@@ -36,23 +58,32 @@ export default function SearchClient({
   const [badges, setBadges] = useState<string[]>(
     searchParams.get("badges")?.split(",").filter(Boolean) ?? []
   );
+  const [teamSize, setTeamSize] = useState(searchParams.get("teamSize") ?? "");
+  const [workType, setWorkType] = useState(searchParams.get("workType") ?? "");
+  const [difficulty, setDifficulty] = useState(searchParams.get("difficulty") ?? "");
 
   useEffect(() => {
     const params = new URLSearchParams();
     if (query) params.set("query", query);
     if (problem) params.set("problem", problem);
     if (badges.length > 0) params.set("badges", badges.join(","));
+    if (teamSize) params.set("teamSize", teamSize);
+    if (workType) params.set("workType", workType);
+    if (difficulty) params.set("difficulty", difficulty);
     const paramString = params.toString();
     router.replace(paramString ? `/search?${paramString}` : "/search");
-  }, [badges, problem, query, router]);
+  }, [badges, problem, query, router, teamSize, workType, difficulty]);
 
   const results = useMemo(() => {
     const queryLower = query.toLowerCase();
     const problemLower = problem.toLowerCase();
+    const targetWorkType = workType ? WORK_TYPE_META[workType] : null;
+    const targetDifficulty = difficulty ? DIFFICULTY_META[difficulty] : null;
 
     return tools
       .map((tool) => {
         let score = 0;
+        const meta = getToolMeta(tool.id);
         const text = [
           tool.name,
           tool.description,
@@ -64,31 +95,45 @@ export default function SearchClient({
           .join(" ")
           .toLowerCase();
 
-        if (queryLower && text.includes(queryLower)) {
-          score += 2;
-        }
+        if (queryLower && text.includes(queryLower)) score += 2;
+
         if (problemLower) {
-          const matchesProblem = tool.problemContexts.some((context) =>
-            context.toLowerCase().includes(problemLower)
+          const matchesProblem = tool.problemContexts.some((ctx) =>
+            ctx.toLowerCase().includes(problemLower)
           );
-          if (matchesProblem) {
-            score += 3;
-          }
+          if (matchesProblem) score += 3;
         }
 
         const matchesBadges = badges.every(
           (badge) => tool.verdictBadges[badge as keyof Tool["verdictBadges"]]
         );
-        if (matchesBadges && badges.length > 0) {
-          score += 1;
+        if (matchesBadges && badges.length > 0) score += 1;
+
+        // meta filters — hard filters (exclude if mismatch)
+        if (meta) {
+          if (teamSize) {
+            const metaKey = TEAM_SIZE_META[teamSize]?.[0];
+            if (metaKey && meta.teamSize !== "any" && meta.teamSize !== metaKey) {
+              return { tool, score: -1 };
+            }
+          }
+          if (targetWorkType && meta.workType !== "any" && meta.workType !== targetWorkType) {
+            return { tool, score: -1 };
+          }
+          if (targetDifficulty && meta.onboardingDifficulty !== targetDifficulty) {
+            return { tool, score: -1 };
+          }
         }
 
         return { tool, score };
       })
-      .filter(({ score }) => score > 0 || (!query && !problem && badges.length === 0))
+      .filter(({ score }) => {
+        if (score < 0) return false;
+        return score > 0 || (!query && !problem && badges.length === 0 && !teamSize && !workType && !difficulty);
+      })
       .sort((a, b) => b.score - a.score)
       .map(({ tool }) => tool);
-  }, [badges, problem, query, tools]);
+  }, [badges, difficulty, problem, query, teamSize, tools, workType]);
 
   const toggleBadge = (badgeId: string) => {
     setBadges((current) =>
@@ -100,7 +145,14 @@ export default function SearchClient({
     setQuery("");
     setProblem("");
     setBadges([]);
+    setTeamSize("");
+    setWorkType("");
+    setDifficulty("");
   };
+
+  const teamSizeOptions = t.teamSizes;
+  const workTypeOptions = t.workTypes;
+  const difficultyOptions = t.difficulties;
 
   return (
     <div className="section">
@@ -137,10 +189,42 @@ export default function SearchClient({
               key={context}
               onClick={() => setProblem(context)}
             >
-              {formatProblem(context)}
+              {context}
             </button>
           ))}
         </div>
+
+        {/* 메타 필터 */}
+        <div className="meta-filter-row">
+          <div className="search-form-group">
+            <label className="search-form-label">{t.filterTeamSize}</label>
+            <select value={teamSize} onChange={(e) => setTeamSize(e.target.value)}>
+              <option value="">{t.filterAll}</option>
+              {teamSizeOptions.map((opt) => (
+                <option key={opt} value={opt}>{opt}</option>
+              ))}
+            </select>
+          </div>
+          <div className="search-form-group">
+            <label className="search-form-label">{t.filterWorkType}</label>
+            <select value={workType} onChange={(e) => setWorkType(e.target.value)}>
+              <option value="">{t.filterAll}</option>
+              {workTypeOptions.map((opt) => (
+                <option key={opt} value={opt}>{opt}</option>
+              ))}
+            </select>
+          </div>
+          <div className="search-form-group">
+            <label className="search-form-label">{t.filterDifficulty}</label>
+            <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
+              <option value="">{t.filterAll}</option>
+              {difficultyOptions.map((opt) => (
+                <option key={opt} value={opt}>{opt}</option>
+              ))}
+            </select>
+          </div>
+        </div>
+
         <fieldset className="search-fieldset">
           <legend className="search-fieldset-legend">{t.searchFilterLegend}</legend>
           <div className="badge-filter">

@@ -5,9 +5,11 @@ import type { Tool } from "@/lib/types";
 import { VerdictBadgeList } from "@/components/VerdictBadgeList";
 import { ProductLogo } from "@/components/ProductLogo";
 import { useLanguage } from "@/components/LanguageProvider";
+import { getToolMeta } from "@/lib/insights";
 
 export function ToolCard({ tool }: { tool: Tool }) {
   const { t } = useLanguage();
+  const meta = getToolMeta(tool.id);
 
   return (
     <article className="card tool-card">
@@ -17,6 +19,12 @@ export function ToolCard({ tool }: { tool: Tool }) {
       </div>
       <div>
         <p className="tool-card-desc">{tool.description}</p>
+        {meta?.shortDiff ? (
+          <p className="tool-card-diff">
+            <span className="tool-card-diff-label">{t.shortDiffLabel}</span>
+            {meta.shortDiff}
+          </p>
+        ) : null}
       </div>
       <VerdictBadgeList badges={tool.verdictBadges} />
       <div className="tool-card-footer">
