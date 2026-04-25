@@ -22,14 +22,16 @@
 로컬 저장(LocalStorage) 기반 입력을 실제 운영 가능한 서버 저장으로 전환
 
 ### 작업 항목
-- [ ] DB 스키마 확장
+- [x] DB 스키마 확장
   - review_scores (총점/세부점수)
   - user_reviews (한줄평/상세리뷰)
   - patch_updates (변경사항/리스크/작성자)
   - capability_matrix (비교 기준 항목)
-- [ ] 관리자 인증/권한 모델 적용 (admin id + role)
-- [ ] `POST/PUT/GET` API 추가 및 검증 스키마 확장
-- [ ] 감사 로그(누가/언제/무엇 수정) 최소 단위 적용
+- [x] 관리자 인증/권한 모델 적용 (admin id + role)
+- [x] `POST/GET` API 추가 및 검증 스키마 확장
+- [x] 감사 로그(누가/언제/무엇 수정) 최소 단위 적용
+- [x] 실제 PostgreSQL 연결
+- [ ] `PUT` 수정 API 적용
 
 ### 산출물
 - 서버 저장형 리뷰/패치 노트

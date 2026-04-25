@@ -20,3 +20,19 @@ export const toolSchema = z.object({
   }),
   alternatives: z.array(z.string().min(2)).min(1)
 });
+
+export const userReviewSchema = z.object({
+  nickname: z.string().trim().max(24).optional(),
+  line: z.string().trim().min(3).max(120),
+  detail: z.string().trim().max(2000).optional().default(""),
+  rating: z.number().int().min(1).max(5)
+});
+
+export const patchUpdateSchema = z.object({
+  title: z.string().trim().min(2).max(120),
+  change: z.string().trim().min(5).max(2000),
+  errorRisk: z.string().trim().min(2).max(2000),
+  impact: z.enum(["low", "medium", "high"]).default("medium"),
+  hasIncident: z.boolean().default(false),
+  authorName: z.string().trim().max(40).optional()
+});

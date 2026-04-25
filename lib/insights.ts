@@ -1,4 +1,5 @@
 import type { Tool } from "@/lib/types";
+import type { PatchImpact } from "@/lib/types";
 
 export type ScoreBreakdown = {
   functionality: number;
@@ -15,10 +16,16 @@ export type CapabilityComparison = {
 };
 
 export type PatchNote = {
+  id?: string;
+  toolId?: string;
   date: string;
   title: string;
   change: string;
   errorRisk: string;
+  impact?: PatchImpact;
+  hasIncident?: boolean;
+  authorName?: string;
+  createdAt?: string;
 };
 
 export type WorkPlaybook = {

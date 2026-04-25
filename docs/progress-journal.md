@@ -38,6 +38,28 @@
 - 코드 구조 및 연결 관계 점검 완료
 - 외부 패키지 설치가 막혀 있어 실행/자동테스트는 환경 이슈로 미완료
 
+## 이어서 개발한 내용 (Phase 1 시작)
+
+### 1) 서버 저장형 리뷰 API
+- `GET /api/tool/:id/reviews`
+- `POST /api/tool/:id/reviews`
+- 기존 localStorage 리뷰 저장을 서버 API 기반 저장/조회 흐름으로 전환
+
+### 2) 서버 저장형 패치/장애 기록 API
+- `GET /api/tool/:id/patches`
+- `POST /api/tool/:id/patches`
+- 관리자 ID 기반 최소 권한 체크 추가
+- 영향도(High/Medium/Low)와 장애 여부를 기록 가능하게 확장
+
+### 3) 감사 로그 최소 단위
+- 리뷰/패치 생성 시 audit log 기록
+- `GET /api/audit?toolId=`로 관리자 조회 가능
+
+### 4) DB 스키마 확장
+- review_scores, user_reviews, patch_updates, capability_matrix, audit_logs 테이블 초안 추가
+- `DATABASE_URL`이 있으면 PostgreSQL 저장소를 사용하고, 없으면 로컬 개발/테스트용 in-memory store로 동작
+- API 첫 쓰기 시 정적 툴 데이터를 `tools` 테이블에 자동 seed
+
 ## 다음 단계 제안
 1. 회사별 계정 권한 기반의 실제 서버 저장(DB)으로 전환
 2. 패치 변경사항에 버전 태그 및 영향도(High/Med/Low) 추가
