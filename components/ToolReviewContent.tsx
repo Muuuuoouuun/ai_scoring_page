@@ -31,7 +31,10 @@ export function ToolReviewContent({
 
   return (
     <main className="tool-review-page">
-      <ToolHeader tool={tool} />
+      <section className="tool-detail-hero-grid">
+        <ToolHeader tool={tool} />
+        <ScoreBreakdownCard totalScore={insight.totalScore} scoreBreakdown={insight.scoreBreakdown} variant="hero" />
+      </section>
 
       <div className="tabs-nav">
         <button
@@ -61,7 +64,6 @@ export function ToolReviewContent({
               <strong>{t.whyExists}</strong>
               <p>{tool.whyExist}</p>
             </section>
-            <ScoreBreakdownCard totalScore={insight.totalScore} scoreBreakdown={insight.scoreBreakdown} />
             <section className="card">
               <strong>{t.reviewSummary}</strong>
               <p>{insight.oneLine}</p>
@@ -72,9 +74,9 @@ export function ToolReviewContent({
           </div>
 
           <aside className="review-sidebar-column">
+            <WorkUsageGuide playbook={insight.workPlaybook} />
             <ImpactMeterGrid impact={tool.impact} />
             <CapabilityComparisonTable toolName={tool.name} rows={insight.comparisons} />
-            <WorkUsageGuide playbook={insight.workPlaybook} />
             <AlternativesSection alternatives={tool.alternatives} />
           </aside>
         </div>

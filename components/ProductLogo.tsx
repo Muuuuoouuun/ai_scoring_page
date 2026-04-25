@@ -15,10 +15,17 @@ const getInitials = (name: string) =>
     .map((part) => part[0]?.toUpperCase() ?? "")
     .join("");
 
-const getHue = (name: string) => {
+const JOURNAL_LOGO_GRADIENTS = [
+  ["#453c34", "#b08a52"],
+  ["#675d53", "#d2c4b9"],
+  ["#b08a52", "#453c34"],
+  ["#d2c4b9", "#675d53"]
+] as const;
+
+const getPaletteIndex = (name: string) => {
   let hash = 0;
   for (let i = 0; i < name.length; i += 1) {
-    hash = (hash * 31 + name.charCodeAt(i)) % 360;
+    hash = (hash * 31 + name.charCodeAt(i)) % JOURNAL_LOGO_GRADIENTS.length;
   }
   return Math.abs(hash);
 };
@@ -26,26 +33,19 @@ const getHue = (name: string) => {
 export function ProductLogo({ name, size = "md" }: ProductLogoProps) {
   const [imgError, setImgError] = useState(false);
 
-  const hue = getHue(name);
   const initials = getInitials(name);
+  const [startColor, endColor] = JOURNAL_LOGO_GRADIENTS[getPaletteIndex(name)];
   const style = {
-    background: `linear-gradient(135deg, hsl(${hue} 75% 60%), hsl(${(hue + 48) % 360} 85% 52%))`
+    background: `linear-gradient(135deg, ${startColor}, ${endColor})`,
+    color: startColor === "#d2c4b9" ? "#453c34" : "#fff8ef"
   };
 
-  const DOMAIN_MAP: Record<string, string> = {
-    "Notion": "notion.so",
-    "Figma": "figma.com",
-    "Slack": "slack.com",
-    "Linear": "linear.app",
-    "Airtable": "airtable.com",
-    "Miro": "miro.com",
-    "Zapier": "zapier.com",
-    "Jasper": "jasper.ai",
-    "Gong": "gong.io",
-    "Replit": "replit.com"
+  const LOCAL_LOGO_MAP: Record<string, string> = {
+    Notion: "/images/logos/notion.png",
+    Slack: "/images/logos/slack.svg"
   };
 
-  const imageSrc = DOMAIN_MAP[name] ? `https://logo.clearbit.com/${DOMAIN_MAP[name]}` : undefined;
+  const imageSrc = LOCAL_LOGO_MAP[name];
 
   if (!imgError && imageSrc) {
     return (

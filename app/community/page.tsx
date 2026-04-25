@@ -3,15 +3,32 @@
 import { useLanguage } from "@/components/LanguageProvider";
 
 export default function CommunityPage() {
-    const { t } = useLanguage();
+    const { lang, t } = useLanguage();
 
     return (
         <main className="community-page">
-            <header className="section-head text-center" style={{ marginTop: "2rem" }}>
-                <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>{t.communityHeadline}</h1>
-                <p className="text-muted" style={{ fontSize: "1.2rem", maxWidth: "600px", margin: "0 auto" }}>
-                    {t.communitySubline}
-                </p>
+            <header className="community-hero">
+                <div>
+                    <span className="section-kicker">COMMUNITY SIGNALS</span>
+                    <h1>{t.communityHeadline}</h1>
+                    <p className="text-muted">
+                        {t.communitySubline}
+                    </p>
+                </div>
+                <div className="community-signal-board" aria-label={lang === "ko" ? "커뮤니티 신호 요약" : "Community signal summary"}>
+                    <div>
+                        <strong>3</strong>
+                        <span>{lang === "ko" ? "최근 리뷰" : "recent reviews"}</span>
+                    </div>
+                    <div>
+                        <strong>4</strong>
+                        <span>{lang === "ko" ? "토론 신호" : "discussion signals"}</span>
+                    </div>
+                    <div>
+                        <strong>144</strong>
+                        <span>{lang === "ko" ? "의견 합계" : "total opinions"}</span>
+                    </div>
+                </div>
             </header>
 
             <div className="community-grid">

@@ -5,10 +5,12 @@ import { useLanguage } from "@/components/LanguageProvider";
 
 export function ScoreBreakdownCard({
   totalScore,
-  scoreBreakdown
+  scoreBreakdown,
+  variant = "default"
 }: {
   totalScore: number;
   scoreBreakdown: ScoreBreakdown;
+  variant?: "default" | "hero";
 }) {
   const { t } = useLanguage();
   const labels: Record<keyof ScoreBreakdown, string> = {
@@ -20,9 +22,13 @@ export function ScoreBreakdownCard({
   };
 
   return (
-    <section className="card">
+    <section className={`card score-breakdown-card score-breakdown-${variant}`}>
+      <span className="section-kicker">UTILITY SCORE</span>
       <strong>{t.scoreTitle}</strong>
-      <p className="total-score">{totalScore} / 100</p>
+      <p className="total-score">
+        <span>{totalScore}</span>
+        <small>/100</small>
+      </p>
       <div className="score-grid">
         {Object.entries(scoreBreakdown).map(([key, value]) => (
           <div key={key} className="score-row">

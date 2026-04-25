@@ -13,6 +13,7 @@ export function Hero() {
         <NeuralFlowSVG />
       </div>
       <div className="hero-content">
+        <span className="hero-kicker">AI TOOL JUDGMENT JOURNAL</span>
         <h1>{t.heroTitle}</h1>
         <p>{t.heroDesc}</p>
       </div>
@@ -20,6 +21,9 @@ export function Hero() {
         <Link className="button button-lg" href="/search">
           {t.heroCta}
         </Link>
+        <span className="hero-note" aria-hidden="true">
+          Human signal over tool noise
+        </span>
       </div>
     </section>
   );

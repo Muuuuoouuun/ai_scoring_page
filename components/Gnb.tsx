@@ -8,8 +8,12 @@ export function Gnb() {
 
   return (
     <nav>
-      <Link href="/">
-        <strong>g2</strong>
+      <Link className="brand-lockup" href="/" aria-label="g2 judgment journal home">
+        <span className="brand-mark">g2</span>
+        <span className="brand-copy">
+          <strong>Judgment Journal</strong>
+          <small>AI tool field notes</small>
+        </span>
       </Link>
       <div className="nav-links">
         <Link href="/search">{t.navSearch}</Link>

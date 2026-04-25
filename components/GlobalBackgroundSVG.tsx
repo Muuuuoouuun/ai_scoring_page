@@ -2,6 +2,9 @@
 
 import { useEffect, useRef } from "react";
 
+const prefersReducedMotion = () =>
+    typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 export function GlobalBackgroundSVG() {
     const svgRef = useRef<SVGSVGElement>(null);
 
@@ -11,6 +14,7 @@ export function GlobalBackgroundSVG() {
 
         const svg = svgRef.current;
         if (svg.querySelector(".dynamic-layer")) return; // Prevent recreation
+        const reduceMotion = prefersReducedMotion();
 
         const dynamicLayer = document.createElementNS("http://www.w3.org/2000/svg", "g");
         dynamicLayer.setAttribute("class", "dynamic-layer");
@@ -36,12 +40,14 @@ export function GlobalBackgroundSVG() {
                     line.setAttribute("y1", p1.y.toString());
                     line.setAttribute("x2", p2.x.toString());
                     line.setAttribute("y2", p2.y.toString());
-                    line.setAttribute("stroke", "rgba(255, 255, 255, 0.4)");
+                    line.setAttribute("stroke", "rgba(176, 138, 82, 0.22)");
                     line.setAttribute("stroke-width", "1");
                     line.setAttribute("stroke-dasharray", `${Math.random() * 20 + 10} ${Math.random() * 30 + 10}`);
-                    line.setAttribute("class", "neural-pulse");
-                    line.style.animationDelay = `${Math.random() * 5}s`;
-                    line.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                    if (!reduceMotion) {
+                        line.setAttribute("class", "neural-pulse");
+                        line.style.animationDelay = `${Math.random() * 5}s`;
+                        line.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                    }
                     dynamicLayer.appendChild(line);
                 }
             }
@@ -51,9 +57,11 @@ export function GlobalBackgroundSVG() {
             circle.setAttribute("cx", p1.x.toString());
             circle.setAttribute("cy", p1.y.toString());
             circle.setAttribute("r", (Math.random() * 3 + 1).toString());
-            circle.setAttribute("fill", "rgba(255, 255, 255, 0.8)");
-            circle.setAttribute("class", "neural-node");
-            circle.style.animationDelay = `${Math.random() * 4}s`;
+            circle.setAttribute("fill", "rgba(210, 196, 185, 0.55)");
+            if (!reduceMotion) {
+                circle.setAttribute("class", "neural-node");
+                circle.style.animationDelay = `${Math.random() * 4}s`;
+            }
             dynamicLayer.appendChild(circle);
         });
 
@@ -67,11 +75,13 @@ export function GlobalBackgroundSVG() {
             }
             path.setAttribute("d", d);
             path.setAttribute("fill", "none");
-            path.setAttribute("stroke", `rgba(255, 255, 255, ${opacity})`);
+            path.setAttribute("stroke", `rgba(103, 93, 83, ${opacity})`);
             path.setAttribute("stroke-width", "2");
-            path.setAttribute("class", "sound-wave");
-            path.style.animationDuration = `${speed}s`;
-            path.style.animationDelay = `${delay}s`;
+            if (!reduceMotion) {
+                path.setAttribute("class", "sound-wave");
+                path.style.animationDuration = `${speed}s`;
+                path.style.animationDelay = `${delay}s`;
+            }
             return path;
         };
 
@@ -93,15 +103,16 @@ export function GlobalBackgroundSVG() {
             >
                 <defs>
                     <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" stopColor="rgba(255,255,255,0.8)" />
-                        <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+                        <stop offset="0%" stopColor="rgba(210,196,185,0.35)" />
+                        <stop offset="55%" stopColor="rgba(176,138,82,0.16)" />
+                        <stop offset="100%" stopColor="rgba(69,60,52,0)" />
                     </radialGradient>
                 </defs>
 
                 {/* Static Ambient Glow */}
-                <circle cx="500" cy="300" r="400" fill="url(#nodeGlow)" opacity="0.15" className="ambient-glow" />
-                <circle cx="1500" cy="700" r="500" fill="url(#nodeGlow)" opacity="0.1" className="ambient-glow delay-1" />
-                <circle cx="1000" cy="500" r="600" fill="url(#nodeGlow)" opacity="0.08" className="ambient-glow delay-2" />
+                <circle cx="500" cy="300" r="400" fill="url(#nodeGlow)" opacity="0.08" className="ambient-glow" />
+                <circle cx="1500" cy="700" r="500" fill="url(#nodeGlow)" opacity="0.06" className="ambient-glow delay-1" />
+                <circle cx="1000" cy="500" r="600" fill="url(#nodeGlow)" opacity="0.05" className="ambient-glow delay-2" />
 
             </svg>
         </div>

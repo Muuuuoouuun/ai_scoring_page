@@ -32,7 +32,7 @@ function InteractiveSignal() {
             width: 40,
             height: 40,
             borderRadius: "50%",
-            border: "1px solid rgba(59, 130, 246, 0.4)",
+            border: "1px solid rgba(176, 138, 82, 0.4)",
             animation: "pulseNode 2s ease-out forwards",
             pointerEvents: "none",
           }}
@@ -102,7 +102,7 @@ export default function AboutPage() {
             <h3>선택 피로도</h3>
             <p>직접 써보지 않으면 알 수 없는 파편화된 특징들 때문에 탐색에 너무 많은 에너지가 소모됩니다.</p>
           </div>
-          <div className="glass-card" style={{ background: "rgba(37, 99, 235, 0.05)", borderColor: "rgba(37, 99, 235, 0.2)" }}>
+          <div className="glass-card" style={{ background: "rgba(176, 138, 82, 0.08)", borderColor: "rgba(176, 138, 82, 0.24)" }}>
             <h3 style={{ color: "var(--accent)" }}>검색이 아닌 결정</h3>
             <p>그래서 우리는 단순한 정보 나열이 아니라, "의사결정"이 가능한 형태로 지식을 구조화합니다.</p>
           </div>
@@ -236,7 +236,7 @@ export default function AboutPage() {
           ].map((item, i) => (
             <div key={i} className="roadmap-item">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M22 11.08V12a10 10 10 0 1 1-5.93-9.14"></path>
+                <path d="M22 11.08V12a10 10 0 1 1 -5.93 -9.14"></path>
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
               <strong>{item}</strong>

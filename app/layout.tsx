@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { Gnb } from "@/components/Gnb";
+import { JournalRail } from "@/components/JournalRail";
 import { AppFooter } from "@/components/AppFooter";
 
 import { GlobalBackgroundSVG } from "@/components/GlobalBackgroundSVG";
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <GlobalBackgroundSVG />
         <LanguageProvider>
           <Gnb />
+          <JournalRail />
           {children}
           <AppFooter />
         </LanguageProvider>

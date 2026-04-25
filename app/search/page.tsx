@@ -10,8 +10,9 @@ export default function SearchPage() {
   const problemContexts = Array.from(new Set(tools.flatMap((tool) => tool.problemContexts))).slice(0, 8);
 
   return (
-    <main>
-      <section className="section">
+    <main className="search-journal-page">
+      <section className="section search-journal-hero">
+        <span className="section-kicker">MATCH WORKBENCH</span>
         <h1>{t.searchTitle}</h1>
         <p>{t.searchDesc}</p>
       </section>

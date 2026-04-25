@@ -1,8 +1,27 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+const useReducedMotion = () => {
+    const [reducedMotion, setReducedMotion] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const updatePreference = () => setReducedMotion(mediaQuery.matches);
+
+        updatePreference();
+        mediaQuery.addEventListener("change", updatePreference);
+        return () => mediaQuery.removeEventListener("change", updatePreference);
+    }, []);
+
+    return reducedMotion;
+};
 
 export function NeuralFlowSVG() {
+    const reducedMotion = useReducedMotion();
+    const waveClassName = reducedMotion ? undefined : "wave";
+    const pulseClassName = (node: string) => (reducedMotion ? undefined : `pulse-node ${node}`);
+
     return (
         <div className="neural-flow-container" aria-hidden="true">
             <svg
@@ -13,34 +32,35 @@ export function NeuralFlowSVG() {
             >
                 <defs>
                     <linearGradient id="line-grad" x1="0%" y1="50%" x2="100%" y2="50%">
-                        <stop offset="0%" stopColor="rgba(59, 130, 246, 0)" />
-                        <stop offset="40%" stopColor="rgba(59, 130, 246, 0.4)" />
-                        <stop offset="100%" stopColor="rgba(147, 197, 253, 0.8)" />
+                        <stop offset="0%" stopColor="rgba(69, 60, 52, 0)" />
+                        <stop offset="42%" stopColor="rgba(176, 138, 82, 0.35)" />
+                        <stop offset="100%" stopColor="rgba(210, 196, 185, 0.62)" />
                     </linearGradient>
 
                     <linearGradient id="node-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#fff" stopOpacity="0.8" />
-                        <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.8" />
+                        <stop offset="0%" stopColor="#d2c4b9" stopOpacity="0.72" />
+                        <stop offset="55%" stopColor="#b08a52" stopOpacity="0.7" />
+                        <stop offset="100%" stopColor="#675d53" stopOpacity="0.68" />
                     </linearGradient>
 
                     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                        <feGaussianBlur stdDeviation="4" result="blur" />
+                        <feGaussianBlur stdDeviation="1.6" result="blur" />
                         <feComposite in="SourceGraphic" in2="blur" operator="over" />
                     </filter>
                 </defs>
 
                 {/* --- Flowing Waves (Left to Center) --- */}
                 <g stroke="url(#line-grad)" strokeWidth="1.5" fill="none" className="flowing-waves">
-                    <path d="M 50,200 C 200,100 300,300 500,200" className="wave w1" />
-                    <path d="M 50,220 C 250,150 250,280 480,230" className="wave w2" />
-                    <path d="M 50,180 C 180,250 350,120 520,170" className="wave w3" />
-                    <path d="M 50,240 C 220,320 320,150 490,260" className="wave w4" />
-                    <path d="M 50,160 C 260,80 280,320 510,140" className="wave w5" />
-                    <path d="M 50,210 C 210,180 290,220 500,200" className="wave w6" />
+                    <path d="M 50,200 C 200,100 300,300 500,200" className={waveClassName ? `${waveClassName} w1` : undefined} />
+                    <path d="M 50,220 C 250,150 250,280 480,230" className={waveClassName ? `${waveClassName} w2` : undefined} />
+                    <path d="M 50,180 C 180,250 350,120 520,170" className={waveClassName ? `${waveClassName} w3` : undefined} />
+                    <path d="M 50,240 C 220,320 320,150 490,260" className={waveClassName ? `${waveClassName} w4` : undefined} />
+                    <path d="M 50,160 C 260,80 280,320 510,140" className={waveClassName ? `${waveClassName} w5` : undefined} />
+                    <path d="M 50,210 C 210,180 290,220 500,200" className={waveClassName ? `${waveClassName} w6` : undefined} />
                 </g>
 
                 {/* --- Neural Network Connections (Center to Right) --- */}
-                <g stroke="rgba(147, 197, 253, 0.3)" strokeWidth="1" className="network-lines">
+                <g stroke="rgba(103, 93, 83, 0.24)" strokeWidth="1" className="network-lines">
                     {/* Layer 1 to Layer 2 */}
                     <line x1="500" y1="200" x2="650" y2="120" />
                     <line x1="500" y1="200" x2="620" y2="210" />
@@ -97,23 +117,23 @@ export function NeuralFlowSVG() {
                     <circle cx="510" cy="140" r="2.5" />
 
                     {/* Layer 2 */}
-                    <circle cx="650" cy="120" r="5" className="pulse-node n1" />
-                    <circle cx="620" cy="210" r="6" className="pulse-node n2" />
-                    <circle cx="640" cy="280" r="5" className="pulse-node n3" />
+                    <circle cx="650" cy="120" r="5" className={pulseClassName("n1")} />
+                    <circle cx="620" cy="210" r="6" className={pulseClassName("n2")} />
+                    <circle cx="640" cy="280" r="5" className={pulseClassName("n3")} />
                     <circle cx="600" cy="340" r="4" />
                     <circle cx="680" cy="80" r="3" />
 
                     {/* Layer 3 */}
-                    <circle cx="800" cy="90" r="6" className="pulse-node n4" />
-                    <circle cx="780" cy="190" r="7" className="pulse-node n5" />
-                    <circle cx="820" cy="260" r="6" className="pulse-node n6" />
-                    <circle cx="790" cy="350" r="5" className="pulse-node n7" />
+                    <circle cx="800" cy="90" r="6" className={pulseClassName("n4")} />
+                    <circle cx="780" cy="190" r="7" className={pulseClassName("n5")} />
+                    <circle cx="820" cy="260" r="6" className={pulseClassName("n6")} />
+                    <circle cx="790" cy="350" r="5" className={pulseClassName("n7")} />
                     <circle cx="850" cy="130" r="4" />
 
                     {/* Layer 4 Outer */}
                     <circle cx="950" cy="70" r="4" />
                     <circle cx="920" cy="150" r="5" />
-                    <circle cx="960" cy="230" r="5" className="pulse-node n8" />
+                    <circle cx="960" cy="230" r="5" className={pulseClassName("n8")} />
                     <circle cx="930" cy="320" r="4" />
                     <circle cx="980" cy="160" r="3" />
                     <circle cx="900" cy="390" r="3" />

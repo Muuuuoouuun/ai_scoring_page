@@ -28,8 +28,12 @@ export function CapabilityComparisonTable({
         {rows.map((row) => (
           <div key={row.competitor} className="comparison-row" role="row">
             <strong>{row.competitor}</strong>
-            <span className="highlight-better-text">{row.worksBetterHere}</span>
-            <span className="text-muted">{row.weakerHere}</span>
+            <span className="highlight-better-text comparison-cell" data-label={`${toolName} ${t.comparisonBetter}`}>
+              {row.worksBetterHere}
+            </span>
+            <span className="text-muted comparison-cell" data-label={`${toolName} ${t.comparisonWorse}`}>
+              {row.weakerHere}
+            </span>
           </div>
         ))}
       </div>

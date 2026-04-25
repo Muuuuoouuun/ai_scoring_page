@@ -8,7 +8,8 @@ export function WorkUsageGuide({ playbook }: { playbook: WorkPlaybook[] }) {
 
   return (
     <section className="card feature-card">
-      <strong>✨ {t.workGuide}</strong>
+      <span className="section-kicker">PRACTICAL GUIDE</span>
+      <strong>{t.workGuide}</strong>
       <div className="grid">
         {playbook.map((item) => (
           <article className="usage-item" key={item.title}>

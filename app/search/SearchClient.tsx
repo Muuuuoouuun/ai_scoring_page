@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import type { Tool } from "@/lib/types";
 import { ToolCard } from "@/components/ToolCard";
 import { useLanguage } from "@/components/LanguageProvider";
@@ -30,7 +30,6 @@ export default function SearchClient({
 }) {
   const { lang, t } = useLanguage();
   const searchParams = useSearchParams();
-  const router = useRouter();
   const [query, setQuery] = useState(searchParams.get("query") ?? "");
   const [problem, setProblem] = useState(searchParams.get("problem") ?? "");
   const [badges, setBadges] = useState<string[]>(
@@ -43,8 +42,8 @@ export default function SearchClient({
     if (problem) params.set("problem", problem);
     if (badges.length > 0) params.set("badges", badges.join(","));
     const paramString = params.toString();
-    router.replace(paramString ? `/search?${paramString}` : "/search");
-  }, [badges, problem, query, router]);
+    window.history.replaceState(null, "", paramString ? `/search?${paramString}` : "/search");
+  }, [badges, problem, query]);
 
   const results = useMemo(() => {
     const queryLower = query.toLowerCase();
@@ -103,8 +102,17 @@ export default function SearchClient({
   };
 
   return (
-    <div className="section">
-      <div className="search-panel" aria-label={lang === "ko" ? "도구 검색 및 필터" : "Search and filter tools"}>
+    <div className="section search-workbench">
+      <aside className="search-panel search-control-panel" aria-label={lang === "ko" ? "도구 검색 및 필터" : "Search and filter tools"}>
+        <div className="search-panel-head">
+          <span className="section-kicker">SIGNAL INPUT</span>
+          <h2>{lang === "ko" ? "문제 문장을 먼저 적으세요" : "Start with the problem sentence"}</h2>
+          <p className="text-muted">
+            {lang === "ko"
+              ? "키워드, 문제 상황, 판단 배지를 조합하면 결과가 바로 재정렬됩니다."
+              : "Combine keywords, problem context, and judgment badges to reshape the result set."}
+          </p>
+        </div>
         <div className="search-form-group">
           <label className="search-form-label" htmlFor="search-keyword">
             {t.searchKeyword}
@@ -166,19 +174,28 @@ export default function SearchClient({
         <button className="secondary-button" type="button" onClick={clearFilters}>
           {t.clearFilters}
         </button>
-      </div>
-      <section className="section">
-        <h2>{t.results}</h2>
-        <p>
-          <strong>{results.length}</strong> {t.matchCount}
-        </p>
+      </aside>
+      <section className="search-results-panel">
+        <div className="results-toolbar">
+          <div>
+            <span className="section-kicker">MATCH MATRIX</span>
+            <h2>{t.results}</h2>
+            <p>
+              <strong>{results.length}</strong> {t.matchCount}
+            </p>
+          </div>
+          <div className="result-count-card" aria-label={lang === "ko" ? "현재 검색 결과 수" : "Current result count"}>
+            <strong>{results.length}</strong>
+            <span>{lang === "ko" ? "signals" : "matches"}</span>
+          </div>
+        </div>
         {results.length === 0 ? (
           <div className="card">
             <strong>{t.noMatch}</strong>
             <p>{t.noMatchDesc}</p>
           </div>
         ) : null}
-        <div className="grid grid-3">
+        <div className="grid grid-3 search-result-grid">
           {results.map((tool) => (
             <ToolCard key={tool.id} tool={tool} />
           ))}
