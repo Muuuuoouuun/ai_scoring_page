@@ -11,10 +11,13 @@ export type VerdictBadges = {
   lockinRisk: boolean;
 };
 
+export type ToolGenre = "ai" | "it" | "githubProject" | "saas";
+
 export type Tool = {
   id: string;
   name: string;
   description: string;
+  genres: ToolGenre[];
   problemContexts: string[];
   whyExist: string;
   impact: ImpactScores;

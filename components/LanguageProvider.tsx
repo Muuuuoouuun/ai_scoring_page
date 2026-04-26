@@ -15,7 +15,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<Language>("ko");
 
   useEffect(() => {
-    const stored = localStorage.getItem("g2-language");
+    const stored = localStorage.getItem("topai-language") ?? localStorage.getItem("g2-language");
     if (stored === "ko" || stored === "en") {
       setLang(stored);
     }
@@ -26,7 +26,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       lang,
       setLang: (next: Language) => {
         setLang(next);
-        localStorage.setItem("g2-language", next);
+        localStorage.setItem("topai-language", next);
+        localStorage.removeItem("g2-language");
       },
       t: dictionary[lang]
     }),

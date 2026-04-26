@@ -81,6 +81,7 @@ const ensureToolSeeded = async (client: PoolClient, toolId: string) => {
       id,
       name,
       description,
+      genres,
       problem_contexts,
       why_exist,
       impact,
@@ -91,12 +92,13 @@ const ensureToolSeeded = async (client: PoolClient, toolId: string) => {
       created_at,
       updated_at
     )
-    VALUES ($1, $2, $3, $4, $5, $6::jsonb, $7, $8, $9::jsonb, $10, $11, $12)
+    VALUES ($1, $2, $3, $4, $5, $6, $7::jsonb, $8, $9, $10::jsonb, $11, $12, $13)
     ON CONFLICT (id) DO NOTHING`,
     [
       tool.id,
       tool.name,
       tool.description,
+      tool.genres,
       tool.problemContexts,
       tool.whyExist,
       JSON.stringify(tool.impact),

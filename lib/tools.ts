@@ -1,5 +1,5 @@
 import { tools } from "@/data/tools";
-import type { Tool, VerdictBadges } from "@/lib/types";
+import type { Tool, ToolGenre, VerdictBadges } from "@/lib/types";
 
 export const getAllTools = (): Tool[] => tools;
 
@@ -9,7 +9,7 @@ export const getToolById = (id: string): Tool | undefined =>
 const normalize = (value: string) => value.toLowerCase();
 
 const toolText = (tool: Tool) =>
-  [tool.name, tool.description, tool.whyExist, ...tool.problemContexts, tool.bestCase, tool.worstCase]
+  [tool.name, tool.description, tool.whyExist, ...tool.genres, ...tool.problemContexts, tool.bestCase, tool.worstCase]
     .join(" ")
     .toLowerCase();
 
@@ -21,11 +21,13 @@ const badgesMatch = (tool: Tool, badges: Partial<VerdictBadges>) => {
 export const searchTools = ({
   query,
   problem,
-  badges
+  badges,
+  genres
 }: {
   query?: string;
   problem?: string;
   badges?: Partial<VerdictBadges>;
+  genres?: ToolGenre[];
 }): Tool[] => {
   const cleanedQuery = query ? normalize(query) : "";
   const cleanedProblem = problem ? normalize(problem) : "";
@@ -44,12 +46,24 @@ export const searchTools = ({
           score += 3;
         }
       }
-      if (badges && badgesMatch(tool, badges)) {
-        score += 1;
+      if (badges) {
+        if (badgesMatch(tool, badges)) {
+          score += 1;
+        } else {
+          return { tool, score: -1 };
+        }
+      }
+      if (genres && genres.length > 0) {
+        const matchesGenres = genres.every((genre) => tool.genres.includes(genre));
+        if (matchesGenres) {
+          score += 2;
+        } else {
+          return { tool, score: -1 };
+        }
       }
       return { tool, score };
     })
-    .filter(({ score }) => score > 0 || !query)
+    .filter(({ score }) => score > 0 || (!query && !problem && !badges && (!genres || genres.length === 0)))
     .sort((a, b) => b.score - a.score)
     .map(({ tool }) => tool);
 };

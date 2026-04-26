@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbfaf6"/>
+      <stop offset=".54" stop-color="#f0ece2"/>
+      <stop offset="1" stop-color="#e5ddd0"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#453c34" stop-opacity="0"/>
+      <stop offset=".36" stop-color="#37646a" stop-opacity=".13"/>
+      <stop offset=".58" stop-color="#b08a52" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#453c34" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="verdict" x1=".12" y1=".1" x2=".9" y2=".88">
+      <stop offset="0" stop-color="#4f5f4a" stop-opacity=".62"/>
+      <stop offset=".48" stop-color="#b08a52" stop-opacity=".54"/>
+      <stop offset="1" stop-color="#453c34" stop-opacity=".52"/>
+    </linearGradient>
+    <filter id="softNoise">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0.25 0 0 0 0 0.22 0 0 0 0 0.18 0 0 0 .045 0"/>
+    </filter>
+    <pattern id="thinRules" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M0 0H72M0 36H72" stroke="#453c34" stroke-opacity=".034"/>
+      <path d="M0 0V72M36 0V72" stroke="#37646a" stroke-opacity=".022"/>
+    </pattern>
+    <clipPath id="lensClip">
+      <circle cx="840" cy="442" r="270"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#base)"/>
+  <rect width="1600" height="900" fill="url(#thinRules)"/>
+  <path d="M-80 254C220 168 428 210 628 326c193 112 348 139 567 63 152-53 304-63 477-6V570c-184-65-347-48-515 16-196 76-372 41-555-80C415 383 201 341-80 430Z" fill="url(#beam)"/>
+
+  <g clip-path="url(#lensClip)" opacity=".9">
+    <rect x="530" y="132" width="620" height="620" fill="#fffefa" opacity=".4"/>
+    <g fill="none" stroke-linecap="round">
+      <path d="M558 512C655 404 754 391 839 430c85 39 137 120 235 100 54-11 96-48 137-95" stroke="#453c34" stroke-opacity=".19" stroke-width="1.4"/>
+      <path d="M548 464C654 368 756 356 844 393c80 34 134 99 225 85 58-9 107-41 153-83" stroke="#b08a52" stroke-opacity=".48" stroke-width="1.9"/>
+      <path d="M566 420C673 338 768 332 854 362c83 29 137 79 220 72 56-5 104-30 146-68" stroke="#37646a" stroke-opacity=".34" stroke-width="1.4"/>
+      <path d="M598 594C703 474 790 482 867 526c80 46 140 102 222 76 40-13 75-38 112-72" stroke="#453c34" stroke-opacity=".12" stroke-width="1.2"/>
+    </g>
+    <g stroke="#453c34" stroke-opacity=".08">
+      <line x1="540" y1="442" x2="1140" y2="442"/>
+      <line x1="840" y1="142" x2="840" y2="742"/>
+      <line x1="628" y1="230" x2="1052" y2="654"/>
+      <line x1="1052" y1="230" x2="628" y2="654"/>
+    </g>
+  </g>
+
+  <g transform="translate(840 442)" fill="none" stroke-linecap="round">
+    <circle r="314" stroke="#453c34" stroke-opacity=".06" stroke-width="1"/>
+    <circle r="270" stroke="#453c34" stroke-opacity=".11" stroke-width="1.4"/>
+    <circle r="214" stroke="#453c34" stroke-opacity=".07" stroke-width="1"/>
+    <circle r="156" stroke="#453c34" stroke-opacity=".08" stroke-width="1"/>
+    <path d="M0 -270A270 270 0 0 1 257 84" stroke="url(#verdict)" stroke-width="12"/>
+    <path d="M0 -214A214 214 0 0 1 154 149" stroke="#37646a" stroke-opacity=".42" stroke-width="6"/>
+    <path d="M0 -156A156 156 0 0 1 126 92" stroke="#453c34" stroke-opacity=".28" stroke-width="4"/>
+    <path d="M-236 128A270 270 0 0 0 -90 254" stroke="#b08a52" stroke-opacity=".24" stroke-width="4"/>
+    <circle r="8" fill="#453c34" fill-opacity=".36" stroke="none"/>
+  </g>
+
+  <g transform="translate(150 666)" fill="#453c34" font-family="Manrope, Pretendard, system-ui, sans-serif">
+    <text x="0" y="0" font-size="18" font-weight="800" letter-spacing="3" opacity=".64">VERDICT LENS</text>
+    <text x="0" y="34" font-size="13" font-weight="700" opacity=".42">analysis focus / final score framing</text>
+    <path d="M0 58H250" stroke="#37646a" stroke-opacity=".28"/>
+  </g>
+
+  <rect width="1600" height="900" filter="url(#softNoise)"/>
+  <rect width="1600" height="900" fill="#fff" opacity=".12"/>
+</svg>

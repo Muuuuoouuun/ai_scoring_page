@@ -4,6 +4,7 @@ CREATE TABLE tools (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   name TEXT NOT NULL,
   description TEXT NOT NULL,
+  genres TEXT[] NOT NULL DEFAULT '{}',
   problem_contexts TEXT[] NOT NULL,
   why_exist TEXT NOT NULL,
   impact JSONB NOT NULL,
@@ -16,6 +17,7 @@ CREATE TABLE tools (
 );
 
 CREATE INDEX tools_problem_contexts_idx ON tools USING GIN (problem_contexts);
+CREATE INDEX tools_genres_idx ON tools USING GIN (genres);
 CREATE INDEX tools_name_idx ON tools (name);
 
 -- [NEW] Phase 1 Database Expansion

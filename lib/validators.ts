@@ -1,8 +1,11 @@
 import { z } from "zod";
 
+export const toolGenreSchema = z.enum(["ai", "it", "githubProject", "saas"]);
+
 export const toolSchema = z.object({
   name: z.string().min(2),
   description: z.string().min(10),
+  genres: z.array(toolGenreSchema).min(1).default(["saas"]),
   problemContexts: z.array(z.string().min(3)).min(1),
   whyExist: z.string().min(10),
   impact: z.object({

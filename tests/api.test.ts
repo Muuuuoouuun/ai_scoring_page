@@ -40,10 +40,19 @@ describe("API routes", () => {
   });
 
   it("searches tools by problem context", async () => {
-    const response = await searchTools(new Request("http://localhost/api/search?problem=communication"));
+    const response = await searchTools(new Request("http://localhost/api/search?problem=팀%20커뮤니케이션"));
     const data = await getJson(response);
     expect(response.status).toBe(200);
     expect(data.tools.length).toBeGreaterThan(0);
+  });
+
+  it("searches tools by genre", async () => {
+    const response = await searchTools(new Request("http://localhost/api/search?genres=ai"));
+    const data = await getJson(response);
+
+    expect(response.status).toBe(200);
+    expect(data.tools.length).toBeGreaterThan(0);
+    expect(data.tools.every((tool: { genres: string[] }) => tool.genres.includes("ai"))).toBe(true);
   });
 
   it("validates tool creation", async () => {

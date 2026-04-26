@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { Tool } from "@/lib/types";
 import { VerdictBadgeList } from "@/components/VerdictBadgeList";
 import { ProductLogo } from "@/components/ProductLogo";
+import { GenrePillList } from "@/components/GenrePillList";
 import { useLanguage } from "@/components/LanguageProvider";
 
 export function ToolCard({ tool, variant = "default" }: { tool: Tool; variant?: "default" | "feature" }) {
@@ -26,6 +27,7 @@ export function ToolCard({ tool, variant = "default" }: { tool: Tool; variant?: 
       <div>
         <p className="tool-card-desc">{tool.description}</p>
       </div>
+      <GenrePillList genres={tool.genres} />
       <VerdictBadgeList badges={tool.verdictBadges} />
       <div className="tool-card-wave" aria-hidden="true">
         <span />

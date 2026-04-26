@@ -5,6 +5,7 @@ export const tools: Tool[] = [
     id: "d41f50a2-3b7c-4f7e-8c73-1b8d0b0fe21a",
     name: "Notion",
     description: "문서, 업무, 가벼운 데이터베이스를 통합하는 모듈형 워크스페이스입니다.",
+    genres: ["saas", "it"],
     problemContexts: [
       "작업이 여러 곳에 흩어져 있다",
       "팀 지식이 너무 많은 도구에 분산되어 있다",
@@ -32,6 +33,7 @@ export const tools: Tool[] = [
     id: "55d7ad1a-4c1c-4e58-a2d6-40a00d092e2a",
     name: "Figma",
     description: "디자인 협업과 프로토타이핑을 위한 협업 플랫폼입니다.",
+    genres: ["saas", "it"],
     problemContexts: [
       "디자인 피드백 루프가 느리다",
       "제품 관점을 팀이 함께 정리해야 한다",
@@ -59,6 +61,7 @@ export const tools: Tool[] = [
     id: "ef6b79b4-7c1e-4df0-95f1-9011f412e1cb",
     name: "Slack",
     description: "실시간 팀 커뮤니케이션 허브입니다.",
+    genres: ["saas", "it"],
     problemContexts: [
       "팀 커뮤니케이션이 자주 끊긴다",
       "중요한 맥락이 이메일에서 유실된다",
@@ -86,6 +89,7 @@ export const tools: Tool[] = [
     id: "f33e7f82-0d1c-4f57-9c5f-9a8e8e251e88",
     name: "Linear",
     description: "빠른 제품 팀을 위한 이슈 트래킹 도구입니다.",
+    genres: ["saas", "githubProject", "it"],
     problemContexts: [
       "무엇이 중요한지 자주 놓친다",
       "제품 실행 흐름이 산만하다",
@@ -113,6 +117,7 @@ export const tools: Tool[] = [
     id: "58dc3f0a-6e9d-4f21-a7c5-2e2186a42e8f",
     name: "Airtable",
     description: "운영 데이터와 지식 관리를 위한 유연한 데이터베이스-스프레드시트 하이브리드입니다.",
+    genres: ["saas", "it"],
     problemContexts: [
       "가벼운 내부 운영 도구가 필요하다",
       "데이터가 너무 많은 스프레드시트에 흩어져 있다",
@@ -140,6 +145,7 @@ export const tools: Tool[] = [
     id: "a1aa1f1d-67f8-4dbd-aec0-2ed51b932d0a",
     name: "Miro",
     description: "워크숍과 아이데이션을 위한 협업 화이트보드입니다.",
+    genres: ["saas"],
     problemContexts: [
       "워크숍이 평면적으로 느껴진다",
       "원격 브레인스토밍 에너지가 부족하다",
@@ -167,6 +173,7 @@ export const tools: Tool[] = [
     id: "b559d3ef-7c52-4ed0-9e84-2f5b1a9775b4",
     name: "Zapier",
     description: "코드 없이 여러 앱을 연결해 자동화하는 플랫폼입니다.",
+    genres: ["saas", "ai", "it"],
     problemContexts: [
       "수작업 인수인계로 속도가 떨어진다",
       "개발 리소스 없이 빠른 자동화가 필요하다",
@@ -194,6 +201,7 @@ export const tools: Tool[] = [
     id: "6b6f9d15-0a05-4c34-8a6b-4d6b5a6ae7ea",
     name: "Jasper",
     description: "마케팅/콘텐츠 팀을 위한 AI 글쓰기 보조 도구입니다.",
+    genres: ["ai", "saas"],
     problemContexts: [
       "콘텐츠 백로그가 너무 빠르게 쌓인다",
       "브랜드 톤앤매너가 들쭉날쭉하다",
@@ -221,6 +229,7 @@ export const tools: Tool[] = [
     id: "d07d34fb-2cd2-4fcb-95dd-e1fceaa52d27",
     name: "Gong",
     description: "영업 대화 분석 기반의 수익 인텔리전스 플랫폼입니다.",
+    genres: ["ai", "saas"],
     problemContexts: [
       "영업 통화가 블랙박스처럼 관리된다",
       "코칭이 경험담 중심으로 이루어진다",
@@ -248,6 +257,7 @@ export const tools: Tool[] = [
     id: "e357c35d-bfd4-4c14-aad0-9910de98837f",
     name: "Replit",
     description: "AI 코파일럿을 포함한 브라우저 기반 개발 환경입니다.",
+    genres: ["ai", "githubProject", "it", "saas"],
     problemContexts: [
       "빠른 프로토타이핑이 필요하다",
       "엔지니어 온보딩이 오래 걸린다",

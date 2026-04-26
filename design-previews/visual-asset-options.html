@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Score Visual Asset Options</title>
+  <style>
+    :root {
+      --bg: #f7f4ec;
+      --ink: #1a1c1a;
+      --muted: #5f564e;
+      --primary: #453c34;
+      --signal: #b08a52;
+      --teal: #37646a;
+      --olive: #4f5f4a;
+      --surface: rgba(255, 255, 255, 0.72);
+      --border: rgba(69, 60, 52, 0.14);
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(247, 244, 236, 0.94)),
+        var(--bg);
+      color: var(--ink);
+      font-family: Manrope, Pretendard, "Segoe UI", system-ui, -apple-system, sans-serif;
+      line-height: 1.55;
+    }
+
+    .wrap {
+      margin: 0 auto;
+      max-width: 1440px;
+      padding: 44px 28px 64px;
+    }
+
+    header {
+      align-items: end;
+      display: flex;
+      gap: 24px;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-family: Epilogue, Pretendard, "Segoe UI", system-ui, sans-serif;
+      font-size: clamp(2rem, 4vw, 4.25rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+      margin: 0;
+      max-width: 760px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 750;
+      max-width: 390px;
+      text-align: right;
+    }
+
+    .board {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .option {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 22px 70px rgba(69, 60, 52, 0.08);
+      overflow: hidden;
+    }
+
+    .stage {
+      aspect-ratio: 16 / 9;
+      min-height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .stage img {
+      display: block;
+      height: 100%;
+      inset: 0;
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+    }
+
+    .hero-copy {
+      bottom: 34px;
+      left: 34px;
+      max-width: 58%;
+      position: absolute;
+      z-index: 2;
+    }
+
+    .kicker {
+      color: rgba(69, 60, 52, 0.64);
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .hero-copy strong {
+      color: var(--primary);
+      display: block;
+      font-family: Epilogue, Pretendard, "Segoe UI", system-ui, sans-serif;
+      font-size: clamp(1.5rem, 3vw, 3.1rem);
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1;
+      text-wrap: balance;
+    }
+
+    .hero-copy p {
+      color: rgba(69, 60, 52, 0.75);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 14px 0 0;
+      max-width: 440px;
+    }
+
+    .mini-panel {
+      backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.54);
+      border: 1px solid rgba(69, 60, 52, 0.13);
+      border-radius: 8px;
+      bottom: 34px;
+      padding: 14px;
+      position: absolute;
+      right: 34px;
+      width: 164px;
+      z-index: 3;
+    }
+
+    .mini-panel b {
+      color: var(--primary);
+      display: block;
+      font-size: 2.2rem;
+      line-height: 1;
+    }
+
+    .mini-panel span {
+      color: var(--muted);
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+
+    .ticks {
+      display: grid;
+      gap: 6px;
+      margin-top: 13px;
+    }
+
+    .ticks i {
+      background: rgba(69, 60, 52, 0.1);
+      border-radius: 999px;
+      display: block;
+      height: 5px;
+      overflow: hidden;
+    }
+
+    .ticks i::before {
+      background: linear-gradient(90deg, var(--primary), var(--signal));
+      content: "";
+      display: block;
+      height: 100%;
+      width: var(--w);
+    }
+
+    .caption {
+      align-items: center;
+      display: flex;
+      gap: 18px;
+      justify-content: space-between;
+      padding: 17px 18px;
+    }
+
+    .caption h2 {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .caption p {
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 700;
+      margin: 4px 0 0;
+    }
+
+    .fit {
+      border: 1px solid rgba(69, 60, 52, 0.12);
+      border-radius: 999px;
+      color: var(--primary);
+      flex: 0 0 auto;
+      font-size: 0.75rem;
+      font-weight: 900;
+      padding: 0.4rem 0.62rem;
+    }
+
+    .swatches {
+      display: flex;
+      gap: 7px;
+      margin-top: 10px;
+    }
+
+    .swatches i {
+      border: 1px solid rgba(69, 60, 52, 0.16);
+      border-radius: 999px;
+      display: block;
+      height: 15px;
+      width: 15px;
+    }
+
+    .overlay-soft::after {
+      background: linear-gradient(90deg, rgba(255, 254, 250, 0.82), rgba(255, 254, 250, 0.28) 56%, rgba(255, 254, 250, 0.08));
+      content: "";
+      inset: 0;
+      pointer-events: none;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .overlay-center::after {
+      background:
+        radial-gradient(circle at 52% 46%, rgba(255, 255, 255, 0.26), transparent 38%),
+        linear-gradient(90deg, rgba(255, 254, 250, 0.66), rgba(255, 254, 250, 0.12) 60%);
+      content: "";
+      inset: 0;
+      pointer-events: none;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .notes {
+      border-top: 1px solid rgba(69, 60, 52, 0.1);
+      color: var(--muted);
+      display: grid;
+      font-size: 0.82rem;
+      font-weight: 700;
+      gap: 8px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      padding: 14px 18px 18px;
+    }
+
+    .notes span {
+      min-width: 0;
+    }
+
+    @media (max-width: 920px) {
+      header {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .meta {
+        text-align: left;
+      }
+
+      .board {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        padding: 28px 16px 44px;
+      }
+
+      .stage {
+        min-height: 420px;
+      }
+
+      .hero-copy {
+        bottom: 182px;
+        left: 22px;
+        max-width: calc(100% - 44px);
+      }
+
+      .mini-panel {
+        bottom: 22px;
+        left: 22px;
+        right: auto;
+        width: calc(100% - 44px);
+      }
+
+      .caption {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .notes {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>배경 이미지 + SVG 고급화 시안</h1>
+      <p class="meta">앱에는 미적용. 지금은 AI Score의 신뢰감, 분석감, 점수화 언어를 어느 방향으로 가져갈지 판단하는 비교 보드입니다.</p>
+    </header>
+
+    <section class="board" aria-label="Visual asset options">
+      <article class="option">
+        <div class="stage overlay-soft">
+          <img src="assets/signal-topography.svg" alt="">
+          <div class="hero-copy">
+            <span class="kicker">Option A</span>
+            <strong>Signal Topography</strong>
+            <p>점수 분포를 등고선처럼 보이게 만드는 가장 브랜드다운 배경.</p>
+          </div>
+          <aside class="mini-panel">
+            <b>8.7</b>
+            <span>judgment score</span>
+            <div class="ticks">
+              <i style="--w: 88%"></i>
+              <i style="--w: 74%"></i>
+              <i style="--w: 92%"></i>
+            </div>
+          </aside>
+        </div>
+        <div class="caption">
+          <div>
+            <h2>A. Signal Topography</h2>
+            <p>홈 히어로, 전체 배경, 브랜드 키비주얼 후보.</p>
+            <div class="swatches"><i style="background:#fffefa"></i><i style="background:#b08a52"></i><i style="background:#37646a"></i><i style="background:#453c34"></i></div>
+          </div>
+          <span class="fit">Brand 9/10</span>
+        </div>
+        <div class="notes">
+          <span>장점: 고급스럽고 독자적</span>
+          <span>위험: 패턴이 강하면 텍스트 방해</span>
+          <span>추천: 히어로 배경</span>
+        </div>
+      </article>
+
+      <article class="option">
+        <div class="stage overlay-center">
+          <img src="assets/verdict-lens.svg" alt="">
+          <div class="hero-copy">
+            <span class="kicker">Option B</span>
+            <strong>Verdict Lens</strong>
+            <p>분석의 초점과 최종 판단감을 가장 직접적으로 전달.</p>
+          </div>
+          <aside class="mini-panel">
+            <b>9.1</b>
+            <span>final verdict</span>
+            <div class="ticks">
+              <i style="--w: 91%"></i>
+              <i style="--w: 82%"></i>
+              <i style="--w: 68%"></i>
+            </div>
+          </aside>
+        </div>
+        <div class="caption">
+          <div>
+            <h2>B. Verdict Lens</h2>
+            <p>툴 상세, 스코어 카드, 결과 요약 화면에 잘 맞음.</p>
+            <div class="swatches"><i style="background:#fbfaf6"></i><i style="background:#4f5f4a"></i><i style="background:#b08a52"></i><i style="background:#453c34"></i></div>
+          </div>
+          <span class="fit">Detail 9/10</span>
+        </div>
+        <div class="notes">
+          <span>장점: 점수 서비스로 즉시 읽힘</span>
+          <span>위험: 원형 그래픽 남용 주의</span>
+          <span>추천: 상세 페이지</span>
+        </div>
+      </article>
+
+      <article class="option">
+        <div class="stage overlay-soft">
+          <img src="assets/evidence-grid.svg" alt="">
+          <div class="hero-copy">
+            <span class="kicker">Option C</span>
+            <strong>Evidence Grid</strong>
+            <p>리뷰 근거, 비교표, 커뮤니티 신호를 차분하게 받쳐주는 배경.</p>
+          </div>
+          <aside class="mini-panel">
+            <b>74%</b>
+            <span>evidence match</span>
+            <div class="ticks">
+              <i style="--w: 74%"></i>
+              <i style="--w: 81%"></i>
+              <i style="--w: 64%"></i>
+            </div>
+          </aside>
+        </div>
+        <div class="caption">
+          <div>
+            <h2>C. Evidence Grid</h2>
+            <p>검색, 비교, 테이블 많은 페이지의 조용한 시스템 배경.</p>
+            <div class="swatches"><i style="background:#fffefa"></i><i style="background:#37646a"></i><i style="background:#b08a52"></i><i style="background:#453c34"></i></div>
+          </div>
+          <span class="fit">Utility 8/10</span>
+        </div>
+        <div class="notes">
+          <span>장점: UI와 충돌 적음</span>
+          <span>위험: 감성 임팩트는 약함</span>
+          <span>추천: 검색/목록</span>
+        </div>
+      </article>
+
+      <article class="option">
+        <div class="stage overlay-center">
+          <img src="assets/neural-index.svg" alt="">
+          <div class="hero-copy">
+            <span class="kicker">Option D</span>
+            <strong>Neural Index</strong>
+            <p>AI 비교와 랭킹 흐름을 가장 자연스럽게 보여주는 네트워크형 시안.</p>
+          </div>
+          <aside class="mini-panel">
+            <b>42</b>
+            <span>ranked signals</span>
+            <div class="ticks">
+              <i style="--w: 66%"></i>
+              <i style="--w: 89%"></i>
+              <i style="--w: 78%"></i>
+            </div>
+          </aside>
+        </div>
+        <div class="caption">
+          <div>
+            <h2>D. Neural Index</h2>
+            <p>현재 뉴럴 플로우를 더 정돈된 브랜드 그래픽으로 확장.</p>
+            <div class="swatches"><i style="background:#fcfbf7"></i><i style="background:#37646a"></i><i style="background:#b08a52"></i><i style="background:#453c34"></i></div>
+          </div>
+          <span class="fit">AI 8/10</span>
+        </div>
+        <div class="notes">
+          <span>장점: 기존 방향과 연결 쉬움</span>
+          <span>위험: 흔한 AI SaaS 느낌 가능</span>
+          <span>추천: 홈/랭킹 영역</span>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

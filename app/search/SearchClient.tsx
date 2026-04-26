@@ -2,7 +2,9 @@
 
 import { useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import type { Tool } from "@/lib/types";
+import { genreMeta, getGenreLabel, toolGenres } from "@/lib/genres";
+import type { Tool, ToolGenre } from "@/lib/types";
+import { JournalIcon, type JournalIconName } from "@/components/JournalIcon";
 import { ToolCard } from "@/components/ToolCard";
 import { useLanguage } from "@/components/LanguageProvider";
 
@@ -21,6 +23,16 @@ const badgeDescriptions = {
 
 const formatProblem = (problem: string) => problem;
 
+const isToolGenre = (value: string): value is ToolGenre =>
+  value === "ai" || value === "it" || value === "githubProject" || value === "saas";
+
+const genreIcons: Record<ToolGenre, JournalIconName> = {
+  ai: "spark",
+  it: "grid",
+  githubProject: "method",
+  saas: "compass"
+};
+
 export default function SearchClient({
   tools,
   problemContexts
@@ -35,15 +47,19 @@ export default function SearchClient({
   const [badges, setBadges] = useState<string[]>(
     searchParams.get("badges")?.split(",").filter(Boolean) ?? []
   );
+  const [selectedGenres, setSelectedGenres] = useState<ToolGenre[]>(
+    searchParams.get("genres")?.split(",").filter(isToolGenre) ?? []
+  );
 
   useEffect(() => {
     const params = new URLSearchParams();
     if (query) params.set("query", query);
     if (problem) params.set("problem", problem);
     if (badges.length > 0) params.set("badges", badges.join(","));
+    if (selectedGenres.length > 0) params.set("genres", selectedGenres.join(","));
     const paramString = params.toString();
     window.history.replaceState(null, "", paramString ? `/search?${paramString}` : "/search");
-  }, [badges, problem, query]);
+  }, [badges, problem, query, selectedGenres]);
 
   const results = useMemo(() => {
     const queryLower = query.toLowerCase();
@@ -78,16 +94,69 @@ export default function SearchClient({
         const matchesBadges = badges.every(
           (badge) => tool.verdictBadges[badge as keyof Tool["verdictBadges"]]
         );
-        if (matchesBadges && badges.length > 0) {
+        if (badges.length > 0) {
+          if (!matchesBadges) {
+            return { tool, score: -1 };
+          }
           score += 1;
+        }
+
+        if (selectedGenres.length > 0) {
+          const matchesGenres = selectedGenres.every((genre) => tool.genres.includes(genre));
+          if (!matchesGenres) {
+            return { tool, score: -1 };
+          }
+          score += 2;
         }
 
         return { tool, score };
       })
-      .filter(({ score }) => score > 0 || (!query && !problem && badges.length === 0))
+      .filter(
+        ({ score }) =>
+          score > 0 || (!query && !problem && badges.length === 0 && selectedGenres.length === 0)
+      )
       .sort((a, b) => b.score - a.score)
       .map(({ tool }) => tool);
-  }, [badges, problem, query, tools]);
+  }, [badges, problem, query, selectedGenres, tools]);
+  const activeFilterCount =
+    (query ? 1 : 0) + (problem ? 1 : 0) + badges.length + selectedGenres.length;
+  const matchPercent = Math.round((results.length / Math.max(tools.length, 1)) * 100);
+  const topResult = results[0];
+  const activeFilters = [
+    query
+      ? {
+          id: "query",
+          label: `${t.searchKeyword}: ${query}`,
+          clear: () => setQuery("")
+        }
+      : null,
+    problem
+      ? {
+          id: "problem",
+          label: `${t.searchProblem}: ${problem}`,
+          clear: () => setProblem("")
+        }
+      : null,
+    ...selectedGenres.map((genre) => ({
+      id: `genre-${genre}`,
+      label: getGenreLabel(genre, lang),
+      clear: () => setSelectedGenres((current) => current.filter((item) => item !== genre))
+    })),
+    ...badges.map((badge) => {
+      const label =
+        badge === "timeSaver"
+          ? t.verdict[0]
+          : badge === "thinkCarefully"
+            ? t.verdict[1]
+            : t.verdict[2];
+
+      return {
+        id: `badge-${badge}`,
+        label,
+        clear: () => setBadges((current) => current.filter((item) => item !== badge))
+      };
+    })
+  ].filter((filter): filter is { id: string; label: string; clear: () => void } => Boolean(filter));
 
   const toggleBadge = (badgeId: string) => {
     setBadges((current) =>
@@ -95,17 +164,27 @@ export default function SearchClient({
     );
   };
 
+  const toggleGenre = (genre: ToolGenre) => {
+    setSelectedGenres((current) =>
+      current.includes(genre) ? current.filter((item) => item !== genre) : [...current, genre]
+    );
+  };
+
   const clearFilters = () => {
     setQuery("");
     setProblem("");
     setBadges([]);
+    setSelectedGenres([]);
   };
 
   return (
     <div className="section search-workbench">
       <aside className="search-panel search-control-panel" aria-label={lang === "ko" ? "도구 검색 및 필터" : "Search and filter tools"}>
         <div className="search-panel-head">
-          <span className="section-kicker">SIGNAL INPUT</span>
+          <span className="section-kicker search-kicker">
+            <JournalIcon name="search" />
+            SIGNAL INPUT
+          </span>
           <h2>{lang === "ko" ? "문제 문장을 먼저 적으세요" : "Start with the problem sentence"}</h2>
           <p className="text-muted">
             {lang === "ko"
@@ -117,25 +196,31 @@ export default function SearchClient({
           <label className="search-form-label" htmlFor="search-keyword">
             {t.searchKeyword}
           </label>
-          <input
-            id="search-keyword"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder={t.searchKeywordPlaceholder}
-            aria-label={t.searchKeyword}
-          />
+          <div className="search-input-shell">
+            <JournalIcon name="search" />
+            <input
+              id="search-keyword"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder={t.searchKeywordPlaceholder}
+              aria-label={t.searchKeyword}
+            />
+          </div>
         </div>
         <div className="search-form-group">
           <label className="search-form-label" htmlFor="search-problem">
             {t.searchProblem}
           </label>
-          <input
-            id="search-problem"
-            value={problem}
-            onChange={(event) => setProblem(event.target.value)}
-            placeholder={t.searchProblemPlaceholder}
-            aria-label={t.searchProblem}
-          />
+          <div className="search-input-shell">
+            <JournalIcon name="compass" />
+            <input
+              id="search-problem"
+              value={problem}
+              onChange={(event) => setProblem(event.target.value)}
+              placeholder={t.searchProblemPlaceholder}
+              aria-label={t.searchProblem}
+            />
+          </div>
         </div>
         <div className="chip-group" role="list" aria-label={lang === "ko" ? "빠른 문제 상황" : "Quick contexts"}>
           {problemContexts.map((context) => (
@@ -145,10 +230,35 @@ export default function SearchClient({
               key={context}
               onClick={() => setProblem(context)}
             >
+              <JournalIcon name="spark" />
               {formatProblem(context)}
             </button>
           ))}
         </div>
+        <fieldset className="search-fieldset">
+          <legend className="search-fieldset-legend">
+            {lang === "ko" ? "장르로 필터링" : "Filter by genre"}
+          </legend>
+          <div className="genre-filter-grid">
+            {toolGenres.map((genre) => (
+              <button
+                aria-pressed={selectedGenres.includes(genre)}
+                className={`genre-filter-card ${selectedGenres.includes(genre) ? "active" : ""}`}
+                key={genre}
+                onClick={() => toggleGenre(genre)}
+              type="button"
+            >
+                <span className="genre-filter-icon" aria-hidden="true">
+                  <JournalIcon name={genreIcons[genre]} />
+                </span>
+                <span>
+                  <strong>{getGenreLabel(genre, lang)}</strong>
+                  <small>{genreMeta[genre].summary[lang]}</small>
+                </span>
+              </button>
+            ))}
+          </div>
+        </fieldset>
         <fieldset className="search-fieldset">
           <legend className="search-fieldset-legend">{t.searchFilterLegend}</legend>
           <div className="badge-filter">
@@ -163,6 +273,17 @@ export default function SearchClient({
                   checked={badges.includes(badge.id)}
                   onChange={() => toggleBadge(badge.id)}
                 />
+                <span className="badge-option-icon" aria-hidden="true">
+                  <JournalIcon
+                    name={
+                      badge.id === "lockinRisk"
+                        ? "shield"
+                        : badge.id === "thinkCarefully"
+                          ? "radar"
+                          : "spark"
+                    }
+                  />
+                </span>
                 <div className="badge-option-content">
                   <span>{badge.label}</span>
                   <small>{badge.description}</small>
@@ -184,9 +305,18 @@ export default function SearchClient({
               <strong>{results.length}</strong> {t.matchCount}
             </p>
           </div>
-          <div className="result-count-card" aria-label={lang === "ko" ? "현재 검색 결과 수" : "Current result count"}>
-            <strong>{results.length}</strong>
-            <span>{lang === "ko" ? "signals" : "matches"}</span>
+          <div className="search-gauge-card" aria-label={lang === "ko" ? "검색 매칭 게이지" : "Search match gauge"}>
+            <div className="search-gauge-meta">
+              <span>{lang === "ko" ? "매칭률" : "Match"}</span>
+              <strong>{matchPercent}%</strong>
+            </div>
+            <div className="search-gauge-track" aria-hidden="true">
+              <span style={{ width: `${matchPercent}%` }} />
+            </div>
+            <div className="search-gauge-foot">
+              <span>{results.length}/{tools.length}</span>
+              <span>{activeFilterCount} {lang === "ko" ? "필터" : "filters"}</span>
+            </div>
           </div>
         </div>
         {results.length === 0 ? (
@@ -195,6 +325,32 @@ export default function SearchClient({
             <p>{t.noMatchDesc}</p>
           </div>
         ) : null}
+        <div className="search-context-strip">
+          <div>
+            <span className="section-kicker">ACTIVE LENS</span>
+            {activeFilters.length > 0 ? (
+              <div className="active-filter-row" aria-label={lang === "ko" ? "활성 필터" : "Active filters"}>
+                {activeFilters.map((filter) => (
+                  <button key={filter.id} type="button" onClick={filter.clear}>
+                    <span>{filter.label}</span>
+                    <strong aria-hidden="true">x</strong>
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <p className="text-muted">
+                {lang === "ko" ? "필터 없이 전체 도구를 점검 중입니다." : "Scanning the full tool set without filters."}
+              </p>
+            )}
+          </div>
+          {topResult ? (
+            <div className="top-match-note">
+              <small>{lang === "ko" ? "상위 매칭" : "Top match"}</small>
+              <strong>{topResult.name}</strong>
+              <span>{topResult.problemContexts[0]}</span>
+            </div>
+          ) : null}
+        </div>
         <div className="grid grid-3 search-result-grid">
           {results.map((tool) => (
             <ToolCard key={tool.id} tool={tool} />

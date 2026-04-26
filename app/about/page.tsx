@@ -139,18 +139,29 @@ export default function AboutPage() {
         <div className="about-section-header">
           <h2>초보자도, 빌더도</h2>
         </div>
-        <div className="glass-tabs">
+        <div className="glass-tabs" role="tablist" aria-label={lang === "ko" ? "대상별 허브 경로" : "Audience paths"}>
           {(["Beginner", "Builder", "Curator"] as const).map((tab) => (
             <button
+              aria-controls={`${tab.toLowerCase()}-panel`}
+              aria-selected={activeTab === tab}
               key={tab}
               className={`glass-tab ${activeTab === tab ? "active" : ""}`}
+              id={`${tab.toLowerCase()}-tab`}
               onClick={() => setActiveTab(tab)}
+              role="tab"
+              type="button"
             >
               {tab}
             </button>
           ))}
         </div>
-        <div className="glass-card" style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto" }}>
+        <div
+          aria-labelledby={`${activeTab.toLowerCase()}-tab`}
+          className="glass-card"
+          id={`${activeTab.toLowerCase()}-panel`}
+          role="tabpanel"
+          style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto" }}
+        >
           <h3 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>{tabContent[activeTab].title}</h3>
           <p style={{ fontSize: "1.1rem" }}>{tabContent[activeTab].desc}</p>
         </div>
