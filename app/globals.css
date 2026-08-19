@@ -10,7 +10,6 @@
   --c-signal: 176 138 82;      /* brand gold */
   --c-shadow: 69 60 52;        /* shadow colour */
   --c-warm: 208 196 188;       /* warm border */
-  --c-badge: 232 222 209;      /* badge fill */
   --c-white: 255 255 255;      /* literal white, never themed */
 
   /* ---- 2. Semantic colour ---- */
@@ -20,22 +19,20 @@
   --ink: #1c1a17;
   --ink-strong: #100f0d;
   --muted: #6b6157;
-  --muted-strong: #514940;
+  --muted-strong: #49413a;
   --primary: #3c342c;
   --primary-hover: #2a241e;
-  --secondary: #6b6157;
   --on-primary: #fdfcfa;
 
-  --surface: #faf9f6;
-  --surface-low: #f4f3f1;
   --surface-card: rgb(var(--c-paper) / 0.86);
   --surface-card-hover: rgb(var(--c-paper) / 0.96);
   --surface-sunken: rgb(var(--c-ink) / 0.04);
   --surface-inverse: linear-gradient(150deg, #3c342c 0%, #55483a 100%);
   --on-inverse: #f8f4ee;
-  --on-inverse-muted: rgb(248 244 238 / 0.74);
+  --on-inverse-muted: rgb(248 244 238 / 0.78);
+  --on-inverse-accent: #e0b982;
 
-  --accent: #8a6534;              /* accent that passes contrast as text */
+  --accent: #7c5a2b;              /* accent that passes contrast as text */
   --accent-decor: #b08a52;        /* accent for fills, bars, rules */
   --signal: var(--accent-decor);
   --signal-soft: rgb(var(--c-signal) / 0.16);
@@ -47,20 +44,17 @@
   --border: rgb(var(--c-warm) / 0.68);
   --border-soft: rgb(var(--c-warm) / 0.38);
   --border-strong: rgb(var(--c-shadow) / 0.24);
-  --badge: rgb(var(--c-badge) / 0.72);
 
   /* verdict / status roles */
   --positive: #2f6f52;
   --positive-bg: rgb(47 111 82 / 0.12);
   --positive-border: rgb(47 111 82 / 0.26);
-  --caution: #96601c;
+  --caution: #855314;
   --caution-bg: rgb(176 138 82 / 0.16);
   --caution-border: rgb(176 138 82 / 0.34);
   --risk-ink: #b0392c;
   --risk-bg: rgb(176 57 44 / 0.1);
   --risk-border: rgb(176 57 44 / 0.24);
-  --warning: var(--caution-bg);
-  --risk: var(--risk-bg);
 
   /* ---- 3. Type scale (fluid) ---- */
   --font-sans: var(--font-sans-loaded), "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, -apple-system, sans-serif;
@@ -127,7 +121,6 @@
     --c-signal: 211 168 105;
     --c-shadow: 0 0 0;
     --c-warm: 122 110 96;
-    --c-badge: 96 82 63;
 
     --bg: #171613;
     --bg-tint-a: rgb(var(--c-signal) / 0.1);
@@ -138,17 +131,15 @@
     --muted-strong: #c6bdae;
     --primary: #e8dcc7;
     --primary-hover: #f5ecdd;
-    --secondary: #b3a998;
     --on-primary: #211d18;
 
-    --surface: #171613;
-    --surface-low: #1e1c18;
     --surface-card: rgb(var(--c-paper) / 0.82);
     --surface-card-hover: rgb(var(--c-paper) / 0.95);
     --surface-sunken: rgb(var(--c-ink) / 0.05);
     --surface-inverse: linear-gradient(150deg, #2c2822 0%, #3f362b 100%);
     --on-inverse: #f4ece0;
-    --on-inverse-muted: rgb(244 236 224 / 0.72);
+    --on-inverse-muted: rgb(244 236 224 / 0.78);
+  --on-inverse-accent: #e0b982;
 
     --accent: #dcb277;
     --accent-decor: #d3a869;
@@ -156,7 +147,6 @@
     --border: rgb(var(--c-warm) / 0.44);
     --border-soft: rgb(var(--c-warm) / 0.26);
     --border-strong: rgb(var(--c-warm) / 0.62);
-    --badge: rgb(var(--c-badge) / 0.45);
 
     --positive: #85cba7;
     --positive-bg: rgb(133 203 167 / 0.14);
@@ -182,7 +172,6 @@
   --c-signal: 211 168 105;
   --c-shadow: 0 0 0;
   --c-warm: 122 110 96;
-  --c-badge: 96 82 63;
 
   --bg: #171613;
   --bg-tint-a: rgb(var(--c-signal) / 0.1);
@@ -193,17 +182,15 @@
   --muted-strong: #c6bdae;
   --primary: #e8dcc7;
   --primary-hover: #f5ecdd;
-  --secondary: #b3a998;
   --on-primary: #211d18;
 
-  --surface: #171613;
-  --surface-low: #1e1c18;
   --surface-card: rgb(var(--c-paper) / 0.82);
   --surface-card-hover: rgb(var(--c-paper) / 0.95);
   --surface-sunken: rgb(var(--c-ink) / 0.05);
   --surface-inverse: linear-gradient(150deg, #2c2822 0%, #3f362b 100%);
   --on-inverse: #f4ece0;
-  --on-inverse-muted: rgb(244 236 224 / 0.72);
+  --on-inverse-muted: rgb(244 236 224 / 0.78);
+  --on-inverse-accent: #e0b982;
 
   --accent: #dcb277;
   --accent-decor: #d3a869;
@@ -211,7 +198,6 @@
   --border: rgb(var(--c-warm) / 0.44);
   --border-soft: rgb(var(--c-warm) / 0.26);
   --border-strong: rgb(var(--c-warm) / 0.62);
-  --badge: rgb(var(--c-badge) / 0.45);
 
   --positive: #85cba7;
   --positive-bg: rgb(133 203 167 / 0.14);
@@ -712,7 +698,7 @@ main {
   background: rgb(var(--c-paper) / 0.7);
   border: 1px solid var(--border-soft);
   border-radius: var(--r-sm);
-  color: var(--muted);
+  color: var(--muted-strong);
   display: inline-flex;
   flex: 0 0 auto;
   font-family: var(--font-mono);
@@ -725,7 +711,7 @@ main {
 }
 
 .rail-links a.active .rail-icon {
-  background: var(--accent-decor);
+  background: var(--accent);
   border-color: transparent;
   color: var(--on-primary);
 }
@@ -1312,14 +1298,20 @@ main {
 input,
 select,
 textarea {
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  border: 1px solid rgb(var(--c-ink) / 0.15);
+  padding: 0.68rem 0.9rem;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
   background: rgb(var(--c-paper) / 0.6);
   color: var(--ink);
-  font-size: 1rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  font-size: var(--fs-base);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease), background var(--dur) var(--ease);
   font-family: inherit;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--border-strong);
 }
 
 input:focus,
@@ -1327,13 +1319,14 @@ select:focus,
 textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 2px var(--accent-glow);
-  background: rgb(var(--c-paper) / 0.9);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+  background: rgb(var(--c-paper) / 0.95);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: rgb(var(--c-ink) / 0.4);
+  color: var(--muted);
+  opacity: 0.75;
 }
 
 input[type="checkbox"] {
@@ -1704,17 +1697,33 @@ textarea {
 
 .patch-note-item,
 .usage-item {
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.25rem;
-  background: rgb(var(--c-paper) / 0.62);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5);
+  background: rgb(var(--c-paper) / 0.6);
   backdrop-filter: blur(8px);
 }
 
 .usage-item h3,
 .patch-note-item h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.1rem;
+  margin: 0 0 0.4rem;
+  font-size: var(--fs-md);
+}
+
+.patch-note-form {
+  background: var(--surface-sunken);
+  border: 1px dashed var(--border);
+  border-radius: var(--r-lg);
+  display: grid;
+  gap: var(--sp-4);
+  padding: var(--sp-5);
+}
+
+.patch-note-item small {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.04em;
 }
 
 .patch-note-meta {
@@ -1726,11 +1735,13 @@ textarea {
 
 .impact-pill,
 .incident-pill {
-  border-radius: 999px;
+  border-radius: var(--r-full);
   padding: 0.2rem 0.55rem;
-  font-size: 0.72rem;
-  font-weight: 800;
-  line-height: 1;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 
@@ -1794,6 +1805,18 @@ textarea {
   background: rgb(var(--c-paper) / 0.95);
   box-shadow: var(--e-1);
   color: var(--ink-strong);
+}
+
+.empty-state-card {
+  align-items: flex-start;
+  border-style: dashed;
+  gap: var(--sp-2);
+  padding: var(--sp-10) var(--sp-6);
+}
+
+.empty-state-card h2 {
+  font-size: var(--fs-lg);
+  margin: 0;
 }
 
 .tab-content {
@@ -1993,10 +2016,18 @@ textarea {
 
 .community-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  margin-top: 3rem;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--sp-10);
+  margin-top: var(--section-gap);
   align-items: flex-start;
+}
+
+.community-column > h2 {
+  margin: 0 0 var(--sp-6);
+}
+
+.review-snippet-badges {
+  margin-top: var(--sp-3);
 }
 
 @media (max-width: 800px) {
@@ -2021,71 +2052,77 @@ textarea {
 .review-snippet {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.5rem;
+  border-radius: var(--r-xl);
+  padding: var(--sp-6);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 15px rgb(var(--c-shadow) / 0.02), inset 0 1px 1px var(--glass-highlight);
-  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: var(--e-1), var(--inset-hi);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 
 .review-snippet:hover {
   background: var(--card-hover);
+  border-color: var(--caution-border);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgb(var(--c-shadow) / 0.04), inset 0 1px 1px var(--glass-highlight);
+  box-shadow: var(--e-2), var(--inset-hi);
 }
 
 .review-snippet-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
   color: var(--muted);
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--sp-3);
 }
 
 .user-nickname {
   color: var(--ink);
-  font-weight: 700;
+  font-family: var(--font-mono);
+  font-weight: 600;
 }
 
 .review-snippet-tool {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  margin: 0 0 var(--sp-2);
 }
 
 .review-snippet-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  color: var(--muted-strong);
+  font-size: var(--fs-base);
+  line-height: 1.65;
   margin: 0;
 }
 
 .discussion-item {
-  background: rgb(var(--c-paper) / 0.3);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.25rem 1.5rem;
+  background: rgb(var(--c-paper) / 0.45);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+  padding: var(--sp-4) var(--sp-5);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  transition: all 0.2s ease;
   cursor: pointer;
+  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
 }
 
 .discussion-item:hover {
-  background: rgb(var(--c-paper) / 0.7);
-  border-color: rgb(var(--c-signal) / 0.34);
+  background: rgb(var(--c-paper) / 0.85);
+  border-color: var(--caution-border);
+  transform: translateX(3px);
 }
 
 .discussion-title {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.05rem;
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
   color: var(--ink);
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 .discussion-meta {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
   color: var(--muted);
 }
 
@@ -2094,27 +2131,27 @@ textarea {
    ========================================= */
 
 .review-form-card {
-  gap: 1.5rem;
-  padding: 2rem;
-  background: rgb(var(--c-paper) / 0.68);
+  gap: var(--sp-5);
+  padding: var(--sp-6);
+  background: rgb(var(--c-paper) / 0.72);
 }
 
-.review-form-card strong {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+.review-form-card > strong {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
   display: block;
 }
 
 .form-field {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .form-field-label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--muted);
+  font-size: var(--fs-sm);
+  font-weight: 650;
+  color: var(--muted-strong);
 }
 
 .form-row {
@@ -2134,11 +2171,11 @@ textarea {
 }
 
 .form-status {
-  border-radius: 12px;
+  border-radius: var(--r-md);
   margin: 0;
-  padding: 0.75rem 1rem;
-  font-size: 0.92rem;
-  font-weight: 700;
+  padding: 0.7rem 1rem;
+  font-size: var(--fs-base);
+  font-weight: 650;
 }
 
 .form-status.error {
@@ -2169,7 +2206,7 @@ textarea {
 
 .rating-star {
   background: transparent;
-  color: rgb(var(--c-ink) / 0.24);
+  color: rgb(var(--c-ink) / 0.28);
   border: none;
   width: 36px;
   height: 36px;
@@ -2192,9 +2229,10 @@ textarea {
 
 .rating-score-display {
   margin-left: 0.5rem;
-  font-weight: 700;
-  color: var(--signal);
-  font-size: 1.1rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--accent);
+  font-size: var(--fs-md);
 }
 
 .review-list {
@@ -2204,9 +2242,11 @@ textarea {
 }
 
 .review-list-title {
-  border-bottom: 1px solid rgb(var(--c-ink) / 0.1);
-  margin-top: 1.5rem;
-  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-soft);
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  margin-top: var(--sp-4);
+  padding-bottom: var(--sp-2);
 }
 
 .review-list-title span {
@@ -2851,7 +2891,7 @@ textarea {
 }
 
 .card.feature-card .section-kicker {
-  color: rgb(var(--c-signal) / 1);
+  color: var(--on-inverse-accent);
 }
 
 .card.feature-card p,
@@ -3395,8 +3435,8 @@ textarea {
 }
 
 .scenario-assessment-head h2 {
-  font-size: 1.35rem;
-  margin: 0.35rem 0 0;
+  font-size: var(--fs-lg);
+  margin: 0.25rem 0 0;
 }
 
 .scenario-grid {
@@ -3406,15 +3446,30 @@ textarea {
 }
 
 .scenario-card {
-  background: rgb(var(--c-paper) / 0.74);
+  background: rgb(var(--c-paper) / 0.6);
   border: 1px solid var(--border-soft);
-  border-left: 4px solid var(--signal);
-  border-radius: 12px;
-  padding: 1rem;
+  border-left: 3px solid var(--positive);
+  border-radius: var(--r-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: var(--sp-4);
+}
+
+.scenario-card strong {
+  font-size: var(--fs-base);
+}
+
+.scenario-card-best strong {
+  color: var(--positive);
 }
 
 .scenario-card-worst {
-  border-left-color: var(--risk-border);
+  border-left-color: var(--risk-ink);
+}
+
+.scenario-card-worst strong {
+  color: var(--risk-ink);
 }
 
 .scenario-card p {
@@ -3425,19 +3480,24 @@ textarea {
 .community-hero {
   align-items: flex-end;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr);
+  gap: var(--sp-8);
+  margin-top: var(--sp-4);
   overflow: hidden;
-  padding: 2.5rem;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
   position: relative;
 }
 
 .community-hero h1 {
-  font-size: clamp(2.4rem, 5.4vw, 4rem);
-  line-height: 1.05;
-  margin-top: 0.4rem;
-  word-break: keep-all;
+  font-size: var(--fs-4xl);
+  line-height: var(--lh-tight);
+  margin: 0.35rem 0 var(--sp-4);
+  max-width: 16ch;
+}
+
+.community-hero p {
+  font-size: var(--fs-lg);
+  max-width: 40rem;
 }
 
 .community-signal-board {
@@ -3689,7 +3749,7 @@ textarea {
 }
 
 .panel-footer-link {
-  color: var(--accent-decor);
+  color: var(--on-inverse-accent);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;

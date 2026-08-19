@@ -89,7 +89,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
     <section className="card review-form-card">
       <strong>{t.reviewWrite}</strong>
       
-      <div className="form-field">
+      <label className="form-field">
         <span className="form-field-label">{t.nickname}</span>
         <input
           value={nickname}
@@ -97,9 +97,9 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
           maxLength={24}
           placeholder={t.nicknamePlaceholder}
         />
-      </div>
+      </label>
 
-      <div className="form-field">
+      <label className="form-field">
         <span className="form-field-label">{t.oneLine}</span>
         <input
           value={line}
@@ -107,9 +107,9 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
           maxLength={120}
           placeholder={t.oneLinePlaceholder}
         />
-      </div>
+      </label>
 
-      <div className="form-field">
+      <label className="form-field">
         <span className="form-field-label">{t.detail}</span>
         <textarea
           value={detail}
@@ -117,7 +117,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
           rows={4}
           placeholder={t.detailPlaceholder}
         />
-      </div>
+      </label>
 
       <div className="form-field">
         <span className="form-field-label">Attachment (Optional)</span>
@@ -174,7 +174,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
         </div>
       </div>
 
-      <button className="button" type="button" onClick={onSave} style={{ marginTop: '0.5rem', width: 'fit-content' }}>
+      <button className="button review-submit-button" type="button" onClick={onSave}>
         {saved ? (
           <>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -188,10 +188,10 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
       </button>
 
       <div className="review-list">
-        <strong style={{ marginTop: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>
-          {t.reviewList} <span style={{color: 'var(--muted)', fontWeight: 400}}>({reviews.length})</span>
+        <strong className="review-list-title">
+          {t.reviewList} <span>({reviews.length})</span>
         </strong>
-        {reviews.length === 0 ? <p style={{color: 'var(--muted)'}}>{t.firstReview}</p> : null}
+        {reviews.length === 0 ? <p className="text-muted">{t.firstReview}</p> : null}
         
         {reviews.map((review) => (
           <article key={review.id} className="review-item">

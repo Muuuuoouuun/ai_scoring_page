@@ -62,24 +62,33 @@ export function PatchNotesSection({
           </article>
         ))}
       </div>
-      <div className="grid">
-        <input
-          value={title}
-          onChange={(event) => setTitle(event.target.value)}
-          placeholder={t.patchTitleInput}
-        />
-        <textarea
-          value={change}
-          onChange={(event) => setChange(event.target.value)}
-          rows={3}
-          placeholder={t.patchChangeInput}
-        />
-        <textarea
-          value={errorRisk}
-          onChange={(event) => setErrorRisk(event.target.value)}
-          rows={3}
-          placeholder={t.patchRiskInput}
-        />
+      <div className="patch-note-form">
+        <label className="form-field">
+          <span className="form-field-label">{t.patchTitleInput}</span>
+          <input
+            value={title}
+            onChange={(event) => setTitle(event.target.value)}
+            placeholder={t.patchTitleInput}
+          />
+        </label>
+        <label className="form-field">
+          <span className="form-field-label">{t.patchChangeInput}</span>
+          <textarea
+            value={change}
+            onChange={(event) => setChange(event.target.value)}
+            rows={3}
+            placeholder={t.patchChangeInput}
+          />
+        </label>
+        <label className="form-field">
+          <span className="form-field-label">{t.patchRiskInput}</span>
+          <textarea
+            value={errorRisk}
+            onChange={(event) => setErrorRisk(event.target.value)}
+            rows={3}
+            placeholder={t.patchRiskInput}
+          />
+        </label>
         <button className="secondary-button" type="button" onClick={onAdd}>
           {t.patchAdd}
         </button>

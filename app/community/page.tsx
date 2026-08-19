@@ -33,7 +33,7 @@ export default function CommunityPage() {
 
             <div className="community-grid">
                 <section className="community-column">
-                    <h2 style={{ marginBottom: "1.5rem" }}>{t.latestReviews}</h2>
+                    <h2>{t.latestReviews}</h2>
                     <div className="community-feed">
                         {/* Mock Review 1 */}
                         <article className="review-snippet">
@@ -47,7 +47,7 @@ export default function CommunityPage() {
                             <p className="review-snippet-text">
                                 너무 많은 채널 때문에 인지 과부하가 옵니다. 핵심 논의 채널만 남기고 삭제했습니다. 협업 명확성이 크게 올라갔습니다.
                             </p>
-                            <div className="badge-list" style={{ marginTop: "0.75rem" }}>
+                            <div className="badge-list review-snippet-badges">
                                 <span className="badge thinkCarefully">신중한 사용</span>
                             </div>
                         </article>
@@ -64,7 +64,7 @@ export default function CommunityPage() {
                             <p className="review-snippet-text">
                                 디자인 피드백이 항상 최신화되어 빠른 커뮤니케이션이 가능합니다. 댓글 스레드 관리가 조금 어렵긴 하지만 필수 툴입니다.
                             </p>
-                            <div className="badge-list" style={{ marginTop: "0.75rem" }}>
+                            <div className="badge-list review-snippet-badges">
                                 <span className="badge timeSaver">시간 절약</span>
                             </div>
                         </article>
@@ -81,7 +81,7 @@ export default function CommunityPage() {
                             <p className="review-snippet-text">
                                 위키로선 좋지만 작업 관리로 넘어가면 느려지고 복잡해집니다. 정보 구조화 규칙이 없으면 쓰레기통이 되기 쉬우니 주의해야 합니다.
                             </p>
-                            <div className="badge-list" style={{ marginTop: "0.75rem" }}>
+                            <div className="badge-list review-snippet-badges">
                                 <span className="badge lockinRisk">락인 위험</span>
                             </div>
                         </article>
@@ -89,7 +89,7 @@ export default function CommunityPage() {
                 </section>
 
                 <section className="community-column">
-                    <h2 style={{ marginBottom: "1.5rem" }}>{t.popularDiscussions}</h2>
+                    <h2>{t.popularDiscussions}</h2>
                     <div className="community-feed">
                         <article className="discussion-item">
                             <h3 className="discussion-title">비동기 협업, 메신저 대신 어떤 걸 쓰시나요?</h3>
