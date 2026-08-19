@@ -40,7 +40,7 @@ function InteractiveSignal() {
       ))}
       <div className="content">
         <h2>Move your cursor. Leave a signal.</h2>
-        <p style={{ color: "var(--muted)", fontSize: "1.1rem" }}>
+        <p className="text-muted">
           커뮤니티의 작은 신호들이 모여, 더 좋은 네트워크를 만듭니다.
         </p>
       </div>
@@ -68,7 +68,7 @@ export default function AboutPage() {
   };
 
   return (
-    <main className="about-page">
+    <main id="main-content" className="about-page">
       {/* 1) Hero */}
       <section className="glass-panel-hero">
         <h1>Intelligence, curated and structured.</h1>
@@ -80,11 +80,11 @@ export default function AboutPage() {
           <Link href="/search" className="button">
             Explore the Hub
           </Link>
-          <a href="#" className="secondary-button" style={{ background: "rgba(255,255,255,0.8)" }}>
+          <a href="#" className="secondary-button">
             Join the Community
           </a>
         </div>
-        <small style={{ color: "var(--muted)", fontWeight: 600 }}>“No hype. Just clarity.”</small>
+        <small className="about-hero-note">“No hype. Just clarity.”</small>
       </section>
 
       {/* 2) Why */}
@@ -102,8 +102,8 @@ export default function AboutPage() {
             <h3>선택 피로도</h3>
             <p>직접 써보지 않으면 알 수 없는 파편화된 특징들 때문에 탐색에 너무 많은 에너지가 소모됩니다.</p>
           </div>
-          <div className="glass-card" style={{ background: "rgba(176, 138, 82, 0.08)", borderColor: "rgba(176, 138, 82, 0.24)" }}>
-            <h3 style={{ color: "var(--accent)" }}>검색이 아닌 결정</h3>
+          <div className="glass-card glass-card-accent">
+            <h3>검색이 아닌 결정</h3>
             <p>그래서 우리는 단순한 정보 나열이 아니라, "의사결정"이 가능한 형태로 지식을 구조화합니다.</p>
           </div>
         </div>
@@ -114,7 +114,7 @@ export default function AboutPage() {
         <div className="about-section-header">
           <h2>우리가 제공하는 4가지</h2>
         </div>
-        <div className="grid" style={{ gridTemplateColumns: "1fr 1fr" }}>
+        <div className="grid about-duo-grid">
           <div className="glass-card pencil-underline">
             <h3>Curated Tools</h3>
             <p>가장 검증되고 실사용 가치가 높은 에이전트/AI 도구를 목적별로 엄선하여 큐레이션합니다.</p>
@@ -150,9 +150,9 @@ export default function AboutPage() {
             </button>
           ))}
         </div>
-        <div className="glass-card" style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto" }}>
-          <h3 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>{tabContent[activeTab].title}</h3>
-          <p style={{ fontSize: "1.1rem" }}>{tabContent[activeTab].desc}</p>
+        <div className="glass-card about-tab-panel">
+          <h3>{tabContent[activeTab].title}</h3>
+          <p>{tabContent[activeTab].desc}</p>
         </div>
       </section>
 
@@ -164,23 +164,23 @@ export default function AboutPage() {
         </div>
         <div className="principle-list">
           <div className="principle-item">
-            <strong style={{ width: "120px", color: "var(--accent)" }}>Clarity</strong>
+            <strong className="principle-term">Clarity</strong>
             <span>어떤 문제를 해결하는지 한 문장으로 명확히 설명 가능해야 함</span>
           </div>
           <div className="principle-item">
-            <strong style={{ width: "120px", color: "var(--accent)" }}>Utility</strong>
+            <strong className="principle-term">Utility</strong>
             <span>실제로 작업 시간을 줄이거나 결과물의 품질을 확연히 올려야 함</span>
           </div>
           <div className="principle-item">
-            <strong style={{ width: "120px", color: "var(--accent)" }}>Proof</strong>
+            <strong className="principle-term">Proof</strong>
             <span>설명뿐 아니라 실제 사용 사례, 레퍼런스, 확실한 적용 맥락 존재</span>
           </div>
           <div className="principle-item">
-            <strong style={{ width: "120px", color: "var(--accent)" }}>Alternatives</strong>
+            <strong className="principle-term">Alternatives</strong>
             <span>절대적인 1위는 없으므로 항상 선명한 대안 도구들과 함께 비교 검토</span>
           </div>
           <div className="principle-item">
-            <strong style={{ width: "120px", color: "var(--accent)" }}>Freshness</strong>
+            <strong className="principle-term">Freshness</strong>
             <span>지속적인 패치 노트 및 업데이트 상태, 현재 유지 관리 여부 확인</span>
           </div>
         </div>
@@ -196,21 +196,21 @@ export default function AboutPage() {
           <div className="timeline-step">
             <div className="circle">1</div>
             <strong>Submit</strong>
-            <p style={{ fontSize: "0.95rem", color: "var(--muted)", margin: "0.5rem 0 0" }}>
+            <p className="timeline-step-copy">
               유용한 도구나 가이드를 커뮤니티에 가볍게 제보합니다.
             </p>
           </div>
           <div className="timeline-step">
             <div className="circle">2</div>
             <strong>Review</strong>
-            <p style={{ fontSize: "0.95rem", color: "var(--muted)", margin: "0.5rem 0 0" }}>
+            <p className="timeline-step-copy">
               모더레이터와 커뮤니티가 요소들을 크로스 체크하고 피드백을 남깁니다.
             </p>
           </div>
           <div className="timeline-step">
             <div className="circle">3</div>
             <strong>Publish</strong>
-            <p style={{ fontSize: "0.95rem", color: "var(--muted)", margin: "0.5rem 0 0" }}>
+            <p className="timeline-step-copy">
               명확한 허브 표준 템플릿에 맞춰 구조화된 정보로 정식 공개됩니다.
             </p>
           </div>
@@ -247,20 +247,20 @@ export default function AboutPage() {
 
       {/* 9) CTA Footer */}
       <section className="glass-panel-footer">
-        <h2 style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>Build with clarity.</h2>
-        <p style={{ color: "var(--muted)", fontSize: "1.2rem", marginBottom: "2rem" }}>
+        <h2>Build with clarity.</h2>
+        <p className="panel-footer-copy">
           탐색하거나, 기여하거나, 함께 구조화하세요.
         </p>
         <div className="hero-actions">
           <Link href="/search" className="button">
             Start Exploring
           </Link>
-          <a href="#" className="secondary-button" style={{ background: "rgba(255,255,255,0.8)" }}>
+          <a href="#" className="secondary-button">
             Submit a Tool
           </a>
         </div>
-        <div style={{ marginTop: "1rem" }}>
-          <a href="#" style={{ color: "var(--accent)", fontWeight: 700, textDecoration: "underline" }}>
+        <div className="panel-footer-extra">
+          <a href="#" className="panel-footer-link">
             Join Discord / Forum
           </a>
         </div>

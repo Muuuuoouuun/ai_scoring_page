@@ -6,7 +6,7 @@ export default function CommunityPage() {
     const { lang, t } = useLanguage();
 
     return (
-        <main className="community-page">
+        <main id="main-content" className="community-page">
             <header className="community-hero">
                 <div>
                     <span className="section-kicker">COMMUNITY SIGNALS</span>

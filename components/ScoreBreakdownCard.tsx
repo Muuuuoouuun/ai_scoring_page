@@ -32,8 +32,11 @@ export function ScoreBreakdownCard({
       <div className="score-grid">
         {Object.entries(scoreBreakdown).map(([key, value]) => (
           <div key={key} className="score-row">
-            <span>{labels[key as keyof ScoreBreakdown]}</span>
-            <strong>{value}</strong>
+            <span className="score-row-label">{labels[key as keyof ScoreBreakdown]}</span>
+            <span className="score-row-bar" aria-hidden="true">
+              <span style={{ width: `${Math.min(100, Math.max(0, value))}%` }} />
+            </span>
+            <strong className="score-row-value">{value}</strong>
           </div>
         ))}
       </div>

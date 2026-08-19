@@ -30,7 +30,7 @@ export function ToolReviewContent({
   const [activeTab, setActiveTab] = useState<"review" | "discussion" | "community">("review");
 
   return (
-    <main className="tool-review-page">
+    <main id="main-content" className="tool-review-page">
       <section className="tool-detail-hero-grid">
         <ToolHeader tool={tool} />
         <ScoreBreakdownCard totalScore={insight.totalScore} scoreBreakdown={insight.scoreBreakdown} variant="hero" />
@@ -69,14 +69,14 @@ export function ToolReviewContent({
               <p>{insight.oneLine}</p>
             </section>
             <BestWorstNarratives bestCase={tool.bestCase} worstCase={tool.worstCase} />
+            <CapabilityComparisonTable toolName={tool.name} rows={insight.comparisons} />
             <OneLineReviewForm toolId={tool.id} />
             <PatchNotesSection toolId={tool.id} notes={insight.patchNotes} />
           </div>
 
           <aside className="review-sidebar-column">
-            <WorkUsageGuide playbook={insight.workPlaybook} />
             <ImpactMeterGrid impact={tool.impact} />
-            <CapabilityComparisonTable toolName={tool.name} rows={insight.comparisons} />
+            <WorkUsageGuide playbook={insight.workPlaybook} />
             <AlternativesSection alternatives={tool.alternatives} />
           </aside>
         </div>

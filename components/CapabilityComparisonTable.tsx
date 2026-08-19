@@ -10,28 +10,41 @@ export function CapabilityComparisonTable({
   toolName: string;
   rows: CapabilityComparison[];
 }) {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   return (
-    <section className="card feature-card">
-      <strong>🎯 {t.comparisonTitle}</strong>
-      <div className="comparison-table" role="table" aria-label="도구 기능 비교표">
+    <section className="card comparison-card">
+      <div className="comparison-card-head">
+        <span className="section-kicker">CAPABILITY DELTA</span>
+        <strong>{t.comparisonTitle}</strong>
+      </div>
+      <div className="comparison-table" role="table" aria-label={lang === "ko" ? "도구 기능 비교표" : "Capability comparison"}>
         <div className="comparison-head" role="row">
-          <span>{t.comparisonTarget}</span>
-          <span className="highlight-better">
+          <span role="columnheader">{t.comparisonTarget}</span>
+          <span role="columnheader" className="comparison-col-better">
             {toolName} {t.comparisonBetter}
           </span>
-          <span>
+          <span role="columnheader" className="comparison-col-worse">
             {toolName} {t.comparisonWorse}
           </span>
         </div>
         {rows.map((row) => (
           <div key={row.competitor} className="comparison-row" role="row">
-            <strong>{row.competitor}</strong>
-            <span className="highlight-better-text comparison-cell" data-label={`${toolName} ${t.comparisonBetter}`}>
+            <strong role="cell" className="comparison-competitor">
+              {row.competitor}
+            </strong>
+            <span
+              role="cell"
+              className="comparison-cell comparison-cell-better"
+              data-label={`${toolName} ${t.comparisonBetter}`}
+            >
               {row.worksBetterHere}
             </span>
-            <span className="text-muted comparison-cell" data-label={`${toolName} ${t.comparisonWorse}`}>
+            <span
+              role="cell"
+              className="comparison-cell comparison-cell-worse"
+              data-label={`${toolName} ${t.comparisonWorse}`}
+            >
               {row.weakerHere}
             </span>
           </div>

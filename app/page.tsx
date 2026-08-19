@@ -23,7 +23,7 @@ export default function HomePage() {
   const cautionCount = tools.filter((tool) => tool.verdictBadges.thinkCarefully).length;
 
   return (
-    <main className="home-journal">
+    <main id="main-content" className="home-journal">
       <section className="home-hero-canvas">
         <Hero />
       </section>
