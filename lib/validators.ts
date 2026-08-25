@@ -46,7 +46,7 @@ export const toolReviewSchema = z.object({
 export const toolSchema = z.object({
   name: z.string().min(2),
   description: z.string().min(10),
-  problemContexts: z.array(z.string().min(3)).min(1),
+  problemTagIds: z.array(z.string().min(2)).min(1),
   whyExist: z.string().min(10),
   impact: z.object({
     judgmentSpeed: z.number().min(0).max(10),

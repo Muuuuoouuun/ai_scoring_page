@@ -23,11 +23,42 @@ describe("API routes", () => {
     expect(data.tool.name).toBe("Notion");
   });
 
-  it("searches tools by problem context", async () => {
-    const response = await searchTools(new Request("http://localhost/api/search?problem=communication"));
+  it("문제 태그로 검색하면 후보가 여럿 나온다", async () => {
+    const response = await searchTools(
+      new Request("http://localhost/api/search?tag=meetings-without-decisions")
+    );
     const data = await getJson(response);
     expect(response.status).toBe(200);
-    expect(data.tools.length).toBeGreaterThan(0);
+    // 이 제품의 핵심 동선은 "후보를 놓고 고르기"라, 한 문제에 도구 하나만 나오면 성립하지 않습니다.
+    expect(data.results.length).toBeGreaterThanOrEqual(3);
+  });
+
+  it("존재하지 않는 태그로 검색하면 0건이 나온다", async () => {
+    // 이전 구현에는 `score > 0 || !query` 조건 때문에 문제만으로 검색하면
+    // 아무 태그나 넣어도 전체 10개가 반환되는 버그가 있었습니다.
+    const response = await searchTools(new Request("http://localhost/api/search?tag=nope-not-a-tag"));
+    const data = await getJson(response);
+    expect(response.status).toBe(200);
+    expect(data.results.length).toBe(0);
+  });
+
+  it("결과에 이 문제에서의 되는 것/안 되는 것이 함께 온다", async () => {
+    const response = await searchTools(new Request("http://localhost/api/search?tag=info-scattered"));
+    const data = await getJson(response);
+    data.results.forEach((entry: { angle?: { angle: string; limitation: string } }) => {
+      expect(entry.angle?.angle.length ?? 0).toBeGreaterThan(0);
+      expect(entry.angle?.limitation.length ?? 0).toBeGreaterThan(0);
+    });
+  });
+
+  it("팀 규모에서 권하지 않는 도구는 결과에서 빠진다", async () => {
+    const all = await getJson(
+      await searchTools(new Request("http://localhost/api/search?tag=info-scattered"))
+    );
+    const large = await getJson(
+      await searchTools(new Request("http://localhost/api/search?tag=info-scattered&teamSize=30%2B"))
+    );
+    expect(large.results.length).toBeLessThan(all.results.length);
   });
 
   it("rejects a tool whose score has no stated reason", async () => {
@@ -38,7 +69,7 @@ describe("API routes", () => {
         body: JSON.stringify({
           name: "NoReason",
           description: "Scores without any stated basis.",
-          problemContexts: ["We need a tool"],
+          problemTagIds: ["info-scattered"],
           whyExist: "Placeholder tool used to assert schema behaviour.",
           impact: { judgmentSpeed: 5, thinkingDepth: 5, executionDensity: 5, collaborationClarity: 5 },
           bestCase: "Nothing in particular happens here.",
@@ -87,7 +118,7 @@ describe("API routes", () => {
         body: JSON.stringify({
           name: "SignalFlow",
           description: "AI workflow engine for noisy signals.",
-          problemContexts: ["We miss critical alerts"],
+          problemTagIds: ["info-scattered"],
           whyExist: "Teams needed a reliable filter for operational noise.",
           impact: {
             judgmentSpeed: 6,

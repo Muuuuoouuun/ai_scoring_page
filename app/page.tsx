@@ -6,6 +6,7 @@ import { ProblemCategoryList } from "@/components/ProblemCategoryList";
 import { ToolCard } from "@/components/ToolCard";
 import { useLanguage } from "@/components/LanguageProvider";
 import { tools } from "@/data/tools";
+import { problemTags } from "@/lib/problems";
 
 export default function HomePage() {
   const { lang, t } = useLanguage();
@@ -19,7 +20,7 @@ export default function HomePage() {
         tools.length) *
         10
     ) / 10;
-  const contextCount = new Set(tools.flatMap((tool) => tool.problemContexts)).size;
+  const contextCount = problemTags.length;
   const cautionCount = tools.filter((tool) => tool.verdictBadges.thinkCarefully).length;
 
   return (

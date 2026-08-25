@@ -59,13 +59,22 @@ export type ToolReview = {
   comparisons: CapabilityComparison[];
   patchNotes: PatchNote[];
   playbook: WorkPlaybook[];
+  /** 이 조건이면 사지 마세요. 결정권자가 가장 먼저 하는 건 고르기가 아니라 떨어뜨리기입니다. */
+  doNotUseIf: string[];
+  /** 세 구간 전부 필수. 같은 도구가 5인에서 정답이고 50인에서 재앙인 경우가 흔합니다. */
+  teamFit: [TeamFit, TeamFit, TeamFit];
+  adoption: AdoptionCost;
+  pricingModel: PricingModel;
+  exitCost: ExitCost;
+  reviewMeta: ReviewMeta;
 };
 
 export type Tool = {
   id: string;
   name: string;
   description: string;
-  problemContexts: string[];
+  /** 이 도구가 걸리는 문제 태그 id 목록. data/problem-angles.ts에 태그별 문장이 있습니다. */
+  problemTagIds: string[];
   whyExist: string;
   impact: ImpactScores;
   bestCase: string;
@@ -75,6 +84,27 @@ export type Tool = {
   review: ToolReview;
   createdAt: string;
   updatedAt: string;
+};
+
+/* ──────────────────────────────────────────────────────────────────────────
+ * 문제 상황 태그 (P1)
+ *
+ * 자유 문장 대신 공유 태그를 씁니다. id가 언어와 무관한 안정 식별자라
+ * 한국어/영어 어느 화면에서 눌러도 같은 결과가 나옵니다.
+ * ────────────────────────────────────────────────────────────────────────── */
+
+export type ProblemTag = {
+  id: string;
+  ko: string;
+  en: string;
+  description: string;
+};
+
+/** 이 도구가 이 문제에서 되는 것 / 안 되는 것. 검색 결과 카드에 노출됩니다. */
+export type ToolProblemAngle = {
+  tagId: string;
+  angle: string;
+  limitation: string;
 };
 
 /* ──────────────────────────────────────────────────────────────────────────

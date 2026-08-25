@@ -86,8 +86,13 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
   };
 
   return (
-    <section className="card review-form-card">
-      <strong>{t.reviewWrite}</strong>
+    <details className="card review-form-card collapsible">
+      <summary>
+        {t.reviewWrite}
+        <span className="summary-count">
+          {t.reviewList} {reviews.length}
+        </span>
+      </summary>
       <p className="local-only-note">{t.reviewLocalOnly}</p>
       
       <div className="form-field">
@@ -221,6 +226,6 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
           </article>
         ))}
       </div>
-    </section>
+    </details>
   );
 }

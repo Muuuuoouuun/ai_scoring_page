@@ -2,117 +2,105 @@
 
 import { useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import type { Tool } from "@/lib/types";
 import { ToolCard } from "@/components/ToolCard";
+import { CompareBar } from "@/components/CompareBar";
 import { useLanguage } from "@/components/LanguageProvider";
+import { useCompare } from "@/components/CompareProvider";
+import { searchTools } from "@/lib/tools";
+import { getRankedTags, getTagLabel, getTag, countToolsForTag } from "@/lib/problems";
+import type { TeamSizeBand } from "@/lib/types";
 
-const badgeDescriptions = {
-  ko: [
-    "불필요한 반복을 줄여 실행 속도를 높입니다.",
-    "설정과 운영 원칙이 없으면 품질 저하가 생길 수 있습니다.",
-    "데이터 이동 비용이나 전환 비용이 높습니다."
-  ],
-  en: [
-    "Speeds up execution by reducing repetitive work.",
-    "Needs clear rules to avoid quality drift.",
-    "Switching cost or data gravity can be high."
-  ]
-} as const;
+const TEAM_BANDS: TeamSizeBand[] = ["1-5", "6-30", "30+"];
 
-const formatProblem = (problem: string) => problem;
-
-export default function SearchClient({
-  tools,
-  problemContexts
-}: {
-  tools: Tool[];
-  problemContexts: string[];
-}) {
+export default function SearchClient() {
   const { lang, t } = useLanguage();
   const searchParams = useSearchParams();
+  const { selected } = useCompare();
+
   const [query, setQuery] = useState(searchParams.get("query") ?? "");
-  const [problem, setProblem] = useState(searchParams.get("problem") ?? "");
+  const [tagId, setTagId] = useState(searchParams.get("tag") ?? "");
+  const [teamSize, setTeamSize] = useState(searchParams.get("teamSize") ?? "");
   const [badges, setBadges] = useState<string[]>(
     searchParams.get("badges")?.split(",").filter(Boolean) ?? []
   );
 
+  const tags = useMemo(() => getRankedTags(), []);
+
   useEffect(() => {
     const params = new URLSearchParams();
     if (query) params.set("query", query);
-    if (problem) params.set("problem", problem);
+    if (tagId) params.set("tag", tagId);
+    if (teamSize) params.set("teamSize", teamSize);
     if (badges.length > 0) params.set("badges", badges.join(","));
     const paramString = params.toString();
     window.history.replaceState(null, "", paramString ? `/search?${paramString}` : "/search");
-  }, [badges, problem, query]);
+  }, [badges, tagId, query, teamSize]);
 
-  const results = useMemo(() => {
-    const queryLower = query.toLowerCase();
-    const problemLower = problem.toLowerCase();
+  /**
+   * 검색 로직은 lib/tools.ts 한 곳에만 있습니다.
+   * 이전에는 이 파일과 서버에 각각 한 벌씩 있었고 동작이 서로 달랐습니다.
+   */
+  const results = useMemo(
+    () =>
+      searchTools({
+        query: query || undefined,
+        tagId: tagId || undefined,
+        teamSize: teamSize || undefined,
+        badges: badges.length
+          ? Object.fromEntries(badges.map((badge) => [badge, true]))
+          : undefined
+      }),
+    [badges, tagId, query, teamSize]
+  );
 
-    return tools
-      .map((tool) => {
-        let score = 0;
-        const text = [
-          tool.name,
-          tool.description,
-          tool.whyExist,
-          ...tool.problemContexts,
-          tool.bestCase,
-          tool.worstCase
-        ]
-          .join(" ")
-          .toLowerCase();
+  const activeTag = tagId ? getTag(tagId) : undefined;
 
-        if (queryLower && text.includes(queryLower)) {
-          score += 2;
-        }
-        if (problemLower) {
-          const matchesProblem = tool.problemContexts.some((context) =>
-            context.toLowerCase().includes(problemLower)
-          );
-          if (matchesProblem) {
-            score += 3;
-          }
-        }
-
-        const matchesBadges = badges.every(
-          (badge) => tool.verdictBadges[badge as keyof Tool["verdictBadges"]]
-        );
-        if (matchesBadges && badges.length > 0) {
-          score += 1;
-        }
-
-        return { tool, score };
-      })
-      .filter(({ score }) => score > 0 || (!query && !problem && badges.length === 0))
-      .sort((a, b) => b.score - a.score)
-      .map(({ tool }) => tool);
-  }, [badges, problem, query, tools]);
-
-  const toggleBadge = (badgeId: string) => {
+  const toggleBadge = (badgeId: string) =>
     setBadges((current) =>
       current.includes(badgeId) ? current.filter((badge) => badge !== badgeId) : [...current, badgeId]
     );
-  };
 
   const clearFilters = () => {
     setQuery("");
-    setProblem("");
+    setTagId("");
+    setTeamSize("");
     setBadges([]);
   };
 
+  const hasFilter = Boolean(query || tagId || teamSize || badges.length);
+
   return (
     <div className="section search-workbench">
-      <aside className="search-panel search-control-panel" aria-label={lang === "ko" ? "도구 검색 및 필터" : "Search and filter tools"}>
+      <aside className="search-panel search-control-panel" aria-label={t.searchFilterAria}>
         <div className="search-panel-head">
           <span className="section-kicker">SIGNAL INPUT</span>
-          <h2>{lang === "ko" ? "문제 문장을 먼저 적으세요" : "Start with the problem sentence"}</h2>
-          <p className="text-muted">
-            {lang === "ko"
-              ? "키워드, 문제 상황, 판단 배지를 조합하면 결과가 바로 재정렬됩니다."
-              : "Combine keywords, problem context, and judgment badges to reshape the result set."}
-          </p>
+          <h2>{t.searchPanelTitle}</h2>
+          <p className="text-muted">{t.searchPanelDesc}</p>
         </div>
+
+        <fieldset className="search-fieldset">
+          <legend className="search-fieldset-legend">{t.searchProblem}</legend>
+          <div className="tag-list" role="list">
+            {tags.map((tag) => {
+              const count = countToolsForTag(tag.id);
+              const active = tagId === tag.id;
+              return (
+                <button
+                  type="button"
+                  role="listitem"
+                  className={`tag-chip ${active ? "active" : ""}`}
+                  key={tag.id}
+                  onClick={() => setTagId(active ? "" : tag.id)}
+                  aria-pressed={active}
+                >
+                  <span className="tag-chip-label">{getTagLabel(tag, lang)}</span>
+                  <span className="tag-chip-count">{count}</span>
+                </button>
+              );
+            })}
+          </div>
+        </fieldset>
+
         <div className="search-form-group">
           <label className="search-form-label" htmlFor="search-keyword">
             {t.searchKeyword}
@@ -122,40 +110,34 @@ export default function SearchClient({
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder={t.searchKeywordPlaceholder}
-            aria-label={t.searchKeyword}
           />
         </div>
-        <div className="search-form-group">
-          <label className="search-form-label" htmlFor="search-problem">
-            {t.searchProblem}
-          </label>
-          <input
-            id="search-problem"
-            value={problem}
-            onChange={(event) => setProblem(event.target.value)}
-            placeholder={t.searchProblemPlaceholder}
-            aria-label={t.searchProblem}
-          />
-        </div>
-        <div className="chip-group" role="list" aria-label={lang === "ko" ? "빠른 문제 상황" : "Quick contexts"}>
-          {problemContexts.map((context) => (
-            <button
-              type="button"
-              className={`chip ${problem === context ? "active" : ""}`}
-              key={context}
-              onClick={() => setProblem(context)}
-            >
-              {formatProblem(context)}
-            </button>
-          ))}
-        </div>
+
+        <fieldset className="search-fieldset">
+          <legend className="search-fieldset-legend">{t.teamSizeLegend}</legend>
+          <div className="segmented" role="group">
+            {TEAM_BANDS.map((band) => (
+              <button
+                type="button"
+                key={band}
+                className={teamSize === band ? "active" : ""}
+                onClick={() => setTeamSize(teamSize === band ? "" : band)}
+                aria-pressed={teamSize === band}
+              >
+                {t.teamSizeLabels[band]}
+              </button>
+            ))}
+          </div>
+          <p className="field-hint">{t.teamSizeHint}</p>
+        </fieldset>
+
         <fieldset className="search-fieldset">
           <legend className="search-fieldset-legend">{t.searchFilterLegend}</legend>
           <div className="badge-filter">
             {[
-              { id: "timeSaver", label: t.verdict[0], description: badgeDescriptions[lang][0] },
-              { id: "thinkCarefully", label: t.verdict[1], description: badgeDescriptions[lang][1] },
-              { id: "lockinRisk", label: t.verdict[2], description: badgeDescriptions[lang][2] }
+              { id: "timeSaver", label: t.verdict[0], description: t.badgeDesc[0] },
+              { id: "thinkCarefully", label: t.verdict[1], description: t.badgeDesc[1] },
+              { id: "lockinRisk", label: t.verdict[2], description: t.badgeDesc[2] }
             ].map((badge) => (
               <label key={badge.id} className="badge-option">
                 <input
@@ -171,36 +153,53 @@ export default function SearchClient({
             ))}
           </div>
         </fieldset>
-        <button className="secondary-button" type="button" onClick={clearFilters}>
-          {t.clearFilters}
-        </button>
+
+        {hasFilter ? (
+          <button className="secondary-button" type="button" onClick={clearFilters}>
+            {t.clearFilters}
+          </button>
+        ) : null}
       </aside>
+
       <section className="search-results-panel">
         <div className="results-toolbar">
           <div>
             <span className="section-kicker">MATCH MATRIX</span>
-            <h2>{t.results}</h2>
-            <p>
-              <strong>{results.length}</strong> {t.matchCount}
+            <h2>{activeTag ? getTagLabel(activeTag, lang) : t.results}</h2>
+            <p className="text-muted">
+              {activeTag ? activeTag.description : `${results.length}${t.matchCount}`}
             </p>
           </div>
-          <div className="result-count-card" aria-label={lang === "ko" ? "현재 검색 결과 수" : "Current result count"}>
+          <div className="result-count-card">
             <strong>{results.length}</strong>
-            <span>{lang === "ko" ? "signals" : "matches"}</span>
+            <span>{lang === "ko" ? "개 후보" : "candidates"}</span>
           </div>
         </div>
+
+        {activeTag && results.length >= 2 ? (
+          <p className="compare-hint">{t.compareHint}</p>
+        ) : null}
+
         {results.length === 0 ? (
-          <div className="card">
+          <div className="card empty-state">
             <strong>{t.noMatch}</strong>
             <p>{t.noMatchDesc}</p>
+            {hasFilter ? (
+              <button className="secondary-button" type="button" onClick={clearFilters}>
+                {t.clearFilters}
+              </button>
+            ) : null}
           </div>
         ) : null}
-        <div className="grid grid-3 search-result-grid">
-          {results.map((tool) => (
-            <ToolCard key={tool.id} tool={tool} />
+
+        <div className="grid grid-2 search-result-grid">
+          {results.map(({ tool, angle }) => (
+            <ToolCard key={tool.id} tool={tool} angle={angle} selectable />
           ))}
         </div>
       </section>
+
+      {selected.length > 0 ? <CompareBar /> : null}
     </div>
   );
 }

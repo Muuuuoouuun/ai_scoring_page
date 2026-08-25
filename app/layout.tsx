@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import { CompareProvider } from "@/components/CompareProvider";
 import { Gnb } from "@/components/Gnb";
 import { JournalRail } from "@/components/JournalRail";
 import { AppFooter } from "@/components/AppFooter";
@@ -40,10 +41,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <GlobalBackgroundSVG />
         <LanguageProvider>
-          <Gnb />
-          <JournalRail />
-          {children}
-          <AppFooter />
+          <CompareProvider>
+            <Gnb />
+            <JournalRail />
+            {children}
+            <AppFooter />
+          </CompareProvider>
         </LanguageProvider>
       </body>
     </html>

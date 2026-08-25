@@ -1,5 +1,6 @@
 import type { Tool } from "@/lib/types";
 import { reviews } from "@/data/reviews";
+import { problemAngles } from "@/data/problem-angles";
 
 /** 도구의 기본 사실. 리뷰 본문은 data/reviews.ts에서 id로 붙입니다. */
 const toolFacts: Omit<Tool, "review">[] = [
@@ -7,10 +8,11 @@ const toolFacts: Omit<Tool, "review">[] = [
     id: "d41f50a2-3b7c-4f7e-8c73-1b8d0b0fe21a",
     name: "Notion",
     description: "문서, 업무, 가벼운 데이터베이스를 통합하는 모듈형 워크스페이스입니다.",
-    problemContexts: [
-      "작업이 여러 곳에 흩어져 있다",
-      "팀 지식이 너무 많은 도구에 분산되어 있다",
-      "프로젝트를 한곳에서 관리하고 싶다"
+    problemTagIds: [
+      "info-scattered",
+      "meetings-without-decisions",
+      "unclear-priority",
+      "slow-onboarding"
     ],
     whyExist: "공유 폴더만으로는 한계가 생기면서, 노트와 업무, 지식을 함께 관리하는 운영 시스템이 필요해졌습니다.",
     impact: {
@@ -34,10 +36,11 @@ const toolFacts: Omit<Tool, "review">[] = [
     id: "55d7ad1a-4c1c-4e58-a2d6-40a00d092e2a",
     name: "Figma",
     description: "디자인 협업과 프로토타이핑을 위한 협업 플랫폼입니다.",
-    problemContexts: [
-      "디자인 피드백 루프가 느리다",
-      "제품 관점을 팀이 함께 정리해야 한다",
-      "직군 간 정렬이 계속 흔들린다"
+    problemTagIds: [
+      "meetings-without-decisions",
+      "slow-feedback-loop",
+      "cross-role-misalignment",
+      "validate-before-building"
     ],
     whyExist: "디자인 작업이 개인 PC에 고립되지 않고, 팀 단위 협업 프로세스로 돌아가야 했기 때문입니다.",
     impact: {
@@ -61,10 +64,11 @@ const toolFacts: Omit<Tool, "review">[] = [
     id: "ef6b79b4-7c1e-4df0-95f1-9011f412e1cb",
     name: "Slack",
     description: "실시간 팀 커뮤니케이션 허브입니다.",
-    problemContexts: [
-      "팀 커뮤니케이션이 자주 끊긴다",
-      "중요한 맥락이 이메일에서 유실된다",
-      "더 빠른 협업 조율이 필요하다"
+    problemTagIds: [
+      "info-scattered",
+      "meetings-without-decisions",
+      "fragmented-focus",
+      "slow-onboarding"
     ],
     whyExist: "이메일만으로는 속도를 따라가기 어려워, 빠른 조율과 맥락 공유를 위한 실시간 공간이 필요해졌습니다.",
     impact: {
@@ -88,10 +92,11 @@ const toolFacts: Omit<Tool, "review">[] = [
     id: "f33e7f82-0d1c-4f57-9c5f-9a8e8e251e88",
     name: "Linear",
     description: "빠른 제품 팀을 위한 이슈 트래킹 도구입니다.",
-    problemContexts: [
-      "무엇이 중요한지 자주 놓친다",
-      "제품 실행 흐름이 산만하다",
-      "계획 정밀도를 높여야 한다"
+    problemTagIds: [
+      "fragmented-focus",
+      "unclear-priority",
+      "uneven-output-quality",
+      "gut-feel-decisions"
     ],
     whyExist: "기존 티켓 시스템이 현대 팀의 속도를 따라가지 못하면서, 선명한 실행 관리가 경쟁력이 되었기 때문입니다.",
     impact: {
@@ -115,10 +120,11 @@ const toolFacts: Omit<Tool, "review">[] = [
     id: "58dc3f0a-6e9d-4f21-a7c5-2e2186a42e8f",
     name: "Airtable",
     description: "운영 데이터와 지식 관리를 위한 유연한 데이터베이스-스프레드시트 하이브리드입니다.",
-    problemContexts: [
-      "가벼운 내부 운영 도구가 필요하다",
-      "데이터가 너무 많은 스프레드시트에 흩어져 있다",
-      "운영이 임시방편으로 돌아간다"
+    problemTagIds: [
+      "info-scattered",
+      "manual-repetition",
+      "no-eng-resource",
+      "gut-feel-decisions"
     ],
     whyExist: "엔지니어링 리소스 없이도 데이터베이스 수준의 구조를 쓰고 싶어하는 팀 수요가 커졌기 때문입니다.",
     impact: {
@@ -142,10 +148,11 @@ const toolFacts: Omit<Tool, "review">[] = [
     id: "a1aa1f1d-67f8-4dbd-aec0-2ed51b932d0a",
     name: "Miro",
     description: "워크숍과 아이데이션을 위한 협업 화이트보드입니다.",
-    problemContexts: [
-      "워크숍이 평면적으로 느껴진다",
-      "원격 브레인스토밍 에너지가 부족하다",
-      "전략을 시각화하기 어렵다"
+    problemTagIds: [
+      "meetings-without-decisions",
+      "unclear-priority",
+      "cross-role-misalignment",
+      "validate-before-building"
     ],
     whyExist: "원격 팀이 실시간으로 시각 사고를 공유하고 공동 제작할 수 있는 공간이 필요했기 때문입니다.",
     impact: {
@@ -169,10 +176,10 @@ const toolFacts: Omit<Tool, "review">[] = [
     id: "b559d3ef-7c52-4ed0-9e84-2f5b1a9775b4",
     name: "Zapier",
     description: "코드 없이 여러 앱을 연결해 자동화하는 플랫폼입니다.",
-    problemContexts: [
-      "수작업 인수인계로 속도가 떨어진다",
-      "개발 리소스 없이 빠른 자동화가 필요하다",
-      "반복 입력 작업이 많다"
+    problemTagIds: [
+      "fragmented-focus",
+      "manual-repetition",
+      "no-eng-resource"
     ],
     whyExist: "개발자 대기열을 기다리지 않고도 현업이 직접 자동화를 구축할 필요가 커졌기 때문입니다.",
     impact: {
@@ -196,10 +203,10 @@ const toolFacts: Omit<Tool, "review">[] = [
     id: "6b6f9d15-0a05-4c34-8a6b-4d6b5a6ae7ea",
     name: "Jasper",
     description: "마케팅/콘텐츠 팀을 위한 AI 글쓰기 보조 도구입니다.",
-    problemContexts: [
-      "콘텐츠 백로그가 너무 빠르게 쌓인다",
-      "브랜드 톤앤매너가 들쭉날쭉하다",
-      "초안 작성 속도를 높여야 한다"
+    problemTagIds: [
+      "slow-feedback-loop",
+      "manual-repetition",
+      "uneven-output-quality"
     ],
     whyExist: "마케팅 팀이 속도를 유지하면서도 더 많은 콘텐츠를 생산해야 했기 때문입니다.",
     impact: {
@@ -223,10 +230,11 @@ const toolFacts: Omit<Tool, "review">[] = [
     id: "d07d34fb-2cd2-4fcb-95dd-e1fceaa52d27",
     name: "Gong",
     description: "영업 대화 분석 기반의 수익 인텔리전스 플랫폼입니다.",
-    problemContexts: [
-      "영업 통화가 블랙박스처럼 관리된다",
-      "코칭이 경험담 중심으로 이루어진다",
-      "딜 가시성을 더 높여야 한다"
+    problemTagIds: [
+      "slow-onboarding",
+      "uneven-output-quality",
+      "gut-feel-decisions",
+      "cross-role-misalignment"
     ],
     whyExist: "CRM 메모만으로는 한계가 있어, 데이터 기반 코칭과 영업 대화 가시성이 필요했기 때문입니다.",
     impact: {
@@ -250,10 +258,11 @@ const toolFacts: Omit<Tool, "review">[] = [
     id: "e357c35d-bfd4-4c14-aad0-9910de98837f",
     name: "Replit",
     description: "AI 코파일럿을 포함한 브라우저 기반 개발 환경입니다.",
-    problemContexts: [
-      "빠른 프로토타이핑이 필요하다",
-      "엔지니어 온보딩이 오래 걸린다",
-      "코딩 입문 장벽이 높다"
+    problemTagIds: [
+      "slow-feedback-loop",
+      "no-eng-resource",
+      "slow-onboarding",
+      "validate-before-building"
     ],
     whyExist: "환경 설정 부담 없이 즉시 개발을 시작하고, AI 보조를 함께 활용하려는 요구가 커졌기 때문입니다.",
     impact: {

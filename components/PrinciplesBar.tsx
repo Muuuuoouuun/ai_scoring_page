@@ -12,7 +12,7 @@ export function PrinciplesBar() {
       </div>
       <div className="principles-grid">
         {t.principles.map((principle, index) => (
-          <div className="principle-item" key={principle.title}>
+          <div className="home-principle" key={principle.title}>
             <span className="principle-number">{(index + 1).toString().padStart(2, "0")}</span>
             <h3>{principle.title}</h3>
             <p>{principle.description}</p>
