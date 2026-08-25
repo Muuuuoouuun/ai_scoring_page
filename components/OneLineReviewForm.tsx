@@ -88,6 +88,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
   return (
     <section className="card review-form-card">
       <strong>{t.reviewWrite}</strong>
+      <p className="local-only-note">{t.reviewLocalOnly}</p>
       
       <div className="form-field">
         <span className="form-field-label">{t.nickname}</span>

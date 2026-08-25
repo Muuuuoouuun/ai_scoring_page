@@ -1,7 +1,14 @@
 "use client";
 
 import type { ScoreBreakdown } from "@/lib/insights";
+import { SCORE_FACET_KEYS } from "@/lib/insights";
 import { useLanguage } from "@/components/LanguageProvider";
+
+const scoreTone = (score: number) => {
+  if (score >= 75) return "high";
+  if (score >= 55) return "mid";
+  return "low";
+};
 
 export function ScoreBreakdownCard({
   totalScore,
@@ -13,7 +20,7 @@ export function ScoreBreakdownCard({
   variant?: "default" | "hero";
 }) {
   const { t } = useLanguage();
-  const labels: Record<keyof ScoreBreakdown, string> = {
+  const labels: Record<(typeof SCORE_FACET_KEYS)[number], string> = {
     functionality: t.scoreLabels[0],
     uiux: t.scoreLabels[1],
     reliability: t.scoreLabels[2],
@@ -29,13 +36,23 @@ export function ScoreBreakdownCard({
         <span>{totalScore}</span>
         <small>/100</small>
       </p>
+      <p className="score-basis-note">{t.scoreBasisNote}</p>
       <div className="score-grid">
-        {Object.entries(scoreBreakdown).map(([key, value]) => (
-          <div key={key} className="score-row">
-            <span>{labels[key as keyof ScoreBreakdown]}</span>
-            <strong>{value}</strong>
-          </div>
-        ))}
+        {SCORE_FACET_KEYS.map((key) => {
+          const facet = scoreBreakdown[key];
+          return (
+            <div key={key} className={`score-row score-row-${scoreTone(facet.score)}`}>
+              <div className="score-row-head">
+                <span>{labels[key]}</span>
+                <strong>{facet.score}</strong>
+              </div>
+              <div className="score-bar" aria-hidden="true">
+                <span style={{ width: `${facet.score}%` }} />
+              </div>
+              <p className="score-reason">{facet.reason}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

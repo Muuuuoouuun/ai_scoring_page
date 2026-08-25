@@ -64,19 +64,20 @@ export function ToolReviewContent({
               <strong>{t.whyExists}</strong>
               <p>{tool.whyExist}</p>
             </section>
-            <section className="card">
+            <section className="card verdict-card">
+              <span className="section-kicker">ONE-LINE VERDICT</span>
               <strong>{t.reviewSummary}</strong>
-              <p>{insight.oneLine}</p>
+              <p className="verdict-line">{insight.oneLine}</p>
             </section>
             <BestWorstNarratives bestCase={tool.bestCase} worstCase={tool.worstCase} />
+            <CapabilityComparisonTable toolName={tool.name} rows={insight.comparisons} />
+            <PatchNotesSection notes={insight.patchNotes} />
             <OneLineReviewForm toolId={tool.id} />
-            <PatchNotesSection toolId={tool.id} notes={insight.patchNotes} />
           </div>
 
           <aside className="review-sidebar-column">
             <WorkUsageGuide playbook={insight.workPlaybook} />
             <ImpactMeterGrid impact={tool.impact} />
-            <CapabilityComparisonTable toolName={tool.name} rows={insight.comparisons} />
             <AlternativesSection alternatives={tool.alternatives} />
           </aside>
         </div>

@@ -1,6 +1,8 @@
 import type { Tool } from "@/lib/types";
+import { reviews } from "@/data/reviews";
 
-export const tools: Tool[] = [
+/** 도구의 기본 사실. 리뷰 본문은 data/reviews.ts에서 id로 붙입니다. */
+const toolFacts: Omit<Tool, "review">[] = [
   {
     id: "d41f50a2-3b7c-4f7e-8c73-1b8d0b0fe21a",
     name: "Notion",
@@ -272,3 +274,17 @@ export const tools: Tool[] = [
     updatedAt: "2024-02-10T10:00:00Z"
   }
 ];
+
+/**
+ * 리뷰가 없는 도구는 화면에 올리지 않습니다.
+ * 조용히 빈 값으로 넘어가면 예전처럼 "내용 없는 리뷰"가 다시 생기므로 빌드 시점에 실패시킵니다.
+ */
+export const tools: Tool[] = toolFacts.map((fact) => {
+  const review = reviews[fact.id];
+  if (!review) {
+    throw new Error(
+      `[data/tools] "${fact.name}"(${fact.id})의 리뷰가 없습니다. data/reviews.ts에 먼저 작성하세요.`
+    );
+  }
+  return { ...fact, review };
+});

@@ -30,6 +30,44 @@ describe("API routes", () => {
     expect(data.tools.length).toBeGreaterThan(0);
   });
 
+  it("rejects a tool whose score has no stated reason", async () => {
+    const response = await createTool(
+      new Request("http://localhost/api/tool", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "NoReason",
+          description: "Scores without any stated basis.",
+          problemContexts: ["We need a tool"],
+          whyExist: "Placeholder tool used to assert schema behaviour.",
+          impact: { judgmentSpeed: 5, thinkingDepth: 5, executionDensity: 5, collaborationClarity: 5 },
+          bestCase: "Nothing in particular happens here.",
+          worstCase: "Nothing in particular happens here either.",
+          verdictBadges: { timeSaver: true, thinkCarefully: false, lockinRisk: false },
+          alternatives: ["Doing nothing"],
+          review: {
+            verdict: "근거 없는 점수는 저장되면 안 됩니다.",
+            scoreBreakdown: {
+              functionality: { score: 70, reason: "" },
+              uiux: { score: 70, reason: "" },
+              reliability: { score: 70, reason: "" },
+              comfort: { score: 70, reason: "" },
+              pricing: { score: 70, reason: "" }
+            },
+            comparisons: [
+              { competitor: "Doing nothing", worksBetterHere: "충분히 긴 문장입니다.", weakerHere: "이것도 충분히 긴 문장입니다." }
+            ],
+            patchNotes: [],
+            playbook: [
+              { title: "제목", howToUse: "충분히 긴 설명 문장입니다.", recommendation: "충분히 긴 권고 문장입니다." }
+            ]
+          }
+        })
+      })
+    );
+    expect(response.status).toBe(400);
+  });
+
   it("validates tool creation", async () => {
     const response = await createTool(
       new Request("http://localhost/api/tool", {
@@ -64,7 +102,32 @@ describe("API routes", () => {
             thinkCarefully: true,
             lockinRisk: false
           },
-          alternatives: ["Manual triage", "Custom scripts"]
+          alternatives: ["Manual triage", "Custom scripts"],
+          review: {
+            verdict: "알림 노이즈를 줄이는 데는 확실하지만, 임계값 설계를 못 하면 진짜 장애를 놓칩니다.",
+            scoreBreakdown: {
+              functionality: { score: 70, reason: "규칙 기반 필터와 라우팅은 충분하지만 이상 탐지는 얕습니다." },
+              uiux: { score: 60, reason: "설정 화면이 규칙 수가 늘면 빠르게 복잡해집니다." },
+              reliability: { score: 80, reason: "수집 파이프라인 자체는 안정적으로 동작합니다." },
+              comfort: { score: 55, reason: "임계값을 잘못 잡으면 오히려 알림이 늘어납니다." },
+              pricing: { score: 45, reason: "이벤트 수 기반 과금이라 트래픽이 늘면 비용이 급증합니다." }
+            },
+            comparisons: [
+              {
+                competitor: "Manual triage",
+                worksBetterHere: "야간과 주말에도 동일한 기준으로 걸러내 대응 편차가 사라집니다.",
+                weakerHere: "맥락을 아는 사람의 판단이 필요한 예외 상황에서는 오히려 방해가 됩니다."
+              }
+            ],
+            patchNotes: [],
+            playbook: [
+              {
+                title: "임계값을 2주마다 재조정하기",
+                howToUse: "무시된 알림 비율을 주기적으로 보고 규칙을 좁힙니다.",
+                recommendation: "무시율이 30%를 넘으면 팀이 알림을 신뢰하지 않기 시작한 신호입니다."
+              }
+            ]
+          }
         })
       })
     );

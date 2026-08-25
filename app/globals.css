@@ -1013,41 +1013,254 @@ textarea {
   gap: 0.75rem;
 }
 
+.score-basis-note {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin: 0.25rem 0 0.25rem;
+}
+
 .score-row {
+  display: grid;
+  gap: 0.4rem;
+  border-bottom: 1px dashed rgba(43, 45, 51, 0.12);
+  padding-bottom: 0.75rem;
+}
+
+.score-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.score-row-head {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px dashed rgba(43, 45, 51, 0.12);
-  padding-bottom: 0.5rem;
+  align-items: baseline;
+  gap: 0.75rem;
   color: var(--muted);
 }
 
-.score-row span:last-child {
+.score-row-head strong {
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
-.comparison-table {
-  display: grid;
-  gap: 0.5rem;
+.score-bar {
+  display: block;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(43, 45, 51, 0.09);
+  overflow: hidden;
 }
 
-.comparison-head,
-.comparison-row {
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
-  gap: 1rem;
-  align-items: flex-start;
+.score-bar > span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--signal);
 }
 
-.comparison-head {
-  font-size: 0.85rem;
+.score-row-high .score-bar > span {
+  background: linear-gradient(90deg, var(--primary), var(--signal));
+}
+
+.score-row-low .score-bar > span {
+  background: #dc2626;
+}
+
+.score-row-low .score-row-head strong {
+  color: #dc2626;
+}
+
+.score-reason {
+  margin: 0;
   color: var(--muted);
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border);
+  font-size: 0.82rem;
+  line-height: 1.55;
 }
 
-.comparison-cell::before {
-  content: none;
+.comparison-card {
+  gap: 1.1rem;
+}
+
+.comparison-head-block h2 {
+  font-size: 1.3rem;
+  margin: 0.35rem 0 0.4rem;
+}
+
+.comparison-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.comparison-block {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.comparison-block-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.7rem;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(176, 138, 82, 0.07);
+}
+
+.comparison-vs {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.comparison-block-head strong {
+  font-size: 1.02rem;
+}
+
+/*
+ * auto-fit: 뷰포트가 아니라 이 컨테이너의 폭을 기준으로 접힙니다.
+ * 이전에는 max-width:720px 뷰포트 미디어쿼리로 1열 전환을 했기 때문에
+ * 380px 사이드바 안에서는 끝내 3열이 유지되며 글자가 겹쳤습니다.
+ */
+.comparison-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* gap이 배경색을 드러내며 구분선이 됩니다. 가로로 놓이든 세로로 접히든 같은 두께로 그려집니다. */
+  gap: 1px;
+  background: var(--border);
+}
+
+.comparison-cell {
+  padding: 1rem 1.1rem;
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.comparison-cell-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.comparison-cell-better .comparison-cell-label {
+  color: #15803d;
+}
+
+.comparison-cell-worse .comparison-cell-label {
+  color: #b45309;
+}
+
+.comparison-cell p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.62;
+}
+
+.comparison-cell-worse p {
+  color: var(--muted);
+}
+
+.patch-notes-card {
+  gap: 1rem;
+}
+
+.patch-notes-head p {
+  margin: 0.35rem 0 0;
+  font-size: 0.88rem;
+}
+
+.patch-empty {
+  margin: 0;
+  padding: 1.1rem 1.2rem;
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  background: rgba(43, 45, 51, 0.02);
+}
+
+.patch-note-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.patch-note-label {
+  font-weight: 800;
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: 0.35rem;
+}
+
+.patch-note-item time {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.patch-note-risk {
+  color: var(--muted);
+}
+
+.local-only-note {
+  margin: 0.35rem 0 0.5rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  color: #b45309;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.verdict-card .verdict-line {
+  font-size: 1.06rem;
+  line-height: 1.7;
+  margin: 0.4rem 0 0;
+}
+
+.community-preparing {
+  margin: 2rem 0 0;
+  padding: 2.5rem 2rem;
+  border: 1px dashed var(--border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  display: grid;
+  justify-items: start;
+  gap: 0.85rem;
+  max-width: 720px;
+}
+
+.preparing-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b45309;
+  background: rgba(245, 158, 11, 0.12);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+}
+
+.community-preparing h2 {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.community-preparing p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 58ch;
 }
 
 .patch-note-item,
@@ -2156,33 +2369,6 @@ textarea {
   padding: 0.5rem;
   border-radius: 8px;
   border: 1px dashed rgba(176, 138, 82, 0.28);
-}
-
-@media (max-width: 720px) {
-  .comparison-head {
-    display: none;
-  }
-
-  .comparison-row {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-    padding: 1rem 0;
-    border-top: 1px solid var(--border);
-  }
-
-  .comparison-head + .comparison-row {
-    border-top: none;
-    padding-top: 0;
-  }
-
-  .comparison-cell::before {
-    content: attr(data-label);
-    display: block;
-    margin-bottom: 0.35rem;
-    color: var(--muted);
-    font-size: 0.78rem;
-    font-weight: 800;
-  }
 }
 
 .hero .hero-actions {
