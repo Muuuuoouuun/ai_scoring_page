@@ -92,3 +92,66 @@ describe("모든 도구가 리뷰를 갖는다", () => {
     });
   });
 });
+
+/**
+ * 도입 판단 필드에도 같은 규칙을 적용합니다.
+ *
+ * P0에서 총평·비교·가이드의 템플릿 문제를 고쳤지만, 새 필드를 추가하자
+ * 적대적 검증에서 같은 문제가 재발한 것이 확인됐습니다.
+ * 필드가 늘어날 때마다 이 테스트도 함께 늘려야 합니다.
+ */
+describe("도입 판단 필드", () => {
+  it("검수되지 않은 초안은 검수자를 지어내지 않는다", () => {
+    tools.forEach((tool) => {
+      const meta = tool.review.reviewMeta;
+      if (!meta.reviewedBy) {
+        expect(meta.reviewedAt, `${tool.name}: 검수자가 없는데 검수일이 있습니다`).toBe("");
+      }
+      expect(meta.evidence.length, `${tool.name}: 근거가 없습니다`).toBeGreaterThan(0);
+    });
+  });
+
+  it("확인 시점을 적었다면 검수자도 있어야 한다", () => {
+    tools.forEach((tool) => {
+      const { pricingModel, reviewMeta } = tool.review;
+      if (pricingModel.asOf) {
+        expect(
+          reviewMeta.reviewedBy,
+          `${tool.name}: 확인 시점(${pricingModel.asOf})은 있는데 확인한 사람이 없습니다`
+        ).not.toBe("");
+      }
+    });
+  });
+
+  it("팀 규모 세 구간이 전부 같은 판정이 아니다", () => {
+    tools.forEach((tool) => {
+      const levels = new Set(tool.review.teamFit.map((entry) => entry.fit));
+      expect(levels.size, `${tool.name}: 세 구간이 전부 ${[...levels][0]}입니다`).toBeGreaterThan(1);
+    });
+  });
+
+  it("락인 배지와 이탈 난이도가 어긋나지 않는다", () => {
+    tools.forEach((tool) => {
+      const hard = ["hard", "trapped"].includes(tool.review.exitCost.difficulty);
+      expect(
+        tool.verdictBadges.lockinRisk,
+        `${tool.name}: 락인 배지(${tool.verdictBadges.lockinRisk})와 이탈 난이도(${tool.review.exitCost.difficulty})가 어긋납니다`
+      ).toBe(hard);
+    });
+  });
+
+  it("탈락 조건 문장이 도구 간에 재사용되지 않는다", () => {
+    const items = tools.flatMap((tool) => tool.review.doNotUseIf);
+    expect(unique(items)).toBe(items.length);
+  });
+
+  it("비용이 튀는 조건 문장이 도구 간에 재사용되지 않는다", () => {
+    const items = tools.flatMap((tool) => tool.review.pricingModel.spikeTriggers);
+    expect(unique(items)).toBe(items.length);
+  });
+
+  it("팀 규모 판정 근거가 도구 간에 재사용되지 않는다", () => {
+    const notes = tools.flatMap((tool) => tool.review.teamFit.map((entry) => entry.note));
+    expect(unique(notes)).toBe(notes.length);
+  });
+});

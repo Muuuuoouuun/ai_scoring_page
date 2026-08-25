@@ -100,12 +100,12 @@ export function DecisionRecords({ toolId, toolName }: { toolId: string; toolName
   const topAlternative = alternatives[0];
 
   return (
-    <section className="card decision-records-card">
-      <div className="decision-head">
-        <span className="section-kicker">DECISION RECORDS</span>
-        <h2>{t.decisionTitle}</h2>
-        <p className="text-muted">{t.decisionDesc}</p>
-      </div>
+    <details className="card decision-records-card collapsible">
+      <summary>
+        {t.decisionTitle}
+        <span className="summary-count">{records.length}</span>
+      </summary>
+      <p className="text-muted section-lede">{t.decisionDesc}</p>
 
       {/* 집계는 표본이 쌓였을 때만 문장으로 만듭니다. */}
       {records.length >= 3 && topAlternative ? (
@@ -227,6 +227,6 @@ export function DecisionRecords({ toolId, toolName }: { toolId: string; toolName
       )}
 
       {status === "done" ? <p className="form-success">{t.decisionThanks}</p> : null}
-    </section>
+    </details>
   );
 }

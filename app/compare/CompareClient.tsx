@@ -174,7 +174,9 @@ export default function CompareClient() {
                     </ul>
                   </>
                 ) : null}
-                <span className="as-of">{t.asOf} {pricing.asOf}</span>
+                <span className="as-of">
+                  {pricing.asOf ? `${t.asOf} ${pricing.asOf}` : t.asOfUnknown}
+                </span>
               </div>
             );
           })}

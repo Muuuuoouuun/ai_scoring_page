@@ -47,7 +47,16 @@ export function AdoptionFacts({ tool }: { tool: Tool }) {
         </ul>
       </section>
 
-      <div className="adoption-grid">
+      {/*
+        떨어뜨리기(doNotUseIf)와 우리 규모(teamFit)는 항상 펼칩니다.
+        비용 세 가지는 그 둘을 통과한 뒤에 보는 정보라 접어둡니다.
+      */}
+      <details className="card cost-group collapsible">
+        <summary>
+          {t.costGroupTitle}
+          <span className="summary-count">{t.costGroupHint}</span>
+        </summary>
+        <div className="adoption-grid">
         <section className="card adoption-cost-card">
           <span className="section-kicker">ADOPTION COST</span>
           <h2>{t.adoptionRow}</h2>
@@ -88,7 +97,7 @@ export function AdoptionFacts({ tool }: { tool: Tool }) {
           <p className="text-muted free-tier">{pricingModel.freeTierReality}</p>
           {/* 가격은 이 사이트에서 가장 빨리 틀려지는 데이터라 화면이 스스로 경고합니다. */}
           <p className="as-of-warning">
-            {t.asOf} {pricingModel.asOf} · {t.pricingStale}
+            {pricingModel.asOf ? `${t.asOf} ${pricingModel.asOf}` : t.asOfUnknown} · {t.pricingStale}
           </p>
         </section>
 
@@ -113,7 +122,8 @@ export function AdoptionFacts({ tool }: { tool: Tool }) {
             </div>
           </dl>
         </section>
-      </div>
+        </div>
+      </details>
     </div>
   );
 }

@@ -72,12 +72,12 @@ export function BreakageReports({ toolId }: { toolId: string }) {
   };
 
   return (
-    <section className="card breakage-card">
-      <div className="breakage-head">
-        <span className="section-kicker">BREAKAGE REPORTS</span>
-        <h2>{t.breakageTitle}</h2>
-        <p className="text-muted">{t.breakageDesc}</p>
-      </div>
+    <details className="card breakage-card collapsible">
+      <summary>
+        {t.breakageTitle}
+        <span className="summary-count">{reports.length}</span>
+      </summary>
+      <p className="text-muted section-lede">{t.breakageDesc}</p>
 
       {reports.length > 0 ? (
         <ul className="breakage-list">
@@ -145,6 +145,6 @@ export function BreakageReports({ toolId }: { toolId: string }) {
       )}
 
       {status === "done" ? <p className="form-success">{t.breakageThanks}</p> : null}
-    </section>
+    </details>
   );
 }

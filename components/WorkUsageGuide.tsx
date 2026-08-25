@@ -7,9 +7,11 @@ export function WorkUsageGuide({ playbook }: { playbook: WorkPlaybook[] }) {
   const { t } = useLanguage();
 
   return (
-    <section className="card feature-card">
-      <span className="section-kicker">PRACTICAL GUIDE</span>
-      <strong>{t.workGuide}</strong>
+    <details className="card feature-card collapsible">
+      <summary>
+        {t.workGuide}
+        <span className="summary-count">{playbook.length}</span>
+      </summary>
       <div className="grid">
         {playbook.map((item) => (
           <article className="usage-item" key={item.title}>
@@ -25,6 +27,6 @@ export function WorkUsageGuide({ playbook }: { playbook: WorkPlaybook[] }) {
           </article>
         ))}
       </div>
-    </section>
+    </details>
   );
 }

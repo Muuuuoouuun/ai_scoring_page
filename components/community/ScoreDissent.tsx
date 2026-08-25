@@ -101,12 +101,12 @@ export function ScoreDissent({
   );
 
   return (
-    <section className="card score-dissent-card">
-      <div className="score-dissent-head">
-        <span className="section-kicker">SCORE &amp; DISSENT</span>
-        <h2>{t.dissentTitle}</h2>
-        <p className="text-muted">{t.dissentDesc}</p>
-      </div>
+    <details className="card score-dissent-card collapsible">
+      <summary>
+        {t.dissentTitle}
+        <span className="summary-count">{t.dissentSummaryHint}</span>
+      </summary>
+      <p className="text-muted section-lede">{t.dissentDesc}</p>
 
       <div className="dissent-list">
         {SCORE_FACET_KEYS.map((facet, index) => {
@@ -223,6 +223,6 @@ export function ScoreDissent({
       </div>
 
       {status === "done" ? <p className="form-success">{t.dissentThanks}</p> : null}
-    </section>
+    </details>
   );
 }
