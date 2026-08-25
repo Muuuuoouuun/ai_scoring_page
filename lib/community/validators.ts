@@ -1,5 +1,6 @@
 import { z } from "zod";
 import {
+  MIN_DISSENT_REASON,
   CONTRIBUTOR_ROLES,
   TEAM_SIZE_BUCKETS,
   USAGE_DURATIONS
@@ -27,8 +28,8 @@ export const dissentSchema = z
     reason: z.string().trim().max(400).default(""),
     context: contextSchema
   })
-  .refine((value) => value.direction === "agree" || value.reason.length >= 20, {
-    message: "점수가 다르다고 보신 이유를 20자 이상 적어주세요.",
+  .refine((value) => value.direction === "agree" || value.reason.length >= MIN_DISSENT_REASON, {
+    message: `점수가 다르다고 보신 이유를 ${MIN_DISSENT_REASON}자 이상 적어주세요.`,
     path: ["reason"]
   });
 

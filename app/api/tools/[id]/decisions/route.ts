@@ -1,4 +1,4 @@
-import { communityStore } from "@/lib/community/store";
+import { communityStore } from "@/lib/community";
 import { decisionSchema } from "@/lib/community/validators";
 import { resolveAuthor, authorCookieHeader } from "@/lib/community/author";
 import { getToolById } from "@/lib/tools";
@@ -47,7 +47,7 @@ export async function POST(request: Request, { params }: { params: { id: string 
     whyChosen: parsed.data.whyChosen,
     adoptedAt: parsed.data.adoptedAt,
     outcome: parsed.data.outcome,
-    authorHandle: author.handle,
+    author: { tokenHash: author.tokenHash, handle: author.handle },
     isEditor: false,
     context: parsed.data.context as ContributorContext
   });

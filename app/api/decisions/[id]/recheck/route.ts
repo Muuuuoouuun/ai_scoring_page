@@ -1,4 +1,4 @@
-import { communityStore } from "@/lib/community/store";
+import { communityStore } from "@/lib/community";
 import { decisionTouchSchema } from "@/lib/community/validators";
 import { resolveAuthor } from "@/lib/community/author";
 
@@ -18,7 +18,7 @@ export async function POST(request: Request, { params }: { params: { id: string 
     return Response.json({ message: "본인이 작성한 기록만 갱신할 수 있습니다." }, { status: 403 });
   }
 
-  const record = await communityStore.touchDecision(params.id, author.handle, parsed.data.outcome);
+  const record = await communityStore.touchDecision(params.id, { tokenHash: author.tokenHash, handle: author.handle }, parsed.data.outcome);
   if (!record) {
     return Response.json({ message: "본인이 작성한 기록만 갱신할 수 있습니다." }, { status: 403 });
   }

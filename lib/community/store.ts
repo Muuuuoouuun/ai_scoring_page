@@ -1,4 +1,6 @@
+import { DissentReasonRequired, MIN_DISSENT_REASON } from "@/lib/community/types";
 import type {
+  AuthorIdentity,
   BreakageReport,
   BreakageStatus,
   DecisionRecord,
@@ -11,9 +13,9 @@ import type {
 /**
  * 커뮤니티 저장소 인터페이스.
  *
- * 지금은 프로세스 메모리 어댑터만 있습니다. Postgres 어댑터를 붙일 때
- * 이 인터페이스만 구현하면 되고 화면·API 코드는 건드리지 않습니다.
- * 스키마는 db/schema.sql에 함께 정의되어 있습니다.
+ * 화면과 API는 이 인터페이스만 알고, 어느 어댑터가 붙었는지는 모릅니다.
+ * 메모리 어댑터(개발용)와 Postgres 어댑터(운영용)가 같은 계약을 구현하고,
+ * `tests/community-store.test.ts`가 두 구현에 같은 테스트를 돌립니다.
  */
 export interface CommunityStore {
   listDissent(toolId: string): Promise<FacetDissent[]>;
@@ -21,7 +23,12 @@ export interface CommunityStore {
 
   listDecisions(toolId?: string): Promise<DecisionRecord[]>;
   addDecision(input: NewDecisionRecord): Promise<DecisionRecord>;
-  touchDecision(id: string, authorHandle: string, outcome: DecisionRecord["outcome"]): Promise<DecisionRecord | null>;
+  /** 본인 토큰일 때만 갱신됩니다. handle은 표시용이라 소유 증명에 쓰지 않습니다. */
+  touchDecision(
+    id: string,
+    author: AuthorIdentity,
+    outcome: DecisionRecord["outcome"]
+  ): Promise<DecisionRecord | null>;
 
   listBreakage(toolId: string, status?: BreakageStatus): Promise<BreakageReport[]>;
   addBreakage(input: NewBreakageReport): Promise<BreakageReport>;
@@ -41,6 +48,8 @@ export class MemoryCommunityStore implements CommunityStore {
   private dissent: FacetDissent[] = [];
   private decisions: DecisionRecord[] = [];
   private breakage: BreakageReport[] = [];
+  /** 소유 증명용. Postgres의 authors.token_hash에 대응합니다. */
+  private ownerByRecord = new Map<string, string>();
 
   async listDissent(toolId: string) {
     return this.dissent
@@ -48,8 +57,27 @@ export class MemoryCommunityStore implements CommunityStore {
       .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
   }
 
-  async addDissent(input: NewFacetDissent) {
-    const entry: FacetDissent = { ...input, id: newId(), createdAt: now() };
+  async addDissent({ author, ...input }: NewFacetDissent) {
+    // Postgres의 dissent_needs_reason 제약과 같은 규칙입니다.
+    // 여기가 느슨하면 개발에서 통과한 데이터가 운영에서 거부됩니다.
+    if (input.direction !== "agree" && input.reason.trim().length < MIN_DISSENT_REASON) {
+      throw new DissentReasonRequired();
+    }
+    // 한 사람이 같은 항목에 여러 번 표를 던지지 못하게 합니다.
+    this.dissent = this.dissent.filter(
+      (entry) =>
+        !(
+          entry.toolId === input.toolId &&
+          entry.facet === input.facet &&
+          entry.authorHandle === author.handle
+        )
+    );
+    const entry: FacetDissent = {
+      ...input,
+      authorHandle: author.handle,
+      id: newId(),
+      createdAt: now()
+    };
     this.dissent = [entry, ...this.dissent];
     return entry;
   }
@@ -60,17 +88,23 @@ export class MemoryCommunityStore implements CommunityStore {
       .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
   }
 
-  async addDecision(input: NewDecisionRecord) {
+  async addDecision({ author, ...input }: NewDecisionRecord) {
     const stamp = now();
-    const entry: DecisionRecord = { ...input, id: newId(), createdAt: stamp, checkedAt: stamp };
+    const entry: DecisionRecord = {
+      ...input,
+      authorHandle: author.handle,
+      id: newId(),
+      createdAt: stamp,
+      checkedAt: stamp
+    };
     this.decisions = [entry, ...this.decisions];
+    this.ownerByRecord.set(entry.id, author.tokenHash);
     return entry;
   }
 
-  async touchDecision(id: string, authorHandle: string, outcome: DecisionRecord["outcome"]) {
+  async touchDecision(id: string, author: AuthorIdentity, outcome: DecisionRecord["outcome"]) {
     const entry = this.decisions.find((item) => item.id === id);
-    // 본인만 자기 기록을 갱신할 수 있습니다.
-    if (!entry || entry.authorHandle !== authorHandle) return null;
+    if (!entry || this.ownerByRecord.get(id) !== author.tokenHash) return null;
     entry.outcome = outcome;
     entry.checkedAt = now();
     return entry;
@@ -82,18 +116,16 @@ export class MemoryCommunityStore implements CommunityStore {
       .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
   }
 
-  async addBreakage(input: NewBreakageReport) {
+  async addBreakage({ author, ...input }: NewBreakageReport) {
     // 제보는 검수 전까지 공개되지 않습니다.
-    const entry: BreakageReport = { ...input, id: newId(), status: "pending", createdAt: now() };
+    const entry: BreakageReport = {
+      ...input,
+      authorHandle: author.handle,
+      id: newId(),
+      status: "pending",
+      createdAt: now()
+    };
     this.breakage = [entry, ...this.breakage];
     return entry;
   }
 }
-
-/**
- * 개발 서버가 HMR로 모듈을 다시 평가해도 저장 내용이 날아가지 않도록 전역에 붙입니다.
- */
-const globalStore = globalThis as unknown as { __g2CommunityStore?: CommunityStore };
-
-export const communityStore: CommunityStore =
-  globalStore.__g2CommunityStore ?? (globalStore.__g2CommunityStore = new MemoryCommunityStore());

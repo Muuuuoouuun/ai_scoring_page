@@ -16,11 +16,28 @@ import { cookies } from "next/headers";
 const COOKIE = "g2_author";
 const MAX_AGE = 60 * 60 * 24 * 365 * 2;
 
-const secret = () =>
-  process.env.G2_AUTHOR_SECRET ??
-  // 운영에서는 반드시 환경변수를 설정해야 합니다. 미설정 시 서버 재시작마다 신원이 끊깁니다.
-  (globalThis as unknown as { __g2DevSecret?: string }).__g2DevSecret ??
-  ((globalThis as unknown as { __g2DevSecret?: string }).__g2DevSecret = randomBytes(32).toString("hex"));
+const devSecretStore = globalThis as unknown as { __g2DevSecret?: string; __g2SecretWarned?: boolean };
+
+const secret = () => {
+  const configured = process.env.G2_AUTHOR_SECRET;
+  if (configured) return configured;
+
+  /*
+   * 미설정이면 프로세스마다 다른 임시 키를 씁니다.
+   * 서버가 재시작되면 모든 사용자의 서명이 무효가 되어 신원이 끊기고,
+   * 본인이 남긴 기록을 더 이상 수정할 수 없게 됩니다.
+   * 조용히 넘어가면 운영에서 나중에 발견하게 되므로 한 번 경고합니다.
+   */
+  if (process.env.NODE_ENV === "production" && !devSecretStore.__g2SecretWarned) {
+    devSecretStore.__g2SecretWarned = true;
+    console.warn(
+      "[community] G2_AUTHOR_SECRET이 없어 임시 키를 씁니다. " +
+        "재시작하면 기여자 신원이 끊겨 본인 기록을 수정할 수 없게 됩니다."
+    );
+  }
+
+  return (devSecretStore.__g2DevSecret ??= randomBytes(32).toString("hex"));
+};
 
 const sign = (value: string) => createHmac("sha256", secret()).update(value).digest("hex");
 
@@ -52,7 +69,11 @@ export const handleFromToken = (token: string): string => {
   return `${adjective}-${noun}-${suffix}`;
 };
 
-type AuthorCookie = { token: string; handle: string; isNew: boolean };
+type AuthorCookie = { token: string; handle: string; tokenHash: string; isNew: boolean };
+
+/** 저장소에는 토큰 원본이 아니라 이 해시만 들어갑니다. */
+export const hashToken = (token: string) =>
+  createHmac("sha256", "token-store").update(token).digest("hex");
 
 const parse = (raw: string | undefined): string | null => {
   if (!raw) return null;
@@ -65,10 +86,15 @@ const parse = (raw: string | undefined): string | null => {
 export const resolveAuthor = (): AuthorCookie => {
   const existing = parse(cookies().get(COOKIE)?.value);
   if (existing) {
-    return { token: existing, handle: handleFromToken(existing), isNew: false };
+    return {
+      token: existing,
+      handle: handleFromToken(existing),
+      tokenHash: hashToken(existing),
+      isNew: false
+    };
   }
   const token = randomBytes(24).toString("hex");
-  return { token, handle: handleFromToken(token), isNew: true };
+  return { token, handle: handleFromToken(token), tokenHash: hashToken(token), isNew: true };
 };
 
 export const authorCookieHeader = (token: string) => {

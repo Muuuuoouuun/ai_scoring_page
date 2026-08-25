@@ -1,4 +1,4 @@
-import { communityStore } from "@/lib/community/store";
+import { communityStore } from "@/lib/community";
 import { dissentSchema } from "@/lib/community/validators";
 import { resolveAuthor, authorCookieHeader } from "@/lib/community/author";
 import { buildFacetConsensus, buildDistribution, buildRoleSplit } from "@/lib/community/consensus";
@@ -39,7 +39,7 @@ export async function POST(request: Request, { params }: { params: { id: string 
     facet: parsed.data.facet as ScoreFacetKey,
     direction: parsed.data.direction,
     reason: parsed.data.reason,
-    authorHandle: author.handle,
+    author: { tokenHash: author.tokenHash, handle: author.handle },
     isEditor: false,
     context: parsed.data.context as ContributorContext
   });

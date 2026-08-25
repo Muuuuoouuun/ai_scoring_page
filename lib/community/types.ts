@@ -51,6 +51,24 @@ export type ContributorContext = {
  */
 export type DissentDirection = "agree" | "too-low" | "too-high";
 
+/**
+ * 반박에 요구하는 최소 근거 길이.
+ *
+ * 이 값은 세 곳에서 같아야 합니다:
+ *   - lib/community/validators.ts (API 입력 검증)
+ *   - MemoryCommunityStore (개발용 저장소)
+ *   - db/community.sql 의 dissent_needs_reason 제약
+ * 한 곳만 느슨하면 개발에서 통과한 데이터가 운영에서 거부됩니다.
+ */
+export const MIN_DISSENT_REASON = 20;
+
+export class DissentReasonRequired extends Error {
+  constructor() {
+    super(`반박에는 ${MIN_DISSENT_REASON}자 이상의 근거가 필요합니다.`);
+    this.name = "DissentReasonRequired";
+  }
+}
+
 export type FacetDissent = {
   id: string;
   toolId: string;
@@ -109,6 +127,20 @@ export type BreakageReport = {
   createdAt: string;
 };
 
-export type NewFacetDissent = Omit<FacetDissent, "id" | "createdAt">;
-export type NewDecisionRecord = Omit<DecisionRecord, "id" | "createdAt" | "checkedAt">;
-export type NewBreakageReport = Omit<BreakageReport, "id" | "createdAt" | "status">;
+/**
+ * 저장소에 넘기는 저자 신원.
+ *
+ * 토큰 원본은 절대 저장하지 않고 해시만 남깁니다. 표시 이름(handle)은 토큰에서
+ * 결정론적으로 파생되므로 사람이 고르는 값이 아니고, 사칭이 불가능합니다.
+ * 나중에 이메일·OAuth를 붙일 때 tokenHash로 기존 익명 기여를 계정에 연결합니다.
+ */
+export type AuthorIdentity = {
+  tokenHash: string;
+  handle: string;
+};
+
+type WithAuthor<T> = Omit<T, "authorHandle"> & { author: AuthorIdentity };
+
+export type NewFacetDissent = WithAuthor<Omit<FacetDissent, "id" | "createdAt">>;
+export type NewDecisionRecord = WithAuthor<Omit<DecisionRecord, "id" | "createdAt" | "checkedAt">>;
+export type NewBreakageReport = WithAuthor<Omit<BreakageReport, "id" | "createdAt" | "status">>;

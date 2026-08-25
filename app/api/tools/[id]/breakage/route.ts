@@ -1,4 +1,4 @@
-import { communityStore } from "@/lib/community/store";
+import { communityStore } from "@/lib/community";
 import { breakageSchema } from "@/lib/community/validators";
 import { resolveAuthor, authorCookieHeader } from "@/lib/community/author";
 import { getToolById } from "@/lib/tools";
@@ -29,7 +29,7 @@ export async function POST(request: Request, { params }: { params: { id: string 
     occurredAt: parsed.data.occurredAt,
     whatBroke: parsed.data.whatBroke,
     workaround: parsed.data.workaround,
-    authorHandle: author.handle
+    author: { tokenHash: author.tokenHash, handle: author.handle }
   });
 
   const headers = new Headers({ "Content-Type": "application/json" });
