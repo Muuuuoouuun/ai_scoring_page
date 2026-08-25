@@ -21,6 +21,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  /** <html lang>이 고정이면 스크린리더와 검색엔진이 영어 화면을 한국어로 읽습니다. */
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
   const value = useMemo(
     () => ({
       lang,

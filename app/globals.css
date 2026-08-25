@@ -1,5 +1,10 @@
 :root {
   color-scheme: light;
+  /* Latin은 Epilogue/Manrope, 한글은 IBM Plex Sans KR이 받습니다 (글자 단위 폴백). */
+  --font-body: "Manrope", "IBM Plex Sans KR", "Pretendard", "Apple SD Gothic Neo",
+    "Malgun Gothic", system-ui, -apple-system, sans-serif;
+  --font-display: "Epilogue", "IBM Plex Sans KR", "Pretendard", "Apple SD Gothic Neo",
+    "Malgun Gothic", system-ui, sans-serif;
   --bg: #faf9f6;
   --ink: #1a1c1a;
   --muted: #4d453f;
@@ -33,7 +38,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Manrope", "Pretendard", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
   background-color: var(--bg);
   background-image:
     radial-gradient(circle at 28% 10%, rgba(176, 138, 82, 0.08), transparent 28rem),
@@ -48,7 +53,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Epilogue", "Pretendard", "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 750;
   letter-spacing: 0;
   color: var(--ink);
@@ -207,7 +212,7 @@ nav .nav-links {
   border-radius: 12px;
   background: linear-gradient(135deg, var(--primary), var(--signal));
   color: #fff;
-  font-family: "Epilogue", "Pretendard", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 800;
   box-shadow: 0 12px 28px rgba(69, 60, 52, 0.12);
@@ -220,7 +225,7 @@ nav .nav-links {
 }
 
 .brand-copy strong {
-  font-family: "Epilogue", "Pretendard", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 0.95rem;
 }
 
@@ -321,7 +326,7 @@ nav .nav-links a:hover::after {
   color: #fff !important;
   display: inline-flex;
   flex: 0 0 auto;
-  font-family: "Epilogue", "Pretendard", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 800;
   height: 38px;
   justify-content: center;
@@ -2476,7 +2481,7 @@ textarea {
 .community-signal-board strong {
   display: block;
   color: var(--primary);
-  font-family: "Epilogue", "Pretendard", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 1.8rem;
   line-height: 1;
 }
@@ -2539,7 +2544,7 @@ textarea {
   color: var(--primary);
   display: inline-flex;
   flex: 0 0 auto;
-  font-family: "Epilogue", "Pretendard", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 0.82rem;
   font-weight: 800;
   height: 42px;
@@ -2555,7 +2560,7 @@ textarea {
 
 .situation-copy strong {
   color: var(--ink);
-  font-family: "Epilogue", "Pretendard", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 1.2rem;
   line-height: 1.25;
 }
@@ -2598,7 +2603,7 @@ textarea {
 }
 
 .tool-card-feature .tool-card-head strong {
-  font-family: "Epilogue", "Pretendard", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1;
 }
@@ -2698,7 +2703,7 @@ textarea {
 
 .signal-lens-metrics dd {
   color: var(--primary);
-  font-family: "Epilogue", "Pretendard", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 800;
   margin: 0;
