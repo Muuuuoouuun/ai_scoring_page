@@ -1,10 +1,9 @@
 "use client";
 
 import type { WorkPlaybook } from "@/lib/insights";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 export function WorkUsageGuide({ playbook }: { playbook: WorkPlaybook[] }) {
-  const { t } = useLanguage();
 
   return (
     <details className="card feature-card collapsible">

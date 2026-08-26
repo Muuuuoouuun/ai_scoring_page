@@ -1,11 +1,10 @@
 "use client";
 
 import { Suspense } from "react";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 import SearchClient from "@/app/search/SearchClient";
 
 export default function SearchPage() {
-  const { t } = useLanguage();
 
   return (
     <main className="search-journal-page">

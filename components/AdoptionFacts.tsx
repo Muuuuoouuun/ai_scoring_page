@@ -1,7 +1,7 @@
 "use client";
 
 import type { Tool } from "@/lib/types";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 const fitClass = { fits: "fit-yes", conditional: "fit-maybe", avoid: "fit-no" } as const;
 
@@ -13,7 +13,6 @@ const fitClass = { fits: "fit-yes", conditional: "fit-maybe", avoid: "fit-no" } 
  * 나갈 때 얼마나 드나 — 에 답합니다.
  */
 export function AdoptionFacts({ tool }: { tool: Tool }) {
-  const { t } = useLanguage();
   const { doNotUseIf, teamFit, adoption, pricingModel, exitCost } = tool.review;
 
   return (

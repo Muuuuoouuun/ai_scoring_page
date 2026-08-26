@@ -2,7 +2,7 @@
 
 import type { ScoreBreakdown } from "@/lib/insights";
 import { SCORE_FACET_KEYS } from "@/lib/insights";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 const scoreTone = (score: number) => {
   if (score >= 75) return "high";
@@ -19,7 +19,6 @@ export function ScoreBreakdownCard({
   scoreBreakdown: ScoreBreakdown;
   variant?: "default" | "hero";
 }) {
-  const { t } = useLanguage();
   const labels: Record<(typeof SCORE_FACET_KEYS)[number], string> = {
     functionality: t.scoreLabels[0],
     uiux: t.scoreLabels[1],

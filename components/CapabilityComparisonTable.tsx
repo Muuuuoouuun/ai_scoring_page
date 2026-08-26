@@ -1,7 +1,7 @@
 "use client";
 
 import type { CapabilityComparison } from "@/lib/insights";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 /**
  * 대안 도구 대비 "되는 것 / 안 되는 것".
@@ -17,7 +17,6 @@ export function CapabilityComparisonTable({
   toolName: string;
   rows: CapabilityComparison[];
 }) {
-  const { t } = useLanguage();
 
   return (
     <section className="card comparison-card">

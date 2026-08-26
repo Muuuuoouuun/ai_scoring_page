@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 import { buildOpenQuestions, type OpenQuestion } from "@/lib/community/questions";
 
 /**
@@ -19,10 +19,9 @@ import { buildOpenQuestions, type OpenQuestion } from "@/lib/community/questions
 const KIND_ORDER: OpenQuestion["kind"][] = ["low-score", "no-history", "worst-case"];
 
 export default function CommunityPage() {
-  const { lang, t } = useLanguage();
   const [kind, setKind] = useState<OpenQuestion["kind"] | "all">("all");
 
-  const questions = useMemo(() => buildOpenQuestions(lang), [lang]);
+  const questions = useMemo(() => buildOpenQuestions(), []);
   const shown = kind === "all" ? questions : questions.filter((q) => q.kind === kind);
 
   const kindLabel: Record<OpenQuestion["kind"], string> = {

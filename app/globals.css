@@ -346,43 +346,6 @@ nav .nav-links a:hover::after {
   display: none;
 }
 
-.rail-profile {
-  align-items: center;
-  display: flex;
-  gap: 0.8rem;
-  padding: 0.9rem 0.8rem 1.5rem;
-}
-
-.rail-profile strong,
-.rail-profile span {
-  display: block;
-}
-
-.rail-profile strong {
-  font-size: 0.92rem;
-  line-height: 1.2;
-}
-
-.rail-profile span {
-  color: var(--muted);
-  font-size: 0.76rem;
-}
-
-.rail-avatar {
-  align-items: center;
-  background: linear-gradient(135deg, var(--primary), var(--signal));
-  border-radius: 50%;
-  box-shadow: 0 10px 24px rgba(69, 60, 52, 0.14);
-  color: #fff !important;
-  display: inline-flex;
-  flex: 0 0 auto;
-  font-family: var(--font-display);
-  font-weight: 800;
-  height: 38px;
-  justify-content: center;
-  width: 38px;
-}
-
 .rail-links {
   display: grid;
   gap: 0.45rem;
@@ -448,8 +411,7 @@ nav .nav-links a:hover::after {
 
   footer {
     margin-left: 224px;
-  }
-}
+  }}
 
 .hero {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(244, 243, 241, 0.68) 100%);
@@ -559,12 +521,6 @@ nav .nav-links a:hover::after {
   color: var(--muted);
   max-width: 650px;
   margin: 0;
-}
-
-.hero-note {
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 700;
 }
 
 .button {
@@ -697,37 +653,12 @@ nav .nav-links a:hover::after {
   margin-top: 4rem;
 }
 
-.principle-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding-left: 1.5rem;
-  border-left: 2px solid rgba(43, 45, 51, 0.1);
-  transition: border-color 0.3s;
-}
-
-.principle-item:hover {
-  border-left-color: var(--accent);
-}
-
 .principle-number {
   font-family: monospace;
   font-size: 1.25rem;
   color: var(--muted);
   font-weight: 700;
   opacity: 0.5;
-}
-
-.principle-item h3 {
-  margin: 0;
-  font-size: 1.25rem;
-}
-
-.principle-item p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.6;
 }
 
 .badge-list {
@@ -817,43 +748,6 @@ nav .nav-links a:hover::after {
   background: var(--risk);
   color: #dc2626;
   border-color: rgba(239, 68, 68, 0.2);
-}
-
-.impact-grid {
-  display: grid;
-  gap: 0.75rem;
-}
-
-.impact-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.impact-item meter {
-  width: 100%;
-  height: 8px;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.impact-item meter::-webkit-meter-bar {
-  background: rgba(69, 60, 52, 0.1);
-  border: 0;
-  border-radius: 999px;
-  box-shadow: inset 0 1px 2px rgba(26, 28, 26, 0.08);
-}
-
-.impact-item meter::-webkit-meter-optimum-value,
-.impact-item meter::-webkit-meter-suboptimum-value,
-.impact-item meter::-webkit-meter-even-less-good-value {
-  background: linear-gradient(90deg, var(--primary), var(--signal));
-  border-radius: 999px;
-}
-
-.impact-item meter::-moz-meter-bar {
-  background: linear-gradient(90deg, var(--primary), var(--signal));
-  border-radius: 999px;
 }
 
 .search-panel {
@@ -1042,9 +936,6 @@ footer {
     align-items: flex-start;
   }
 
-  .lang-switch {
-    align-self: flex-end;
-  }
 }
 
 textarea {
@@ -1488,22 +1379,6 @@ textarea {
   border-top: 1px dashed var(--border);
 }
 
-.tool-card-wave {
-  display: grid;
-  grid-template-columns: 1fr 0.6fr 0.8fr;
-  gap: 0.35rem;
-  align-items: center;
-  max-width: 160px;
-  padding-top: 0.2rem;
-}
-
-.tool-card-wave span {
-  height: 2px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, transparent, var(--signal), transparent);
-  opacity: 0.65;
-}
-
 .tool-card-head {
   display: flex;
   align-items: center;
@@ -1594,8 +1469,7 @@ textarea {
     font-size: 2.2rem !important;
     line-height: 1.18;
     word-break: keep-all;
-  }
-}
+  }}
 
 .community-feed {
   display: flex;
@@ -2076,39 +1950,174 @@ textarea {
 }
 
 /* =========================================
-   About Page Layout & Components 
-   ========================================= */
+   /about — 평가 기준
+   =========================================
+   이전 /about은 "입문 로드맵"과 Beginner/Builder/Curator 탭으로
+   제품과 다른 세 번째 컨셉을 설명하고 있었고, 그에 딸린 CSS
+   (glass-panel-hero, glass-tabs, timeline, roadmap-grid, principle-list)는
+   페이지가 교체되면서 전부 참조를 잃었습니다. 여기서 함께 제거했습니다.
+
+   지금 이 페이지가 하는 일은 하나입니다: 규칙을 세고, 그 규칙이
+   코드 어디서 강제되는지 밝히는 것. 그래서 레이아웃도 번호가 붙은
+   목록 하나가 중심입니다. */
 
 .about-page {
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: var(--sp-4);
   padding-bottom: 4rem;
 }
 
-/* 1) Hero Panel */
-.glass-panel-hero {
-  background: rgba(255, 255, 255, 0.4);
-  border: 1px solid rgba(43, 45, 51, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 24px;
-  padding: 4rem 2rem;
-  text-align: center;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+/* .section의 margin-top(5rem)이 flex gap 위에 더해져 섹션 사이가 7.5rem이
+   되고 있었습니다. 간격은 한 군데(gap)에서만 정합니다. */
+.about-page .section {
+  margin-top: 0;
 }
 
-.glass-panel-hero h1 {
-  font-size: 3.5rem;
-  line-height: 1.1;
-  margin-bottom: 1rem;
+.about-hero {
+  display: grid;
+  gap: 0.75rem;
+  padding: 2.5rem 0 0;
+  max-width: 46rem;
 }
 
-.glass-panel-hero .subtitle {
-  font-size: 1.2rem;
+.about-hero h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  margin: 0;
+  color: var(--ink);
+}
+
+/* 제품 한 문장. brand.oneLiner와 같은 문자열이고, 여기가 그 문장이
+   가장 크게 보이는 자리입니다. */
+.about-lede {
+  font-size: var(--fs-lead);
+  line-height: var(--lh-body);
+  color: var(--ink);
+  margin: 0;
+  padding-left: var(--sp-2);
+  border-left: 3px solid var(--signal);
+}
+
+.about-hero .text-muted {
+  margin: 0;
+  font-size: var(--fs-small);
+  line-height: var(--lh-dense);
   color: var(--muted);
-  max-width: 600px;
-  margin: 0 auto 2rem;
+}
+
+/* --- 규칙 목록 ---
+   번호를 CSS 카운터로 다는 이유: 규칙이 늘거나 순서가 바뀌어도
+   본문에 박힌 숫자와 어긋날 일이 없습니다. */
+.rule-list {
+  counter-reset: rule;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+.rule-item {
+  counter-increment: rule;
+  background: var(--surface-2);
+  padding: 1.4rem 1.5rem 1.4rem 3.9rem;
+  position: relative;
+}
+
+.rule-item::before {
+  content: counter(rule, decimal-leading-zero);
+  position: absolute;
+  left: 1.5rem;
+  top: 1.45rem;
+  font-family: var(--font-display);
+  font-size: var(--fs-caption);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--signal-ink);
+}
+
+.rule-item h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-tight);
+  color: var(--ink);
+}
+
+.rule-item p {
+  margin: 0;
+  font-size: var(--fs-small);
+  line-height: var(--lh-dense);
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+/* 규칙을 다짐이 아니라 검증 가능한 주장으로 만드는 줄입니다.
+   여기 적힌 파일명이 틀리면 규칙 전체가 신뢰를 잃으므로,
+   시각적으로도 본문과 분리해 둡니다. */
+.rule-enforced {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+  padding-top: 0.7rem;
+  border-top: 1px dashed var(--border);
+  font-size: var(--fs-caption);
+  color: var(--signal-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- 검수 전 초안 고지 ---
+   도구 화면마다 이미 같은 고지가 붙어 있지만, /about에서 한 번 더
+   말합니다. 규칙을 여섯 개 읽고 난 직후가 "그런데 이 리뷰는 아직
+   검수 전이다"를 가장 정직하게 말할 수 있는 자리입니다. */
+.draft-notice {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+  background: var(--warning);
+  border: 1px solid rgba(176, 138, 82, 0.34);
+}
+
+.draft-notice h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-tight);
+  color: var(--ink);
+}
+
+.draft-notice p {
+  margin: 0;
+  font-size: var(--fs-small);
+  line-height: var(--lh-dense);
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+@media (max-width: 720px) {
+  .about-hero {
+    padding-top: 1.5rem;
+  }
+
+  .rule-item {
+    padding: 1.25rem 1.15rem 1.25rem 1.15rem;
+  }
+
+  /* 좁은 화면에서 왼쪽 3.9rem 들여쓰기는 한글 본문의 줄당 글자 수를
+     너무 줄입니다. 번호를 제목 위로 올립니다. */
+  .rule-item::before {
+    position: static;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
 }
 
 .hero-actions {
@@ -2116,222 +2125,6 @@ textarea {
   gap: 1rem;
   justify-content: center;
   margin-bottom: 1rem;
-}
-
-/* 2) Section Headers */
-.about-section-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.about-section-header h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.about-section-header p {
-  color: var(--muted);
-  font-size: 1.1rem;
-}
-
-/* 3) Glass Cards (Thin & Minimal) */
-.glass-card {
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(43, 45, 51, 0.08);
-  border-radius: 16px;
-  padding: 2rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-  position: relative;
-}
-
-.glass-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
-}
-
-.glass-card h3 {
-  font-size: 1.25rem;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-.glass-card p {
-  color: var(--muted);
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* Pencil underline interaction */
-.pencil-underline::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 2rem;
-  right: 2rem;
-  height: 2px;
-  background: currentColor;
-  opacity: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  filter: url(#pencilStroke);
-  /* Reusing the SVG filter conceptually */
-  border-radius: 2px;
-}
-
-.pencil-underline:hover::after {
-  opacity: 0.2;
-  transform: scaleX(1);
-}
-
-/* 4) For Whom (Tabs) */
-.glass-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.glass-tab {
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px dashed rgba(43, 45, 51, 0.15);
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  font-weight: 700;
-  color: var(--muted);
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.glass-tab.active {
-  background: rgba(255, 255, 255, 0.8);
-  border-style: solid;
-  color: var(--ink);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-/* 5) Principle List */
-.principle-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.principle-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.4);
-  border-left: 3px solid rgba(43, 45, 51, 0.2);
-  border-radius: 0 12px 12px 0;
-}
-
-/* 6) Timeline */
-.timeline {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.timeline-step {
-  flex: 1;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.6);
-  padding: 1.5rem;
-  border-radius: 16px;
-  border: 1px solid rgba(43, 45, 51, 0.08);
-  transition: all 0.3s;
-}
-
-.timeline-step:hover {
-  border-color: rgba(43, 45, 51, 0.3);
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.timeline-step .circle {
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 1rem;
-  background: #fff;
-  border: 2px dashed rgba(43, 45, 51, 0.3);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  color: var(--ink);
-  transition: border-color 0.2s;
-}
-
-.timeline-step:hover .circle {
-  border-color: var(--ink);
-  border-style: solid;
-}
-
-/* 7) Interactive Signal Section */
-.glass-interactive {
-  background: rgba(255, 255, 255, 0.15);
-  /* highly transparent */
-  border: 1px solid rgba(43, 45, 51, 0.05);
-  backdrop-filter: blur(2px);
-  padding: 6rem 2rem;
-  text-align: center;
-  border-radius: 24px;
-  cursor: crosshair;
-  position: relative;
-  overflow: hidden;
-  transition: background 0.3s;
-}
-
-.glass-interactive:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.glass-interactive .content {
-  pointer-events: none;
-  position: relative;
-  z-index: 2;
-}
-
-/* 8) Roadmap List */
-.roadmap-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.roadmap-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 1.25rem;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 12px;
-  border: 1px solid rgba(43, 45, 51, 0.08);
-}
-
-.roadmap-item svg {
-  color: var(--accent);
-}
-
-/* 9) Big Footer CTA */
-.glass-panel-footer {
-  background: rgba(255, 255, 255, 0.4);
-  border: 1px solid rgba(43, 45, 51, 0.1);
-  backdrop-filter: blur(8px);
-  border-radius: 24px;
-  padding: 4rem 2rem;
-  text-align: center;
-  position: relative;
 }
 
 /* Review Page Grid Layout */
@@ -2354,8 +2147,7 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-  }
-}
+  }}
 
 .review-main-column {
   display: flex;
@@ -2420,20 +2212,6 @@ textarea {
   margin-right: 0.4rem;
 }
 
-.highlight-better {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.highlight-better-text {
-  color: var(--ink);
-  font-weight: 600;
-  background: rgba(176, 138, 82, 0.08);
-  padding: 0.5rem;
-  border-radius: 8px;
-  border: 1px dashed rgba(176, 138, 82, 0.28);
-}
-
 .hero .hero-actions {
   justify-content: flex-start;
   margin-bottom: 0;
@@ -2495,7 +2273,6 @@ textarea {
 }
 
 .research-desk-panel::after,
-.score-breakdown-hero::after,
 .community-hero::after {
   content: "";
   position: absolute;
@@ -2855,17 +2632,6 @@ textarea {
   position: relative;
 }
 
-.score-breakdown-hero {
-  justify-content: center;
-  min-height: 300px;
-  overflow: hidden;
-}
-
-.score-breakdown-hero .total-score {
-  font-size: clamp(3rem, 7vw, 5.2rem);
-  line-height: 1;
-}
-
 .scenario-assessment {
   gap: 1.25rem;
 }
@@ -2927,27 +2693,6 @@ textarea {
     gap: 4rem;
   }
 
-  .glass-panel-hero,
-  .glass-panel-footer,
-  .glass-interactive {
-    border-radius: 20px;
-    padding: 2.5rem 1.5rem;
-  }
-
-  .glass-panel-hero h1 {
-    font-size: 2.65rem;
-    line-height: 1.08;
-  }
-
-  .glass-panel-hero .subtitle,
-  .about-section-header p {
-    font-size: 1rem;
-  }
-
-  .about-section-header h2 {
-    font-size: 2rem;
-  }
-
   .about-page .grid {
     grid-template-columns: 1fr !important;
   }
@@ -2962,34 +2707,6 @@ textarea {
     width: 100%;
   }
 
-  .glass-tabs {
-    flex-wrap: wrap;
-    gap: 0.75rem;
-  }
-
-  .about-page .principle-item {
-    align-items: flex-start;
-    border-left: 0;
-    border-top: 3px solid rgba(176, 138, 82, 0.32);
-    border-radius: 12px;
-    flex-direction: column;
-  }
-
-  .timeline {
-    flex-direction: column;
-  }
-
-  .timeline-step {
-    width: 100%;
-  }
-
-  .roadmap-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .roadmap-item {
-    align-items: flex-start;
-  }
 }
 
 @media (max-width: 900px) {
@@ -3003,8 +2720,7 @@ textarea {
 
   .home-journal .hero,
   .research-desk-panel,
-  .tool-hero-card,
-  .score-breakdown-hero {
+  .tool-hero-card {
     min-height: auto;
   }
 
@@ -3025,8 +2741,7 @@ textarea {
   .search-result-grid,
   .scenario-grid {
     grid-template-columns: 1fr;
-  }
-}
+  }}
 
 @media (max-width: 720px) {
   .featured-bento,
@@ -3074,8 +2789,7 @@ textarea {
   .tabs-nav {
     overflow-x: auto;
     padding-bottom: 0.6rem;
-  }
-}
+  }}
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -3085,8 +2799,7 @@ textarea {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
-  }
-}
+  }}
 
 /* ==========================================================================
    P1 — 문제 태그 · 비교 · 도입 판단 정보 · 커뮤니티
@@ -4181,8 +3894,7 @@ textarea {
   .compare-bar-actions {
     width: 100%;
     justify-content: space-between;
-  }
-}
+  }}
 
 @media (max-width: 640px) {
   .dissent-item-head {
@@ -4193,8 +3905,7 @@ textarea {
   }
   .dissent-actions button {
     flex: 1;
-  }
-}
+  }}
 
 /* ==========================================================================
    P2 — 가독성 · 밀도 · 스캔 순서 정리
@@ -4209,15 +3920,9 @@ textarea {
   .tool-detail-hero-grid {
     align-items: start;
     grid-template-columns: minmax(0, 1fr) minmax(340px, 0.95fr);
-  }
-}
+  }}
 
 .tool-hero-card,
-.score-breakdown-hero {
-  justify-content: flex-start;
-  min-height: 0;
-}
-
 /* 문제 태그와 판단 배지는 줄바꿈 대신 가로 스크롤로 한 줄에 둡니다(모바일 148px 회수). */
 .tool-hero-card .badge-list {
   display: flex;
@@ -4284,8 +3989,7 @@ textarea {
 /* --- 대비 (WCAG AA) ---
    --signal(#b08a52)은 크림 배경 대비가 부족해 텍스트에 쓰지 않습니다. */
 .rating-score-display,
-.tool-link:hover,
-.highlight-better {
+.tool-link:hover {
   color: var(--signal-ink);
 }
 
@@ -4303,51 +4007,13 @@ textarea {
 }
 
 /* --- 죽은 장식 제거 ---
-   값을 나타내지 않으면서 공간과 주의를 가져가던 요소들입니다.
-   특히 .tool-card::after의 빈 원은 점수 숫자와 겹쳐 판독을 방해했습니다. */
-.tool-card-wave,
-.tool-card-wave span,
+   값을 나타내지 않으면서 공간과 주의를 가져가던 의사 요소들입니다.
+   특히 .tool-card::after의 빈 원은 점수 숫자와 겹쳐 판독을 방해했습니다.
+   (실제 엘리먼트였던 .hero-note, .tool-card-wave는 JSX에서 제거했습니다.) */
 .tool-card::after,
 .hero::after,
-.hero-note,
-.score-breakdown-hero::after,
 .community-hero::after {
   display: none !important;
-}
-
-/* 존재하지 않는 SVG filter를 참조해 hover 밑줄이 통째로 렌더되지 않던 규칙 */
-.pencil-underline::after {
-  filter: none;
-}
-
-/* --- 임팩트 미터: 값이 다음 항목에 딸려 보이던 문제 --- */
-.impact-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0.35rem 0.75rem;
-  align-items: center;
-}
-
-.impact-item label {
-  grid-column: 1;
-}
-
-.impact-item > span {
-  grid-column: 2;
-  justify-self: end;
-  font-variant-numeric: tabular-nums;
-  color: var(--ink);
-  font-weight: 700;
-  font-size: var(--fs-caption);
-}
-
-.impact-item meter {
-  grid-column: 1 / -1;
-  width: 100%;
-}
-
-.impact-grid {
-  gap: 1.1rem;
 }
 
 /* --- 사이드바: 우측 1335px 빈 공간 ---
@@ -4357,8 +4023,7 @@ textarea {
   .review-sidebar-column {
     position: static;
     align-self: start;
-  }
-}
+  }}
 
 /* --- 관련 도구: 카드 3장(1157px) → 행 3개(254px) --- */
 .related-list {
@@ -4474,8 +4139,7 @@ textarea {
 
   nav .nav-links::-webkit-scrollbar {
     display: none;
-  }
-}
+  }}
 
 /* --- 홈 원칙 카드: 같은 클래스명 규칙 두 개가 충돌해
        번호·제목은 가운데, 설명문은 왼쪽으로 어긋나 렌더되던 문제 --- */
@@ -4623,4 +4287,43 @@ textarea {
 .cost-group .card {
   background: var(--surface-2);
   box-shadow: none;
+}
+
+/* --- 홈 커버리지 스트립 ---
+   이전에는 "평균 임팩트 6.3" 같은 숫자를 보여줬는데, 폐기된 척도였고
+   방문자가 그 숫자로 할 수 있는 일도 없었습니다.
+   지금은 이 사이트가 실제로 무엇을 가지고 있는지만 말합니다. */
+.coverage-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1px;
+  margin: 0 0 1.5rem;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+.coverage-strip > div {
+  background: var(--surface-2);
+  padding: 0.9rem 1.1rem;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.coverage-strip dt {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.coverage-strip dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--primary);
+  line-height: 1.15;
 }

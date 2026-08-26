@@ -1,6 +1,5 @@
 import { tools } from "@/data/tools";
 import { SCORE_FACET_KEYS } from "@/lib/insights";
-import type { Language } from "@/lib/i18n";
 import type { Tool } from "@/lib/types";
 
 export type OpenQuestion = {
@@ -22,14 +21,6 @@ const FACET_LABEL_KO: Record<string, string> = {
   pricing: "가격 합리성"
 };
 
-const FACET_LABEL_EN: Record<string, string> = {
-  functionality: "Functionality",
-  uiux: "UI/UX",
-  reliability: "Reliability",
-  comfort: "Comfort",
-  pricing: "Pricing fairness"
-};
-
 /**
  * 커뮤니티 홈을 "활동 피드"가 아니라 "열린 질문 보드"로 만듭니다.
  *
@@ -37,10 +28,9 @@ const FACET_LABEL_EN: Record<string, string> = {
  * 질문은 이미 가진 진짜 자산(에디터가 근거와 함께 매긴 점수, 빈 변경 이력, 최악 시나리오)에서
  * 만들어냅니다. 가짜 데이터가 아니라 출처가 분명한 편집 콘텐츠입니다.
  */
-export const buildOpenQuestions = (lang: Language): OpenQuestion[] => {
+export const buildOpenQuestions = (): OpenQuestion[] => {
   const questions: OpenQuestion[] = [];
-  const ko = lang === "ko";
-  const facetLabel = ko ? FACET_LABEL_KO : FACET_LABEL_EN;
+  const facetLabel = FACET_LABEL_KO;
 
   const lowestFacet = (tool: Tool) =>
     SCORE_FACET_KEYS.reduce((lowest, key) =>
@@ -56,9 +46,7 @@ export const buildOpenQuestions = (lang: Language): OpenQuestion[] => {
       toolId: tool.id,
       toolName: tool.name,
       kind: "low-score",
-      question: ko
-        ? `${tool.name} ${facetLabel[facet]} ${value.score}점. 실제로 그렇게 느끼셨나요?`
-        : `We scored ${tool.name} ${value.score} on ${facetLabel[facet]}. Does that match your experience?`,
+      question: `${tool.name} ${facetLabel[facet]} ${value.score}점. 실제로 그렇게 느끼셨나요?`,
       weDontKnow: value.reason,
       href: `/tools/${tool.id}`
     });
@@ -69,12 +57,8 @@ export const buildOpenQuestions = (lang: Language): OpenQuestion[] => {
         toolId: tool.id,
         toolName: tool.name,
         kind: "no-history",
-        question: ko
-          ? `${tool.name}에서 확인된 변경 이력이 아직 없습니다. 최근에 업무가 막힌 적 있나요?`
-          : `We have no verified change history for ${tool.name}. Has it ever blocked your work?`,
-        weDontKnow: ko
-          ? "패치나 정책 변경으로 실무가 막힌 사례를 우리는 아직 확인하지 못했습니다."
-          : "We haven't yet verified any patch or policy change that broke real work.",
+        question: `${tool.name}에서 확인된 변경 이력이 아직 없습니다. 최근에 업무가 막힌 적 있나요?`,
+        weDontKnow: "패치나 정책 변경으로 실무가 막힌 사례를 우리는 아직 확인하지 못했습니다.",
         href: `/tools/${tool.id}`
       });
     }
@@ -84,9 +68,7 @@ export const buildOpenQuestions = (lang: Language): OpenQuestion[] => {
       toolId: tool.id,
       toolName: tool.name,
       kind: "worst-case",
-      question: ko
-        ? `${tool.name}이 이렇게 될 수 있다고 봤습니다. 실제로 그렇게 됐나요?`
-        : `This is how we think ${tool.name} goes wrong. Did it?`,
+      question: `${tool.name}이 이렇게 될 수 있다고 봤습니다. 실제로 그렇게 됐나요?`,
       weDontKnow: tool.worstCase,
       href: `/tools/${tool.id}`
     });

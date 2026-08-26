@@ -11,7 +11,7 @@ import { PostgresCommunityStore, getPool } from "@/lib/community/postgres-store"
  * 운영에서 DATABASE_URL 을 빠뜨리면 조용히 데이터를 잃게 되므로,
  * 프로덕션 빌드에서는 경고를 남깁니다.
  */
-const globalStore = globalThis as unknown as { __g2CommunityStore?: CommunityStore };
+const globalStore = globalThis as unknown as { __aisCommunityStore?: CommunityStore };
 
 const createStore = (): CommunityStore => {
   const url = process.env.DATABASE_URL;
@@ -30,6 +30,6 @@ const createStore = (): CommunityStore => {
 };
 
 export const communityStore: CommunityStore =
-  globalStore.__g2CommunityStore ?? (globalStore.__g2CommunityStore = createStore());
+  globalStore.__aisCommunityStore ?? (globalStore.__aisCommunityStore = createStore());
 
 export type { CommunityStore };

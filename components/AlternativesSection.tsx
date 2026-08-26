@@ -1,9 +1,8 @@
 "use client";
 
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 export function AlternativesSection({ alternatives }: { alternatives: string[] }) {
-  const { t } = useLanguage();
 
   return (
     <section className="card">

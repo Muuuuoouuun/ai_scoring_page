@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { LanguageProvider } from "@/components/LanguageProvider";
+import { brand } from "@/lib/brand";
 import { CompareProvider } from "@/components/CompareProvider";
 import { Gnb } from "@/components/Gnb";
 import { JournalRail } from "@/components/JournalRail";
@@ -9,9 +9,8 @@ import { AppFooter } from "@/components/AppFooter";
 import { GlobalBackgroundSVG } from "@/components/GlobalBackgroundSVG";
 
 export const metadata: Metadata = {
-  title: "g2 | 도구 도입 판단을 위한 리뷰",
-  description:
-    "SaaS와 AI 도구를 사람의 판단 관점에서 리뷰합니다. 점수마다 근거를, 비교마다 되는 것과 안 되는 것을 함께 적습니다."
+  title: brand.title,
+  description: brand.description
 };
 
 /**
@@ -40,14 +39,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <GlobalBackgroundSVG />
-        <LanguageProvider>
-          <CompareProvider>
+        <CompareProvider>
             <Gnb />
             <JournalRail />
             {children}
             <AppFooter />
-          </CompareProvider>
-        </LanguageProvider>
+        </CompareProvider>
       </body>
     </html>
   );

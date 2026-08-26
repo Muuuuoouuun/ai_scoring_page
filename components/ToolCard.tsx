@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { Tool, ToolProblemAngle } from "@/lib/types";
 import { VerdictBadgeList } from "@/components/VerdictBadgeList";
 import { ProductLogo } from "@/components/ProductLogo";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 import { useCompare } from "@/components/CompareProvider";
 import { getTotalScore } from "@/lib/insights";
 
@@ -20,7 +20,6 @@ export function ToolCard({
   angle?: ToolProblemAngle;
   selectable?: boolean;
 }) {
-  const { lang, t } = useLanguage();
   const { isSelected, toggle, isFull } = useCompare();
   const total = getTotalScore(tool.review.scoreBreakdown);
   const picked = isSelected(tool.id);

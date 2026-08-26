@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { Tool } from "@/lib/types";
 import { VerdictBadgeList } from "@/components/VerdictBadgeList";
 import { ProductLogo } from "@/components/ProductLogo";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 import { getTag, getTagLabel } from "@/lib/problems";
 import { getTotalScore } from "@/lib/insights";
 
@@ -19,7 +19,6 @@ import { getTotalScore } from "@/lib/insights";
  * 10개 도구가 전부 같았던 "TOOL FIELD NOTE" kicker와 "사람 중심 판단 리뷰" 문구는 뺐습니다.
  */
 export function ToolHeader({ tool }: { tool: Tool }) {
-  const { lang } = useLanguage();
   const total = getTotalScore(tool.review.scoreBreakdown);
 
   return (
@@ -41,13 +40,13 @@ export function ToolHeader({ tool }: { tool: Tool }) {
 
       <p className="tool-hero-desc">{tool.description}</p>
 
-      <div className="badge-list" aria-label={lang === "ko" ? "문제 상황" : "Problem contexts"}>
+      <div className="badge-list" aria-label={"문제 상황"}>
         {tool.problemTagIds.map((tagId) => {
           const tag = getTag(tagId);
           if (!tag) return null;
           return (
             <Link className="badge context-badge" key={tagId} href={`/search?tag=${tagId}`}>
-              {getTagLabel(tag, lang)}
+              {getTagLabel(tag)}
             </Link>
           );
         })}

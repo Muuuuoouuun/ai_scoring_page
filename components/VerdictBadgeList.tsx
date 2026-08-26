@@ -1,10 +1,9 @@
 "use client";
 
 import type { VerdictBadges } from "@/lib/types";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 export function VerdictBadgeList({ badges }: { badges: VerdictBadges }) {
-  const { t } = useLanguage();
   const badgeLabels: Record<keyof VerdictBadges, string> = {
     timeSaver: t.verdict[0],
     thinkCarefully: t.verdict[1],

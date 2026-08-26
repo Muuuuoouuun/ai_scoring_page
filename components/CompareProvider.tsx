@@ -15,7 +15,7 @@ type CompareContextValue = {
 
 const CompareContext = createContext<CompareContextValue | null>(null);
 
-const STORAGE_KEY = "g2-compare";
+const STORAGE_KEY = "ais-compare";
 
 /**
  * 비교 담기 상태.

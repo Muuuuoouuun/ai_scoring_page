@@ -1,7 +1,7 @@
 "use client";
 
 import type { PatchNote } from "@/lib/insights";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 /**
  * 읽기 전용 변경 이력입니다.
@@ -11,7 +11,6 @@ import { useLanguage } from "@/components/LanguageProvider";
  * 검수 워크플로와 권한 모델이 준비되기 전까지는 입력을 열지 않습니다.
  */
 export function PatchNotesSection({ notes }: { notes: PatchNote[] }) {
-  const { t } = useLanguage();
 
   const impactLabel: Record<PatchNote["impact"], string> = {
     high: t.patchImpactHigh,

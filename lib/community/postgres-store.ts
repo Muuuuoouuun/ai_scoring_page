@@ -268,11 +268,11 @@ export class PostgresCommunityStore implements CommunityStore {
 }
 
 /** 앱 전역에서 커넥션 풀 하나만 씁니다. 개발 서버의 HMR에도 살아남도록 전역에 붙입니다. */
-const globalPool = globalThis as unknown as { __g2Pool?: Pool };
+const globalPool = globalThis as unknown as { __aisPool?: Pool };
 
 export const getPool = (connectionString: string): Pool =>
-  globalPool.__g2Pool ??
-  (globalPool.__g2Pool = new Pool({
+  globalPool.__aisPool ??
+  (globalPool.__aisPool = new Pool({
     connectionString,
     max: 10,
     idleTimeoutMillis: 30_000,

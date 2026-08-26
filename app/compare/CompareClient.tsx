@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { ProductLogo } from "@/components/ProductLogo";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 import { getToolById } from "@/lib/tools";
 import { getTotalScore, SCORE_FACET_KEYS } from "@/lib/insights";
 import { getTag, getAngle, getTagLabel } from "@/lib/problems";
@@ -16,7 +16,6 @@ const fitClass: Record<FitLevel, string> = {
 };
 
 export default function CompareClient() {
-  const { lang, t } = useLanguage();
   const searchParams = useSearchParams();
 
   const ids = (searchParams.get("tools") ?? "").split(",").filter(Boolean).slice(0, 3);
@@ -27,6 +26,12 @@ export default function CompareClient() {
   if (tools.length < 2) {
     return (
       <main className="compare-page">
+        {/* 빈 상태에도 페이지 제목은 있어야 합니다. 이전에는 h1이 없어
+            브라우저 개요와 스크린리더에 이름 없는 화면으로 잡혔습니다. */}
+        <header className="compare-header">
+          <span className="section-kicker">SIDE BY SIDE</span>
+          <h1>{t.compareTitle}</h1>
+        </header>
         <div className="card empty-state">
           <strong>{t.compareNeedTwo}</strong>
           <p>{t.compareEmptyDesc}</p>
@@ -53,7 +58,7 @@ export default function CompareClient() {
         <h1>{t.compareTitle}</h1>
         {tag ? (
           <p className="text-muted">
-            {t.compareForProblem} <strong>{getTagLabel(tag, lang)}</strong>
+            {t.compareForProblem} <strong>{getTagLabel(tag)}</strong>
           </p>
         ) : (
           <p className="text-muted">{t.compareDesc}</p>

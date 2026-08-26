@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReviewMeta } from "@/lib/types";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 /**
  * 이 리뷰를 믿을 근거.
@@ -12,7 +12,6 @@ import { useLanguage } from "@/components/LanguageProvider";
  * reviewedBy가 비어 있으면 아직 검수 전이라는 뜻입니다. 그 사실을 숨기지 않고 그대로 알립니다.
  */
 export function ReviewProvenance({ meta }: { meta: ReviewMeta }) {
-  const { t } = useLanguage();
   const verified = Boolean(meta.reviewedBy);
 
   return (

@@ -3,7 +3,6 @@
 import type { Tool } from "@/lib/types";
 import type { ToolInsight } from "@/lib/insights";
 import { ToolHeader } from "@/components/ToolHeader";
-import { ImpactMeterGrid } from "@/components/ImpactMeterGrid";
 import { BestWorstNarratives } from "@/components/BestWorstNarratives";
 import { AlternativesSection } from "@/components/AlternativesSection";
 import { RelatedTools } from "@/components/RelatedTools";
@@ -16,7 +15,7 @@ import { ReviewProvenance } from "@/components/ReviewProvenance";
 import { ScoreDissent } from "@/components/community/ScoreDissent";
 import { DecisionRecords } from "@/components/community/DecisionRecords";
 import { BreakageReports } from "@/components/community/BreakageReports";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 /**
  * 상세 페이지 구성.
@@ -40,7 +39,6 @@ export function ToolReviewContent({
   related: Tool[];
   insight: ToolInsight;
 }) {
-  const { t } = useLanguage();
 
   return (
     <main className="tool-review-page">
@@ -78,7 +76,6 @@ export function ToolReviewContent({
 
         <aside className="review-sidebar-column">
           <WorkUsageGuide playbook={insight.workPlaybook} />
-          <ImpactMeterGrid impact={tool.impact} />
           <AlternativesSection alternatives={tool.alternatives} />
         </aside>
       </div>

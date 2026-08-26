@@ -13,13 +13,13 @@ import { cookies } from "next/headers";
  * 나중에 이메일/OAuth를 붙일 때는 여기서 만든 handle을 계정에 연결만 하면 되고,
  * 그때까지 쌓인 기여가 하나도 버려지지 않습니다.
  */
-const COOKIE = "g2_author";
+const COOKIE = "ais_author";
 const MAX_AGE = 60 * 60 * 24 * 365 * 2;
 
-const devSecretStore = globalThis as unknown as { __g2DevSecret?: string; __g2SecretWarned?: boolean };
+const devSecretStore = globalThis as unknown as { __aisDevSecret?: string; __aisSecretWarned?: boolean };
 
 const secret = () => {
-  const configured = process.env.G2_AUTHOR_SECRET;
+  const configured = process.env.AIS_AUTHOR_SECRET;
   if (configured) return configured;
 
   /*
@@ -28,15 +28,15 @@ const secret = () => {
    * 본인이 남긴 기록을 더 이상 수정할 수 없게 됩니다.
    * 조용히 넘어가면 운영에서 나중에 발견하게 되므로 한 번 경고합니다.
    */
-  if (process.env.NODE_ENV === "production" && !devSecretStore.__g2SecretWarned) {
-    devSecretStore.__g2SecretWarned = true;
+  if (process.env.NODE_ENV === "production" && !devSecretStore.__aisSecretWarned) {
+    devSecretStore.__aisSecretWarned = true;
     console.warn(
-      "[community] G2_AUTHOR_SECRET이 없어 임시 키를 씁니다. " +
+      "[community] AIS_AUTHOR_SECRET이 없어 임시 키를 씁니다. " +
         "재시작하면 기여자 신원이 끊겨 본인 기록을 수정할 수 없게 됩니다."
     );
   }
 
-  return (devSecretStore.__g2DevSecret ??= randomBytes(32).toString("hex"));
+  return (devSecretStore.__aisDevSecret ??= randomBytes(32).toString("hex"));
 };
 
 const sign = (value: string) => createHmac("sha256", secret()).update(value).digest("hex");

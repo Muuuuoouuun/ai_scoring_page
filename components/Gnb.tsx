@@ -1,40 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { useLanguage } from "@/components/LanguageProvider";
+import { brand } from "@/lib/brand";
+import { copy as t } from "@/lib/copy";
 
 export function Gnb() {
-  const { lang, setLang, t } = useLanguage();
-
   return (
     <nav>
-      <Link className="brand-lockup" href="/" aria-label="g2 judgment journal home">
-        <span className="brand-mark">g2</span>
+      <Link className="brand-lockup" href="/" aria-label={`${brand.name} 홈`}>
+        <span className="brand-mark">{brand.name}</span>
         <span className="brand-copy">
-          <strong>Judgment Journal</strong>
-          <small>AI tool field notes</small>
+          <strong>{brand.tagline}</strong>
         </span>
       </Link>
       <div className="nav-links">
         <Link href="/search">{t.navSearch}</Link>
         <Link href="/community">{t.navCommunity}</Link>
         <Link href="/about">{t.navAbout}</Link>
-      </div>
-      <div className="lang-switch" aria-label="Language switch">
-        <button
-          type="button"
-          className={lang === "ko" ? "active" : ""}
-          onClick={() => setLang("ko")}
-        >
-          KO
-        </button>
-        <button
-          type="button"
-          className={lang === "en" ? "active" : ""}
-          onClick={() => setLang("en")}
-        >
-          EN
-        </button>
       </div>
     </nav>
   );

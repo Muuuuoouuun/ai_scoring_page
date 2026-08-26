@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 import { ContextPicker, isContextComplete } from "@/components/community/ContextPicker";
 import type { ContributorContext, DecisionOutcome, DecisionRecord } from "@/lib/community/types";
 
@@ -18,7 +18,6 @@ const isStale = (checkedAt: string) =>
  * 비교 데이터·이탈 데이터·시간축 데이터를 한 번에 만듭니다.
  */
 export function DecisionRecords({ toolId, toolName }: { toolId: string; toolName: string }) {
-  const { t, lang } = useLanguage();
   const [records, setRecords] = useState<DecisionRecord[]>([]);
   const [alternatives, setAlternatives] = useState<{ name: string; count: number }[]>([]);
   const [open, setOpen] = useState(false);
@@ -110,9 +109,7 @@ export function DecisionRecords({ toolId, toolName }: { toolId: string; toolName
       {/* 집계는 표본이 쌓였을 때만 문장으로 만듭니다. */}
       {records.length >= 3 && topAlternative ? (
         <p className="decision-summary">
-          {lang === "ko"
-            ? `${toolName}을(를) 고른 ${records.length}팀 중 ${topAlternative.count}팀이 ${topAlternative.name}을(를) 함께 검토했습니다.`
-            : `${topAlternative.count} of ${records.length} teams that chose ${toolName} also evaluated ${topAlternative.name}.`}
+          {`${toolName}을(를) 고른 ${records.length}팀 중 ${topAlternative.count}팀이 ${topAlternative.name}을(를) 함께 검토했습니다.`}
         </p>
       ) : null}
 

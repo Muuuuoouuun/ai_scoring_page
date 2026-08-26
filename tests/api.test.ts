@@ -71,7 +71,6 @@ describe("API routes", () => {
           description: "Scores without any stated basis.",
           problemTagIds: ["info-scattered"],
           whyExist: "Placeholder tool used to assert schema behaviour.",
-          impact: { judgmentSpeed: 5, thinkingDepth: 5, executionDensity: 5, collaborationClarity: 5 },
           bestCase: "Nothing in particular happens here.",
           worstCase: "Nothing in particular happens here either.",
           verdictBadges: { timeSaver: true, thinkCarefully: false, lockinRisk: false },
@@ -120,12 +119,6 @@ describe("API routes", () => {
           description: "AI workflow engine for noisy signals.",
           problemTagIds: ["info-scattered"],
           whyExist: "Teams needed a reliable filter for operational noise.",
-          impact: {
-            judgmentSpeed: 6,
-            thinkingDepth: 6,
-            executionDensity: 7,
-            collaborationClarity: 5
-          },
           bestCase: "Keeps urgent signals visible without panicking teams.",
           worstCase: "Over-automates response without context.",
           verdictBadges: {

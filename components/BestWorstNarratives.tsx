@@ -1,9 +1,8 @@
 "use client";
 
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 export function BestWorstNarratives({ bestCase, worstCase }: { bestCase: string; worstCase: string }) {
-  const { t } = useLanguage();
 
   return (
     <section className="card scenario-assessment">

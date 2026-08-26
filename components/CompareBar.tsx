@@ -2,14 +2,13 @@
 
 import Link from "next/link";
 import { useCompare, MAX_COMPARE } from "@/components/CompareProvider";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 import { ProductLogo } from "@/components/ProductLogo";
 import { getToolById } from "@/lib/tools";
 
 /** 담은 도구를 화면 하단에 고정해서, 비교로 넘어가는 길을 항상 보이게 합니다. */
 export function CompareBar() {
   const { selected, remove, clear } = useCompare();
-  const { lang, t } = useLanguage();
 
   if (selected.length === 0) return null;
 
@@ -31,7 +30,7 @@ export function CompareBar() {
                 <button
                   type="button"
                   onClick={() => remove(tool!.id)}
-                  aria-label={`${tool!.name} ${lang === "ko" ? "빼기" : "remove"}`}
+                  aria-label={`${tool!.name} ${"빼기"}`}
                 >
                   ×
                 </button>

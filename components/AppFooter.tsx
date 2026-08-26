@@ -1,8 +1,7 @@
 "use client";
 
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 export function AppFooter() {
-  const { t } = useLanguage();
   return <footer>{t.footer}</footer>;
 }

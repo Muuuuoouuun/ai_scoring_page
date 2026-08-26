@@ -1,13 +1,11 @@
 import { problemTags, problemTagMap } from "@/data/problem-tags";
 import { problemAngles } from "@/data/problem-angles";
 import { tools } from "@/data/tools";
-import type { Language } from "@/lib/i18n";
 import type { ProblemTag, Tool, ToolProblemAngle } from "@/lib/types";
 
 export { problemTags, problemTagMap };
 
-export const getTagLabel = (tag: ProblemTag, lang: Language) =>
-  lang === "ko" ? tag.ko : tag.en;
+export const getTagLabel = (tag: ProblemTag) => tag.ko;
 
 export const getTag = (tagId: string): ProblemTag | undefined => problemTagMap.get(tagId);
 

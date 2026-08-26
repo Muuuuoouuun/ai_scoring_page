@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 import { ContextPicker, isContextComplete } from "@/components/community/ContextPicker";
 import { SCORE_FACET_KEYS } from "@/lib/insights";
 import type { ScoreBreakdown } from "@/lib/types";
@@ -26,7 +26,6 @@ export function ScoreDissent({
   toolId: string;
   scoreBreakdown: ScoreBreakdown;
 }) {
-  const { t, lang } = useLanguage();
   const [consensus, setConsensus] = useState<ConsensusMap>({});
   const [openFacet, setOpenFacet] = useState<string | null>(null);
   const [direction, setDirection] = useState<DissentDirection>("too-low");
@@ -190,9 +189,7 @@ export function ScoreDissent({
               {result?.kind === "raw" ? (
                 <div className="dissent-raw">
                   <span className="dissent-sample-note">
-                    {lang === "ko"
-                      ? `지금까지 ${result.entries.length}명이 답했습니다. 표본이 적어 요약하지 않습니다.`
-                      : `${result.entries.length} responses so far — too few to summarize.`}
+                    {`지금까지 ${result.entries.length}명이 답했습니다. 표본이 적어 요약하지 않습니다.`}
                   </span>
                   {renderResponses(result.entries)}
                 </div>

@@ -1,10 +1,3 @@
-export type ImpactScores = {
-  judgmentSpeed: number;
-  thinkingDepth: number;
-  executionDensity: number;
-  collaborationClarity: number;
-};
-
 export type VerdictBadges = {
   timeSaver: boolean;
   thinkCarefully: boolean;
@@ -76,7 +69,6 @@ export type Tool = {
   /** 이 도구가 걸리는 문제 태그 id 목록. data/problem-angles.ts에 태그별 문장이 있습니다. */
   problemTagIds: string[];
   whyExist: string;
-  impact: ImpactScores;
   bestCase: string;
   worstCase: string;
   verdictBadges: VerdictBadges;

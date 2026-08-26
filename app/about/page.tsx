@@ -1,271 +1,102 @@
 "use client";
 
-import { useState, MouseEvent } from "react";
 import Link from "next/link";
-import { useLanguage } from "@/components/LanguageProvider";
+import { brand } from "@/lib/brand";
+import { copy as t } from "@/lib/copy";
+import { MIN_SAMPLE } from "@/lib/community/consensus";
+import { MIN_DISSENT_REASON } from "@/lib/community/types";
 
-function InteractiveSignal() {
-  const [signals, setSignals] = useState<{ x: number; y: number; id: number }[]>([]);
-
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    // Throttle slightly by only adding signals occasionally, or just taking the event
-    if (Math.random() > 0.8) {
-      const rect = e.currentTarget.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const newSignal = { x, y, id: Date.now() + Math.random() };
-
-      setSignals((prev) => [...prev.slice(-15), newSignal]);
-    }
-  };
-
-  return (
-    <div className="glass-interactive" onMouseMove={handleMouseMove}>
-      {/* Render signal rings */}
-      {signals.map((sig) => (
-        <div
-          key={sig.id}
-          style={{
-            position: "absolute",
-            left: sig.x - 20,
-            top: sig.y - 20,
-            width: 40,
-            height: 40,
-            borderRadius: "50%",
-            border: "1px solid rgba(176, 138, 82, 0.4)",
-            animation: "pulseNode 2s ease-out forwards",
-            pointerEvents: "none",
-          }}
-        />
-      ))}
-      <div className="content">
-        <h2>Move your cursor. Leave a signal.</h2>
-        <p style={{ color: "var(--muted)", fontSize: "1.1rem" }}>
-          커뮤니티의 작은 신호들이 모여, 더 좋은 네트워크를 만듭니다.
-        </p>
-      </div>
-    </div>
-  );
-}
+/**
+ * 평가 기준.
+ *
+ * 이전 /about은 "입문 로드맵", "추천 시작 스택", Beginner/Builder/Curator 탭으로
+ * 제품과 전혀 다른 세 번째 컨셉을 말하고 있었습니다.
+ *
+ * 리뷰 사이트에서 방문자가 실제로 알고 싶은 건 "당신들은 누구인가"가 아니라
+ * "이 점수를 믿어도 되는가"입니다. 그래서 이 페이지는 규칙을 설명하는 페이지입니다.
+ * 여기 적힌 규칙은 대부분 코드와 테스트로 강제되고 있고, 그 위치도 함께 밝힙니다.
+ */
+const rules = [
+  {
+    title: "점수에는 반드시 근거가 붙습니다",
+    body: "왜 그 숫자인지 한 줄로 못 쓰겠으면 점수를 매기지 않습니다. 근거는 접어두지 않고 점수 옆에 그대로 노출합니다. 근거 없는 점수는 저장 단계에서 거부됩니다.",
+    enforcedBy: "ScoreFacet 타입 · lib/validators.ts"
+  },
+  {
+    title: "어떤 문장도 도구 간에 재사용하지 않습니다",
+    body: "예전에는 10개 도구 중 8개의 총평이 이름만 바꾼 같은 문장이었고, 변경 이력은 10개가 전부 동일했습니다. 지금은 총평·비교·가이드·탈락 조건·가격 문장이 도구마다 다른지를 테스트가 검사합니다.",
+    enforcedBy: "tests/review-integrity.test.ts"
+  },
+  {
+    title: "확인하지 못한 것은 지어내지 않습니다",
+    body: "변경 이력이 확인되지 않은 도구는 빈 채로 두고 화면에 \"확인된 변경 이력 없음\"으로 표시합니다. 가격도 마찬가지로, 확인한 시점을 적을 수 없으면 \"확인 시점 미기재\"가 그대로 보입니다.",
+    enforcedBy: "빈 배열 + 화면 표기 · 회귀 테스트"
+  },
+  {
+    title: `표본이 ${MIN_SAMPLE}명 미만이면 평균을 만들지 않습니다`,
+    body: "\"4.5점(2명)\"은 거짓말에 가깝습니다. 응답이 적을 때는 요약하는 대신 각자가 어떤 처지에서 무엇이라 답했는지를 그대로 나열합니다. 이건 화면 관례가 아니라 집계 함수와 DB 뷰 양쪽에 박아둔 규칙입니다.",
+    enforcedBy: "lib/community/consensus.ts · db/community.sql"
+  },
+  {
+    title: "점수는 반박할 수 있습니다",
+    body: `각 항목에 동의·더 낮다·더 높다로 답할 수 있습니다. 다르게 보신다면 근거를 ${MIN_DISSENT_REASON}자 이상 적어야 합니다 — 저희 자신에게 요구한 규칙과 같은 것을 적용합니다.`,
+    enforcedBy: "MIN_DISSENT_REASON · API·저장소·DB 세 계층 공유"
+  },
+  {
+    title: "리뷰는 시간이 지나면 썩습니다",
+    body: "도입 결정 기록을 남기신 분께 3개월 뒤 \"지금도 쓰시나요\"를 다시 여쭙니다. 6개월 넘게 확인되지 않은 기록은 그렇게 표시하고 집계에서 뺍니다. 그래서 시간이 지나면 축소하거나 그만둔 사례도 함께 보입니다.",
+    enforcedBy: "decision_records.checked_at"
+  }
+];
 
 export default function AboutPage() {
-  const { lang } = useLanguage();
-  const [activeTab, setActiveTab] = useState<"Beginner" | "Builder" | "Curator">("Beginner");
-
-  const tabContent = {
-    Beginner: {
-      title: "“무엇부터 봐야 할지” 길을 만든다",
-      desc: "입문 로드맵 + 핵심 용어 정리 + 추천 시작 스택 제공"
-    },
-    Builder: {
-      title: "바로 적용 가능한 비교와 레시피",
-      desc: "대안 비교, 워크플로우 구성, 아키텍처 선택을 확신 있게"
-    },
-    Curator: {
-      title: "도구 제보와 리뷰로 기여",
-      desc: "커뮤니티와 모더레이터가 함께 큐레이션 품질을 높입니다"
-    }
-  };
-
   return (
     <main className="about-page">
-      {/* 1) Hero */}
-      <section className="glass-panel-hero">
-        <h1>Intelligence, curated and structured.</h1>
-        <p className="subtitle">
-          AI/에이전트/자동화 도구는 많아졌는데, 좋은 정보는 흩어져 있고 기준은 모호합니다.<br />
-          우리는 빌더와 초보자 모두가 빠르게 이해하고 선택할 수 있도록 도구와 지식을 구조화합니다.
-        </p>
-        <div className="hero-actions">
-          <Link href="/search" className="button">
-            Explore the Hub
-          </Link>
-          <a href="#" className="secondary-button" style={{ background: "rgba(255,255,255,0.8)" }}>
-            Join the Community
-          </a>
-        </div>
-        <small style={{ color: "var(--muted)", fontWeight: 600 }}>“No hype. Just clarity.”</small>
-      </section>
+      <header className="about-hero">
+        <span className="section-kicker">METHODOLOGY</span>
+        <h1>{t.aboutTitle}</h1>
+        <p className="about-lede">{brand.oneLiner}</p>
+        <p className="text-muted">{t.aboutDesc}</p>
+      </header>
 
-      {/* 2) Why */}
-      <section>
-        <div className="about-section-header">
-          <h2>왜 이런 허브가 필요한가</h2>
-          <p>정보가 넘치는 시대, 판단을 위한 진짜 신호가 부족합니다.</p>
+      <section className="section">
+        <div className="journal-section-head">
+          <span className="section-kicker">HOW WE SCORE</span>
+          <h2>{t.aboutDiffTitle}</h2>
+          <p className="text-muted">
+            아래는 지키겠다는 다짐이 아니라 코드와 테스트로 강제되고 있는 규칙입니다. 각 항목에
+            어디서 강제되는지를 함께 적었습니다.
+          </p>
         </div>
-        <div className="grid grid-3">
-          <div className="glass-card">
-            <h3>방대한 링크, 부족한 맥락</h3>
-            <p>AI 정보와 도구는 매일 쏟아지지만 정작 내 상황에 맞는지 판단할 기준이 부족합니다.</p>
-          </div>
-          <div className="glass-card">
-            <h3>선택 피로도</h3>
-            <p>직접 써보지 않으면 알 수 없는 파편화된 특징들 때문에 탐색에 너무 많은 에너지가 소모됩니다.</p>
-          </div>
-          <div className="glass-card" style={{ background: "rgba(176, 138, 82, 0.08)", borderColor: "rgba(176, 138, 82, 0.24)" }}>
-            <h3 style={{ color: "var(--accent)" }}>검색이 아닌 결정</h3>
-            <p>그래서 우리는 단순한 정보 나열이 아니라, "의사결정"이 가능한 형태로 지식을 구조화합니다.</p>
-          </div>
-        </div>
-      </section>
 
-      {/* 3) What we do */}
-      <section>
-        <div className="about-section-header">
-          <h2>우리가 제공하는 4가지</h2>
-        </div>
-        <div className="grid" style={{ gridTemplateColumns: "1fr 1fr" }}>
-          <div className="glass-card pencil-underline">
-            <h3>Curated Tools</h3>
-            <p>가장 검증되고 실사용 가치가 높은 에이전트/AI 도구를 목적별로 엄선하여 큐레이션합니다.</p>
-          </div>
-          <div className="glass-card pencil-underline">
-            <h3>Structured Breakdowns</h3>
-            <p>기능, 확실한 대안, 비용, 적합한 유저 등 복잡한 요소를 한 페이지에서 구조적으로 파악합니다.</p>
-          </div>
-          <div className="glass-card pencil-underline">
-            <h3>Build-ready Guides</h3>
-            <p>단순 소개를 넘어 실제 워크플로우 적용 패턴, 자동화 템플릿, 연동 레시피를 제공합니다.</p>
-          </div>
-          <div className="glass-card pencil-underline">
-            <h3>Community Signals</h3>
-            <p>실제 사용자들의 생생한 평가, 한 줄 리뷰, 사용 사례를 통해 도구의 진짜 가치를 판단합니다.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 4) For whom */}
-      <section>
-        <div className="about-section-header">
-          <h2>초보자도, 빌더도</h2>
-        </div>
-        <div className="glass-tabs">
-          {(["Beginner", "Builder", "Curator"] as const).map((tab) => (
-            <button
-              key={tab}
-              className={`glass-tab ${activeTab === tab ? "active" : ""}`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </button>
+        <ol className="rule-list">
+          {rules.map((rule) => (
+            <li key={rule.title} className="rule-item">
+              <h3>{rule.title}</h3>
+              <p>{rule.body}</p>
+              <span className="rule-enforced">
+                <span className="cell-sublabel">강제되는 곳</span> {rule.enforcedBy}
+              </span>
+            </li>
           ))}
-        </div>
-        <div className="glass-card" style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto" }}>
-          <h3 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>{tabContent[activeTab].title}</h3>
-          <p style={{ fontSize: "1.1rem" }}>{tabContent[activeTab].desc}</p>
-        </div>
+        </ol>
       </section>
 
-      {/* 5) Curation Principles */}
-      <section>
-        <div className="about-section-header">
-          <h2>우리는 어떤 기준으로 고른다</h2>
-          <p>광고형 나열이 아니라, 확신 있는 선택을 위한 5가지 원칙</p>
-        </div>
-        <div className="principle-list">
-          <div className="principle-item">
-            <strong style={{ width: "120px", color: "var(--accent)" }}>Clarity</strong>
-            <span>어떤 문제를 해결하는지 한 문장으로 명확히 설명 가능해야 함</span>
-          </div>
-          <div className="principle-item">
-            <strong style={{ width: "120px", color: "var(--accent)" }}>Utility</strong>
-            <span>실제로 작업 시간을 줄이거나 결과물의 품질을 확연히 올려야 함</span>
-          </div>
-          <div className="principle-item">
-            <strong style={{ width: "120px", color: "var(--accent)" }}>Proof</strong>
-            <span>설명뿐 아니라 실제 사용 사례, 레퍼런스, 확실한 적용 맥락 존재</span>
-          </div>
-          <div className="principle-item">
-            <strong style={{ width: "120px", color: "var(--accent)" }}>Alternatives</strong>
-            <span>절대적인 1위는 없으므로 항상 선명한 대안 도구들과 함께 비교 검토</span>
-          </div>
-          <div className="principle-item">
-            <strong style={{ width: "120px", color: "var(--accent)" }}>Freshness</strong>
-            <span>지속적인 패치 노트 및 업데이트 상태, 현재 유지 관리 여부 확인</span>
-          </div>
-        </div>
-      </section>
-
-      {/* 6) Community Workflow */}
-      <section>
-        <div className="about-section-header">
-          <h2>커뮤니티가 돌아가는 방식</h2>
-          <p>기여는 가볍게, 결과물은 단단하게.</p>
-        </div>
-        <div className="timeline">
-          <div className="timeline-step">
-            <div className="circle">1</div>
-            <strong>Submit</strong>
-            <p style={{ fontSize: "0.95rem", color: "var(--muted)", margin: "0.5rem 0 0" }}>
-              유용한 도구나 가이드를 커뮤니티에 가볍게 제보합니다.
-            </p>
-          </div>
-          <div className="timeline-step">
-            <div className="circle">2</div>
-            <strong>Review</strong>
-            <p style={{ fontSize: "0.95rem", color: "var(--muted)", margin: "0.5rem 0 0" }}>
-              모더레이터와 커뮤니티가 요소들을 크로스 체크하고 피드백을 남깁니다.
-            </p>
-          </div>
-          <div className="timeline-step">
-            <div className="circle">3</div>
-            <strong>Publish</strong>
-            <p style={{ fontSize: "0.95rem", color: "var(--muted)", margin: "0.5rem 0 0" }}>
-              명확한 허브 표준 템플릿에 맞춰 구조화된 정보로 정식 공개됩니다.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 7) Interactive Section */}
-      <section>
-        <InteractiveSignal />
-      </section>
-
-      {/* 8) Roadmap */}
-      <section>
-        <div className="about-section-header">
-          <h2>우리가 다음에 만드는 것</h2>
-        </div>
-        <div className="roadmap-grid">
-          {[
-            "Beginner Path v1 (입문 로드맵)",
-            "Agent Workflow Gallery (레시피 라이브러리)",
-            "Tool Comparison Matrix (비교표)",
-            "Community Rank (시그널 기반 추천)"
-          ].map((item, i) => (
-            <div key={i} className="roadmap-item">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M22 11.08V12a10 10 0 1 1 -5.93 -9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
-              <strong>{item}</strong>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 9) CTA Footer */}
-      <section className="glass-panel-footer">
-        <h2 style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>Build with clarity.</h2>
-        <p style={{ color: "var(--muted)", fontSize: "1.2rem", marginBottom: "2rem" }}>
-          탐색하거나, 기여하거나, 함께 구조화하세요.
-        </p>
-        <div className="hero-actions">
-          <Link href="/search" className="button">
-            Start Exploring
+      <section className="section">
+        <div className="card draft-notice">
+          <span className="section-kicker">현재 상태</span>
+          <h2>지금 리뷰는 검수 전 초안입니다</h2>
+          <p>
+            도구 10개의 리뷰 본문은 공개된 제품 문서를 근거로 정리한 초안이며, 실제 운영 경험이나
+            요금표 확인 기록이 아직 없습니다. 모든 도구 화면 상단에 그 사실이 표시됩니다. 검수자
+            이름이 채워지기 전까지는 도입 결정의 유일한 근거로 쓰지 마시고, 자사 환경에서 직접
+            확인하시길 권합니다.
+          </p>
+          <Link className="button" href="/search">
+            {t.heroCta}
           </Link>
-          <a href="#" className="secondary-button" style={{ background: "rgba(255,255,255,0.8)" }}>
-            Submit a Tool
-          </a>
-        </div>
-        <div style={{ marginTop: "1rem" }}>
-          <a href="#" style={{ color: "var(--accent)", fontWeight: 700, textDecoration: "underline" }}>
-            Join Discord / Forum
-          </a>
         </div>
       </section>
-
     </main>
   );
 }

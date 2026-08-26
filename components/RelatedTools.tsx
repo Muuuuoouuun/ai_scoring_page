@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { Tool } from "@/lib/types";
 import { ProductLogo } from "@/components/ProductLogo";
 import { getTotalScore } from "@/lib/insights";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 /**
  * 관련 도구를 카드가 아니라 행으로 보여줍니다.
@@ -13,7 +13,6 @@ import { useLanguage } from "@/components/LanguageProvider";
  * 이 자리는 비교로 넘어가는 진입점이면 충분하므로 로고·이름·총평 한 줄·총점만 남깁니다.
  */
 export function RelatedTools({ tools }: { tools: Tool[] }) {
-  const { t } = useLanguage();
 
   return (
     <section className="section">

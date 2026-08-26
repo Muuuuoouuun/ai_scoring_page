@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 type ReviewItem = {
   id: string;
@@ -13,7 +13,7 @@ type ReviewItem = {
   createdAt: string;
 };
 
-const storageKey = (toolId: string) => `g2-reviews-${toolId}`;
+const storageKey = (toolId: string) => `ais-reviews-${toolId}`;
 
 const parseReviewList = (raw: string | null): ReviewItem[] => {
   if (!raw) return [];
@@ -33,7 +33,6 @@ const formatDate = (iso: string, locale: string) =>
   }).format(new Date(iso));
 
 export function OneLineReviewForm({ toolId }: { toolId: string }) {
-  const { lang, t } = useLanguage();
   const [nickname, setNickname] = useState("");
   const [line, setLine] = useState("");
   const [detail, setDetail] = useState("");
@@ -211,7 +210,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
                   {review.rating}.0
                 </span>
               </strong>
-              <time dateTime={review.createdAt}>{formatDate(review.createdAt, lang === "ko" ? "ko-KR" : "en-US")}</time>
+              <time dateTime={review.createdAt}>{formatDate(review.createdAt, "ko-KR")}</time>
             </div>
             
             <p>{review.line}</p>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 import type { BreakageReport } from "@/lib/community/types";
 
 /**
@@ -12,7 +12,6 @@ import type { BreakageReport } from "@/lib/community/types";
  * 제보는 바로 공개되지 않고, 검수를 거쳐 변경 이력으로 승격되며 제보자 크레딧이 붙습니다.
  */
 export function BreakageReports({ toolId }: { toolId: string }) {
-  const { t } = useLanguage();
   const [reports, setReports] = useState<BreakageReport[]>([]);
   const [open, setOpen] = useState(false);
   const [occurredAt, setOccurredAt] = useState("");

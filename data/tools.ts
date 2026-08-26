@@ -15,12 +15,6 @@ const toolFacts: Omit<Tool, "review">[] = [
       "slow-onboarding"
     ],
     whyExist: "공유 폴더만으로는 한계가 생기면서, 노트와 업무, 지식을 함께 관리하는 운영 시스템이 필요해졌습니다.",
-    impact: {
-      judgmentSpeed: 6,
-      thinkingDepth: 7,
-      executionDensity: 6,
-      collaborationClarity: 5
-    },
     bestCase: "우선순위와 의사결정 이력이 투명하게 보이는 공통 작업 맥락을 빠르게 만들 수 있습니다.",
     worstCase: "문서는 많아지지만 결론이 쌓이지 않는 거대한 위키로 변질될 수 있습니다.",
     verdictBadges: {
@@ -43,12 +37,6 @@ const toolFacts: Omit<Tool, "review">[] = [
       "validate-before-building"
     ],
     whyExist: "디자인 작업이 개인 PC에 고립되지 않고, 팀 단위 협업 프로세스로 돌아가야 했기 때문입니다.",
-    impact: {
-      judgmentSpeed: 7,
-      thinkingDepth: 6,
-      executionDensity: 8,
-      collaborationClarity: 9
-    },
     bestCase: "디자인을 공통 대화로 바꿔 제품, 개발, 리더십 간 해석 차이를 크게 줄일 수 있습니다.",
     worstCase: "소유권 없는 피드백이 과도하게 쌓이면 의사결정이 댓글 뒤에 묻힐 수 있습니다.",
     verdictBadges: {
@@ -71,12 +59,6 @@ const toolFacts: Omit<Tool, "review">[] = [
       "slow-onboarding"
     ],
     whyExist: "이메일만으로는 속도를 따라가기 어려워, 빠른 조율과 맥락 공유를 위한 실시간 공간이 필요해졌습니다.",
-    impact: {
-      judgmentSpeed: 8,
-      thinkingDepth: 4,
-      executionDensity: 7,
-      collaborationClarity: 6
-    },
     bestCase: "신호를 눈에 보이게 유지해 대기 시간을 줄이고 정렬 속도를 높일 수 있습니다.",
     worstCase: "알림 중심 흐름이 과해지면 깊은 사고와 몰입 업무를 방해할 수 있습니다.",
     verdictBadges: {
@@ -99,12 +81,6 @@ const toolFacts: Omit<Tool, "review">[] = [
       "gut-feel-decisions"
     ],
     whyExist: "기존 티켓 시스템이 현대 팀의 속도를 따라가지 못하면서, 선명한 실행 관리가 경쟁력이 되었기 때문입니다.",
-    impact: {
-      judgmentSpeed: 7,
-      thinkingDepth: 5,
-      executionDensity: 8,
-      collaborationClarity: 7
-    },
     bestCase: "무엇을 왜 출시하는지 모두가 같은 기준으로 볼 수 있는 선명한 실행 체계를 만듭니다.",
     worstCase: "처리량은 늘어나지만 제품의 본질적 불확실성을 가리는 방향으로 흐를 수 있습니다.",
     verdictBadges: {
@@ -127,12 +103,6 @@ const toolFacts: Omit<Tool, "review">[] = [
       "gut-feel-decisions"
     ],
     whyExist: "엔지니어링 리소스 없이도 데이터베이스 수준의 구조를 쓰고 싶어하는 팀 수요가 커졌기 때문입니다.",
-    impact: {
-      judgmentSpeed: 6,
-      thinkingDepth: 6,
-      executionDensity: 6,
-      collaborationClarity: 5
-    },
     bestCase: "비개발자도 빠르게 구조화된 워크플로우를 만들고 운영할 수 있습니다.",
     worstCase: "통제가 없는 상태로 확장되면 취약한 패치워크가 되어 유지보수가 어려워집니다.",
     verdictBadges: {
@@ -155,12 +125,6 @@ const toolFacts: Omit<Tool, "review">[] = [
       "validate-before-building"
     ],
     whyExist: "원격 팀이 실시간으로 시각 사고를 공유하고 공동 제작할 수 있는 공간이 필요했기 때문입니다.",
-    impact: {
-      judgmentSpeed: 5,
-      thinkingDepth: 7,
-      executionDensity: 4,
-      collaborationClarity: 7
-    },
     bestCase: "추상적인 논의를 시각화해 실행 전에 정렬 품질을 높일 수 있습니다.",
     worstCase: "결론 없이 스티키 노트만 늘어나는 회의 보드가 될 위험이 있습니다.",
     verdictBadges: {
@@ -182,12 +146,6 @@ const toolFacts: Omit<Tool, "review">[] = [
       "no-eng-resource"
     ],
     whyExist: "개발자 대기열을 기다리지 않고도 현업이 직접 자동화를 구축할 필요가 커졌기 때문입니다.",
-    impact: {
-      judgmentSpeed: 7,
-      thinkingDepth: 4,
-      executionDensity: 9,
-      collaborationClarity: 5
-    },
     bestCase: "저부가가치 업무를 줄여 병목 없이 운영 흐름을 유지할 수 있습니다.",
     worstCase: "소유권 없는 자동화 체인이 늘어나면 장애 시 복구가 어려워질 수 있습니다.",
     verdictBadges: {
@@ -209,12 +167,6 @@ const toolFacts: Omit<Tool, "review">[] = [
       "uneven-output-quality"
     ],
     whyExist: "마케팅 팀이 속도를 유지하면서도 더 많은 콘텐츠를 생산해야 했기 때문입니다.",
-    impact: {
-      judgmentSpeed: 8,
-      thinkingDepth: 3,
-      executionDensity: 7,
-      collaborationClarity: 4
-    },
     bestCase: "초안 작성 시간을 줄여 사람이 전략적 편집과 메시지 완성도에 집중할 수 있습니다.",
     worstCase: "표준화된 문구가 늘어나 브랜드의 미묘한 톤이 약해질 수 있습니다.",
     verdictBadges: {
@@ -237,12 +189,6 @@ const toolFacts: Omit<Tool, "review">[] = [
       "cross-role-misalignment"
     ],
     whyExist: "CRM 메모만으로는 한계가 있어, 데이터 기반 코칭과 영업 대화 가시성이 필요했기 때문입니다.",
-    impact: {
-      judgmentSpeed: 6,
-      thinkingDepth: 6,
-      executionDensity: 6,
-      collaborationClarity: 7
-    },
     bestCase: "정성적 대화를 코칭 신호로 전환해 딜 성과 개선에 직접 기여할 수 있습니다.",
     worstCase: "감시받는 느낌이 강해지면 팀 신뢰와 진정성이 훼손될 수 있습니다.",
     verdictBadges: {
@@ -265,12 +211,6 @@ const toolFacts: Omit<Tool, "review">[] = [
       "validate-before-building"
     ],
     whyExist: "환경 설정 부담 없이 즉시 개발을 시작하고, AI 보조를 함께 활용하려는 요구가 커졌기 때문입니다.",
-    impact: {
-      judgmentSpeed: 7,
-      thinkingDepth: 5,
-      executionDensity: 8,
-      collaborationClarity: 6
-    },
     bestCase: "개발 환경 준비 시간을 줄여 아이디어를 수분 내 검증할 수 있습니다.",
     worstCase: "기반 아키텍처 이해 없이 데모 중심 개발로 흐를 위험이 있습니다.",
     verdictBadges: {

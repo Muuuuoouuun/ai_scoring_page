@@ -1,9 +1,8 @@
 "use client";
 
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 
 export function PrinciplesBar() {
-  const { t } = useLanguage();
 
   return (
     <section className="section principles-section">

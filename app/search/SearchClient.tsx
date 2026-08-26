@@ -4,7 +4,7 @@ import { useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { ToolCard } from "@/components/ToolCard";
 import { CompareBar } from "@/components/CompareBar";
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 import { useCompare } from "@/components/CompareProvider";
 import { searchTools } from "@/lib/tools";
 import { getRankedTags, getTagLabel, getTag, countToolsForTag } from "@/lib/problems";
@@ -13,7 +13,6 @@ import type { TeamSizeBand } from "@/lib/types";
 const TEAM_BANDS: TeamSizeBand[] = ["1-5", "6-30", "30+"];
 
 export default function SearchClient() {
-  const { lang, t } = useLanguage();
   const searchParams = useSearchParams();
   const { selected } = useCompare();
 
@@ -93,7 +92,7 @@ export default function SearchClient() {
                   onClick={() => setTagId(active ? "" : tag.id)}
                   aria-pressed={active}
                 >
-                  <span className="tag-chip-label">{getTagLabel(tag, lang)}</span>
+                  <span className="tag-chip-label">{getTagLabel(tag)}</span>
                   <span className="tag-chip-count">{count}</span>
                 </button>
               );
@@ -165,14 +164,14 @@ export default function SearchClient() {
         <div className="results-toolbar">
           <div>
             <span className="section-kicker">MATCH MATRIX</span>
-            <h2>{activeTag ? getTagLabel(activeTag, lang) : t.results}</h2>
+            <h2>{activeTag ? getTagLabel(activeTag) : t.results}</h2>
             <p className="text-muted">
               {activeTag ? activeTag.description : `${results.length}${t.matchCount}`}
             </p>
           </div>
           <div className="result-count-card">
             <strong>{results.length}</strong>
-            <span>{lang === "ko" ? "개 후보" : "candidates"}</span>
+            <span>{"개 후보"}</span>
           </div>
         </div>
 

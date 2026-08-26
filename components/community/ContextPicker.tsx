@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguage } from "@/components/LanguageProvider";
+import { copy as t } from "@/lib/copy";
 import {
   CONTRIBUTOR_ROLES,
   TEAM_SIZE_BUCKETS,
@@ -29,7 +29,6 @@ export function ContextPicker({
   value: Partial<ContributorContext>;
   onChange: (next: Partial<ContributorContext>) => void;
 }) {
-  const { t } = useLanguage();
 
   const groups = [
     {
