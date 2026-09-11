@@ -7,6 +7,7 @@
 | 문서 | 용도 |
 |---|---|
 | [통합 기획서 v0.6](/Users/bigmac_moon/dev/ai_score/docs/2026-09-12-product-plan-v0.6.md) | 전체 정체성·구조·우선순위·고객 경험·출시·검증 기준 |
+| [페이지 구조와 아이디어](/Users/bigmac_moon/dev/ai_score/docs/superpowers/specs/2026-09-12-page-structure-design.md) | 다섯 개 상위 메뉴·홈 구성·도구 상세·대표 이용 흐름·공통 상태·초기/후속 아이디어 |
 | [구독 비용·최적화 상세](/Users/bigmac_moon/dev/ai_score/docs/superpowers/specs/2026-09-11-subscription-optimization-design.md) | 개인 관리 기능의 비용 계산과 비교 기준 |
 | [해지·프로모션 알림 상세](/Users/bigmac_moon/dev/ai_score/docs/superpowers/specs/2026-09-11-cancellation-promotion-alerts-design.md) | 해지 안내·진행 기록·관심 알림의 기능 기준 |
 | [브랜치 검토](/Users/bigmac_moon/dev/ai_score/docs/2026-09-11-branch-review.md) | 당시 확인한 소스·실행 결과·한계 |
