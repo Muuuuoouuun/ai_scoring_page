@@ -6,16 +6,19 @@ import { ProductLogo } from "@/components/ProductLogo";
 import { useLanguage } from "@/components/LanguageProvider";
 
 export function ToolHeader({ tool }: { tool: Tool }) {
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
 
   return (
     <section className="card tool-hero-card">
-      <span className="section-kicker">{lang === "ko" ? "TOOL FIELD NOTE" : "TOOL FIELD NOTE"}</span>
+      <span className="section-kicker">TOOL FIELD NOTE</span>
       <div className="tool-title-row">
         <ProductLogo name={tool.name} size="lg" />
         <div>
           <h1>{tool.name}</h1>
-          <small>{lang === "ko" ? "사람 중심 판단 리뷰" : "Human-centered judgment review"}</small>
+          <small>
+            {tool.category ? `${tool.category} · ` : ""}
+            {lang === "ko" ? "사람 중심 판단 리뷰" : "Human-centered judgment review"}
+          </small>
         </div>
       </div>
       <p>{tool.description}</p>
@@ -26,7 +29,14 @@ export function ToolHeader({ tool }: { tool: Tool }) {
           </span>
         ))}
       </div>
-      <VerdictBadgeList badges={tool.verdictBadges} />
+      <div className="tool-hero-footer">
+        <VerdictBadgeList badges={tool.verdictBadges} />
+        {tool.website ? (
+          <a className="tool-website-link" href={tool.website} target="_blank" rel="noopener noreferrer">
+            {t.websiteLabel} ↗
+          </a>
+        ) : null}
+      </div>
     </section>
   );
 }

@@ -6,6 +6,12 @@ import { useLanguage } from "@/components/LanguageProvider";
 
 const storageKey = (toolId: string) => `g2-company-patch-notes-${toolId}`;
 
+const impactIndex: Record<NonNullable<PatchNote["impactLevel"]>, number> = {
+  high: 0,
+  medium: 1,
+  low: 2
+};
+
 export function PatchNotesSection({
   toolId,
   notes
@@ -51,7 +57,14 @@ export function PatchNotesSection({
       <div className="grid">
         {combinedNotes.map((note, index) => (
           <article key={`${note.date}-${note.title}-${index}`} className="patch-note-item">
-            <small>{note.date}</small>
+            <div className="patch-note-meta">
+              <small>{note.date}</small>
+              {note.impactLevel ? (
+                <span className={`badge patch-impact patch-impact-${note.impactLevel}`}>
+                  {t.impactLevels[impactIndex[note.impactLevel]]}
+                </span>
+              ) : null}
+            </div>
             <h3>{note.title}</h3>
             <p>
               <strong>{t.patchChange}:</strong> {note.change}

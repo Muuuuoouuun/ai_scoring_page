@@ -6,11 +6,13 @@ import { useLanguage } from "@/components/LanguageProvider";
 export function ScoreBreakdownCard({
   totalScore,
   scoreBreakdown,
-  variant = "default"
+  variant = "default",
+  note
 }: {
   totalScore: number;
   scoreBreakdown: ScoreBreakdown;
   variant?: "default" | "hero";
+  note?: string;
 }) {
   const { t } = useLanguage();
   const labels: Record<keyof ScoreBreakdown, string> = {
@@ -37,6 +39,7 @@ export function ScoreBreakdownCard({
           </div>
         ))}
       </div>
+      {note ? <small className="score-note">{note}</small> : null}
     </section>
   );
 }
