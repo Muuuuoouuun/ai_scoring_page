@@ -2,10 +2,14 @@ import type {
   CapabilityComparison,
   ScoreBreakdown,
   Tool,
+  ToolCapabilityProfile,
   ToolEvaluation,
   WorkPlaybook
 } from "@/lib/types";
 import { evaluations } from "@/data/evaluations";
+import { capabilityProfiles } from "@/data/capabilities";
+import { tools as catalog } from "@/data/tools";
+import { computeToolScore, rankItems, type RankInfo, type ToolScore } from "@/lib/scoring";
 
 export type {
   CapabilityComparison,
@@ -19,22 +23,15 @@ export type {
 } from "@/lib/types";
 
 export type ToolInsight = ToolEvaluation & {
+  /** 종합 점수 (편집 점수 70% + 외부 평가 30%) */
   totalScore: number;
+  score: ToolScore;
+  rank?: RankInfo;
   /** true면 외부 조사 기반 데이터, false면 임팩트 점수에서 자동 유도한 기본값 */
   isResearched: boolean;
 };
 
 const clamp = (score: number) => Math.max(0, Math.min(100, score));
-
-export const computeTotalScore = (breakdown: ScoreBreakdown): number =>
-  Math.round(
-    (breakdown.functionality +
-      breakdown.uiux +
-      breakdown.reliability +
-      breakdown.comfort +
-      breakdown.pricing) /
-      5
-  );
 
 const deriveScoreBreakdown = (tool: Tool): ScoreBreakdown => ({
   functionality: clamp(tool.impact.executionDensity * 10 + 10),
@@ -70,32 +67,52 @@ const deriveWorkPlaybook = (tool: Tool): WorkPlaybook[] => [
   }
 ];
 
+const buildEvaluation = (tool: Tool): { evaluation: ToolEvaluation; isResearched: boolean } => {
+  const researched = evaluations[tool.id];
+  if (researched) return { evaluation: researched, isResearched: true };
+  return {
+    isResearched: false,
+    evaluation: {
+      oneLine: `${tool.name}는 팀의 실행 속도를 높이지만, 인지 과부하를 막기 위한 사용 원칙이 반드시 필요합니다.`,
+      scoreBreakdown: deriveScoreBreakdown(tool),
+      keyFeatures: [],
+      pricingSummary: "",
+      koreaNote: "",
+      comparisons: deriveComparisons(tool),
+      patchNotes: [],
+      workPlaybook: deriveWorkPlaybook(tool),
+      externalRatings: [],
+      sources: [],
+      researchedAt: ""
+    }
+  };
+};
+
+let rankCache: Map<string, RankInfo> | null = null;
+
+/** 카탈로그 전체의 종합 점수 순위 (지연 계산, 캐시) */
+const getRankIndex = (): Map<string, RankInfo> => {
+  if (!rankCache) {
+    rankCache = rankItems(catalog, (tool) => computeToolScore(buildEvaluation(tool).evaluation).composite);
+  }
+  return rankCache;
+};
+
 export const getToolEvaluation = (toolId: string): ToolEvaluation | undefined => evaluations[toolId];
 
-export const getToolInsight = (tool: Tool): ToolInsight => {
-  const evaluation = evaluations[tool.id];
-  if (evaluation) {
-    return {
-      ...evaluation,
-      totalScore: computeTotalScore(evaluation.scoreBreakdown),
-      isResearched: true
-    };
-  }
+export const getCapabilityProfile = (tool: Pick<Tool, "name">): ToolCapabilityProfile | undefined =>
+  capabilityProfiles[tool.name];
 
-  const scoreBreakdown = deriveScoreBreakdown(tool);
+export const getToolScore = (tool: Tool): ToolScore => computeToolScore(buildEvaluation(tool).evaluation);
+
+export const getToolInsight = (tool: Tool): ToolInsight => {
+  const { evaluation, isResearched } = buildEvaluation(tool);
+  const score = computeToolScore(evaluation);
   return {
-    totalScore: computeTotalScore(scoreBreakdown),
-    scoreBreakdown,
-    oneLine: `${tool.name}는 팀의 실행 속도를 높이지만, 인지 과부하를 막기 위한 사용 원칙이 반드시 필요합니다.`,
-    keyFeatures: [],
-    pricingSummary: "",
-    koreaNote: "",
-    comparisons: deriveComparisons(tool),
-    patchNotes: [],
-    workPlaybook: deriveWorkPlaybook(tool),
-    externalRatings: [],
-    sources: [],
-    researchedAt: "",
-    isResearched: false
+    ...evaluation,
+    totalScore: score.composite,
+    score,
+    rank: getRankIndex().get(tool.id),
+    isResearched
   };
 };

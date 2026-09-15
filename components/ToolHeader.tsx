@@ -4,6 +4,7 @@ import type { Tool } from "@/lib/types";
 import { VerdictBadgeList } from "@/components/VerdictBadgeList";
 import { ProductLogo } from "@/components/ProductLogo";
 import { useLanguage } from "@/components/LanguageProvider";
+import { CompareToggleButton } from "@/components/CompareToggleButton";
 
 export function ToolHeader({ tool }: { tool: Tool }) {
   const { lang, t } = useLanguage();
@@ -19,6 +20,7 @@ export function ToolHeader({ tool }: { tool: Tool }) {
             {tool.category ? `${tool.category} · ` : ""}
             {lang === "ko" ? "사람 중심 판단 리뷰" : "Human-centered judgment review"}
           </small>
+          {tool.discontinued ? <span className="badge discontinued-badge">{t.discontinuedLabel}</span> : null}
         </div>
       </div>
       <p>{tool.description}</p>
@@ -31,11 +33,14 @@ export function ToolHeader({ tool }: { tool: Tool }) {
       </div>
       <div className="tool-hero-footer">
         <VerdictBadgeList badges={tool.verdictBadges} />
-        {tool.website ? (
-          <a className="tool-website-link" href={tool.website} target="_blank" rel="noopener noreferrer">
-            {t.websiteLabel} ↗
-          </a>
-        ) : null}
+        <div className="tool-hero-actions">
+          <CompareToggleButton toolId={tool.id} />
+          {tool.website ? (
+            <a className="tool-website-link" href={tool.website} target="_blank" rel="noopener noreferrer">
+              {t.websiteLabel} ↗
+            </a>
+          ) : null}
+        </div>
       </div>
     </section>
   );

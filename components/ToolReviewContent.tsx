@@ -16,6 +16,7 @@ import { WorkUsageGuide } from "@/components/WorkUsageGuide";
 import { KeyFeaturesCard } from "@/components/KeyFeaturesCard";
 import { ExternalRatingsCard } from "@/components/ExternalRatingsCard";
 import { SourceReferences } from "@/components/SourceReferences";
+import { RatingSummaryCard } from "@/components/RatingSummaryCard";
 import { useLanguage } from "@/components/LanguageProvider";
 import { DiscussionContent } from "@/components/DiscussionContent";
 import { CommunityContent } from "@/components/CommunityContent";
@@ -41,6 +42,8 @@ export function ToolReviewContent({
           scoreBreakdown={insight.scoreBreakdown}
           variant="hero"
           note={insight.isResearched ? t.scoreNote : undefined}
+          score={insight.score}
+          rank={insight.rank}
         />
       </section>
 
@@ -86,6 +89,7 @@ export function ToolReviewContent({
               pricingSummary={insight.pricingSummary}
               koreaNote={insight.koreaNote}
             />
+            <CapabilityComparisonTable toolId={tool.id} toolName={tool.name} rows={insight.comparisons} />
             <BestWorstNarratives bestCase={tool.bestCase} worstCase={tool.worstCase} />
             <OneLineReviewForm toolId={tool.id} />
             <PatchNotesSection toolId={tool.id} notes={insight.patchNotes} />
@@ -93,10 +97,10 @@ export function ToolReviewContent({
           </div>
 
           <aside className="review-sidebar-column">
+            <RatingSummaryCard toolId={tool.id} score={insight.score} rank={insight.rank} />
             <WorkUsageGuide playbook={insight.workPlaybook} />
             <ImpactMeterGrid impact={tool.impact} />
             <ExternalRatingsCard ratings={insight.externalRatings} researchedAt={insight.researchedAt} />
-            <CapabilityComparisonTable toolName={tool.name} rows={insight.comparisons} />
             <AlternativesSection alternatives={tool.alternatives} />
           </aside>
         </div>
@@ -107,6 +111,7 @@ export function ToolReviewContent({
 
       <section className="section">
         <h2>{t.relatedTools}</h2>
+        <p className="text-muted">{t.relatedDesc}</p>
         <div className="grid grid-3">
           {related.map((item) => (
             <ToolCard key={item.id} tool={item} />

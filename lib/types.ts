@@ -26,6 +26,8 @@ export type Tool = {
   category?: string;
   /** 공식 사이트 URL */
   website?: string;
+  /** 서비스가 종료된 도구 (추천에서 제외, 카드에 표시) */
+  discontinued?: boolean;
   createdAt: string;
   updatedAt: string;
 };
@@ -90,4 +92,52 @@ export type ToolEvaluation = {
   sources: SourceReference[];
   /** 조사 기준 시점, 예: "2026-09" */
   researchedAt: string;
+};
+
+export type CapabilityLevel = "full" | "partial" | "none";
+
+export type CapabilityKey =
+  | "freePlan"
+  | "koreanSupport"
+  | "aiAssistant"
+  | "agentAutomation"
+  | "apiIntegrations"
+  | "teamAdmin"
+  | "dataExport"
+  | "ssoSecurity"
+  | "mobileApp"
+  | "offlineLocal";
+
+export const CAPABILITY_KEYS: CapabilityKey[] = [
+  "freePlan",
+  "koreanSupport",
+  "aiAssistant",
+  "agentAutomation",
+  "apiIntegrations",
+  "teamAdmin",
+  "dataExport",
+  "ssoSecurity",
+  "mobileApp",
+  "offlineLocal"
+];
+
+export type CapabilityEntry = {
+  level: CapabilityLevel;
+  note?: string;
+};
+
+export type Role = "pm" | "marketing" | "sales" | "engineering" | "design" | "ops" | "research";
+
+export const ROLES: Role[] = ["pm", "marketing", "sales", "engineering", "design", "ops", "research"];
+
+export type TeamSize = "solo" | "small" | "mid" | "large";
+
+export const TEAM_SIZES: TeamSize[] = ["solo", "small", "mid", "large"];
+
+/** 비교표·추천에 쓰는 도구별 기능 지원 매트릭스와 적합 직군/팀 규모 (data/capabilities.ts, 도구 이름 기준) */
+export type ToolCapabilityProfile = {
+  capabilities: Record<CapabilityKey, CapabilityEntry>;
+  roles: Role[];
+  teamFit: TeamSize[];
+  sources?: string[];
 };

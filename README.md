@@ -6,6 +6,10 @@ A judgment-driven review and curation platform for SaaS and AI tools. This MVP e
 - **Next.js UI** with landing, search, tool review, community, and about pages.
 - **Judgment-first data model** with human impact scores and verdict badges.
 - **Researched evaluations per tool** (`data/evaluations.ts`): one-line verdict, 5-axis score, key/AI features, pricing summary, capability comparison vs. three competitors, dated patch/incident notes with impact levels, practical playbooks, ratings from other review sites (G2, Capterra, Product Hunt, app stores), and the source links used.
+- **Scoring engine** (`lib/scoring.ts`): weighted editorial score across five axes, external review-site ratings normalized and blended in (70/30), tiers, stars, and overall/category ranks.
+- **Star ratings**: editorial, external-site, and community stars with a distribution histogram; community reviews update the summary live.
+- **Compare** (`/compare`): side-by-side matrix for up to three tools with a support/partial/none capability matrix, per-axis leaders, and an auto-generated difference summary; a compare tray follows the user across pages.
+- **Recommender** (`/recommend`, `lib/recommend.ts`): fit score from role, team size, priorities, and constraints, with reasons and warnings; similarity-based related tools on each review page.
 - **API routes** for tools, search, and admin creation with validation.
 - **PostgreSQL schema** for production persistence.
 - **Integration and data-integrity tests** for API endpoints and the evaluation dataset.
@@ -25,7 +29,7 @@ Open [http://localhost:4001](http://localhost:4001).
 npm test
 ```
 
-`tests/api.test.ts` covers the API routes. `tests/data.test.ts` checks that every tool has a complete researched evaluation (patch notes dated 2025+ and sorted newest first, three comparisons, playbooks, external ratings, source URLs) and that every home-page problem context maps to at least one tool.
+`tests/api.test.ts` covers the API routes. `tests/scoring.test.ts` and `tests/recommend.test.ts` cover the scoring, rating, compare-summary, and recommendation engines. `tests/data.test.ts` checks that every tool has a complete researched evaluation (patch notes dated 2025+ and sorted newest first, three comparisons, playbooks, external ratings, source URLs) and that every home-page problem context maps to at least one tool.
 
 ## Evaluation data
 
@@ -36,6 +40,12 @@ node scripts/merge-research.js <dir-with-research-json>
 ```
 
 The script validates the input (date formats, score ranges, counts, URL shapes), keeps existing tool ids, derives deterministic ids for new tools, and prints warnings for anything thin or malformed. Tools without an evaluation entry fall back to derived defaults in `lib/insights.ts`.
+
+### Scoring model
+
+- Editorial score = functionality 25% + UI/UX 15% + reliability 25% + comfort 15% + pricing fairness 20%.
+- External score = review-site ratings normalized to 100 and weighted by source (G2, Capterra, TrustRadius 1.0; Product Hunt and app stores 0.8; Trustpilot 0.5). Entries that are not scores (survey quotes, review counts) are ignored.
+- Composite = editorial 70% + external 30% (editorial only when no external score exists). Tiers: 85+ strong pick, 75+ recommended, 65+ conditional, otherwise review carefully.
 
 ## Database schema
 The PostgreSQL schema lives in `db/schema.sql`. Wire this up with your preferred ORM or query layer for production.

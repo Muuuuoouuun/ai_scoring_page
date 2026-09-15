@@ -97,6 +97,7 @@ const normalizeTool = (raw) => {
     alternatives,
     category: assertString(t, "category", raw.category, { max: 40 }),
     website: isHttps(raw.website) ? raw.website : (warn(t, "website URL 오류"), ""),
+    ...(raw.discontinued === true ? { discontinued: true } : {}),
     createdAt: existing ? existing.createdAt : UPDATED_AT,
     updatedAt: UPDATED_AT
   };
@@ -242,10 +243,62 @@ ${merged.map((m) => `  // ${m.tool.name}\n  "${m.tool.id}": ${serialize(m.evalua
 };
 `;
 
+// ---------- 기능 지원 매트릭스 / 직군 / 팀 규모 (capabilities.json, 도구 이름 기준) ----------
+const CAPABILITY_KEYS = ["freePlan", "koreanSupport", "aiAssistant", "agentAutomation", "apiIntegrations", "teamAdmin", "dataExport", "ssoSecurity", "mobileApp", "offlineLocal"];
+const ROLES = ["pm", "marketing", "sales", "engineering", "design", "ops", "research"];
+const TEAM_SIZES = ["solo", "small", "mid", "large"];
+const LEVELS = ["full", "partial", "none"];
+
+const normalizeProfile = (raw) => {
+  const name = String(raw.name || "").trim();
+  const t = name || "unknown";
+  if (raw.verified === false) warn(t, "capabilities verified=false");
+  const capabilities = {};
+  for (const key of CAPABILITY_KEYS) {
+    const entry = raw.capabilities?.[key] || {};
+    const level = LEVELS.includes(entry.level) ? entry.level : (warn(t, `capabilities.${key}.level 누락/오류 → partial`), "partial");
+    const note = entry.note ? String(entry.note).trim() : "";
+    if (note.length > 60) warn(t, `capabilities.${key}.note 길이 ${note.length} > 60`);
+    capabilities[key] = note ? { level, note } : { level };
+  }
+  const roles = (raw.roles || []).filter((role) => ROLES.includes(role));
+  if (roles.length === 0) warn(t, "roles 비어 있음");
+  const teamFit = (raw.teamFit || []).filter((size) => TEAM_SIZES.includes(size));
+  if (teamFit.length === 0) warn(t, "teamFit 비어 있음");
+  const sources = (raw.sources || []).filter(isHttps);
+  return { name, profile: { capabilities, roles, teamFit, ...(sources.length ? { sources } : {}) } };
+};
+
+const capabilityFile = path.join(researchDir, "capabilities.json");
+let profiles = [];
+if (fs.existsSync(capabilityFile)) {
+  const rawProfiles = JSON.parse(fs.readFileSync(capabilityFile, "utf8"));
+  if (!Array.isArray(rawProfiles)) throw new Error("capabilities.json: 배열이 아닙니다");
+  profiles = rawProfiles.map(normalizeProfile).filter((item) => item.name);
+  const toolNames = new Set(merged.map((m) => m.tool.name));
+  for (const item of profiles) if (!toolNames.has(item.name)) warn(item.name, "capabilities에만 있고 도구 목록에 없음");
+  for (const name of Array.from(toolNames)) if (!profiles.some((item) => item.name === name)) warn(name, "capabilities 누락");
+} else {
+  console.warn("누락된 연구 파일: capabilities.json (data/capabilities.ts 는 갱신하지 않음)");
+}
+
 const outDir = process.env.OUT_DIR || path.join(__dirname, "..", "data");
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(path.join(outDir, "tools.ts"), toolsTs);
 fs.writeFileSync(path.join(outDir, "evaluations.ts"), evaluationsTs);
+if (profiles.length > 0) {
+  const capabilitiesTs = `import type { ToolCapabilityProfile } from "@/lib/types";
+
+/**
+ * 도구 이름 → 기능 지원 매트릭스(지원/부분 지원/미지원), 적합 직군, 적합 팀 규모.
+ * 공식 가격/도움말 페이지와 외부 리뷰를 참고해 채웠습니다. scripts/merge-research.js 로 생성됩니다. 조사 기준: ${UPDATED_AT.slice(0, 7)}
+ */
+export const capabilityProfiles: Record<string, ToolCapabilityProfile> = {
+${profiles.map((item) => `  ${JSON.stringify(item.name)}: ${serialize(item.profile, 1)}`).join(",\n")}
+};
+`;
+  fs.writeFileSync(path.join(outDir, "capabilities.ts"), capabilitiesTs);
+}
 
 console.log(`도구 ${merged.length}개 생성 → ${outDir}`);
 if (warnings.length) {

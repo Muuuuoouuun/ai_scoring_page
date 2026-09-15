@@ -1,274 +1,409 @@
 import type { Tool } from "@/lib/types";
 
+/**
+ * 도구 기본 데이터. 평가 상세(점수, 비교, 패치 이력, 출처)는 data/evaluations.ts 에 있습니다.
+ * scripts/merge-research.js 로 생성됩니다. 조사 기준: 2026-09
+ */
 export const tools: Tool[] = [
   {
     id: "d41f50a2-3b7c-4f7e-8c73-1b8d0b0fe21a",
     name: "Notion",
-    description: "문서, 업무, 가벼운 데이터베이스를 통합하는 모듈형 워크스페이스입니다.",
-    problemContexts: [
-      "작업이 여러 곳에 흩어져 있다",
-      "팀 지식이 너무 많은 도구에 분산되어 있다",
-      "프로젝트를 한곳에서 관리하고 싶다"
-    ],
+    description: "문서·업무·데이터베이스에 AI 에이전트를 더한 팀·개인용 모듈형 워크스페이스입니다.",
+    problemContexts: ["작업이 여러 곳에 흩어져 있다", "팀 지식이 너무 많은 도구에 분산되어 있다", "프로젝트를 한곳에서 관리하고 싶다"],
     whyExist: "공유 폴더만으로는 한계가 생기면서, 노트와 업무, 지식을 함께 관리하는 운영 시스템이 필요해졌습니다.",
-    impact: {
-      judgmentSpeed: 6,
-      thinkingDepth: 7,
-      executionDensity: 6,
-      collaborationClarity: 5
-    },
+    impact: { judgmentSpeed: 6, thinkingDepth: 7, executionDensity: 6, collaborationClarity: 5 },
     bestCase: "우선순위와 의사결정 이력이 투명하게 보이는 공통 작업 맥락을 빠르게 만들 수 있습니다.",
-    worstCase: "문서는 많아지지만 결론이 쌓이지 않는 거대한 위키로 변질될 수 있습니다.",
-    verdictBadges: {
-      timeSaver: true,
-      thinkCarefully: true,
-      lockinRisk: true
-    },
-    alternatives: ["Linear + Google Docs", "Plain markdown + Git"],
+    worstCase: "문서는 많아지지만 결론이 쌓이지 않는 거대한 위키로 변질될 수 있고, 24/7 자율 실행되는 Custom Agents가 예상치 못한 크레딧 비용을 쌓을 수 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["Coda", "Confluence", "Obsidian"],
+    category: "워크스페이스 / 문서",
+    website: "https://www.notion.com",
     createdAt: "2024-02-01T10:00:00Z",
-    updatedAt: "2024-02-01T10:00:00Z"
+    updatedAt: "2026-09-15T00:00:00Z"
   },
   {
     id: "55d7ad1a-4c1c-4e58-a2d6-40a00d092e2a",
     name: "Figma",
-    description: "디자인 협업과 프로토타이핑을 위한 협업 플랫폼입니다.",
-    problemContexts: [
-      "디자인 피드백 루프가 느리다",
-      "제품 관점을 팀이 함께 정리해야 한다",
-      "직군 간 정렬이 계속 흔들린다"
-    ],
+    description: "디자인·프로토타이핑에 AI 생성 기능을 더한 팀 협업 플랫폼입니다.",
+    problemContexts: ["디자인 피드백 루프가 느리다", "제품 관점을 팀이 함께 정리해야 한다", "직군 간 정렬이 계속 흔들린다"],
     whyExist: "디자인 작업이 개인 PC에 고립되지 않고, 팀 단위 협업 프로세스로 돌아가야 했기 때문입니다.",
-    impact: {
-      judgmentSpeed: 7,
-      thinkingDepth: 6,
-      executionDensity: 8,
-      collaborationClarity: 9
-    },
+    impact: { judgmentSpeed: 7, thinkingDepth: 6, executionDensity: 8, collaborationClarity: 9 },
     bestCase: "디자인을 공통 대화로 바꿔 제품, 개발, 리더십 간 해석 차이를 크게 줄일 수 있습니다.",
-    worstCase: "소유권 없는 피드백이 과도하게 쌓이면 의사결정이 댓글 뒤에 묻힐 수 있습니다.",
-    verdictBadges: {
-      timeSaver: true,
-      thinkCarefully: false,
-      lockinRisk: true
-    },
-    alternatives: ["Pen + paper workshops", "Adobe XD"],
+    worstCase: "소유권 없는 피드백이 과도하게 쌓이면 의사결정이 댓글 뒤에 묻힐 수 있고, Figma Make가 만든 결과물이 디자인 시스템을 무시한 채 프로덕션에 섞여 들어갈 수 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["Adobe XD", "Sketch", "Penpot"],
+    category: "디자인 / 협업 툴",
+    website: "https://www.figma.com",
     createdAt: "2024-02-02T10:00:00Z",
-    updatedAt: "2024-02-02T10:00:00Z"
+    updatedAt: "2026-09-15T00:00:00Z"
   },
   {
     id: "ef6b79b4-7c1e-4df0-95f1-9011f412e1cb",
     name: "Slack",
-    description: "실시간 팀 커뮤니케이션 허브입니다.",
-    problemContexts: [
-      "팀 커뮤니케이션이 자주 끊긴다",
-      "중요한 맥락이 이메일에서 유실된다",
-      "더 빠른 협업 조율이 필요하다"
-    ],
+    description: "실시간 메시징에 AI 요약·에이전트를 더한 팀 커뮤니케이션 허브입니다.",
+    problemContexts: ["팀 커뮤니케이션이 자주 끊긴다", "중요한 맥락이 이메일에서 유실된다", "더 빠른 협업 조율이 필요하다"],
     whyExist: "이메일만으로는 속도를 따라가기 어려워, 빠른 조율과 맥락 공유를 위한 실시간 공간이 필요해졌습니다.",
-    impact: {
-      judgmentSpeed: 8,
-      thinkingDepth: 4,
-      executionDensity: 7,
-      collaborationClarity: 6
-    },
+    impact: { judgmentSpeed: 8, thinkingDepth: 4, executionDensity: 7, collaborationClarity: 6 },
     bestCase: "신호를 눈에 보이게 유지해 대기 시간을 줄이고 정렬 속도를 높일 수 있습니다.",
-    worstCase: "알림 중심 흐름이 과해지면 깊은 사고와 몰입 업무를 방해할 수 있습니다.",
-    verdictBadges: {
-      timeSaver: true,
-      thinkCarefully: true,
-      lockinRisk: true
-    },
-    alternatives: ["Twist", "Async standups + email"],
+    worstCase: "알림 중심 흐름이 과해지면 깊은 사고와 몰입 업무를 방해할 수 있고, 2025~2026년처럼 대규모 장애가 반복되면 업무 전체가 일시에 멈출 수 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["Microsoft Teams", "Discord", "Twist"],
+    category: "팀 커뮤니케이션",
+    website: "https://slack.com",
     createdAt: "2024-02-03T10:00:00Z",
-    updatedAt: "2024-02-03T10:00:00Z"
+    updatedAt: "2026-09-15T00:00:00Z"
   },
   {
     id: "f33e7f82-0d1c-4f57-9c5f-9a8e8e251e88",
     name: "Linear",
-    description: "빠른 제품 팀을 위한 이슈 트래킹 도구입니다.",
-    problemContexts: [
-      "무엇이 중요한지 자주 놓친다",
-      "제품 실행 흐름이 산만하다",
-      "계획 정밀도를 높여야 한다"
-    ],
+    description: "속도와 AI 코딩 에이전트에 특화된 제품 팀용 이슈 트래킹 도구입니다.",
+    problemContexts: ["무엇이 중요한지 자주 놓친다", "제품 실행 흐름이 산만하다", "계획 정밀도를 높여야 한다"],
     whyExist: "기존 티켓 시스템이 현대 팀의 속도를 따라가지 못하면서, 선명한 실행 관리가 경쟁력이 되었기 때문입니다.",
-    impact: {
-      judgmentSpeed: 7,
-      thinkingDepth: 5,
-      executionDensity: 8,
-      collaborationClarity: 7
-    },
+    impact: { judgmentSpeed: 7, thinkingDepth: 5, executionDensity: 8, collaborationClarity: 7 },
     bestCase: "무엇을 왜 출시하는지 모두가 같은 기준으로 볼 수 있는 선명한 실행 체계를 만듭니다.",
-    worstCase: "처리량은 늘어나지만 제품의 본질적 불확실성을 가리는 방향으로 흐를 수 있습니다.",
-    verdictBadges: {
-      timeSaver: true,
-      thinkCarefully: false,
-      lockinRisk: false
-    },
-    alternatives: ["Trello", "Shortcut"],
+    worstCase: "처리량은 늘어나지만 제품의 본질적 불확실성을 가리는 방향으로 흐를 수 있고, 에이전트가 작성한 코드를 검토 없이 병합하면 품질 문제가 누적될 수 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: false },
+    alternatives: ["Jira", "Asana", "Trello"],
+    category: "이슈 트래킹 / 프로젝트 관리",
+    website: "https://linear.app",
     createdAt: "2024-02-04T10:00:00Z",
-    updatedAt: "2024-02-04T10:00:00Z"
+    updatedAt: "2026-09-15T00:00:00Z"
   },
   {
     id: "58dc3f0a-6e9d-4f21-a7c5-2e2186a42e8f",
     name: "Airtable",
-    description: "운영 데이터와 지식 관리를 위한 유연한 데이터베이스-스프레드시트 하이브리드입니다.",
-    problemContexts: [
-      "가벼운 내부 운영 도구가 필요하다",
-      "데이터가 너무 많은 스프레드시트에 흩어져 있다",
-      "운영이 임시방편으로 돌아간다"
-    ],
+    description: "스프레드시트와 데이터베이스에 AI 앱 빌더를 더한 운영·지식 관리 하이브리드 툴입니다.",
+    problemContexts: ["가벼운 내부 운영 도구가 필요하다", "데이터가 너무 많은 스프레드시트에 흩어져 있다", "운영이 임시방편으로 돌아간다"],
     whyExist: "엔지니어링 리소스 없이도 데이터베이스 수준의 구조를 쓰고 싶어하는 팀 수요가 커졌기 때문입니다.",
-    impact: {
-      judgmentSpeed: 6,
-      thinkingDepth: 6,
-      executionDensity: 6,
-      collaborationClarity: 5
-    },
-    bestCase: "비개발자도 빠르게 구조화된 워크플로우를 만들고 운영할 수 있습니다.",
-    worstCase: "통제가 없는 상태로 확장되면 취약한 패치워크가 되어 유지보수가 어려워집니다.",
-    verdictBadges: {
-      timeSaver: true,
-      thinkCarefully: true,
-      lockinRisk: true
-    },
-    alternatives: ["Google Sheets + AppScript", "Retool"],
+    impact: { judgmentSpeed: 6, thinkingDepth: 6, executionDensity: 6, collaborationClarity: 5 },
+    bestCase: "비개발자도 Cobuilder·Omni로 빠르게 구조화된 워크플로우를 만들고 운영할 수 있습니다.",
+    worstCase: "통제가 없는 상태로 확장되면 취약한 패치워크가 되어 유지보수가 어려워지고, 2026년 Bending Spoons 인수로 향후 요금·지원 정책이 바뀔 위험도 커졌습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["Google Sheets", "Retool", "Smartsheet"],
+    category: "데이터베이스 / 운영 플랫폼",
+    website: "https://www.airtable.com",
     createdAt: "2024-02-05T10:00:00Z",
-    updatedAt: "2024-02-05T10:00:00Z"
+    updatedAt: "2026-09-15T00:00:00Z"
   },
   {
     id: "a1aa1f1d-67f8-4dbd-aec0-2ed51b932d0a",
     name: "Miro",
-    description: "워크숍과 아이데이션을 위한 협업 화이트보드입니다.",
-    problemContexts: [
-      "워크숍이 평면적으로 느껴진다",
-      "원격 브레인스토밍 에너지가 부족하다",
-      "전략을 시각화하기 어렵다"
-    ],
+    description: "워크숍과 아이데이션을 위한 AI 기반 협업 화이트보드입니다.",
+    problemContexts: ["워크숍이 평면적으로 느껴진다", "원격 브레인스토밍 에너지가 부족하다", "전략을 시각화하기 어렵다"],
     whyExist: "원격 팀이 실시간으로 시각 사고를 공유하고 공동 제작할 수 있는 공간이 필요했기 때문입니다.",
-    impact: {
-      judgmentSpeed: 5,
-      thinkingDepth: 7,
-      executionDensity: 4,
-      collaborationClarity: 7
-    },
+    impact: { judgmentSpeed: 5, thinkingDepth: 7, executionDensity: 4, collaborationClarity: 7 },
     bestCase: "추상적인 논의를 시각화해 실행 전에 정렬 품질을 높일 수 있습니다.",
     worstCase: "결론 없이 스티키 노트만 늘어나는 회의 보드가 될 위험이 있습니다.",
-    verdictBadges: {
-      timeSaver: false,
-      thinkCarefully: true,
-      lockinRisk: false
-    },
-    alternatives: ["Physical workshops", "FigJam"],
+    verdictBadges: { timeSaver: false, thinkCarefully: true, lockinRisk: false },
+    alternatives: ["FigJam", "Mural", "Lucidspark"],
+    category: "협업 / 화이트보드",
+    website: "https://miro.com",
     createdAt: "2024-02-06T10:00:00Z",
-    updatedAt: "2024-02-06T10:00:00Z"
+    updatedAt: "2026-09-15T00:00:00Z"
   },
   {
     id: "b559d3ef-7c52-4ed0-9e84-2f5b1a9775b4",
     name: "Zapier",
-    description: "코드 없이 여러 앱을 연결해 자동화하는 플랫폼입니다.",
-    problemContexts: [
-      "수작업 인수인계로 속도가 떨어진다",
-      "개발 리소스 없이 빠른 자동화가 필요하다",
-      "반복 입력 작업이 많다"
-    ],
+    description: "코드 없이 9,000개 이상의 앱을 연결하고 AI 에이전트로 업무를 자동화하는 플랫폼입니다.",
+    problemContexts: ["수작업 인수인계로 속도가 떨어진다", "개발 리소스 없이 빠른 자동화가 필요하다", "반복 입력 작업이 많다"],
     whyExist: "개발자 대기열을 기다리지 않고도 현업이 직접 자동화를 구축할 필요가 커졌기 때문입니다.",
-    impact: {
-      judgmentSpeed: 7,
-      thinkingDepth: 4,
-      executionDensity: 9,
-      collaborationClarity: 5
-    },
+    impact: { judgmentSpeed: 7, thinkingDepth: 4, executionDensity: 9, collaborationClarity: 5 },
     bestCase: "저부가가치 업무를 줄여 병목 없이 운영 흐름을 유지할 수 있습니다.",
     worstCase: "소유권 없는 자동화 체인이 늘어나면 장애 시 복구가 어려워질 수 있습니다.",
-    verdictBadges: {
-      timeSaver: true,
-      thinkCarefully: true,
-      lockinRisk: true
-    },
-    alternatives: ["Make", "n8n"],
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["Make", "n8n", "Workato"],
+    category: "자동화 / 워크플로우",
+    website: "https://zapier.com",
     createdAt: "2024-02-07T10:00:00Z",
-    updatedAt: "2024-02-07T10:00:00Z"
+    updatedAt: "2026-09-15T00:00:00Z"
   },
   {
     id: "6b6f9d15-0a05-4c34-8a6b-4d6b5a6ae7ea",
     name: "Jasper",
-    description: "마케팅/콘텐츠 팀을 위한 AI 글쓰기 보조 도구입니다.",
-    problemContexts: [
-      "콘텐츠 백로그가 너무 빠르게 쌓인다",
-      "브랜드 톤앤매너가 들쭉날쭉하다",
-      "초안 작성 속도를 높여야 한다"
-    ],
+    description: "마케팅·콘텐츠 팀을 위한 AI 글쓰기 및 마케팅 에이전트 플랫폼입니다.",
+    problemContexts: ["콘텐츠 백로그가 너무 빠르게 쌓인다", "브랜드 톤앤매너가 들쭉날쭉하다", "초안 작성 속도를 높여야 한다"],
     whyExist: "마케팅 팀이 속도를 유지하면서도 더 많은 콘텐츠를 생산해야 했기 때문입니다.",
-    impact: {
-      judgmentSpeed: 8,
-      thinkingDepth: 3,
-      executionDensity: 7,
-      collaborationClarity: 4
-    },
+    impact: { judgmentSpeed: 8, thinkingDepth: 3, executionDensity: 7, collaborationClarity: 4 },
     bestCase: "초안 작성 시간을 줄여 사람이 전략적 편집과 메시지 완성도에 집중할 수 있습니다.",
     worstCase: "표준화된 문구가 늘어나 브랜드의 미묘한 톤이 약해질 수 있습니다.",
-    verdictBadges: {
-      timeSaver: true,
-      thinkCarefully: true,
-      lockinRisk: false
-    },
-    alternatives: ["Human editorial sprints", "Grammarly"],
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: false },
+    alternatives: ["Copy.ai", "Writer", "Grammarly"],
+    category: "AI 콘텐츠 마케팅",
+    website: "https://www.jasper.ai",
     createdAt: "2024-02-08T10:00:00Z",
-    updatedAt: "2024-02-08T10:00:00Z"
+    updatedAt: "2026-09-15T00:00:00Z"
   },
   {
     id: "d07d34fb-2cd2-4fcb-95dd-e1fceaa52d27",
     name: "Gong",
-    description: "영업 대화 분석 기반의 수익 인텔리전스 플랫폼입니다.",
-    problemContexts: [
-      "영업 통화가 블랙박스처럼 관리된다",
-      "코칭이 경험담 중심으로 이루어진다",
-      "딜 가시성을 더 높여야 한다"
-    ],
+    description: "영업 통화와 고객 대화를 분석해 수익 인텔리전스를 제공하는 AI 플랫폼입니다.",
+    problemContexts: ["영업 통화가 블랙박스처럼 관리된다", "코칭이 경험담 중심으로 이루어진다", "딜 가시성을 더 높여야 한다"],
     whyExist: "CRM 메모만으로는 한계가 있어, 데이터 기반 코칭과 영업 대화 가시성이 필요했기 때문입니다.",
-    impact: {
-      judgmentSpeed: 6,
-      thinkingDepth: 6,
-      executionDensity: 6,
-      collaborationClarity: 7
-    },
+    impact: { judgmentSpeed: 7, thinkingDepth: 6, executionDensity: 6, collaborationClarity: 7 },
     bestCase: "정성적 대화를 코칭 신호로 전환해 딜 성과 개선에 직접 기여할 수 있습니다.",
     worstCase: "감시받는 느낌이 강해지면 팀 신뢰와 진정성이 훼손될 수 있습니다.",
-    verdictBadges: {
-      timeSaver: false,
-      thinkCarefully: true,
-      lockinRisk: true
-    },
-    alternatives: ["Manual call reviews", "Chorus"],
+    verdictBadges: { timeSaver: false, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["Chorus", "Clari", "Salesloft"],
+    category: "세일즈 인텔리전스",
+    website: "https://www.gong.io",
     createdAt: "2024-02-09T10:00:00Z",
-    updatedAt: "2024-02-09T10:00:00Z"
+    updatedAt: "2026-09-15T00:00:00Z"
   },
   {
     id: "e357c35d-bfd4-4c14-aad0-9910de98837f",
     name: "Replit",
-    description: "AI 코파일럿을 포함한 브라우저 기반 개발 환경입니다.",
-    problemContexts: [
-      "빠른 프로토타이핑이 필요하다",
-      "엔지니어 온보딩이 오래 걸린다",
-      "코딩 입문 장벽이 높다"
-    ],
+    description: "AI 에이전트가 코드를 작성·배포하는 브라우저 기반 클라우드 개발 환경입니다.",
+    problemContexts: ["빠른 프로토타이핑이 필요하다", "엔지니어 온보딩이 오래 걸린다", "코딩 입문 장벽이 높다"],
     whyExist: "환경 설정 부담 없이 즉시 개발을 시작하고, AI 보조를 함께 활용하려는 요구가 커졌기 때문입니다.",
-    impact: {
-      judgmentSpeed: 7,
-      thinkingDepth: 5,
-      executionDensity: 8,
-      collaborationClarity: 6
-    },
+    impact: { judgmentSpeed: 7, thinkingDepth: 5, executionDensity: 8, collaborationClarity: 6 },
     bestCase: "개발 환경 준비 시간을 줄여 아이디어를 수분 내 검증할 수 있습니다.",
-    worstCase: "기반 아키텍처 이해 없이 데모 중심 개발로 흐를 위험이 있습니다.",
-    verdictBadges: {
-      timeSaver: true,
-      thinkCarefully: true,
-      lockinRisk: false
-    },
-    alternatives: ["Local dev environments", "GitHub Codespaces"],
+    worstCase: "기반 아키텍처 이해 없이 데모 중심 개발로 흐를 위험이 있으며, 실제로 에이전트가 프로덕션 데이터베이스를 삭제한 사례도 있었습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: false },
+    alternatives: ["GitHub Codespaces", "Cursor", "Lovable"],
+    category: "AI 코딩 / 개발 환경",
+    website: "https://replit.com",
     createdAt: "2024-02-10T10:00:00Z",
-    updatedAt: "2024-02-10T10:00:00Z"
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "8f41f852-bc1c-4116-a5b2-74c8d518cf45",
+    name: "ChatGPT",
+    description: "대화·코딩·에이전트 작업까지 처리하는 OpenAI의 범용 AI 챗봇으로, 개인과 기업 모두가 사용합니다.",
+    problemContexts: ["보고서 초안을 빨리 써야 한다", "반복 웹 업무 자동화가 필요하다", "코드 작성·리뷰 속도가 부족하다"],
+    whyExist: "대화, 문서 작성, 코딩, 웹 작업을 하나의 서비스로 통합해야 한다는 시장 수요에서 출발했으며, 흩어져 있던 검색·오피스 도구를 하나의 대화창으로 모으려는 시도입니다.",
+    impact: { judgmentSpeed: 8, thinkingDepth: 5, executionDensity: 8, collaborationClarity: 5 },
+    bestCase: "빠른 초안 작성과 반복 업무 자동화로 개인 생산성이 크게 오르고, Codex 연동으로 개발 속도도 눈에 띄게 빨라집니다.",
+    worstCase: "모델 이름과 에이전트 기능이 예고 없이 자주 바뀌어, 검증 없이 결과를 그대로 신뢰하면 잘못된 인용과 정보가 업무에 그대로 반영됩니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: false },
+    alternatives: ["Claude", "Gemini", "Perplexity"],
+    category: "AI 어시스턴트",
+    website: "https://chatgpt.com",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "ba9bbb76-1e59-49e3-a90a-6e53dedf0617",
+    name: "Claude",
+    description: "코딩·에이전트 작업에 강한 Anthropic의 AI로, 개발자와 신뢰성을 중시하는 기업이 주로 씁니다.",
+    problemContexts: ["코드 리뷰 인력이 부족하다", "장문 문서를 정확히 요약해야 한다", "반복 운영 업무를 위임하고 싶다"],
+    whyExist: "속도보다 안전성과 정확한 지시 이행을 우선하는 AI를 원하는 개발자·기업 수요에서 출발했으며, 대규모 코드베이스와 장문 문서를 다루는 실무형 에이전트 시장의 공백을 채우기 위해 만들어졌습니다.",
+    impact: { judgmentSpeed: 7, thinkingDepth: 7, executionDensity: 8, collaborationClarity: 5 },
+    bestCase: "Claude Code와 Cowork로 반복적인 개발·운영 업무를 위임해 팀의 실행 속도가 크게 빨라지고, 장문 자료를 맥락 손실 없이 처리할 수 있습니다.",
+    worstCase: "잦은 서비스 장애와 주간 사용량 한도 소진 시 업무가 중단될 수 있고, 에이전트에 과도한 권한을 위임하면 검증 없이 실행된 작업이 되돌리기 어려운 결과를 남길 수 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: false },
+    alternatives: ["ChatGPT", "Gemini", "GitHub Copilot"],
+    category: "AI 어시스턴트",
+    website: "https://claude.ai",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "63fad570-bd07-4e58-a665-2519b140cfaa",
+    name: "Gemini",
+    description: "구글 생태계 전반에 통합된 멀티모달 AI로, Workspace·안드로이드 사용자에게 특히 유용합니다.",
+    problemContexts: ["여러 구글 앱을 오가며 일하기 번거롭다", "회의록·이메일 정리가 오래 걸린다", "리서치 결과를 빠르게 취합해야 한다"],
+    whyExist: "검색·오피스·모바일 OS를 모두 보유한 구글이 이 자산들을 하나의 AI로 묶어 경쟁사 대비 통합된 생산성 경험을 제공하기 위해 만들었습니다.",
+    impact: { judgmentSpeed: 7, thinkingDepth: 6, executionDensity: 7, collaborationClarity: 6 },
+    bestCase: "Gmail·Docs·Sheets 안에서 바로 작동해 도구를 오가는 시간을 줄이고, Deep Research로 팀 전체가 같은 근거 자료를 빠르게 공유할 수 있습니다.",
+    worstCase: "복잡한 지시나 장문 작업에서 여전히 환각과 맥락 소실이 발생할 수 있어, 결과를 그대로 이메일·보고서에 붙여 넣으면 사실 오류가 조직 밖으로 퍼질 위험이 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["ChatGPT", "Claude", "Microsoft 365 Copilot"],
+    category: "AI 어시스턴트",
+    website: "https://gemini.google.com",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "11e54045-17fb-4f70-a7cb-d49f3abc4e2f",
+    name: "Perplexity",
+    description: "출처를 함께 제시하는 AI 검색 엔진으로, 빠른 리서치와 팩트체크가 필요한 사용자에게 적합합니다.",
+    problemContexts: ["검색 결과 출처 확인이 번거롭다", "리서치 보고서 초안이 급하다", "여러 탭을 오가며 조사하기 번거롭다"],
+    whyExist: "전통 검색엔진의 링크 목록과 챗봇의 근거 없는 답변 사이의 공백을 메우기 위해, 답변마다 출처를 함께 제시하는 대화형 검색 경험에 대한 수요에서 출발했습니다.",
+    impact: { judgmentSpeed: 8, thinkingDepth: 5, executionDensity: 6, collaborationClarity: 4 },
+    bestCase: "인용 출처를 바로 확인할 수 있어 리서치·팩트체크 시간이 크게 줄고, Comet 브라우저로 탭을 오가는 반복 작업까지 자동화할 수 있습니다.",
+    worstCase: "출처 표기에도 불구하고 저품질 소스를 인용하거나 원문을 과도하게 재가공하는 사례가 보고돼, 인용을 검증 없이 그대로 신뢰하면 왜곡된 정보가 퍼질 수 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: false },
+    alternatives: ["ChatGPT", "Gemini", "You.com"],
+    category: "AI 어시스턴트",
+    website: "https://www.perplexity.ai",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "ce871c13-337d-46b8-aa58-e2b26e761c05",
+    name: "Microsoft 365 Copilot",
+    description: "Word·Excel·Teams에 내장된 업무용 AI로, 오피스 이용 기업에 최적화되어 있습니다.",
+    problemContexts: ["엑셀·문서 작업에 시간이 오래 걸린다", "회의 후속 정리가 누락되기 쉽다", "부서별 AI 도구 통제가 어렵다"],
+    whyExist: "이미 전 세계 기업이 쓰고 있는 Word·Excel·Outlook·Teams에 AI를 직접 심어, 별도 도구로 갈아타지 않고도 업무 생산성을 높이려는 기업 수요에서 만들어졌습니다.",
+    impact: { judgmentSpeed: 6, thinkingDepth: 5, executionDensity: 7, collaborationClarity: 8 },
+    bestCase: "이미 쓰던 오피스 문서 안에서 바로 초안 작성·데이터 분석이 이뤄져 도구 전환 비용 없이 팀 전체 생산성이 올라갑니다.",
+    worstCase: "라이선스 비용 부담과 반복된 보안 취약점 노출로, 충분한 권한 검토 없이 도입하면 민감한 사내 문서가 프롬프트 인젝션 공격에 노출될 수 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["Gemini", "ChatGPT", "Claude"],
+    category: "AI 어시스턴트",
+    website: "https://www.microsoft.com/microsoft-365/copilot",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "8a87812c-92f5-48e8-a0e2-ce2a2fb10c8b",
+    name: "GitHub Copilot",
+    description: "코드 자동완성부터 자율 코딩 에이전트까지 지원하는 GitHub 통합 AI 개발 도구입니다.",
+    problemContexts: ["반복 코드 작성이 느리다", "PR 리뷰 인력이 부족하다", "레거시 코드 파악이 어렵다"],
+    whyExist: "IDE 안에서 바로 쓸 수 있는 코드 제안 도구가 없어 개발자들이 매번 문서와 예제를 검색해야 했고, GitHub는 이 반복 작업을 자동화하기 위해 Copilot을 출시했습니다.",
+    impact: { judgmentSpeed: 8, thinkingDepth: 4, executionDensity: 8, collaborationClarity: 6 },
+    bestCase: "숙련된 개발자가 반복적인 보일러플레이트와 PR 리뷰 1차 점검을 Copilot에 맡기고, 남는 시간을 아키텍처 설계와 어려운 버그 해결에 씁니다.",
+    worstCase: "주니어 개발자가 제안 코드를 이해 없이 그대로 받아들이면 보안 취약점이나 라이선스 문제가 코드베이스에 누적되고, 리뷰 부담이 오히려 시니어에게 전가됩니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: false },
+    alternatives: ["Cursor", "Amazon Q Developer", "Tabnine"],
+    category: "AI 코딩 어시스턴트",
+    website: "https://github.com/features/copilot",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "762a6a6b-23e6-4804-a095-3c538b953211",
+    name: "Cursor",
+    description: "AI 에이전트가 코드를 직접 작성·실행하는 VS Code 기반 AI 네이티브 코드 에디터입니다.",
+    problemContexts: ["멀티파일 수정이 번거롭다", "에이전트 병렬 작업이 필요하다", "모델 선택권이 제한적이다"],
+    whyExist: "기존 IDE에 AI를 부가 기능으로 얹는 방식으로는 에이전트가 코드베이스 전체를 탐색·수정하는 워크플로를 감당할 수 없었고, Cursor는 VS Code를 포크해 에이전트 중심으로 에디터 자체를 다시 설계했습니다.",
+    impact: { judgmentSpeed: 9, thinkingDepth: 5, executionDensity: 9, collaborationClarity: 5 },
+    bestCase: "숙련된 개발자가 여러 Agent를 git worktree 단위로 병렬 실행해 리팩터링·테스트·문서화를 동시에 처리하고, 리뷰만 사람이 맡아 처리 속도를 크게 높입니다.",
+    worstCase: "가격 정책이 반복적으로 바뀌면서 팀 예산이 예측 불가능해지고, 패치 전 프롬프트 인젝션 취약점을 악용당하면 로컬 파일이나 git hook이 조작될 위험이 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["GitHub Copilot", "Windsurf", "Claude Code"],
+    category: "AI 코딩 / IDE",
+    website: "https://cursor.com",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "3550a6c2-e93f-4c0f-aeea-2794107c1e02",
+    name: "Lovable",
+    description: "프롬프트만으로 풀스택 웹앱을 만들어주는 AI 에이전트 기반 노코드형 앱 빌더입니다.",
+    problemContexts: ["MVP 제작 인력이 부족하다", "디자이너가 직접 개발하기 어렵다", "아이디어 검증 속도가 느리다"],
+    whyExist: "비개발자나 소규모 팀이 아이디어를 빠르게 실제 동작하는 제품으로 검증할 방법이 부족했고, Lovable은 대화형 프롬프트만으로 프런트엔드부터 Supabase 연동 백엔드까지 자동 생성하는 '바이브 코딩' 영역을 개척했습니다.",
+    impact: { judgmentSpeed: 9, thinkingDepth: 3, executionDensity: 9, collaborationClarity: 4 },
+    bestCase: "비개발자 창업자가 며칠 만에 실제 작동하는 프로토타입을 만들어 투자자나 고객에게 검증받고, 개발 리소스 없이도 초기 아이디어 검증 주기를 단축합니다.",
+    worstCase: "보안 지식이 없는 팀이 기본 Row Level Security 설정을 검토하지 않고 배포하면, 실제 사용자 개인정보나 API 키가 외부에 그대로 노출될 수 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["Bolt.new", "v0", "Replit"],
+    category: "AI 앱 빌더 (바이브 코딩)",
+    website: "https://lovable.dev",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "2bcd0979-16f3-4a47-aa48-2eff55c47a1d",
+    name: "Midjourney",
+    description: "텍스트 프롬프트로 고품질 이미지와 짧은 영상을 만드는 생성형 AI 툴로, 크리에이티브·마케팅 팀이 씁니다.",
+    problemContexts: ["고퀄리티 시안 제작이 느리다", "스톡 이미지 비용이 부담된다", "레퍼런스 스타일 재현이 어렵다"],
+    whyExist: "일러스트레이터나 사진 없이도 컨셉 아트 수준의 이미지를 빠르게 얻고 싶다는 수요에서 출발했고, Discord 커뮤니티 기반의 독자적 프롬프트 문화와 예술적 화풍으로 다른 이미지 생성 모델과 차별화했습니다.",
+    impact: { judgmentSpeed: 8, thinkingDepth: 4, executionDensity: 8, collaborationClarity: 4 },
+    bestCase: "디자이너가 초기 무드보드와 컨셉 시안을 몇 시간 만에 수십 개 만들어 클라이언트 설득 시간을 단축하고, 최종 작업은 사람이 다듬습니다.",
+    worstCase: "저작권 확인 없이 생성 이미지를 상업적으로 그대로 사용하면 실존 캐릭터나 작가 화풍 침해 분쟁에 휘말릴 수 있고, 소송 결과에 따라 사용 중이던 이미지 자산을 전면 교체해야 할 수 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["DALL-E 3", "Stable Diffusion", "Adobe Firefly"],
+    category: "AI 이미지·영상 생성",
+    website: "https://www.midjourney.com",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "c2837b2c-df6d-45ab-ae15-76679668603d",
+    name: "Canva",
+    description: "Magic Studio AI로 누구나 쉽게 만드는 올인원 비주얼 콘텐츠 제작 플랫폼입니다.",
+    problemContexts: ["전문 디자이너 리소스가 부족하다", "카드뉴스·SNS 제작이 반복적이다", "브랜드 톤 통일이 어렵다"],
+    whyExist: "포토샵 같은 전문 툴은 배우기 어렵고 비쌌기 때문에 비전문가도 드래그 앤 드롭과 템플릿만으로 결과물을 만들 수 있는 웹 기반 도구 수요가 컸고, Canva는 여기에 생성형 AI(Magic Studio)를 결합해 제작 과정 전체를 단축했습니다.",
+    impact: { judgmentSpeed: 8, thinkingDepth: 4, executionDensity: 8, collaborationClarity: 7 },
+    bestCase: "마케팅팀이 브랜드 키트로 톤을 통일한 템플릿을 전 직원에게 배포해, 비전문가도 일관된 톤의 SNS 콘텐츠를 빠르게 생산합니다.",
+    worstCase: "저작권 확인 없이 Magic Media 생성 이미지를 상업적으로 대량 배포하면 초상권·상표권 분쟁 소지가 생기고, 브랜드 가이드 없이 각 팀이 AI로 제각각 디자인을 찍어내면 브랜드 정체성이 흐트러질 수 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["Adobe Express", "Figma", "Microsoft Designer"],
+    category: "AI 디자인 / 비주얼 콘텐츠 제작",
+    website: "https://www.canva.com",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "6b09c6d8-ef44-4dda-a96c-6ff2c035a497",
+    name: "NotebookLM",
+    description: "구글이 만든 출처 기반 AI 리서치 도구로, 업로드 자료만 근거로 요약·팟캐스트·영상을 생성합니다.",
+    problemContexts: ["긴 자료를 빨리 소화해야 한다", "여러 문서·영상 출처를 한번에 정리해야 한다", "이동 중에도 리서치 내용을 듣고 싶다"],
+    whyExist: "일반 챗봇은 출처가 불분명한 환각 답변을 내놓기 쉬운데, NotebookLM은 사용자가 업로드한 소스에만 근거해 답하고 인용을 표시하는 '출처 기반 AI'에 대한 수요를 겨냥해 만들어졌습니다.",
+    impact: { judgmentSpeed: 7, thinkingDepth: 6, executionDensity: 6, collaborationClarity: 6 },
+    bestCase: "긴 보고서나 논문 더미를 출처 인용과 함께 요약해 리서치 검토 시간을 크게 단축시켜 줍니다.",
+    worstCase: "오디오·영상 개요를 원문 확인 없이 그대로 신뢰해 의사결정에 쓰면, 소스 해석 오류나 미묘한 맥락 누락이 걸러지지 않은 채 퍼질 수 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: false },
+    alternatives: ["ChatGPT (Deep Research)", "Perplexity", "Notion AI"],
+    category: "AI 리서치 노트",
+    website: "https://notebooklm.google.com",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "513f021e-8678-4fe7-a49a-64248d12091a",
+    name: "Perplexity Comet",
+    description: "Perplexity가 만든 에이전트형 AI 브라우저로, 탭 정리부터 쇼핑 자동화까지 대신 수행합니다.",
+    problemContexts: ["여러 탭을 오가며 비교하기 번거롭다", "반복적인 폼 입력과 쇼핑이 귀찮다", "리서치 결과를 빠르게 요약해야 한다"],
+    whyExist: "기존 브라우저는 검색과 실행이 분리돼 사용자가 직접 찾고 클릭해야 했는데, Perplexity는 검색엔진 기능을 브라우저 자체에 결합해 에이전트가 대신 탐색·실행하는 시장 공백을 노리고 Comet을 출시했습니다.",
+    impact: { judgmentSpeed: 8, thinkingDepth: 5, executionDensity: 7, collaborationClarity: 3 },
+    bestCase: "업무 리서치와 반복적인 웹 작업을 자동화해 정보 탐색과 실행 시간을 크게 줄여줍니다.",
+    worstCase: "악성 웹페이지나 이미지에 숨겨진 프롬프트 인젝션에 속아 이메일·캘린더 등 연동된 개인정보가 공격자에게 유출될 수 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: false },
+    alternatives: ["ChatGPT Atlas", "Dia", "Chrome + Gemini"],
+    category: "AI 브라우저",
+    website: "https://www.perplexity.ai/comet",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "8d3b73da-f084-4fb5-ab89-f3e16d983845",
+    name: "ChatGPT Atlas",
+    description: "OpenAI의 ChatGPT 내장 브라우저로, 2026년 8월 종료 후 ChatGPT 앱에 흡수됐습니다.",
+    problemContexts: ["탭 전환 없이 바로 질문하고 싶다", "장보기·예약 등 반복 작업이 귀찮다", "ChatGPT 대화 맥락을 웹까지 잇고 싶다"],
+    whyExist: "검색과 챗봇이 분리된 기존 방식 대신 ChatGPT를 브라우저 자체에 결합해 웹 탐색과 대화형 작업을 하나로 묶으려는 시도로 출시됐지만, 결국 독립 브라우저보다 ChatGPT 앱에 브라우징을 통합하는 편이 낫다는 판단으로 방향을 틀었습니다.",
+    impact: { judgmentSpeed: 7, thinkingDepth: 4, executionDensity: 6, collaborationClarity: 2 },
+    bestCase: "Plus/Pro 사용자는 에이전트 모드로 장보기 등 반복 웹 작업을 위임해 시간을 절약할 수 있었습니다.",
+    worstCase: "사이트에 숨겨진 프롬프트 인젝션에 에이전트가 속아 이메일 전송이나 클립보드 조작 등 의도치 않은 행동을 할 위험이 보고됐고, 제품 자체가 9개월 만에 종료되며 기업들이 워크플로를 다시 옮겨야 했습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["Perplexity Comet", "Dia", "Chrome + Gemini"],
+    category: "AI 브라우저",
+    website: "https://help.openai.com/en/articles/20001371-evolving-atlas-into-chatgpt-for-browser-based-agentic-work",
+    discontinued: true,
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "3ec8d099-6dc4-49c8-ae5e-341a67c6af78",
+    name: "Dia",
+    description: "탭 맥락을 기억하는 AI 사이드바가 특징인 macOS 전용 브라우저입니다.",
+    problemContexts: ["여러 탭 내용을 한번에 종합하기 어렵다", "회의 관련 탭이 흩어져 관리가 안 된다", "내 말투로 빠르게 답장을 쓰고 싶다"],
+    whyExist: "Arc 브라우저를 만들던 The Browser Company가 복잡한 커스터마이징 대신 채팅형 AI를 브라우저 중심에 둔 더 단순한 대안을 원하는 사용자층을 겨냥해 Dia를 새로 선보였습니다.",
+    impact: { judgmentSpeed: 7, thinkingDepth: 5, executionDensity: 6, collaborationClarity: 3 },
+    bestCase: "탭 전체 맥락을 이해하는 AI 사이드바 덕분에 리서치·요약·초안 작성 시간을 크게 줄일 수 있습니다.",
+    worstCase: "브라우징 이력과 탭 내용을 AI가 지속적으로 학습·기억한다는 점에서 민감한 업무 정보가 프로필에 축적되는 데 거부감을 느낄 수 있고, 프롬프트 인젝션 방어도 완전하지는 않습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: true },
+    alternatives: ["Perplexity Comet", "Arc", "Chrome + Gemini"],
+    category: "AI 브라우저",
+    website: "https://www.diabrowser.com",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
+  },
+  {
+    id: "f4a02aa5-aa2d-4d4d-aa10-f654b22593d9",
+    name: "Manus",
+    description: "웹 리서치·코딩·문서 작업을 클라우드 가상머신에서 자율 수행하는 범용 AI 에이전트입니다.",
+    problemContexts: ["반복적인 리서치·문서 작업이 오래 걸린다", "코딩부터 배포까지 한번에 맡기고 싶다", "PC를 꺼도 작업이 계속됐으면 한다"],
+    whyExist: "단일 대화형 챗봇을 넘어, 목표만 던지면 계획 수립부터 브라우징·코딩·배포까지 백그라운드에서 스스로 끝내는 범용 자율 에이전트에 대한 수요가 커지며 등장했습니다.",
+    impact: { judgmentSpeed: 6, thinkingDepth: 4, executionDensity: 8, collaborationClarity: 4 },
+    bestCase: "리서치·코딩·문서 작성 같은 다단계 작업을 사람이 지켜보지 않아도 백그라운드에서 끝내 업무 착수 시간을 크게 줄여줍니다.",
+    worstCase: "5단계 이상 이어지는 작업일수록 성공률이 급격히 떨어지고 크레딧이 예고 없이 빠르게 소진돼, 결과를 충분히 검증하지 않고 그대로 활용하면 오류가 누적되거나 예상 밖의 비용이 발생할 수 있습니다.",
+    verdictBadges: { timeSaver: true, thinkCarefully: true, lockinRisk: false },
+    alternatives: ["Genspark", "ChatGPT Agent", "Devin"],
+    category: "범용 AI 에이전트",
+    website: "https://manus.im",
+    createdAt: "2026-09-15T00:00:00Z",
+    updatedAt: "2026-09-15T00:00:00Z"
   }
 ];
