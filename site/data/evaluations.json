@@ -1,0 +1,3560 @@
+{
+ "notion": {
+  "sourceName": "Notion",
+  "verdict": "모듈형 워크스페이스로 문서·DB·AI 에이전트를 통합하지만, AI 전면 사용은 Business 요금제($20/월)로만 열립니다.",
+  "scores": {
+   "functionality": 90,
+   "uiux": 86,
+   "reliability": 80,
+   "comfort": 71,
+   "pricing": 60
+  },
+  "impact": {
+   "judgmentSpeed": 6,
+   "thinkingDepth": 7,
+   "executionDensity": 6,
+   "collaborationClarity": 5
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": true
+  },
+  "pricingSummary": "Free는 $0, Plus는 $10/월(연간, 월간 $12), Business는 $20/월(연간, 월간 $24)이며 Enterprise는 별도 협의입니다. 2025년 5월부터 별도 AI 애드온이 사라지고 무제한 AI가 Business 이상 전용으로 바뀌며 사실상 가격이 인상됐습니다.",
+  "koreaNote": "한국어 UI와 AI 응답 품질은 안정적인 편이지만, 국내 세금계산서 발행이 기본 지원되지 않아 기업 도입 시 결제 방식을 별도로 확인해야 합니다.",
+  "comparisons": [
+   {
+    "competitor": "Coda",
+    "better": "AI Meeting Notes 자동 전사와 24/7 자율 실행되는 Custom Agents 등 완성도 높은 에이전트 기능을 기본 제공합니다.",
+    "weaker": "Coda는 보는 사람은 무료인 Doc Maker 과금 방식과 표 기반 Packs 자동화로 대규모 내부 툴 구축에서 더 저렴하고 유리합니다."
+   },
+   {
+    "competitor": "Confluence",
+    "better": "블록 에디터 하나로 문서·칸반·데이터베이스를 자유롭게 섞을 수 있어 온보딩과 구조 변경이 훨씬 빠릅니다.",
+    "weaker": "Confluence는 Jira 네이티브 연동과 무제한 버전 기록이 강력하고, Rovo AI는 약 $5.42/유저로 Notion Business($20)보다 AI 도입 비용이 저렴합니다."
+   },
+   {
+    "competitor": "Obsidian",
+    "better": "클라우드 기반 실시간 공동 편집과 Business 플랜의 AI 에이전트가 기본 내장되어 있습니다.",
+    "weaker": "Obsidian은 로컬 마크다운 파일로 저장돼 벤더 락인이 없고 오프라인에서도 완전히 동작하며, 2026년 추가된 Sync 기반 실시간 협업도 구독료 없이 저렴합니다."
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-02-24",
+    "title": "Notion 3.3 - Custom Agents",
+    "change": "트리거·스케줄 기반으로 24/7 자율 실행되는 Custom Agents가 도입되었습니다.",
+    "risk": "크레딧 종량제(1,000크레딧당 $10)라 자동화가 늘수록 비용이 예측보다 커질 수 있습니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2026-01-20",
+    "title": "Notion 3.2 - 모바일 AI·모델 선택",
+    "change": "모바일 백그라운드 회의 전사, People Directory, GPT-5.2·Claude Opus 4.5·Gemini 3 모델 선택 기능이 추가되었습니다.",
+    "risk": "모델별로 응답 품질·속도·크레딧 소모가 달라 팀 표준 모델 가이드가 필요합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2025-09-18",
+    "title": "Notion 3.0 - Agents 출시",
+    "change": "20분 이상 이어지는 멀티스텝 작업을 자율 수행하는 개인 Notion Agent가 출시되었습니다.",
+    "risk": "에이전트가 잘못된 페이지를 수정·삭제할 수 있어 중요 문서는 권한 분리가 필요합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-05",
+    "title": "AI 요금 체계 개편",
+    "change": "별도 AI 애드온($8/월)을 없애고 무제한 AI를 Business 플랜 이상에서만 제공하도록 변경했습니다.",
+    "risk": "Plus 플랜에서 AI만 추가하던 팀은 좌석당 비용이 사실상 2배로 뛸 수 있습니다.",
+    "level": "high"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "회의록 자동화",
+    "how": "AI Meeting Notes로 회의를 자동 전사·요약하고, Notion Agent에게 액션 아이템을 담당자별 태스크 DB로 정리하도록 지시합니다.",
+    "tip": "에이전트가 생성한 태스크는 담당자가 24시간 내 직접 확인 후 확정하는 규칙을 두는 것이 좋습니다."
+   },
+   {
+    "title": "지식 베이스 정리",
+    "how": "대시보드 뷰와 People Directory로 팀 현황·KPI를 한 페이지에 모으고, 부서별 위키 페이지를 데이터베이스로 연결합니다.",
+    "tip": "3개월 이상 갱신되지 않은 문서는 보관 처리하는 규칙을 정해 '죽은 위키'를 방지하세요."
+   },
+   {
+    "title": "반복 업무 자동화",
+    "how": "Custom Agents에 트리거·스케줄을 설정해 주간 보고서 초안이나 인박스 정리를 24/7 자동 실행시킵니다.",
+    "tip": "크레딧 과금형이므로 자동화 전 예상 실행 횟수를 계산해 월 크레딧 한도를 초과하지 않도록 관리하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.6/5",
+    "note": "리뷰 11,962건 기준(5점 74%·4점 22%), 지식관리 카테고리 리더 3년 연속, 2026-09 확인",
+    "url": "https://www.g2.com/products/notion/reviews"
+   },
+   {
+    "source": "Capterra",
+    "score": "4.7/5 (확인 필요)",
+    "note": "다수 리뷰 기준 통상 언급되는 평점이나 이번 세션에서 원문 수치를 직접 재확인하지는 못했습니다.",
+    "url": "https://www.capterra.com/p/186596/Notion/reviews/"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "full"
+   },
+   "koreanSupport": {
+    "level": "full"
+   },
+   "aiAssistant": {
+    "level": "full",
+    "note": "Business 플랜 이상 무제한 AI"
+   },
+   "agentAutomation": {
+    "level": "full",
+    "note": "Notion Agent 자동화"
+   },
+   "apiIntegrations": {
+    "level": "full"
+   },
+   "teamAdmin": {
+    "level": "full"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "Markdown/CSV/HTML/PDF"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Business 이상 SAML, Enterprise SCIM"
+   },
+   "mobileApp": {
+    "level": "full"
+   },
+   "offlineLocal": {
+    "level": "partial",
+    "note": "다운로드한 페이지만 오프라인"
+   }
+  },
+  "roles": [
+   "pm",
+   "ops",
+   "marketing"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Notion 공식 릴리스 노트",
+    "url": "https://www.notion.com/releases"
+   },
+   {
+    "label": "Notion 3.2 릴리스 노트 (2026-01-20)",
+    "url": "https://www.notion.com/releases/2026-01-20"
+   },
+   {
+    "label": "TechCrunch - Notion AI 에이전트 허브 전환 보도",
+    "url": "https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents/"
+   },
+   {
+    "label": "G2 - Notion 리뷰",
+    "url": "https://www.g2.com/products/notion/reviews"
+   },
+   {
+    "label": "Notion 요금제 변화 분석 (UserJot)",
+    "url": "https://userjot.com/blog/notion-pricing-2025-plans-ai-costs-explained"
+   },
+   {
+    "label": "Notion vs Confluence 가격 비교 (Docsie)",
+    "url": "https://www.docsie.io/blog/articles/confluence-vs-notion-pricing-comparison-2026/"
+   },
+   {
+    "label": "Notion vs Coda 비교 (Slite)",
+    "url": "https://slite.com/learn/notion-vs-coda"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "figma": {
+  "sourceName": "Figma",
+  "verdict": "디자인 협업의 사실상 표준이지만, Figma Make 등 생성 결과는 프로덕션 시스템에 그대로 쓰기 전 정리 작업이 필요합니다.",
+  "scores": {
+   "functionality": 92,
+   "uiux": 90,
+   "reliability": 74,
+   "comfort": 78,
+   "pricing": 64
+  },
+  "impact": {
+   "judgmentSpeed": 7,
+   "thinkingDepth": 6,
+   "executionDensity": 8,
+   "collaborationClarity": 9
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": true
+  },
+  "pricingSummary": "Starter는 무료(파일 3개 제한), Professional Full seat은 $16/월(연간, 월간 $20), Organization $55/월, Enterprise $90/월이며, 2025년 3월부터 Full/Dev/Collab 시트 유형별 과금 구조로 전면 개편되었습니다.",
+  "koreaNote": "Figma는 한국어 인터페이스 지원이 제한적인 것으로 알려져 있어(확인 필요) 국내 디자인팀 상당수가 영어 UI로 사용하며, 2026년 일본 리전 데이터 레지던시가 추가된 것과 달리 한국 리전은 아직 제공되지 않습니다.",
+  "comparisons": [
+   {
+    "competitor": "Adobe XD",
+    "better": "Figma Make·Motion 등 AI 기능이 계속 출시되는 반면 Adobe는 2023년 말 XD 개발을 중단하고 신규 라이선스 판매도 멈췄습니다.",
+    "weaker": "Adobe Creative Cloud를 이미 구독 중인 팀에게는 Photoshop·Illustrator와의 자산 핸드오프가 추가 비용 없이 더 매끄러웠습니다."
+   },
+   {
+    "competitor": "Sketch",
+    "better": "브라우저 기반 실시간 멀티플레이어 협업이 기본 제공되어 운영체제에 관계없이 동시 편집이 가능합니다.",
+    "weaker": "Sketch는 macOS 네이티브 앱으로 대형 파일 처리 속도·안정성이 강점이고, 일회성 구매 라이선스 옵션도 제공합니다."
+   },
+   {
+    "competitor": "Penpot",
+    "better": "Dev Mode, MCP 서버, Figma Make·Motion 등 AI 통합과 훨씬 방대한 플러그인 생태계를 갖추고 있습니다.",
+    "weaker": "Penpot은 오픈소스로 무료이며 자체 서버에 셀프호스팅할 수 있어 데이터 주권과 시트 비용 부담이 전혀 없습니다."
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-06",
+    "title": "Config 2026 - Motion·생성형 플러그인",
+    "change": "파일 내 프로덕션급 애니메이션 제작 도구 Figma Motion과 프롬프트로 만드는 생성형 플러그인·셰이더가 추가되었습니다.",
+    "risk": "AI 크레딧을 소모하는 신규 기능이라 팀 단위 사용량 모니터링이 필요합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2025-07",
+    "title": "Figma MCP 서버 취약점 (CVE-2025-53967)",
+    "change": "Figma MCP 서버에서 원격 코드 실행이 가능한 커맨드 인젝션 취약점이 발견·보고되었습니다.",
+    "risk": "AI 코딩 에이전트를 MCP로 연결한 조직은 즉시 패치·버전 업데이트가 필요합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-05-07",
+    "title": "Figma Make 공개 (Config 2025)",
+    "change": "텍스트·디자인만으로 작동하는 프로토타입과 코드를 생성하는 Figma Make가 베타로 공개되었습니다.",
+    "risk": "생성 결과가 기존 디자인 시스템 컴포넌트를 따르지 않아 프로덕션 반영 시 정리 작업이 필요합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2025-03",
+    "title": "요금제 전면 개편",
+    "change": "Starter/Professional/Organization/Enterprise 4단계와 Full/Dev/Collab 시트 유형 기반 과금으로 구조가 바뀌었습니다.",
+    "risk": "시트 유형을 잘못 배정하면 필요 이상 비용을 낼 수 있어 관리자의 정기적 시트 재점검이 필요합니다.",
+    "level": "high"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "빠른 프로토타이핑",
+    "how": "Figma Make로 텍스트 설명만으로 초기 프로토타입과 작동하는 데모를 생성해 이해관계자에게 빠르게 공유합니다.",
+    "tip": "Make 결과물은 기존 디자인 시스템 컴포넌트를 따르지 않으므로, 프로덕션 반영 전 디자이너의 정리 작업을 반드시 거치세요."
+   },
+   {
+    "title": "직군 간 정렬",
+    "how": "FigJam으로 기획·디자인·개발이 한 보드에서 요구사항을 정리하고, Dev Mode로 개발자가 직접 스펙(간격, 컬러 변수)을 확인합니다.",
+    "tip": "코멘트가 과도하게 쌓인 프레임은 별도 의사결정 문서로 결론만 요약해 옮기는 규칙을 두세요."
+   },
+   {
+    "title": "디자인 시스템 관리",
+    "how": "Variables로 컬러·투명도를 라이브러리에 연결하고, Nested Folders로 파일이 늘어나도 체계적으로 정리합니다.",
+    "tip": "MCP 서버를 코딩 에이전트에 연결할 때는 CVE-2025-53967 사례를 참고해 항상 최신 버전으로 유지하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.7/5",
+    "note": "리뷰 약 1,550건 기준, 실시간 협업·직관적 UI가 주요 호평 포인트, 2026-09 확인",
+    "url": "https://www.g2.com/products/figma/reviews"
+   },
+   {
+    "source": "UX Tools 설문조사(재인용)",
+    "score": "82.3%",
+    "note": "제품 디자이너가 주력 디자인 툴로 Figma를 꼽은 비율, squareboat 블로그 재인용",
+    "url": "https://www.squareboat.com/blog/figma-vs-adobe-xd-vs-sketch"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "partial",
+    "note": "파일 3개, FigJam 3개로 제한"
+   },
+   "koreanSupport": {
+    "level": "partial",
+    "note": "UI는 한국어, AI 기능은 영어 위주"
+   },
+   "aiAssistant": {
+    "level": "full",
+    "note": "유료 플랜 중심 Figma AI"
+   },
+   "agentAutomation": {
+    "level": "partial",
+    "note": "Figma Make 등 제한적"
+   },
+   "apiIntegrations": {
+    "level": "full"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Organization 이상"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "PNG/SVG/PDF/코드"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Organization 이상 SAML SSO"
+   },
+   "mobileApp": {
+    "level": "partial",
+    "note": "모바일은 열람/코멘트 중심"
+   },
+   "offlineLocal": {
+    "level": "partial",
+    "note": "이미 연 파일만 제한적 오프라인"
+   }
+  },
+  "roles": [
+   "design",
+   "pm",
+   "engineering"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Figma 공식 릴리스 노트",
+    "url": "https://www.figma.com/release-notes/"
+   },
+   {
+    "label": "Figma Config 2026 업데이트 (Help Center)",
+    "url": "https://help.figma.com/hc/en-us/articles/39582753756695-What-s-new-from-Config-2026"
+   },
+   {
+    "label": "The Hacker News - Figma MCP 취약점 보도",
+    "url": "https://thehackernews.com/2025/10/severe-figma-mcp-vulnerability-lets.html"
+   },
+   {
+    "label": "G2 - Figma 리뷰",
+    "url": "https://www.g2.com/products/figma/reviews"
+   },
+   {
+    "label": "Figma 요금제 분석 (Vendr)",
+    "url": "https://www.vendr.com/marketplace/figma"
+   },
+   {
+    "label": "Figma vs Adobe XD·Sketch 비교",
+    "url": "https://www.squareboat.com/blog/figma-vs-adobe-xd-vs-sketch"
+   },
+   {
+    "label": "Figma 주가·실적 정보 (stockanalysis.com)",
+    "url": "https://stockanalysis.com/stocks/fig/"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "slack": {
+  "sourceName": "Slack",
+  "verdict": "실시간 협업 속도는 뛰어나지만, 2025~2026년 반복된 대규모 장애와 가격 인상이 신뢰도를 흔들고 있습니다.",
+  "scores": {
+   "functionality": 87,
+   "uiux": 82,
+   "reliability": 60,
+   "comfort": 64,
+   "pricing": 58
+  },
+  "impact": {
+   "judgmentSpeed": 8,
+   "thinkingDepth": 4,
+   "executionDensity": 7,
+   "collaborationClarity": 6
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": true
+  },
+  "pricingSummary": "Free는 $0, Pro는 $7.25/월(연간, 월간 $8.75), Business+는 $15/월(연간, 월간 $18)이며 Enterprise+는 별도 협의입니다. 2025년 6월 Salesforce가 AI 애드온을 없애고 Business+ 요금을 약 20% 인상하며 AI를 기본 포함시켰습니다.",
+  "koreaNote": "한국어 인터페이스는 지원하지만 국내 세금계산서 발행이 되지 않아, 많은 한국 기업이 카카오워크·잔디 같은 국산 메신저를 병행 사용합니다.",
+  "comparisons": [
+   {
+    "competitor": "Microsoft Teams",
+    "better": "Asana·Jira·Google Drive 등으로 이어지는 가장 넓은 서드파티 통합 생태계와 더 가벼운 채팅 전용 UX를 제공합니다.",
+    "weaker": "Teams는 Microsoft 365 라이선스에 무료로 포함되고 월간 활성 사용자 수가 Slack보다 훨씬 많아(3억6천만 대 7,900만) Office·SharePoint 연동이 훨씬 깊습니다."
+   },
+   {
+    "competitor": "Discord",
+    "better": "SSO, 컴플라이언스·eDiscovery, Salesforce Agentforce 연동 등 엔터프라이즈 관리 기능을 갖추고 있습니다.",
+    "weaker": "Discord는 무료로 메시지 기록 제한이 없고 상시 음성 채널이 강력한 반면, Slack Free 플랜은 90일 히스토리 제한이 있습니다."
+   },
+   {
+    "competitor": "Twist",
+    "better": "허들(음성·영상), 방대한 통합, 엔터프라이즈 키 관리 등 Twist에 없는 기능을 다수 제공합니다.",
+    "weaker": "Twist는 실시간 타이핑 표시나 '온라인' 상태 없이 설계돼 항상 켜져 있어야 한다는 압박과 알림 과부하를 구조적으로 줄여줍니다."
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-01-13",
+    "title": "Slackbot의 AI 에이전트화",
+    "change": "Slackbot이 메시지 발송·채널 생성·워크플로 설정까지 지시만으로 수행하는 AI 에이전트로 전환되었습니다.",
+    "risk": "에이전트가 사람 대신 채널을 만들거나 메시지를 보낼 수 있어 권한 범위 설정이 중요해졌습니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2025-11-10",
+    "title": "글로벌 장애 발생",
+    "change": "다수 이용자가 메시지 송수신 불가를 겪은 대규모 장애로 Downdetector에 신고가 급증했습니다.",
+    "risk": "장애 발생 시 대체 커뮤니케이션 경로(이메일·전화)를 사전에 준비해야 합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-06",
+    "title": "가격·패키징 개편 (Salesforce)",
+    "change": "별도 AI 애드온을 없애고 Business+ 요금을 약 20% 인상($15/월)하며 AI 기능을 기본 포함시켰습니다.",
+    "risk": "SSO가 Business+에 사실상 종속되며 예상보다 큰 비용 인상을 겪는 팀이 많습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-02-26",
+    "title": "대규모 장애 (약 10시간)",
+    "change": "데이터베이스 샤드 장애로 API가 붕괴되며 약 10시간 동안 서비스 장애가 발생했습니다.",
+    "risk": "메시지 발송·채널 로딩이 장시간 불가능했던 만큼, 크리티컬 공지는 단일 채널에 의존하면 위험합니다.",
+    "level": "high"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "정보 과부하 방지",
+    "how": "채널·스레드 요약과 일일 리캡 AI 기능을 활용해 긴 대화를 따라잡고, 알림은 중요 채널만 켜두도록 설정합니다.",
+    "tip": "휴가 복귀자나 신규 입사자는 요약 기능부터 켜서 스크롤 압박을 줄이는 것을 권장합니다."
+   },
+   {
+    "title": "고객 대응 자동화",
+    "how": "Slackbot Skills와 Agent Kit로 CS·세일즈 채널에 반복 문의 응답 에이전트를 만들어 배치합니다.",
+    "tip": "Agentforce 등 CRM 연동 에이전트는 기본값으로 채널에 자동 노출되므로, 팀이 원치 않으면 관리자 설정에서 명시적으로 꺼두세요."
+   },
+   {
+    "title": "장애 대비 커뮤니케이션",
+    "how": "핵심 공지·의사결정은 Slack 대신 문서 도구에도 반드시 백업하고, Workflow Builder로 상태 업데이트 경로를 이중화합니다.",
+    "tip": "2025~2026년 대형 장애 이력을 감안해 결제·배포 같은 크리티컬 알림은 Slack 단일 경로에 의존하지 마세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.5/5",
+    "note": "2026-08 기준 리뷰 다수, 자동화·통합 기능에 대한 긍정 평가",
+    "url": "https://www.g2.com/products/slack/reviews"
+   },
+   {
+    "source": "Capterra",
+    "score": "4.7/5 (확인 필요)",
+    "note": "다수 리뷰 기준 통상 언급되는 평점이나 이번 세션에서 원문 수치를 직접 재확인하지는 못했습니다.",
+    "url": "https://www.capterra.com/p/135003/Slack/reviews/"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "partial",
+    "note": "메시지 기록 90일, 연동 10개 제한"
+   },
+   "koreanSupport": {
+    "level": "full"
+   },
+   "aiAssistant": {
+    "level": "full",
+    "note": "Business+ 이상 Slack AI"
+   },
+   "agentAutomation": {
+    "level": "partial",
+    "note": "Workflow Builder 규칙 기반"
+   },
+   "apiIntegrations": {
+    "level": "full"
+   },
+   "teamAdmin": {
+    "level": "full"
+   },
+   "dataExport": {
+    "level": "partial",
+    "note": "Business+ 이상 전체 내보내기"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Business+ 이상 SAML SSO"
+   },
+   "mobileApp": {
+    "level": "full"
+   },
+   "offlineLocal": {
+    "level": "none"
+   }
+  },
+  "roles": [
+   "pm",
+   "ops",
+   "sales"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Slack 개발자 체인지로그 (2026년 4~6월)",
+    "url": "https://slack.dev/slack-developer-changelog-recap-april-june-2026/"
+   },
+   {
+    "label": "Slack 공식 - 2025년 6월 가격 개편 공지",
+    "url": "https://slack.com/blog/news/june-2025-pricing-and-packaging-announcement"
+   },
+   {
+    "label": "TechCrunch - Slackbot AI 에이전트 전환 보도",
+    "url": "https://techcrunch.com/2026/01/13/slackbot-is-an-ai-agent-now"
+   },
+   {
+    "label": "G2 - Slack 리뷰",
+    "url": "https://www.g2.com/products/slack/reviews"
+   },
+   {
+    "label": "Slack 2025-05 장애 포스트모템 (ilert)",
+    "url": "https://www.ilert.com/postmortems/slack-outage-may-2025"
+   },
+   {
+    "label": "Slack 2025-11 장애 보도 (techi.com)",
+    "url": "https://www.techi.com/slack-outage-disrupts-workplace-communication/"
+   },
+   {
+    "label": "Slack 요금 인상·SSO 논란 분석 (getpricepulse)",
+    "url": "https://www.getpricepulse.com/blog/why-slack-changed-pricing-after-salesforce-acquisition.html"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "linear": {
+  "sourceName": "Linear",
+  "verdict": "속도와 UX는 업계 최고 수준이지만, 비개발 조직이 쓰기엔 지나치게 개발자 중심적인 구조입니다.",
+  "scores": {
+   "functionality": 82,
+   "uiux": 93,
+   "reliability": 85,
+   "comfort": 89,
+   "pricing": 79
+  },
+  "impact": {
+   "judgmentSpeed": 7,
+   "thinkingDepth": 5,
+   "executionDensity": 8,
+   "collaborationClarity": 7
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": false
+  },
+  "pricingSummary": "Free는 무료(이슈 250개·2팀 제한), Basic $10/월, Business $16/월(연간 결제 기준)이며 Enterprise는 별도 협의입니다. 고급 AI 에이전트와 Coding Sessions는 Business 플랜부터 크레딧 기반으로 제공됩니다.",
+  "koreaNote": "Linear는 한국어 인터페이스를 제공하지 않아(확인 필요) 국내 스타트업 개발팀도 대부분 영어 UI 그대로 사용하며, 국내 세금계산서 발행 등 결제 편의도 별도로 없습니다.",
+  "comparisons": [
+   {
+    "competitor": "Jira",
+    "better": "키보드 중심의 압도적으로 빠른 UI와 Claude Code·Codex로 직접 코드를 작성하는 Coding Sessions을 갖추고 있습니다.",
+    "weaker": "Jira는 25만 곳 이상의 기업이 쓰는 커스텀 워크플로·필드·승인 체계 등 훨씬 깊은 설정 자유도를 제공합니다."
+   },
+   {
+    "competitor": "Asana",
+    "better": "GitHub·GitLab 네이티브 동기화와 이슈 안에서 바로 PR을 리뷰하는 Linear Diffs로 개발 워크플로에 최적화되어 있습니다.",
+    "weaker": "Asana는 Timeline·Gantt 뷰와 마케팅·운영 등 비개발 팀을 위한 폭넓은 커스텀 필드로 교차 기능 조직에 더 적합합니다."
+   },
+   {
+    "competitor": "Trello",
+    "better": "구조화된 Cycles·Triage, 중복 이슈 자동 탐지 같은 Product Intelligence 기능을 기본 제공합니다.",
+    "weaker": "Trello는 카드 수 제한 없는 완전 무료 티어와 훨씬 완만한 학습 곡선으로 비개발 소규모 팀이 접근하기 더 쉽습니다."
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-06-11",
+    "title": "Coding Sessions 정식 출시",
+    "change": "Linear Agent가 Claude Code·Codex를 통해 직접 코드를 작성하는 Coding Sessions이 GA로 전환되었습니다.",
+    "risk": "에이전트가 작성한 코드는 반드시 사람 검토를 거쳐야 하며, AI 크레딧 소모 비용도 관리해야 합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-05-27",
+    "title": "Linear Diffs 출시",
+    "change": "이슈 화면에서 바로 PR 코드리뷰를 진행하고 GitHub와 동기화하는 Linear Diffs가 출시되었습니다.",
+    "risk": "리뷰 권한이 없는 인원도 코드 변경을 볼 수 있어 저장소별 접근 권한 재점검이 필요합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2026-03-26",
+    "title": "CEO, '이슈 트래킹은 끝났다' 선언",
+    "change": "Linear가 에이전틱 AI 중심으로 제품 방향을 전환한다고 CEO가 공식 발표했습니다.",
+    "risk": "기존 워크플로 중심 조직은 에이전트 중심 전환 과정에서 팀 적응 기간이 필요합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2025-04-30",
+    "title": "Customer Requests - 프로젝트 연동",
+    "change": "Intercom·Zendesk 등 고객 피드백을 프로젝트 단위로 이슈에 자동 연결하는 기능이 추가되었습니다.",
+    "risk": "세일즈·CS가 요청한 항목이 실제 로드맵 우선순위를 왜곡할 수 있어 별도 검토 절차가 필요합니다.",
+    "level": "medium"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "스프린트 실행 관리",
+    "how": "Cycles와 Triage로 주간 스프린트를 운영하고, Linear Releases로 배포 상태에 따라 이슈 상태를 자동 갱신합니다.",
+    "tip": "비개발 조직(마케팅·세일즈)은 Linear를 메인 도구로 쓰기보다 엔지니어링 요청 창구로만 좁게 사용하는 것이 효율적입니다."
+   },
+   {
+    "title": "AI 코딩 위임",
+    "how": "Coding Sessions에서 Linear Agent에게 버그 수정이나 기능 구현을 맡기고, Linear Diffs로 PR을 이슈 안에서 바로 리뷰합니다.",
+    "tip": "에이전트가 작성한 코드는 반드시 사람이 diff 리뷰를 거친 뒤 병합하도록 팀 규칙으로 강제하세요."
+   },
+   {
+    "title": "고객 피드백 연결",
+    "how": "Customer Requests로 Intercom·Zendesk의 고객 요청을 이슈에 자동 연결하고 프로젝트에 태깅합니다.",
+    "tip": "영업·CS가 요청한 항목과 실제 로드맵 우선순위가 다를 수 있으므로, 분기마다 PM이 별도로 우선순위를 재조정하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.6/5",
+    "note": "2026-08 확인 기준, Jira보다 빠르고 UX가 우수하다는 평가가 다수",
+    "url": "https://www.g2.com/products/linear/reviews"
+   },
+   {
+    "source": "G2",
+    "score": "91건 리뷰(확인 필요)",
+    "note": "일부 G2 서브페이지에서는 91건 리뷰·4.5/5로 별도 집계되어 모집단 확인이 추가로 필요합니다.",
+    "url": "https://www.g2.com/sellers/linear-5ba972df-6c7c-47e5-ae2d-6410c5af12b3"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "partial",
+    "note": "이슈 250개, 팀 2개로 제한"
+   },
+   "koreanSupport": {
+    "level": "partial",
+    "note": "UI 영어만, AI는 한국어 응답 가능"
+   },
+   "aiAssistant": {
+    "level": "full",
+    "note": "Business 이상 Linear Agent"
+   },
+   "agentAutomation": {
+    "level": "full",
+    "note": "Business 이상 Triage/Agent"
+   },
+   "apiIntegrations": {
+    "level": "full",
+    "note": "무료 플랜도 API 포함"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Enterprise 이상 고급 관리"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "CSV/API 내보내기"
+   },
+   "ssoSecurity": {
+    "level": "partial",
+    "note": "Enterprise 플랜에서만 SAML/SCIM"
+   },
+   "mobileApp": {
+    "level": "full"
+   },
+   "offlineLocal": {
+    "level": "none"
+   }
+  },
+  "roles": [
+   "engineering",
+   "pm"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Linear 공식 체인지로그",
+    "url": "https://linear.app/changelog"
+   },
+   {
+    "label": "Linear Diffs 발표 (2026-05-27)",
+    "url": "https://linear.app/changelog/2026-05-27-linear-diffs"
+   },
+   {
+    "label": "Coding Sessions 발표 (2026-06-11)",
+    "url": "https://linear.app/changelog/2026-06-11-coding-sessions"
+   },
+   {
+    "label": "The Register - Linear CEO 에이전틱 AI 전환 보도",
+    "url": "https://www.theregister.com/software/2026/03/26/linear-adopts-agentic-ai-as-ceo-declares-issue-tracking-dead/5227428"
+   },
+   {
+    "label": "Customer Requests on projects (2025-04-30)",
+    "url": "https://linear.app/changelog/2025-04-30-customer-requests-on-projects"
+   },
+   {
+    "label": "G2 - Linear 리뷰",
+    "url": "https://www.g2.com/products/linear/reviews"
+   },
+   {
+    "label": "TechCrunch - Linear 시리즈C 펀딩 보도",
+    "url": "https://techcrunch.com/2025/06/10/atlassian-rival-linear-raises-82m-at-1-25b-valuation/"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "airtable": {
+  "sourceName": "Airtable",
+  "verdict": "비개발자도 데이터베이스급 운영 도구를 만들 수 있지만, 확장할수록 복잡해지고 Bending Spoons 인수로 가격 불확실성까지 커졌습니다.",
+  "scores": {
+   "functionality": 88,
+   "uiux": 76,
+   "reliability": 70,
+   "comfort": 66,
+   "pricing": 60
+  },
+  "impact": {
+   "judgmentSpeed": 6,
+   "thinkingDepth": 6,
+   "executionDensity": 6,
+   "collaborationClarity": 5
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": true
+  },
+  "pricingSummary": "Free는 무료(베이스당 1,000레코드), Team $20/월(연간, 월간 $24), Business $45~54/월, Enterprise Scale은 좌석당 약 $60부터이며, AI 크레딧은 1만 건당 약 $120로 별도 과금됩니다.",
+  "koreaNote": "한국어 인터페이스 지원이 제한적이고(확인 필요) 국내 세금계산서 발행이 되지 않아, 한국 기업은 해외 카드 결제나 결제 대행을 통해 도입하는 경우가 많습니다.",
+  "comparisons": [
+   {
+    "competitor": "Google Sheets",
+    "better": "테이블 간 관계형 연결, 첨부파일·단일/다중 선택 등 풍부한 필드 타입과 Cobuilder의 프롬프트-앱 생성 기능을 제공합니다.",
+    "weaker": "Google Sheets는 사실상 무료로 대규모 사용이 가능하고 거의 모든 직장인에게 익숙하며, Airtable Free는 베이스당 1,000레코드로 제한됩니다."
+   },
+   {
+    "competitor": "Retool",
+    "better": "비개발자도 Cobuilder의 프롬프트-앱 생성으로 코드 한 줄 없이 몇 분 만에 작동하는 데이터베이스를 만들 수 있습니다.",
+    "weaker": "Retool은 프로덕션 SQL/NoSQL 데이터베이스에 직접 연결하고 커스텀 자바스크립트 컴포넌트를 지원해 엔터프라이즈 규모의 복잡한 내부 툴에 더 적합합니다."
+   },
+   {
+    "competitor": "Smartsheet",
+    "better": "유연한 필드 타입과 AI Field Actions(분류·요약·추출)로 창의적이고 변화가 잦은 워크플로에 더 적합합니다.",
+    "weaker": "Smartsheet는 네이티브 Gantt 차트, 크리티컬 패스 추적, 자원 관리와 Microsoft 365·Salesforce 연동이 더 강력해 대규모 구조화 프로젝트 관리에 유리합니다."
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-08-04",
+    "title": "Bending Spoons, 인수 계약 체결",
+    "change": "Bending Spoons가 Airtable을 기업가치 약 12억 8,500만 달러(지분가치 약 22억 5천만 달러)에 인수하기로 합의했습니다.",
+    "risk": "Bending Spoons는 인수 기업의 가격 인상·구조조정 이력이 있어 향후 요금제·지원 정책 변화에 대비해야 합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-02-20",
+    "title": "글로벌 장애 (AWS 연동 장애)",
+    "change": "AWS 인시던트로 전 세계 Airtable 사용자에게 영향을 준 대규모 장애가 발생했습니다.",
+    "risk": "클라우드 인프라 의존도가 높아 AWS 장애가 곧 Airtable 장애로 이어지는 구조적 리스크가 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-10",
+    "title": "DeepSky 인수 - Hyperagent 기반 확보",
+    "change": "AI 리서치 스타트업 DeepSky를 인수하며 자율 에이전트 Hyperagent의 기술 기반을 확보했습니다.",
+    "risk": "독립 컴퓨트 환경에서 자율 실행되는 에이전트인 만큼 실행 범위·권한 설정을 명확히 해야 합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2025-06-24",
+    "title": "AI 네이티브 플랫폼으로 재편 (Omni)",
+    "change": "Cobuilder와 Assistant를 통합한 대화형 AI 어시스턴트 Omni를 중심으로 플랫폼이 재편되었습니다.",
+    "risk": "AI가 생성한 베이스 구조를 검수 없이 운영에 바로 쓰면 데이터 모델 오류가 남을 수 있습니다.",
+    "level": "high"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "운영 DB 빠른 구축",
+    "how": "Cobuilder에 원하는 업무를 프롬프트로 설명해 테이블·필드·관계가 갖춰진 베이스를 즉시 생성합니다.",
+    "tip": "생성된 베이스 구조를 그대로 쓰지 말고, 실제 운영 전 필드 타입과 권한을 담당자가 한 번 검수하세요."
+   },
+   {
+    "title": "반복 워크플로 자동화",
+    "how": "Field Agents를 Gmail·HubSpot·GitHub 등과 연결해 레코드 단위로 분류·요약·데이터 입력을 자동화합니다.",
+    "tip": "자동화 범위가 넓어질수록 베이스마다 '누가 이 자동화를 소유하는지'를 명시해 패치워크화를 막으세요."
+   },
+   {
+    "title": "경량 CRM·트래커 운영",
+    "how": "AI Field Actions로 문의 내용을 자동 분류·요약하고, Interfaces(Omni 빌더)로 영업팀 전용 대시보드를 코드 없이 구성합니다.",
+    "tip": "Bending Spoons 인수에 따른 향후 요금 변동 가능성을 감안해 핵심 데이터는 정기적으로 CSV 백업을 받아두세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.6/5",
+    "note": "리뷰 3,276건 기준, 커스터마이징 4.6/5·통합 4.4/5인 반면 사용 편의성은 3.8/5로 낮게 평가, 2026-09 확인",
+    "url": "https://www.g2.com/products/airtable/reviews"
+   },
+   {
+    "source": "Capterra",
+    "score": "4.6/5 (확인 필요)",
+    "note": "다수 리뷰 기준 통상 언급되는 평점이나 이번 세션에서 원문 수치를 직접 재확인하지는 못했습니다.",
+    "url": "https://www.capterra.com/p/125942/Airtable/reviews/"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "partial",
+    "note": "베이스당 레코드 1,000개 제한"
+   },
+   "koreanSupport": {
+    "level": "partial",
+    "note": "인터페이스 한국어 미지원"
+   },
+   "aiAssistant": {
+    "level": "full",
+    "note": "플랜별 AI 크레딧 차등"
+   },
+   "agentAutomation": {
+    "level": "partial",
+    "note": "규칙 기반 자동화 중심"
+   },
+   "apiIntegrations": {
+    "level": "full"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Business 이상"
+   },
+   "dataExport": {
+    "level": "partial",
+    "note": "테이블별 CSV, 전체 내보내기 불가"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Business 이상 SAML SSO"
+   },
+   "mobileApp": {
+    "level": "full"
+   },
+   "offlineLocal": {
+    "level": "none"
+   }
+  },
+  "roles": [
+   "ops",
+   "pm",
+   "marketing"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Bending Spoons - Airtable 인수 공식 발표",
+    "url": "https://investors.bendingspoons.com/newsroom/bending-spoons-agrees-to-acquire-airtable"
+   },
+   {
+    "label": "TechCrunch - Bending Spoons의 Airtable 인수 보도",
+    "url": "https://techcrunch.com/2026/08/04/bending-spoons-to-buy-airtable-for-1-28b/"
+   },
+   {
+    "label": "Airtable 공식 - Omni AI 사용법",
+    "url": "https://support.airtable.com/docs/using-omni-ai-in-airtable"
+   },
+   {
+    "label": "Airtable AI 스택 분석 (usecarly)",
+    "url": "https://www.usecarly.com/blog/airtable-ai/"
+   },
+   {
+    "label": "G2 - Airtable 리뷰",
+    "url": "https://www.g2.com/products/airtable/reviews"
+   },
+   {
+    "label": "Airtable 요금제 분석 (Vendr)",
+    "url": "https://www.vendr.com/marketplace/airtable"
+   },
+   {
+    "label": "Airtable vs Smartsheet 비교 (Zapier)",
+    "url": "https://zapier.com/blog/smartsheet-vs-airtable/"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "miro": {
+  "sourceName": "Miro",
+  "verdict": "무한 캔버스와 방대한 템플릿으로 워크숍 정렬에는 강력하지만, AI 기능이 늘수록 보드가 산만해지고 좌석 과금 이슈도 따릅니다.",
+  "scores": {
+   "functionality": 88,
+   "uiux": 82,
+   "reliability": 74,
+   "comfort": 72,
+   "pricing": 58
+  },
+  "impact": {
+   "judgmentSpeed": 5,
+   "thinkingDepth": 7,
+   "executionDensity": 4,
+   "collaborationClarity": 7
+  },
+  "badges": {
+   "timeSaver": false,
+   "thinkCarefully": true,
+   "lockinRisk": false
+  },
+  "pricingSummary": "무료 플랜 외 Starter는 연 결제 기준 1인당 월 $8(월 결제 시 $10), Business는 연 결제 기준 월 $20(월 결제 시 $25)이며, 2026년 6월 말부터 기존 유료 애드온이던 Prototypes와 Engage가 Business 플랜에 통합됐습니다.",
+  "koreaNote": "한국어 UI를 일부 제공하지만 번역이 어색한 부분이 있고, 외부 협업자 초대 시 자동으로 유료 좌석이 추가되는 등 과금 관련 주의가 필요합니다.",
+  "comparisons": [
+   {
+    "competitor": "FigJam",
+    "better": "SSO·SCIM·데이터 레지던시 등 엔터프라이즈 거버넌스와 7,000개 이상의 PM/로드맵 템플릿을 갖췄고, 보드 하나에 50~100명이 동시 접속해도 성능 저하가 적습니다.",
+    "weaker": "FigJam은 월 $3부터 시작해 진입 가격이 낮고 Figma 디자인 파일과 더 긴밀하게 연동됩니다."
+   },
+   {
+    "competitor": "Mural",
+    "better": "Miro AI Sidekick가 프롬프트 한 번으로 보드 위에 문서·다이어그램·칸반을 직접 생성하고, Slack·Jira·GitHub 등 연동 커넥터가 더 폭넓습니다.",
+    "weaker": "Mural은 검증된 퍼실리테이션 방법론과 가이드형 워크숍 템플릿에 특화돼 있어 전문 퍼실리테이터 사이에서 선호도가 높습니다."
+   },
+   {
+    "competitor": "Lucidspark",
+    "better": "화이트보드·다이어그램·프로토타입·화상 Talktrack까지 한 플랫폼에서 끝나 도구 전환이 적습니다.",
+    "weaker": "Lucidspark는 Lucidchart와 네이티브로 연동돼 정밀한 플로우차트·시스템 다이어그램이 필요한 IT/엔지니어링 팀에 더 강점이 있습니다."
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-06-29",
+    "title": "Business 플랜에 Prototypes·Engage 통합",
+    "change": "기존에 별도 유료 애드온이었던 Miro Prototypes와 베타였던 Engage가 Business 플랜 기본 제공으로 전환됐습니다.",
+    "risk": "플랜 구성이 바뀌면서 기존 애드온 결제 내역과 신규 청구서를 대조 확인할 필요가 있습니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2026-05-21",
+    "title": "Miro AI 기능 장애 발생",
+    "change": "상태 페이지 기준 'Functionality degradation in Miro AI'라는 제목의 장애가 발생했습니다.",
+    "risk": "AI 기능 의존도가 높아질수록 장애 시 보드 생성·요약 등 핵심 작업이 중단될 위험이 커집니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2026-05-19",
+    "title": "Canvas 26: Sidekicks·Flows 공개",
+    "change": "연례 행사 Canvas 26에서 온캔버스 AI 에이전트 Sidekicks와 다단계 자동화 Flows, 신규 커넥터를 발표했습니다.",
+    "risk": "일부 기능은 '단계적 제공' 상태라 발표 시점에 바로 쓸 수 없는 기능이 있어 도입 전 실제 제공 여부 확인이 필요합니다.",
+    "level": "high"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "워크숍 퍼실리테이션",
+    "how": "Miro AI Sidekick로 브레인스토밍 보드를 프롬프트 한 줄로 구조화하고, 템플릿 라이브러리에서 스프린트 회고·로드맵 템플릿을 불러와 준비 시간을 줄입니다.",
+    "tip": "보드가 끝난 뒤 반드시 '다음 행동' 프레임으로 결론을 남겨야 스티키노트만 쌓이는 회의를 막을 수 있습니다."
+   },
+   {
+    "title": "제품 로드맵 정렬",
+    "how": "PM이 로드맵/타임라인 템플릿과 Jira 커넥터를 연결해 엔지니어링 팀과 실시간으로 우선순위를 조정합니다.",
+    "tip": "외부 협업자를 보드에 초대하기 전 좌석 과금 정책을 확인해 예상치 못한 청구를 방지하세요."
+   },
+   {
+    "title": "비동기 리서치 공유",
+    "how": "세일즈·운영팀이 Talktrack으로 보드에 음성 설명을 녹화해 타임존이 다른 팀원에게 비동기로 공유합니다.",
+    "tip": "AI 생성 요약은 참고용으로만 쓰고, 핵심 의사결정 내용은 사람이 다시 검증하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.6/5",
+    "note": "리뷰 13,000건 이상 기준, 2026-09 확인",
+    "url": "https://www.g2.com/products/miro/reviews"
+   },
+   {
+    "source": "TrustRadius",
+    "score": "9.1/10",
+    "note": "리뷰 약 10,000건 기준, 2026 확인",
+    "url": "https://www.trustradius.com/products/miro/reviews"
+   },
+   {
+    "source": "Capterra",
+    "score": "4.7/5",
+    "note": "리뷰 1,600건 이상 기준, 2026 확인",
+    "url": "https://www.capterra.com/p/128955/Miro/reviews/"
+   },
+   {
+    "source": "Trustpilot",
+    "score": "2.2/5",
+    "note": "리뷰 109건 기준, 자동 좌석 과금·해지 어려움 관련 불만 다수, 2026 확인",
+    "url": "https://www.trustpilot.com/review/miro.com"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "partial",
+    "note": "보드 3개, AI 크레딧 10개 제한"
+   },
+   "koreanSupport": {
+    "level": "full"
+   },
+   "aiAssistant": {
+    "level": "full"
+   },
+   "agentAutomation": {
+    "level": "partial",
+    "note": "Business 이상 캔버스 AI"
+   },
+   "apiIntegrations": {
+    "level": "full"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Business 이상"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "PDF/이미지/CSV"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Business 이상 SSO, Enterprise SCIM"
+   },
+   "mobileApp": {
+    "level": "full"
+   },
+   "offlineLocal": {
+    "level": "none"
+   }
+  },
+  "roles": [
+   "design",
+   "pm",
+   "ops"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Miro Canvas 26 발표",
+    "url": "https://miro.com/canvas/"
+   },
+   {
+    "label": "Miro 뉴스룸(AI 격차 관련)",
+    "url": "https://miro.com/newsroom/miro-takes-aim-at-the-gap-between-ai-potential-and-organizational-reality/"
+   },
+   {
+    "label": "Miro AI 에이전트 관련 보도(itbrief)",
+    "url": "https://itbrief.com.au/story/miro-adds-ai-agents-integrations-for-team-workspaces"
+   },
+   {
+    "label": "Miro G2 리뷰",
+    "url": "https://www.g2.com/products/miro/reviews"
+   },
+   {
+    "label": "Miro TrustRadius 리뷰",
+    "url": "https://www.trustradius.com/products/miro/reviews"
+   },
+   {
+    "label": "Miro 상태 페이지(장애 이력)",
+    "url": "https://status.miro.com/history"
+   },
+   {
+    "label": "Miro 요금제 분석",
+    "url": "https://www.usecarly.com/blog/miro-pricing/"
+   },
+   {
+    "label": "Miro vs FigJam 비교",
+    "url": "https://www.capterra.com/compare/128955-265222/Miro-vs-FigJam"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "zapier": {
+  "sourceName": "Zapier",
+  "verdict": "9,000개 앱을 잇는 가장 쉬운 자동화 도구지만, AI 단계가 늘수록 과금 단위가 복잡해지고 예상 밖 청구가 자주 발생합니다.",
+  "scores": {
+   "functionality": 90,
+   "uiux": 85,
+   "reliability": 68,
+   "comfort": 75,
+   "pricing": 48
+  },
+  "impact": {
+   "judgmentSpeed": 7,
+   "thinkingDepth": 4,
+   "executionDensity": 9,
+   "collaborationClarity": 5
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": true
+  },
+  "pricingSummary": "Free(월 100 태스크, 2단계 Zap)부터 Professional(연 결제 시 월 $19.99~, 월 결제 $29.99), Team(연 결제 시 월 $69~, 월 결제 $103.50), Enterprise(맞춤형) 요금제이며, 2026년 6월 15일부터 AI by Zapier 단계가 모델 등급별(Standard·Advanced·Premium, 태스크 1·3·5배)로 과금되도록 바뀌었습니다.",
+  "koreaNote": "한국어 UI 지원이 제한적이고 원화 결제·세금계산서 발급 체계가 공식적으로 명확하지 않아, 국내 기업은 결제 방식을 사전에 확인할 필요가 있습니다.",
+  "comparisons": [
+   {
+    "competitor": "Make",
+    "better": "9,000개 이상의 방대한 앱 생태계와 Copilot의 자연어 빌드 경험 덕분에 진입 장벽이 더 낮습니다.",
+    "weaker": "Make는 시각적 흐름 제어가 더 정교하고 모듈당 태스크 단가가 낮아 복잡한 다단계 시나리오를 더 저렴하게 구성할 수 있습니다."
+   },
+   {
+    "competitor": "n8n",
+    "better": "완전관리형 SaaS로 인프라 운영 부담이 없고, 비개발자도 Copilot만으로 자동화를 구축할 수 있습니다.",
+    "weaker": "n8n은 셀프호스팅과 LangChain 기반 AI 노드로 데이터 주권과 커스텀 AI 에이전트 구성에서 더 유연합니다."
+   },
+   {
+    "competitor": "Workato",
+    "better": "월 $19.99~ 수준의 낮은 진입 가격과 영업 상담 없이 바로 가입 가능한 셀프서비스 구조가 강점입니다.",
+    "weaker": "Workato는 엔터프라이즈급 거버넌스·감사 로그와 대용량 iPaaS 트랜잭션 처리에서 더 강력합니다."
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-08-06",
+    "title": "Salesforce 연동 장애 등 부분 장애 반복",
+    "change": "상태 페이지 기준 Salesforce Integration Issue를 포함해 최근 30일간 7개 컴포넌트에서 다수의 부분 장애가 기록됐습니다.",
+    "risk": "특정 앱 연동 장애 시 해당 Zap이 조용히 실패할 수 있어 별도 모니터링·알림 설정이 필요합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2026-06-15",
+    "title": "AI by Zapier 모델 기반 과금 전환",
+    "change": "AI 단계 과금 방식이 정액제에서 모델 등급별(Standard 1배·Advanced 3배·Premium 5배 태스크)로 바뀌었습니다.",
+    "risk": "고급 모델 사용이 늘면 태스크 소모량이 급증해 예상보다 요금이 커질 수 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-09-29",
+    "title": "ZapConnect에서 Zapier Copilot 정식 발표",
+    "change": "자연어로 자동화를 설계하는 Copilot을 공개했고, 이후 업데이트마다 변경 내역을 보여주는 체크포인트·원클릭 되돌리기가 추가됐습니다.",
+    "risk": "Copilot이 자동 생성한 Zap을 검토 없이 배포하면 의도치 않은 로직 변경이 생길 수 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-09",
+    "title": "Tables·Interfaces·MCP 기본 플랜 포함",
+    "change": "Free·Professional·Team 플랜에서 Tables, Interfaces, Zapier MCP가 별도 애드온 없이 기본 제공되도록 번들 구조가 바뀌었습니다.",
+    "risk": "기존에 애드온으로 과금되던 기능 구조가 바뀌므로 요금제 재검토가 필요합니다.",
+    "level": "medium"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "반복 업무 자동화",
+    "how": "운영팀이 Zapier Copilot에 '주문 완료 시 Slack 알림과 시트 기록'처럼 자연어로 요청해 멀티스텝 Zap을 즉시 생성합니다.",
+    "tip": "생성된 Zap은 반드시 테스트 데이터로 먼저 실행해 중복 트리거·무한 루프 여부를 확인한 뒤 배포하세요."
+   },
+   {
+    "title": "영업 리드 라우팅",
+    "how": "세일즈 운영팀이 Zapier Agent로 신규 리드를 CRM에 기록하고 조건별로 담당자 배정과 후속 이메일까지 자동 처리합니다.",
+    "tip": "AI Agent에 Guardrails를 설정해 금액·고객 등급 등 민감한 조건은 사람이 승인하도록 예외 처리하세요."
+   },
+   {
+    "title": "마케팅 캠페인 연동",
+    "how": "마케팅팀이 Canvas로 캠페인 프로세스를 먼저 다이어그램으로 설계한 뒤 Zap·Table·Interface로 전환해 폼 제출부터 CRM 등록까지 연결합니다.",
+    "tip": "AI by Zapier 단계는 모델 등급별로 과금되므로 저비용 Standard 모델로 먼저 검증한 뒤 필요한 구간만 고급 모델로 전환하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.5/5",
+    "note": "리뷰 2,000건 이상 기준, 2026-09 확인",
+    "url": "https://www.g2.com/products/zapier/reviews"
+   },
+   {
+    "source": "Capterra",
+    "score": "4.7/5",
+    "note": "리뷰 3,000건 이상 기준, 2026-08 확인",
+    "url": "https://www.capterra.com/p/130182/Zapier/reviews/"
+   },
+   {
+    "source": "Trustpilot",
+    "score": "1.5/5",
+    "note": "리뷰 약 300건 기준, 예상 밖 청구·태스크 초과 요금 불만 다수, 2026-07 확인",
+    "url": "https://www.trustpilot.com/review/zapier.com"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "partial",
+    "note": "월 100 작업, 2단계 Zap만"
+   },
+   "koreanSupport": {
+    "level": "none",
+    "note": "인터페이스 영어만 지원"
+   },
+   "aiAssistant": {
+    "level": "full",
+    "note": "Zapier Agents/Central"
+   },
+   "agentAutomation": {
+    "level": "full",
+    "note": "자율 AI 에이전트 실행"
+   },
+   "apiIntegrations": {
+    "level": "full",
+    "note": "8000+ 앱 연동"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Team 이상"
+   },
+   "dataExport": {
+    "level": "partial",
+    "note": "작업 데이터 내보내기 제한적"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Team 이상 SAML SSO"
+   },
+   "mobileApp": {
+    "level": "none"
+   },
+   "offlineLocal": {
+    "level": "none"
+   }
+  },
+  "roles": [
+   "ops",
+   "marketing",
+   "sales"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Zapier Copilot 가이드(공식 블로그)",
+    "url": "https://zapier.com/blog/zapier-copilot-guide/"
+   },
+   {
+    "label": "AI by Zapier 신규 과금 공지",
+    "url": "https://help.zapier.com/hc/en-us/articles/46597632373389-AI-by-Zapier-new-model-based-pricing-starting-June-15-2026"
+   },
+   {
+    "label": "Zapier 플랜 개편(Tables·Interfaces·MCP)",
+    "url": "https://help.zapier.com/hc/en-us/articles/39645433045773-Zapier-plan-updates-Tables-Interfaces-and-MCP-now-included"
+   },
+   {
+    "label": "Zapier Copilot 출시 보도(Yahoo Finance)",
+    "url": "https://finance.yahoo.com/news/zapier-adds-copilot-assistant-enterprise-130000698.html"
+   },
+   {
+    "label": "Zapier G2 리뷰",
+    "url": "https://www.g2.com/products/zapier/reviews"
+   },
+   {
+    "label": "Zapier Capterra 리뷰",
+    "url": "https://www.capterra.com/p/130182/Zapier/reviews/"
+   },
+   {
+    "label": "Zapier 상태 페이지",
+    "url": "https://status.zapier.com/"
+   },
+   {
+    "label": "Zapier 요금제 한국어 정리",
+    "url": "https://www.getaiperks.com/ko/articles/zapier-pricing"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "chatgpt": {
+  "sourceName": "ChatGPT",
+  "verdict": "기능과 생태계는 업계 최대지만, 잦은 정책·모델 변경과 무료 요금제 광고 도입은 신뢰도를 갉아먹습니다.",
+  "scores": {
+   "functionality": 93,
+   "uiux": 86,
+   "reliability": 72,
+   "comfort": 75,
+   "pricing": 70
+  },
+  "impact": {
+   "judgmentSpeed": 8,
+   "thinkingDepth": 5,
+   "executionDensity": 8,
+   "collaborationClarity": 5
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": false
+  },
+  "pricingSummary": "무료(광고 포함)·Go $8·Plus $20·Pro $200이며, 2025년 8월 Team이 Business로 개편되어 Standard $20~25·Premium $100~125 좌석제로 운영됩니다. 2026년 2월부터 무료 요금제에 광고가 도입된 점이 큰 변화입니다.",
+  "koreaNote": "SKT가 국내 통신사 중 유일한 공식 파트너로 Plus 구독 할인 프로모션을 제공하며, 한국어 응답 품질도 실무에 쓸 만한 수준으로 평가됩니다.",
+  "comparisons": [
+   {
+    "competitor": "Claude",
+    "better": "Atlas 브라우저, Codex, 이미지·음성 생성까지 한 계정에서 처리되어 멀티모달 작업 범위가 더 넓습니다",
+    "weaker": "대규모 코드베이스 리팩터링의 정확도와 장시간 지시 이행력은 Claude Code가 더 낫다는 개발자 평가가 많습니다"
+   },
+   {
+    "competitor": "Gemini",
+    "better": "60개 이상의 서드파티 커넥터와 커스텀 GPT 생태계가 더 폭넓은 업무 자동화를 지원합니다",
+    "weaker": "Gmail·Docs·Sheets 같은 실사용 오피스 문서에 대한 네이티브 실시간 접근은 Gemini가 더 매끄럽습니다"
+   },
+   {
+    "competitor": "Perplexity",
+    "better": "코딩, 이미지·음성 생성, 에이전트형 업무 자동화 등 종합 기능 범위가 훨씬 넓습니다",
+    "weaker": "모든 답변에 출처 링크를 기본 제시하는 인용 투명성은 Perplexity 리뷰어들이 더 높게 평가합니다"
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-08",
+    "title": "ChatGPT 에이전트 모드 종료",
+    "change": "독립 기능이었던 ChatGPT agent(구 Operator 통합 브라우징 에이전트)가 사전 공지 없이 단계적으로 종료되고, 다단계 업무는 ChatGPT Work로, 브라우저 작업은 Atlas 에이전트 모드로 이관됐습니다.",
+    "risk": "마이그레이션 안내 없이 기능이 사라져 기존 자동화 워크플로가 갑자기 중단될 수 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-07-09",
+    "title": "GPT-5.6 출시 및 ChatGPT Work 공개",
+    "change": "약 105만 토큰 컨텍스트의 GPT-5.6 모델군을 출시하고 Codex 앱을 ChatGPT 데스크톱 앱에 통합했으며, 팀 업무 자동화 제품 ChatGPT Work를 함께 공개했습니다. 같은 날 GPT-5.6은 Microsoft 365 Copilot의 선호 모델로도 채택됐습니다.",
+    "risk": "모델 세대가 빠르게 바뀌면서 기존 GPT-5.1/5.4 기반 워크플로가 자동으로 새 모델로 전환되어 응답 스타일이 달라질 수 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-02",
+    "title": "무료 요금제에 광고 도입",
+    "change": "Free 요금제와 저가형 Go 요금제에 광고를 도입했고, Plus($20)부터 광고 없는 경험을 제공하는 정책으로 바뀌었습니다.",
+    "risk": "무료·Go 사용자는 광고 노출 범위와 데이터 활용 정책을 다시 확인해야 합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2025-10-21",
+    "title": "ChatGPT Atlas 브라우저 출시",
+    "change": "검색창 없이 대화형 인터페이스로 동작하는 Chromium 기반 브라우저 Atlas를 macOS에 우선 출시하고, 에이전트 모드와 브라우저 메모리 기능을 탑재했습니다.",
+    "risk": "초기 macOS 전용으로 시작했고, 자율 에이전트 모드의 보안 취약점 우려가 제기됐습니다.",
+    "level": "high"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "리서치 초안 작성",
+    "how": "Projects에 참고 자료를 업로드해 프로젝트 메모리를 구성하고, GPT-5.6 Thinking 모드로 경쟁사 리서치 초안을 뽑은 뒤 팀원과 함께 수정합니다.",
+    "tip": "초안의 통계·인용은 반드시 원문 링크를 열어 대조하고, 배포 전 팩트체크 담당자를 지정하세요."
+   },
+   {
+    "title": "반복 문서 자동화",
+    "how": "커넥터로 Google Drive·Slack을 연결해 견적서·제안서 템플릿을 불러오고, ChatGPT Work로 여러 부서 산출물을 하나의 문서로 취합합니다.",
+    "tip": "고객사 개인정보나 계약 조건이 담긴 자료는 학습에 쓰이지 않는 Business/Enterprise 요금제에서만 다루도록 사내 규정을 정하세요."
+   },
+   {
+    "title": "코드 리뷰·리팩터링",
+    "how": "Codex CLI나 클라우드 위임 기능으로 저장소를 연결해 테스트 실행과 리팩터링을 맡기고, Auto-review로 중요한 변경을 재검토합니다.",
+    "tip": "Codex가 만든 PR은 병합 전 반드시 사람이 직접 diff를 검토하고, 프로덕션 배포 권한은 별도로 제한하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.7/5",
+    "note": "리뷰 2,000건 이상 기준, 83%가 5점, 2026-09 확인",
+    "url": "https://www.g2.com/products/chatgpt/reviews"
+   },
+   {
+    "source": "Trustpilot",
+    "score": "1.6/5",
+    "note": "일반 소비자 리뷰 약 2,800건 기준, 73%가 1점으로 B2B 평가와 큰 괴리, 2026-09 확인",
+    "url": "https://www.trustpilot.com/review/chatgpt.com"
+   },
+   {
+    "source": "App Store",
+    "score": "4.8/5",
+    "note": "iOS 평점 약 890만 건 기준, 2026-09 확인",
+    "url": "https://apps.apple.com/us/app/chatgpt/id6448311069"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "full"
+   },
+   "koreanSupport": {
+    "level": "full"
+   },
+   "aiAssistant": {
+    "level": "full"
+   },
+   "agentAutomation": {
+    "level": "full",
+    "note": "Agent Mode (Plus 이상)"
+   },
+   "apiIntegrations": {
+    "level": "full",
+    "note": "GPTs/API/60+ 커넥터"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Business 이상"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "JSON 전체 대화 내보내기"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Business 이상 SAML SSO"
+   },
+   "mobileApp": {
+    "level": "full"
+   },
+   "offlineLocal": {
+    "level": "none"
+   }
+  },
+  "roles": [
+   "marketing",
+   "research",
+   "engineering",
+   "pm"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "OpenAI 모델 릴리스 노트",
+    "url": "https://help.openai.com/en/articles/9624314-model-release-notes"
+   },
+   {
+    "label": "ChatGPT Atlas 브라우저 공식 발표",
+    "url": "https://openai.com/index/introducing-chatgpt-atlas/"
+   },
+   {
+    "label": "GPT-5.6, Microsoft 365 Copilot 선호 모델 채택 보도",
+    "url": "https://techcrunch.com/2026/07/09/openai-says-gpt-5-6-is-the-preferred-model-for-microsoft-copilot-amid-breakup-chatter/"
+   },
+   {
+    "label": "ChatGPT 에이전트 모드 종료 관련 보도",
+    "url": "https://www.usecarly.com/blog/chatgpt-agent-mode/"
+   },
+   {
+    "label": "ChatGPT 요금제 정리",
+    "url": "https://www.eesel.ai/blog/chatgpt-pricing"
+   },
+   {
+    "label": "ChatGPT G2 리뷰",
+    "url": "https://www.g2.com/products/chatgpt/reviews"
+   },
+   {
+    "label": "SKT-OpenAI 파트너십 안내(SKT 뉴스룸)",
+    "url": "https://news.sktelecom.com/215371"
+   },
+   {
+    "label": "ChatGPT 무료 요금제 광고 도입 보도",
+    "url": "https://freeainews.com/news/chatgpt-pricing-changes-2026/"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "claude": {
+  "sourceName": "Claude",
+  "verdict": "코딩·에이전트 품질은 최상위권이고 Fable 5.1로 비용도 낮췄지만, 잦아진 장애와 주간 사용량 제한이 안정성 체감을 떨어뜨립니다.",
+  "scores": {
+   "functionality": 88,
+   "uiux": 84,
+   "reliability": 70,
+   "comfort": 70,
+   "pricing": 66
+  },
+  "impact": {
+   "judgmentSpeed": 7,
+   "thinkingDepth": 7,
+   "executionDensity": 8,
+   "collaborationClarity": 5
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": false
+  },
+  "pricingSummary": "무료·Pro $20(연간 환산 $17)·Max 5x $100·Max 20x $200이며, 2026년 1월부터 Cowork 전체 기능이 Max 전용에서 Pro 요금제까지 확대됐습니다. Team·Enterprise는 별도 협의 가격입니다.",
+  "koreaNote": "자연스러운 한국어 문체로 번역투가 적다는 평가를 받지만, 국내 통신사 제휴나 원화 결제 같은 현지화는 ChatGPT·Perplexity의 SKT 제휴에 비해 두드러지지 않습니다.",
+  "comparisons": [
+   {
+    "competitor": "ChatGPT",
+    "better": "대규모 코드베이스 리팩터링과 장시간 자율 코딩 작업의 정확도가 더 높다는 개발자 평가가 많습니다",
+    "weaker": "이미지·음성 생성이나 자체 브라우저(Atlas) 같은 멀티모달·소비자 기능은 ChatGPT가 훨씬 다양합니다"
+   },
+   {
+    "competitor": "Gemini",
+    "better": "MCP 오픈 표준을 통해 서드파티 도구 연동이 특정 벤더에 종속되지 않고 자유롭습니다",
+    "weaker": "Gmail·Docs 등 오피스 제품군과의 네이티브 통합과 무료 스토리지 제공량은 Gemini가 앞섭니다"
+   },
+   {
+    "competitor": "GitHub Copilot",
+    "better": "저장소 전체를 자율적으로 탐색·수정·테스트하는 장시간 에이전트 작업은 Claude Code가 더 강력합니다",
+    "weaker": "IDE 인라인 자동완성처럼 가볍고 즉각적인 코드 제안 경험은 GitHub Copilot이 더 매끄럽습니다"
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-09-01",
+    "title": "Claude Fable 5.1·Mythos 5.1 출시",
+    "change": "Anthropic이 Claude Fable 5.1을 API·AWS·Google Cloud·Azure에 정식 출시했습니다. Mythos 5.1은 같은 모델에 강화된 안전장치를 적용해 신뢰 기관에만 제공되며, Claude Code의 사이버보안 오탐이 약 60% 줄었습니다.",
+    "risk": "모델 전환 시 프롬프트 응답 스타일과 effort 설정에 따른 결과 차이가 있어 기존 워크플로를 재검증해야 하고, 캐시·가격 체계 변경으로 비용 산정을 다시 해야 합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-07-24",
+    "title": "Claude Opus 5 출시",
+    "change": "100만 토큰 컨텍스트, SWE-bench Verified 96.0%를 기록한 신규 플래그십 Opus 5를 출시했으며, Max 요금제 기본 모델이자 Pro에서 쓸 수 있는 최상위 모델이 됐습니다.",
+    "risk": "입력 $5/출력 $25(백만 토큰당)로 가격은 이전과 동일하지만, 컨텍스트 확장으로 대용량 요청 시 비용이 급증할 수 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-07-20",
+    "title": "15억 달러 저작권 집단소송 최종 승인",
+    "change": "불법 복제 도서관에서 내려받은 서적으로 Claude를 학습시킨 것에 대한 저자들의 집단소송이 15억 달러 규모로 최종 승인되며, 관련 데이터셋 파기가 명령됐습니다.",
+    "risk": "과거 학습 데이터 출처의 적법성 문제가 다른 AI 기업 소송으로도 이어질 수 있어, 기업 고객은 저작권 관련 면책 조항을 재확인해야 합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-11-24",
+    "title": "Claude Opus 4.5 출시",
+    "change": "코딩·에이전트·컴퓨터 사용 작업에 최적화된 Opus 4.5를 출시했으며, 20만 토큰 컨텍스트와 최대 6.4만 토큰 출력을 지원합니다.",
+    "risk": "이전 Opus 4.1 기반 프롬프트·워크플로가 새 모델에서 응답 스타일이 달라질 수 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-08",
+    "title": "소비자 데이터 학습 정책을 옵트아웃으로 전환",
+    "change": "소비자 약관을 개정해 Free/Pro/Max 대화 데이터를 기본적으로 모델 학습에 사용하되, 사용자가 직접 거부해야 하는 옵트아웃 방식으로 바꿨습니다.",
+    "risk": "설정을 확인하지 않으면 대화 내용이 최대 5년간 비식별 처리되어 학습에 쓰일 수 있습니다.",
+    "level": "high"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "장문 코드 리팩터링",
+    "how": "Claude Code를 저장소에 연결해 테스트 스위트를 함께 실행시키고, MCP 커넥터로 이슈 트래커·CI 로그를 연동해 근거를 확인하며 수정하게 합니다.",
+    "tip": "프로덕션 배포 전 반드시 사람이 diff를 리뷰하고, 민감한 자격 증명은 MCP 서버 권한을 최소 범위로 제한하세요."
+   },
+   {
+    "title": "리서치 보고서 정리",
+    "how": "Projects에 원문 자료를 업로드해 프로젝트 메모리를 구성하고, 장문 문서를 통째로 넣어 맥락을 유지한 채 요약·비교 분석을 시킵니다.",
+    "tip": "Claude가 인용한 수치나 출처는 원문과 직접 대조하고, 결론 부분은 사람이 최종 검수하세요."
+   },
+   {
+    "title": "반복 운영 업무 위임",
+    "how": "Claude Cowork에 다단계 작업(여러 문서 취합, 양식 작성 등)을 위임하고, 진행 상황을 중간중간 확인하며 승인 단계를 둡니다.",
+    "tip": "주간 사용량 한도를 팀원별로 미리 공유해 업무 도중 한도가 소진되는 상황을 예방하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.4/5",
+    "note": "Claude 제품 리뷰 67건 기준, 2026-09 확인",
+    "url": "https://www.g2.com/products/anthropic-claude/reviews"
+   },
+   {
+    "source": "G2",
+    "score": "4.7/5",
+    "note": "Claude Code 리뷰 105건 기준, 2026-09 확인",
+    "url": "https://www.g2.com/products/anthropic-claude-code/reviews"
+   },
+   {
+    "source": "G2",
+    "score": "4.6/5",
+    "note": "Anthropic 전체 제품군 283건 리뷰 기준, 2026-09 확인",
+    "url": "https://www.g2.com/sellers/anthropic-b3e27488-b6f4-49c9-a8c7-d860a4207ff3"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "full"
+   },
+   "koreanSupport": {
+    "level": "full"
+   },
+   "aiAssistant": {
+    "level": "full"
+   },
+   "agentAutomation": {
+    "level": "full",
+    "note": "Claude Code, Agent SDK"
+   },
+   "apiIntegrations": {
+    "level": "full",
+    "note": "API/MCP 지원"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Team/Enterprise"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "대화 JSON 내보내기"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Enterprise SAML/SCIM"
+   },
+   "mobileApp": {
+    "level": "full"
+   },
+   "offlineLocal": {
+    "level": "none"
+   }
+  },
+  "roles": [
+   "engineering",
+   "research",
+   "pm",
+   "marketing"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Anthropic 공식 발표: Claude Fable 5.1과 Mythos 5.1 소개",
+    "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+   },
+   {
+    "label": "Anthropic 공식 뉴스",
+    "url": "https://www.anthropic.com/news"
+   },
+   {
+    "label": "Claude Opus 5 공식 발표",
+    "url": "https://www.anthropic.com/news/claude-opus-5"
+   },
+   {
+    "label": "소비자 약관·개인정보 정책 변경 공지",
+    "url": "https://www.anthropic.com/news/updates-to-our-consumer-terms"
+   },
+   {
+    "label": "Anthropic 15억 달러 저작권 합의 보도(NPR)",
+    "url": "https://www.npr.org/2025/09/05/nx-s1-5529404/anthropic-settlement-authors-copyright-ai"
+   },
+   {
+    "label": "Claude Cowork·Code 요금제 정리",
+    "url": "https://o-mega.ai/articles/claude-cowork-pricing-and-agent-ecosystem-2026"
+   },
+   {
+    "label": "Claude G2 리뷰",
+    "url": "https://www.g2.com/products/anthropic-claude/reviews"
+   },
+   {
+    "label": "Claude Code G2 리뷰",
+    "url": "https://www.g2.com/products/anthropic-claude-code/reviews"
+   },
+   {
+    "label": "Claude 서비스 장애 보도(BleepingComputer)",
+    "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-services/"
+   },
+   {
+    "label": "MacRumors: Claude Fable 5.1 출시 보도",
+    "url": "https://www.macrumors.com/2026/09/01/anthropic-claude-fable-5-1/"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "gemini": {
+  "sourceName": "Gemini",
+  "verdict": "구글 앱과의 통합은 독보적이지만, 복잡한 멀티스텝 작업에서의 환각과 요금제 구조 복잡성은 여전한 약점입니다.",
+  "scores": {
+   "functionality": 91,
+   "uiux": 80,
+   "reliability": 76,
+   "comfort": 78,
+   "pricing": 80
+  },
+  "impact": {
+   "judgmentSpeed": 7,
+   "thinkingDepth": 6,
+   "executionDensity": 7,
+   "collaborationClarity": 6
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": true
+  },
+  "pricingSummary": "무료·Google AI Plus $4.99·Google AI Pro $19.99·Google AI Ultra $249.99이며, Workspace용 Business 요금제는 좌석당 약 $7~22입니다. 한국에서는 2026년 6월부터 AI Plus가 월 7,500원으로 인하됐습니다.",
+  "koreaNote": "삼성 갤럭시 S25·Z Fold8 시리즈에 기본 탑재되며 한국어를 포함한 9개 언어로 앱 연동이 확장됐고, 국내 요금도 원화 기준으로 인하돼 접근성이 높은 편입니다.",
+  "comparisons": [
+   {
+    "competitor": "ChatGPT",
+    "better": "Gmail·Docs·Sheets·Meet 등 실제 업무 문서에 대한 네이티브 접근과 실시간 편집 통합이 더 매끄럽습니다",
+    "weaker": "범용 에이전트 브라우저(Atlas)나 Codex 같은 독립형 코딩 에이전트의 완성도는 ChatGPT가 더 앞서 있습니다"
+   },
+   {
+    "competitor": "Claude",
+    "better": "무료·Plus 요금제의 컨텍스트 용량과 클라우드 스토리지 제공량 등 가격 대비 혜택이 더 넉넉합니다",
+    "weaker": "장시간 자율 코딩·에이전트 작업의 정확도는 MCP-Atlas 등 도구 활용 벤치마크에서 Claude Opus 계열에 뒤처집니다"
+   },
+   {
+    "competitor": "Microsoft 365 Copilot",
+    "better": "개인 사용자도 별도 기업 라이선스 없이 월 몇 달러의 소비자 요금제로 바로 접근할 수 있어 진입 장벽이 낮습니다",
+    "weaker": "Excel 피벗, PowerPoint 디자인 등 엔터프라이즈 오피스 문서 심층 작업은 Microsoft 365 Copilot이 더 특화돼 있습니다"
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-07-21",
+    "title": "Gemini 3.6 Flash 출시, Gemini 4 예고",
+    "change": "100만 토큰 컨텍스트의 실무용 모델 Gemini 3.6 Flash와 3.5 Flash-Lite를 공개하며 차기 Gemini 4의 존재를 처음 언급했습니다.",
+    "risk": "구형 3.x Flash 모델을 호출하던 API 워크플로는 향후 가격·성능 변경에 대비해야 합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-06-10",
+    "title": "Workspace 연동 오류 장애",
+    "change": "Gemini 앱과 Workspace 사이드패널에서 오류 메시지가 발생하는 장애가 있었습니다.",
+    "risk": "업무 시간 중 문서 내 Gemini 호출이 실패할 수 있어 대체 작업 경로를 마련해둘 필요가 있습니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2026-05",
+    "title": "Google Antigravity 2.0 확장",
+    "change": "에이전트 기반 개발 플랫폼 Antigravity가 독립 데스크톱 앱, Antigravity CLI, SDK, Gemini API 내 Managed Agents 티어로 확장됐습니다.",
+    "risk": "관리형 에이전트가 리눅스 샌드박스에서 코드를 자율 실행하므로, 권한 범위를 지정하지 않으면 의도치 않은 파일 변경이 발생할 수 있습니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2025-11-18",
+    "title": "Gemini 3 Pro·DeepThink 출시",
+    "change": "Gemini 2.5 세대를 잇는 Gemini 3 Pro와 고난도 추론용 Gemini 3 DeepThink를 출시했습니다.",
+    "risk": "이전 2.5 세대 대비 응답 스타일과 API 요금 구조가 달라져 마이그레이션 테스트가 필요합니다.",
+    "level": "high"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "회의록·메일 정리",
+    "how": "Gmail·Meet 안에서 Gemini로 회의 요약과 후속 액션 아이템을 자동 추출하고, Docs로 바로 보내 팀과 공유합니다.",
+    "tip": "요약본의 숫자·일정 등 핵심 정보는 원본 회의 내용과 한 번 더 대조한 뒤 배포하세요."
+   },
+   {
+    "title": "경쟁사 리서치",
+    "how": "Deep Research에 조사 주제를 맡겨 백그라운드로 웹을 탐색하게 하고, 결과 보고서의 출처 링크를 Sheets에 정리합니다.",
+    "tip": "최신성이 중요한 수치일수록 발행일을 확인하고 1차 출처로 교차 검증하세요."
+   },
+   {
+    "title": "에이전트 코딩 프로토타입",
+    "how": "Antigravity IDE·CLI로 프로토타입 기능을 자율 구현시키고, 매니지드 에이전트 실행 로그를 검토해 반영 여부를 결정합니다.",
+    "tip": "실제 리포지토리에 반영하기 전 별도 브랜치에서 결과를 검증하는 절차를 의무화하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.4/5",
+    "note": "AI 챗봇 카테고리 3위, 환각 언급 리뷰 비율이 35%(2025-03)에서 8.3%(2025-10)로 감소, 2026-09 확인",
+    "url": "https://www.g2.com/products/google-gemini/reviews"
+   },
+   {
+    "source": "Hack'celeration",
+    "score": "4.1/5",
+    "note": "5개 평가 기준 종합 리뷰, 2026-09 확인",
+    "url": "https://hackceleration.com/labs/review/gemini"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "full"
+   },
+   "koreanSupport": {
+    "level": "full"
+   },
+   "aiAssistant": {
+    "level": "full"
+   },
+   "agentAutomation": {
+    "level": "full",
+    "note": "Deep Research, Agent 기능"
+   },
+   "apiIntegrations": {
+    "level": "full",
+    "note": "Gemini API/Workspace 연동"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Workspace 관리 콘솔"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "Google Takeout"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Workspace Business 이상 SSO"
+   },
+   "mobileApp": {
+    "level": "full"
+   },
+   "offlineLocal": {
+    "level": "none"
+   }
+  },
+  "roles": [
+   "research",
+   "marketing",
+   "pm",
+   "engineering"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Gemini 한국어 릴리스 노트",
+    "url": "https://gemini.google/kr/release-notes/?hl=ko"
+   },
+   {
+    "label": "Gemini 3 출시 보도(TechCrunch)",
+    "url": "https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/"
+   },
+   {
+    "label": "Google Antigravity 공식 블로그",
+    "url": "https://antigravity.google/blog/google-io-2026"
+   },
+   {
+    "label": "Gemini 요금제 정리",
+    "url": "https://www.eesel.ai/blog/gemini-pricing"
+   },
+   {
+    "label": "Gemini Enterprise 관리자 콘솔 업데이트",
+    "url": "https://workspaceupdates.googleblog.com/2026/04/streamlining-admin-controls-for-gemini-enterprise-in-the-Google-Workspace-Admin-console.html"
+   },
+   {
+    "label": "갤럭시 언팩 2026 공식 블로그(한국어)",
+    "url": "https://blog.google/intl/ko-kr/products/android-play-hardware/galaxy-unpacked-2026-kr/"
+   },
+   {
+    "label": "Gemini G2 리뷰",
+    "url": "https://www.g2.com/products/google-gemini/reviews"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "perplexity": {
+  "sourceName": "Perplexity",
+  "verdict": "출처 기반 리서치 경험은 업계 최고 수준이지만, 다수의 언론사 저작권 소송과 인용 품질 논란은 신뢰도에 부담입니다.",
+  "scores": {
+   "functionality": 82,
+   "uiux": 88,
+   "reliability": 70,
+   "comfort": 83,
+   "pricing": 76
+  },
+  "impact": {
+   "judgmentSpeed": 8,
+   "thinkingDepth": 5,
+   "executionDensity": 6,
+   "collaborationClarity": 4
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": false
+  },
+  "pricingSummary": "무료·Pro $20(연 결제 시 월 $16.67)·Max $200이며, 2026년 신설된 Education Pro는 월 $10입니다. 기업용은 Enterprise Pro $40/좌석, Enterprise Max $325/좌석입니다.",
+  "koreaNote": "SKT와 제휴해 에이닷 앱을 통해 SKT 고객에게 Perplexity Pro(약 29만 원 상당)를 1년간 무료로 제공하는 프로모션을 운영 중입니다.",
+  "comparisons": [
+   {
+    "competitor": "ChatGPT",
+    "better": "모든 답변에 클릭 가능한 출처를 기본 제시해 사실 확인이 더 쉽습니다",
+    "weaker": "이미지·음성 생성, 범용 에이전트 자동화 등 검색 이외의 기능 폭은 ChatGPT가 더 넓습니다"
+   },
+   {
+    "competitor": "Gemini",
+    "better": "특정 회사 검색엔진에 종속되지 않고 GPT·Claude·Gemini 등 여러 회사 모델을 한 번에 골라 쓸 수 있습니다",
+    "weaker": "Gmail·Docs 같은 자체 생산성 도구 생태계가 없어 문서 작업 연속성은 Gemini가 앞섭니다"
+   },
+   {
+    "competitor": "You.com",
+    "better": "Comet 브라우저와 Deep Research의 완성도, 언론사 제휴 등 시장 인지도와 사용자 기반이 더 큽니다",
+    "weaker": "저작권 소송이 반복되면서 언론사 콘텐츠 라이선싱 관계의 안정성 면에서는 불리한 평가를 받습니다"
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-05-28",
+    "title": "CNN, 저작권 침해로 Perplexity 제소",
+    "change": "CNN이 자사 기사·영상·이미지 1만 7천여 건을 무단 수집했다며 소송을 제기했고, 2년 새 7번째 주요 언론사 소송이 됐습니다.",
+    "risk": "잇따른 언론사 소송으로 일부 콘텐츠의 인용·요약 범위가 향후 제한되거나 라이선스 비용이 서비스 가격에 반영될 수 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-05-21",
+    "title": "Comet iOS 대규모 업데이트",
+    "change": "전화·문자·연락처 저장 같은 전화번호 액션, Finance Deep Dive 탭, 이미지 드래그 앤 드롭 등 iOS용 기능이 다수 추가됐습니다.",
+    "risk": "전화·연락처 접근 등 새 권한을 허용할 경우 개인정보 접근 범위가 넓어지는 점에 유의해야 합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2026-04",
+    "title": "Comet Max 모델 선택 기능 추가",
+    "change": "Max 구독자가 Comet 브라우저 에이전트에 사용할 모델을 Claude Opus 4.6(기본값)·Sonnet 4.5 중에서 직접 고를 수 있게 됐습니다.",
+    "risk": "선택한 모델에 따라 응답 속도·비용·정확도 특성이 달라지므로 작업별로 재확인이 필요합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2026-03-18",
+    "title": "Comet 브라우저 전면 무료 전환",
+    "change": "유료 전용이었던 Comet 브라우저의 결제 장벽을 없애고 iOS·Android·Windows·Mac에서 무료로 제공하기 시작했습니다.",
+    "risk": "무료 확대로 트래픽이 급증하면 에이전트 응답 지연이나 샌드박스 오류 빈도가 늘어날 수 있습니다.",
+    "level": "high"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "경쟁사·시장 조사",
+    "how": "Deep Research에 조사 범위를 구체적으로 지시해 보고서를 생성시키고, 답변에 달린 출처 링크를 원문까지 열어 확인합니다.",
+    "tip": "1차 출처가 아닌 재인용 기사가 섞여 있을 수 있으니, 핵심 수치는 반드시 원 발행처를 재확인하세요."
+   },
+   {
+    "title": "웹 업무 자동화",
+    "how": "Comet 브라우저로 반복되는 웹 기반 업무(양식 입력, 여러 사이트 가격 비교 등)를 에이전트에 맡기고 결과만 검토합니다.",
+    "tip": "결제·계정 정보가 필요한 작업은 자동 실행 전 승인 단계를 반드시 거치도록 설정하세요."
+   },
+   {
+    "title": "사내 지식 검색",
+    "how": "Enterprise Pro·Max에서 Google Drive·SharePoint 등 사내 저장소를 커넥터로 연결하고, SSO·SCIM으로 접근 권한을 관리합니다.",
+    "tip": "외부 공유가 가능한 세션·Pages 옵션은 기본적으로 비활성화해 사내 문서 유출 경로를 최소화하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.4/5",
+    "note": "검증 리뷰 326건 기준, 2026-09 확인",
+    "url": "https://www.g2.com/sellers/perplexity-ai"
+   },
+   {
+    "source": "G2",
+    "score": "사용 편의성 95%",
+    "note": "설치 용이성 97%로 함께 최상위권, 복잡한 질의 처리·적응형 학습 항목도 상위권, 2026-09 확인",
+    "url": "https://www.g2.com/products/perplexity/features"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "partial",
+    "note": "일 5회 Pro Search 제한"
+   },
+   "koreanSupport": {
+    "level": "full"
+   },
+   "aiAssistant": {
+    "level": "full"
+   },
+   "agentAutomation": {
+    "level": "full",
+    "note": "Deep Research, Tasks"
+   },
+   "apiIntegrations": {
+    "level": "full",
+    "note": "Sonar API 별도 과금"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Enterprise Pro/Max"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "PDF/Markdown/DOCX 내보내기"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Enterprise Pro 이상 SSO"
+   },
+   "mobileApp": {
+    "level": "full"
+   },
+   "offlineLocal": {
+    "level": "none"
+   }
+  },
+  "roles": [
+   "research",
+   "marketing",
+   "sales"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Perplexity Comet 공식 페이지",
+    "url": "https://www.perplexity.ai/comet"
+   },
+   {
+    "label": "Perplexity 요금제 도움말(한국어)",
+    "url": "https://www.perplexity.ai/help-center/ko/collections/18799292-%EA%B5%AC%EB%8F%85-%EC%9A%94%EA%B8%88%EC%A0%9C-%EB%B0%8F-%EA%B2%B0%EC%A0%9C"
+   },
+   {
+    "label": "Comet iOS 업데이트 보도",
+    "url": "https://9to5mac.com/2026/05/21/perplexitys-comet-ai-browser-for-ios-upgraded-with-8-major-improvements/"
+   },
+   {
+    "label": "CNN 등 언론사 소송 정리",
+    "url": "https://lawsuitsjournal.com/perplexity-ai-lawsuit/"
+   },
+   {
+    "label": "Perplexity Enterprise 보안·SSO 안내",
+    "url": "https://www.perplexity.ai/help-center/en/articles/12067853-introduction-to-organization-admins"
+   },
+   {
+    "label": "SKT-Perplexity 제휴(SKT 뉴스룸)",
+    "url": "https://news.sktelecom.com/208055"
+   },
+   {
+    "label": "Perplexity G2 리뷰",
+    "url": "https://www.g2.com/sellers/perplexity-ai"
+   },
+   {
+    "label": "Forbes 표절 논란 보도(TechCrunch)",
+    "url": "https://techcrunch.com/2024/07/02/news-outlets-are-accusing-perplexity-of-plagiarism-and-unethical-web-scraping/"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "microsoft-copilot": {
+  "sourceName": "Microsoft 365 Copilot",
+  "verdict": "M365 통합과 조직 거버넌스는 독보적이지만, 높은 추가 비용과 반복된 보안 취약점은 도입 전 반드시 따져야 할 위험입니다.",
+  "scores": {
+   "functionality": 85,
+   "uiux": 74,
+   "reliability": 65,
+   "comfort": 68,
+   "pricing": 58
+  },
+  "impact": {
+   "judgmentSpeed": 6,
+   "thinkingDepth": 5,
+   "executionDensity": 7,
+   "collaborationClarity": 8
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": true
+  },
+  "pricingSummary": "Copilot 추가 라이선스는 연간 약정 기준 좌석당 $30이며, 2026년 7월 M365 기본 라이선스 가격 인상으로 실제 총비용은 E3 기준 약 $69, E5 기준 약 $90에 달합니다. 2026년 5월에는 E5·Copilot·Agent 365를 묶은 M365 E7이 좌석당 $99로 신설됐습니다.",
+  "koreaNote": "Microsoft 한국 지사가 공식 한국어 도입 가이드와 파트너 교육을 제공하지만, 개인 소비자보다는 이미 M365 라이선스를 보유한 기업 고객 중심으로 접근성이 제한적입니다.",
+  "comparisons": [
+   {
+    "competitor": "Gemini",
+    "better": "Word·Excel·PowerPoint·Outlook 문서 서식과 회사 SharePoint 데이터에 대한 깊이 있는 접근은 Copilot이 더 정교합니다",
+    "weaker": "개인 사용자가 별도 기업 라이선스 없이 저렴하게 시작할 수 있는 소비자용 요금제는 Gemini가 갖추고 있습니다"
+   },
+   {
+    "competitor": "ChatGPT",
+    "better": "Entra ID·Purview 등 기존 Microsoft 보안·컴플라이언스 체계와 그대로 연동되어 별도 거버넌스 구축이 필요 없습니다",
+    "weaker": "범용 대화 품질과 최신 모델 반영 속도는 OpenAI 모델을 직접 제공하는 ChatGPT가 더 빠릅니다"
+   },
+   {
+    "competitor": "Claude",
+    "better": "Dynamics 365·Teams 등 Microsoft 업무 생태계 전반과의 즉시 연동 범위가 훨씬 넓습니다",
+    "weaker": "코딩 에이전트의 자율성과 정확도, 장시간 작업 신뢰도는 Claude Code 쪽이 더 높게 평가됩니다"
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-08-18",
+    "title": "CoSnitch 취약점 패치",
+    "change": "링크 클릭 한 번으로 민감 정보를 유출시킬 수 있는 Copilot Personal 취약점(CVE-2026-24301)이 Varonis Threat Labs에 의해 발견되어 패치됐습니다.",
+    "risk": "패치 전까지 노출됐던 기간에 의심스러운 링크를 클릭한 이력이 있다면 데이터 유출 여부를 점검해야 합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2026-07-01",
+    "title": "M365 기본 라이선스 가격 인상",
+    "change": "Copilot의 전제 조건인 M365 기본 구독료가 인상되며 Copilot 포함 총비용이 E3 기준 좌석당 약 $69, E5 기준 약 $90까지 올랐습니다.",
+    "risk": "Copilot 자체 가격은 그대로여도 기반 라이선스 인상으로 전체 예산이 예고 없이 늘어날 수 있어 갱신 시점에 예산 재검토가 필요합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-05-01",
+    "title": "Agent 365·M365 E7 출시",
+    "change": "조직 내 모든 AI 에이전트의 권한과 행동을 관리하는 Agent 365가 정식 출시됐고, 이를 포함한 신규 라이선스 M365 E7(좌석당 $99)이 공개됐습니다.",
+    "risk": "에이전트 수가 늘어날수록 거버넌스 설정을 제대로 하지 않으면 관리 범위를 벗어난 미승인 에이전트가 생길 수 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-06",
+    "title": "EchoLeak 제로클릭 취약점 공개",
+    "change": "보안업체 Aim Security가 이메일 한 통만으로 내부 파일을 유출시킬 수 있는 제로클릭 프롬프트 인젝션 취약점(CVE-2025-32711, CVSS 9.3)을 공개했습니다.",
+    "risk": "사용자 클릭 없이도 공격이 성립해, 이메일을 처리하는 모든 Copilot 워크플로가 잠재적 위험에 노출됐습니다.",
+    "level": "high"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "보고서·문서 초안화",
+    "how": "Word·PowerPoint의 에이전틱 기능에 목차와 참고자료를 지정해 문서 초안을 처음부터 끝까지 생성시키고, Copilot Chat으로 부서 간 코멘트를 취합합니다.",
+    "tip": "민감 정보가 포함된 문서는 Purview 라벨을 먼저 지정해 Copilot이 접근 가능한 범위를 제한하세요."
+   },
+   {
+    "title": "영업·재무 데이터 브리핑",
+    "how": "Dynamics 365의 Sales Agent·Finance Agent를 연동해 매일 아침 파이프라인·이상 거래 요약을 받아봅니다.",
+    "tip": "에이전트가 제안한 다음 행동(할인, 승인 등)은 반드시 담당자가 최종 승인하도록 워크플로에 단계를 넣으세요."
+   },
+   {
+    "title": "사내 에이전트 거버넌스",
+    "how": "Copilot Studio로 부서별 맞춤 에이전트를 만들고, Agent 365 콘솔에서 전체 에이전트의 권한·활동 로그를 중앙 관리합니다.",
+    "tip": "EchoLeak·CoSnitch 사례처럼 이메일·링크 기반 프롬프트 인젝션에 취약할 수 있으므로, 외부 콘텐츠를 처리하는 에이전트는 권한을 최소화하고 정기적으로 보안 패치를 확인하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "TrustRadius",
+    "score": "4.3/5",
+    "note": "리뷰 6,905건 기준, 2026-09 확인",
+    "url": "https://www.trustradius.com/products/microsoft-365-copilot/reviews"
+   },
+   {
+    "source": "Capterra",
+    "score": "4.6/5",
+    "note": "리뷰 13,723건 기준, 2026-09 확인",
+    "url": "https://www.capterra.com/p/10015330/Microsoft-Copilot/reviews/"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "partial",
+    "note": "Copilot Chat 무료, 전체기능 유료"
+   },
+   "koreanSupport": {
+    "level": "full"
+   },
+   "aiAssistant": {
+    "level": "full"
+   },
+   "agentAutomation": {
+    "level": "full",
+    "note": "Researcher/Analyst 에이전트"
+   },
+   "apiIntegrations": {
+    "level": "full",
+    "note": "Graph API/Copilot Studio"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Microsoft 365 관리센터"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "Office 표준 파일 형식"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Entra ID 통합"
+   },
+   "mobileApp": {
+    "level": "full"
+   },
+   "offlineLocal": {
+    "level": "partial",
+    "note": "Office는 오프라인, AI는 온라인 필요"
+   }
+  },
+  "roles": [
+   "pm",
+   "ops",
+   "marketing",
+   "sales"
+  ],
+  "teamFit": [
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Microsoft 365 Copilot 한국어 공식 페이지",
+    "url": "https://www.microsoft.com/ko-kr/microsoft-365-copilot"
+   },
+   {
+    "label": "GPT-5.6, Microsoft 365 Copilot 선호 모델 채택 보도",
+    "url": "https://techcrunch.com/2026/07/09/openai-says-gpt-5-6-is-the-preferred-model-for-microsoft-copilot-amid-breakup-chatter/"
+   },
+   {
+    "label": "Microsoft Agent 365·2026 Release Wave 1 발표",
+    "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2026/03/18/2026-release-wave-1-plans-for-microsoft-dynamics-365-microsoft-power-platform-and-copilot-studio-offerings/"
+   },
+   {
+    "label": "M365 Copilot 총비용 가이드",
+    "url": "https://www.velosio.com/blog/m365-copilot-pricing-calculator/"
+   },
+   {
+    "label": "CoSnitch·EchoLeak 취약점 보도",
+    "url": "https://cybersecuritynews.com/copilot-cosnitch-vulnerability/"
+   },
+   {
+    "label": "Microsoft 365 Copilot TrustRadius 리뷰",
+    "url": "https://www.trustradius.com/products/microsoft-365-copilot/reviews"
+   },
+   {
+    "label": "Microsoft 365 대규모 장애 보도",
+    "url": "https://www.theregister.com/2026/01/23/microsoft_365_outage/"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "github-copilot": {
+  "sourceName": "GitHub Copilot",
+  "verdict": "GitHub·VS Code 생태계와의 통합은 최강이지만, 2026년 사용량 기반 과금 전환으로 비용 예측이 어려워졌습니다.",
+  "scores": {
+   "functionality": 88,
+   "uiux": 80,
+   "reliability": 68,
+   "comfort": 70,
+   "pricing": 62
+  },
+  "impact": {
+   "judgmentSpeed": 8,
+   "thinkingDepth": 4,
+   "executionDensity": 8,
+   "collaborationClarity": 6
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": false
+  },
+  "pricingSummary": "Free·Pro($10, 크레딧 $15 포함)·Pro+($39, 크레딧 $39 포함)·Business($19/유저)·Enterprise($39/유저) 요금제이며, 2026-06-01부로 프리미엄 요청 과금을 토큰 소비 기반 AI Credits 방식으로 전면 전환했습니다.",
+  "koreaNote": "Copilot Chat은 한국어 질의응답과 한국어 변수명·주석이 섞인 코드도 정확히 이해하지만, 결제는 원화가 아닌 달러 기준이며 국내 세금계산서 처리는 별도 확인이 필요합니다(확인 필요).",
+  "comparisons": [
+   {
+    "competitor": "Cursor",
+    "better": "GitHub 저장소·Actions·Issues와 완전히 통합되어 있어 별도 설정 없이 PR 생성부터 CI 연동까지 이어집니다.",
+    "weaker": "Cursor의 Composer 2처럼 전용 저지연 코딩 모델이나 git worktree 단위 멀티 에이전트 병렬 실행 기능은 없습니다."
+   },
+   {
+    "competitor": "Amazon Q Developer",
+    "better": "GPT-5, Claude, Gemini 등 서로 다른 벤더의 모델을 한 화면 모델 피커에서 골라 쓸 수 있습니다.",
+    "weaker": "AWS 인프라 심층 연동(IAM 점검, CloudFormation 자동 진단)은 Amazon Q Developer가 더 강합니다."
+   },
+   {
+    "competitor": "JetBrains AI Assistant",
+    "better": "클라우드 기반 비동기 코딩 에이전트가 개발자 컴퓨터 없이도 백그라운드에서 PR을 완성합니다.",
+    "weaker": "JetBrains IDE 특유의 정적 분석 기반 결정론적 리팩터링 정확도는 JetBrains AI Assistant가 앞섭니다."
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-06-01",
+    "title": "사용량 기반 AI Credits 과금 전면 도입",
+    "change": "전 Copilot 플랜의 프리미엄 요청 과금을 폐지하고, 입력·출력·캐시 토큰 소비량에 실제 API 요율을 적용하는 AI Credits 체계로 전환했습니다.",
+    "risk": "'같은 요금에 더 적은 사용량'이라는 개발자 불만이 나올 만큼 실사용량에 따라 월 비용이 급증할 수 있어 사용량 모니터링이 필요합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-03-19",
+    "title": "Coding Agent 작업 시작 50% 단축",
+    "change": "Copilot Coding Agent가 작업을 시작하는 속도를 50% 개선하고 세션 로그 가시성을 높였습니다.",
+    "risk": "속도 개선으로 병렬 실행 건수가 늘어나면 동시에 열리는 PR 수도 늘어나 리뷰 큐가 밀릴 수 있습니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2026-02-19",
+    "title": "Coding Agent 모델 피커 Business/Enterprise 확대",
+    "change": "Pro·Pro+에만 있던 Coding Agent 모델 선택 기능을 Copilot Business·Enterprise 사용자에게도 열었습니다.",
+    "risk": "고성능 모델(Opus급, 상위 GPT-5 계열)이 상위 플랜에만 열려 있어 하위 플랜 팀은 품질 격차를 겪을 수 있습니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2025-10-28",
+    "title": "Agent HQ 발표",
+    "change": "GitHub Universe 2025에서 Anthropic·OpenAI·Google 등 외부 벤더 에이전트까지 한 곳에서 조율하는 Agent HQ를 공개했습니다.",
+    "risk": "여러 벤더 에이전트를 동시에 승인하면 저장소 접근 권한 범위가 넓어져 관리자 통제가 필수입니다.",
+    "level": "high"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "PR 리뷰 이중화",
+    "how": "Copilot 코드 리뷰를 draft PR 1차 검토에 자동 연결하고, 저장소 AGENTS.md에 팀 코딩 규칙을 명시해 리뷰 기준을 맞춥니다.",
+    "tip": "AI 리뷰 승인만으로 머지하지 말고, 보안·비즈니스 로직 변경은 반드시 사람이 최종 승인하도록 규칙화하세요."
+   },
+   {
+    "title": "에이전트 권한 최소화",
+    "how": "엔터프라이즈 관리형 권한으로 코딩 에이전트가 실행할 수 있는 셸 명령·접근 가능 파일·네트워크 도메인을 화이트리스트로 제한합니다.",
+    "tip": "프로덕션 자격 증명이 있는 저장소는 에이전트 자동 실행 대상에서 기본적으로 제외하세요."
+   },
+   {
+    "title": "크레딧 사용량 모니터링",
+    "how": "Billing Overview에서 팀별 AI Credits 소비를 매주 점검하고, 고비용 모델(Opus급, 상위 GPT-5 계열) 사용을 필요한 작업으로 제한합니다.",
+    "tip": "월 예산 상한 알림을 설정해 사용량 기반 과금 전환 이후의 비용 급증을 조기에 감지하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.5/5",
+    "note": "GitHub Copilot 제품 리뷰 234건 기준, 2026-09 확인",
+    "url": "https://www.g2.com/products/github-copilot/reviews"
+   },
+   {
+    "source": "G2 (Cursor 대안 비교 페이지)",
+    "score": "4.4/5",
+    "note": "리뷰 379건 이상 기준 집계",
+    "url": "https://www.g2.com/products/cursor/competitors/alternatives"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "partial",
+    "note": "완성/채팅 월 사용량 제한"
+   },
+   "koreanSupport": {
+    "level": "partial",
+    "note": "한국어 응답 품질 영어보다 낮음"
+   },
+   "aiAssistant": {
+    "level": "full"
+   },
+   "agentAutomation": {
+    "level": "full",
+    "note": "Coding Agent, Agent 모드"
+   },
+   "apiIntegrations": {
+    "level": "full",
+    "note": "IDE/CLI 광범위 통합"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Business/Enterprise"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "코드는 사용자 소유"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Business 이상 SSO"
+   },
+   "mobileApp": {
+    "level": "partial",
+    "note": "GitHub 모바일 앱 내 제한적"
+   },
+   "offlineLocal": {
+    "level": "partial",
+    "note": "에디터는 로컬, AI는 온라인 필요"
+   }
+  },
+  "roles": [
+   "engineering"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "GitHub Copilot 요금제·빌링 변경 공식 발표",
+    "url": "https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans/"
+   },
+   {
+    "label": "GitHub Agent HQ 공식 발표",
+    "url": "https://github.blog/news-insights/company-news/welcome-home-agents/"
+   },
+   {
+    "label": "Copilot Coding Agent 속도 개선 체인지로그",
+    "url": "https://github.blog/changelog/2026-03-19-copilot-coding-agent-now-starts-work-50-faster/"
+   },
+   {
+    "label": "Copilot Coding Agent 모델 피커 확대 체인지로그",
+    "url": "https://github.blog/changelog/2026-02-19-model-picker-for-copilot-coding-agent-for-copilot-business-and-enterprise-users/"
+   },
+   {
+    "label": "Copilot 코드 리뷰 MCP 정식 지원 체인지로그",
+    "url": "https://github.blog/changelog/2026-07-29-copilot-code-review-agent-skills-and-mcp-now-generally-available/"
+   },
+   {
+    "label": "GitHub Copilot G2 리뷰",
+    "url": "https://www.g2.com/products/github-copilot/reviews"
+   },
+   {
+    "label": "2026-01-13 Copilot 장애 커뮤니티 스레드",
+    "url": "https://github.com/orgs/community/discussions/184156"
+   },
+   {
+    "label": "사용량 기반 과금 전환에 대한 개발자 반응 보도",
+    "url": "https://visualstudiomagazine.com/articles/2026/04/27/devs-sound-off-on-usage-based-copilot-pricing-change-you-will-get-less-but-pay-the-same-price.aspx"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "cursor": {
+  "sourceName": "Cursor",
+  "verdict": "에이전트 코딩 속도는 업계 최고 수준이지만, 1년 새 네 차례 바뀐 요금제가 비용 예측을 어렵게 합니다.",
+  "scores": {
+   "functionality": 90,
+   "uiux": 83,
+   "reliability": 65,
+   "comfort": 68,
+   "pricing": 50
+  },
+  "impact": {
+   "judgmentSpeed": 9,
+   "thinkingDepth": 5,
+   "executionDensity": 9,
+   "collaborationClarity": 5
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": true
+  },
+  "pricingSummary": "Hobby(무료)·Pro($20)·Ultra($200) 개인 플랜과 Teams(Standard $40/유저, Premium $120/유저, 2026-06 이원화)·Enterprise로 구성되며, 2025-06 정액 요청제 폐지 이후 2026-08에는 Auto 모드 고정가마저 폐지해 실사용 모델 단가로 과금합니다.",
+  "koreaNote": "한국 사용자 커뮤니티(클리앙 등)에서는 연 결제 시 약 20만원대 비용에 만족도가 높지만, 원화 자동 결제나 국내 세금계산서 발행 여부는 별도 확인이 필요합니다(확인 필요).",
+  "comparisons": [
+   {
+    "competitor": "GitHub Copilot",
+    "better": "Agents 창에서 여러 에이전트를 동시에 병렬 실행하고 각각 다른 모델·승인 정책을 지정할 수 있습니다.",
+    "weaker": "GitHub 저장소·Actions·엔터프라이즈 감사 로그와의 네이티브 통합 깊이는 Copilot이 앞섭니다."
+   },
+   {
+    "competitor": "Windsurf",
+    "better": "자체 저지연 모델 Composer 2로 대부분의 턴을 30초 이내에 처리해 체감 응답 속도가 빠릅니다.",
+    "weaker": "요금 정책이 1년에 여러 번 바뀌어 Windsurf 대비 비용 예측 가능성이 낮다는 평가를 받습니다."
+   },
+   {
+    "competitor": "Claude Code",
+    "better": "GUI 기반 diff 리뷰, 인라인 채팅, Design Mode 등 비주얼 편집 환경이 훨씬 풍부합니다.",
+    "weaker": "터미널 중심의 단순함과 예측 가능한 토큰당 과금 방식은 Claude Code 쪽이 더 명확합니다."
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-08-24",
+    "title": "Auto 모드 고정가 폐지",
+    "change": "Auto 모드의 정액 요금을 폐지하고 모든 Auto 요청을 라우팅된 모델의 정가로 과금하도록 변경했으며, Teams·Enterprise는 서드파티 모델에 토큰당 $0.25 추가 요금을 부과합니다.",
+    "risk": "Auto 모드를 '무제한'으로 알고 대량 사용하던 팀은 변경 이후 청구액이 급증할 수 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-06-01",
+    "title": "Teams 요금제 이원화",
+    "change": "Teams 좌석을 Standard($40/유저)와 Premium($120/유저)로 나누고, 자사 모델과 서드파티 모델 사용량 풀을 분리했습니다.",
+    "risk": "기존 단일 Teams 요금에 익숙한 팀은 좌석을 잘못 배정하면 예상보다 빨리 모델 사용 한도에 도달할 수 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-10-29",
+    "title": "Cursor 2.0 및 Composer 출시",
+    "change": "Cursor 2.0을 출시하며 자체 코딩 모델 Composer와 멀티 에이전트 병렬 실행 인터페이스를 처음 도입했습니다.",
+    "risk": "여러 에이전트를 동시에 승인하면 git worktree 간 충돌이나 의도치 않은 동시 수정이 발생할 수 있어 병합 전 검토가 필요합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-07-04",
+    "title": "요금 변경 관련 공개 사과",
+    "change": "2025-06 요청 기반 요금제를 사용량 기반 크레딧제로 개편하며 발생한 혼란과 예상치 못한 과금에 대해 공개 사과하고 일부 환불을 진행했습니다.",
+    "risk": "사전 고지 없는 과금 모델 변경은 팀 예산 초과와 사용자 이탈로 이어질 수 있음을 보여준 사례입니다.",
+    "level": "medium"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "에이전트 승인 정책",
+    "how": "Agents 창에서 에이전트별로 자동 승인 범위(파일 수정, 터미널 명령 실행 여부)를 다르게 설정하고, 프로덕션 브랜치는 수동 승인만 허용합니다.",
+    "tip": "git hook 조작 취약점 사례처럼 .git 디렉터리·CI 설정 파일 변경은 반드시 사람이 diff를 확인한 뒤 병합하세요."
+   },
+   {
+    "title": "모델별 예산 분리",
+    "how": "Teams 관리자 대시보드에서 자체 모델 풀과 서드파티 모델 풀 사용량을 분리 추적하고, 고가 모델은 특정 프로젝트에만 허용합니다.",
+    "tip": "Auto 모드를 '무제한'으로 오인하지 말고, 월별 예상 청구액을 사전에 시뮬레이션한 뒤 팀에 공유하세요."
+   },
+   {
+    "title": "민감 저장소 격리",
+    "how": "고객 데이터나 시크릿이 포함된 저장소는 Privacy Mode를 강제 적용하고, cursorignore로 민감 파일을 에이전트 접근 대상에서 제외합니다.",
+    "tip": "cursorignore 우회 취약점 이력이 있었던 만큼, 최신 버전 유지와 MDM 강제 업데이트를 기본 정책으로 삼으세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.6/5",
+    "note": "리뷰 312건 기준, 2026-09 확인",
+    "url": "https://www.g2.com/sellers/cursor"
+   },
+   {
+    "source": "G2 (GitHub Copilot 비교 페이지)",
+    "score": "4.6/5",
+    "note": "Cursor vs GitHub Copilot 비교 페이지 기준",
+    "url": "https://www.g2.com/compare/cursor-vs-github-copilot"
+   },
+   {
+    "source": "Hack'celeration (독립 리뷰)",
+    "score": "4.0/5",
+    "note": "가격 정책 관련 감점을 반영한 2026년 리뷰",
+    "url": "https://hackceleration.com/labs/review/cursor"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "partial",
+    "note": "Hobby 플랜 사용량 매우 제한"
+   },
+   "koreanSupport": {
+    "level": "partial",
+    "note": "UI 영어, AI는 한국어 가능"
+   },
+   "aiAssistant": {
+    "level": "full"
+   },
+   "agentAutomation": {
+    "level": "full",
+    "note": "다중 에이전트 병렬 실행"
+   },
+   "apiIntegrations": {
+    "level": "full",
+    "note": "MCP 지원"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Teams 이상 SSO/관리자"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "코드는 사용자 소유"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Teams 이상 SSO"
+   },
+   "mobileApp": {
+    "level": "partial",
+    "note": "iOS 베타만, Android 미지원"
+   },
+   "offlineLocal": {
+    "level": "partial",
+    "note": "기본 편집만 오프라인"
+   }
+  },
+  "roles": [
+   "engineering"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Cursor 2.0/Composer 공식 발표",
+    "url": "https://cursor.com/blog/2-0"
+   },
+   {
+    "label": "Cursor Teams 요금제 개편 공식 블로그",
+    "url": "https://cursor.com/blog/teams-pricing-june-2026"
+   },
+   {
+    "label": "Cursor 공식 체인지로그",
+    "url": "https://cursor.com/changelog"
+   },
+   {
+    "label": "Cursor 가격 정책 논란 TechCrunch 보도",
+    "url": "https://techcrunch.com/2025/07/07/cursor-apologizes-for-unclear-pricing-changes-that-upset-users/"
+   },
+   {
+    "label": "Cursor G2 리뷰",
+    "url": "https://www.g2.com/sellers/cursor"
+   },
+   {
+    "label": "Cursor CVE-2025-64110 취약점 분석",
+    "url": "https://www.sentinelone.com/vulnerability-database/cve-2025-64110/"
+   },
+   {
+    "label": "Cursor 프롬프트 인젝션 RCE 취약점(DuneSlide) 보도",
+    "url": "https://www.securityweek.com/critical-cursor-ai-ide-flaws-could-lead-to-os-level-remote-code-execution/"
+   },
+   {
+    "label": "Cursor 엔터프라이즈 보안 가이드",
+    "url": "https://repello.ai/blog/cursor-security"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "midjourney": {
+  "sourceName": "Midjourney",
+  "verdict": "화풍과 이미지 품질은 독보적이고 V8.2로 속도까지 잡았지만, 공식 API 부재와 저작권 소송 리스크는 여전합니다.",
+  "scores": {
+   "functionality": 88,
+   "uiux": 68,
+   "reliability": 78,
+   "comfort": 65,
+   "pricing": 55
+  },
+  "impact": {
+   "judgmentSpeed": 8,
+   "thinkingDepth": 4,
+   "executionDensity": 8,
+   "collaborationClarity": 4
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": true
+  },
+  "pricingSummary": "Basic $10, Standard $30, Pro $60, Mega $120/월(연 결제 시 각 $8·$24·$48·$96)이며 이미지 수가 아니라 Fast GPU 시간(월 3.3·15·30·60시간)을 구매하는 구조입니다. 2023년 3월 무료 체험 폐지 이후 무료 플랜은 없고, Pro 이상에서만 생성물을 비공개(Stealth)로 유지할 수 있습니다.",
+  "koreaNote": "한국어 프롬프트도 인식하지만 영어 대비 해석 정확도가 낮다는 후기가 많고, 한국어 UI는 없어 Discord와 웹 모두 영어로 사용해야 합니다.",
+  "comparisons": [
+   {
+    "competitor": "DALL-E 3",
+    "better": "예술적 화풍의 완성도와 디테일 표현에서 꾸준히 더 높은 평가를 받습니다.",
+    "weaker": "ChatGPT에 내장돼 대화 맥락 안에서 바로 이미지를 생성·수정하는 편의성은 DALL-E 3 쪽이 앞섭니다."
+   },
+   {
+    "competitor": "Stable Diffusion",
+    "better": "별도 GPU 인프라나 모델 튜닝 없이 구독만으로 바로 고품질 결과를 얻을 수 있습니다.",
+    "weaker": "오픈소스 가중치를 로컬에 직접 설치해 무제한·상업적으로 자유롭게 커스터마이징하는 것은 Stable Diffusion만 가능합니다."
+   },
+   {
+    "competitor": "Adobe Firefly",
+    "better": "커뮤니티 갤러리와 독자적 화풍 생태계 덕에 스타일 다양성과 트렌드 반영 속도가 빠릅니다.",
+    "weaker": "Photoshop·Illustrator와의 네이티브 연동, 콘텐츠 자격 증명 기반 상업적 라이선스 보장은 Adobe Firefly가 더 명확합니다."
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-07-24",
+    "title": "V8.2 기본 모델 전환과 Edit Model 도입",
+    "change": "V8.2가 기본 버전이 되면서 미학·이미지 품질·개인화가 개선됐고, Omni Reference·Character Reference·Retexture를 대체하는 새 Edit Model이 도입됐습니다.",
+    "risk": "기존 --oref/--cref 기반 캐릭터 일관성 워크플로가 Edit Model로 바뀌어 프롬프트와 레퍼런스 설정을 다시 맞춰야 합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-04-14",
+    "title": "V8.1 출시: 렌더링 4~5배 가속",
+    "change": "표준 작업 렌더링이 4~5배 빨라지고 HD 모드가 3배 빠르고 3배 저렴해졌으며, 6월 10일부터 7월 23일까지 기본 버전으로 쓰였습니다.",
+    "risk": "무드보드·스타일 레퍼런스 결과가 V7과 달라져 브랜드 스타일 프리셋을 재검증해야 합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2025-06-18",
+    "title": "첫 영상 생성 모델 V1 공개",
+    "change": "정지 이미지를 'Animate' 버튼으로 짧은 영상 클립으로 확장하는 첫 비디오 모델을 출시했습니다. 자동 모션과 커스텀 모션 프롬프트 두 모드를 제공합니다.",
+    "risk": "영상 생성은 이미지보다 GPU 시간 소모가 훨씬 커 월 Fast 시간이 빨리 소진되고 예산 초과가 발생하기 쉽습니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2025-06-11",
+    "title": "Disney·Universal 저작권 침해 소송 피소",
+    "change": "디즈니와 NBCUniversal(드림웍스 포함)이 스타워즈·심슨·슈렉·미니언즈 등 캐릭터 무단 생성을 이유로 저작권 침해 소송을 제기했습니다. 할리우드 메이저 스튜디오가 AI 기업을 제소한 첫 사례입니다.",
+    "risk": "판결에 따라 특정 캐릭터·스타일 생성이 제한되거나, 기업이 상업적으로 쓰는 생성물에 법적 리스크가 생길 수 있습니다.",
+    "level": "high"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "상업물 저작권 점검",
+    "how": "생성 이미지를 광고·상품 패키지 등 대외용으로 쓰기 전, 유명 캐릭터·특정 작가 화풍 키워드가 프롬프트에 섞이지 않았는지 체크리스트로 확인합니다.",
+    "tip": "Disney·Universal 소송 사례처럼 캐릭터 지식재산권 분쟁 소지가 있는 결과물은 법무 검토 없이 상업적으로 배포하지 마세요."
+   },
+   {
+    "title": "무드보드 빠른 반복",
+    "how": "기획·마케팅팀이 Draft Mode로 다수 시안을 저비용으로 뽑은 뒤, 방향이 정해지면 고품질 모드로 소수만 재생성합니다.",
+    "tip": "초안 단계 이미지를 그대로 최종 산출물로 쓰지 말고, 반드시 고해상도 재생성·보정 단계를 거치세요."
+   },
+   {
+    "title": "브랜드 화풍 일관성 관리",
+    "how": "Omni-Reference와 스타일 참조 이미지를 팀 공용 프리셋으로 저장해 여러 담당자가 같은 톤의 이미지를 생성하도록 맞춥니다.",
+    "tip": "생성 계정과 프롬프트 기록을 팀 단위로 공유해, 담당자가 바뀌어도 브랜드 룩앤필이 흔들리지 않게 하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.4/5",
+    "note": "검증 리뷰 102건 기준, 2026-09 확인",
+    "url": "https://www.g2.com/products/midjourney/reviews"
+   },
+   {
+    "source": "Product Hunt",
+    "score": "확인 필요",
+    "note": "커뮤니티 리뷰가 있으나 이번 조사에서 수치를 확인하지 못했습니다",
+    "url": "https://www.producthunt.com/products/midjourney/reviews"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "none",
+    "note": "무료 플랜 없음(2023년 폐지)"
+   },
+   "koreanSupport": {
+    "level": "none",
+    "note": "한글 프롬프트 인식 취약"
+   },
+   "aiAssistant": {
+    "level": "partial",
+    "note": "프롬프트 기반, 대화형 아님"
+   },
+   "agentAutomation": {
+    "level": "none"
+   },
+   "apiIntegrations": {
+    "level": "none",
+    "note": "공식 API 없음"
+   },
+   "teamAdmin": {
+    "level": "partial",
+    "note": "Pro/Mega 팀 기능 제한적"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "이미지 다운로드"
+   },
+   "ssoSecurity": {
+    "level": "none"
+   },
+   "mobileApp": {
+    "level": "none",
+    "note": "공식 앱 없음(Discord 접속)"
+   },
+   "offlineLocal": {
+    "level": "none"
+   }
+  },
+  "roles": [
+   "design",
+   "marketing"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid"
+  ],
+  "sources": [
+   {
+    "label": "Midjourney 공식 문서: 모델 버전",
+    "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
+   },
+   {
+    "label": "Midjourney 공식 업데이트: V8.1 Alpha",
+    "url": "https://updates.midjourney.com/v8-1-alpha/"
+   },
+   {
+    "label": "VentureBeat: 첫 영상 모델 출시 보도",
+    "url": "https://venturebeat.com/business/surpassing-all-my-expectations-midjourney-releases-first-ai-video-model-amid-disney-universal-lawsuit"
+   },
+   {
+    "label": "CNBC: Disney·Universal 소송 보도",
+    "url": "https://www.cnbc.com/2025/06/11/disney-universal-midjourney-ai-copyright.html"
+   },
+   {
+    "label": "Costbench: 2026 요금제 정리",
+    "url": "https://costbench.com/software/ai-image-generators/midjourney/"
+   },
+   {
+    "label": "G2 Midjourney 리뷰",
+    "url": "https://www.g2.com/products/midjourney/reviews"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "canva": {
+  "sourceName": "Canva",
+  "verdict": "제작 속도와 팀 협업은 뛰어나고 AI 2.0으로 생성 폭이 커졌지만, AI 생성물의 저작권·브랜드 일관성 관리는 별도 규칙이 필요합니다.",
+  "scores": {
+   "functionality": 85,
+   "uiux": 90,
+   "reliability": 82,
+   "comfort": 83,
+   "pricing": 75
+  },
+  "impact": {
+   "judgmentSpeed": 8,
+   "thinkingDepth": 4,
+   "executionDensity": 8,
+   "collaborationClarity": 7
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": true
+  },
+  "pricingSummary": "Free 외에 Pro $18/월(연 $144), Business(구 Teams) 인당 $25/월(연 $250, 최소 인원 없음), Enterprise는 별도 협의입니다. 2024년 9월 Teams가 정액제에서 인당 과금으로 바뀌며 5인 팀 기준 연 $119.99에서 $500으로 오른 사례가 논란이 됐고, 이후 Canva는 가격 변경 60일 전 고지 원칙을 공개했습니다.",
+  "koreaNote": "한국어 UI(canva.com/ko_kr)와 다수의 한국어 폰트·템플릿을 지원해 학생·소상공인·마케터 사이에서 실무 활용도가 높고, 국내 블로그·유튜브에 튜토리얼 콘텐츠도 풍부합니다.",
+  "comparisons": [
+   {
+    "competitor": "Adobe Express",
+    "better": "Docs·Sheets·화이트보드까지 아우르는 Visual Suite로 디자인 외 업무 문서까지 한 플랫폼에서 처리합니다.",
+    "weaker": "포토샵·일러스트레이터급 정밀 편집과 색상 프로파일 관리는 Adobe 생태계에 연동된 Adobe Express가 더 강합니다."
+   },
+   {
+    "competitor": "Figma",
+    "better": "비전공자도 바로 쓸 수 있는 방대한 템플릿과 자동 리사이즈로 SNS·인쇄물 제작 속도가 훨씬 빠릅니다.",
+    "weaker": "정교한 컴포넌트·오토레이아웃 기반 프로덕트 UI 설계와 개발자 핸드오프는 Figma가 표준입니다."
+   },
+   {
+    "competitor": "Microsoft Designer",
+    "better": "브랜드 키트, 팀 승인 워크플로, 대규모 템플릿 라이브러리 등 팀 협업 기능이 훨씬 성숙합니다.",
+    "weaker": "Microsoft 365(파워포인트·워드)와의 네이티브 연동 및 기업 라이선스 번들 편의성은 Microsoft Designer가 유리합니다."
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-04",
+    "title": "Canva AI 2.0: Canva Design Model·Magic Layers 공개",
+    "change": "디자인 전용 파운데이션 모델 Canva Design Model과 대화형 디자인, 지속 메모리, gpt-image-2 연동 Magic Layers(AI 포스터를 편집 가능한 레이어로 분리), 6종의 지능형 워크플로를 공개했습니다.",
+    "risk": "AI 생성 비중이 커질수록 브랜드 키트 규칙과 충돌하는 결과물이 늘어나므로, 게시 전 승인 워크플로가 필요합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-10-30",
+    "title": "Affinity by Canva 완전 무료 재출시",
+    "change": "인수한 Affinity Designer·Photo·Publisher를 Vector·Pixel·Layout 탭을 가진 단일 Mac/Windows 앱으로 통합해, Canva 계정만 있으면 '영구 무료'로 제공하기 시작했습니다.",
+    "risk": "Canva 계정 로그인이 필수가 됐고, 무료 모델의 지속 가능성과 향후 AI 기능 유료화 여부를 지켜봐야 합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-04-10",
+    "title": "Canva Create 2025: Visual Suite 2.0 출시",
+    "change": "창사 이래 최대 규모 출시로 Canva Sheets(Magic Insights·Charts·Formulas), 프롬프트로 인터랙티브 콘텐츠를 만드는 Canva Code, 대화형 어시스턴트 Canva AI를 공개했습니다.",
+    "risk": "스프레드시트·코드 기능이 디자인 파일에 섞이면서 권한과 데이터 출처 관리가 복잡해질 수 있습니다.",
+    "level": "medium"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "브랜드 키트 표준화",
+    "how": "마케팅팀이 로고·컬러·폰트를 브랜드 키트에 등록하고, 전 부서 템플릿을 브랜드 키트 연동 템플릿으로만 배포합니다.",
+    "tip": "브랜드 키트 밖에서 임의로 만든 디자인은 배포 전 마케팅팀 승인 워크플로를 거치게 하세요."
+   },
+   {
+    "title": "AI 생성물 저작권 체크",
+    "how": "Magic Media로 만든 이미지를 대외 광고·패키지에 쓰기 전, 실존 인물·상표·캐릭터 요소가 포함되지 않았는지 디자인팀이 육안 검수합니다.",
+    "tip": "고위험(패키지, 옥외광고 등) 용도에는 AI 생성 이미지보다 라이선스가 명확한 스톡·자체 촬영 소재를 우선하세요."
+   },
+   {
+    "title": "문서·기획 통합 협업",
+    "how": "기획팀이 Canva Docs·Whiteboard로 기획안을 작성하고 Magic Switch로 발표 자료·SNS 카드뉴스로 바로 변환해 산출물 형식을 통일합니다.",
+    "tip": "여러 포맷으로 자동 변환한 결과물은 그대로 배포하지 말고, 포맷별 가독성(폰트 크기, 여백)을 담당자가 한 번씩 확인하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.7/5",
+    "note": "검증 리뷰 8,100건 이상 기준, 2026-09 확인",
+    "url": "https://www.g2.com/products/canva/reviews"
+   },
+   {
+    "source": "Trustpilot",
+    "score": "4.0/5",
+    "note": "리뷰 약 6,000건, 결제·환불 불만이 1점 리뷰의 주요 사유",
+    "url": "https://www.trustpilot.com/review/canva.com"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "full"
+   },
+   "koreanSupport": {
+    "level": "full"
+   },
+   "aiAssistant": {
+    "level": "full",
+    "note": "Magic Studio"
+   },
+   "agentAutomation": {
+    "level": "partial",
+    "note": "Bulk Create 등 규칙 기반"
+   },
+   "apiIntegrations": {
+    "level": "full",
+    "note": "Canva API/Connect 앱"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Business 이상"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "PDF/PNG/MP4 등"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Enterprise SSO/SCIM"
+   },
+   "mobileApp": {
+    "level": "full"
+   },
+   "offlineLocal": {
+    "level": "partial",
+    "note": "모바일 앱 일부만 오프라인"
+   }
+  },
+  "roles": [
+   "design",
+   "marketing",
+   "pm"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Canva 뉴스룸: Visual Suite 2.0 소개 (Canva Create 2025)",
+    "url": "https://www.canva.com/newsroom/news/canva-create-2025/"
+   },
+   {
+    "label": "Canva 뉴스룸: AI 출시 모음",
+    "url": "https://www.canva.com/newsroom/news/canva-ai-launches/"
+   },
+   {
+    "label": "MacRumors: Affinity 무료 재출시 보도",
+    "url": "https://www.macrumors.com/2025/10/31/canva-relaunches-affinity-free-app/"
+   },
+   {
+    "label": "Piktochart: 2026 Canva 요금제와 인상 이력",
+    "url": "https://piktochart.com/blog/canva-pricing-2026-costs-raised/"
+   },
+   {
+    "label": "Canva 공식 요금제",
+    "url": "https://www.canva.com/pricing/"
+   },
+   {
+    "label": "G2 Canva 리뷰",
+    "url": "https://www.g2.com/products/canva/reviews"
+   },
+   {
+    "label": "Trustpilot Canva 리뷰",
+    "url": "https://www.trustpilot.com/review/canva.com"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "notebooklm": {
+  "sourceName": "NotebookLM",
+  "verdict": "출처 기반 요약과 오디오·영상 개요는 강력하지만, 소스 개수와 고급 기능은 유료 등급에 따라 크게 갈립니다.",
+  "scores": {
+   "functionality": 87,
+   "uiux": 83,
+   "reliability": 78,
+   "comfort": 74,
+   "pricing": 72
+  },
+  "impact": {
+   "judgmentSpeed": 7,
+   "thinkingDepth": 6,
+   "executionDensity": 6,
+   "collaborationClarity": 6
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": false
+  },
+  "pricingSummary": "무료 플랜은 노트북당 소스 50개까지 지원하며, Plus 기능은 Google AI Pro(월 $19.99) 구독에 포함되고 Cinematic Video Overview 등 최상위 기능은 Google AI Ultra(월 $249.99)에서만 제공되며, 기업은 Google Cloud의 NotebookLM Enterprise(라이선스당 월 약 $9~)를 별도 계약합니다.",
+  "koreaNote": "한국어를 포함해 50개 이상 언어와 한국어 음성 오디오 개요를 지원하지만, 일부 사용자는 한국어 원문의 미묘한 뉘앙스 처리와 결과물 세부 편집에는 한계가 있다고 평가합니다.",
+  "comparisons": [
+   {
+    "competitor": "ChatGPT (Deep Research)",
+    "better": "업로드 소스에만 근거해 답하고 문장마다 출처를 표시해 환각 위험이 낮음",
+    "weaker": "실시간 웹 브라우징이나 코드 실행 등 범용 에이전트 작업은 ChatGPT 쪽이 더 폭넓음"
+   },
+   {
+    "competitor": "Perplexity",
+    "better": "업로드한 긴 문서·영상을 오디오·영상 개요 콘텐츠로 변환하는 기능은 Perplexity에 없음",
+    "weaker": "실시간 웹 검색과 최신 뉴스 반영 속도는 Perplexity가 더 빠름"
+   },
+   {
+    "competitor": "Notion AI",
+    "better": "여러 소스를 종합한 팟캐스트·영상 개요 자동 생성은 Notion AI에는 없는 기능",
+    "weaker": "문서 자체를 편집·정리하고 팀 위키로 축적하는 협업 문서 기능은 Notion AI가 훨씬 강함"
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-07",
+    "title": "'Gemini Notebook' 브랜드 통합 움직임(확인 필요)",
+    "change": "NotebookLM이 Gemini 제품군과 브랜드를 통합하며 'Gemini Notebook' 명칭으로 전환되는 정황이 포착됨",
+    "risk": "브랜드·URL 변경 과정에서 기존 북마크·워크플로 문서의 링크가 바뀔 수 있음",
+    "level": "low"
+   },
+   {
+    "date": "2026-06",
+    "title": "Cinematic Video Overview 출시(Gemini 3·Veo 3 기반)",
+    "change": "Gemini 3가 연출을 맡고 Veo 3·Nano Banana Pro로 애니메이션 영상 개요를 만드는 기능을 Google AI Ultra 구독자에 우선 공개",
+    "risk": "고가 Ultra 요금제 전용이라 대부분의 무료·Plus 사용자는 사용할 수 없음",
+    "level": "high"
+   },
+   {
+    "date": "2026-05",
+    "title": "Google I/O 2026에서 심층 리서치·Studio 업그레이드 공개",
+    "change": "구글이 I/O 2026에서 NotebookLM의 심층 리서치 기능과 개편된 Studio 패널을 공개",
+    "risk": "신기능이 지역·언어별로 순차 배포되어 동시 이용이 어려울 수 있음",
+    "level": "medium"
+   },
+   {
+    "date": "2025-09",
+    "title": "Video Overview 출시",
+    "change": "소스 속 시각자료를 활용해 내레이션이 있는 슬라이드형 Video Overview 기능을 새로 추가",
+    "risk": "생성 시간이 길고 소스 품질에 따라 슬라이드 구성 정확도가 달라질 수 있음",
+    "level": "medium"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "회의 전 리서치 브리핑",
+    "how": "관련 보고서·계약서·업계 뉴스를 노트북에 업로드하고 Audio Overview로 이동 중 들을 수 있는 브리핑을 생성",
+    "tip": "오디오 요약은 참고용으로만 쓰고 숫자·계약 조건 등 핵심 사실은 원문 소스에서 직접 재확인"
+   },
+   {
+    "title": "팀 온보딩 자료 제작",
+    "how": "사내 위키·정책 문서를 모아 노트북을 만들고 Video Overview와 인포그래픽으로 신규 입사자용 요약 자료 생성",
+    "tip": "민감한 인사·재무 문서는 Workspace 관리자 권한으로 접근이 제한된 노트북에만 업로드"
+   },
+   {
+    "title": "논문·리포트 비교 분석",
+    "how": "관련 논문 여러 편을 소스로 올리고 질문을 던져 출처 인용이 달린 비교 답변과 마인드맵을 생성",
+    "tip": "인용된 출처 번호를 눌러 원문 문장을 대조하는 습관화, 한국어 원문은 특히 재검증"
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "Apple App Store (Google NotebookLM)",
+    "score": "확인 필요",
+    "note": "리뷰는 대체로 긍정적이나 정확한 별점 수치는 확인되지 않음 (평가 데이터 부족)",
+    "url": "https://apps.apple.com/us/app/google-notebooklm/id6737527615"
+   },
+   {
+    "source": "Google Play (Google NotebookLM)",
+    "score": "확인 필요",
+    "note": "팟캐스트 요약·플래시카드는 호평, 정확한 별점 수치는 확인되지 않음 (평가 데이터 부족)",
+    "url": "https://play.google.com/store/apps/details?id=com.google.android.apps.labs.language.tailwind"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "full"
+   },
+   "koreanSupport": {
+    "level": "full",
+    "note": "오디오 개요 한국어 지원"
+   },
+   "aiAssistant": {
+    "level": "full"
+   },
+   "agentAutomation": {
+    "level": "none",
+    "note": "자료 기반 요약/응답 중심"
+   },
+   "apiIntegrations": {
+    "level": "partial",
+    "note": "Enterprise는 Cloud API 연동"
+   },
+   "teamAdmin": {
+    "level": "partial",
+    "note": "Workspace/Enterprise 결합 시"
+   },
+   "dataExport": {
+    "level": "partial",
+    "note": "노트/오디오 내보내기 제한적"
+   },
+   "ssoSecurity": {
+    "level": "full",
+    "note": "Workspace/Enterprise 결합 시"
+   },
+   "mobileApp": {
+    "level": "full"
+   },
+   "offlineLocal": {
+    "level": "partial",
+    "note": "오디오 개요만 오프라인 재생"
+   }
+  },
+  "roles": [
+   "research",
+   "pm",
+   "marketing"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "NotebookLM Video Overview 공식 발표 (Google Blog)",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/notebooklm-video-overviews-studio-upgrades/"
+   },
+   {
+    "label": "Google I/O 2026 NotebookLM 업데이트 (Google Blog)",
+    "url": "https://blog.google/innovation-and-ai/products/notebooklm/notebooklm-google-io-2026/"
+   },
+   {
+    "label": "NotebookLM 소스 한도 정리 (elephas.app)",
+    "url": "https://elephas.app/blog/notebooklm-source-limits"
+   },
+   {
+    "label": "NotebookLM 요금제 정리 (layer3labs)",
+    "url": "https://www.layer3labs.io/guides/notebooklm-pricing"
+   },
+   {
+    "label": "NotebookLM 2026년 변화 정리 (Jeff Su)",
+    "url": "https://www.jeffsu.org/notebooklm-changed-completely-heres-what-matters-in-2026/"
+   },
+   {
+    "label": "NotebookLM 한국어 사용 가이드 (carat.im)",
+    "url": "https://carat.im/blog/notebooklm-guide"
+   },
+   {
+    "label": "Google NotebookLM iOS 앱 페이지",
+    "url": "https://apps.apple.com/us/app/google-notebooklm/id6737527615"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "runway": {
+  "sourceName": "Runway",
+  "verdict": "자체 모델 품질과 편집력은 강하지만 초당 과금 크레딧과 반복된 소송·장애로 안정적 예산 관리가 어렵습니다.",
+  "scores": {
+   "functionality": 88,
+   "uiux": 78,
+   "reliability": 62,
+   "comfort": 55,
+   "pricing": 52
+  },
+  "impact": {
+   "judgmentSpeed": 7,
+   "thinkingDepth": 4,
+   "executionDensity": 8,
+   "collaborationClarity": 5
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": true
+  },
+  "pricingSummary": "Free(크레딧 125개 1회성)·Standard $12·Pro $28·Max $76(연간 기준, 월간은 약 25% 비쌈)이며 초당 2~25크레딧이 소모되고 과거 Unlimited 플랜은 Max로 통합되었습니다.",
+  "koreaNote": "한국어 프롬프트는 인식 품질이 크게 떨어져 영어로 번역해 입력하는 것이 권장됩니다.",
+  "comparisons": [
+   {
+    "competitor": "Higgsfield",
+    "better": "Aleph 2.0의 인컨텍스트 영상 편집(객체 추가/삭제, 재조명)은 아그리게이터형 서비스에는 없는 자체 기능입니다.",
+    "weaker": "Higgsfield는 Sora 2·Veo 3.1·Kling 3.0을 한 화면에서 비교 생성할 수 있지만 Runway는 자체 모델군으로 제한됩니다."
+   },
+   {
+    "competitor": "Pika",
+    "better": "Gen-4는 최대 20초 클립과 4K 업스케일, Director Mode 타임라인 편집으로 전문 후반작업에 더 적합합니다.",
+    "weaker": "Pika는 진입가가 낮고 UI가 단순해 짧은 소셜 클립을 빠르게 실험하기에는 더 가볍습니다."
+   },
+   {
+    "competitor": "Luma AI",
+    "better": "Aleph의 영상 편집 기능과 Workflows·API 파이프라인은 VFX·후반작업 통합에 더 강합니다.",
+    "weaker": "Luma의 Ray 계열 모델은 단순 텍스트-투-비디오 생성에서 속도와 비용 면에서 더 가볍다는 평가를 받습니다."
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-06-02",
+    "title": "Aleph 2.0 API 전환, 구모델 단종",
+    "change": "Aleph 2.0이 API에 도입되고 7월 30일부로 기존 Gen-4 Aleph·Gen-3 Alpha Turbo API 모델 ID가 단종되었습니다.",
+    "risk": "구모델 ID로 연동된 자동화 파이프라인은 마이그레이션하지 않으면 호출이 실패합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2026-02-24",
+    "title": "유튜브 학습데이터 저작권 집단소송 확대",
+    "change": "유튜브 영상을 무단 스크래핑해 모델 학습에 사용했다는 의혹으로 DMCA 위반을 주장하는 저작권 집단소송이 잇따라 제기되었습니다.",
+    "risk": "생성물에 특정 크리에이터·브랜드 스타일이 반영될 경우 저작권 분쟁에 휘말릴 가능성이 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-02-10",
+    "title": "시리즈 E 3.15억 달러 투자",
+    "change": "General Atlantic 주도로 Nvidia·Adobe Ventures·AMD Ventures·Fidelity 등이 참여한 3.15억 달러 시리즈 E를 유치해 기업가치가 53억 달러로 상승했습니다.",
+    "risk": "빠른 밸류에이션 상승이 향후 크레딧 단가 인상이나 무료 크레딧 축소 압력으로 이어질 수 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-07-31",
+    "title": "Aleph(Gen-4 Aleph) 유료 플랜 출시",
+    "change": "텍스트 프롬프트만으로 기존 영상의 객체 추가/삭제, 재조명, 스타일 변경, 새 카메라 앵글 생성이 가능한 인컨텍스트 영상 편집 모델을 공개했습니다.",
+    "risk": "편집 결과가 원본 저작물을 크게 변형하므로 소재의 저작권·라이선스 확인이 더 중요해집니다.",
+    "level": "medium"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "샷 편집 자동화",
+    "how": "완성된 촬영본을 Aleph에 업로드해 배경 교체·재조명·카메라 앵글 변형을 프롬프트로 지시합니다.",
+    "tip": "초당 크레딧이 빠르게 소모되므로 저해상도 프리뷰로 먼저 확인한 뒤 최종 렌더링합니다."
+   },
+   {
+    "title": "광고 클립 대량 생산",
+    "how": "Director Mode에서 20초 클립을 Extend로 이어붙이고 Team 플랜 Brand Kit으로 톤을 통일합니다.",
+    "tip": "Pro 이상에서 4K 업스케일을 쓰되 월별 크레딧 상한을 팀 단위로 미리 배분합니다."
+   },
+   {
+    "title": "레퍼런스 저작권 점검",
+    "how": "실존 인물·타사 영상을 참조로 쓸 때는 업로드 전 라이선스와 초상권 동의 여부를 확인합니다.",
+    "tip": "진행 중인 저작권 소송 사례를 참고해 상업 캠페인 전 법무 검토를 거치는 것을 권장합니다."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "확인 필요",
+    "note": "리뷰 78건 이상 존재하나 정확한 평균 별점은 접근 제한으로 확인하지 못함, 2026-09 확인 시도",
+    "url": "https://www.g2.com/products/runway-2022-01-04/reviews"
+   },
+   {
+    "source": "App Store",
+    "score": "4.48/5",
+    "note": "평가 약 1.2만 건 기준, 2026-09 확인",
+    "url": "https://apps.apple.com/us/app/runwayml/id1665024375"
+   },
+   {
+    "source": "Google Play",
+    "score": "4.06/5",
+    "note": "평가 약 4,600건 기준, 2026-09 확인",
+    "url": "https://play.google.com/store/apps/details?id=com.runwayml.prod"
+   },
+   {
+    "source": "Product Hunt",
+    "score": "확인 필요",
+    "note": "리뷰는 다수 존재하나 종합 평점 수치는 확인하지 못함",
+    "url": "https://www.producthunt.com/products/runwayml/reviews"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "partial",
+    "note": "125크레딧 1회성, 매달 재충전 없음"
+   },
+   "koreanSupport": {
+    "level": "none",
+    "note": "한국어 UI 미지원, 프롬프트 품질 저하"
+   },
+   "aiAssistant": {
+    "level": "none"
+   },
+   "agentAutomation": {
+    "level": "partial",
+    "note": "Workflows로 다단계 파이프라인 수동 구성"
+   },
+   "apiIntegrations": {
+    "level": "full",
+    "note": "REST API, Picsart 등 외부 연동"
+   },
+   "teamAdmin": {
+    "level": "partial",
+    "note": "세부 권한은 Enterprise부터 제공"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "MP4·이미지, 4K 업스케일 내보내기"
+   },
+   "ssoSecurity": {
+    "level": "partial",
+    "note": "Enterprise 플랜부터 SSO·감사로그"
+   },
+   "mobileApp": {
+    "level": "full",
+    "note": "iOS·Android 앱 제공"
+   },
+   "offlineLocal": {
+    "level": "none"
+   }
+  },
+  "roles": [
+   "design",
+   "marketing",
+   "engineering"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "Runway 2026 요금제 정리",
+    "url": "https://www.eesel.ai/blog/runway-ai-pricing"
+   },
+   {
+    "label": "TechCrunch, 시리즈 E 3.15억 달러 투자 보도",
+    "url": "https://techcrunch.com/2026/02/10/ai-video-startup-runway-raises-315m-at-5-3b-valuation-eyes-more-capable-world-models/"
+   },
+   {
+    "label": "Runway API 체인지로그(Aleph 2.0 전환)",
+    "url": "https://docs.dev.runwayml.com/api-details/api_changelog/"
+   },
+   {
+    "label": "Runway 무료 플랜 안내",
+    "url": "https://help.runwayml.com/hc/en-us/articles/50404627334547-Free-plan-details"
+   },
+   {
+    "label": "Runway 이용권(Usage rights) 안내",
+    "url": "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights"
+   },
+   {
+    "label": "유튜버 저작권 집단소송 보도",
+    "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N3ZK172:0-youtuber-sues-runway-ai-in-latest-copyright-class-action-over-ai-training/"
+   },
+   {
+    "label": "Runway Gen-4 최대 클립 길이 안내",
+    "url": "https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video"
+   },
+   {
+    "label": "Runway 팀 플랜 소개",
+    "url": "https://runway.com/news/company-news/introducing-team-plan"
+   }
+  ],
+  "checkedAt": "2026-09"
+ },
+ "elevenlabs": {
+  "sourceName": "ElevenLabs",
+  "verdict": "가장 자연스러운 목소리를 빠르게 만들지만, 크레딧 요금제와 음성 도용 리스크는 직접 관리해야 합니다.",
+  "scores": {
+   "functionality": 92,
+   "uiux": 80,
+   "reliability": 70,
+   "comfort": 65,
+   "pricing": 58
+  },
+  "impact": {
+   "judgmentSpeed": 8,
+   "thinkingDepth": 3,
+   "executionDensity": 8,
+   "collaborationClarity": 4
+  },
+  "badges": {
+   "timeSaver": true,
+   "thinkCarefully": true,
+   "lockinRisk": true
+  },
+  "pricingSummary": "Free(월 1만 크레딧)부터 Starter $6, Creator $22, Pro $99, Scale $299, Business $990까지 크레딧제 요금이며, 2025년에만 세 차례 크레딧 체계가 개편되고 2025년 11월부터 대화형 에이전트 사용 분도 플랜에 포함됐습니다.",
+  "koreaNote": "Eleven v3부터 한국어 발음 자연스러움이 크게 개선됐지만 UI와 공식 지원은 영어 중심이라, 국내 이용자들은 Voice Library에서 커뮤니티가 공유한 한국어 PVC 음성을 찾아 쓰는 경우가 많습니다.",
+  "comparisons": [
+   {
+    "competitor": "OpenAI TTS",
+    "better": "Professional Voice Cloning과 70개 이상 언어의 감정 태그(Eleven v3)를 지원해 표현력이 더 풍부합니다.",
+    "weaker": "OpenAI TTS는 ChatGPT·API 생태계에 기본 내장돼 있어 별도 가입 없이 더 저렴하게 붙여 쓸 수 있습니다."
+   },
+   {
+    "competitor": "Murf",
+    "better": "음성의 사실감과 실시간 대화형 에이전트(ElevenAgents) 구축에서 앞서 있습니다.",
+    "weaker": "Murf는 템플릿 기반 협업과 팀 프레젠테이션·교육 영상 제작 워크플로우가 더 정돈돼 있습니다."
+   },
+   {
+    "competitor": "Play.ht",
+    "better": "Voice Library 규모와 Dubbing 품질, 감정 표현이 필요한 콘텐츠에서 우위에 있습니다.",
+    "weaker": "Play.ht는 API 기반 음성 에이전트 구축 비용이 더 저렴해 예산이 빠듯한 팀에 유리합니다."
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-05-11",
+    "title": "BIPA 집단소송 피소",
+    "change": "일리노이주 저널리스트·성우 7인이 동의 없는 음성 학습을 이유로 ElevenLabs 등을 상대로 BIPA 집단소송을 제기했습니다.",
+    "risk": "동의 없는 음성 학습에 대한 법적·평판 리스크가 해당 음성을 활용한 기업 이용자에게도 전이될 수 있습니다.",
+    "level": "high"
+   },
+   {
+    "date": "2026-02-04",
+    "title": "시리즈 D $500M 유치, 기업가치 $11B",
+    "change": "Sequoia Capital 주도로 5억 달러 시리즈 D를 유치하며 기업가치가 110억 달러로 1년 만에 3배 이상 상승했습니다.",
+    "risk": "급성장에 따른 요금제·정책 변경이 잦아 비용 계획을 자주 재점검해야 합니다.",
+    "level": "medium"
+   },
+   {
+    "date": "2026-02-02",
+    "title": "Eleven v3 정식 출시(GA)",
+    "change": "감정 오디오 태그와 70개 이상 언어를 지원하는 Eleven v3가 알파를 벗어나 정식 출시됐습니다.",
+    "risk": "v3는 지연시간이 길어 실시간 대화에는 부적합하므로 용도에 따라 Flash 모델과 구분해 써야 합니다.",
+    "level": "high"
+   },
+   {
+    "date": "2025-11",
+    "title": "Iconic 마켓플레이스 및 크리에이터 보상 확대",
+    "change": "Michael Caine 등 유명인의 음성을 동의 기반으로 라이선싱하는 Iconic 마켓플레이스를 출시했고, 음성 크리에이터 누적 지급액이 6개월 만에 2배로 늘었습니다.",
+    "risk": "동의 기반 라이선싱 밖에서 이뤄지는 무단 음성 복제는 여전히 별도의 소송 리스크로 남아 있습니다.",
+    "level": "medium"
+   }
+  ],
+  "playbook": [
+   {
+    "title": "나레이션 제작 표준화",
+    "how": "Eleven v3의 오디오 태그와 Professional Voice Cloning으로 브랜드 보이스를 하나 만들고, 스크립트에 [pause]·[excited] 같은 태그를 넣어 톤을 통제합니다.",
+    "tip": "브랜드 보이스로 쓸 목소리는 성우와 서면 동의·이용 범위 계약을 먼저 맺고 사용 이력을 기록으로 남기세요."
+   },
+   {
+    "title": "다국어 더빙 파이프라인",
+    "how": "Dubbing 기능으로 원본 영상 화자의 감정과 타이밍을 유지한 채 여러 언어 버전을 한 번에 생성합니다.",
+    "tip": "언어별로 원어민 검수를 한 단계 거쳐 발음 오류나 어색한 억양을 배포 전에 반드시 걸러내세요."
+   },
+   {
+    "title": "상담 에이전트 자동화",
+    "how": "ElevenAgents로 전화·WhatsApp 상담 봇을 만들고 MCP·API 툴콜로 예약·조회 같은 실제 업무를 연결합니다.",
+    "tip": "플랜에 포함된 Agents 사용 분(월 한도)과 초과 과금 구조를 먼저 계산해 크레딧 소진 리스크를 관리하세요."
+   }
+  ],
+  "externalRatings": [
+   {
+    "source": "G2",
+    "score": "4.5/5",
+    "note": "리뷰 1,140건 기준, 2026-09 확인",
+    "url": "https://www.g2.com/products/elevenlabsio/reviews"
+   },
+   {
+    "source": "App Store (ElevenReader)",
+    "score": "4.7/5",
+    "note": "ElevenLabs 공식 리더 앱 기준, 2026-09 확인",
+    "url": "https://apps.apple.com/us/app/elevenreader-read-books-aloud/id6479373050"
+   },
+   {
+    "source": "Capterra",
+    "score": "확인 필요",
+    "note": "종합 평점 수치 확인 어려움(확인 필요)",
+    "url": "https://capterra.com/p/10013392/ElevenLabs/reviews/"
+   }
+  ],
+  "capabilities": {
+   "freePlan": {
+    "level": "partial",
+    "note": "월 1만 크레딧, 상업 이용 제한"
+   },
+   "koreanSupport": {
+    "level": "partial",
+    "note": "음성 품질 개선, UI는 영어 중심"
+   },
+   "aiAssistant": {
+    "level": "full",
+    "note": "ElevenAgents 대화형 음성 AI"
+   },
+   "agentAutomation": {
+    "level": "full",
+    "note": "MCP·API 툴콜 기반 다단계 자동화"
+   },
+   "apiIntegrations": {
+    "level": "full",
+    "note": "TTS·Agents 공개 API 제공"
+   },
+   "teamAdmin": {
+    "level": "full",
+    "note": "Business/Enterprise 워크스페이스"
+   },
+   "dataExport": {
+    "level": "full",
+    "note": "MP3/WAV 다운로드"
+   },
+   "ssoSecurity": {
+    "level": "partial",
+    "note": "Enterprise 플랜 전용 SSO"
+   },
+   "mobileApp": {
+    "level": "partial",
+    "note": "리더 앱만 있고 편집 앱은 없음"
+   },
+   "offlineLocal": {
+    "level": "none"
+   }
+  },
+  "roles": [
+   "marketing",
+   "design",
+   "ops"
+  ],
+  "teamFit": [
+   "solo",
+   "small",
+   "mid",
+   "large"
+  ],
+  "sources": [
+   {
+    "label": "ElevenLabs 공식 요금제(한국어)",
+    "url": "https://elevenlabs.io/ko/pricing"
+   },
+   {
+    "label": "Eleven v3 정식 출시 공식 발표",
+    "url": "https://elevenlabs.io/blog/eleven-v3-is-now-generally-available"
+   },
+   {
+    "label": "시리즈 D 펀딩 공식 발표",
+    "url": "https://elevenlabs.io/blog/series-d"
+   },
+   {
+    "label": "저널리스트 BIPA 집단소송 보도",
+    "url": "https://chicago.suntimes.com/technology/2026/05/19/tech-giants-sued-over-stealing-voices-of-well-known-journalists-voice-actors-to-train-ai"
+   },
+   {
+    "label": "Iconic 마켓플레이스·할리우드 배우 파트너십 발표",
+    "url": "https://www.businesswire.com/news/home/20251111704426/en/ElevenLabs-Announces-Partnerships-with-Iconic-Hollywood-Actors"
+   },
+   {
+    "label": "ElevenLabs G2 리뷰",
+    "url": "https://www.g2.com/products/elevenlabsio/reviews"
+   },
+   {
+    "label": "ElevenLabs vs Murf vs Play.ht 비교",
+    "url": "https://genesysgrowth.com/blog/elevenlabs-vs-playht-vs-murf"
+   },
+   {
+    "label": "Consumer Reports 음성 클로닝 안전장치 평가",
+    "url": "https://innovation.consumerreports.org/?p=10509"
+   }
+  ],
+  "checkedAt": "2026-09"
+ }
+}
