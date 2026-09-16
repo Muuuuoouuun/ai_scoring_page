@@ -1,0 +1,8 @@
+{
+  "body": "서버 연결 중단과 복구를 확인하기 위한 로컬 테스트 글입니다. 실제 서비스의 사용자 경험이나 평가가 아닙니다.",
+  "consent": true,
+  "error": "연결 상태를 확인해주세요. 저장을 요청했다면 목록에서 처리 결과를 확인한 뒤 다시 시도해주세요.",
+  "submitDisabled": false,
+  "title": "[로컬 검증] 연결 실패 후 재시도",
+  "url": "http://localhost:5173/community?write=question&tool=claude"
+}

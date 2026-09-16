@@ -1,0 +1,25 @@
+{
+  "scroll": {
+    "height": 7058,
+    "width": 375,
+    "x": 0,
+    "y": 1266
+  },
+  "url": "http://localhost:5173/my?tab=savings",
+  "viewport": {
+    "doc": 375,
+    "height": 844,
+    "scale": 1,
+    "width": 390
+  },
+  "visibleText": [
+    "1회 청구 금액 · KRW",
+    "통화KRWUSDEURJPY",
+    "결제 주기매월3개월마다매년개월 간격 지정한 번만 청구",
+    "결제 간격 (개월)",
+    "새 요금제 첫 청구일",
+    "세금미확인입력 금액에 포함별도 부과",
+    "별도 세금 · 1회 총액 · KRW",
+    "좌석·사용량·할인·청구 기준일"
+  ]
+}

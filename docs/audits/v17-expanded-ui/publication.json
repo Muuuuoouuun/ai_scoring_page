@@ -1,0 +1,58 @@
+{
+  "source": "97022e07918cc0254a252b6e7a219e35fb00e9bb",
+  "access": {
+    "id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+    "role": "owner",
+    "access_mode": "custom",
+    "allowed_accounts": 1,
+    "external_visitors": 0,
+    "workspace_groups": 0,
+    "tenant_groups": 0,
+    "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site"
+  },
+  "version": {
+    "id": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_7706ab31eb948191ad712d969e4053e3",
+    "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+    "version_number": 19,
+    "source": {
+      "commit_sha": "97022e07918cc0254a252b6e7a219e35fb00e9bb"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000e3d08209a053d1a1b2fe1b3d",
+      "content_hash": "sha256:157e6f6e05128402f87f9ef057bd6460f4aeaf540f1fcd30e44dd8ec7140131e",
+      "size_bytes": 3031040,
+      "file_count": 218
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6aa57fa607b8819195b104c892a52351",
+    "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+    "title": "AIs — AI·SaaS 탐색과 활용",
+    "version_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_7706ab31eb948191ad712d969e4053e3",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6aa42f3ab3ec81919d0048d508baa661",
+    "failure_message": null,
+    "env_set_revision": 2,
+    "updated_at": "2026-09-12T16:37:26.448721+00:00"
+  },
+  "worker": {
+    "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+    "events": []
+  },
+  "checks": {
+    "diffCheck": "exit 0",
+    "typecheck": "npx tsc --noEmit exit 0",
+    "build": "Sites build helper: all 5 phases exit 0",
+    "functionalRegressionSuite": "259 PASS from V16, not rerun for CSS/copy-only V17",
+    "productionHomeErrors": [],
+    "productionPaymentForm": "Button disabled because production account has no subscriptions; no records created for a screenshot",
+    "handoff": "Stable tab dc55a816-fe99-468b-9178-d709dbbcd998 reloaded/marked deliverable; open_in_codex queued",
+    "native": "Mac initially locked, later inventory available; native Chrome first mutation rejected due user changing app. Requeried, made no new browser/VoiceOver changes, coordination question pending."
+  }
+}

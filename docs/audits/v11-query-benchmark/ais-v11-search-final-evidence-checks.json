@@ -1,0 +1,359 @@
+{
+  "checkedAt": "2026-09-12T11:57:23.912Z",
+  "sourceHash": "5a4d5a9ba272efb042920712214f7dce1e8c00ef0434adb7a468eaad010a9e80",
+  "sourceUnchangedDuringRun": true,
+  "featureQueries": 73,
+  "returnedFeatureChecks": 347,
+  "coveredProducts": [
+    "canva",
+    "chatgpt",
+    "claude",
+    "claude-fable-5-1",
+    "cursor",
+    "figma",
+    "gemini",
+    "gemini-3-8-flash",
+    "github-copilot",
+    "gpt-6-astra",
+    "linear",
+    "make",
+    "midjourney",
+    "notebooklm",
+    "notion",
+    "perplexity",
+    "slack",
+    "supabase",
+    "vercel",
+    "zapier"
+  ],
+  "allReturnedFeaturesAndUsesEqualOwnCatalogOriginal": true,
+  "catalogUnchanged": true,
+  "edges": [
+    {
+      "q": "비상업용 웹 배포",
+      "meaning": {
+        "positive": "비  웹 배포",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [
+          "상업용 사용"
+        ],
+        "free": false
+      },
+      "top6": [
+        {
+          "id": "vercel",
+          "unverifiedRequirements": [
+            "상업용 사용"
+          ],
+          "features": [
+            "저장소 기반 배포",
+            "트래픽·성능 확인",
+            "CDN·컴퓨팅"
+          ]
+        }
+      ]
+    },
+    {
+      "q": "상업용은 필요 없고 웹 앱 배포",
+      "meaning": {
+        "positive": "고 웹 앱 배포",
+        "exclusions": [],
+        "unresolvedExclusions": [
+          "은"
+        ],
+        "requirements": [
+          "상업용 사용"
+        ],
+        "free": false
+      },
+      "top6": [
+        {
+          "id": "vercel",
+          "unverifiedRequirements": [
+            "상업용 사용"
+          ],
+          "features": [
+            "저장소 기반 배포",
+            "트래픽·성능 확인",
+            "CDN·컴퓨팅"
+          ]
+        }
+      ]
+    },
+    {
+      "q": "오프라인은 필요 없고 문서 요약",
+      "meaning": {
+        "positive": "고 문서 요약",
+        "exclusions": [],
+        "unresolvedExclusions": [
+          "은"
+        ],
+        "requirements": [
+          "오프라인 사용"
+        ],
+        "free": false
+      },
+      "top6": [
+        {
+          "id": "gemini",
+          "unverifiedRequirements": [
+            "오프라인 사용"
+          ],
+          "features": [
+            "대화·문서 분석"
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "unverifiedRequirements": [
+            "오프라인 사용"
+          ],
+          "features": [
+            "문서·시각 자료 분석"
+          ]
+        },
+        {
+          "id": "claude",
+          "unverifiedRequirements": [
+            "오프라인 사용"
+          ],
+          "features": [
+            "글 작성·수정"
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "unverifiedRequirements": [
+            "오프라인 사용"
+          ],
+          "features": [
+            "다양한 자료 가져오기"
+          ]
+        },
+        {
+          "id": "perplexity",
+          "unverifiedRequirements": [
+            "오프라인 사용"
+          ],
+          "features": [
+            "파일 분석",
+            "Research"
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "unverifiedRequirements": [
+            "오프라인 사용"
+          ],
+          "features": []
+        }
+      ]
+    },
+    {
+      "q": "무제한이 아닌 문서 요약",
+      "meaning": {
+        "positive": "문서 요약",
+        "exclusions": [],
+        "unresolvedExclusions": [
+          "이"
+        ],
+        "requirements": [
+          "사용량 무제한"
+        ],
+        "free": false
+      },
+      "top6": [
+        {
+          "id": "gemini",
+          "unverifiedRequirements": [
+            "사용량 무제한"
+          ],
+          "features": [
+            "대화·문서 분석"
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "unverifiedRequirements": [
+            "사용량 무제한"
+          ],
+          "features": [
+            "문서·시각 자료 분석"
+          ]
+        },
+        {
+          "id": "claude",
+          "unverifiedRequirements": [
+            "사용량 무제한"
+          ],
+          "features": [
+            "글 작성·수정"
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "unverifiedRequirements": [
+            "사용량 무제한"
+          ],
+          "features": [
+            "다양한 자료 가져오기"
+          ]
+        },
+        {
+          "id": "perplexity",
+          "unverifiedRequirements": [
+            "사용량 무제한"
+          ],
+          "features": [
+            "파일 분석",
+            "Research"
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "unverifiedRequirements": [
+            "사용량 무제한"
+          ],
+          "features": []
+        }
+      ]
+    },
+    {
+      "q": "인터넷 연결 없이 기기 안에서만 문서를 요약",
+      "meaning": {
+        "positive": "문서를 요약",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [
+          "오프라인 사용",
+          "기기 내부에서만 처리"
+        ],
+        "free": false
+      },
+      "top6": [
+        {
+          "id": "gemini",
+          "unverifiedRequirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": [
+            "대화·문서 분석"
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "unverifiedRequirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": [
+            "문서·시각 자료 분석"
+          ]
+        },
+        {
+          "id": "claude",
+          "unverifiedRequirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": [
+            "글 작성·수정"
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "unverifiedRequirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": [
+            "다양한 자료 가져오기"
+          ]
+        },
+        {
+          "id": "perplexity",
+          "unverifiedRequirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": [
+            "파일 분석",
+            "Research"
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "unverifiedRequirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": []
+        }
+      ]
+    },
+    {
+      "q": "무료 플랜에서 한 번의 입력으로 네 단계 자동화",
+      "meaning": {
+        "positive": "무료 플랜에서 한 번의 입력으로   자동화",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [
+          "네 단계 처리"
+        ],
+        "free": true
+      },
+      "top6": [
+        {
+          "id": "zapier",
+          "unverifiedRequirements": [
+            "네 단계 처리의 무료 플랜 이용 범위"
+          ],
+          "features": [
+            "트리거·액션 자동화",
+            "Tables·Forms",
+            "다단계 워크플로"
+          ]
+        },
+        {
+          "id": "make",
+          "unverifiedRequirements": [
+            "네 단계 처리의 무료 플랜 이용 범위"
+          ],
+          "features": [
+            "Make AI Agents",
+            "시각적 워크플로"
+          ]
+        }
+      ]
+    },
+    {
+      "q": "무료로 그룹 허들 회의를 하고 싶어요",
+      "meaning": {
+        "positive": "무료로 그룹 허들 회의를 하고 싶어요",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": true
+      },
+      "top6": [
+        {
+          "id": "slack",
+          "unverifiedRequirements": [],
+          "features": [
+            "허들",
+            "AI 요약"
+          ]
+        },
+        {
+          "id": "gemini",
+          "unverifiedRequirements": [],
+          "features": [
+            "Gemini Live"
+          ]
+        }
+      ]
+    }
+  ]
+}

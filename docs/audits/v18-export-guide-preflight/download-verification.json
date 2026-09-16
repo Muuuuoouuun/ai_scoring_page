@@ -1,0 +1,83 @@
+{
+  "source": "97022e07918cc0254a252b6e7a219e35fb00e9bb",
+  "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/my?tab=settings",
+  "flow": "내 계정 → 설정 → 내 기록 내보내기",
+  "downloadEventObserved": true,
+  "file": "/Users/bigmac_moon/Downloads/ais-my-records.json",
+  "bytes": 685,
+  "sha256": "bc59822619586148f29ac05f306f4144b736b5c9dab503ff0c52996f07c3b482",
+  "fileModifiedAt": "2026-09-12T16:56:11.035935+00:00",
+  "exportedAt": "2026-09-12T16:56:13.285Z",
+  "requiredSections": [
+    "records",
+    "posts",
+    "notifications",
+    "notificationCards",
+    "feedback",
+    "emailDeliveries",
+    "emailOutbox",
+    "emailSchedule"
+  ],
+  "counts": {
+    "records": 0,
+    "posts": 1,
+    "notifications": 0,
+    "notificationCards": 0,
+    "feedback": 0,
+    "emailDeliveries": 0,
+    "emailOutbox": 0,
+    "emailSchedule": 0
+  },
+  "rowKeys": {
+    "records": [],
+    "posts": [
+      [
+        "affiliation",
+        "author",
+        "body",
+        "created_at",
+        "id",
+        "kind",
+        "parent_id",
+        "plan",
+        "ratings",
+        "status",
+        "task",
+        "title",
+        "tool_id",
+        "updated_at",
+        "used_at"
+      ]
+    ],
+    "notifications": [],
+    "notificationCards": [],
+    "feedback": [],
+    "emailDeliveries": [],
+    "emailOutbox": [],
+    "emailSchedule": []
+  },
+  "recordsPayloadsObjects": {
+    "observedRows": 0,
+    "result": "not exercised: records array empty"
+  },
+  "emailDeliveryItemsArrays": {
+    "observedRows": 0,
+    "result": "not exercised: emailDeliveries array empty"
+  },
+  "privateValuesPrinted": false,
+  "destructiveActionPerformed": false,
+  "gate854": "UNVERIFIED; partial actual export download evidence only",
+  "uiChecks": {
+    "title": "AIs — AI·SaaS 탐색과 활용",
+    "meaningfulContent": true,
+    "frameworkErrorOverlay": false,
+    "consoleErrors": [],
+    "viewport": {
+      "width": 410,
+      "height": 783,
+      "documentWidth": 395,
+      "scrollWidth": 395
+    },
+    "postDownloadPageUnchanged": true
+  }
+}

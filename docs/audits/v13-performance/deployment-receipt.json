@@ -1,0 +1,43 @@
+{
+  "source": "ac64bc580e198ca8e7a3f7342752a5e28a6b097e",
+  "access": {
+    "id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+    "role": "owner",
+    "mode": "custom",
+    "accounts": 1,
+    "external": 0,
+    "workspaceGroups": 0,
+    "tenantGroups": 0
+  },
+  "version": {
+    "id": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_285a1d6ecb988191aac8bdcb8f88e3ce",
+    "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+    "version_number": 15,
+    "source": {
+      "commit_sha": "ac64bc580e198ca8e7a3f7342752a5e28a6b097e"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_000000005d28820694bdab030ae109f5",
+      "content_hash": "sha256:0e759cc11db7592989cff2794b2740eb8355a90d909c15e13fdc6c875ce46feb",
+      "size_bytes": 2908160,
+      "file_count": 211
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6aa54fe9ce5081918de98dd05f82cf80",
+    "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+    "title": "AIs — AI·SaaS 탐색과 활용",
+    "version_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_285a1d6ecb988191aac8bdcb8f88e3ce",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6aa42f3ab3ec81919d0048d508baa661",
+    "failure_message": null,
+    "env_set_revision": 2,
+    "updated_at": "2026-09-12T13:13:28.082461+00:00"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "archiveBytes": 829753,
+  "archiveSHA256": "0759c87b19db2f88f1f3fda1c0d679bd0b7b45fad77ee580bd77d899a1ae5da6",
+  "entries": 462,
+  "worker": true,
+  "manifest": true,
+  "migrations": true,
+  "envFiles": false,
+  "appleDoubleEntries": 231,
+  "nonAppleDoubleEntries": 231,
+  "nonAppleDoubleFiles": 211
+}

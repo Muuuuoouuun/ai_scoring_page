@@ -1,0 +1,29 @@
+CORRECTION_EXPIRY {"correctionCalls":2,"requests":[{"key":"ais-delivery-ba1d47f0-9e73-45af-9c10-2b07adc72817","text":"미국 대학생 Google AI Pro 12개월 무료\n자격을 인증한 미국 대학생에게 등록일부터 12개월간 Google AI Pro를 무료로 제공하는 공식 학생 혜택입니다. · 관심 서비스 · 대상: 미국 · 등록 마감 2026-09-12 2026-09-12T10:02:00Z · 혜택 USD 0 / 월 · 세금 포함 · 갱신 USD 20 / 월 · 세금 포함 · 혜택 등록일부터 12개월 · 입력한 조건과 일치 · 신청 시 공식 재확인 필요\n내용 보기: https://example.invalid/promotions#audit-offer\n\nGemini 업데이트\nWindows용 Gemini 앱 출시 · Windows 10 이상에서 단축키로 Gemini를 호출하고 전용 데스크톱 작업공간을 사용할 수 있게 되었습니다.\n내용 보기: https://example.invalid/news/gemini\n\n수신 설정 변경: https://example.invalid/my?tab=settings"},{"key":"ais-delivery-625f46e5-a45f-41a5-a66a-5c18f98b7339","text":"정정 · 미국 대학생 Google AI Pro 12개월 무료\n기존 혜택 안내의 조건이 변경되었습니다. 자격을 인증한 미국 대학생에게 등록일부터 12개월간 Google AI Pro를 무료로 제공하는 공식 학생 혜택입니다. · 관심 서비스 · 대상: 미국 · 등록 마감 2026-09-12 2026-09-12T10:02:00Z · 혜택 USD 5 / 월 · 세금 포함 · 갱신 USD 20 / 월 · 세금 포함 · 혜택 등록일부터 12개월 · 입력한 조건과 일치 · 신청 시 공식 재확인 필요\n내용 보기: https://example.invalid/promotions#audit-offer\n\n수신 설정 변경: https://example.invalid/my?tab=settings"},{"key":"ais-delivery-625f46e5-a45f-41a5-a66a-5c18f98b7339","text":"정정 · 미국 대학생 Google AI Pro 12개월 무료\n기존 혜택 안내의 조건이 변경되었습니다. 자격을 인증한 미국 대학생에게 등록일부터 12개월간 Google AI Pro를 무료로 제공하는 공식 학생 혜택입니다. · 관심 서비스 · 대상: 미국 · 등록 마감 2026-09-12 2026-09-12T10:02:00Z · 혜택 USD 5 / 월 · 세금 포함 · 갱신 USD 20 / 월 · 세금 포함 · 혜택 등록일부터 12개월 · 입력한 조건과 일치 · 신청 시 공식 재확인 필요\n내용 보기: https://example.invalid/promotions#audit-offer\n\n수신 설정 변경: https://example.invalid/my?tab=settings"}],"rows":[{"status":"accepted","attempts":1},{"status":"accepted","attempts":2}]}
+✖ AUDIT an existing pre-deadline correction retry does not send its stale open-offer text after expiry (177.230791ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 323.3115
+
+✖ failing tests:
+
+test at ../../../../private/tmp/ais-v15-independent-cases.mjs:35:1
+✖ AUDIT an existing pre-deadline correction retry does not send its stale open-offer text after expiry (177.230791ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (file:///private/tmp/ais-v15-independent-cases.mjs:42:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

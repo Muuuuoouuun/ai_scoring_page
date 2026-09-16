@@ -1,0 +1,16 @@
+{"name":"01-exclusion-desktop.png","capturedAt":"2026-09-12T11:44:32.829Z","client":1425,"height":900,"scroll":1425,"url":"http://localhost:5173/recommend","width":1440}
+{"name":"02-offline-desktop.png","capturedAt":"2026-09-12T11:55:37.481Z","client":1425,"height":900,"scroll":1425,"url":"http://localhost:5173/recommend","width":1440}
+{"name":"03-free-huddle-desktop.png","capturedAt":"2026-09-12T11:55:45.223Z","client":1425,"height":900,"scroll":1425,"url":"http://localhost:5173/recommend","width":1440}
+{"name":"04-huddle-condition-desktop.png","capturedAt":"2026-09-12T11:59:04.741Z","client":1425,"height":900,"scroll":1425,"scrollY":510,"url":"http://localhost:5173/recommend","width":1440}
+{"name":"05-huddle-mobile-top.png","capturedAt":"2026-09-12T11:59:15.562Z","client":375,"height":844,"scroll":375,"scrollY":0,"url":"http://localhost:5173/recommend","width":390}
+{"name":"06-huddle-mobile-condition.png","capturedAt":"2026-09-12T11:59:23.052Z","client":375,"height":844,"scroll":375,"scrollY":549,"url":"http://localhost:5173/recommend","width":390}
+{"name":"07-step-requirement-mobile.png","capturedAt":"2026-09-12T12:00:46.907Z","client":375,"height":844,"scroll":375,"scrollY":0,"url":"http://localhost:5173/recommend","width":390}
+{"name":"08-step-card-mobile.png","capturedAt":"2026-09-12T12:00:53.972Z","client":375,"height":844,"scroll":375,"scrollY":591,"url":"http://localhost:5173/recommend","width":390}
+{"name":"09-private-scope-empty-mobile.png","capturedAt":"2026-09-12T12:01:37.974Z","client":375,"height":844,"scroll":375,"scrollY":0,"url":"http://localhost:5173/recommend","width":390}
+{"name":"10-recommend-to-compare-mobile.png","capturedAt":"2026-09-12T12:02:41.077Z","client":375,"height":844,"scroll":375,"scrollY":0,"url":"http://localhost:5173/compare?ids=notion,chatgpt","width":390}
+{"name":"11-explore-exclusion-mobile.png","capturedAt":"2026-09-12T12:02:50.611Z","client":375,"height":844,"scroll":375,"scrollY":0,"url":"http://localhost:5173/explore","width":390}
+{"name":"12-production-channel-mobile.png","capturedAt":"2026-09-12T12:05:44.529Z","client":375,"height":844,"scroll":375,"scrollY":0,"url":"https://ais-discovery-hub.aaahaaah19.chatgpt.site/recommend","width":390}
+{"name":"13-production-offline-mobile.png","capturedAt":"2026-09-12T12:05:54.763Z","client":375,"height":844,"scroll":375,"scrollY":0,"url":"https://ais-discovery-hub.aaahaaah19.chatgpt.site/recommend","width":390}
+{"name":"14-production-unregistered-task-mobile.png","capturedAt":"2026-09-12T12:06:13.502Z","client":375,"height":844,"scroll":375,"scrollY":0,"url":"https://ais-discovery-hub.aaahaaah19.chatgpt.site/recommend","width":390}
+{"name":"15-production-global-search-mobile.png","capturedAt":"2026-09-12T12:06:35.929Z","client":375,"height":844,"scroll":375,"scrollY":0,"url":"https://ais-discovery-hub.aaahaaah19.chatgpt.site/search?q=%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%83%9D%EC%84%B1%20%EB%A7%90%EA%B3%A0%20%EB%B3%B4%EA%B3%A0%EC%84%9C%20%EC%9E%91%EC%84%B1&type=all","width":390}
+{"name":"16-production-final-home.png","capturedAt":"2026-09-12T12:07:36.946Z","client":395,"height":783,"scroll":395,"url":"https://ais-discovery-hub.aaahaaah19.chatgpt.site/","width":410}

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "54a0e210-b90d-47c5-8d94-5252fe90e1ef",
+    "parent_id": null,
+    "tool_id": "claude",
+    "kind": "question",
+    "body": "서버 연결 중단과 복구를 확인하기 위한 로컬 테스트 글입니다. 실제 서비스의 사용자 경험이나 평가가 아닙니다."
+  },
+  {
+    "id": "e8034f2c-8c52-41e0-ac0c-5e14262f9986",
+    "parent_id": "54a0e210-b90d-47c5-8d94-5252fe90e1ef",
+    "tool_id": null,
+    "kind": "reply",
+    "body": "[V16 로컬 RED] 새 답글의 원문 도구 연결 검증입니다. 실제 사용자 답글이 아닙니다."
+  }
+]

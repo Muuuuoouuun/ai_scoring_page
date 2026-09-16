@@ -1,0 +1,328 @@
+✖ checkedAt and cosmetic offer copy do not create another material version (140.60275ms)
+✖ same-day reviewed price correction updates original card; immutable receipt survives (55.80025ms)
+✖ queued ended offer never enters provider (54.226ms)
+✖ queued withdrawn offer never enters provider (43.964875ms)
+✖ absolute deadline blocks an already queued offer at the exact instant (47.787208ms)
+✖ date-only deadline uses explicit conservative bounds without inventing official zone (42.059583ms)
+✖ explicit constraint is retained and does not silently qualify {"maxPrice":10,"currency":"USD"} (50.610042ms)
+✖ explicit constraint is retained and does not silently qualify {"maxPrice":50000,"currency":"KRW"} (38.083833ms)
+✖ explicit constraint is retained and does not silently qualify {"neededFeatures":["offline-document-editing"]} (42.632959ms)
+✖ explicit constraint is retained and does not silently qualify {"minBenefitMonths":18} (44.686ms)
+✖ unknown tax fails a price ceiling, known all-period prices and features can qualify (42.583084ms)
+✖ eligibility change invalidates prior confirmation but permits a relevant correction (36.471417ms)
+✖ legacy eligible string is not stamped by an unrelated save (42.087ms)
+✖ unreviewed same-revision material edits hold dispatch (42.794292ms)
+✖ withdrawal remains on original card even with new app alerts disabled (36.739ms)
+✖ legacy accepted date-key baseline is held honestly and later change can correct (42.262917ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 0
+ℹ fail 16
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 969.237375
+
+✖ failing tests:
+
+test at tests/notice-versions.test.mjs:15:1
+✖ checkedAt and cosmetic offer copy do not create another material version (140.60275ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:15:105)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:16:1
+✖ same-day reviewed price correction updates original card; immutable receipt survives (55.80025ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:16:117)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:17:43
+✖ queued ended offer never enters provider (54.226ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:17:120)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:17:43
+✖ queued withdrawn offer never enters provider (43.964875ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:17:120)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:18:1
+✖ absolute deadline blocks an already queued offer at the exact instant (47.787208ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:18:102)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:19:1
+✖ date-only deadline uses explicit conservative bounds without inventing official zone (42.059583ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:19:117)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:20:151
+✖ explicit constraint is retained and does not silently qualify {"maxPrice":10,"currency":"USD"} (50.610042ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:20:267)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:20:151
+✖ explicit constraint is retained and does not silently qualify {"maxPrice":50000,"currency":"KRW"} (38.083833ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:20:267)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:20:151
+✖ explicit constraint is retained and does not silently qualify {"neededFeatures":["offline-document-editing"]} (42.632959ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:20:267)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:20:151
+✖ explicit constraint is retained and does not silently qualify {"minBenefitMonths":18} (44.686ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:20:267)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:21:1
+✖ unknown tax fails a price ceiling, known all-period prices and features can qualify (42.583084ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:21:116)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:22:1
+✖ eligibility change invalidates prior confirmation but permits a relevant correction (36.471417ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:22:116)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:23:1
+✖ legacy eligible string is not stamped by an unrelated save (42.087ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:23:91)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:24:1
+✖ unreviewed same-revision material edits hold dispatch (42.794292ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:24:86)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:25:1
+✖ withdrawal remains on original card even with new app alerts disabled (36.739ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:25:102)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }
+
+test at tests/notice-versions.test.mjs:26:1
+✖ legacy accepted date-key baseline is held honestly and later change can correct (42.262917ms)
+  Error: ENOENT: no such file or directory, open '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+      at Object.readFileSync (node:fs:441:20)
+      at Object.load (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:16:616)
+      at fixture (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:11:16)
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:26:112)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/Users/bigmac_moon/dev/ai_score/site/lib/promotion-facts.ts'
+  }

@@ -1,0 +1,13 @@
+{
+  "consent": false,
+  "filter": "figma",
+  "values": [
+    "question",
+    "figma",
+    "Seedy",
+    "none",
+    "[로컬 검증] Figma 별도 초안",
+    "이 텍스트는 Figma 맥락에만 남는 로컬 초안입니다.",
+    "on"
+  ]
+}

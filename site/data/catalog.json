@@ -1,0 +1,2730 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "kind": "ai-app",
+    "vendor": "OpenAI",
+    "category": "productivity",
+    "summary": "글쓰기부터 검색·파일 분석까지, 일상 업무를 돕는 AI",
+    "description": "대화로 초안을 만들고 정보를 찾거나 업로드한 자료를 분석하는 AI 앱입니다. 이미지 생성과 심층 리서치도 제공하며 이용 한도는 플랜과 기능에 따라 달라집니다.",
+    "homepage": "https://chatgpt.com/",
+    "logoSource": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e0/19/75/e019751f-3987-841d-c7fd-d7098ab628b1/Placeholder.mill/400x400bb-75.webp",
+    "pricing": "무료 플랜 있음",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android",
+      "데스크톱"
+    ],
+    "useCases": [
+      "문서 초안",
+      "자료 요약",
+      "아이디어 정리",
+      "데이터 분석"
+    ],
+    "features": [
+      {
+        "name": "문서 초안·편집",
+        "description": "문서와 메일 초안을 작성하고, 글쓰기 블록에서 내용을 직접 수정하거나 AI에 수정을 요청합니다.",
+        "status": "conditional",
+        "condition": "편집 동작은 플랜·기기·워크스페이스 설정·모델·계정별 제공 상태에 따라 다릅니다.",
+        "sourceUrl": "https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt"
+      },
+      {
+        "name": "웹 검색",
+        "description": "웹에서 정보를 찾아 답변을 구성합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://chatgpt.com/pricing/"
+      },
+      {
+        "name": "파일·데이터 분석",
+        "description": "업로드한 파일을 바탕으로 자료를 분석합니다.",
+        "status": "conditional",
+        "condition": "파일 업로드·분석 사용량은 플랜별 한도가 적용됩니다.",
+        "sourceUrl": "https://chatgpt.com/pricing/"
+      },
+      {
+        "name": "이미지 생성",
+        "description": "텍스트 설명을 이미지로 만들 수 있습니다.",
+        "status": "conditional",
+        "condition": "무료 플랜은 이미지 생성 횟수와 속도가 제한됩니다.",
+        "sourceUrl": "https://chatgpt.com/pricing/"
+      },
+      {
+        "name": "Deep Research",
+        "description": "여러 자료를 조사해 심층 결과를 정리합니다.",
+        "status": "conditional",
+        "condition": "플랜별 심층 리서치 한도가 적용됩니다.",
+        "sourceUrl": "https://chatgpt.com/pricing/"
+      }
+    ],
+    "limitations": [
+      "플랜마다 제공 모델과 도구 한도가 다릅니다.",
+      "중요한 사실과 숫자는 연결된 원문과 대조해야 합니다."
+    ],
+    "sourceUrls": [
+      "https://chatgpt.com/pricing/",
+      "https://help.openai.com/en/articles/8357869",
+      "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "https://chatgpt.com/download/",
+      "https://apps.apple.com/us/app/chatgpt/id6448311069",
+      "https://learn.chatgpt.com/docs/changelog#codex-2026-09-11-app",
+      "https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "데스크톱 빠른 대화와 Windows Appshots",
+      "summary": "macOS·Windows 데스크톱 앱에서 Pets의 플로팅 컨트롤로 빠른 대화를 시작하고, Windows에서 Appshots를 사용할 수 있게 되었습니다.",
+      "publishedAt": "2026-09-11",
+      "sourceUrl": "https://learn.chatgpt.com/docs/changelog#codex-2026-09-11-app",
+      "audience": "macOS·Windows 데스크톱 앱 이용자",
+      "rollout": "데스크톱 26.908 · Appshots의 Windows 지원 추가",
+      "id": "chatgpt-2026-09-11",
+      "revision": 1
+    },
+    "logoNote": "ChatGPT 공식 앱 아이콘",
+    "logo": "/logos/chatgpt-product.webp",
+    "feedUrl": "https://learn.chatgpt.com/docs/changelog/rss.xml",
+    "feedScope": "chatgpt-apps"
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "kind": "ai-app",
+    "vendor": "Anthropic",
+    "category": "writing",
+    "summary": "문서 작성·분석과 긴 작업에 쓰는 대화형 AI",
+    "description": "글을 작성하고 수정하며 파일과 자료를 다루는 AI 앱입니다. 코드 실행, 웹 검색, Artifacts 등을 제공하고 Research와 Cowork 같은 기능은 구독 조건을 확인해야 합니다.",
+    "homepage": "https://claude.ai/",
+    "logoSource": "https://assets.claude.com/95a868946ac8a31e5ff832e2899f294aa368b836.png?w=32&h=32",
+    "pricing": "무료 플랜 있음",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android",
+      "데스크톱"
+    ],
+    "useCases": [
+      "글쓰기·퇴고",
+      "문서 분석",
+      "코드 설명",
+      "업무 자료 제작"
+    ],
+    "features": [
+      {
+        "name": "글 작성·수정",
+        "description": "글의 초안을 만들고 표현과 구성을 다듬습니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://claude.com/pricing"
+      },
+      {
+        "name": "파일 생성·코드 실행",
+        "description": "파일을 만들거나 편집하고 코드를 실행합니다.",
+        "status": "conditional",
+        "condition": "플랜별 사용량 한도가 적용됩니다.",
+        "sourceUrl": "https://claude.com/pricing"
+      },
+      {
+        "name": "Artifacts",
+        "description": "대화와 별도로 결과물을 확인하고 발전시킬 수 있습니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://claude.com/pricing"
+      },
+      {
+        "name": "Research",
+        "description": "여러 자료를 조사하는 심층 리서치 기능입니다.",
+        "status": "conditional",
+        "condition": "현재 개인 플랜 표에서는 Pro 이상에 포함됩니다.",
+        "sourceUrl": "https://claude.com/pricing"
+      }
+    ],
+    "limitations": [
+      "Claude 앱 구독과 Claude API 요금은 별도로 확인해야 합니다.",
+      "플랜과 사용량에 따라 이용 가능한 모델이 달라집니다."
+    ],
+    "sourceUrls": [
+      "https://claude.com/pricing",
+      "https://support.claude.com/en/articles/10769299-how-to-use-claude-in-your-preferred-language",
+      "https://support.claude.com/en/articles/12138966-release-notes"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "Enterprise용 Smart reports 베타",
+      "summary": "팀의 Claude 사용 방식과 비용, 반복 작업 패턴을 분석하는 보고 기능을 Enterprise 베타로 안내했습니다.",
+      "publishedAt": "2026-09-10",
+      "sourceUrl": "https://support.claude.com/en/articles/12138966-release-notes",
+      "audience": "Claude Enterprise 플랜 이용 조직",
+      "rollout": "베타 제공",
+      "id": "claude-2026-09-10",
+      "revision": 1
+    },
+    "logo": "/logos/claude.png"
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "kind": "ai-app",
+    "vendor": "Google",
+    "category": "productivity",
+    "summary": "Google 도구와 함께 쓰는 멀티모달 AI 어시스턴트",
+    "description": "글과 이미지에 관해 대화하고 정보를 조사하거나 콘텐츠를 만드는 Google의 AI 앱입니다. Google 앱 연결과 Live, Canvas 등은 기기·계정·지역에 따라 사용 조건이 달라질 수 있습니다.",
+    "homepage": "https://gemini.google.com/",
+    "logoSource": "https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg",
+    "pricing": "무료 플랜 있음",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android",
+      "macOS",
+      "Windows"
+    ],
+    "useCases": [
+      "자료 조사",
+      "메일 초안",
+      "학습 보조",
+      "이미지 아이디어"
+    ],
+    "features": [
+      {
+        "name": "문서 작성·편집 (Canvas)",
+        "description": "문서 초안을 작성하고 선택한 문장, 글의 길이와 어조를 조정합니다.",
+        "status": "conditional",
+        "condition": "Gemini 로그인 필요. 직접 텍스트·서식 편집은 컴퓨터 웹 화면 기준입니다.",
+        "sourceUrl": "https://support.google.com/gemini/answer/16047321?hl=en-NZ"
+      },
+      {
+        "name": "대화·문서 분석",
+        "description": "질문에 답하고 여러 문서의 내용을 분석하도록 요청할 수 있습니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://gemini.google/release-notes/"
+      },
+      {
+        "name": "Gemini Live",
+        "description": "모바일에서 음성과 텍스트를 오가며 대화할 수 있습니다.",
+        "status": "conditional",
+        "condition": "Android·iOS 앱과 지원되는 기능·계정이 필요합니다.",
+        "sourceUrl": "https://gemini.google/release-notes/"
+      },
+      {
+        "name": "이미지 생성",
+        "description": "Nano Banana를 활용한 이미지 생성을 지원합니다.",
+        "status": "conditional",
+        "condition": "계정, 지역과 사용량 제한을 확인해야 합니다.",
+        "sourceUrl": "https://gemini.google/release-notes/"
+      },
+      {
+        "name": "데스크톱 앱",
+        "description": "Mac과 Windows에서 단축키로 Gemini를 호출할 수 있습니다.",
+        "status": "conditional",
+        "condition": "공식 안내 기준 macOS 15 이상 또는 Windows 10 이상이 필요합니다.",
+        "sourceUrl": "https://gemini.google/release-notes/"
+      }
+    ],
+    "limitations": [
+      "Gemini 앱에 보이는 모델과 Gemini API 모델 목록은 다를 수 있습니다.",
+      "일부 신규 기능은 특정 지역·연령·유료 플랜에 먼저 제공됩니다."
+    ],
+    "sourceUrls": [
+      "https://gemini.google/subscriptions/",
+      "https://support.google.com/gemini/answer/13575153?hl=en",
+      "https://gemini.google/release-notes/",
+      "https://support.google.com/gemini/answer/16047321?hl=en-NZ"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "Windows용 Gemini 앱 출시",
+      "summary": "Windows 10 이상에서 단축키로 Gemini를 호출하고 전용 데스크톱 작업공간을 사용할 수 있게 되었습니다.",
+      "publishedAt": "2026-09-10",
+      "sourceUrl": "https://gemini.google/release-notes/",
+      "audience": "Windows 10 이상 PC 이용자",
+      "rollout": "Windows 앱 제공 시작 · 계정별 기능·연결 권한 적용",
+      "id": "gemini-2026-09-10",
+      "revision": 1
+    },
+    "logo": "/logos/gemini.svg"
+  },
+  {
+    "id": "notebooklm",
+    "name": "Gemini Notebook",
+    "kind": "ai-app",
+    "vendor": "Google",
+    "category": "research",
+    "summary": "내 자료에 출처를 붙여 답하는 리서치 노트북",
+    "description": "업로드하거나 찾은 자료를 바탕으로 질문에 답하고 학습 자료를 만드는 AI 리서치 앱입니다. 현재 공식 명칭은 Gemini Notebook이며 문서·웹·동영상 등 여러 소스를 한 노트북에서 다룰 수 있습니다.",
+    "homepage": "https://notebook.google/",
+    "logoSource": "https://notebook.google/_/static/branding/v6/light_mode/favicon/favicon.svg",
+    "pricing": "무료 플랜 있음",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "논문·보고서 읽기",
+      "학습 노트",
+      "근거 비교",
+      "브리핑 정리"
+    ],
+    "features": [
+      {
+        "name": "소스 기반 대화",
+        "description": "선택한 자료를 바탕으로 질문하고 인용 위치를 확인합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://support.google.com/gemininotebook/answer/16179559?hl=ko"
+      },
+      {
+        "name": "다양한 자료 가져오기",
+        "description": "PDF, Google 문서, 웹 URL, 공개 YouTube URL 등을 소스로 추가합니다.",
+        "status": "conditional",
+        "condition": "지원 형식·파일 크기·소스 수 한도가 적용됩니다.",
+        "sourceUrl": "https://support.google.com/gemininotebook/answer/16215270?hl=ko"
+      },
+      {
+        "name": "소스 선택",
+        "description": "자료별 체크박스로 답변에 사용할 근거를 포함하거나 제외합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://support.google.com/gemininotebook/answer/16179559?hl=ko"
+      },
+      {
+        "name": "학습 자료 변환",
+        "description": "소스를 학습 가이드, 브리핑, 오디오 오버뷰 등으로 정리합니다.",
+        "status": "conditional",
+        "condition": "생성 형식과 작업량에 따른 사용 한도가 적용됩니다.",
+        "sourceUrl": "https://support.google.com/gemininotebook/answer/16164461?hl=ko"
+      }
+    ],
+    "limitations": [
+      "인용은 원문과 대조해야 하며 짧은 자료는 문서 전체가 참조될 수 있습니다.",
+      "Google 문서의 각주·댓글 등 일부 내용은 가져오지 않습니다.",
+      "모바일에서 일부 기능이 제한될 수 있습니다."
+    ],
+    "sourceUrls": [
+      "https://support.google.com/gemininotebook/answer/16215270?hl=ko",
+      "https://support.google.com/gemininotebook/answer/16179559?hl=ko",
+      "https://blog.google/intl/ko-kr/company-news/technology/notebooklm-gemini-notebook/",
+      "https://support.google.com/gemininotebook/answer/16261963?co=GENIE.Platform%3DAndroid",
+      "https://support.google.com/gemininotebook/answer/16164461?hl=ko",
+      "https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/",
+      "https://support.google.com/gemininotebook/answer/16296687",
+      "https://support.google.com/gemininotebook/answer/16269187?hl=en",
+      "https://support.google.com/gemininotebook/answer/16215270?hl=en"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "사용량 한도 관리 방식 변경",
+      "summary": "프롬프트 복잡도와 소스·기능 사용에 따라 한도를 계산하고 5시간마다 갱신하는 방식을 9월 2일부터 순차 적용한다고 안내했습니다.",
+      "publishedAt": "2026-08-28",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/",
+      "audience": "웹·모바일 개인 Google 계정 이용자",
+      "rollout": "2026-09-02부터 순차 적용",
+      "id": "notebooklm-2026-08-28",
+      "revision": 1
+    },
+    "currentName": "Gemini Notebook",
+    "logo": "/logos/notebooklm.svg",
+    "aliases": [
+      "NotebookLM"
+    ]
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "kind": "ai-app",
+    "vendor": "Perplexity AI",
+    "category": "research",
+    "summary": "웹을 검색하고 출처 링크로 확인하는 답변 엔진",
+    "description": "웹 자료를 찾아 질문에 대한 답을 정리하고 원문 링크를 함께 보여 주는 AI 검색 앱입니다. 복잡한 질문에는 Pro Search나 Research를 활용할 수 있으며 플랜마다 접근 범위가 다릅니다.",
+    "homepage": "https://www.perplexity.ai/",
+    "logoSource": "https://www.perplexity.ai/favicon.svg",
+    "pricing": "무료 플랜 있음",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android",
+      "macOS",
+      "Windows"
+    ],
+    "useCases": [
+      "웹 리서치",
+      "출처 비교",
+      "주제 탐색",
+      "자료 요약"
+    ],
+    "features": [
+      {
+        "name": "출처가 있는 답변",
+        "description": "웹 검색 결과를 종합하고 확인 가능한 원문 링크를 제공합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352155-what-is-perplexity"
+      },
+      {
+        "name": "Pro Search",
+        "description": "후속 질문과 여러 검색을 통해 복잡한 주제를 탐색합니다.",
+        "status": "conditional",
+        "condition": "접근량과 모델 선택은 플랜에 따라 달라집니다.",
+        "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352903-what-is-pro-search"
+      },
+      {
+        "name": "파일 분석",
+        "description": "문서와 이미지를 추가해 문맥을 제공하고 분석합니다.",
+        "status": "conditional",
+        "condition": "업로드 한도와 고급 기능은 플랜에 따라 달라집니다.",
+        "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+      },
+      {
+        "name": "Research",
+        "description": "복잡한 주제에 대해 심층 조사 보고서를 만듭니다.",
+        "status": "conditional",
+        "condition": "플랜별 접근 한도가 적용되며 모델 조합은 자동 선택됩니다.",
+        "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+      }
+    ],
+    "limitations": [
+      "인용 링크가 있어도 주장과 원문의 일치 여부를 확인해야 합니다.",
+      "프리미엄 데이터 연결은 별도 제공업체 구독이나 권한이 필요할 수 있습니다.",
+      "한국어 기능의 공식 지원 범위는 추가 확인이 필요합니다."
+    ],
+    "sourceUrls": [
+      "https://www.perplexity.ai/help-center/en/articles/10352155-what-is-perplexity",
+      "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro",
+      "https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max",
+      "https://www.perplexity.ai/help-center/en/collections/18799292-subscription-plans-billing",
+      "https://www.perplexity.ai/help-center/en/articles/10352903-what-is-pro-search",
+      "https://www.perplexity.ai/help-center/en/articles/12870803-premium-data-sources",
+      "https://www.perplexity.ai/help-center/en/articles/19800001-about-the-app",
+      "https://www.perplexity.ai/changelog/computer-in-email-gpt-5-6-terra-luna-and-grok-4-6"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "이메일에서 Computer 작업 시작",
+      "summary": "이메일을 보내거나 전달해 Computer 세션을 시작할 수 있습니다. 답장은 확인된 발신자에게만 보내며 기존 연결 도구와 권한을 사용합니다.",
+      "publishedAt": "2026-08-24",
+      "sourceUrl": "https://www.perplexity.ai/changelog/computer-in-email-gpt-5-6-terra-luna-and-grok-4-6",
+      "audience": "Computer 이용자",
+      "rollout": "전체 Computer 이용자에게 제공 · Enterprise 전체 답장은 추후 예정",
+      "id": "perplexity-2026-08-24",
+      "revision": 1
+    },
+    "logo": "/logos/perplexity.svg"
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "kind": "ai-app",
+    "vendor": "Anysphere",
+    "category": "development",
+    "summary": "코드 편집부터 에이전트 작업까지 연결하는 개발 도구",
+    "description": "코드베이스를 바탕으로 AI에게 개발 작업을 맡기고 결과를 검토하는 개발 앱입니다. 데스크톱·터미널·웹에서 사용할 수 있고 클라우드 에이전트와 모델 사용량은 플랜 조건을 따릅니다.",
+    "homepage": "https://cursor.com/",
+    "logoSource": "https://cursor.com/marketing-static/favicon-light.svg",
+    "pricing": "무료 플랜 있음",
+    "korean": "확인 필요",
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux",
+      "웹",
+      "CLI"
+    ],
+    "useCases": [
+      "기능 개발",
+      "코드베이스 탐색",
+      "리팩터링",
+      "변경 검토"
+    ],
+    "features": [
+      {
+        "name": "Agent",
+        "description": "프로젝트의 개발 작업을 에이전트에 요청합니다.",
+        "status": "conditional",
+        "condition": "Hobby는 Agent 요청 수가 제한됩니다.",
+        "sourceUrl": "https://cursor.com/pricing"
+      },
+      {
+        "name": "여러 실행 환경",
+        "description": "데스크톱 편집기, 터미널, 웹에서 작업할 수 있습니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://cursor.com/download"
+      },
+      {
+        "name": "Cloud Agents",
+        "description": "클라우드에서 에이전트 작업을 진행합니다.",
+        "status": "conditional",
+        "condition": "플랜과 연결 환경에 따라 이용 조건이 달라집니다.",
+        "sourceUrl": "https://cursor.com/pricing"
+      },
+      {
+        "name": "Projects 베타",
+        "description": "지속적인 프로젝트 문맥을 유지하며 여러 개발 작업을 조정합니다.",
+        "status": "conditional",
+        "condition": "9월 10일 기준 베타로 순차 제공 중입니다.",
+        "sourceUrl": "https://cursor.com/changelog"
+      }
+    ],
+    "limitations": [
+      "모델 선택과 작업량에 따라 포함 사용량을 소모하며 추가 사용 과금이 발생할 수 있습니다.",
+      "생성된 코드는 적용 전 검토와 실행 확인이 필요합니다.",
+      "한국어 웹사이트는 확인했지만 앱 전체 한국어 지원 범위는 확인하지 못했습니다."
+    ],
+    "sourceUrls": [
+      "https://cursor.com/pricing",
+      "https://cursor.com/download",
+      "https://cursor.com/changelog",
+      "https://cursor.com/changelog/projects"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "Cursor Projects 베타",
+      "summary": "공유 문맥을 유지하며 개발 작업을 조정하는 Projects를 발표했습니다. 클라우드에서 실행되고 사용자에게 순차 제공됩니다.",
+      "publishedAt": "2026-09-10",
+      "sourceUrl": "https://cursor.com/changelog/projects",
+      "audience": "Cursor 이용자",
+      "rollout": "베타 · 2026-09-10부터 전체 이용자에게 순차 제공",
+      "id": "cursor-2026-09-10",
+      "revision": 1
+    },
+    "logo": "/logos/cursor.svg"
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "kind": "ai-app",
+    "vendor": "GitHub",
+    "category": "development",
+    "summary": "IDE와 GitHub 작업 흐름 안에서 쓰는 AI 코딩 도우미",
+    "description": "코드 제안과 대화를 제공하고 개발 작업을 계획하거나 변경안을 준비하는 AI 도구입니다. IDE, GitHub 웹, 모바일과 데스크톱 앱 등에서 제공되며 모델·크레딧·조직 정책에 따라 사용 범위가 달라집니다.",
+    "homepage": "https://github.com/features/copilot",
+    "logoSource": "https://github.githubassets.com/favicons/favicon.svg",
+    "pricing": "무료 플랜 있음",
+    "korean": "확인 필요",
+    "platforms": [
+      "IDE",
+      "웹",
+      "GitHub Mobile",
+      "데스크톱 앱",
+      "CLI"
+    ],
+    "useCases": [
+      "코드 자동완성",
+      "코드 질문",
+      "변경 설명",
+      "PR 준비"
+    ],
+    "features": [
+      {
+        "name": "코드 제안",
+        "description": "IDE에서 코드를 입력할 때 제안을 받습니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://docs.github.com/en/copilot/get-started/what-is-github-copilot"
+      },
+      {
+        "name": "코드 대화",
+        "description": "코드의 동작과 문제 해결 방법을 질문합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://docs.github.com/en/copilot/get-started/what-is-github-copilot"
+      },
+      {
+        "name": "개발 작업 위임",
+        "description": "조사·계획·코드 변경과 검토할 PR 준비를 요청합니다.",
+        "status": "conditional",
+        "condition": "기능, 플랜과 조직 정책에 따라 접근 범위가 다릅니다.",
+        "sourceUrl": "https://docs.github.com/en/copilot/get-started/what-is-github-copilot"
+      },
+      {
+        "name": "크레딧 기반 사용량",
+        "description": "플랜별 AI 크레딧으로 사용량을 관리합니다.",
+        "status": "conditional",
+        "condition": "모델·플랜별 과금과 추가 사용 조건을 확인해야 합니다.",
+        "sourceUrl": "https://docs.github.com/en/billing/concepts/product-billing/github-copilot-billing"
+      }
+    ],
+    "limitations": [
+      "일부 모델은 조직 관리자가 허용해야 사용할 수 있습니다.",
+      "사용 가능한 모델은 변경·종료될 수 있습니다.",
+      "한국어 앱·응답 품질의 공식 지원 범위는 확인이 필요합니다."
+    ],
+    "sourceUrls": [
+      "https://docs.github.com/en/copilot/get-started/what-is-github-copilot",
+      "https://docs.github.com/en/billing/concepts/product-billing/github-copilot-billing",
+      "https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7/",
+      "https://brand.github.com/brand-identity/copilot",
+      "https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics/"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "VS Code Agents 사용 지표 추가",
+      "summary": "조직·엔터프라이즈의 Copilot 사용 보고서에 VS Code Agents 창의 활성 사용자·세션·메시지 지표가 추가되었습니다.",
+      "publishedAt": "2026-09-11",
+      "sourceUrl": "https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics/",
+      "audience": "Copilot 지표 조회 권한 보유자 · 사용 지표 정책 활성화 필요",
+      "rollout": "일반 제공",
+      "id": "github-copilot-2026-09-11",
+      "revision": 1
+    },
+    "feedUrl": "https://github.blog/changelog/label/copilot/feed/",
+    "feedScope": "GitHub Copilot 변경 소식",
+    "logoNote": "GitHub 공식 마크",
+    "logo": "/logos/github-copilot.svg"
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "kind": "ai-app",
+    "vendor": "Midjourney",
+    "category": "image",
+    "summary": "텍스트와 참조 이미지로 시각적 콘셉트를 만드는 AI",
+    "description": "프롬프트와 참조 이미지를 이용해 이미지를 만들고 변형하는 창작 서비스입니다. 웹과 Discord에서 사용할 수 있으며 생성 속도·비공개 모드·영상 기능은 구독 플랜에 따라 달라집니다.",
+    "homepage": "https://www.midjourney.com/",
+    "logoSource": "https://docs.midjourney.com/hc/theming_assets/01K1K3SHJHG4BTD9YK9VH9G86N",
+    "pricing": "유료 구독",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "Discord"
+    ],
+    "useCases": [
+      "콘셉트 아트",
+      "무드보드",
+      "일러스트 시안",
+      "이미지 변형"
+    ],
+    "features": [
+      {
+        "name": "텍스트로 이미지 생성",
+        "description": "웹의 Imagine 입력창에 프롬프트를 작성해 이미지를 생성합니다.",
+        "status": "conditional",
+        "condition": "웹과 Discord는 현재 무료 체험 없이 유료 구독이 필요합니다.",
+        "sourceUrl": "https://docs.midjourney.com/hc/en-us/articles/33390732264589-Creating-on-Web"
+      },
+      {
+        "name": "참조 이미지",
+        "description": "Image Prompt와 Style Reference 등으로 원하는 결과를 구체화합니다.",
+        "status": "conditional",
+        "condition": "기능과 호환 모델을 확인해야 합니다.",
+        "sourceUrl": "https://docs.midjourney.com/hc/en-us/articles/33390732264589-Creating-on-Web"
+      },
+      {
+        "name": "비율·스타일 설정",
+        "description": "화면 비율과 스타일화 등의 생성 설정을 조절합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://docs.midjourney.com/hc/en-us/articles/33390732264589-Creating-on-Web"
+      },
+      {
+        "name": "Stealth Mode",
+        "description": "지원 플랜에서 생성물 공개 범위를 관리합니다.",
+        "status": "conditional",
+        "condition": "현재 Pro·Mega 플랜에서만 제공됩니다.",
+        "sourceUrl": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+      }
+    ],
+    "limitations": [
+      "웹과 Discord에서는 현재 무료 체험을 제공하지 않습니다.",
+      "비공개 생성은 모든 플랜의 기본 기능이 아닙니다.",
+      "한국어 프롬프트와 이미지 내 한글 품질의 공식 지원 범위는 확인이 필요합니다."
+    ],
+    "sourceUrls": [
+      "https://docs.midjourney.com/hc/en-us/articles/33390732264589-Creating-on-Web",
+      "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+      "https://docs.midjourney.com/hc/en-us/articles/27870399340173-Free-Trials",
+      "https://updates.midjourney.com/version-8-2/",
+      "https://updates.midjourney.com/alpha-changelog-9-2-26/"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "Alpha 편집기와 스타일 탐색 개선",
+      "summary": "Alpha 웹에서 V8.2 편집 모델을 라이트박스에 연결하고 최대 4개 참조 이미지로 편집하도록 개선했습니다. Change Style은 실험 단계이며 오류 수정도 포함합니다.",
+      "publishedAt": "2026-09-03",
+      "sourceUrl": "https://updates.midjourney.com/alpha-changelog-9-2-26/",
+      "audience": "alpha.midjourney.com 이용자",
+      "rollout": "Alpha 실험 기능 · 일반 웹 전체 적용과 구분",
+      "id": "midjourney-2026-09-03",
+      "revision": 1
+    },
+    "feedUrl": "https://updates.midjourney.com/rss/",
+    "logoNote": "Midjourney 공식 브랜드 마크",
+    "logo": "/logos/midjourney.svg"
+  },
+  {
+    "id": "gpt-6-astra",
+    "name": "GPT-6 Astra",
+    "kind": "model",
+    "vendor": "OpenAI",
+    "category": "productivity",
+    "summary": "복잡한 추론·코딩·도구 작업을 위한 OpenAI 모델",
+    "description": "복잡한 추론, 소프트웨어 개발, 리서치와 문서 작업을 위해 공식 API 목록에 등재된 모델입니다. 앱 자체가 아니며 실제 작업 기능은 API에 연결한 도구와 실행 환경에 따라 달라집니다.",
+    "homepage": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+    "logoSource": "https://developers.openai.com/favicon.png",
+    "pricing": "API 사용량 과금",
+    "korean": "확인 필요",
+    "platforms": [
+      "OpenAI API"
+    ],
+    "useCases": [
+      "복잡한 추론",
+      "코딩 에이전트",
+      "리서치 자동화",
+      "문서 작업"
+    ],
+    "features": [
+      {
+        "name": "추론 수준 설정",
+        "description": "작업에 맞춰 추론에 사용할 노력을 조절할 수 있습니다.",
+        "status": "supported",
+        "condition": "low·medium·high·xhigh·max를 지원합니다.",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      },
+      {
+        "name": "텍스트·이미지 입력",
+        "description": "텍스트와 이미지를 입력하고 텍스트를 출력하는 멀티모달 모델입니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://developers.openai.com/api/docs/models"
+      },
+      {
+        "name": "도구 활용",
+        "description": "웹 검색·파일 검색·컴퓨터 사용 등과 연결할 수 있습니다.",
+        "status": "conditional",
+        "condition": "개발자가 해당 도구와 실행 환경을 구성해야 합니다.",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      },
+      {
+        "name": "긴 문맥",
+        "description": "공식 모델 페이지에 약 105만 토큰 문맥 창이 명시되어 있습니다.",
+        "status": "conditional",
+        "condition": "긴 입력은 별도 과금 조건이 적용됩니다.",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      }
+    ],
+    "limitations": [
+      "API 무료 티어는 지원하지 않습니다.",
+      "출시 안내는 순차 접근을 명시하므로 실제 계정의 모델 권한을 확인해야 합니다.",
+      "한국어별 성능 보장과 지원 수준은 이 조사에서 확인하지 못했습니다."
+    ],
+    "sourceUrls": [
+      "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "https://developers.openai.com/api/docs/models",
+      "https://openai.com/products/release-notes/",
+      "https://openai.com/index/gpt-6-astra/"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "GPT-6 Astra 공식 발표",
+      "summary": "복잡한 코딩·조사·컴퓨터 사용과 문서 작업을 위한 모델을 발표하고 접근 확대 계획을 안내했습니다.",
+      "publishedAt": "2026-09-03",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra/",
+      "audience": "지원 계정의 OpenAI API 개발자 · ChatGPT 유료 플랜 이용자",
+      "rollout": "출시 안내는 일부 조직부터 순차 확대 명시 · 계정별 접근 확인",
+      "id": "gpt-6-astra-2026-09-03",
+      "revision": 1
+    },
+    "modelId": "gpt-6-astra",
+    "logoNote": "OpenAI 공식 브랜드 마크",
+    "logo": "/logos/gpt-6-astra.png"
+  },
+  {
+    "id": "claude-fable-5-1",
+    "name": "Claude Fable 5.1",
+    "kind": "model",
+    "vendor": "Anthropic",
+    "category": "development",
+    "summary": "긴 개발·지식 업무를 위해 제공되는 Claude 모델",
+    "description": "여러 단계의 코딩과 전문 문서 작업을 위해 제공되는 Anthropic의 모델입니다. Claude 앱의 유료 플랜과 Claude Platform에서 접근할 수 있으며 API로 쓸 때는 도구 연결과 사용량 과금을 따로 고려해야 합니다.",
+    "homepage": "https://www.anthropic.com/claude/fable",
+    "logoSource": "https://www.anthropic.com/images/icons/apple-touch-icon.png",
+    "pricing": "API 사용량 과금",
+    "korean": "확인 필요",
+    "platforms": [
+      "Claude API",
+      "Claude Platform"
+    ],
+    "useCases": [
+      "장기 개발 작업",
+      "코드 검토",
+      "복합 자료 분석",
+      "업무 에이전트"
+    ],
+    "features": [
+      {
+        "name": "코딩",
+        "description": "코드베이스 전반의 구현·검토·성능 개선 작업에 사용할 수 있습니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.anthropic.com/claude/fable"
+      },
+      {
+        "name": "문서·시각 자료 분석",
+        "description": "문서와 PDF의 도표·차트·표를 이해하는 데 사용할 수 있습니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.anthropic.com/claude/fable"
+      },
+      {
+        "name": "도구를 쓰는 장기 작업",
+        "description": "여러 단계의 작업을 계획하고 도구를 사용하도록 설계되었습니다.",
+        "status": "conditional",
+        "condition": "작업 실행에는 앱 또는 개발자가 연결한 도구가 필요합니다.",
+        "sourceUrl": "https://www.anthropic.com/claude/fable"
+      },
+      {
+        "name": "유료 앱·API 접근",
+        "description": "지원하는 Claude 유료 플랜과 API를 통해 제공합니다.",
+        "status": "conditional",
+        "condition": "앱 한도·추가 크레딧과 API 과금은 서로 다릅니다.",
+        "sourceUrl": "https://www.anthropic.com/claude/fable"
+      }
+    ],
+    "limitations": [
+      "일부 요청은 보호 장치에 따라 다른 모델로 전환될 수 있습니다.",
+      "기본 데이터 보존과 기업별 예외 조건은 공식 안내를 확인해야 합니다.",
+      "한국어별 성능 보장과 지원 수준은 이 조사에서 확인하지 못했습니다."
+    ],
+    "sourceUrls": [
+      "https://www.anthropic.com/claude/fable",
+      "https://claude.com/pricing"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "Claude Fable 5.1 발표",
+      "summary": "장기 코딩·전문 업무를 위한 모델과 캐시 사용 비용 개선을 공식 안내했습니다.",
+      "publishedAt": "2026-09-01",
+      "sourceUrl": "https://www.anthropic.com/claude/fable",
+      "audience": "Pro·Max·Team·Enterprise 이용자와 Claude API 개발자",
+      "rollout": "공식 제공 중 · 모델 권한과 보호 장치 적용",
+      "id": "claude-fable-5-1-2026-09-01",
+      "revision": 1
+    },
+    "modelId": "claude-fable-5-1",
+    "logoNote": "Anthropic 공식 브랜드 마크",
+    "logo": "/logos/claude-fable-5-1.png"
+  },
+  {
+    "id": "gemini-3-8-flash",
+    "name": "Gemini 3.8 Flash",
+    "kind": "model",
+    "vendor": "Google",
+    "category": "development",
+    "summary": "멀티모달 입력과 도구 활용을 지원하는 Flash 모델",
+    "description": "긴 소프트웨어 개발 작업과 에이전트용으로 공식 제공되는 Google의 모델입니다. 텍스트·이미지·동영상·음성·PDF를 입력하고 텍스트를 출력하며 Gemini 앱과는 별개의 API 모델로 구분해야 합니다.",
+    "homepage": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash",
+    "logoSource": "https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg",
+    "pricing": "무료 한도·API 사용량 과금",
+    "korean": "확인 필요",
+    "platforms": [
+      "Gemini API",
+      "Google AI Studio"
+    ],
+    "useCases": [
+      "멀티모달 자료 분석",
+      "코드 생성",
+      "도구 연동 에이전트",
+      "구조화된 출력"
+    ],
+    "features": [
+      {
+        "name": "멀티모달 입력",
+        "description": "텍스트, 이미지, 동영상, 음성, PDF 입력을 지원합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+      },
+      {
+        "name": "구조화된 출력·함수 호출",
+        "description": "정해진 구조의 결과와 함수 호출을 지원합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+      },
+      {
+        "name": "검색 기반 답변",
+        "description": "Google 검색을 활용한 근거 연결을 지원합니다.",
+        "status": "conditional",
+        "condition": "검색 grounding은 유료 티어 조건과 별도 사용량 제한을 확인해야 합니다.",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      {
+        "name": "컴퓨터 사용",
+        "description": "컴퓨터 사용 기능을 미리보기로 지원합니다.",
+        "status": "conditional",
+        "condition": "Preview 기능이며 별도 도구 구성이 필요합니다.",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+      }
+    ],
+    "limitations": [
+      "출력은 텍스트이며 이 모델 자체는 이미지·음성 생성과 Live API를 지원하지 않습니다.",
+      "thinking의 minimal 설정은 지원하지 않습니다.",
+      "한국어별 성능 보장과 지원 수준은 이 조사에서 확인하지 못했습니다."
+    ],
+    "sourceUrls": [
+      "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash",
+      "https://ai.google.dev/gemini-api/docs/pricing",
+      "https://ai.google.dev/gemini-api/docs/deprecations"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "Gemini 3.8 Flash 안정 버전",
+      "summary": "공식 모델 목록에 안정 버전 gemini-3.8-flash가 등록되었으며 개발 작업과 에이전트 활용에 초점을 맞춥니다.",
+      "publishedAt": "2026-09-02",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "audience": "Gemini API·Google AI Studio 개발자",
+      "rollout": "안정 버전(GA) · 무료·유료 티어와 도구별 제한 적용",
+      "id": "gemini-3-8-flash-2026-09-02",
+      "revision": 1
+    },
+    "modelId": "gemini-3.8-flash",
+    "logoNote": "Gemini 공식 브랜드 마크",
+    "logo": "/logos/gemini-3-8-flash.svg"
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "kind": "saas",
+    "vendor": "Notion Labs",
+    "category": "productivity",
+    "summary": "문서와 데이터베이스를 한곳에 모으는 협업 작업 공간.",
+    "description": "문서, 지식 베이스, 프로젝트 데이터를 연결해 업무의 맥락을 정리합니다. 표·보드·캘린더 같은 보기를 선택하고 AI 기능을 이용해 초안을 만들 수 있습니다.",
+    "homepage": "https://www.notion.com/",
+    "logoSource": "https://www.notion.com/front-static/logo-ios.png",
+    "pricing": "무료 플랜 있음 · 유료 구독 및 일부 AI 크레딧 과금",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "데스크톱",
+      "모바일"
+    ],
+    "useCases": [
+      "팀 위키",
+      "프로젝트 관리",
+      "개인 업무 정리"
+    ],
+    "features": [
+      {
+        "name": "문서 작성·편집",
+        "description": "텍스트, 제목, 목록, 표를 블록으로 작성하고 순서와 서식을 편집합니다.",
+        "status": "supported",
+        "condition": "기본 문서 편집 기능입니다. Notion AI 이용 조건은 별도로 적용됩니다.",
+        "sourceUrl": "https://www.notion.com/help/writing-and-editing-basics"
+      },
+      {
+        "name": "데이터베이스 보기",
+        "description": "같은 데이터를 표, 보드, 캘린더 등으로 살펴봅니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.notion.com/help/create-a-database"
+      },
+      {
+        "name": "속성·필터·정렬",
+        "description": "상태와 마감일을 기록하고 필요한 항목만 추립니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.notion.com/help/create-a-database"
+      },
+      {
+        "name": "AI 데이터베이스 생성",
+        "description": "원하는 구조를 설명하고 미리보기를 검토해 새 데이터베이스를 만듭니다.",
+        "status": "conditional",
+        "condition": "플랜별 AI 이용 한도 또는 워크스페이스 크레딧이 적용됩니다.",
+        "sourceUrl": "https://www.notion.com/help/create-a-database"
+      }
+    ],
+    "limitations": [
+      "무료·유료 플랜의 협업 및 파일 한도가 다릅니다.",
+      "AI로 데이터베이스를 만드는 기능의 지원 범위와 크레딧 조건을 확인해야 합니다."
+    ],
+    "sourceUrls": [
+      "https://www.notion.com/pricing",
+      "https://www.notion.com/help/create-a-database",
+      "https://www.notion.com/releases",
+      "https://www.notion.com/desktop",
+      "https://www.notion.com/mobile",
+      "https://www.notion.com/releases/2026-09-09",
+      "https://www.notion.com/help/writing-and-editing-basics"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "에이전트가 사용할 AI 모델 관리",
+      "summary": "Business·Enterprise 워크스페이스 소유자가 Notion Agent와 Custom Agents에서 허용할 AI 모델을 각각 관리할 수 있습니다.",
+      "publishedAt": "2026-09-09",
+      "sourceUrl": "https://www.notion.com/releases/2026-09-09",
+      "audience": "Business·Enterprise 워크스페이스 소유자",
+      "rollout": "제공 중",
+      "id": "notion-2026-09-09",
+      "revision": 1
+    },
+    "logo": "/logos/notion.png"
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "kind": "saas",
+    "vendor": "Figma",
+    "category": "image",
+    "summary": "UI 설계부터 프로토타입과 개발 전달까지 이어지는 디자인 도구.",
+    "description": "화면과 재사용 컴포넌트를 만들고 팀과 함께 디자인을 다듬습니다. 프로토타입과 개발 전달 기능을 통해 아이디어를 구현 단계로 연결합니다.",
+    "homepage": "https://www.figma.com/",
+    "logoSource": "https://static.figma.com/app/icon/2/icon-256.png",
+    "pricing": "무료 Starter 플랜 있음 · 유료 플랜은 좌석 종류별 과금",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "macOS",
+      "Windows",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "UI 디자인",
+      "프로토타입 제작",
+      "디자인 시스템"
+    ],
+    "features": [
+      {
+        "name": "공동 디자인",
+        "description": "팀이 같은 디자인 파일을 보며 작업하고 의견을 나눕니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.figma.com/pricing/"
+      },
+      {
+        "name": "프로토타입",
+        "description": "화면 흐름과 인터랙션을 연결해 경험을 검토합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.figma.com/pricing/"
+      },
+      {
+        "name": "개발 전달·고급 기능",
+        "description": "Dev Mode와 고급 프로토타입 등으로 구현에 필요한 정보를 다룹니다.",
+        "status": "conditional",
+        "condition": "플랜과 Full·Dev 등 좌석 종류에 따라 접근 범위가 다릅니다.",
+        "sourceUrl": "https://www.figma.com/pricing/"
+      }
+    ],
+    "limitations": [
+      "무료 플랜은 Figma 제품에 제한적으로 접근합니다.",
+      "AI 사용량과 제품 접근 권한은 플랜·좌석에 따라 다릅니다."
+    ],
+    "sourceUrls": [
+      "https://www.figma.com/pricing/",
+      "https://www.figma.com/design/",
+      "https://www.figma.com/downloads/",
+      "https://www.figma.com/release-notes/"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "색상 변수의 불투명도 제어",
+      "summary": "색상 연결을 유지하며 숫자 변수로 불투명도를 조절하는 기능이 추가되었습니다.",
+      "publishedAt": "2026-09-03",
+      "sourceUrl": "https://www.figma.com/release-notes/",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "원문에서 제공 상태 확인 필요",
+      "id": "figma-2026-09-03",
+      "revision": 1
+    },
+    "feedUrl": "https://www.figma.com/release-notes/feed/atom.xml",
+    "logo": "/logos/figma.png"
+  },
+  {
+    "id": "canva",
+    "name": "Canva",
+    "kind": "saas",
+    "vendor": "Canva",
+    "category": "image",
+    "summary": "템플릿과 AI 도구로 만드는 프레젠테이션·SNS 디자인.",
+    "description": "드래그 앤 드롭 편집기로 프레젠테이션, 이미지, 동영상 등 시각 콘텐츠를 제작합니다. 팀 협업과 브랜드 관리 기능으로 반복 제작의 형식을 맞출 수 있습니다.",
+    "homepage": "https://www.canva.com/",
+    "logoSource": "https://static.canva.com/domain-assets/canva/static/images/android-192x192-2.png",
+    "pricing": "무료 플랜 있음 · Pro·Business·Enterprise 유료 플랜",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "데스크톱",
+      "모바일"
+    ],
+    "useCases": [
+      "프레젠테이션",
+      "SNS 콘텐츠",
+      "브랜드 자료 제작"
+    ],
+    "features": [
+      {
+        "name": "템플릿 기반 제작",
+        "description": "다양한 디자인 유형의 템플릿을 편집해 콘텐츠를 만듭니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.canva.com/pricing/"
+      },
+      {
+        "name": "동시 작업과 댓글",
+        "description": "공유 디자인을 함께 편집하고 피드백을 남깁니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.canva.com/pricing/"
+      },
+      {
+        "name": "AI 편집과 브랜드 관리",
+        "description": "배경 제거, 크기 변경, Brand Kit 등 제작 기능을 제공합니다.",
+        "status": "conditional",
+        "condition": "기능별 플랜 제한과 AI 사용량 제한이 적용됩니다.",
+        "sourceUrl": "https://www.canva.com/pricing/"
+      }
+    ],
+    "limitations": [
+      "프리미엄 콘텐츠와 일부 편집 도구는 유료 플랜이 필요합니다.",
+      "AI 사용량과 브랜드 키트 수는 플랜마다 다릅니다."
+    ],
+    "sourceUrls": [
+      "https://www.canva.com/pricing/",
+      "https://www.canva.com/ko_kr/",
+      "https://www.canva.com/ko_kr/newsroom/news/canva-ai-languages/",
+      "https://www.canva.com/logos/",
+      "https://www.canva.com/launches/"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "Canva 공식 출시 기능",
+      "summary": "공식 출시 페이지에서 브랜드 컴포넌트와 영상·이미지 편집 기능을 확인할 수 있습니다. 항목별 정확한 게시일은 확인되지 않았습니다.",
+      "publishedAt": null,
+      "sourceUrl": "https://www.canva.com/launches/",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "원문에서 제공 상태 확인 필요",
+      "id": "canva-undated-1",
+      "revision": 1
+    },
+    "logo": "/logos/canva.png"
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "kind": "saas",
+    "vendor": "Slack (Salesforce)",
+    "category": "collaboration",
+    "summary": "대화와 업무 도구를 채널 중심으로 연결하는 팀 협업 서비스.",
+    "description": "채널과 메시지에 팀의 대화, 파일, 작업 맥락을 모읍니다. 허들, 앱 연동, AI 기능을 활용해 협업과 정보 확인을 이어갈 수 있습니다.",
+    "homepage": "https://slack.com/",
+    "logoSource": "https://a.slack-edge.com/9cc0056/img/icons/favicon-32.png",
+    "pricing": "무료 플랜 있음 · Pro·Business+·Enterprise+ 유료 플랜",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "데스크톱",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "팀 커뮤니케이션",
+      "프로젝트 채널",
+      "업무 알림 통합"
+    ],
+    "features": [
+      {
+        "name": "채널과 메시지",
+        "description": "프로젝트와 주제별로 대화를 정리하고 파일을 공유합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://slack.com/intl/ko-kr/features"
+      },
+      {
+        "name": "허들",
+        "description": "음성·영상과 화면 공유로 빠르게 협의합니다.",
+        "status": "conditional",
+        "condition": "무료 플랜은 일대일 허들, 그룹 허들은 유료 플랜 기준입니다.",
+        "sourceUrl": "https://slack.com/pricing"
+      },
+      {
+        "name": "앱 연동",
+        "description": "외부 업무 도구를 연결해 Slack에서 정보를 확인합니다.",
+        "status": "conditional",
+        "condition": "무료 플랜에는 연결 가능한 앱 수 제한이 있습니다.",
+        "sourceUrl": "https://slack.com/pricing"
+      },
+      {
+        "name": "AI 요약",
+        "description": "대화와 회의 내용을 요약해 맥락을 파악합니다.",
+        "status": "conditional",
+        "condition": "AI 기능의 종류와 사용 범위는 플랜에 따라 다릅니다.",
+        "sourceUrl": "https://slack.com/pricing"
+      }
+    ],
+    "limitations": [
+      "무료 플랜에서는 최근 90일 메시지 기록에 접근할 수 있습니다.",
+      "외부 앱과 AI 기능은 관리자 권한 및 플랜 조건의 영향을 받습니다."
+    ],
+    "sourceUrls": [
+      "https://slack.com/intl/ko-kr/features",
+      "https://slack.com/pricing",
+      "https://slack.com/help/articles/215058658-Manage-your-language-preferences",
+      "https://slack.com/help/articles/115004846068-Slack-updates-and-changes."
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "Slack 공식 업데이트 · 2026년 8월",
+      "summary": "Slackbot의 큰 화면 모드, 스킬 공유, 심층 조사 개선을 안내합니다. 일부 기능은 순차 배포이며 정확한 일자는 공개되지 않았습니다.",
+      "publishedAt": null,
+      "sourceUrl": "https://slack.com/help/articles/115004846068-Slack-updates-and-changes.",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "큰 화면 모드는 순차 배포 · 개별 기능·계정 조건 확인",
+      "id": "slack-undated-1",
+      "revision": 1
+    },
+    "logo": "/logos/slack.png"
+  },
+  {
+    "id": "zapier",
+    "name": "Zapier",
+    "kind": "saas",
+    "vendor": "Zapier",
+    "category": "automation",
+    "summary": "여러 업무 앱의 반복 작업을 트리거와 액션으로 연결.",
+    "description": "한 앱의 이벤트를 시작점으로 다른 앱의 작업을 실행하는 자동화를 만듭니다. Zap 워크플로, Tables, Forms를 조합해 데이터를 수집하고 처리할 수 있습니다.",
+    "homepage": "https://zapier.com/",
+    "logoSource": "https://zapier.com/favicon.ico",
+    "pricing": "무료 플랜 있음 · 작업 사용량 기반 유료 플랜·추가 제품",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹"
+    ],
+    "useCases": [
+      "앱 간 데이터 이동",
+      "입력 폼 처리",
+      "반복 업무 자동화"
+    ],
+    "features": [
+      {
+        "name": "트리거·액션 자동화",
+        "description": "새 데이터가 생기면 연결된 앱에서 지정한 작업을 실행합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://zapier.com/blog/get-started-with-zapier/"
+      },
+      {
+        "name": "Tables·Forms",
+        "description": "자동화에 사용할 구조화 데이터와 입력 화면을 구성합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://zapier.com/pricing"
+      },
+      {
+        "name": "다단계 워크플로",
+        "description": "여러 동작을 이어 복잡한 처리 흐름을 구성합니다.",
+        "status": "conditional",
+        "condition": "무료 플랜은 2단계 Zap 워크플로를 제공하며 고급 범위는 요금제를 확인해야 합니다.",
+        "sourceUrl": "https://zapier.com/pricing"
+      }
+    ],
+    "limitations": [
+      "무료 플랜에는 월별 작업 수 제한이 있습니다.",
+      "연결 앱의 계정 권한과 제공하는 트리거·액션에 따라 구성 범위가 달라집니다."
+    ],
+    "sourceUrls": [
+      "https://zapier.com/pricing",
+      "https://zapier.com/blog/get-started-with-zapier/",
+      "https://zapier.com/blog/updates"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "Zapier 공식 업데이트 페이지",
+      "summary": "신규 앱 연동과 지원 기능을 모은 공식 페이지입니다. 전체 제품의 최신 변경 날짜를 확정하기 어려워 게시일을 표시하지 않습니다.",
+      "publishedAt": null,
+      "sourceUrl": "https://zapier.com/blog/updates",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "원문에서 제공 상태 확인 필요",
+      "id": "zapier-undated-1",
+      "revision": 1
+    },
+    "logo": "/logos/zapier.ico"
+  },
+  {
+    "id": "make",
+    "name": "Make",
+    "kind": "saas",
+    "vendor": "Make (Celonis)",
+    "category": "automation",
+    "summary": "시각적 시나리오로 앱과 AI의 처리 흐름을 만드는 자동화 도구.",
+    "description": "앱 모듈을 연결하고 조건과 분기를 추가해 업무 시나리오를 구성합니다. 실행 이력을 보며 데이터 흐름을 확인하고 반복 작업을 조정할 수 있습니다.",
+    "homepage": "https://www.make.com/",
+    "logoSource": "https://archbee-image-uploads.s3.amazonaws.com/oAyFj2GHlBeBVWF5OAir2/tc7eidumLSpPBQvwpAMR0_favn-1.ico",
+    "pricing": "무료 플랜 있음 · 크레딧 사용량 기반 유료 플랜",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹"
+    ],
+    "useCases": [
+      "업무 시나리오 설계",
+      "데이터 변환",
+      "AI 앱 연결"
+    ],
+    "features": [
+      {
+        "name": "시각적 워크플로",
+        "description": "모듈을 연결하는 편집기에서 시나리오를 구성합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.make.com/en/pricing"
+      },
+      {
+        "name": "라우터·필터",
+        "description": "조건에 따라 데이터를 분기하고 필요한 항목만 전달합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.make.com/en/pricing"
+      },
+      {
+        "name": "예약 실행",
+        "description": "정해진 간격에 따라 시나리오를 실행합니다.",
+        "status": "conditional",
+        "condition": "최소 실행 간격은 무료·유료 플랜별로 다릅니다.",
+        "sourceUrl": "https://www.make.com/en/pricing"
+      },
+      {
+        "name": "Make AI Agents",
+        "description": "자동화 흐름에 AI 에이전트를 연결합니다.",
+        "status": "conditional",
+        "condition": "베타 기능이며 AI 제공자 및 사용량에 따라 크레딧 비용이 달라집니다.",
+        "sourceUrl": "https://www.make.com/en/pricing"
+      }
+    ],
+    "limitations": [
+      "무료 플랜은 활성 시나리오 수와 실행 간격에 제한이 있습니다.",
+      "작업과 AI 처리에 크레딧이 소모되며 소진 시 실행이 멈출 수 있습니다."
+    ],
+    "sourceUrls": [
+      "https://www.make.com/en/pricing",
+      "https://www.make.com/en/whats-new",
+      "https://help.make.com/",
+      "https://help.make.com/2026"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "앱 인증 및 모듈 업데이트",
+      "summary": "Greenhouse 인증 방식, WordPress 수정, OpenAI 관련 기능 등 앱 업데이트가 공식 변경 기록에 안내되었습니다.",
+      "publishedAt": "2026-09-11",
+      "sourceUrl": "https://help.make.com/2026",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "원문에서 제공 상태 확인 필요",
+      "id": "make-2026-09-11",
+      "revision": 1
+    },
+    "logo": "/logos/make.ico"
+  },
+  {
+    "id": "linear",
+    "name": "Linear",
+    "kind": "saas",
+    "vendor": "Linear",
+    "category": "project-management",
+    "summary": "이슈와 프로젝트를 연결해 제품 개발을 관리하는 도구.",
+    "description": "제품 계획부터 이슈 처리와 출시까지 개발팀의 작업을 정리합니다. 프로젝트, 사이클, 알림을 함께 관리하며 팀의 진행 상황을 확인할 수 있습니다.",
+    "homepage": "https://linear.app/",
+    "logoSource": "https://linear.app/static/apple-touch-icon.png?v=2",
+    "pricing": "무료 플랜 있음 · Basic·Business·Enterprise 유료 플랜",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "데스크톱",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "개발 이슈 관리",
+      "제품 로드맵",
+      "팀 프로젝트"
+    ],
+    "features": [
+      {
+        "name": "이슈와 사이클",
+        "description": "작업을 이슈로 정리하고 개발 주기를 계획합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://linear.app/features"
+      },
+      {
+        "name": "프로젝트와 이니셔티브",
+        "description": "여러 작업을 목표와 프로젝트 단위로 연결합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://linear.app/features"
+      },
+      {
+        "name": "타사 앱 승인",
+        "description": "관리자가 설치 전 외부 앱을 검토하고 승인합니다.",
+        "status": "conditional",
+        "condition": "유료 Linear 플랜에서 제공합니다.",
+        "sourceUrl": "https://linear.app/changelog/2026-09-03-priority-inbox"
+      }
+    ],
+    "limitations": [
+      "무료 플랜은 팀 수와 이슈 수에 제한이 있습니다.",
+      "고급 관리·보안 기능의 제공 범위는 요금제별로 다릅니다."
+    ],
+    "sourceUrls": [
+      "https://linear.app/pricing",
+      "https://linear.app/features",
+      "https://linear.app/changelog/2026-09-03-priority-inbox"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "중요 알림을 모으는 Priority inbox",
+      "summary": "받은 편지함에서 우선 확인할 알림을 분리하고 기준을 설정할 수 있습니다.",
+      "publishedAt": "2026-09-03",
+      "sourceUrl": "https://linear.app/changelog/2026-09-03-priority-inbox",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "원문에서 제공 상태 확인 필요",
+      "id": "linear-2026-09-03",
+      "revision": 1
+    },
+    "feedUrl": "https://linear.app/rss/changelog.xml",
+    "logo": "/logos/linear.png"
+  },
+  {
+    "id": "supabase",
+    "name": "Supabase",
+    "kind": "saas",
+    "vendor": "Supabase",
+    "category": "development",
+    "summary": "Postgres 데이터베이스와 인증·스토리지를 제공하는 백엔드 플랫폼.",
+    "description": "Postgres를 중심으로 앱에 필요한 데이터베이스, 로그인, 파일 저장 기능을 구성합니다. 데이터 API와 실시간 기능을 연결해 웹·모바일 앱의 백엔드를 만들 수 있습니다.",
+    "homepage": "https://supabase.com/",
+    "logoSource": "https://supabase.com/favicon/favicon-196x196.png",
+    "pricing": "무료 플랜 있음 · 유료 플랜 및 리소스 사용량 과금",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹 콘솔",
+      "API",
+      "CLI"
+    ],
+    "useCases": [
+      "앱 백엔드",
+      "사용자 인증",
+      "데이터베이스·파일 저장"
+    ],
+    "features": [
+      {
+        "name": "Postgres와 데이터 API",
+        "description": "관계형 데이터베이스와 REST API를 사용합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://supabase.com/"
+      },
+      {
+        "name": "인증",
+        "description": "회원가입과 로그인에 필요한 인증 기능을 제공합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://supabase.com/"
+      },
+      {
+        "name": "스토리지·실시간 데이터",
+        "description": "파일을 저장하고 데이터 변경을 실시간으로 전달합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://supabase.com/"
+      },
+      {
+        "name": "프로젝트 자원 확장",
+        "description": "컴퓨팅과 저장 공간 등 백엔드 자원을 조정합니다.",
+        "status": "conditional",
+        "condition": "플랜의 포함량과 추가 리소스 사용량에 따라 비용이 달라집니다.",
+        "sourceUrl": "https://supabase.com/pricing"
+      }
+    ],
+    "limitations": [
+      "무료 프로젝트는 비활성 기간 이후 일시 중지될 수 있습니다.",
+      "운영 앱은 데이터 접근 정책과 백업·리소스 한도를 별도로 설계해야 합니다."
+    ],
+    "sourceUrls": [
+      "https://supabase.com/",
+      "https://supabase.com/pricing",
+      "https://supabase.com/docs",
+      "https://supabase.com/changelog/read-replicas-moved-to-infrastructure"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "읽기 복제본 관리 위치 변경",
+      "summary": "읽기 복제본을 Project Settings의 Infrastructure에서 관리하도록 대시보드 위치가 바뀌었습니다.",
+      "publishedAt": "2026-08-21",
+      "sourceUrl": "https://supabase.com/changelog/read-replicas-moved-to-infrastructure",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "원문에서 제공 상태 확인 필요",
+      "id": "supabase-2026-08-21",
+      "revision": 1
+    },
+    "feedUrl": "https://supabase.com/changelog-rss.xml",
+    "logo": "/logos/supabase.png"
+  },
+  {
+    "id": "vercel",
+    "name": "Vercel",
+    "kind": "saas",
+    "vendor": "Vercel",
+    "category": "development",
+    "summary": "웹 앱을 배포하고 전송·실행·성능을 관리하는 클라우드 플랫폼.",
+    "description": "저장소를 가져와 웹 프로젝트를 배포하고 CI/CD 흐름을 구성합니다. CDN, 컴퓨팅, 관측 기능을 통해 서비스 운영을 지원합니다.",
+    "homepage": "https://vercel.com/",
+    "logoSource": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-256x256.png",
+    "pricing": "무료 Hobby 플랜 있음 · Pro 및 Enterprise 유료 플랜",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹 콘솔",
+      "CLI"
+    ],
+    "useCases": [
+      "웹 앱 배포",
+      "개발 협업",
+      "프런트엔드 운영"
+    ],
+    "features": [
+      {
+        "name": "저장소 기반 배포",
+        "description": "저장소를 가져오고 자동 CI/CD로 배포 흐름을 구성합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://vercel.com/pricing"
+      },
+      {
+        "name": "CDN·컴퓨팅",
+        "description": "콘텐츠 전송과 앱 실행에 필요한 클라우드 기능을 제공합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://vercel.com/pricing"
+      },
+      {
+        "name": "트래픽·성능 확인",
+        "description": "배포한 서비스의 트래픽과 성능 정보를 확인합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://vercel.com/pricing"
+      },
+      {
+        "name": "Hobby 플랜",
+        "description": "개인 프로젝트를 무료로 시작할 수 있습니다.",
+        "status": "conditional",
+        "condition": "개인·비상업용 사용에 한정되며 사용량 상한이 적용됩니다.",
+        "sourceUrl": "https://vercel.com/pricing"
+      }
+    ],
+    "limitations": [
+      "Hobby 플랜은 개인·비상업용으로 제한됩니다.",
+      "유료 플랜에서도 자원 사용량과 추가 기능에 따라 요금이 달라질 수 있습니다."
+    ],
+    "sourceUrls": [
+      "https://vercel.com/pricing",
+      "https://vercel.com/docs/plans/hobby",
+      "https://vercel.com/changelog/vercel-sandbox-64-gb-storage"
+    ],
+    "checkedAt": "2026-09-12",
+    "latestUpdate": {
+      "title": "Sandbox 기본 저장 공간 확대",
+      "summary": "Sandbox 기본 저장 공간이 32GB에서 64GB로 확대되었으며, 이미지와 기존 runtime 방식으로 생성하는 Sandbox도 포함합니다.",
+      "publishedAt": "2026-09-11",
+      "sourceUrl": "https://vercel.com/changelog/vercel-sandbox-64-gb-storage",
+      "audience": "Vercel Sandbox 사용자",
+      "rollout": "제공 중",
+      "id": "vercel-2026-09-11",
+      "revision": 1
+    },
+    "logo": "/logos/vercel.png"
+  },
+  {
+    "id": "microsoft-copilot",
+    "name": "Microsoft Copilot",
+    "kind": "ai-app",
+    "vendor": "Microsoft",
+    "category": "productivity",
+    "summary": "검색·문서 분석·이미지 작업을 돕는 대화형 AI",
+    "description": "질문에 답하고 웹 정보를 정리하거나 업로드한 문서와 이미지를 다루는 AI 앱입니다. 음성 대화도 제공하며 Microsoft 365 앱 내부 기능은 구독·계정 조건을 별도로 확인해야 합니다.",
+    "homepage": "https://copilot.microsoft.com/",
+    "logo": "/logos/microsoft-copilot.svg",
+    "logoSource": "https://copilot.microsoft.com/static/cmc/favicon.svg",
+    "logoNote": "Microsoft Copilot 공식 제품 아이콘",
+    "pricing": "무료 이용·유료 구독",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "웹 리서치",
+      "자료 요약",
+      "문서 초안",
+      "이미지 편집"
+    ],
+    "features": [
+      {
+        "name": "출처가 있는 웹 답변",
+        "description": "필요한 웹 정보를 검색하고 답변에 출처 링크를 제공합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://support.microsoft.com/en-us/privacy/microsoft-copilot/transparency-note"
+      },
+      {
+        "name": "파일 분석",
+        "description": "PDF, DOCX, XLSX와 이미지 등을 업로드해 요약하거나 질문합니다.",
+        "status": "conditional",
+        "condition": "대화당 최대 20개 파일, 파일당 최대 50MB입니다.",
+        "sourceUrl": "https://support.microsoft.com/en-us/microsoft-copilot/file-upload-in-microsoft-copilot"
+      },
+      {
+        "name": "이미지 생성·편집",
+        "description": "텍스트 설명으로 이미지를 만들고 업로드한 이미지를 수정합니다.",
+        "status": "conditional",
+        "condition": "로그인과 구독 상태에 따라 생성 사용량이 달라집니다.",
+        "sourceUrl": "https://support.microsoft.com/en-us/microsoft-copilot/using-image-generation-in-microsoft-copilot"
+      },
+      {
+        "name": "음성 대화",
+        "description": "마이크로 말하고 음성 답변을 들으며 대화 기록을 확인합니다.",
+        "status": "conditional",
+        "condition": "마이크 권한이 필요하며 혼잡할 때 구독자에게 우선 접근이 제공됩니다.",
+        "sourceUrl": "https://support.microsoft.com/en-us/microsoft-copilot/using-copilot-voice-with-microsoft-copilot"
+      }
+    ],
+    "limitations": [
+      "Microsoft 365 앱 내부 AI와 개인용 Copilot의 제공 범위는 다릅니다.",
+      "새 기능은 지역·언어·계정에 따라 이용 시점이 다를 수 있습니다.",
+      "macOS 앱의 지역 제공 범위는 공식 설치 안내에서 확인해야 합니다."
+    ],
+    "sourceUrls": [
+      "https://support.microsoft.com/en-us/microsoft-copilot/supported-regions-and-languages-in-microsoft-copilot",
+      "https://support.microsoft.com/en-us/microsoft-copilot/getting-started-with-microsoft-copilot",
+      "https://www.microsoft.com/en-us/microsoft-365-copilot/personal",
+      "https://support.microsoft.com/en-us/privacy/microsoft-copilot/transparency-note",
+      "https://support.microsoft.com/en-us/microsoft-copilot/file-upload-in-microsoft-copilot",
+      "https://support.microsoft.com/en-us/microsoft-copilot/using-image-generation-in-microsoft-copilot",
+      "https://support.microsoft.com/en-us/microsoft-copilot/using-copilot-voice-with-microsoft-copilot",
+      "https://www.microsoft.com/en-us/microsoft-copilot/blog/2026/02/26/copilot-tasks-from-answers-to-actions/"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "microsoft-copilot-tasks-2026-02-26",
+      "revision": 1,
+      "title": "Copilot Tasks 연구 미리보기 발표",
+      "summary": "백그라운드에서 여러 앱을 이용해 작업하는 Tasks를 소규모 이용자 대상 연구 미리보기로 발표했습니다. 일반 제공 완료를 뜻하지 않습니다.",
+      "publishedAt": "2026-02-26",
+      "sourceUrl": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2026/02/26/copilot-tasks-from-answers-to-actions/",
+      "audience": "미리보기에 초대된 이용자",
+      "rollout": "발표 당시 연구 미리보기·대기 명단 안내 · 현재 계정 접근 여부 확인"
+    },
+    "aliases": [
+      "코파일럿",
+      "마이크로소프트 코파일럿"
+    ]
+  },
+  {
+    "id": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "kind": "ai-app",
+    "vendor": "Adobe",
+    "category": "image",
+    "summary": "이미지·영상·오디오를 만들고 편집하는 창작 도구",
+    "description": "텍스트와 참조 자료로 이미지, 영상, 오디오를 만들고 편집하는 Adobe의 AI 앱입니다. Firefly Boards에서 시안을 정리할 수 있으며 생성 모델과 기능에 따라 크레딧 조건이 달라집니다.",
+    "homepage": "https://firefly.adobe.com/",
+    "logo": "/logos/adobe-firefly.png",
+    "logoSource": "https://firefly.adobe.com/releases/453c990875c01baddc6ee90ba4397e211733c53c/assets/fi_android_192-DXlUnW6D.png",
+    "logoNote": "Adobe Firefly 공식 제품 아이콘",
+    "pricing": "무료 일일 한도·유료 구독",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "이미지 생성",
+      "이미지 편집",
+      "영상 제작",
+      "무드보드"
+    ],
+    "features": [
+      {
+        "name": "이미지 생성·채우기",
+        "description": "텍스트로 이미지를 만들고 이미지의 일부를 채우거나 화면을 확장합니다.",
+        "status": "conditional",
+        "condition": "무료 일일 한도가 있으며 유료 플랜의 표준 생성과 파트너 모델 조건은 다릅니다.",
+        "sourceUrl": "https://www.adobe.com/products/firefly/plans.html"
+      },
+      {
+        "name": "영상 생성",
+        "description": "텍스트나 이미지를 바탕으로 영상 클립을 생성합니다.",
+        "status": "conditional",
+        "condition": "선택 모델·해상도·길이에 따라 생성 크레딧이 적용됩니다.",
+        "sourceUrl": "https://www.adobe.com/products/firefly/plans.html"
+      },
+      {
+        "name": "음성·음악 생성",
+        "description": "텍스트로 음성을 만들거나 콘텐츠에 사용할 음악을 생성합니다.",
+        "status": "conditional",
+        "condition": "프리미엄 기능의 월별 크레딧과 언어별 지원 범위를 확인해야 합니다.",
+        "sourceUrl": "https://www.adobe.com/products/firefly/plans.html"
+      },
+      {
+        "name": "Firefly Boards",
+        "description": "시각 자료와 시안을 보드에 모아 창작 방향을 정리합니다.",
+        "status": "conditional",
+        "condition": "Adobe 계정이 필요하며 프리미엄 접근이 없는 플랜은 보드 3개로 제한됩니다.",
+        "sourceUrl": "https://helpx.adobe.com/firefly/web/create-mood-boards/firefly-boards/about-firefly-boards.html"
+      }
+    ],
+    "limitations": [
+      "표준 생성, 프리미엄 생성, 파트너 모델은 크레딧 조건이 다릅니다.",
+      "한국어 화면을 지원하지만 음성·번역 기능의 언어 범위는 별도로 확인해야 합니다.",
+      "영상 편집기와 통합 생성·편집 작업공간에는 베타 기능이 포함됩니다."
+    ],
+    "sourceUrls": [
+      "https://www.adobe.com/products/firefly/plans.html",
+      "https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/technical-requirements.html",
+      "https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/adobe-firefly-faq.html",
+      "https://helpx.adobe.com/firefly/web/create-mood-boards/firefly-boards/about-firefly-boards.html",
+      "https://helpx.adobe.com/firefly/web/whats-new/new-features/whats-new.html"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "adobe-firefly-2026-08",
+      "revision": 1,
+      "title": "8월 영상 편집·작업공간 개선",
+      "summary": "8월 릴리스에 타임라인 음성 녹음, 자동 화면 재구성, 통합 생성·편집 작업공간 베타를 안내했습니다. 개별 출시 일자는 공개하지 않았습니다.",
+      "publishedAt": null,
+      "sourceUrl": "https://helpx.adobe.com/firefly/web/whats-new/new-features/whats-new.html",
+      "audience": "Firefly 웹 이용자",
+      "rollout": "2026년 8월 릴리스 · 일부 베타 · 개별 출시 일자 미공개"
+    },
+    "aliases": [
+      "파이어플라이",
+      "어도비 파이어플라이"
+    ]
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "kind": "ai-app",
+    "vendor": "Runway AI",
+    "category": "video",
+    "summary": "영상 생성과 장면 편집을 연결하는 AI 제작 도구",
+    "description": "텍스트와 참조 자료로 이미지·영상을 만들고 기존 장면을 수정하는 창작 서비스입니다. 웹과 모바일에서 사용할 수 있으며 Adobe 편집 앱용 플러그인도 제공합니다.",
+    "homepage": "https://runway.com/",
+    "logo": "/logos/runway.png",
+    "logoSource": "https://runway.com/icon.png?icon.35ps9bmugbe1e.png",
+    "logoNote": "Runway 공식 제품 아이콘",
+    "pricing": "무료 체험 크레딧·유료 구독",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android",
+      "Adobe 플러그인"
+    ],
+    "useCases": [
+      "영상 제작",
+      "이미지 생성",
+      "영상 편집",
+      "장면 시안"
+    ],
+    "features": [
+      {
+        "name": "이미지·영상 생성",
+        "description": "텍스트와 참조 자료로 이미지나 영상 클립을 만듭니다.",
+        "status": "conditional",
+        "condition": "무료 플랜은 일부 모델과 일회성 125 크레딧을 제공하며 모델별 소모량이 다릅니다.",
+        "sourceUrl": "https://runway.com/pricing"
+      },
+      {
+        "name": "영상 장면 변환",
+        "description": "기존 영상을 다시 표현하거나 색상과 HDR 결과를 조정합니다.",
+        "status": "conditional",
+        "condition": "선택 모델·플랜·크레딧 조건을 확인해야 합니다.",
+        "sourceUrl": "https://runway.com/plugins"
+      },
+      {
+        "name": "해상도 높이기",
+        "description": "생성물과 영상의 해상도를 높여 마무리 작업에 활용합니다.",
+        "status": "conditional",
+        "condition": "Standard 플랜에 4K 업스케일링이 안내되어 있습니다.",
+        "sourceUrl": "https://runway.com/pricing"
+      },
+      {
+        "name": "Adobe 편집 앱 연동",
+        "description": "Premiere Pro와 After Effects 패널 안에서 생성·편집하고 타임라인으로 가져옵니다.",
+        "status": "conditional",
+        "condition": "플러그인은 무료 다운로드이며 Runway 유료 플랜·크레딧과 해당 Adobe 앱이 필요합니다.",
+        "sourceUrl": "https://runway.com/changelog"
+      }
+    ],
+    "limitations": [
+      "무료 플랜의 125 크레딧은 매월 갱신되는 한도가 아닙니다.",
+      "공식 도움말은 다국어 프롬프트 입력은 가능하지만 언어별 결과가 다르고 화면 현지화는 제공하지 않는다고 안내합니다.",
+      "영상 길이·해상도·동시 생성 한도는 플랜과 모델에 따라 다릅니다."
+    ],
+    "sourceUrls": [
+      "https://runway.com/pricing",
+      "https://runway.com/plugins",
+      "https://help.runwayml.com/hc/en-us/articles/24342920074131-What-languages-can-I-prompt-in",
+      "https://runway.com/changelog"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "runway-adobe-plugins-2026-09-08",
+      "revision": 1,
+      "title": "Premiere Pro·After Effects 플러그인 출시",
+      "summary": "Adobe 편집 앱 패널에서 Runway의 이미지·영상 생성과 장면 변환을 이용하고 결과를 타임라인에 가져올 수 있게 되었습니다.",
+      "publishedAt": "2026-09-08",
+      "sourceUrl": "https://runway.com/changelog",
+      "audience": "Runway 유료 플랜과 지원 Adobe 앱 이용자",
+      "rollout": "macOS·Windows용 무료 다운로드 · 생성은 기존 유료 플랜 크레딧 사용"
+    },
+    "aliases": [
+      "런웨이",
+      "RunwayML"
+    ]
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "kind": "ai-app",
+    "vendor": "ElevenLabs",
+    "category": "audio",
+    "summary": "음성 생성·전사·더빙을 위한 오디오 AI",
+    "description": "텍스트를 음성으로 만들고 녹음·영상의 말을 전사하거나 다른 언어로 더빙하는 AI 서비스입니다. 효과음과 음악도 제공하며 기능별 크레딧과 상업적 이용 조건을 구분해야 합니다.",
+    "homepage": "https://elevenlabs.io/",
+    "logo": "/logos/elevenlabs.svg",
+    "logoSource": "https://elevenlabs.io/icon.svg?c23f5371fdd26632",
+    "logoNote": "ElevenLabs 공식 제품 아이콘",
+    "pricing": "무료 플랜·유료 구독",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "API"
+    ],
+    "useCases": [
+      "음성 생성",
+      "녹음 전사",
+      "영상 더빙",
+      "오디오 제작"
+    ],
+    "features": [
+      {
+        "name": "텍스트 음성 변환",
+        "description": "한국어를 포함한 여러 언어의 텍스트를 음성으로 만듭니다.",
+        "status": "conditional",
+        "condition": "선택 모델·플랜별 크레딧과 출력 음질 조건이 적용됩니다.",
+        "sourceUrl": "https://elevenlabs.io/text-to-speech/korean"
+      },
+      {
+        "name": "녹음·영상 전사",
+        "description": "음성이나 영상에서 자막과 편집 가능한 텍스트를 생성합니다.",
+        "status": "conditional",
+        "condition": "처리량·파일 크기·동시 요청 한도는 플랜별로 다릅니다.",
+        "sourceUrl": "https://elevenlabs.io/speech-to-text"
+      },
+      {
+        "name": "다국어 더빙",
+        "description": "원본 음성과 영상의 발화를 다른 언어로 변환합니다.",
+        "status": "conditional",
+        "condition": "더빙 모델·워터마크·편집 방식에 따라 소모 크레딧이 달라집니다.",
+        "sourceUrl": "https://elevenlabs.io/dubbing-studio"
+      },
+      {
+        "name": "효과음·음악 생성",
+        "description": "텍스트 설명으로 효과음과 음악을 만들어 제작에 활용합니다.",
+        "status": "conditional",
+        "condition": "생성 사용량과 상업적 이용 권한은 제품·플랜별 조건을 확인해야 합니다.",
+        "sourceUrl": "https://elevenlabs.io/pricing"
+      }
+    ],
+    "limitations": [
+      "음성 생성과 ElevenMusic 등 제품별 상업적 이용 조건을 서로 동일하게 적용하면 안 됩니다.",
+      "음성 복제·더빙에 사용할 원본과 목소리의 이용 권한을 확인해야 합니다.",
+      "한국어 음성 생성·전사를 지원하며 전사 결과와 발음은 직접 검토해야 합니다."
+    ],
+    "sourceUrls": [
+      "https://elevenlabs.io/pricing",
+      "https://elevenlabs.io/text-to-speech/korean",
+      "https://elevenlabs.io/speech-to-text",
+      "https://elevenlabs.io/dubbing-studio",
+      "https://elevenlabs.io/sound-effects",
+      "https://elevenlabs.io/blog/music-v2-5-model"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "elevenlabs-music-2-5-2026-09-11",
+      "revision": 1,
+      "title": "Music v2.5 제공",
+      "summary": "Music v2.5를 ElevenMusic 기본 생성 모델로 적용하고 ElevenCreative와 API에도 제공한다고 발표했습니다. 다운로드와 이용 권한은 각 제품의 조건을 확인해야 합니다.",
+      "publishedAt": "2026-09-11",
+      "sourceUrl": "https://elevenlabs.io/blog/music-v2-5-model",
+      "audience": "ElevenMusic·ElevenCreative 이용자와 API 개발자",
+      "rollout": "공식 제공 · 제품별 생성·다운로드 조건 적용"
+    },
+    "aliases": [
+      "일레븐랩스",
+      "ElevenCreative"
+    ]
+  },
+  {
+    "id": "deepseek-v4-1-flash",
+    "name": "DeepSeek-V4.1-Flash",
+    "kind": "model",
+    "vendor": "DeepSeek",
+    "category": "development",
+    "summary": "시각 입력·추론·도구 호출을 지원하는 API 모델",
+    "description": "DeepSeek API에서 deepseek-flash 식별자로 제공하는 모델입니다. 텍스트와 시각 입력을 다루며 추론 모드, JSON 출력과 도구 호출을 지원합니다. 실제 앱 동작은 개발자가 연결한 실행 환경에 따라 달라집니다.",
+    "homepage": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "logo": "/logos/deepseek-v4-1-flash.ico",
+    "logoSource": "https://www.deepseek.com/favicon.ico",
+    "logoNote": "DeepSeek 공식 브랜드 마크",
+    "pricing": "API 사용량 과금",
+    "korean": "확인 필요",
+    "platforms": [
+      "DeepSeek API"
+    ],
+    "useCases": [
+      "코드 생성",
+      "시각 자료 분석",
+      "도구 연동 에이전트",
+      "구조화된 출력"
+    ],
+    "features": [
+      {
+        "name": "시각 입력",
+        "description": "API에서 이미지 입력을 함께 다룰 수 있습니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      {
+        "name": "추론 모드",
+        "description": "요청에 따라 추론 모드와 일반 모드를 선택할 수 있습니다.",
+        "status": "supported",
+        "condition": "기본값은 추론 모드입니다.",
+        "sourceUrl": "https://api-docs.deepseek.com/guides/thinking_mode/"
+      },
+      {
+        "name": "JSON 출력·도구 호출",
+        "description": "구조화된 결과를 받거나 외부 도구 호출을 연결합니다.",
+        "status": "conditional",
+        "condition": "도구 실행은 개발자가 구현하고 응답을 검증해야 합니다.",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      {
+        "name": "긴 문맥 처리",
+        "description": "공식 모델 표에 100만 토큰 문맥 길이가 안내되어 있습니다.",
+        "status": "conditional",
+        "condition": "입출력 토큰·캐시 적중 여부·시간대에 따라 과금됩니다.",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/"
+      }
+    ],
+    "limitations": [
+      "DeepSeek 앱의 사용 조건과 API 과금은 별도입니다.",
+      "공식 권장 API 식별자는 deepseek-flash입니다. 이전 Flash 식별자는 호환 경로로 처리됩니다.",
+      "한국어별 성능 보장이나 명시적 지원 수준은 이번 공식 자료에서 확인하지 못했습니다."
+    ],
+    "sourceUrls": [
+      "https://api-docs.deepseek.com/quick_start/pricing/",
+      "https://api-docs.deepseek.com/guides/thinking_mode/",
+      "https://www.deepseek.com/en/news/deepseek-v4-1-flash/"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "deepseek-v4-1-flash-2026-09-10",
+      "revision": 1,
+      "title": "DeepSeek-V4.1-Flash API 출시",
+      "summary": "시각 이해를 포함한 V4.1-Flash를 deepseek-flash로 제공하고 시간대별 API 요금을 안내했습니다.",
+      "publishedAt": "2026-09-10",
+      "sourceUrl": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+      "audience": "DeepSeek API 개발자",
+      "rollout": "공식 제공 · 현재 모델·요금 문서를 우선 확인"
+    },
+    "aliases": [
+      "DeepSeek",
+      "딥시크",
+      "deepseek-flash"
+    ],
+    "modelId": "deepseek-flash"
+  },
+  {
+    "id": "mistral-vibe",
+    "name": "Mistral Vibe",
+    "kind": "ai-app",
+    "vendor": "Mistral AI",
+    "category": "productivity",
+    "summary": "대화·업무 위임·코딩을 함께 다루는 Mistral 앱",
+    "description": "기존 Le Chat을 통합한 AI 앱으로 Chat, Work, Code 세 가지 모드를 제공합니다. 문서와 웹 자료를 다루고 연결한 업무 도구로 여러 단계를 수행하며 코딩 작업도 진행할 수 있습니다.",
+    "homepage": "https://chat.mistral.ai/",
+    "logo": "/logos/mistral-vibe.webp",
+    "logoSource": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/cb/b6/2c/cbb62c3c-306a-de63-b9ab-50dba3f27466/Placeholder.mill/400x400bb-75.webp",
+    "logoNote": "Mistral Vibe 공식 제품 아이콘",
+    "pricing": "무료 플랜·유료 구독",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android",
+      "CLI",
+      "VS Code"
+    ],
+    "useCases": [
+      "문서 분석",
+      "웹 리서치",
+      "업무 자동화",
+      "코드 생성"
+    ],
+    "features": [
+      {
+        "name": "여러 단계 업무 처리",
+        "description": "Work 모드에서 자료를 읽고 작업을 나눠 초안과 결과물을 만듭니다.",
+        "status": "conditional",
+        "condition": "무료 플랜은 메시지·검색·코딩 세션 한도가 적용됩니다.",
+        "sourceUrl": "https://docs.mistral.ai/vibe/work/get-started"
+      },
+      {
+        "name": "자료 조사·문서 작업",
+        "description": "파일과 웹 자료를 바탕으로 조사하고 요약·문서 결과물을 만듭니다.",
+        "status": "supported",
+        "condition": "Deep Research는 Work의 Skill로 제공됩니다.",
+        "sourceUrl": "https://docs.mistral.ai/vibe/work/get-started"
+      },
+      {
+        "name": "업무 도구 연결",
+        "description": "Slack, Notion, GitHub, Google Drive 등 승인한 외부 자료를 작업에 활용합니다.",
+        "status": "conditional",
+        "condition": "해당 서비스 인증과 조직에서 허용한 연결 권한이 필요합니다.",
+        "sourceUrl": "https://docs.mistral.ai/vibe/work/get-started"
+      },
+      {
+        "name": "Vibe Code",
+        "description": "터미널·VS Code 또는 원격 환경에서 코드를 읽고 수정·검토합니다.",
+        "status": "conditional",
+        "condition": "파일·저장소 접근 권한과 실행 환경이 필요합니다.",
+        "sourceUrl": "https://docs.mistral.ai/vibe/code/overview"
+      }
+    ],
+    "limitations": [
+      "기존 Le Chat의 일부 기능은 Chat에 남아 있고 Work와 제공 위치가 다릅니다.",
+      "무료·유료 플랜의 사용량이 다르며 외부 연결에는 서비스별 인증이 필요합니다.",
+      "iOS 앱의 공식 화면 언어 목록에는 한국어가 없으며 한국어 응답 지원 수준은 별도 확인이 필요합니다."
+    ],
+    "sourceUrls": [
+      "https://mistral.ai/products/vibe/",
+      "https://mistral.ai/pricing/",
+      "https://docs.mistral.ai/vibe",
+      "https://help.mistral.ai/en/articles/682992-le-chat-is-now-vibe",
+      "https://apps.apple.com/us/app/vibe-by-mistral-ex-le-chat/id6740410176",
+      "https://docs.mistral.ai/vibe/work/get-started",
+      "https://docs.mistral.ai/vibe/code/overview",
+      "https://docs.mistral.ai/resources/changelogs"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "mistral-vibe-unified-2026-05-28",
+      "revision": 1,
+      "title": "Chat·Work·Code를 Vibe로 통합",
+      "summary": "기존 Le Chat 경험을 Chat에 유지하고 업무용 Work와 개발용 Code를 하나의 Vibe 제품으로 통합했습니다.",
+      "publishedAt": "2026-05-28",
+      "sourceUrl": "https://docs.mistral.ai/resources/changelogs",
+      "audience": "기존 Le Chat 이용자와 Vibe 이용자",
+      "rollout": "공식 제공 · 세 모드의 기능·문서 위치 구분"
+    },
+    "aliases": [
+      "Le Chat",
+      "르샤",
+      "미스트랄",
+      "Vibe"
+    ]
+  },
+  {
+    "id": "asana",
+    "name": "Asana",
+    "kind": "saas",
+    "vendor": "Asana",
+    "category": "project-management",
+    "summary": "담당자·일정·진행 상태를 연결하는 프로젝트 관리 도구",
+    "description": "작업을 프로젝트로 묶고 담당자와 마감일을 공유합니다. 목록·보드·캘린더로 진행 상황을 확인하며, 유료 플랜에서는 타임라인과 자동화로 팀의 업무 흐름을 관리할 수 있습니다.",
+    "homepage": "https://asana.com/",
+    "logo": "/logos/asana.ico",
+    "logoSource": "https://asana.com/assets/img/brand/asana-logo-favicon.ico",
+    "logoNote": "공식 사이트의 제품 아이콘",
+    "aliases": [
+      "아사나",
+      "프로젝트 관리",
+      "PMS"
+    ],
+    "pricing": "무료 Personal 플랜 있음 · 유료 플랜은 사용자별 과금",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "macOS",
+      "Windows",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "프로젝트 관리",
+      "팀 프로젝트",
+      "업무 일정 관리",
+      "업무 자동화"
+    ],
+    "features": [
+      {
+        "name": "작업·프로젝트 보기",
+        "description": "담당자와 마감일을 정하고 목록·보드·캘린더로 업무를 확인합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://asana.com/pricing"
+      },
+      {
+        "name": "타임라인·간트",
+        "description": "프로젝트의 일정과 작업 관계를 시간순으로 살펴봅니다.",
+        "status": "conditional",
+        "condition": "Starter 이상에서 제공합니다.",
+        "sourceUrl": "https://asana.com/pricing"
+      },
+      {
+        "name": "규칙 자동화",
+        "description": "배정·알림·상태 변경을 규칙으로 처리합니다.",
+        "status": "conditional",
+        "condition": "Starter 이상에서 제공하며 AI Studio에는 별도 크레딧 한도가 적용됩니다.",
+        "sourceUrl": "https://asana.com/pricing"
+      },
+      {
+        "name": "포트폴리오·목표",
+        "description": "여러 프로젝트의 진행 상황을 목표와 연결합니다.",
+        "status": "conditional",
+        "condition": "Advanced 이상에서 제공합니다.",
+        "sourceUrl": "https://asana.com/pricing"
+      }
+    ],
+    "limitations": [
+      "무료 Personal 플랜은 최대 2명이 협업할 수 있습니다.",
+      "AI Teammates와 일부 부가 기능은 기본 플랜 외 이용 조건을 확인해야 합니다."
+    ],
+    "sourceUrls": [
+      "https://asana.com/pricing",
+      "https://help.asana.com/s/article/navigation-and-display",
+      "https://forum.asana.com/t/asana-release-notes-august-2026/1154956",
+      "https://asana.com/"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "asana-2026-09-09",
+      "revision": 1,
+      "title": "8월 릴리스: Pages와 사용자 정의 필드 개선",
+      "summary": "Pages의 공동 편집·버전 기록·인라인 댓글과 Starter의 리치 텍스트 필드 개선 등을 안내했습니다. 9월 9일 게시된 8월 릴리스 요약입니다.",
+      "publishedAt": "2026-09-09",
+      "sourceUrl": "https://forum.asana.com/t/asana-release-notes-august-2026/1154956",
+      "audience": "Pages: Personal 이상 · 리치 텍스트 필드: Starter 이상",
+      "rollout": "기능별 제공 플랜 구분"
+    }
+  },
+  {
+    "id": "monday",
+    "name": "monday.com",
+    "kind": "saas",
+    "vendor": "monday.com",
+    "category": "project-management",
+    "summary": "보드와 대시보드로 팀의 업무 흐름을 관리하는 플랫폼",
+    "description": "업무 항목에 담당자·상태·일정을 기록하고 보드와 대시보드에서 확인합니다. 자동화와 외부 앱 연결을 조합할 수 있으며, CRM·개발 등 제품별 구독 범위는 따로 확인해야 합니다.",
+    "homepage": "https://monday.com/",
+    "logo": "/logos/monday.png",
+    "logoSource": "https://cdn.prod.website-files.com/656da6fea306219773d04208/65af6bd6e742d497b5f23f69_645898132bbaac20f1963919_256x256.png",
+    "logoNote": "공식 사이트의 제품 아이콘",
+    "aliases": [
+      "먼데이",
+      "먼데이닷컴",
+      "monday work management",
+      "PMS"
+    ],
+    "pricing": "무료 플랜 있음 · 제품·좌석·플랜별 유료 구독",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "데스크톱",
+      "모바일"
+    ],
+    "useCases": [
+      "프로젝트 관리",
+      "팀 프로젝트",
+      "업무 일정 관리",
+      "업무 자동화"
+    ],
+    "features": [
+      {
+        "name": "보드·업무 항목",
+        "description": "업무를 보드에 정리하고 담당자·상태를 함께 관리합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://support.monday.com/hc/en-us/articles/360010487220-Understanding-the-Free-Plan"
+      },
+      {
+        "name": "업무별 대화",
+        "description": "항목의 업데이트와 멘션으로 작업 맥락 안에서 의견을 나눕니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://support.monday.com/hc/en-us/articles/360010487220-Understanding-the-Free-Plan"
+      },
+      {
+        "name": "대시보드",
+        "description": "보드의 진행 상황을 위젯으로 모아 봅니다.",
+        "status": "conditional",
+        "condition": "무료 플랜의 대시보드는 보드 1개와 연결할 수 있습니다.",
+        "sourceUrl": "https://support.monday.com/hc/en-us/articles/360010487220-Understanding-the-Free-Plan"
+      },
+      {
+        "name": "자동화·앱 연동",
+        "description": "조건에 따라 작업을 실행하고 외부 서비스와 데이터를 연결합니다.",
+        "status": "conditional",
+        "condition": "Standard 이상이며 플랜별 월간 액션 한도가 적용됩니다.",
+        "sourceUrl": "https://support.monday.com/hc/en-us/articles/360002826680-Automations-and-integrations-pricing"
+      }
+    ],
+    "limitations": [
+      "무료 플랜은 최대 2명·보드 3개이며 기본 항목 수와 저장 공간에 제한이 있습니다.",
+      "monday CRM·monday dev 등은 제품별로 이용 요금과 기능 범위가 다릅니다."
+    ],
+    "sourceUrls": [
+      "https://monday.com/pricing",
+      "https://support.monday.com/hc/en-us/articles/360010487220-Understanding-the-Free-Plan",
+      "https://support.monday.com/hc/en-us/articles/360002826680-Automations-and-integrations-pricing",
+      "https://support.monday.com/hc/en-us/articles/360003503760-Available-languages-for-monday-com",
+      "https://monday.com/whats-new",
+      "https://monday.com/"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "monday-undated-1",
+      "revision": 1,
+      "title": "AI 도구 연결과 워크플로 기능 업데이트",
+      "summary": "공식 변경 페이지에서 AI 에이전트·앱 연결과 AI Blocks 등 기능을 안내합니다. 항목별 정확한 게시일은 확인되지 않았습니다.",
+      "publishedAt": null,
+      "sourceUrl": "https://monday.com/whats-new",
+      "audience": "연결 도구·제품·계정별 조건 확인 필요",
+      "rollout": "공식 변경 페이지에서 제공 범위 확인"
+    }
+  },
+  {
+    "id": "clickup",
+    "name": "ClickUp",
+    "kind": "saas",
+    "vendor": "ClickUp",
+    "category": "project-management",
+    "summary": "업무·문서·일정을 함께 관리하는 팀 작업 공간",
+    "description": "작업, 공동 문서, 스프린트와 캘린더를 한 작업 공간에 모읍니다. 유료 플랜에서 고급 대시보드와 자동화를 확장할 수 있고, AI 기능은 별도 요금 및 사용량 조건을 확인해야 합니다.",
+    "homepage": "https://clickup.com/",
+    "logo": "/logos/clickup.png",
+    "logoSource": "https://clickup.com/favicons/apple-touch-icon.png",
+    "logoNote": "공식 사이트의 제품 아이콘",
+    "aliases": [
+      "클릭업",
+      "프로젝트 관리",
+      "PMS"
+    ],
+    "pricing": "무료 Free Forever 있음 · 유료 플랜·AI 요금 별도",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "macOS",
+      "Windows",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "프로젝트 관리",
+      "팀 프로젝트",
+      "개발 이슈 관리",
+      "업무 자동화"
+    ],
+    "features": [
+      {
+        "name": "작업·보드·스프린트",
+        "description": "작업을 배정하고 칸반 보드와 스프린트로 진행 상황을 관리합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://clickup.com/pricing"
+      },
+      {
+        "name": "공동 문서",
+        "description": "팀과 문서를 작성하고 작업 맥락을 공유합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://clickup.com/pricing"
+      },
+      {
+        "name": "간트·시간 기록",
+        "description": "일정을 간트로 보고 업무에 사용한 시간을 기록합니다.",
+        "status": "conditional",
+        "condition": "Unlimited 이상에서 무제한 간트와 기본 시간 기록을 제공합니다.",
+        "sourceUrl": "https://clickup.com/pricing"
+      },
+      {
+        "name": "대시보드·자동화",
+        "description": "업무 지표를 보고 반복 작업을 자동화합니다.",
+        "status": "conditional",
+        "condition": "고급 대시보드와 자동화 범위·실행 한도는 플랜에 따라 다릅니다.",
+        "sourceUrl": "https://clickup.com/pricing"
+      }
+    ],
+    "limitations": [
+      "무료 플랜의 파일 저장 공간은 60MB이며 고급 기능에는 사용 횟수 제한이 있습니다.",
+      "Brain AI의 한국어 번역 지원과 앱 전체의 한국어 화면 지원은 별개입니다."
+    ],
+    "sourceUrls": [
+      "https://clickup.com/pricing",
+      "https://help.clickup.com/hc/en-us/articles/15430667811863-Translate-and-localize-with-Brain-AI",
+      "https://feedback.clickup.com/changelog",
+      "https://clickup.com/"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "clickup-2026-08-25",
+      "revision": 1,
+      "title": "인도에서 PayPal 결제 순차 도입",
+      "summary": "인도에서 구독 설정·체크아웃·부가 기능 구매에 PayPal 결제 옵션을 순차적으로 추가한다고 안내했습니다. 요금 인하 안내는 아닙니다.",
+      "publishedAt": "2026-08-25",
+      "sourceUrl": "https://feedback.clickup.com/changelog",
+      "audience": "인도 이용자부터 적용",
+      "rollout": "인도에서 순차 배포 · 다른 국가의 일정은 확인 필요"
+    }
+  },
+  {
+    "id": "trello",
+    "name": "Trello",
+    "kind": "saas",
+    "vendor": "Atlassian",
+    "category": "project-management",
+    "summary": "카드를 옮기며 업무 흐름을 관리하는 칸반 도구",
+    "description": "보드·목록·카드로 할 일을 정리하고 담당자와 마감일을 공유합니다. Inbox에 모은 작업을 보드로 옮기거나 자동화·Power-Up으로 다른 업무 도구와 연결할 수 있습니다.",
+    "homepage": "https://trello.com/",
+    "logo": "/logos/trello.svg",
+    "logoSource": "https://atlassian.design/assets/d4e428e45e71/logos/trello_app.zip",
+    "logoNote": "공식 브랜드 자료의 제품 아이콘",
+    "aliases": [
+      "트렐로",
+      "칸반",
+      "kanban",
+      "PMS"
+    ],
+    "pricing": "무료 플랜 있음 · Standard·Premium·Enterprise 유료 구독",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "데스크톱",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "프로젝트 관리",
+      "개인 업무 정리",
+      "콘텐츠 일정 관리",
+      "업무 자동화"
+    ],
+    "features": [
+      {
+        "name": "보드·카드 관리",
+        "description": "업무 카드를 목록별로 정리하고 담당자·마감일을 설정합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://trello.com/pricing"
+      },
+      {
+        "name": "Inbox",
+        "description": "이메일·Slack·Teams의 할 일을 개인 수집 공간에 모읍니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://trello.com/pricing"
+      },
+      {
+        "name": "규칙 자동화",
+        "description": "반복되는 카드 정리와 업무 흐름을 자동화합니다.",
+        "status": "conditional",
+        "condition": "무료 플랜은 워크스페이스당 월 250회 명령 실행 한도가 있습니다.",
+        "sourceUrl": "https://trello.com/pricing"
+      },
+      {
+        "name": "여러 보기·Planner",
+        "description": "일정을 배치하고 캘린더·타임라인 등으로 업무를 확인합니다.",
+        "status": "conditional",
+        "condition": "Planner 전체 기능은 Standard 이상, 캘린더·타임라인 등 고급 보기는 Premium 이상입니다.",
+        "sourceUrl": "https://trello.com/pricing"
+      }
+    ],
+    "limitations": [
+      "무료 플랜은 워크스페이스당 협업자 10명·보드 10개로 제한됩니다.",
+      "일부 외부 Power-Up에는 별도 구독 요금이 있습니다."
+    ],
+    "sourceUrls": [
+      "https://trello.com/pricing",
+      "https://www.atlassian.com/blog/trello/connect-trello-to-your-favorite-ai-assistants-with-trello-mcp",
+      "https://atlassian.design/foundations/logos"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "trello-2026-07-22",
+      "revision": 1,
+      "title": "공식 Trello MCP 서버 출시",
+      "summary": "연결한 AI 도구에서 자연어로 보드·목록·카드·체크리스트를 관리할 수 있도록 공식 MCP 서버를 공개했습니다.",
+      "publishedAt": "2026-07-22",
+      "sourceUrl": "https://www.atlassian.com/blog/trello/connect-trello-to-your-favorite-ai-assistants-with-trello-mcp",
+      "audience": "전체 Trello 이용자 · 호환 AI 도구와 계정 연결 필요",
+      "rollout": "제공 중 · 기존 Trello 권한 및 관리자 설정 적용"
+    }
+  },
+  {
+    "id": "jira",
+    "name": "Jira",
+    "kind": "saas",
+    "vendor": "Atlassian",
+    "category": "project-management",
+    "summary": "개발 이슈부터 팀 간 계획까지 연결하는 업무 관리 도구",
+    "description": "작업과 백로그를 스크럼·칸반 방식으로 관리하는 클라우드 서비스입니다. 워크플로를 팀에 맞게 구성하고 보고서·대시보드로 진행 상황을 확인하며, 상위 플랜에서는 여러 팀의 계획을 연결합니다.",
+    "homepage": "https://www.atlassian.com/software/jira",
+    "logo": "/logos/jira.svg",
+    "logoSource": "https://atlassian.design/assets/d4e428e45e71/logos/jira_app.zip",
+    "logoNote": "공식 브랜드 자료의 제품 아이콘",
+    "aliases": [
+      "지라",
+      "Jira Software",
+      "이슈 추적",
+      "PMS"
+    ],
+    "pricing": "무료 Free 플랜 있음 · 사용자 수·플랜별 유료 구독",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "개발 이슈 관리",
+      "팀 프로젝트",
+      "제품 로드맵",
+      "프로젝트 관리"
+    ],
+    "features": [
+      {
+        "name": "스크럼·칸반·백로그",
+        "description": "작업을 정리하고 팀의 개발 주기와 우선순위를 관리합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.atlassian.com/software/jira/guides/more/jira-editions"
+      },
+      {
+        "name": "보고서·대시보드",
+        "description": "프로젝트 진행 상황과 업무 흐름을 보고서로 확인합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.atlassian.com/software/jira/jira/pricing"
+      },
+      {
+        "name": "팀 간 계획",
+        "description": "여러 팀과 프로젝트의 계획 및 의존성을 함께 관리합니다.",
+        "status": "conditional",
+        "condition": "Premium 이상에서 고급 팀 간 계획을 제공합니다.",
+        "sourceUrl": "https://www.atlassian.com/software/jira/jira/pricing"
+      },
+      {
+        "name": "Rovo AI",
+        "description": "팀의 정보를 검색하거나 대화·에이전트 기능으로 업무를 돕습니다.",
+        "status": "conditional",
+        "condition": "유료 플랜에서 제공하며 관리자 설정과 플랜별 AI 사용량 조건이 적용됩니다.",
+        "sourceUrl": "https://www.atlassian.com/software/jira/jira/pricing"
+      }
+    ],
+    "limitations": [
+      "무료 플랜은 최대 10명·저장 공간 2GB이며 권한·자동화 등에 제한이 있습니다.",
+      "이 항목은 Jira Cloud 기준입니다. Data Center의 릴리스·라이선스와 구분해야 합니다."
+    ],
+    "sourceUrls": [
+      "https://www.atlassian.com/software/jira/jira/pricing",
+      "https://www.atlassian.com/software/jira/guides/more/jira-editions",
+      "https://support.atlassian.com/atlassian-account/docs/manage-your-language-preferences/",
+      "https://confluence.atlassian.com/cloud/blog/2026/09/atlassian-cloud-changes-aug-31-to-sep-7-2026",
+      "https://support.atlassian.com/jira-software-cloud/docs/use-jira-cloud-on-apple-and-android-devices/",
+      "https://atlassian.design/foundations/logos"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "jira-undated-1",
+      "revision": 1,
+      "title": "9월 첫째 주: Jira Plans와 에이전트 작업 개선",
+      "summary": "8월 31일~9월 7일 공식 변경 기록에서 같은 스페이스의 여러 릴리스를 연결하는 Jira Plans 개선과 타임라인 에이전트 활동 표시를 안내했습니다. 개별 제공 날짜는 확정하지 않습니다.",
+      "publishedAt": null,
+      "sourceUrl": "https://confluence.atlassian.com/cloud/blog/2026/09/atlassian-cloud-changes-aug-31-to-sep-7-2026",
+      "audience": "Jira Cloud · Plans·에이전트별 플랜과 관리자 설정 적용",
+      "rollout": "순차 배포 · 모든 사이트에 즉시 제공되는 것은 아님"
+    }
+  },
+  {
+    "id": "airtable",
+    "name": "Airtable",
+    "kind": "saas",
+    "vendor": "Airtable (Bending Spoons)",
+    "category": "productivity",
+    "summary": "연결된 데이터로 팀 업무 앱을 만드는 서비스",
+    "description": "표 형태의 데이터를 연결하고 여러 보기와 맞춤 화면으로 팀의 업무를 구성합니다. 콘텐츠 일정·프로젝트·운영 데이터를 관리하며 조건에 따른 알림과 외부 앱 연동을 자동화할 수 있습니다.",
+    "homepage": "https://www.airtable.com/",
+    "logo": "/logos/airtable.png",
+    "logoSource": "https://www.airtable.com/favicon.ico",
+    "logoNote": "공식 사이트의 제품 아이콘",
+    "aliases": [
+      "에어테이블",
+      "데이터베이스",
+      "노코드",
+      "no-code"
+    ],
+    "pricing": "무료 플랜 있음 · 편집 권한·플랜별 유료 구독",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "데스크톱",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "프로젝트 관리",
+      "콘텐츠 일정 관리",
+      "업무 데이터 관리",
+      "업무 자동화"
+    ],
+    "features": [
+      {
+        "name": "연결된 업무 데이터",
+        "description": "표의 데이터를 연결해 프로젝트와 운영 정보를 관리합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.airtable.com/platform/connected-data"
+      },
+      {
+        "name": "다양한 데이터 보기",
+        "description": "표·칸반·캘린더 등으로 같은 데이터를 목적에 맞게 살펴봅니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.airtable.com/platform/views"
+      },
+      {
+        "name": "맞춤 업무 화면",
+        "description": "데이터를 바탕으로 팀이 사용할 인터페이스를 구성합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.airtable.com/platform/interface-designer"
+      },
+      {
+        "name": "트리거·액션 자동화",
+        "description": "데이터 변경을 시작점으로 알림과 여러 단계의 업무 흐름을 실행합니다.",
+        "status": "conditional",
+        "condition": "자동화·API에는 플랜별 이용 한도가 적용됩니다.",
+        "sourceUrl": "https://www.airtable.com/platform/automations"
+      }
+    ],
+    "limitations": [
+      "레코드·첨부·자동화 한도는 플랜에 따라 다릅니다.",
+      "유료 플랜은 편집 권한을 가진 사용자의 과금 조건을 확인해야 합니다."
+    ],
+    "sourceUrls": [
+      "https://airtable.com/pricing",
+      "https://www.airtable.com/platform/views",
+      "https://www.airtable.com/platform/automations",
+      "https://www.airtable.com/whatsnew",
+      "https://www.airtable.com/newsroom/airtable-joins-bending-spoons",
+      "https://www.airtable.com/downloads",
+      "https://www.airtable.com/",
+      "https://www.airtable.com/platform/connected-data",
+      "https://www.airtable.com/platform/interface-designer"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "airtable-undated-1",
+      "revision": 1,
+      "title": "Airtable 공식 제품 변경 기록",
+      "summary": "신규 기능과 개선 사항은 공식 제품 변경 페이지에서 확인할 수 있습니다. 현재 조사에서 개별 최신 릴리스의 정확한 게시일을 확인하지 못했습니다.",
+      "publishedAt": null,
+      "sourceUrl": "https://www.airtable.com/whatsnew",
+      "audience": "기능별 플랜·계정 조건 확인 필요",
+      "rollout": "새 기능의 제공 상태는 개별 안내에서 확인"
+    }
+  },
+  {
+    "id": "miro",
+    "name": "Miro",
+    "kind": "saas",
+    "vendor": "Miro",
+    "category": "collaboration",
+    "summary": "아이디어·도표·계획을 함께 만드는 온라인 협업 보드",
+    "description": "캔버스에서 포스트잇·도표·문서·칸반을 조합해 아이디어와 계획을 정리합니다. 워크숍과 로드맵 작성에 활용할 수 있으며, AI·프로토타입·외부 도구 동기화는 플랜 조건을 확인해야 합니다.",
+    "homepage": "https://miro.com/",
+    "logo": "/logos/miro.png",
+    "logoSource": "https://framerusercontent.com/images/6FBG66PBxjV2QFaDfIdUi5mi9A.png",
+    "logoNote": "공식 사이트의 제품 아이콘",
+    "aliases": [
+      "미로",
+      "화이트보드",
+      "whiteboard",
+      "협업 보드"
+    ],
+    "pricing": "무료 플랜 있음 · Starter·Business·Enterprise 유료 구독",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "데스크톱",
+      "모바일"
+    ],
+    "useCases": [
+      "아이디어 정리",
+      "팀 워크숍",
+      "프로토타입 제작",
+      "제품 로드맵"
+    ],
+    "features": [
+      {
+        "name": "협업 캔버스",
+        "description": "보드에서 아이디어와 자료를 공유하고 함께 편집합니다.",
+        "status": "conditional",
+        "condition": "무료 플랜은 최근 보드 3개를 편집할 수 있습니다.",
+        "sourceUrl": "https://miro.com/pricing/"
+      },
+      {
+        "name": "문서·표·칸반",
+        "description": "보드 위에서 문서·표·칸반 등으로 정보를 구조화합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://miro.com/pricing/"
+      },
+      {
+        "name": "워크숍 도구",
+        "description": "타이머·투표로 팀 워크숍을 진행합니다.",
+        "status": "conditional",
+        "condition": "Starter 이상에서 제공합니다.",
+        "sourceUrl": "https://miro.com/pricing/"
+      },
+      {
+        "name": "양방향 업무 동기화",
+        "description": "Jira·Asana·Linear·ClickUp 등과 계획 데이터를 연결합니다.",
+        "status": "conditional",
+        "condition": "Business 이상이며 연결 서비스의 계정과 권한이 필요합니다.",
+        "sourceUrl": "https://miro.com/pricing/"
+      }
+    ],
+    "limitations": [
+      "보드 공개 범위와 편집 권한을 공유 전에 확인해야 합니다.",
+      "AI 크레딧과 프로토타입·연동 범위는 플랜 및 계정에 따라 다릅니다."
+    ],
+    "sourceUrls": [
+      "https://miro.com/pricing/",
+      "https://miro.com/changelog/",
+      "https://help.miro.com/hc/ko-kr/articles/4957762934802-%EC%96%B8%EC%96%B4-%EC%84%A4%EC%A0%95",
+      "https://miro.com/apps/",
+      "https://miro.com/"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "miro-2026-06-22",
+      "revision": 1,
+      "title": "프로토타입 대안 생성과 Claude Design 연결",
+      "summary": "한 프롬프트에서 여러 프로토타입 방향을 비교하는 기능과 Claude Design 결과를 Miro 보드로 가져오는 연결을 안내했습니다.",
+      "publishedAt": "2026-06-22",
+      "sourceUrl": "https://miro.com/changelog/",
+      "audience": "Miro Prototypes 이용자 · 연결 도구 이용 조건 적용",
+      "rollout": "공식 변경 기록에 게시 · 현재 플랜별 범위 확인"
+    }
+  },
+  {
+    "id": "microsoft-teams",
+    "name": "Microsoft Teams",
+    "kind": "saas",
+    "vendor": "Microsoft",
+    "category": "collaboration",
+    "summary": "채팅·회의·파일을 한곳에 모으는 팀 협업 서비스",
+    "description": "팀별 대화와 온라인 회의, 파일 공유를 함께 제공합니다. 조직의 Microsoft 365 구독과 관리자 설정에 따라 공동 작업·녹화·AI 기능의 범위가 달라집니다.",
+    "homepage": "https://www.microsoft.com/microsoft-teams/",
+    "logo": "/logos/microsoft-teams.jpg",
+    "logoSource": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/16/ca/28/16ca28fe-5065-6a4a-cc6c-672203d398d9/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
+    "logoNote": "Microsoft Corporation 공식 앱 아이콘",
+    "aliases": [
+      "팀즈",
+      "마이크로소프트 팀즈",
+      "MS Teams",
+      "화상 회의"
+    ],
+    "pricing": "무료 버전 있음 · Essentials·Microsoft 365 등 유료 구독",
+    "korean": "모바일 앱 지원 · 기타 환경 확인 필요",
+    "platforms": [
+      "웹",
+      "데스크톱",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "팀 커뮤니케이션",
+      "온라인 회의",
+      "팀 프로젝트",
+      "파일 공동 작업"
+    ],
+    "features": [
+      {
+        "name": "채팅·팀 대화",
+        "description": "개인 및 팀 대화에 업무 맥락과 자료를 모읍니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-business-options"
+      },
+      {
+        "name": "온라인 회의",
+        "description": "음성·영상 통화와 화면 공유로 회의를 진행합니다.",
+        "status": "conditional",
+        "condition": "회의 시간과 참가자 수는 계정·플랜별로 다릅니다.",
+        "sourceUrl": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-business-options"
+      },
+      {
+        "name": "파일 공유·공동 작업",
+        "description": "파일과 작업을 공유하며 팀 업무를 이어갑니다.",
+        "status": "conditional",
+        "condition": "저장 공간과 Office 앱 범위는 Microsoft 365·Teams 구독에 따라 다릅니다.",
+        "sourceUrl": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-business-options"
+      },
+      {
+        "name": "녹화·대화 기록",
+        "description": "회의 내용을 녹화하고 대화 기록을 확인합니다.",
+        "status": "conditional",
+        "condition": "플랜·관리자 정책·지원 언어에 따라 제공 범위가 달라집니다.",
+        "sourceUrl": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-business-options"
+      }
+    ],
+    "limitations": [
+      "Teams 포함 여부가 Microsoft 365 계약·지역·플랜에 따라 다를 수 있습니다.",
+      "Copilot과 고급 회의 기능은 추가 라이선스 및 관리자 설정을 확인해야 합니다."
+    ],
+    "sourceUrls": [
+      "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-business-options",
+      "https://support.microsoft.com/en-us/teams/platform/what-s-new-in-microsoft-teams",
+      "https://apps.apple.com/us/app/microsoft-teams/id1113153706",
+      "https://learn.microsoft.com/en-us/microsoftteams/meeting-transcription-captions",
+      "https://itunes.apple.com/lookup?id=1113153706"
+    ],
+    "checkedAt": "2026-09-15",
+    "latestUpdate": {
+      "id": "microsoft-teams-ios-2026-09-11",
+      "revision": 1,
+      "title": "iOS 앱 8.16.2 업데이트",
+      "summary": "Microsoft 공식 iOS 앱에서 버그 수정과 성능 개선을 안내했습니다. 구체적인 수정 항목은 공개되지 않았으며 웹·데스크톱 전체의 릴리스로 확대 해석하지 않습니다.",
+      "publishedAt": "2026-09-11",
+      "sourceUrl": "https://apps.apple.com/us/app/microsoft-teams/id1113153706",
+      "audience": "Microsoft Teams iOS·iPadOS 앱 이용자",
+      "rollout": "App Store 8.16.2 · iOS·iPadOS 17.0 이상"
+    }
+  }
+]

@@ -1,0 +1,29 @@
+✔ checkedAt and cosmetic offer copy do not create another material version (182.874ms)
+✔ same-day reviewed price correction updates original card; immutable receipt survives (76.852834ms)
+✔ queued ended offer never enters provider (64.819584ms)
+✔ queued withdrawn offer never enters provider (72.956583ms)
+✔ absolute deadline blocks an already queued offer at the exact instant (52.258458ms)
+✔ date-only deadline uses explicit conservative bounds without inventing official zone (54.910417ms)
+✔ explicit constraint is retained and does not silently qualify {"maxPrice":10,"currency":"USD"} (56.958458ms)
+✔ explicit constraint is retained and does not silently qualify {"maxPrice":50000,"currency":"KRW"} (58.513167ms)
+✔ explicit constraint is retained and does not silently qualify {"neededFeatures":["offline-document-editing"]} (53.830542ms)
+✔ explicit constraint is retained and does not silently qualify {"minBenefitMonths":18} (54.032459ms)
+✔ unknown tax fails a price ceiling, known all-period prices and features can qualify (46.710375ms)
+✔ eligibility change invalidates prior confirmation but permits a relevant correction (56.520916ms)
+✔ legacy eligible string is not stamped by an unrelated save (50.442542ms)
+✔ unreviewed same-revision material edits hold dispatch (52.648875ms)
+✔ withdrawal remains on original card even with new app alerts disabled (55.829416ms)
+✔ legacy accepted date-key baseline is held honestly and later change can correct (55.82675ms)
+✔ feature-only change irrelevant to required features updates card without another email (71.6ms)
+✔ revision-only advances preserve read state and never repeat the same offer (50.627042ms)
+✔ old read target cannot mark a newer material correction read (55.085625ms)
+✔ new announcement from one tool has its own card and shares hide topic (56.994042ms)
+✔ cards export/delete stays private and late generation cannot recreate deleted personal rows (56.934834ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1489.085709

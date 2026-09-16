@@ -1,0 +1,36 @@
+{
+  "scroll": {
+    "height": 3496,
+    "width": 375,
+    "x": 0,
+    "y": 0
+  },
+  "url": "http://localhost:5173/my?tab=subscription",
+  "viewport": {
+    "doc": 375,
+    "height": 844,
+    "scale": 1,
+    "width": 390
+  },
+  "visibleText": [
+    "마이페이지",
+    "사용 중인 도구와 필요한 정보를 관리하세요.",
+    "구독·결제",
+    "KRW · 갱신 계약 월 환산",
+    "확인된 계약 금액 ÷ 결제 주기의 개월 수",
+    "이번 달 실제 기록",
+    "₩19,000",
+    "조건 미확인: 결제일 0건 · 예정 금액 0회 · 세금 1건. 사용량 과금 0건의 추가 청구는 총액에 포함되지 않습니다.",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA갱신 중",
+    "결제 내역 수정",
+    "연결할 구독 *구독 선택V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA · 요금제 미입력 · 2026-10-01",
+    "실제 환불 금액 *실제 환불받은 금액을 입력하세요. 실제 지출에서 차감합니다.",
+    "실제 환불받은 금액을 입력하세요. 실제 지출에서 차감합니다.",
+    "통화KRW · 원USD · 달러EUR · 유로JPY · 엔",
+    "내역 종류결제환불",
+    "원 결제 *선택해주세요2026-09-12 · 20000 KRW",
+    "환불 반영일 *",
+    "실제 내 부담액 통화KRWUSDEURJPY",
+    "내게 돌아온 환불액KRW"
+  ]
+}

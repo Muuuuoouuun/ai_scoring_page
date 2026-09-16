@@ -1,0 +1,14 @@
+{"method":"dependency/stream-order check, not a latency budget","node":"v24.18.0","react":"19.2.6","homeSHA256":"e3f58bf33d02bb1ae0cbc8dcfc7b708820fa066f15781b3d862e5792a6f14e71","clientBoundaryModules":["components/ToolUI","components/Icons"]}
+{"case":"pending community dependency","heroBefore":true,"formBefore":true,"quickSearchBefore":true,"postBefore":false,"postAfter":true,"homeSHA256":"e3f58bf33d02bb1ae0cbc8dcfc7b708820fa066f15781b3d862e5792a6f14e71","queryCount":1}
+✔ Home hero and search shell stream while recent published posts remain pending; post follows release (108.425ms)
+✔ real Home SQL keeps newest three published top-level posts and excludes hidden/deleted/reply rows (35.14975ms)
+✔ empty community returns truthful invitation without a fabricated published post (32.855583ms)
+✔ D1 failure keeps shell and explicit unavailable state, distinct from no published posts (23.729417ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 358.910208

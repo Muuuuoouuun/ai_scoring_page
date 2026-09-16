@@ -1,0 +1,24 @@
+✔ checkedAt and cosmetic offer copy do not create another material version (183.89675ms)
+✔ same-day reviewed price correction updates original card; immutable receipt survives (75.387209ms)
+✔ queued ended offer never enters provider (65.713583ms)
+✔ queued withdrawn offer never enters provider (71.936083ms)
+✔ absolute deadline blocks an already queued offer at the exact instant (52.871584ms)
+✔ date-only deadline uses explicit conservative bounds without inventing official zone (52.121916ms)
+✔ explicit constraint is retained and does not silently qualify {"maxPrice":10,"currency":"USD"} (58.146292ms)
+✔ explicit constraint is retained and does not silently qualify {"maxPrice":50000,"currency":"KRW"} (55.124958ms)
+✔ explicit constraint is retained and does not silently qualify {"neededFeatures":["offline-document-editing"]} (56.30625ms)
+✔ explicit constraint is retained and does not silently qualify {"minBenefitMonths":18} (51.783583ms)
+✔ unknown tax fails a price ceiling, known all-period prices and features can qualify (44.324041ms)
+✔ eligibility change invalidates prior confirmation but permits a relevant correction (61.325792ms)
+✔ legacy eligible string is not stamped by an unrelated save (51.515958ms)
+✔ unreviewed same-revision material edits hold dispatch (51.611459ms)
+✔ withdrawal remains on original card even with new app alerts disabled (57.109042ms)
+✔ legacy accepted date-key baseline is held honestly and later change can correct (55.3215ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1230.701917

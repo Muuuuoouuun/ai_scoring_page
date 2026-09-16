@@ -1,0 +1,130 @@
+✖ RED: email:false cancels own queued/failed before settings save returns (130.923166ms)
+✖ RED: cancellation failure rolls back email:false in the same transaction (52.273917ms)
+✖ RED: successful provider id survives in the outbox record (53.35975ms)
+✖ RED: concurrent deliver calls make at most one in-flight provider request per row (44.81875ms)
+✖ RED: two concurrent retries from attempts=2 do not exceed the three-attempt ceiling (38.616458ms)
+✖ RED: a late concurrent provider failure cannot overwrite an accepted sent row (34.552917ms)
+✔ CONTROL: existing send-time consent recheck blocks provider dispatch after opt-out (39.06775ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 1
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 548.313583
+
+✖ failing tests:
+
+test at ../../../../../private/tmp/ais-v14-email-red.test.mjs:12:30
+✖ RED: email:false cancels own queued/failed before settings save returns (130.923166ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   'queued',
+  +   'failed'
+  -   'cancelled',
+  -   'cancelled'
+    ]
+  
+      at file:///private/tmp/ais-v14-email-red.test.mjs:27:9
+      at async TestContext.<anonymous> (file:///private/tmp/ais-v14-email-red.test.mjs:12:79)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'queued', 'failed' ],
+    expected: [ 'cancelled', 'cancelled' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at ../../../../../private/tmp/ais-v14-email-red.test.mjs:12:30
+✖ RED: cancellation failure rolls back email:false in the same transaction (52.273917ms)
+  AssertionError [ERR_ASSERTION]: email consent update must roll back when atomic cancellation fails
+  
+  false !== true
+  
+      at file:///private/tmp/ais-v14-email-red.test.mjs:33:9
+      at async TestContext.<anonymous> (file:///private/tmp/ais-v14-email-red.test.mjs:12:79)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../../../../private/tmp/ais-v14-email-red.test.mjs:12:30
+✖ RED: successful provider id survives in the outbox record (53.35975ms)
+  AssertionError [ERR_ASSERTION]: provider receipt id must be durable, regardless of chosen column name
+  
+  false !== true
+  
+      at file:///private/tmp/ais-v14-email-red.test.mjs:39:92
+      at async TestContext.<anonymous> (file:///private/tmp/ais-v14-email-red.test.mjs:12:79)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../../../../private/tmp/ais-v14-email-red.test.mjs:12:30
+✖ RED: concurrent deliver calls make at most one in-flight provider request per row (44.81875ms)
+  AssertionError [ERR_ASSERTION]: concurrent workers must not both dispatch the same row
+  
+  2 !== 1
+  
+      at file:///private/tmp/ais-v14-email-red.test.mjs:45:9
+      at async TestContext.<anonymous> (file:///private/tmp/ais-v14-email-red.test.mjs:12:79)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../../../../private/tmp/ais-v14-email-red.test.mjs:12:30
+✖ RED: two concurrent retries from attempts=2 do not exceed the three-attempt ceiling (38.616458ms)
+  AssertionError [ERR_ASSERTION]: attempt ceiling must be enforced by the write/claim, not only the earlier SELECT
+      at file:///private/tmp/ais-v14-email-red.test.mjs:51:9
+      at async TestContext.<anonymous> (file:///private/tmp/ais-v14-email-red.test.mjs:12:79)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at ../../../../../private/tmp/ais-v14-email-red.test.mjs:12:30
+✖ RED: a late concurrent provider failure cannot overwrite an accepted sent row (34.552917ms)
+  AssertionError [ERR_ASSERTION]: stale failure must not replace an already accepted send
+  
+  'failed' !== 'sent'
+  
+      at file:///private/tmp/ais-v14-email-red.test.mjs:57:56
+      at async TestContext.<anonymous> (file:///private/tmp/ais-v14-email-red.test.mjs:12:79)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'failed',
+    expected: 'sent',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+exit_code=1

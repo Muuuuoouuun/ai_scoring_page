@@ -1,0 +1,24 @@
+{
+  "source": "a0d353c7577805b5616f608409f0f1a00936e6cc",
+  "uniqueGates": 152,
+  "groups": 38,
+  "areas": 9,
+  "counts": {
+    "PASS": 138,
+    "GAP": 4,
+    "UNVERIFIED": 10
+  },
+  "scores": {
+    "정체성·기획 일치": 86.25,
+    "내용·최신성": 100.0,
+    "디자인": 93.75,
+    "사용성": 95,
+    "쾌적성·접근성": 87.5,
+    "유용성": 86.25,
+    "커뮤니티": 93.75,
+    "개인 기능": 81.25,
+    "배포·운영": 93.75
+  },
+  "unchangedFromV13": true,
+  "markdownRowsMatchJSON": true
+}

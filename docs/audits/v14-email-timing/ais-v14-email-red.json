@@ -1,0 +1,146 @@
+{
+  "checkedAt": "2026-09-12T13:37:30.388Z",
+  "scope": "Local in-memory API harness, explicit fetch mocks only, zero network or real email",
+  "sourceHashes": {
+    "lib/notifications.ts": "d2fcacfa5552e08408d947a6547c06ff114eb772036c970d7adb71fe4322a809",
+    "app/api/workspace/route.ts": "0cf86bef56beae961ca894bdb9586509ac920cac57b1df633d7aeeae06c30f6f",
+    "db/schema.ts": "47635a09b9a7f3d5cb5b8163bb4755ff1f7bbcbe4957b77b4f571e2e1e443b73",
+    "tests/api-harness.mjs": "d4088eac1705bc53144a07f9eb56772822f8e54dcf3f7474ca430e95bf66eb39"
+  },
+  "evidence": [
+    {
+      "name": "RED: email:false cancels own queued/failed before settings save returns",
+      "httpStatus": 200,
+      "savedEmail": false,
+      "rows": [
+        {
+          "user_id": "alpha",
+          "status": "cancelled",
+          "seedState": "cancelled"
+        },
+        {
+          "user_id": "beta",
+          "status": "queued",
+          "seedState": "other"
+        },
+        {
+          "user_id": "alpha",
+          "status": "queued",
+          "seedState": "queued"
+        },
+        {
+          "user_id": "alpha",
+          "status": "sent",
+          "seedState": "sent"
+        },
+        {
+          "user_id": "beta",
+          "status": "failed",
+          "seedState": "other"
+        },
+        {
+          "user_id": "alpha",
+          "status": "needs_review",
+          "seedState": "needs_review"
+        },
+        {
+          "user_id": "alpha",
+          "status": "failed",
+          "seedState": "failed"
+        }
+      ],
+      "result": "RED",
+      "assertion": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   'queued',\n+   'failed'\n-   'cancelled',\n-   'cancelled'\n  ]\n"
+    },
+    {
+      "name": "RED: cancellation failure rolls back email:false in the same transaction",
+      "httpStatus": 200,
+      "savedEmail": false,
+      "outboxStatus": "queued",
+      "result": "RED",
+      "assertion": "email consent update must roll back when atomic cancellation fails\n\nfalse !== true\n"
+    },
+    {
+      "name": "RED: successful provider id survives in the outbox record",
+      "requests": 1,
+      "resultSummary": {
+        "sent": 1,
+        "configured": true
+      },
+      "rowKeys": [
+        "id",
+        "user_id",
+        "notification_id",
+        "status",
+        "attempts",
+        "created_at",
+        "sent_at",
+        "error"
+      ],
+      "status": "sent",
+      "providerIdPersisted": false,
+      "result": "RED",
+      "assertion": "provider receipt id must be durable, regardless of chosen column name\n\nfalse !== true\n"
+    },
+    {
+      "name": "RED: concurrent deliver calls make at most one in-flight provider request per row",
+      "requestsBeforeRelease": 2,
+      "attemptsBeforeRelease": 2,
+      "results": [
+        {
+          "sent": 1,
+          "configured": true
+        },
+        {
+          "sent": 1,
+          "configured": true
+        }
+      ],
+      "finalStatus": "sent",
+      "keys": [
+        "ais-notice-404e11ab-6d5d-4406-b50d-f8d4e058209a",
+        "ais-notice-404e11ab-6d5d-4406-b50d-f8d4e058209a"
+      ],
+      "result": "RED",
+      "assertion": "concurrent workers must not both dispatch the same row\n\n2 !== 1\n"
+    },
+    {
+      "name": "RED: two concurrent retries from attempts=2 do not exceed the three-attempt ceiling",
+      "providerRequests": 2,
+      "initialAttempts": 2,
+      "finalAttempts": 4,
+      "finalStatus": "failed",
+      "result": "RED",
+      "assertion": "attempt ceiling must be enforced by the write/claim, not only the earlier SELECT"
+    },
+    {
+      "name": "RED: a late concurrent provider failure cannot overwrite an accepted sent row",
+      "providerRequests": 2,
+      "statusAfterFirstSuccess": "sent",
+      "results": [
+        {
+          "sent": 1,
+          "configured": true
+        },
+        {
+          "sent": 0,
+          "configured": true
+        }
+      ],
+      "finalStatus": "failed",
+      "finalAttempts": 2,
+      "result": "RED",
+      "assertion": "stale failure must not replace an already accepted send\n\n'failed' !== 'sent'\n"
+    },
+    {
+      "name": "CONTROL: existing send-time consent recheck blocks provider dispatch after opt-out",
+      "providerRequests": 0,
+      "resultSummary": {
+        "sent": 0,
+        "configured": true
+      },
+      "finalStatus": "cancelled",
+      "result": "PASS"
+    }
+  ]
+}

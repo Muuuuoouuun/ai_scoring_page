@@ -1,0 +1,11 @@
+{
+  "archive": "/private/tmp/ais-site-v15.tar.gz",
+  "sha256": "b247e5e4956d1a44da72a117a17d84e65b7aed623a0d719ef2576f035e0a87b2",
+  "compressed_bytes": 850448,
+  "tar_entries": 476,
+  "files": 218,
+  "total_file_bytes": 2854196,
+  "worker_manifest_migration": true,
+  "no_env_files": true,
+  "package_root": "dist"
+}
