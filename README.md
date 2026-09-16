@@ -1,5 +1,14 @@
 # g2 Judgment MVP
 
+## 이 저장소의 두 앱
+
+| 경로 | 앱 | 툴체인 | 검증 |
+|---|---|---|---|
+| 저장소 루트 | g2 Judgment MVP (아래 문서) | Next 14 + Vitest | `npm test`, `npx tsc --noEmit`, `npm run build` |
+| `site/` | AIs — AI·SaaS 탐색과 활용 (기획서 v0.6) | Next 16 + vinext + Cloudflare | `site/README.md` 참고, `node --test` |
+
+두 앱은 의존성과 설정이 분리되어 있습니다. 루트의 `tsconfig.json`과 `vitest.config.ts`는 `site/`와 `docs/`를 검사 대상에서 제외하므로, 각 앱은 자기 디렉터리에서 자기 명령으로 검증하세요.
+
 A judgment-driven review and curation platform for SaaS and AI tools. This MVP emphasizes human impact, cognitive trade-offs, and problem-first discovery.
 
 ## What's included
