@@ -2726,5 +2726,996 @@
       "audience": "Microsoft Teams iOS·iPadOS 앱 이용자",
       "rollout": "App Store 8.16.2 · iOS·iPadOS 17.0 이상"
     }
+  },
+  {
+    "id": "perplexity-comet",
+    "name": "Perplexity Comet",
+    "kind": "ai-app",
+    "vendor": "Perplexity AI",
+    "category": "research",
+    "summary": "탭 정리부터 폼 입력까지 대신 수행하는 Perplexity의 에이전트 브라우저.",
+    "description": "Perplexity가 만든 에이전트 브라우저로 탭 요약과 폼 자동 입력, 리서치 작업을 수행합니다. 2026년 3월 iOS 출시로 macOS·Windows·iOS·Android 전 플랫폼에서 무료로 제공됩니다.",
+    "homepage": "https://www.perplexity.ai/comet",
+    "logoSource": "https://www.perplexity.ai/static/icons/favicon.ico",
+    "logoNote": "Perplexity 공식 아이콘",
+    "aliases": [
+      "코멧",
+      "퍼플렉시티 코멧"
+    ],
+    "pricing": "무료 이용 · Pro·Comet Plus·Max 구독 시 기능 확대",
+    "korean": "지원",
+    "platforms": [
+      "macOS",
+      "Windows",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "탭 정리·요약",
+      "폼 입력 자동화",
+      "리서치 브라우징",
+      "쇼핑·예약 자동화"
+    ],
+    "features": [
+      {
+        "name": "사이드바 어시스턴트",
+        "description": "현재 페이지 내용을 요약하고 탭 맥락에 맞춰 질문에 답합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.perplexity.ai/comet"
+      },
+      {
+        "name": "에이전트 자동 브라우징",
+        "description": "폼 입력, 클릭, 쇼핑 등 웹 작업을 어시스턴트가 대신 수행합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://comet-help.perplexity.ai/en/articles/11734688-assistant-panel"
+      },
+      {
+        "name": "Comet 메모리",
+        "description": "이전 검색과 대화 맥락을 기억해 이후 세션에서 재사용합니다.",
+        "status": "conditional",
+        "condition": "Perplexity 계정 로그인 시 기기 간 동기화",
+        "sourceUrl": "https://www.perplexity.ai/help-center/comet/en/articles/12658438-comet-memory"
+      },
+      {
+        "name": "음성 모드",
+        "description": "화면 내용을 음성으로 묻고 음성 명령으로 페이지를 탐색합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.perplexity.ai/help-center/comet/en/articles/13860420-voice-mode"
+      },
+      {
+        "name": "Deep Research·Model Council",
+        "description": "여러 소스를 종합한 리포트를 만들고 복수 모델 답변을 비교·종합합니다.",
+        "status": "conditional",
+        "condition": "Model Council은 Max 요금제 전용",
+        "sourceUrl": "https://www.perplexity.ai/changelog/what-we-shipped---february-6th-2026"
+      }
+    ],
+    "limitations": [
+      "Brave 보안팀이 2025년 7월 숨겨진 웹 콘텐츠로 세션을 탈취할 수 있는 간접 프롬프트 인젝션 취약점을 공개했습니다.",
+      "LayerX가 2025년 8월 URL 파라미터로 메모리·연동 계정 데이터를 유출하는 CometJacking 기법을 공개했으며 Perplexity는 초기에 보안 영향이 없다고 판단했습니다."
+    ],
+    "sourceUrls": [
+      "https://www.perplexity.ai/comet",
+      "https://comet-help.perplexity.ai/en/articles/11734688-assistant-panel",
+      "https://www.perplexity.ai/help-center/comet/en/articles/12658438-comet-memory",
+      "https://www.perplexity.ai/help-center/comet/en/articles/13860420-voice-mode",
+      "https://www.perplexity.ai/changelog/what-we-shipped---february-6th-2026",
+      "https://www.perplexity.ai/hub/blog/meet-comet-for-ios",
+      "https://brave.com/blog/comet-prompt-injection/"
+    ],
+    "checkedAt": "2026-09-16",
+    "latestUpdate": {
+      "title": "Comet iOS 출시",
+      "summary": "iOS 앱이 추가되어 macOS·Windows·iOS·Android 전 플랫폼에서 Comet을 무료로 쓸 수 있게 되었습니다.",
+      "publishedAt": "2026-03-18",
+      "sourceUrl": "https://www.perplexity.ai/hub/blog/meet-comet-for-ios",
+      "audience": "전체 이용자",
+      "rollout": "정식 제공",
+      "id": "perplexity-comet-2026-03-18",
+      "revision": 1
+    },
+    "logo": "/logos/perplexity-comet.svg"
+  },
+  {
+    "id": "dia",
+    "name": "Dia",
+    "kind": "ai-app",
+    "vendor": "The Browser Company (Atlassian)",
+    "category": "research",
+    "summary": "탭 맥락을 기억해 답하는 macOS 전용 AI 사이드바 브라우저.",
+    "description": "탭 맥락을 기억하는 AI 사이드바로 요약과 답장 초안 작성을 돕는 macOS 전용 브라우저입니다. Atlassian 인수 이후에도 개발이 이어지며 Windows 버전은 베타 대기 명단을 받고 있습니다.",
+    "homepage": "https://www.diabrowser.com",
+    "logoSource": "https://www.diabrowser.com/favicon.ico",
+    "logoNote": "Dia 공식 아이콘",
+    "aliases": [
+      "다이아",
+      "다이아 브라우저"
+    ],
+    "pricing": "무료 플랜 있음 · Better Answers(월 $20)·Better Days(월 $100) 유료 플랜",
+    "korean": "확인 필요",
+    "platforms": [
+      "macOS"
+    ],
+    "useCases": [
+      "탭 통합 리서치",
+      "회의 탭 정리",
+      "이메일 답장 초안",
+      "반복 작업 자동화"
+    ],
+    "features": [
+      {
+        "name": "탭 컨텍스트 채팅",
+        "description": "열려 있는 탭 전체 내용을 근거로 질문에 답하고 비교합니다.",
+        "status": "conditional",
+        "condition": "Better Answers 이상 요금제에서 무제한 이용",
+        "sourceUrl": "https://www.diabrowser.com/plans"
+      },
+      {
+        "name": "Memory",
+        "description": "이전 브라우징과 대화에서 학습한 사실을 이후 세션에 재사용합니다.",
+        "status": "conditional",
+        "condition": "프로필별로 설정에서 켜고 끌 수 있음",
+        "sourceUrl": "https://www.diabrowser.com/changelog/0-45-0"
+      },
+      {
+        "name": "Skills",
+        "description": "반복되는 브라우저 작업을 저장해 재사용 가능한 자동화로 만듭니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.diabrowser.com/skills/cite"
+      },
+      {
+        "name": "프롬프트 인젝션 방어",
+        "description": "LLM이 생성한 URL을 자동으로 열지 않는 등 아키텍처 수준에서 위험을 차단합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.diabrowser.com/security"
+      }
+    ],
+    "limitations": [
+      "LayerX 보안 분석에 따르면 Dia는 브라우징 이력과 탭 내용을 지속적으로 학습해 민감한 업무 정보가 계정 프로필에 축적될 수 있습니다.",
+      "Windows 버전은 2026년 가을 출시를 예고하고 베타 대기자 명단을 받는 단계로 아직 정식 출시되지 않았습니다.",
+      "Atlassian이 The Browser Company를 인수해 2025년 10월 21일 인수를 완료하면서 로드맵과 데이터 정책이 바뀔 가능성이 있습니다."
+    ],
+    "sourceUrls": [
+      "https://www.diabrowser.com/plans",
+      "https://www.diabrowser.com/changelog/0-45-0",
+      "https://www.diabrowser.com/skills/cite",
+      "https://www.diabrowser.com/security",
+      "https://www.diabrowser.com/release-notes/latest",
+      "https://www.diabrowser.com/windows",
+      "https://layerxsecurity.com/generative-ai/dia-browser-risks-and-vulnerabilities/"
+    ],
+    "checkedAt": "2026-09-16",
+    "latestUpdate": {
+      "title": "Microsoft 도구 연동 추가",
+      "summary": "Outlook·SharePoint·Teams 연동을 추가해 Morning Brief와 채팅에서 업무 도구 현황을 확인할 수 있습니다.",
+      "publishedAt": "2026-09-10",
+      "sourceUrl": "https://www.diabrowser.com/release-notes/latest",
+      "audience": "macOS Dia 이용자",
+      "rollout": "정식 제공",
+      "id": "dia-2026-09-10",
+      "revision": 1
+    },
+    "logo": "/logos/dia.svg"
+  },
+  {
+    "id": "manus",
+    "name": "Manus",
+    "kind": "ai-app",
+    "vendor": "Butterfly Effect",
+    "category": "productivity",
+    "summary": "목표 한 문장으로 리서치부터 배포까지 처리하는 범용 AI 에이전트.",
+    "description": "클라우드 가상머신에서 리서치·코딩·문서 작업을 자율적으로 수행하는 범용 AI 에이전트입니다. Meta 인수가 규제로 무산된 뒤 2026년 9월 독립 운영으로 복귀했습니다.",
+    "homepage": "https://manus.im",
+    "logoSource": "https://manus.im/favicon.ico",
+    "logoNote": "Manus 공식 아이콘",
+    "aliases": [
+      "마누스"
+    ],
+    "pricing": "무료 플랜 있음(일일 크레딧) · Standard·Customizable·Extended 유료 플랜",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android",
+      "API"
+    ],
+    "useCases": [
+      "리서치 자동화",
+      "코딩·배포 자동화",
+      "문서·보고서 작성",
+      "백그라운드 작업"
+    ],
+    "features": [
+      {
+        "name": "Skills",
+        "description": "도메인 지식과 절차를 재사용 가능한 모듈로 패키징해 전문 작업에 활용합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://manus.im/docs/features/skills"
+      },
+      {
+        "name": "Design View",
+        "description": "대화만으로 이미지와 디자인 시안을 생성하고 다듬습니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://manus.im/docs/features/design-view"
+      },
+      {
+        "name": "클라우드 Sandbox",
+        "description": "작업마다 격리된 클라우드 가상머신을 할당해 창을 닫아도 실행을 이어갑니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://manus.im/blog/manus-sandbox"
+      },
+      {
+        "name": "병렬 작업 처리",
+        "description": "여러 작업을 동시에 진행해 대량 리서치나 반복 작업을 한번에 처리합니다.",
+        "status": "conditional",
+        "condition": "유료 플랜 가입 시 최대 20개 동시 작업",
+        "sourceUrl": "https://manus.im/pricing"
+      },
+      {
+        "name": "Manus API",
+        "description": "REST API로 작업 생성과 파일 관리를 외부 시스템과 연동합니다.",
+        "status": "conditional",
+        "condition": "API 키 발급과 별도 사용량 과금 필요",
+        "sourceUrl": "https://manus.im/docs/integrations/manus-api"
+      }
+    ],
+    "limitations": [
+      "외부 벤치마크 테스트에서 다단계로 이어지는 작업일수록 성공률이 급격히 낮아진다는 사례가 보고됐습니다.",
+      "크레딧은 이월되지 않고 매 결제 주기마다 초기화되며 작업이 복잡할수록 빠르게 소진됩니다.",
+      "2025년 12월 발표된 Meta 인수가 중국 규제당국의 불허로 2026년 무산되어 소유권 불확실성을 겪은 뒤 독립 운영으로 복귀했습니다."
+    ],
+    "sourceUrls": [
+      "https://manus.im/docs/features/skills",
+      "https://manus.im/docs/features/design-view",
+      "https://manus.im/blog/manus-sandbox",
+      "https://manus.im/pricing",
+      "https://manus.im/docs/integrations/manus-api",
+      "https://manus.im/blog/manus-resumes-independent-operations",
+      "https://www.riotimesonline.com/manus-a-i-review-14-failures-in-two-weeks-of-testing/"
+    ],
+    "checkedAt": "2026-09-16",
+    "latestUpdate": {
+      "title": "독립 운영 재개",
+      "summary": "Meta 인수가 규제 문제로 무산되며 2026년 9월 1일 창립팀 주도로 독립 에이전트 기업 운영을 재개했습니다.",
+      "publishedAt": "2026-09-01",
+      "sourceUrl": "https://manus.im/blog/manus-resumes-independent-operations",
+      "audience": "전체 이용자",
+      "rollout": "정식 제공",
+      "id": "manus-2026-09-01",
+      "revision": 1
+    },
+    "logo": "/logos/manus.svg"
+  },
+  {
+    "id": "higgsfield",
+    "name": "Higgsfield",
+    "kind": "ai-app",
+    "vendor": "Higgsfield",
+    "category": "video",
+    "summary": "여러 AI 영상 모델을 한 크레딧으로 쓰는 시네마틱 제작 도구.",
+    "description": "Sora 2·Veo 3.1·Kling 3.0 등 여러 영상 생성 모델을 한 크레딧 체계로 제공합니다. Cinema Studio와 Soul ID로 카메라 연출과 인물 일관성을 유지한 영상을 만듭니다.",
+    "homepage": "https://higgsfield.ai/",
+    "logoSource": "https://higgsfield.ai/apple-touch-icon.png",
+    "logoNote": "Higgsfield 공식 아이콘",
+    "aliases": [
+      "힉스필드"
+    ],
+    "pricing": "유료 구독 · Starter·Plus·Ultra 개인 플랜과 Team·Scale·Enterprise 팀 플랜 · 모델별 크레딧 차등 소모",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "API"
+    ],
+    "useCases": [
+      "광고 시안 제작",
+      "시네마틱 영상 제작",
+      "캐릭터 일관성 유지",
+      "마케팅 영상 자동화"
+    ],
+    "features": [
+      {
+        "name": "멀티모델 영상 생성",
+        "description": "Sora 2·Veo 3.1·Kling 3.0 등 여러 모델을 한 대시보드에서 선택해 영상을 생성합니다.",
+        "status": "conditional",
+        "condition": "모델마다 소모 크레딧이 다르고 플랜별 월 크레딧 한도가 적용됩니다.",
+        "sourceUrl": "https://higgsfield.ai/pricing"
+      },
+      {
+        "name": "Cinema Studio 4.0",
+        "description": "카메라 무브먼트 프리셋, 컬러 그레이딩, 감정 표현 컨트롤로 샷 단위 연출을 지원합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://higgsfield.ai/blog/cinema-studio-4-0"
+      },
+      {
+        "name": "Soul ID 캐릭터 일관성",
+        "description": "참조 사진 5장 이상으로 얼굴을 학습해 여러 영상에서 동일 인물을 유지합니다.",
+        "status": "conditional",
+        "condition": "Soul 2.0·Soul Cinema 모델에서만 지원되며 참조 사진이 필요합니다.",
+        "sourceUrl": "https://higgsfield.ai/creator-hub/help-center/ai-models/how-do-i-use-soul-to-generate-images"
+      },
+      {
+        "name": "Marketing Studio",
+        "description": "브랜드 킷을 적용해 제품 사진·UGC 영상·광고 소재를 자동 생성합니다.",
+        "status": "conditional",
+        "condition": "생성 결과물마다 크레딧이 소모되고 플랜별 한도가 다릅니다.",
+        "sourceUrl": "https://higgsfield.ai/marketing-studio-intro"
+      },
+      {
+        "name": "팀 크레딧 풀·SSO",
+        "description": "Team·Scale·Enterprise 플랜에서 크레딧을 공유하고 SSO로 접근을 관리합니다.",
+        "status": "conditional",
+        "condition": "Team 이상 플랜에서만 제공됩니다.",
+        "sourceUrl": "https://higgsfield.ai/team-plan"
+      }
+    ],
+    "limitations": [
+      "무료 체험 크레딧으로 만든 영상은 워터마크가 남고 상업적으로 이용할 수 없습니다.",
+      "2026년 2월 인종차별적 영상과 유명인 비동의 합성 논란이 보도되어 참조 이미지 업로드를 제한하고 있습니다.",
+      "2026년 한 해에만 요금제와 크레딧 정책이 여러 차례 바뀌어 예산 산정 전 최신 공식 페이지 확인이 필요합니다."
+    ],
+    "sourceUrls": [
+      "https://higgsfield.ai/pricing",
+      "https://higgsfield.ai/blog/cinema-studio-4-0",
+      "https://higgsfield.ai/creator-hub/help-center/ai-models/how-do-i-use-soul-to-generate-images",
+      "https://higgsfield.ai/marketing-studio-intro",
+      "https://higgsfield.ai/team-plan",
+      "https://higgsfield.ai/creator-hub/help-center/account/who-owns-my-generations-and-can-i-use-them-commercially",
+      "https://www.forbes.com/sites/rashishrivastava/2026/02/11/racist-videos-and-payment-problems-the-dark-side-of-this-ai-startups-super-fast-growth/"
+    ],
+    "checkedAt": "2026-09-16",
+    "latestUpdate": {
+      "title": "Cinema Studio 4.0 출시",
+      "summary": "카메라 무브먼트 프리셋과 컬러 그레이딩, 감정 표현 컨트롤을 갖춘 Cinema Studio 4.0을 공개했습니다.",
+      "publishedAt": "2026-08-12",
+      "sourceUrl": "https://higgsfield.ai/blog/cinema-studio-4-0",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "정식 제공",
+      "id": "higgsfield-2026-08-12",
+      "revision": 1
+    },
+    "logo": "/logos/higgsfield.svg"
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "kind": "ai-app",
+    "vendor": "HeyGen",
+    "category": "video",
+    "summary": "실사형 아바타와 다국어 더빙으로 발표 영상을 만드는 AI 영상 도구.",
+    "description": "실사형 아바타와 175개 이상 언어 더빙으로 발표자 영상을 만드는 AI 아바타 플랫폼입니다. Video Agent로 프롬프트 하나로 대본과 아바타 영상을 자동 구성합니다.",
+    "homepage": "https://www.heygen.com/",
+    "logoSource": "https://www.heygen.com/apple-touch-icon.png",
+    "logoNote": "HeyGen 공식 아이콘",
+    "aliases": [
+      "헤이젠"
+    ],
+    "pricing": "무료 플랜 있음 · Creator·Pro·Business·Enterprise 유료 플랜 · Premium Credits 과금",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android",
+      "API"
+    ],
+    "useCases": [
+      "아바타 발표 영상",
+      "다국어 더빙",
+      "교육 영상 제작",
+      "영상 팟캐스트 제작"
+    ],
+    "features": [
+      {
+        "name": "AI 아바타 영상 생성",
+        "description": "짧은 참조 영상으로 만든 아바타가 대본을 읽는 영상을 생성합니다.",
+        "status": "conditional",
+        "condition": "플랜별 월 크레딧과 아바타 길이 한도가 적용됩니다.",
+        "sourceUrl": "https://www.heygen.com/blog/announcing-avatar-v"
+      },
+      {
+        "name": "다국어 영상 번역·더빙",
+        "description": "영상을 업로드하면 화자 음색을 유지한 립싱크 더빙으로 175개 이상 언어로 번역합니다.",
+        "status": "conditional",
+        "condition": "무료 플랜은 월 3편·3분 제한, 유료 플랜은 최대 30분까지 지원됩니다.",
+        "sourceUrl": "https://www.heygen.com/translate"
+      },
+      {
+        "name": "제스처 커스텀 모션",
+        "description": "프롬프트로 아바타의 손짓과 표정을 세밀하게 조정합니다.",
+        "status": "conditional",
+        "condition": "Avatar IV·V 모델에서만 지원됩니다.",
+        "sourceUrl": "https://help.heygen.com/en/articles/12805098-fine-tune-avatar-gestures-and-movements-with-custom-motion-prompts-avatar-iv-v"
+      },
+      {
+        "name": "Enterprise SSO·SCIM",
+        "description": "SAML SSO와 SCIM 프로비저닝으로 조직의 계정·권한을 관리합니다.",
+        "status": "conditional",
+        "condition": "Enterprise 플랜에서만 제공됩니다.",
+        "sourceUrl": "https://www.heygen.com/security"
+      },
+      {
+        "name": "아바타·번역 API",
+        "description": "아바타 생성과 영상 번역 기능을 API로 제공해 LMS·CRM 등에 연동합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://developers.heygen.com/changelog"
+      }
+    ],
+    "limitations": [
+      "2026년 5월 무제한 요금제가 폐지되어 아바타 생성 등 프리미엄 기능은 크레딧을 소모합니다.",
+      "무료 플랜은 월 3편, 3분 길이, 워터마크로 제한됩니다.",
+      "번역 검수·수정(Script Proofread) 기능은 Pro 이상 유료 플랜에서만 제공되어 무료 플랜에서는 오역이 남을 수 있습니다."
+    ],
+    "sourceUrls": [
+      "https://www.heygen.com/blog/announcing-avatar-v",
+      "https://www.heygen.com/translate",
+      "https://help.heygen.com/en/articles/12805098-fine-tune-avatar-gestures-and-movements-with-custom-motion-prompts-avatar-iv-v",
+      "https://www.heygen.com/security",
+      "https://developers.heygen.com/changelog",
+      "https://www.heygen.com/blog/heygen-july-2026-release",
+      "https://www.heygen.com/tool/free-ai-video-generator-no-watermark"
+    ],
+    "checkedAt": "2026-09-16",
+    "latestUpdate": {
+      "title": "Video Podcast·HyperFrames 출시",
+      "summary": "문서나 주제를 두 진행자가 대화하는 영상 팟캐스트로 만들고, HyperFrames를 Video Agent에 통합해 프롬프트 하나로 영상을 자동 구성합니다.",
+      "publishedAt": "2026-07-29",
+      "sourceUrl": "https://www.heygen.com/blog/heygen-july-2026-release",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "정식 제공",
+      "id": "heygen-2026-07-29",
+      "revision": 1
+    },
+    "logo": "/logos/heygen.svg"
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "kind": "ai-app",
+    "vendor": "Suno",
+    "category": "audio",
+    "summary": "텍스트만으로 보컬이 담긴 완성곡을 만드는 AI 음악 생성 플랫폼.",
+    "description": "텍스트 프롬프트나 가사만으로 보컬이 포함된 완성곡을 만들어주는 AI 음악 생성 서비스입니다. 2026년 9월 라이선스 데이터로 학습한 v6 모델 패밀리를 출시했습니다.",
+    "homepage": "https://suno.com/",
+    "logoSource": "https://suno.com/apple-touch-icon.png",
+    "logoNote": "Suno 공식 아이콘",
+    "aliases": [
+      "수노"
+    ],
+    "pricing": "무료 플랜 있음 · Pro·Premier 유료 구독 · 일일 생성 크레딧과 월 다운로드 횟수 제한",
+    "korean": "지원",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android"
+    ],
+    "useCases": [
+      "배경음악 제작",
+      "완성곡 작곡",
+      "가사 기반 작곡",
+      "커버·리믹스 제작"
+    ],
+    "features": [
+      {
+        "name": "v6 모델 패밀리",
+        "description": "텍스트·오디오·이미지·영상을 참고해 라이선스 데이터로 학습한 v6·v6-wild·v6-mini로 곡을 생성합니다.",
+        "status": "conditional",
+        "condition": "모델별 이용 가능 범위는 플랜에 따라 다릅니다(확인 필요).",
+        "sourceUrl": "https://suno.com/blog/introducing-v6"
+      },
+      {
+        "name": "Voices 보이스 클로닝",
+        "description": "본인 목소리를 인증해 커스텀 보컬로 곡에 사용합니다.",
+        "status": "conditional",
+        "condition": "음성 녹음과 본인 인증 절차가 필요합니다.",
+        "sourceUrl": "https://help.suno.com/en/articles/11362369"
+      },
+      {
+        "name": "Custom Models·My Taste",
+        "description": "자신의 곡을 학습시켜 취향에 맞춘 모델과 추천을 받습니다.",
+        "status": "conditional",
+        "condition": "Custom Models는 Pro·Premier 플랜에서 최대 3개까지 생성됩니다.",
+        "sourceUrl": "https://help.suno.com/en/categories/2327233-v-5-5-voices-custom-models-my-taste"
+      },
+      {
+        "name": "Suno Studio",
+        "description": "MIDI 편집, 신스, 스템 분리를 지원하는 브라우저 기반 AI DAW입니다.",
+        "status": "conditional",
+        "condition": "고급 편집 기능은 유료 구독자 전용입니다.",
+        "sourceUrl": "https://suno.com/blog/studio-2"
+      },
+      {
+        "name": "Cover·Extend 리믹스",
+        "description": "기존 곡의 스타일을 바꾸거나 곡을 이어붙여 완성합니다.",
+        "status": "conditional",
+        "condition": "베타 기능으로 Pro·Premier 플랜에서만 제공됩니다.",
+        "sourceUrl": "https://help.suno.com/en/articles/2872257"
+      }
+    ],
+    "limitations": [
+      "Universal Music Group·Sony Music과의 저작권 소송이 2026년 9월까지 이어지고 있으며, Suno는 유튜브에서 스트림 리핑 방식으로 학습 데이터를 수집했다고 인정했습니다.",
+      "2026년 9월 3일부터 다운로드 횟수가 제한되어 무료 플랜은 평생 7회까지만 다운로드할 수 있고 무료 체험 다운로드는 상업적 이용이 불가합니다.",
+      "Pro·Premier 유료 플랜으로 생성한 곡만 소유권과 상업적 이용권이 주어집니다."
+    ],
+    "sourceUrls": [
+      "https://suno.com/blog/introducing-v6",
+      "https://help.suno.com/en/articles/11362369",
+      "https://help.suno.com/en/categories/2327233-v-5-5-voices-custom-models-my-taste",
+      "https://suno.com/blog/studio-2",
+      "https://help.suno.com/en/articles/2872257",
+      "https://suno.com/blog/suno-updates-tos",
+      "https://help.suno.com/en/articles/9601985"
+    ],
+    "checkedAt": "2026-09-16",
+    "latestUpdate": {
+      "title": "v6 모델 패밀리 출시",
+      "summary": "Warner Music·BMG·Believe의 라이선스 데이터로 학습한 v6·v6-wild·v6-mini를 출시하고 이전 모델을 전면 종료했습니다.",
+      "publishedAt": "2026-09-09",
+      "sourceUrl": "https://suno.com/blog/introducing-v6",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "정식 제공",
+      "id": "suno-2026-09-09",
+      "revision": 1
+    },
+    "logo": "/logos/suno.svg"
+  },
+  {
+    "id": "topaz-labs",
+    "name": "Topaz Labs",
+    "kind": "ai-app",
+    "vendor": "Topaz Labs",
+    "category": "image",
+    "summary": "로컬 GPU로 사진·영상을 고해상도로 복원하는 AI 업스케일링 도구.",
+    "description": "로컬 GPU로 사진과 영상을 고해상도로 복원·업스케일링하는 AI 화질 개선 소프트웨어입니다. Photo·Video·Gigapixel을 Topaz Studio 구독으로 묶어 제공합니다.",
+    "homepage": "https://www.topazlabs.com/",
+    "logoSource": "https://www.topazlabs.com/apple-touch-icon.png",
+    "logoNote": "Topaz Labs 공식 아이콘",
+    "aliases": [
+      "토파즈랩스",
+      "토파즈"
+    ],
+    "pricing": "유료 구독 · Topaz Studio·Studio Pro 번들 및 Photo·Video·Gigapixel 개별 플랜",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "macOS",
+      "Windows",
+      "iOS"
+    ],
+    "useCases": [
+      "사진 화질 복원",
+      "영상 업스케일링",
+      "인쇄용 해상도 변환",
+      "노이즈 제거"
+    ],
+    "features": [
+      {
+        "name": "Wonder 3.5 사진 복원",
+        "description": "노이즈 제거와 업스케일로 저해상도·손상된 사진의 디테일을 복원합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.topazlabs.com/updates/definition"
+      },
+      {
+        "name": "Gigapixel 이미지 확대",
+        "description": "9종 이상 전용 모델로 이미지를 최대 6배까지 확대합니다.",
+        "status": "conditional",
+        "condition": "로컬 GPU 성능에 따라 처리 속도와 결과물 화질이 달라집니다.",
+        "sourceUrl": "https://www.topazlabs.com/topaz-gigapixel"
+      },
+      {
+        "name": "Topaz Video 업스케일",
+        "description": "4K/8K 영상 업스케일과 프레임 보간을 지원합니다.",
+        "status": "conditional",
+        "condition": "고사양 GPU가 필요하며 사양에 따라 처리 시간이 달라집니다.",
+        "sourceUrl": "https://docs.topazlabs.com/topaz-video/system-requirements"
+      },
+      {
+        "name": "NeuroStream 추론 최적화",
+        "description": "VRAM 사용량을 최대 95%까지 줄여 저사양 GPU에서도 로컬 처리가 가능하게 합니다.",
+        "status": "conditional",
+        "condition": "NVIDIA RTX 계열 GPU에 최적화되어 있습니다.",
+        "sourceUrl": "https://www.topazlabs.com/news/topaz-labs-introduces-topaz-neurostream-breakthrough-tech-for-running-large-ai-models-locally"
+      },
+      {
+        "name": "Premiere Panel 연동",
+        "description": "Adobe Premiere Pro 타임라인에서 바로 업스케일·보정을 적용합니다.",
+        "status": "conditional",
+        "condition": "Topaz Cloud 크레딧 결제가 필요합니다.",
+        "sourceUrl": "https://www.topazlabs.com/premiere-panel"
+      }
+    ],
+    "limitations": [
+      "2025년 10월 영구 라이선스 판매가 종료되어 신규 이용자는 Topaz Studio 구독만 선택할 수 있고, 업데이트를 받으려면 구독을 유지해야 합니다.",
+      "2026년 6월 Adobe가 Topaz Labs 인수 계약을 발표했으며 계약 종료 후 독립 제품 운영 방식이 바뀔 수 있습니다.",
+      "고해상도 영상 업스케일은 GPU 사양에 따라 처리 시간이 크게 달라집니다(확인 필요)."
+    ],
+    "sourceUrls": [
+      "https://www.topazlabs.com/updates/definition",
+      "https://www.topazlabs.com/topaz-gigapixel",
+      "https://docs.topazlabs.com/topaz-video/system-requirements",
+      "https://www.topazlabs.com/news/topaz-labs-introduces-topaz-neurostream-breakthrough-tech-for-running-large-ai-models-locally",
+      "https://www.topazlabs.com/premiere-panel",
+      "https://news.adobe.com/news/2026/06/adobe-to-acquire-topaz-labs",
+      "https://docs.topazlabs.com/topaz-photo/release-summary"
+    ],
+    "checkedAt": "2026-09-16",
+    "latestUpdate": {
+      "title": "Wonder 3.5·Bloom 2 공개",
+      "summary": "거의 모든 이미지를 업스케일하는 Wonder 3.5와 AI 생성 이미지의 디테일을 보강하는 Bloom 2 모델을 공개했습니다.",
+      "publishedAt": "2026-08-04",
+      "sourceUrl": "https://www.topazlabs.com/updates/definition",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "정식 제공",
+      "id": "topaz-labs-2026-08-04",
+      "revision": 1
+    },
+    "logo": "/logos/topaz-labs.svg"
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "kind": "ai-app",
+    "vendor": "Jasper AI",
+    "category": "writing",
+    "summary": "브랜드 톤을 유지하며 마케팅 콘텐츠를 생성하는 AI 에이전트 플랫폼.",
+    "description": "마케팅팀을 위한 AI 글쓰기·에이전트 플랫폼으로 브랜드 톤을 유지한 콘텐츠를 생성합니다. Canvas와 Grid로 콘텐츠 제작과 검수를 조율합니다.",
+    "homepage": "https://www.jasper.ai/",
+    "logoSource": "https://www.jasper.ai/apple-touch-icon.png",
+    "logoNote": "Jasper 공식 아이콘",
+    "aliases": [
+      "재스퍼"
+    ],
+    "pricing": "유료 구독 · 7일 체험 · Pro·Business 플랜",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "API"
+    ],
+    "useCases": [
+      "마케팅 콘텐츠 초안",
+      "브랜드 톤 관리",
+      "SEO·GEO 최적화",
+      "캠페인 카피 제작"
+    ],
+    "features": [
+      {
+        "name": "Brand Voice",
+        "description": "브랜드 톤과 스타일 가이드를 저장해 생성 결과에 일관되게 적용합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://help.jasper.ai/hc/en-us/articles/18618693085339-Brand-Voice"
+      },
+      {
+        "name": "Jasper Canvas",
+        "description": "2D 캔버스와 표 형태로 콘텐츠를 조직하고 팀과 실시간으로 협업합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.jasper.ai/canvas"
+      },
+      {
+        "name": "Jasper Grid",
+        "description": "스프레드시트형 화면에서 입력·처리·출력 열을 정의해 대량 콘텐츠를 일괄 생성합니다.",
+        "status": "conditional",
+        "condition": "제공 플랜과 세부 이용 조건은 확인이 필요합니다(확인 필요).",
+        "sourceUrl": "https://www.jasper.ai/grid"
+      },
+      {
+        "name": "Jasper Agents",
+        "description": "SEO·GEO, 캠페인 등 목적별 자율 에이전트가 여러 단계 작업을 수행합니다.",
+        "status": "conditional",
+        "condition": "Business 플랜에서 무제한 제공되며 Pro는 제한적입니다(확인 필요).",
+        "sourceUrl": "https://www.jasper.ai/pricing"
+      },
+      {
+        "name": "Jasper Studio",
+        "description": "코드 작성 없이 맞춤 에이전트와 마케팅 앱을 설계·배포합니다.",
+        "status": "conditional",
+        "condition": "Business 플랜 고객에게 제공됩니다.",
+        "sourceUrl": "https://www.jasper.ai/studio"
+      }
+    ],
+    "limitations": [
+      "상시 무료 플랜이 없고 7일 체험 후에는 유료 결제가 필요합니다.",
+      "API 접근과 무제한 에이전트는 Business 플랜에서만 제공됩니다.",
+      "대량 생성 파이프라인에서 오류가 발생하면 여러 콘텐츠에 동시에 퍼질 수 있어 검수가 필요합니다."
+    ],
+    "sourceUrls": [
+      "https://help.jasper.ai/hc/en-us/articles/18618693085339-Brand-Voice",
+      "https://www.jasper.ai/canvas",
+      "https://www.jasper.ai/grid",
+      "https://www.jasper.ai/pricing",
+      "https://www.jasper.ai/studio",
+      "https://www.jasper.ai/product-iq"
+    ],
+    "checkedAt": "2026-09-16",
+    "latestUpdate": {
+      "title": "Jasper Product IQ 출시",
+      "summary": "모든 에이전트가 검증된 제품 정보를 하나의 소스에서 가져와 생성 결과에 자동 반영하는 Product IQ를 발표했습니다.",
+      "publishedAt": null,
+      "sourceUrl": "https://www.jasper.ai/product-iq",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "원문에서 제공 상태·발표일 확인 필요",
+      "id": "jasper-2026-09-16",
+      "revision": 1
+    },
+    "logo": "/logos/jasper.svg"
+  },
+  {
+    "id": "gong",
+    "name": "Gong",
+    "kind": "saas",
+    "vendor": "Gong, Inc.",
+    "category": "productivity",
+    "summary": "영업 통화를 분석해 코칭과 예측 인사이트를 제공하는 수익 플랫폼.",
+    "description": "영업 통화와 고객 대화를 녹음·분석해 코칭 신호와 딜 인사이트를 제공합니다. Ask Anything과 AI Data Extractor 등 에이전트가 CRM 데이터를 자동으로 정리합니다.",
+    "homepage": "https://www.gong.io/",
+    "logoSource": "https://www.gong.io/apple-touch-icon.png",
+    "logoNote": "Gong 공식 아이콘",
+    "pricing": "비공개 견적 · 연간 계약 · 체험판 없음",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android",
+      "API"
+    ],
+    "useCases": [
+      "영업 통화 분석",
+      "딜 인사이트 파악",
+      "CRM 자동 업데이트",
+      "세일즈 코칭"
+    ],
+    "features": [
+      {
+        "name": "Ask Anything",
+        "description": "통화·계정·딜 데이터에 자연어로 질문해 즉시 인사이트를 얻습니다.",
+        "status": "conditional",
+        "condition": "포함 여부는 라이선스 구성에 따라 다릅니다(확인 필요).",
+        "sourceUrl": "https://www.gong.io/blog/introducing-ask-anything"
+      },
+      {
+        "name": "AI Data Extractor",
+        "description": "대화 내용을 분석해 CRM 필드를 자동으로 생성·업데이트합니다.",
+        "status": "conditional",
+        "condition": "신규 에이전트로 조직별 제공 시점이 다릅니다(확인 필요).",
+        "sourceUrl": "https://www.gong.io/blog/new-product-announcements-gong-revenue-ai-operating-system"
+      },
+      {
+        "name": "Gong MCP",
+        "description": "MCP로 외부 AI 에이전트·플랫폼과 Gong 데이터를 연동합니다.",
+        "status": "conditional",
+        "condition": "관리자 설정과 지원 범위는 계정별로 다릅니다(확인 필요).",
+        "sourceUrl": "https://help.gong.io/docs/about-gong-mcp"
+      },
+      {
+        "name": "다국어 통화 분석",
+        "description": "70개 이상 언어의 통화를 녹음·전사하며 감정과 주제를 트래킹합니다.",
+        "status": "conditional",
+        "condition": "언어별 인식 정확도가 다르며 영어 정확도가 가장 높습니다.",
+        "sourceUrl": "https://help.gong.io/docs/what-languages-are-supported-in-gong"
+      },
+      {
+        "name": "Gong 모바일 앱",
+        "description": "이동 중에도 통화를 청취하고 딜 현황과 예보를 확인합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://help.gong.io/docs/intro-to-the-gong-mobile-app"
+      }
+    ],
+    "limitations": [
+      "공개 요금표가 없어 좌석·플랫폼 수수료 등 정확한 비용은 견적 문의로만 확인할 수 있습니다.",
+      "한국어 통화의 전사·감정 분석 정확도는 영어 대비 낮을 수 있습니다(확인 필요).",
+      "연동된 서드파티 벤더가 침해되면 데이터가 노출될 수 있어 연동 앱의 보안 점검이 필요합니다."
+    ],
+    "sourceUrls": [
+      "https://www.gong.io/blog/introducing-ask-anything",
+      "https://www.gong.io/blog/new-product-announcements-gong-revenue-ai-operating-system",
+      "https://help.gong.io/docs/about-gong-mcp",
+      "https://help.gong.io/docs/what-languages-are-supported-in-gong",
+      "https://help.gong.io/docs/intro-to-the-gong-mobile-app",
+      "https://help.gong.io/our-monthly-updates"
+    ],
+    "checkedAt": "2026-09-16",
+    "latestUpdate": {
+      "title": "ChatGPT Apps 연동 지원",
+      "summary": "ChatGPT Apps에서 Gong 데이터를 조회할 수 있게 되었고 MCP 클라이언트·서버 관리와 스코어카드 템플릿이 추가됐습니다.",
+      "publishedAt": null,
+      "sourceUrl": "https://help.gong.io/our-monthly-updates",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "순차 적용",
+      "id": "gong-2026-09-16",
+      "revision": 1
+    },
+    "logo": "/logos/gong.svg"
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "kind": "ai-app",
+    "vendor": "Replit, Inc.",
+    "category": "development",
+    "summary": "AI 에이전트가 코드를 작성·배포하는 브라우저 기반 개발 환경.",
+    "description": "AI 에이전트가 요구사항에 따라 코드를 작성하고 테스트하며 배포까지 수행하는 클라우드 개발 환경입니다. 데이터베이스 프로비저닝과 실시간 협업 기능도 함께 제공합니다.",
+    "homepage": "https://replit.com/",
+    "logoSource": "https://replit.com/apple-touch-icon.png",
+    "logoNote": "Replit 공식 아이콘",
+    "aliases": [
+      "리플릿",
+      "레플릿"
+    ],
+    "pricing": "무료 플랜 있음 · Core·Pro 유료 플랜",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹",
+      "iOS",
+      "Android",
+      "API"
+    ],
+    "useCases": [
+      "MVP 빠른 제작",
+      "자동 코드 배포",
+      "실시간 협업 개발",
+      "DB 자동 프로비저닝"
+    ],
+    "features": [
+      {
+        "name": "Replit Agent",
+        "description": "자율적으로 코드를 계획·작성하고 스스로 테스트해 오류를 수정합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet"
+      },
+      {
+        "name": "App Testing",
+        "description": "에이전트가 브라우저에서 앱을 직접 클릭해 테스트하고 문제를 자동으로 수정합니다.",
+        "status": "conditional",
+        "condition": "Full Stack JavaScript·Streamlit Python 앱에서만 지원됩니다.",
+        "sourceUrl": "https://docs.replit.com/core-concepts/agent/app-testing"
+      },
+      {
+        "name": "Multiplayer 협업",
+        "description": "여러 명이 동시에 코드를 편집하며 실시간으로 커서 위치를 공유합니다.",
+        "status": "conditional",
+        "condition": "동시 협업 인원은 Core 5명, Pro 15명으로 다릅니다.",
+        "sourceUrl": "https://docs.replit.com/replitai/collaboration"
+      },
+      {
+        "name": "예약 백업·Project Analytics",
+        "description": "프로덕션 데이터베이스를 매일 백업하고 앱 방문자 트래픽을 분석합니다.",
+        "status": "conditional",
+        "condition": "백업 보관 기간은 플랜별 한도가 적용됩니다.",
+        "sourceUrl": "https://docs.replit.com/updates/2026/09/04/changelog"
+      },
+      {
+        "name": "모바일 Agent",
+        "description": "모바일 앱에서 음성 프롬프트로 Agent에 작업을 지시합니다.",
+        "status": "conditional",
+        "condition": "iOS·Android 앱에서 제공되며 기능이 계속 확장 중입니다(확인 필요).",
+        "sourceUrl": "https://docs.replit.com/updates/2026/07/24/changelog"
+      }
+    ],
+    "limitations": [
+      "무료 Starter 플랜은 크레딧과 사용 시간이 제한적입니다(확인 필요).",
+      "에이전트가 자율적으로 실행되므로 프로덕션 데이터베이스를 삭제한 사례가 있어 권한 분리와 백업이 필요합니다.",
+      "크레딧 소진 후에는 사용량 기반 과금이 추가로 발생할 수 있습니다."
+    ],
+    "sourceUrls": [
+      "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet",
+      "https://docs.replit.com/core-concepts/agent/app-testing",
+      "https://docs.replit.com/replitai/collaboration",
+      "https://docs.replit.com/updates/2026/09/04/changelog",
+      "https://docs.replit.com/updates/2026/07/24/changelog",
+      "https://replit.com/blog/pro-plan"
+    ],
+    "checkedAt": "2026-09-16",
+    "latestUpdate": {
+      "title": "예약 백업·Project Analytics 추가",
+      "summary": "프로덕션 데이터베이스를 매일 백업하는 예약 백업과 방문자 트래픽을 분석하는 Project Analytics가 추가됐습니다.",
+      "publishedAt": "2026-09-04",
+      "sourceUrl": "https://docs.replit.com/updates/2026/09/04/changelog",
+      "audience": "원문에서 대상 플랜·계정 확인 필요",
+      "rollout": "정식 제공",
+      "id": "replit-2026-09-04",
+      "revision": 1
+    },
+    "logo": "/logos/replit.svg"
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "kind": "ai-app",
+    "vendor": "Lovable Labs Incorporated",
+    "category": "development",
+    "summary": "대화형 프롬프트만으로 풀스택 웹앱을 만드는 AI 빌더.",
+    "description": "프롬프트 대화만으로 프런트엔드와 Supabase 백엔드를 갖춘 풀스택 앱을 자동으로 생성합니다. Subagents가 코드 검토와 조사를 병렬로 수행합니다.",
+    "homepage": "https://lovable.dev/",
+    "logoSource": "https://lovable.dev/apple-touch-icon.png",
+    "logoNote": "Lovable 공식 아이콘",
+    "aliases": [
+      "러버블"
+    ],
+    "pricing": "무료 플랜 있음 · Pro·Business 유료 플랜",
+    "korean": "확인 필요",
+    "platforms": [
+      "웹"
+    ],
+    "useCases": [
+      "MVP 앱 제작",
+      "노코드 웹앱 개발",
+      "아이디어 프로토타입",
+      "백엔드 자동 구성"
+    ],
+    "features": [
+      {
+        "name": "Agent Mode",
+        "description": "요구사항을 스스로 계획하고 여러 단계를 실행해 앱을 완성합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://lovable.dev/blog/agent-mode-beta"
+      },
+      {
+        "name": "Subagents",
+        "description": "Researcher·Reviewer 등 서브에이전트가 병렬로 코드를 조사·검토합니다.",
+        "status": "conditional",
+        "condition": "읽기 전용으로 동작하며 자동 활성화 여부는 요청에 따라 다릅니다.",
+        "sourceUrl": "https://docs.lovable.dev/features/subagents"
+      },
+      {
+        "name": "Supabase 연동",
+        "description": "Supabase 프로젝트를 연결해 데이터베이스·인증·엣지 함수를 구성합니다.",
+        "status": "conditional",
+        "condition": "별도 Supabase 계정 연결이 필요하며 기본 백엔드는 Cloud입니다.",
+        "sourceUrl": "https://docs.lovable.dev/integrations/supabase"
+      },
+      {
+        "name": "크레딧 기반 요금제",
+        "description": "메시지·빌드마다 크레딧을 소모하는 종량제이며 좌석 제한 없이 팀원을 초대할 수 있습니다.",
+        "status": "conditional",
+        "condition": "무료 플랜은 일 5크레딧, 월 최대 30크레딧으로 제한됩니다.",
+        "sourceUrl": "https://lovable.dev/pricing"
+      },
+      {
+        "name": "AI 학습 데이터 옵트아웃",
+        "description": "설정에서 데이터 수집을 거부하면 대화 내용이 AI 모델 학습에 사용되지 않습니다.",
+        "status": "conditional",
+        "condition": "Business·Enterprise는 기본 제외, Free·Pro는 설정 필요.",
+        "sourceUrl": "https://docs.lovable.dev/features/business/data-opt-out"
+      }
+    ],
+    "limitations": [
+      "무료 플랜은 하루 5크레딧, 월 최대 30크레딧으로 제한되며 공개 프로젝트만 지원합니다.",
+      "2026년 4월 권한 체계 통합 작업 중 과거 프로젝트의 채팅 기록이 노출되는 사고가 있었습니다.",
+      "기본 템플릿의 Row Level Security를 검토하지 않고 배포하면 개인정보나 API 키가 노출될 수 있습니다(확인 필요)."
+    ],
+    "sourceUrls": [
+      "https://lovable.dev/blog/agent-mode-beta",
+      "https://docs.lovable.dev/features/subagents",
+      "https://docs.lovable.dev/integrations/supabase",
+      "https://lovable.dev/pricing",
+      "https://docs.lovable.dev/changelog",
+      "https://lovable.dev/blog/our-response-to-the-april-2026-incident",
+      "https://docs.lovable.dev/features/business/data-opt-out"
+    ],
+    "checkedAt": "2026-09-16",
+    "latestUpdate": {
+      "title": "AI 학습 데이터 활용 정책 변경",
+      "summary": "2026년 9월 9일부터 Free·Pro 플랜 데이터가 별도 거부 설정을 하지 않으면 AI 모델 학습에 활용될 수 있습니다.",
+      "publishedAt": "2026-09-09",
+      "sourceUrl": "https://docs.lovable.dev/changelog",
+      "audience": "Free·Pro 플랜 이용자",
+      "rollout": "정식 제공",
+      "id": "lovable-2026-09-09",
+      "revision": 1
+    },
+    "logo": "/logos/lovable.svg"
   }
 ]

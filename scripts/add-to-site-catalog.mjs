@@ -68,7 +68,7 @@ for(const {t,file} of incoming){
   const home=host(t.homepage);
   t.features.forEach((f,i)=>{
    for(const k of ["name","description","status","sourceUrl"])if(!f[k])err(id,`features[${i}].${k} 누락`);
-   if(f.condition===undefined)err(id,`features[${i}].condition 누락 (빈 문자열이라도 필요)`);
+   if(f.condition===undefined){warn(id,`features[${i}].condition 누락 → 빈 문자열로 정규화`);f.condition="";}
    if(!STATUS.includes(f.status))err(id,`features[${i}].status 오류: ${f.status}`);
    if(f.status==="supported"&&f.condition)warn(id,`features[${i}] supported인데 condition이 있음`);
    if(f.status==="conditional"&&!f.condition)warn(id,`features[${i}] conditional인데 condition이 비어 있음`);
