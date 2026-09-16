@@ -19,6 +19,7 @@ export function Gnb() {
         <Link href="/search">{t.navSearch}</Link>
         <Link href="/recommend">{t.navRecommend}</Link>
         <Link href="/compare">{t.navCompare}</Link>
+        <Link href="/resources">{t.navResources}</Link>
         <Link href="/community">{t.navCommunity}</Link>
         <Link href="/about">{t.navAbout}</Link>
       </div>

@@ -2,7 +2,8 @@ import { describe, expect, it } from "vitest";
 import { tools } from "@/data/tools";
 import { evaluations } from "@/data/evaluations";
 import { capabilityProfiles } from "@/data/capabilities";
-import { CAPABILITY_KEYS } from "@/lib/types";
+import { resources } from "@/data/resources";
+import { CAPABILITY_KEYS, RESOURCE_GROUPS, RESOURCE_PRICINGS } from "@/lib/types";
 import { dictionary } from "@/lib/i18n";
 import { getToolInsight } from "@/lib/insights";
 
@@ -105,5 +106,37 @@ describe("capability profiles", () => {
       expect(profile.roles.length, tool.name).toBeGreaterThan(0);
       expect(profile.teamFit.length, tool.name).toBeGreaterThan(0);
     }
+  });
+});
+
+describe("useful sites directory", () => {
+  it("has unique names and valid URLs", () => {
+    expect(new Set(resources.map((site) => site.name)).size).toBe(resources.length);
+    for (const site of resources) {
+      expect(site.url, site.name).toMatch(URL_RE);
+    }
+  });
+
+  it("keeps every entry complete and classified", () => {
+    for (const site of resources) {
+      expect(RESOURCE_GROUPS, site.name).toContain(site.group);
+      expect(RESOURCE_PRICINGS, site.name).toContain(site.pricing);
+      expect(["full", "partial", "none"], site.name).toContain(site.koreanFriendly);
+      expect(site.tagline.length, site.name).toBeGreaterThan(3);
+      expect(site.tagline.length, site.name).toBeLessThanOrEqual(60);
+      expect(site.useCase.length, site.name).toBeGreaterThan(20);
+      expect(site.strength.length, site.name).toBeGreaterThan(10);
+      expect(site.caution.length, site.name).toBeGreaterThan(10);
+      expect(site.pricingDetail.length, site.name).toBeGreaterThan(5);
+      for (const source of site.sources ?? []) {
+        expect(source, site.name).toMatch(URL_RE);
+      }
+    }
+  });
+
+  it("spreads sites across several groups once the directory is filled", () => {
+    // 디렉터리가 비어 있는 중간 상태(스캐폴딩만 머지된 시점)에서는 검사를 건너뜁니다.
+    if (resources.length === 0) return;
+    expect(new Set(resources.map((site) => site.group)).size).toBeGreaterThan(1);
   });
 });

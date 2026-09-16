@@ -141,3 +141,35 @@ export type ToolCapabilityProfile = {
   teamFit: TeamSize[];
   sources?: string[];
 };
+
+export type ResourceGroup = "reference" | "assets" | "imageTools" | "devUtil";
+
+export const RESOURCE_GROUPS: ResourceGroup[] = ["reference", "assets", "imageTools", "devUtil"];
+
+export type ResourcePricing = "free" | "freemium" | "paid";
+
+export const RESOURCE_PRICINGS: ResourcePricing[] = ["free", "freemium", "paid"];
+
+/**
+ * 도구 리뷰만큼 무겁게 평가하지는 않지만, 실무에서 자주 여는 레퍼런스·에셋·유틸리티 사이트.
+ * data/resources.ts 에 저장되며 /resources 페이지에서 보여줍니다.
+ */
+export type ResourceSite = {
+  name: string;
+  url: string;
+  group: ResourceGroup;
+  /** 한 줄 정체성 (≤ 40자) */
+  tagline: string;
+  /** 실무에서 언제 여는지 */
+  useCase: string;
+  pricing: ResourcePricing;
+  pricingDetail: string;
+  /** 한국어 사용 편의: full = 한국어 UI/콘텐츠, partial = 영어지만 사용 가능, none = 영어 전용 */
+  koreanFriendly: CapabilityLevel;
+  /** 다른 비슷한 사이트 대비 차별점 */
+  strength: string;
+  /** 라이선스, 유료 제한, 로그인 등 주의점 */
+  caution: string;
+  alternatives: string[];
+  sources?: string[];
+};

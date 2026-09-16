@@ -30,7 +30,17 @@ const EXISTING = {
 };
 
 // 파일 순서 = 사이트 노출 순서
-const BATCH_ORDER = ["existing-a.json", "existing-b.json", "ai-assistants.json", "ai-builders.json", "ai-browsers-agents.json"];
+const BATCH_ORDER = [
+  "existing-a.json",
+  "existing-b.json",
+  "ai-assistants.json",
+  "ai-builders.json",
+  "ai-browsers-agents.json",
+  "ai-video.json",
+  "ai-audio-image.json"
+];
+// 유용한 사이트 디렉터리 (레퍼런스/에셋/이미지 도구/유틸)
+const RESOURCE_FILES = ["resources-reference.json", "resources-utility.json"];
 const UPDATED_AT = "2026-09-15T00:00:00Z";
 
 const deterministicId = (name) => {
@@ -210,10 +220,15 @@ const missing = BATCH_ORDER.filter((f) => !files.includes(f));
 if (missing.length) console.warn(`누락된 연구 파일: ${missing.join(", ")}`);
 
 const merged = [];
+const embeddedProfiles = [];
 for (const file of files) {
   const raw = JSON.parse(fs.readFileSync(path.join(researchDir, file), "utf8"));
   if (!Array.isArray(raw)) throw new Error(`${file}: 배열이 아닙니다`);
-  for (const item of raw) merged.push(normalizeTool(item));
+  for (const item of raw) {
+    merged.push(normalizeTool(item));
+    // 도구 객체 안에 기능 매트릭스를 함께 넣어 온 배치를 지원합니다.
+    if (item.capabilityProfile) embeddedProfiles.push({ ...item.capabilityProfile, name: item.name });
+  }
 }
 
 const names = new Set();
@@ -270,22 +285,99 @@ const normalizeProfile = (raw) => {
 };
 
 const capabilityFile = path.join(researchDir, "capabilities.json");
-let profiles = [];
+const rawProfileInputs = [...embeddedProfiles];
 if (fs.existsSync(capabilityFile)) {
-  const rawProfiles = JSON.parse(fs.readFileSync(capabilityFile, "utf8"));
-  if (!Array.isArray(rawProfiles)) throw new Error("capabilities.json: 배열이 아닙니다");
-  profiles = rawProfiles.map(normalizeProfile).filter((item) => item.name);
-  const toolNames = new Set(merged.map((m) => m.tool.name));
-  for (const item of profiles) if (!toolNames.has(item.name)) warn(item.name, "capabilities에만 있고 도구 목록에 없음");
-  for (const name of Array.from(toolNames)) if (!profiles.some((item) => item.name === name)) warn(name, "capabilities 누락");
-} else {
+  const fromFile = JSON.parse(fs.readFileSync(capabilityFile, "utf8"));
+  if (!Array.isArray(fromFile)) throw new Error("capabilities.json: 배열이 아닙니다");
+  rawProfileInputs.push(...fromFile);
+} else if (embeddedProfiles.length === 0) {
   console.warn("누락된 연구 파일: capabilities.json (data/capabilities.ts 는 갱신하지 않음)");
 }
 
+let profiles = [];
+if (rawProfileInputs.length > 0) {
+  const seenProfiles = new Set();
+  profiles = rawProfileInputs
+    .map(normalizeProfile)
+    .filter((item) => {
+      if (!item.name || seenProfiles.has(item.name)) return false;
+      seenProfiles.add(item.name);
+      return true;
+    });
+  // 도구 순서와 맞춰 두면 생성 파일이 읽기 쉽습니다.
+  const order = new Map(merged.map((m, index) => [m.tool.name, index]));
+  profiles.sort((a, b) => (order.get(a.name) ?? 999) - (order.get(b.name) ?? 999));
+  const toolNames = new Set(merged.map((m) => m.tool.name));
+  for (const item of profiles) if (!toolNames.has(item.name)) warn(item.name, "capabilities에만 있고 도구 목록에 없음");
+  for (const name of Array.from(toolNames)) if (!profiles.some((item) => item.name === name)) warn(name, "capabilities 누락");
+}
+
+// ---------- 유용한 사이트 디렉터리 ----------
+const RESOURCE_GROUPS = ["reference", "assets", "imageTools", "devUtil"];
+const PRICING_MAP = { "무료": "free", "부분 무료": "freemium", "유료": "paid" };
+
+const normalizeResource = (raw) => {
+  const name = assertString("?", "resource.name", raw.name);
+  const t = name || "unknown-resource";
+  if (raw.verified === false) warn(t, "resource verified=false");
+  const group = RESOURCE_GROUPS.includes(raw.group) ? raw.group : (warn(t, `group 오류: ${raw.group}`), "devUtil");
+  const pricing = PRICING_MAP[String(raw.pricingLabel || "").trim()] ||
+    (warn(t, `pricingLabel 오류: ${raw.pricingLabel} → freemium`), "freemium");
+  const koreanFriendly = LEVELS.includes(raw.koreanFriendly)
+    ? raw.koreanFriendly
+    : (warn(t, `koreanFriendly 오류: ${raw.koreanFriendly} → partial`), "partial");
+  const alternatives = (raw.alternatives || []).map(String).map((a) => a.trim()).filter(Boolean);
+  if (alternatives.length === 0) warn(t, "alternatives 비어 있음");
+  const sources = (raw.sources || []).filter(isHttps);
+  if (sources.length === 0) warn(t, "sources 비어 있음");
+  return {
+    name,
+    url: isHttps(raw.url) ? raw.url : (warn(t, `url 오류: ${raw.url}`), ""),
+    group,
+    tagline: assertString(t, "tagline", raw.tagline, { max: 60 }),
+    useCase: assertString(t, "useCase", raw.useCase, { min: 20 }),
+    pricing,
+    pricingDetail: assertString(t, "pricingDetail", raw.pricingDetail, { min: 5 }),
+    koreanFriendly,
+    strength: assertString(t, "strength", raw.strength, { min: 10 }),
+    caution: assertString(t, "caution", raw.caution, { min: 10 }),
+    alternatives,
+    ...(sources.length ? { sources } : {})
+  };
+};
+
+const resourceFiles = RESOURCE_FILES.filter((f) => fs.existsSync(path.join(researchDir, f)));
+const missingResources = RESOURCE_FILES.filter((f) => !resourceFiles.includes(f));
+if (missingResources.length) console.warn(`누락된 사이트 파일: ${missingResources.join(", ")}`);
+
+const resources = [];
+const seenResourceNames = new Set();
+for (const file of resourceFiles) {
+  const raw = JSON.parse(fs.readFileSync(path.join(researchDir, file), "utf8"));
+  if (!Array.isArray(raw)) throw new Error(`${file}: 배열이 아닙니다`);
+  for (const item of raw) {
+    const site = normalizeResource(item);
+    if (!site.name || !site.url) continue;
+    if (seenResourceNames.has(site.name)) {
+      warn(site.name, "사이트 이름 중복 (건너뜀)");
+      continue;
+    }
+    seenResourceNames.add(site.name);
+    resources.push(site);
+  }
+}
+// 그룹 순서대로 정렬해 페이지에서 바로 쓸 수 있게 합니다.
+resources.sort((a, b) => RESOURCE_GROUPS.indexOf(a.group) - RESOURCE_GROUPS.indexOf(b.group));
+
 const outDir = process.env.OUT_DIR || path.join(__dirname, "..", "data");
 fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, "tools.ts"), toolsTs);
-fs.writeFileSync(path.join(outDir, "evaluations.ts"), evaluationsTs);
+// 도구 배치가 하나도 없으면 기존 파일을 비우지 않고 그대로 둡니다.
+if (merged.length > 0) {
+  fs.writeFileSync(path.join(outDir, "tools.ts"), toolsTs);
+  fs.writeFileSync(path.join(outDir, "evaluations.ts"), evaluationsTs);
+} else {
+  console.warn("도구 배치가 없어 tools.ts / evaluations.ts 는 갱신하지 않았습니다.");
+}
 if (profiles.length > 0) {
   const capabilitiesTs = `import type { ToolCapabilityProfile } from "@/lib/types";
 
@@ -300,7 +392,19 @@ ${profiles.map((item) => `  ${JSON.stringify(item.name)}: ${serialize(item.profi
   fs.writeFileSync(path.join(outDir, "capabilities.ts"), capabilitiesTs);
 }
 
-console.log(`도구 ${merged.length}개 생성 → ${outDir}`);
+if (resources.length > 0) {
+  const resourcesTs = `import type { ResourceSite } from "@/lib/types";
+
+/**
+ * 실무에서 자주 여는 레퍼런스·에셋·이미지·유틸리티 사이트 모음.
+ * scripts/merge-research.js 로 생성됩니다. 조사 기준: ${UPDATED_AT.slice(0, 7)}
+ */
+export const resources: ResourceSite[] = ${serialize(resources)};
+`;
+  fs.writeFileSync(path.join(outDir, "resources.ts"), resourcesTs);
+}
+
+console.log(`도구 ${merged.length}개, 사이트 ${resources.length}개 생성 → ${outDir}`);
 if (warnings.length) {
   console.log(`경고 ${warnings.length}건:`);
   for (const w of warnings) console.log("  - " + w);
