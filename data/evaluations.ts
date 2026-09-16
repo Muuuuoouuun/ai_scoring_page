@@ -2973,5 +2973,773 @@ export const evaluations: Record<string, ToolEvaluation> = {
       { label: "Manus 한국어 사용 후기 (브런치)", url: "https://brunch.co.kr/@2a50c213d2ac47c/99" }
     ],
     researchedAt: "2026-09"
+  },
+  // Higgsfield
+  "a04e1cdd-db45-486d-a459-fa4d419f1719": {
+    oneLine: "여러 영상 모델을 한 구독으로 쓸 수 있지만 크레딧 소진과 잦은 요금제 변경으로 예산 관리가 까다롭습니다.",
+    scoreBreakdown: { functionality: 85, uiux: 76, reliability: 55, comfort: 46, pricing: 40 },
+    keyFeatures: [
+      "Sora 2·Veo 3.1·Kling 3.0 등 15개 이상 모델을 한 대시보드에서 선택 생성",
+      "Cinema Studio 3.0의 AI 디렉터로 샷별 카메라 프리셋과 실사급 연출 제공",
+      "Soul ID·Soul Cast로 인물 얼굴을 학습해 여러 영상에서 캐릭터 일관성 유지",
+      "Marketing Studio로 광고 스크립트·보이스·리사이즈까지 자동 생성",
+      "Team·Scale·Enterprise 플랜에서 크레딧 풀 공유와 지출 한도 설정 지원",
+      "브랜드 킷으로 로고·폰트·색상·톤을 렌더링 결과물에 자동 적용"
+    ],
+    pricingSummary: "2026년 9월 기준 Starter $19·Plus $59·Ultra $129/월(연간 결제 시 약 $15~$99)이며 Veo 3.1·Sora 2는 40~70크레딧, Kling 3.0은 약 6크레딧을 소모하고, 요금제와 크레딧 정책이 2026년에만 여러 차례 바뀌었습니다.",
+    koreaNote: "한국어 UI는 일부만 지원되고 한국어 프롬프트 인식률이 영어보다 떨어진다는 후기가 많아 영어 프롬프트 작성이 권장됩니다.",
+    comparisons: [
+      {
+        competitor: "Runway",
+        worksBetterHere: "Cinema Studio 카메라 프리셋과 Soul ID 캐릭터 일관성, 다중 모델 전환을 한 UI에서 제공합니다.",
+        weakerHere: "Runway는 자체 Gen-4.5·Aleph 모델의 영상 편집(객체 추가/삭제, 재조명)과 더 성숙한 개발자 API를 갖췄습니다."
+      },
+      {
+        competitor: "Kling",
+        worksBetterHere: "Kling 3.0을 Sora 2·Veo 3.1 등 14개 이상 모델과 함께 통합 크레딧으로 바로 비교해 쓸 수 있습니다.",
+        weakerHere: "Kling을 자체 앱이나 API로 직접 쓰면 크레딧당 단가가 Higgsfield 경유보다 저렴합니다."
+      },
+      {
+        competitor: "Pika",
+        worksBetterHere: "Cinema Studio의 샷별 카메라 연출과 Soul Cast 캐릭터 재사용이 광고 제작 워크플로에 더 강합니다.",
+        weakerHere: "Pika는 진입 가격이 더 낮고 UI가 단순해 캐주얼한 소셜용 영상 제작에는 더 가볍게 접근할 수 있습니다."
+      }
+    ],
+    patchNotes: [
+      {
+        date: "2026-08-17",
+        title: "시리즈 B 4억 달러 투자 유치",
+        change: "8개월 만에 기업가치가 13억 달러에서 54억 달러로 뛰며 4억 달러 규모 시리즈 B를 유치했고 연환산매출(ARR)이 7억 달러에 이르렀습니다.",
+        errorRisk: "급격한 밸류에이션 상승과 매출 압박이 향후 요금제 인상이나 무료 크레딧 축소로 이어질 수 있습니다.",
+        impactLevel: "high"
+      },
+      {
+        date: "2026-05",
+        title: "요금제 구조 재개편",
+        change: "연간 결제 기준 Starter $15·Plus $39·Ultra $99로 개편했으나 9월 기준 Starter $19·Plus $59·Ultra $129로 다시 인상되는 등 한 해에도 여러 차례 가격이 바뀌었습니다.",
+        errorRisk: "크레딧 이월 불가, 90일 만료 등 세부 정책도 함께 바뀌므로 예산 산정 전 최신 공식 페이지 확인이 필요합니다.",
+        impactLevel: "medium"
+      },
+      {
+        date: "2026-02-11",
+        title: "인종차별·비동의 딥페이크 콘텐츠 논란",
+        change: "Forbes 보도로 인종차별적 영상과 유명인 비동의 합성 사례가 드러나 참조 이미지 업로드를 제한하고 유사도 측정 도구 Soul Cast를 컴플라이언스 용도로 도입했습니다.",
+        errorRisk: "실존 인물을 소재로 쓸 경우 사전 동의 없이는 계정 정지나 초상권 분쟁으로 번질 수 있습니다.",
+        impactLevel: "high"
+      },
+      {
+        date: "2026-02-09",
+        title: "공식 X 계정 정지 사태",
+        change: "사전 공지 없이 공식 X 계정이 정지되며 크레딧 정책 번복과 무더기 계정 차단에 대한 이용자 신뢰 문제가 불거졌습니다.",
+        errorRisk: "공지 없는 정책 변경 이력이 있어 크레딧·환불 관련 고객 지원 대응 지연에 대비해야 합니다.",
+        impactLevel: "medium"
+      }
+    ],
+    workPlaybook: [
+      {
+        title: "광고 시안 대량 테스트",
+        howToUse: "Marketing Studio에서 동일 브리프로 Sora 2·Veo 3.1·Kling 3.0 결과를 동시에 생성해 톤을 비교합니다.",
+        recommendation: "모델별 크레딧 소모가 달라 Ultra 이상에서 월 크레딧 예산 상한을 팀 단위로 정해두는 것이 안전합니다."
+      },
+      {
+        title: "인물 소재 사전 동의",
+        howToUse: "Soul ID·Soul Cast로 인물을 학습시키기 전 실존 인물 초상 사용 동의서를 확보하고 유사도 점검 기능을 활용합니다.",
+        recommendation: "동의 없는 유명인·직원 얼굴 합성은 게시 전 반드시 법무 검토를 거치도록 규칙화합니다."
+      },
+      {
+        title: "브랜드 일관성 관리",
+        howToUse: "Team 플랜의 Brand Kit에 로고·폰트·톤을 등록하고 Cinema Studio 카메라 프리셋을 팀 표준으로 저장합니다.",
+        recommendation: "크레딧 풀을 공유하는 팀은 캠페인별 소비량을 주간 단위로 점검해 초과 과금을 예방합니다."
+      }
+    ],
+    externalRatings: [
+      {
+        source: "G2",
+        score: "4.5/5",
+        note: "리뷰 79건 기준, 2026-09 확인",
+        url: "https://www.g2.com/sellers/higgsfield"
+      },
+      {
+        source: "Trustpilot",
+        score: "4.0/5",
+        note: "리뷰 4,224건 기준(다른 집계는 3.2/5·1,200건 이상으로 편차 있음), 2026-09 확인",
+        url: "https://www.trustpilot.com/review/higgsfield.ai"
+      },
+      {
+        source: "Product Hunt",
+        score: "4.5/5",
+        note: "리뷰 140건 기준, 2026-09 확인",
+        url: "https://www.producthunt.com/products/higgsfield/reviews"
+      }
+    ],
+    sources: [
+      { label: "Higgsfield 2026 요금제 정리", url: "https://www.vo3ai.com/higgsfield-ai-pricing" },
+      { label: "Higgsfield 팀 플랜 공식 페이지", url: "https://higgsfield.ai/team-plan" },
+      { label: "Higgsfield 이용약관", url: "https://higgsfield.ai/terms-of-use-agreement" },
+      {
+        label: "TechCrunch, 시리즈 B 4억 달러 투자 보도",
+        url: "https://techcrunch.com/2026/08/17/higgsfield-raises-400m-series-b-quadrupling-its-valuation-in-8-months-to-5-4b/"
+      },
+      {
+        label: "Forbes, 딥페이크·인종차별 콘텐츠 논란 보도",
+        url: "https://www.forbes.com/sites/rashishrivastava/2026/02/11/racist-videos-and-payment-problems-the-dark-side-of-this-ai-startups-super-fast-growth/"
+      },
+      {
+        label: "Higgsfield 공식 X 계정 정지 사태 분석",
+        url: "https://aiphotolabs.com/news/higgsfieldai-x-fiasco"
+      },
+      { label: "Higgsfield G2 리뷰 페이지", url: "https://www.g2.com/sellers/higgsfield" },
+      {
+        label: "Higgsfield 워터마크·상업적 이용 안내",
+        url: "https://higgsfield.ai/creator-hub/help-center/account/who-owns-my-generations-and-can-i-use-them-commercially"
+      }
+    ],
+    researchedAt: "2026-09"
+  },
+  // Runway
+  "7f50d95e-6c5d-47a5-a5a6-a4369344017f": {
+    oneLine: "자체 모델 품질과 편집력은 강하지만 초당 과금 크레딧과 반복된 소송·장애로 안정적 예산 관리가 어렵습니다.",
+    scoreBreakdown: { functionality: 88, uiux: 78, reliability: 62, comfort: 55, pricing: 52 },
+    keyFeatures: [
+      "Gen-4.5로 최대 20초 클립 생성, 4K 업스케일 내보내기 지원",
+      "Aleph 2.0으로 기존 영상에 객체 추가/삭제·재조명 등 인컨텍스트 편집",
+      "Extend·Temporal Anchor로 컷 간 조명·질감·캐릭터 일관성 유지",
+      "Director Mode 타임라인에서 컷 단위 카메라 연출 세부 조정",
+      "Team·Enterprise 플랜에서 Brand Kit, SSO, 감사 로그 제공",
+      "REST API·Workflows로 사내 툴체인과 연동한 파이프라인 구축"
+    ],
+    pricingSummary: "Free(크레딧 125개 1회성)·Standard $12·Pro $28·Max $76(연간 기준, 월간은 약 25% 비쌈)이며 초당 2~25크레딧이 소모되고 과거 Unlimited 플랜은 Max로 통합되었습니다.",
+    koreaNote: "한국어 프롬프트는 인식 품질이 크게 떨어져 영어로 번역해 입력하는 것이 권장됩니다.",
+    comparisons: [
+      {
+        competitor: "Higgsfield",
+        worksBetterHere: "Aleph 2.0의 인컨텍스트 영상 편집(객체 추가/삭제, 재조명)은 아그리게이터형 서비스에는 없는 자체 기능입니다.",
+        weakerHere: "Higgsfield는 Sora 2·Veo 3.1·Kling 3.0을 한 화면에서 비교 생성할 수 있지만 Runway는 자체 모델군으로 제한됩니다."
+      },
+      {
+        competitor: "Pika",
+        worksBetterHere: "Gen-4는 최대 20초 클립과 4K 업스케일, Director Mode 타임라인 편집으로 전문 후반작업에 더 적합합니다.",
+        weakerHere: "Pika는 진입가가 낮고 UI가 단순해 짧은 소셜 클립을 빠르게 실험하기에는 더 가볍습니다."
+      },
+      {
+        competitor: "Luma AI",
+        worksBetterHere: "Aleph의 영상 편집 기능과 Workflows·API 파이프라인은 VFX·후반작업 통합에 더 강합니다.",
+        weakerHere: "Luma의 Ray 계열 모델은 단순 텍스트-투-비디오 생성에서 속도와 비용 면에서 더 가볍다는 평가를 받습니다."
+      }
+    ],
+    patchNotes: [
+      {
+        date: "2026-06-02",
+        title: "Aleph 2.0 API 전환, 구모델 단종",
+        change: "Aleph 2.0이 API에 도입되고 7월 30일부로 기존 Gen-4 Aleph·Gen-3 Alpha Turbo API 모델 ID가 단종되었습니다.",
+        errorRisk: "구모델 ID로 연동된 자동화 파이프라인은 마이그레이션하지 않으면 호출이 실패합니다.",
+        impactLevel: "medium"
+      },
+      {
+        date: "2026-02-24",
+        title: "유튜브 학습데이터 저작권 집단소송 확대",
+        change: "유튜브 영상을 무단 스크래핑해 모델 학습에 사용했다는 의혹으로 DMCA 위반을 주장하는 저작권 집단소송이 잇따라 제기되었습니다.",
+        errorRisk: "생성물에 특정 크리에이터·브랜드 스타일이 반영될 경우 저작권 분쟁에 휘말릴 가능성이 있습니다.",
+        impactLevel: "high"
+      },
+      {
+        date: "2026-02-10",
+        title: "시리즈 E 3.15억 달러 투자",
+        change: "General Atlantic 주도로 Nvidia·Adobe Ventures·AMD Ventures·Fidelity 등이 참여한 3.15억 달러 시리즈 E를 유치해 기업가치가 53억 달러로 상승했습니다.",
+        errorRisk: "빠른 밸류에이션 상승이 향후 크레딧 단가 인상이나 무료 크레딧 축소 압력으로 이어질 수 있습니다.",
+        impactLevel: "high"
+      },
+      {
+        date: "2025-07-31",
+        title: "Aleph(Gen-4 Aleph) 유료 플랜 출시",
+        change: "텍스트 프롬프트만으로 기존 영상의 객체 추가/삭제, 재조명, 스타일 변경, 새 카메라 앵글 생성이 가능한 인컨텍스트 영상 편집 모델을 공개했습니다.",
+        errorRisk: "편집 결과가 원본 저작물을 크게 변형하므로 소재의 저작권·라이선스 확인이 더 중요해집니다.",
+        impactLevel: "medium"
+      }
+    ],
+    workPlaybook: [
+      {
+        title: "샷 편집 자동화",
+        howToUse: "완성된 촬영본을 Aleph에 업로드해 배경 교체·재조명·카메라 앵글 변형을 프롬프트로 지시합니다.",
+        recommendation: "초당 크레딧이 빠르게 소모되므로 저해상도 프리뷰로 먼저 확인한 뒤 최종 렌더링합니다."
+      },
+      {
+        title: "광고 클립 대량 생산",
+        howToUse: "Director Mode에서 20초 클립을 Extend로 이어붙이고 Team 플랜 Brand Kit으로 톤을 통일합니다.",
+        recommendation: "Pro 이상에서 4K 업스케일을 쓰되 월별 크레딧 상한을 팀 단위로 미리 배분합니다."
+      },
+      {
+        title: "레퍼런스 저작권 점검",
+        howToUse: "실존 인물·타사 영상을 참조로 쓸 때는 업로드 전 라이선스와 초상권 동의 여부를 확인합니다.",
+        recommendation: "진행 중인 저작권 소송 사례를 참고해 상업 캠페인 전 법무 검토를 거치는 것을 권장합니다."
+      }
+    ],
+    externalRatings: [
+      {
+        source: "G2",
+        score: "확인 필요",
+        note: "리뷰 78건 이상 존재하나 정확한 평균 별점은 접근 제한으로 확인하지 못함, 2026-09 확인 시도",
+        url: "https://www.g2.com/products/runway-2022-01-04/reviews"
+      },
+      {
+        source: "App Store",
+        score: "4.48/5",
+        note: "평가 약 1.2만 건 기준, 2026-09 확인",
+        url: "https://apps.apple.com/us/app/runwayml/id1665024375"
+      },
+      {
+        source: "Google Play",
+        score: "4.06/5",
+        note: "평가 약 4,600건 기준, 2026-09 확인",
+        url: "https://play.google.com/store/apps/details?id=com.runwayml.prod"
+      },
+      {
+        source: "Product Hunt",
+        score: "확인 필요",
+        note: "리뷰는 다수 존재하나 종합 평점 수치는 확인하지 못함",
+        url: "https://www.producthunt.com/products/runwayml/reviews"
+      }
+    ],
+    sources: [
+      { label: "Runway 2026 요금제 정리", url: "https://www.eesel.ai/blog/runway-ai-pricing" },
+      {
+        label: "TechCrunch, 시리즈 E 3.15억 달러 투자 보도",
+        url: "https://techcrunch.com/2026/02/10/ai-video-startup-runway-raises-315m-at-5-3b-valuation-eyes-more-capable-world-models/"
+      },
+      {
+        label: "Runway API 체인지로그(Aleph 2.0 전환)",
+        url: "https://docs.dev.runwayml.com/api-details/api_changelog/"
+      },
+      {
+        label: "Runway 무료 플랜 안내",
+        url: "https://help.runwayml.com/hc/en-us/articles/50404627334547-Free-plan-details"
+      },
+      {
+        label: "Runway 이용권(Usage rights) 안내",
+        url: "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights"
+      },
+      {
+        label: "유튜버 저작권 집단소송 보도",
+        url: "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N3ZK172:0-youtuber-sues-runway-ai-in-latest-copyright-class-action-over-ai-training/"
+      },
+      {
+        label: "Runway Gen-4 최대 클립 길이 안내",
+        url: "https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video"
+      },
+      { label: "Runway 팀 플랜 소개", url: "https://runway.com/news/company-news/introducing-team-plan" }
+    ],
+    researchedAt: "2026-09"
+  },
+  // HeyGen
+  "4cb2986a-6f10-411c-a9d5-09be356f8d89": {
+    oneLine: "아바타 실사도와 다국어 더빙 품질은 업계 최상급이지만 무제한 요금제 폐지로 크레딧 관리 부담이 커졌습니다.",
+    scoreBreakdown: { functionality: 90, uiux: 82, reliability: 65, comfort: 48, pricing: 46 },
+    keyFeatures: [
+      "Avatar V, 15초 녹화로 10분 분량까지 정체성 유지되는 아바타 생성",
+      "175개 이상 언어로 원본 화자 음색 유지한 립싱크 번역·더빙 지원",
+      "Avatar IV/V의 손짓·표정 인식으로 자연스러운 제스처 연출",
+      "Voice Director로 톤·페이싱·감정을 세밀 조정하는 신경망 TTS",
+      "Enterprise 플랜에서 SAML SSO·SCIM·역할 기반 권한 제공",
+      "브랜드 킷·용어집으로 부서별 영상 톤과 번역 용어 통일"
+    ],
+    pricingSummary: "Free(월 3편, 워터마크)·Creator $29·Pro $49·Business $149이며 2026년 5월 무제한 플랜을 폐지하고 전면 크레딧제(아바타 생성 분당 20크레딧 등)로 전환했습니다.",
+    koreaNote: "한국어 립싱크·음성 합성 품질이 우수하다는 후기가 많아 유튜브·사내 강의·더빙 제작에 국내에서도 쓰이지만, 번역 결과를 직접 수정할 수 없어 오역이 그대로 남을 수 있습니다.",
+    comparisons: [
+      {
+        competitor: "Synthesia",
+        worksBetterHere: "Avatar V의 표정·제스처 자연스러움과 175개 언어 립싱크 번역(G2 번역 점수 97 대 경쟁사 평균 62)이 더 앞섭니다.",
+        weakerHere: "Synthesia는 연간 요금이 더 저렴하고 SOC 2·GDPR·ISO 42001 인증과 SCORM 연동을 갖춰 기업 교육용으로 더 적합합니다."
+      },
+      {
+        competitor: "D-ID",
+        worksBetterHere: "Avatar IV/V의 손짓·감정 인식과 10분 분량 정체성 유지 등 장편 아바타 품질에서 앞섭니다.",
+        weakerHere: "D-ID는 실시간 대화형 아바타·챗봇 연동에 특화되어 있어 고객 상담 시나리오에는 더 가볍게 붙일 수 있습니다."
+      },
+      {
+        competitor: "Colossyan",
+        worksBetterHere: "175개 이상 언어 동시 번역과 음성 복제 기반 다국어 로컬라이제이션 워크플로가 더 성숙합니다.",
+        weakerHere: "Colossyan은 퀴즈·역할극·SCORM 내보내기 등 사내 교육(L&D) 인터랙션 기능이 더 특화돼 있습니다."
+      }
+    ],
+    patchNotes: [
+      {
+        date: "2026-08-13",
+        title: "영상 번역 기능 장애 발생",
+        change: "영상 번역(더빙) 기능에서 지연·실패가 급증하는 장애가 발생해 일부 사용자의 번역 작업이 지연되었습니다.",
+        errorRisk: "마감이 임박한 다국어 더빙 작업은 장애 발생 시 대체 일정을 확보해야 합니다.",
+        impactLevel: "medium"
+      },
+      {
+        date: "2026-05-15",
+        title: "무제한 요금제 폐지, 전면 크레딧제 전환",
+        change: "기존 무제한 플랜을 없애고 아바타 생성 분당 20크레딧 등 사용량 기반 크레딧제로 요금 체계를 전환했습니다.",
+        errorRisk: "장시간 영상이나 대량 번역 작업 시 예상보다 크레딧이 빨리 소진되어 추가 결제가 필요할 수 있습니다.",
+        impactLevel: "high"
+      },
+      {
+        date: "2026-04-08",
+        title: "Avatar V 출시",
+        change: "15초 분량 녹화만으로 10분 길이까지 얼굴·음성 정체성을 유지하는 최신 아바타 모델 Avatar V를 공개했습니다(얼굴 유사도 점수 0.840).",
+        errorRisk: "장편 영상에서도 정체성이 정교하게 유지되므로 동의 없는 인물 학습 시 오남용 위험이 커집니다.",
+        impactLevel: "high"
+      },
+      {
+        date: "2025-05-06",
+        title: "Avatar IV 출시",
+        change: "정지 이미지 한 장으로 손짓·감정 표현이 반영된 아바타 영상을 생성하는 Avatar IV를 공개하고 이후 API로도 개방했습니다.",
+        errorRisk: "이미지 한 장만으로 인물 영상화가 가능해져 본인 동의 확인 절차가 더 중요해졌습니다.",
+        impactLevel: "medium"
+      }
+    ],
+    workPlaybook: [
+      {
+        title: "다국어 더빙 로컬라이제이션",
+        howToUse: "원본 영상을 업로드해 최대 10개 언어로 동시 번역하고 원 화자 음색을 유지한 립싱크 더빙을 생성합니다.",
+        recommendation: "번역문은 사후 수정이 안 되므로 배포 전 원어민 검수를 거치는 것을 규칙화합니다."
+      },
+      {
+        title: "사내 교육 영상 갱신",
+        howToUse: "Avatar IV/V로 발표자 아바타를 만들고 Business 플랜의 브랜드 킷·용어집으로 부서별 톤을 통일합니다.",
+        recommendation: "분당 크레딧 소모가 큰 아바타는 초안 단계에서 저크레딧 유형으로 먼저 검증한 뒤 최종본만 고품질로 렌더링합니다."
+      },
+      {
+        title: "인물 아바타 동의 관리",
+        howToUse: "실존 임직원·모델의 아바타를 만들 때 HeyGen 동의 절차와 모더레이션 정책에 따라 서면 동의를 기록합니다.",
+        recommendation: "동의 없는 제3자 얼굴·음성 합성은 정책 위반이므로 게시 전 담당자 승인 절차를 두는 것이 안전합니다."
+      }
+    ],
+    externalRatings: [
+      {
+        source: "G2",
+        score: "4.8/5",
+        note: "리뷰 1,462건 기준, 2026 Summer 리포트 AI 영상 부문 1위, 2026-09 확인",
+        url: "https://www.g2.com/products/heygen/reviews"
+      },
+      {
+        source: "Capterra",
+        score: "4.7/5",
+        note: "아바타 실사도·사용 편의성 호평 다수, 2026-09 확인",
+        url: "https://www.capterra.com/p/10015133/HeyGen/reviews/"
+      },
+      {
+        source: "Trustpilot",
+        score: "2.3/5",
+        note: "리뷰 100건 분석 기준 80%가 부정적, 결제·고객지원 불만이 대부분(3자 집계), 2026-09 확인",
+        url: "https://www.zuloai.com/blog/heygen-ai-review-complete-data-backed-guide-to-ratings-pricing-user-sentiment/"
+      }
+    ],
+    sources: [
+      { label: "HeyGen 2026 가격 정책 정리", url: "https://www.eesel.ai/blog/heygen-pricing" },
+      { label: "HeyGen Avatar V 공식 발표", url: "https://www.heygen.com/blog/announcing-avatar-v" },
+      {
+        label: "HeyGen Avatar IV 공식 발표",
+        url: "https://www.heygen.com/blog/introducing-voice-director-and-avatar-iv"
+      },
+      {
+        label: "HeyGen G2 Summer 2026 1위 발표",
+        url: "https://www.heygen.com/blog/heygen-2026-g2-summer-reports"
+      },
+      {
+        label: "HeyGen 무료 플랜·워터마크 안내",
+        url: "https://www.heygen.com/tool/free-ai-video-generator-no-watermark"
+      },
+      {
+        label: "HeyGen vs Synthesia 비교(요금제 변경 포함)",
+        url: "https://hollymack.com/synthesia-vs-heygen/"
+      },
+      { label: "HeyGen 상태 페이지(장애 이력)", url: "https://status.heygen.com/" },
+      {
+        label: "HeyGen 리뷰 평점 종합(G2·Capterra·Trustpilot)",
+        url: "https://www.zuloai.com/blog/heygen-ai-review-complete-data-backed-guide-to-ratings-pricing-user-sentiment/"
+      }
+    ],
+    researchedAt: "2026-09"
+  },
+  // ElevenLabs
+  "3eb0d80f-c91b-40b9-a57b-ceb5bc76ad1c": {
+    oneLine: "가장 자연스러운 목소리를 빠르게 만들지만, 크레딧 요금제와 음성 도용 리스크는 직접 관리해야 합니다.",
+    scoreBreakdown: { functionality: 92, uiux: 80, reliability: 70, comfort: 65, pricing: 58 },
+    keyFeatures: [
+      "Eleven v3: 70개 이상 언어와 감정 오디오 태그를 지원하는 최신 TTS 모델(2026-02 GA)",
+      "Flash v2.5: 지연시간이 매우 짧아 실시간 대화에 쓰이는 경량 음성 모델",
+      "ElevenAgents: 전화·WhatsApp·챗에 배포하는 대화형 AI 음성 에이전트",
+      "Professional Voice Cloning: 소량의 샘플로 개인 목소리를 복제하는 기능",
+      "Dubbing: 화자의 감정과 타이밍을 유지하며 여러 언어로 영상을 더빙",
+      "Voice Library / Iconic 마켓플레이스: 동의 기반 음성 라이선싱과 크리에이터 수익 배분"
+    ],
+    pricingSummary: "Free(월 1만 크레딧)부터 Starter $6, Creator $22, Pro $99, Scale $299, Business $990까지 크레딧제 요금이며, 2025년에만 세 차례 크레딧 체계가 개편되고 2025년 11월부터 대화형 에이전트 사용 분도 플랜에 포함됐습니다.",
+    koreaNote: "Eleven v3부터 한국어 발음 자연스러움이 크게 개선됐지만 UI와 공식 지원은 영어 중심이라, 국내 이용자들은 Voice Library에서 커뮤니티가 공유한 한국어 PVC 음성을 찾아 쓰는 경우가 많습니다.",
+    comparisons: [
+      {
+        competitor: "OpenAI TTS",
+        worksBetterHere: "Professional Voice Cloning과 70개 이상 언어의 감정 태그(Eleven v3)를 지원해 표현력이 더 풍부합니다.",
+        weakerHere: "OpenAI TTS는 ChatGPT·API 생태계에 기본 내장돼 있어 별도 가입 없이 더 저렴하게 붙여 쓸 수 있습니다."
+      },
+      {
+        competitor: "Murf",
+        worksBetterHere: "음성의 사실감과 실시간 대화형 에이전트(ElevenAgents) 구축에서 앞서 있습니다.",
+        weakerHere: "Murf는 템플릿 기반 협업과 팀 프레젠테이션·교육 영상 제작 워크플로우가 더 정돈돼 있습니다."
+      },
+      {
+        competitor: "Play.ht",
+        worksBetterHere: "Voice Library 규모와 Dubbing 품질, 감정 표현이 필요한 콘텐츠에서 우위에 있습니다.",
+        weakerHere: "Play.ht는 API 기반 음성 에이전트 구축 비용이 더 저렴해 예산이 빠듯한 팀에 유리합니다."
+      }
+    ],
+    patchNotes: [
+      {
+        date: "2026-05-11",
+        title: "BIPA 집단소송 피소",
+        change: "일리노이주 저널리스트·성우 7인이 동의 없는 음성 학습을 이유로 ElevenLabs 등을 상대로 BIPA 집단소송을 제기했습니다.",
+        errorRisk: "동의 없는 음성 학습에 대한 법적·평판 리스크가 해당 음성을 활용한 기업 이용자에게도 전이될 수 있습니다.",
+        impactLevel: "high"
+      },
+      {
+        date: "2026-02-04",
+        title: "시리즈 D $500M 유치, 기업가치 $11B",
+        change: "Sequoia Capital 주도로 5억 달러 시리즈 D를 유치하며 기업가치가 110억 달러로 1년 만에 3배 이상 상승했습니다.",
+        errorRisk: "급성장에 따른 요금제·정책 변경이 잦아 비용 계획을 자주 재점검해야 합니다.",
+        impactLevel: "medium"
+      },
+      {
+        date: "2026-02-02",
+        title: "Eleven v3 정식 출시(GA)",
+        change: "감정 오디오 태그와 70개 이상 언어를 지원하는 Eleven v3가 알파를 벗어나 정식 출시됐습니다.",
+        errorRisk: "v3는 지연시간이 길어 실시간 대화에는 부적합하므로 용도에 따라 Flash 모델과 구분해 써야 합니다.",
+        impactLevel: "high"
+      },
+      {
+        date: "2025-11",
+        title: "Iconic 마켓플레이스 및 크리에이터 보상 확대",
+        change: "Michael Caine 등 유명인의 음성을 동의 기반으로 라이선싱하는 Iconic 마켓플레이스를 출시했고, 음성 크리에이터 누적 지급액이 6개월 만에 2배로 늘었습니다.",
+        errorRisk: "동의 기반 라이선싱 밖에서 이뤄지는 무단 음성 복제는 여전히 별도의 소송 리스크로 남아 있습니다.",
+        impactLevel: "medium"
+      }
+    ],
+    workPlaybook: [
+      {
+        title: "나레이션 제작 표준화",
+        howToUse: "Eleven v3의 오디오 태그와 Professional Voice Cloning으로 브랜드 보이스를 하나 만들고, 스크립트에 [pause]·[excited] 같은 태그를 넣어 톤을 통제합니다.",
+        recommendation: "브랜드 보이스로 쓸 목소리는 성우와 서면 동의·이용 범위 계약을 먼저 맺고 사용 이력을 기록으로 남기세요."
+      },
+      {
+        title: "다국어 더빙 파이프라인",
+        howToUse: "Dubbing 기능으로 원본 영상 화자의 감정과 타이밍을 유지한 채 여러 언어 버전을 한 번에 생성합니다.",
+        recommendation: "언어별로 원어민 검수를 한 단계 거쳐 발음 오류나 어색한 억양을 배포 전에 반드시 걸러내세요."
+      },
+      {
+        title: "상담 에이전트 자동화",
+        howToUse: "ElevenAgents로 전화·WhatsApp 상담 봇을 만들고 MCP·API 툴콜로 예약·조회 같은 실제 업무를 연결합니다.",
+        recommendation: "플랜에 포함된 Agents 사용 분(월 한도)과 초과 과금 구조를 먼저 계산해 크레딧 소진 리스크를 관리하세요."
+      }
+    ],
+    externalRatings: [
+      {
+        source: "G2",
+        score: "4.5/5",
+        note: "리뷰 1,140건 기준, 2026-09 확인",
+        url: "https://www.g2.com/products/elevenlabsio/reviews"
+      },
+      {
+        source: "App Store (ElevenReader)",
+        score: "4.7/5",
+        note: "ElevenLabs 공식 리더 앱 기준, 2026-09 확인",
+        url: "https://apps.apple.com/us/app/elevenreader-read-books-aloud/id6479373050"
+      },
+      {
+        source: "Capterra",
+        score: "확인 필요",
+        note: "종합 평점 수치 확인 어려움(확인 필요)",
+        url: "https://capterra.com/p/10013392/ElevenLabs/reviews/"
+      }
+    ],
+    sources: [
+      { label: "ElevenLabs 공식 요금제(한국어)", url: "https://elevenlabs.io/ko/pricing" },
+      {
+        label: "Eleven v3 정식 출시 공식 발표",
+        url: "https://elevenlabs.io/blog/eleven-v3-is-now-generally-available"
+      },
+      { label: "시리즈 D 펀딩 공식 발표", url: "https://elevenlabs.io/blog/series-d" },
+      {
+        label: "저널리스트 BIPA 집단소송 보도",
+        url: "https://chicago.suntimes.com/technology/2026/05/19/tech-giants-sued-over-stealing-voices-of-well-known-journalists-voice-actors-to-train-ai"
+      },
+      {
+        label: "Iconic 마켓플레이스·할리우드 배우 파트너십 발표",
+        url: "https://www.businesswire.com/news/home/20251111704426/en/ElevenLabs-Announces-Partnerships-with-Iconic-Hollywood-Actors"
+      },
+      { label: "ElevenLabs G2 리뷰", url: "https://www.g2.com/products/elevenlabsio/reviews" },
+      {
+        label: "ElevenLabs vs Murf vs Play.ht 비교",
+        url: "https://genesysgrowth.com/blog/elevenlabs-vs-playht-vs-murf"
+      },
+      {
+        label: "Consumer Reports 음성 클로닝 안전장치 평가",
+        url: "https://innovation.consumerreports.org/?p=10509"
+      }
+    ],
+    researchedAt: "2026-09"
+  },
+  // Suno
+  "be7a6ff5-34ca-4d4c-aec2-f42ba6f729fc": {
+    oneLine: "가장 자연스러운 보컬의 완성곡을 빠르게 뽑아주지만, 저작권 지위와 레이블 소송 리스크는 여전히 진행형입니다.",
+    scoreBreakdown: { functionality: 88, uiux: 85, reliability: 60, comfort: 62, pricing: 65 },
+    keyFeatures: [
+      "v5.5 모델: 더 표현력 있는 보컬과 장르별 다이내믹 사운드(2026-03 출시)",
+      "Voices: 본인 목소리를 검증해 커스텀 보컬로 쓰는 음성 클로닝 기능",
+      "Custom Models / My Taste: 개인 취향을 학습한 맞춤형 파인튜닝·추천 엔진",
+      "Suno Studio 2.0: MIDI 편집·신스·스템 분리를 지원하는 브라우저 기반 AI DAW",
+      "Extend/Cover: 곡을 이어 붙이거나 커버를 생성해 풀렝스 트랙으로 완성",
+      "Pro/Premier 상업 이용권: 유료 플랜 생성곡에 로열티 없는 상업적 사용권 부여"
+    ],
+    pricingSummary: "Free(일 50크레딧, 비상업용)부터 Pro 월 $10(연 결제 시 $8), Premier 월 $30(연 결제 시 $24)이며, Pro·Premier로 생성한 곡만 소유권과 상업적 이용권이 주어집니다.",
+    koreaNote: "한국어 가사는 생성 자체는 가능하지만 발음이 부자연스러운 경우가 많아, 국내 이용자들은 가사를 별도로 다듬거나 영어 위주로 쓰는 경우가 많습니다.",
+    comparisons: [
+      {
+        competitor: "Udio",
+        worksBetterHere: "UMG와의 소송 이후에도 다운로드·스템 추출이 자유롭고 v5.5 보컬이 박자에 더 안정적으로 맞습니다.",
+        weakerHere: "Udio는 48kHz 스테레오 출력과 인페인팅 편집 기능으로 악기 음질과 세밀한 수정에서 앞섭니다."
+      },
+      {
+        competitor: "AIVA",
+        worksBetterHere: "보컬이 포함된 완성곡 생성과 대중음악 장르 다양성에서 훨씬 강합니다.",
+        weakerHere: "AIVA는 클래식·오케스트라 스코어링과 MIDI 기반 정밀 편곡에 특화돼 영상 스코어 작업에 유리합니다."
+      },
+      {
+        competitor: "Soundraw",
+        worksBetterHere: "가사와 보컬이 있는 완결된 노래를 만들 수 있어 표현의 폭이 훨씬 넓습니다.",
+        weakerHere: "Soundraw는 길이와 무드를 세밀하게 조절하는 로열티 프리 라이선스 구조라 유튜브 배경음악용으로 더 간편합니다."
+      }
+    ],
+    patchNotes: [
+      {
+        date: "2026-08-13",
+        title: "Suno Studio 2.0 출시",
+        change: "MIDI 편집, 신스, 스템 분리 등을 더한 브라우저 기반 AI DAW로 Suno Studio를 전면 개편했습니다.",
+        errorRisk: "고급 편집 기능은 유료 구독자 전용이라 무료 이용자와의 기능 격차가 더 커졌습니다.",
+        impactLevel: "medium"
+      },
+      {
+        date: "2026-06-04",
+        title: "시리즈 D $400M 유치, 기업가치 $5.4B",
+        change: "Bond Capital 주도로 4억 달러를 유치하며 기업가치가 54억 달러로, 2025년 11월 24.5억 달러 대비 2배 이상 상승했습니다.",
+        errorRisk: "급성장과 함께 요금제·정책이 자주 바뀔 수 있어 지속적인 확인이 필요합니다.",
+        impactLevel: "medium"
+      },
+      {
+        date: "2026-03-25",
+        title: "v5.5 모델 출시",
+        change: "Voices(음성 클로닝), Custom Models, My Taste 등 커뮤니티 요청 기능을 담은 v5.5를 정식 출시했습니다.",
+        errorRisk: "무료 플랜은 구형 v4.5 모델만 제공돼 유료 플랜과의 품질 격차가 커졌습니다.",
+        impactLevel: "high"
+      },
+      {
+        date: "2025-11",
+        title: "Warner Music와 소송 합의 및 라이선싱 계약",
+        change: "Warner Music Group과 저작권 소송을 합의하고 비허가 학습 모델을 전량 폐기, 라이선스 기반 모델로 전환하기로 했습니다.",
+        errorRisk: "Universal·Sony와의 소송은 여전히 진행 중이라 향후 라이선스 비용이 요금제에 반영될 수 있습니다.",
+        impactLevel: "high"
+      }
+    ],
+    workPlaybook: [
+      {
+        title: "브랜드 캠페인 음악 제작",
+        howToUse: "Custom Prompt 모드로 가사와 무드를 직접 입력해 v5.5로 곡을 생성한 뒤, Extend로 필요한 길이만큼 풀 트랙을 완성합니다.",
+        recommendation: "반드시 Pro 이상 유료 플랜에서 생성한 곡만 상업적으로 배포하고, 무료 플랜 결과물은 사내 시안 용도로만 쓰세요."
+      },
+      {
+        title: "숏폼 콘텐츠 배경음악",
+        howToUse: "장르·분위기 키워드만 입력하는 Simple 모드로 여러 후보곡을 빠르게 생성해 숏폼 영상에 붙입니다.",
+        recommendation: "생성곡의 저작권 등록 가능 여부가 불확실하므로, 중요한 캠페인에는 사람이 가사·편곡을 추가 수정한 버전을 쓰세요."
+      },
+      {
+        title: "음악 프로덕션 협업",
+        howToUse: "Suno Studio 2.0에서 스템을 분리해 MIDI로 가져온 뒤, 사내 편곡자가 신스와 이펙트로 다듬어 완성도를 높입니다.",
+        recommendation: "구독 자동 갱신과 크레딧 소진 이슈가 리뷰에서 반복 제기되므로 결제일과 크레딧 잔량을 팀 캘린더로 관리하세요."
+      }
+    ],
+    externalRatings: [
+      {
+        source: "G2",
+        score: "4.0/5",
+        note: "리뷰 8건 기준(표본 적음), 2026-09 확인",
+        url: "https://www.g2.com/products/suno-ai/reviews"
+      },
+      {
+        source: "Google Play",
+        score: "4.8/5",
+        note: "리뷰 약 233만 건 기준, 2026-09 확인",
+        url: "https://play.google.com/store/apps/details?id=com.suno.android&hl=en_US"
+      },
+      {
+        source: "Trustpilot",
+        score: "확인 필요",
+        note: "리뷰 다수이나 종합 평점 수치 확인 어려움, 결제·환불 불만 다수(확인 필요)",
+        url: "https://www.trustpilot.com/review/suno.com"
+      }
+    ],
+    sources: [
+      { label: "Suno 상업적 이용 정책 공식 도움말", url: "https://help.suno.com/en/articles/9601985" },
+      { label: "Suno v5.5 공식 발표", url: "https://suno.com/blog/v5-5" },
+      { label: "Suno Studio 2.0 공식 발표", url: "https://suno.com/blog/studio-2" },
+      {
+        label: "Warner Music-Suno 라이선싱 합의 보도",
+        url: "https://happycapyguide.com/blog/suno-umg-sony-licensing-stalemate-ai-music-copyright-2026"
+      },
+      {
+        label: "Suno 시리즈 D 펀딩 보도",
+        url: "https://variety.com/2026/digital/news/ai-music-suno-funding-round-400-million-5-4-billion-valuation-1236765727/"
+      },
+      {
+        label: "음악가노조(AFM)의 레이블 제소 보도",
+        url: "https://www.hollywoodreporter.com/music/music-industry-news/musicians-union-lawsuit-ai-song-generator-settlement-1236614835/"
+      },
+      { label: "Suno G2 리뷰", url: "https://www.g2.com/products/suno-ai/reviews" },
+      { label: "Suno vs Udio 비교", url: "https://blog.dubspot.com/suno-vs-udio-2026" },
+      {
+        label: "Music Business Worldwide: Suno 시리즈 D $400M, 기업가치 $5.4B",
+        url: "https://www.musicbusinessworldwide.com/suno-raises-over-400-million-pushing-valuation-to-5-4-billion/"
+      },
+      {
+        label: "TechCrunch: Warner Music와 Suno 소송 합의 및 라이선스 계약",
+        url: "https://techcrunch.com/2025/11/25/warner-music-signs-deal-with-ai-music-startup-suno-settles-lawsuit/"
+      }
+    ],
+    researchedAt: "2026-09"
+  },
+  // Topaz Labs
+  "49900872-c5ef-4ce9-a0e2-71f5dddb49cd": {
+    oneLine: "로컬 처리 화질은 최고 수준이지만, 2025년 구독 전환과 고사양 GPU 요구가 새로운 진입장벽입니다.",
+    scoreBreakdown: { functionality: 90, uiux: 75, reliability: 68, comfort: 55, pricing: 50 },
+    keyFeatures: [
+      "Topaz Photo(Wonder 3, High Fidelity 3 등): 사진 노이즈 제거·업스케일·디테일 복원",
+      "Topaz Video(Astra 2, Starlight Precise 2.6 등): 4K/8K 영상 업스케일과 프레임 보간",
+      "Topaz Gigapixel: 9종 이상 전용 모델로 이미지를 최대 6배 확대",
+      "Topaz Studio: Photo·Video·Gigapixel을 묶은 통합 구독 번들 및 클라우드 렌더링",
+      "NeuroStream: VRAM 사용량을 최대 95%까지 줄이는 자체 추론 최적화 기술",
+      "Premiere Panel: Adobe Premiere Pro 타임라인에서 바로 업스케일·보정 적용"
+    ],
+    pricingSummary: "2025년 10월 3일부로 영구 라이선스 판매가 완전히 종료되고 Gigapixel·Photo·Video가 Topaz Studio 구독으로 통합됐습니다. 종료 직전 영구 라이선스는 각각 $99·$199·$299였고, 이후 구독가는 출처마다 Gigapixel 월 $29(연 $149), Photo 월 $39(연 $199) 등으로 엇갈려 공식 요금 페이지 확인이 필요합니다.",
+    koreaNote: "한국 이용자 후기에서는 화질 복원력은 높이 평가되지만, 저사양 PC에서는 장시간(영상 기준 10시간 이상) 렌더링이 필요하다는 불만이 많습니다.",
+    comparisons: [
+      {
+        competitor: "Magnific AI",
+        worksBetterHere: "원본에 없는 디테일을 지어내지 않는 사실적 복원(Fidelity 중심)이라 인물·문서처럼 원본 보존이 중요한 작업에 적합합니다.",
+        weakerHere: "Magnific AI는 확산 모델 기반으로 화려한 디테일을 새로 그려 넣어 무드보드나 스타일라이즈드 이미지 작업에서 더 인상적인 결과를 냅니다."
+      },
+      {
+        competitor: "Adobe Photoshop",
+        worksBetterHere: "Wonder 3·High Fidelity 3 등 업스케일 전용 모델이 많아 순수 해상도·노이즈 복원 품질이 더 높다는 평가가 많습니다.",
+        weakerHere: "Photoshop은 Creative Cloud 구독에 Super Resolution 기능이 포함돼 있어 추가 비용 없이 가벼운 업스케일에는 더 간편합니다."
+      },
+      {
+        competitor: "Upscayl",
+        worksBetterHere: "Astra 2, Starlight 등 특화 모델과 NeuroStream 최적화로 전문가용 결과물 품질이 더 높습니다.",
+        weakerHere: "Upscayl은 무료 오픈소스 도구라 예산이 없는 개인·소규모 작업에는 진입장벽이 훨씬 낮습니다."
+      }
+    ],
+    patchNotes: [
+      {
+        date: "2026-05",
+        title: "Expansion Release",
+        change: "SDR-HDR 변환 모델 Hyperion 2를 추가하고 Adobe Premiere용 통합 경험을 확장했습니다.",
+        errorRisk: "신규 모델 사용은 데스크톱·웹 접근 권한 및 구독 등급에 따라 제한될 수 있습니다.",
+        impactLevel: "medium"
+      },
+      {
+        date: "2026-04",
+        title: "Next-Gen Release(역대 최대 모델 업데이트)",
+        change: "사진용 Wonder 3·Denoise Max·Super Focus 3·High Fidelity 3와 영상용 Starlight Precise 2.5·Astra 2, VRAM 최적화 기술 NeuroStream을 한번에 공개했습니다.",
+        errorRisk: "신모델이 고사양 GPU를 요구해 구형 GPU 사용자는 체감 성능 개선이 제한적일 수 있습니다.",
+        impactLevel: "high"
+      },
+      {
+        date: "2025-10-03",
+        title: "영구 라이선스 판매 전면 종료",
+        change: "영구 라이선스 신규 판매를 전면 중단하고 Gigapixel·Photo·Video를 Topaz Studio 구독 체계로 옮겼습니다. 기존 영구 라이선스 보유자는 구매한 버전을 계속 쓸 수 있지만 이후 업데이트는 구독이 있어야 받습니다.",
+        errorRisk: "한 번 사서 오래 쓰던 팀은 비용 구조가 매년 반복 지출로 바뀌고, 업데이트를 받으려면 구독으로 갈아타야 해 장기 비용을 다시 계산해야 합니다.",
+        impactLevel: "high"
+      },
+      {
+        date: "2025-09",
+        title: "Topaz Photo AI → Topaz Photo 리브랜딩",
+        change: "제품명에서 'AI'를 제거하고 Topaz Photo로 리브랜딩했습니다.",
+        errorRisk: "제품명 변경으로 기존 문서·튜토리얼과 명칭이 달라 혼선이 생길 수 있습니다.",
+        impactLevel: "low"
+      }
+    ],
+    workPlaybook: [
+      {
+        title: "아카이브 영상 복원",
+        howToUse: "Topaz Video의 Starlight·Astra 모델로 저해상도 원본을 4K로 업스케일하고 노이즈·플리커를 제거합니다.",
+        recommendation: "장시간 렌더링(수 시간~10시간 이상)을 감안해 작업 일정과 VRAM 12GB 이상 GPU를 사전에 확보하세요."
+      },
+      {
+        title: "제품·인물 사진 보정",
+        howToUse: "Topaz Photo의 High Fidelity·Super Focus 모델로 초점 흐린 사진을 복원하고 Lightroom·Photoshop 플러그인으로 연동합니다.",
+        recommendation: "문서·증거성 이미지처럼 생성형 디테일 추가가 필요 없는 경우 Creativity·디테일 강도를 낮게 설정해 원본 왜곡을 방지하세요."
+      },
+      {
+        title: "영상 편집 파이프라인 통합",
+        howToUse: "Premiere Panel로 타임라인 클립을 선택해 업스케일·보간을 바로 적용하고 새 트랙으로 받습니다.",
+        recommendation: "구독 갱신 시점과 클라우드 크레딧 사용량을 함께 점검해 예상 밖 비용 증가를 막으세요."
+      }
+    ],
+    externalRatings: [
+      {
+        source: "G2",
+        score: "4.6/5",
+        note: "Topaz Labs 리뷰 9건 기준(표본 적음), 2026-09 확인",
+        url: "https://www.g2.com/products/topaz-labs/reviews"
+      },
+      {
+        source: "Capterra(Topaz Gigapixel)",
+        score: "4.8/5",
+        note: "리뷰 18건 기준, 2026-09 확인",
+        url: "https://www.capterra.com/p/235863/Gigapixel-AI/reviews/"
+      },
+      {
+        source: "Trustpilot",
+        score: "4.0/5",
+        note: "topazlabs.com 전체 기준 리뷰 약 5.6만 건, 2026-09 확인",
+        url: "https://www.trustpilot.com/review/www.topazlabs.com"
+      }
+    ],
+    sources: [
+      {
+        label: "Topaz Labs Next-Gen Release 공식 발표",
+        url: "https://www.topazlabs.com/news/the-next-gen-release---april-2026"
+      },
+      {
+        label: "Topaz Labs Expansion Release 공식 발표",
+        url: "https://www.topazlabs.com/news/the-expansion-release"
+      },
+      {
+        label: "영구 라이선스 종료 보도",
+        url: "https://digitalproduction.com/2025/10/02/topaz-drops-perpetual-licences-bets-on-subscriptions-with-studio-launch/"
+      },
+      {
+        label: "Topaz Photo 릴리즈 노트 공식 문서",
+        url: "https://docs.topazlabs.com/topaz-photo/release-summary"
+      },
+      {
+        label: "GPU/VRAM 시스템 요구사항 공식 문서",
+        url: "https://docs.topazlabs.com/topaz-video/system-requirements"
+      },
+      {
+        label: "NeuroStream VRAM 최적화 기술 보도",
+        url: "https://quasa.io/media/topaz-labs-and-nvidia-team-up-neurostream-slashes-vram-needs-by-up-to-95-for-local-ai-image-processing"
+      },
+      {
+        label: "Topaz vs Magnific AI 비교",
+        url: "https://chasejarvis.com/blog/topaz-vs-magnific-best-ai-image-scaler/"
+      },
+      { label: "Topaz Labs G2 리뷰", url: "https://www.g2.com/products/topaz-labs/reviews" },
+      {
+        label: "CGPress: Topaz Labs 영구 라이선스 종료 보도",
+        url: "https://cgpress.org/archives/topaz-labs-ends-perpetual-licenses-with-launch-of-topaz-studio-subscription.html"
+      }
+    ],
+    researchedAt: "2026-09"
   }
 };

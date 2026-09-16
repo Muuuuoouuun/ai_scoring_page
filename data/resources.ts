@@ -2,6 +2,558 @@ import type { ResourceSite } from "@/lib/types";
 
 /**
  * 실무에서 자주 여는 레퍼런스·에셋·이미지·유틸리티 사이트 모음.
- * scripts/merge-research.js 가 research/resources-*.json 에서 생성합니다.
+ * scripts/merge-research.js 로 생성됩니다. 조사 기준: 2026-09
  */
-export const resources: ResourceSite[] = [];
+export const resources: ResourceSite[] = [
+  {
+    name: "Pinterest",
+    url: "https://www.pinterest.com",
+    group: "reference",
+    tagline: "이미지·영상 무드보드를 만드는 전 세계 최대 비주얼 검색 서비스",
+    useCase: "브랜딩, 인테리어, 콘텐츠 기획 초기에 폭넓은 톤앤매너 후보를 빠르게 모아 무드보드를 짤 때 엽니다. 키워드나 색상으로 연관 이미지를 계속 타고 들어가며 팀원과 보드를 공유해 방향을 맞추는 데도 씁니다.",
+    pricing: "free",
+    pricingDetail: "계정 없이도 검색과 열람은 가능하지만 이미지를 저장해 보드로 정리하려면 무료 회원가입이 필요하고, 실제 비용은 광고 집행이나 서드파티 예약 도구를 쓸 때만 발생합니다.",
+    koreanFriendly: "full",
+    strength: "디자인 레퍼런스뿐 아니라 인테리어·패션·요리 등 전 분야 이미지를 한 계정에서 다루기 때문에 비전공자 클라이언트와도 무드보드를 쉽게 공유할 수 있습니다.",
+    caution: "2025년 이후 AI 생성 이미지가 급증해 일부 카테고리는 상당수가 AI 이미지라는 지적이 나왔고, 저작권이 불분명한 이미지도 많아 그대로 상업적으로 쓰기는 위험합니다.",
+    alternatives: ["Savee", "We Heart It", "Cosmos"],
+    sources: [
+      "https://84pins.com/pinterest-business-account-cost/",
+      "https://www.cnn.com/2025/11/22/business/pinterest-ai-social-media",
+      "https://www.404media.co/pinterest-is-drowning-in-a-sea-of-ai-slop-and-auto-moderation/"
+    ]
+  },
+  {
+    name: "Behance",
+    url: "https://www.behance.net",
+    group: "reference",
+    tagline: "Adobe가 운영하는 포트폴리오 중심 글로벌 디자이너 커뮤니티",
+    useCase: "브랜딩, 편집, 일러스트처럼 기획부터 완성까지 묶인 프로젝트 사례가 필요할 때 초반 리서치 단계에서 훑어봅니다. Adobe 계정으로 바로 저장·팔로우가 되어 무드보드 작업과 동시에 참고작을 쌓아두기 좋습니다.",
+    pricing: "freemium",
+    pricingDetail: "열람과 업로드는 무료이고, 비밀번호 보호나 광고 없는 포트폴리오 사이트 같은 기능은 월 9.99달러 수준의 Behance Pro나 Creative Cloud 유료 구독에 포함됩니다(2026-09 확인).",
+    koreanFriendly: "partial",
+    strength: "Adobe 생태계와 직접 연결돼 있어 포토샵·일러스트레이터 작업물을 바로 올리고 Adobe Fonts 같은 리소스까지 이어서 쓸 수 있습니다.",
+    caution: "Firefly 등 생성형 AI로 만든 작업물 비중이 늘고 있어, 손으로 그린 작업이나 실사 위주로 보고 싶을 때는 필터링에 신경 써야 합니다.",
+    alternatives: ["Dribbble", "Notefolio", "Cargo"],
+    sources: [
+      "https://help.behance.net/hc/en-us/articles/23707936129947-Behance-Pro-FAQ",
+      "https://help.behance.net/hc/en-us/articles/204737424-Guide-Behance-In-Other-Languages",
+      "https://callthedesignguy.com/post/is-adobe-portfolio-free"
+    ]
+  },
+  {
+    name: "Dribbble",
+    url: "https://dribbble.com",
+    group: "reference",
+    tagline: "짧은 샷 단위로 UI 디테일과 트렌드를 훑는 디자이너 커뮤니티",
+    useCase: "버튼, 아이콘, 일러스트 스타일처럼 화면의 작은 디테일에 대한 아이디어가 필요할 때 짧게 훑어봅니다. 프리랜서를 구하거나 내 작업을 알리고 싶을 때 프로필을 채용·홍보 창구로도 씁니다.",
+    pricing: "freemium",
+    pricingDetail: "둘러보기와 업로드는 무료이고, 클라이언트 문의를 받는 Pro는 Lite 월 $8, Standard 월 $16, Plus 월 $199이며 연간 결제 시 각각 월 $4·$8·$99 수준입니다(2026-09 확인).",
+    koreanFriendly: "none",
+    strength: "화면 전체보다 아이콘·일러스트·타이포 같은 조각난 디테일 샷이 압도적으로 많아 세부 스타일을 탐색하는 속도가 가장 빠릅니다.",
+    caution: "실제 서비스가 아니라 좋아요를 노린 과장된 컨셉 샷이 많아, 그대로 실무 UI 설계 근거로 쓰면 구현 불가능한 디자인이 되기 쉽습니다.",
+    alternatives: ["Behance", "Muzli", "Pttrns"],
+    sources: [
+      "https://www.fastlancer.org/en/fastlancer-blog/dribbble-review/",
+      "https://help.dribbble.com/en/articles/11062173-dribbble-project-fees",
+      "https://brunch.co.kr/@leoyh23/5",
+      "https://help.dribbble.com/en/articles/11062025-dribbble-pricing-and-payment-terms"
+    ]
+  },
+  {
+    name: "Awwwards",
+    url: "https://www.awwwards.com",
+    group: "reference",
+    tagline: "매일 우수 웹사이트를 선정해 시상하는 웹 디자인 어워드",
+    useCase: "랜딩페이지나 브랜드 사이트처럼 임팩트가 중요한 프로젝트를 앞두고 최신 인터랙션·모션 트렌드를 확인할 때 봅니다. Site of the Day 아카이브를 기술 스택이나 카테고리로 걸러 업계 눈높이를 가늠하는 용도로도 씁니다.",
+    pricing: "freemium",
+    pricingDetail: "둘러보기는 무료이고, 광고 제거와 강의 접근이 되는 멤버십은 월 6~7달러 수준이며, 내 사이트를 어워드에 출품하려면 건당 약 65달러(연간 패키지는 약 165달러)가 별도로 듭니다(확인 필요).",
+    koreanFriendly: "none",
+    strength: "심사위원 채점과 커뮤니티 투표를 병행해 단순 인기 순이 아니라 UX·창의성·완성도를 나눈 채점 근거까지 함께 볼 수 있습니다.",
+    caution: "수상작 대부분이 인터랙션이 화려한 에이전시·쇼케이스 사이트라, 일반 커머스나 서비스형 UI를 설계할 때는 그대로 참고하기 어렵습니다.",
+    alternatives: ["CSS Design Awards", "FWA", "GDWEB"],
+    sources: [
+      "https://www.awwwards.com/plans/user-plans",
+      "https://www.awwwards.com/submit/",
+      "https://brunch.co.kr/@leoyh23/5"
+    ]
+  },
+  {
+    name: "Mobbin",
+    url: "https://mobbin.com",
+    group: "reference",
+    tagline: "실서비스 화면과 플로우를 통째로 모아둔 UI 아카이브",
+    useCase: "결제, 온보딩, 검색처럼 구체적인 플로우를 설계하기 전에 실제 출시된 서비스가 그 흐름을 어떤 화면 순서로 풀었는지 확인할 때 엽니다. 특정 컴포넌트(태그, 필터, 빈 상태 등)만 모아 보는 필터도 있어 세부 패턴을 비교할 때도 씁니다.",
+    pricing: "freemium",
+    pricingDetail: "무료 플랜은 최근 추가된 앱과 제한된 검색만 볼 수 있고, 전체 라이브러리를 여는 Pro는 출처마다 월 $10~15와 좌석당 월 $40로 금액이 엇갈립니다(공식 요금 페이지 확인 필요).",
+    koreanFriendly: "partial",
+    strength: "화면 한 장이 아니라 온보딩부터 결제 완료까지 플로우 전체를 순서대로 캡처해둬서 설계 의사결정의 근거로 그대로 인용하기 좋습니다.",
+    caution: "글로벌 인기 앱 위주라 국내 서비스 화면은 상대적으로 적어, 한국 사용자 정서에 맞는 사례는 노트폴리오 같은 국내 채널에서 따로 찾아야 합니다.",
+    alternatives: ["Page Flows", "UI Sources", "Pttrns"],
+    sources: [
+      "https://www.joinsecret.com/mobbin",
+      "https://alternativeto.net/news/2025/8/ui-ux-research-tool-mobbin-adds-website-support-enhanced-filters-and-unified-research",
+      "https://brunch.co.kr/@theh18/8"
+    ]
+  },
+  {
+    name: "Savee",
+    url: "https://savee.com",
+    group: "reference",
+    tagline: "광고·알고리즘 없이 큐레이터가 직접 고르는 이미지 아카이브",
+    useCase: "핀터레스트 피드가 광고와 뒤섞여 산만하게 느껴질 때, 색이나 무드 단위로 정제된 이미지만 빠르게 모으고 싶을 때 씁니다. 브라우저 확장으로 웹 어디서든 바로 저장해 프로젝트별 보드에 쌓아두는 방식으로도 자주 씁니다.",
+    pricing: "freemium",
+    pricingDetail: "개인 저장·보드 기능은 무료로 쓸 수 있고, 팀 협업 보드나 멘션 같은 기능이 포함된 Team·Enterprise 요금제는 별도 유료입니다(정확한 금액은 확인 필요).",
+    koreanFriendly: "none",
+    strength: "알고리즘 추천이 없고 사람이 직접 심사해 올리는 구조라 핀터레스트보다 이미지 밀도와 취향의 일관성이 높습니다.",
+    caution: "개인화 추천이 없다 보니 초반에 원하는 무드를 못 찾으면 검색어를 여러 번 바꿔가며 직접 탐색해야 하는 수고가 있습니다.",
+    alternatives: ["Pinterest", "Cosmos", "Muzli"],
+    sources: [
+      "https://savee.com/upgrade/",
+      "https://savee.com/features/",
+      "https://mwm.ai/apps/savee-inspiration-for-you/1375238218"
+    ]
+  },
+  {
+    name: "Cosmos",
+    url: "https://www.cosmos.so",
+    group: "reference",
+    tagline: "AI 자동 태깅으로 색·무드를 검색하는 비주얼 아카이브",
+    useCase: "브랜드 무드보드를 짤 때 정확한 키워드가 떠오르지 않아도 색상이나 비슷한 이미지로 계속 파고들며 레퍼런스를 넓혀갈 때 씁니다. 모션·타이포 등 스타일이 뚜렷한 클러스터를 팔로우해 두고 매일 피드처럼 확인하는 용도로도 좋습니다.",
+    pricing: "freemium",
+    pricingDetail: "무료 플랜은 약 500개 저장까지 쓸 수 있고, 이 제한을 없애고 클러스터 꾸미기·협업 기능까지 쓰려면 월 8달러 수준의 Premium이 필요합니다(확인 필요).",
+    koreanFriendly: "none",
+    strength: "저장할 때 AI가 색상·무드·스타일을 자동으로 태깅해줘서 태그를 직접 달지 않아도 나중에 비슷한 톤끼리 다시 찾기 쉽습니다.",
+    caution: "비교적 최근에 뜬 서비스라 자료의 총량은 Pinterest나 Behance보다 적고, 무료 플랜은 저장 개수 제한 때문에 프로젝트가 쌓이면 금방 한도에 걸립니다.",
+    alternatives: ["Are.na", "Savee", "Pinterest"],
+    sources: [
+      "https://www.cosmos.so/",
+      "https://invernessdesignstudio.com/cosmos-app-guide-7-ways-to-optimise-creative-vision-in-2026",
+      "https://play.google.com/store/apps/details?id=so.cosmos.www"
+    ]
+  },
+  {
+    name: "Are.na",
+    url: "https://www.are.na",
+    group: "reference",
+    tagline: "링크·이미지·글을 함께 엮어 리서치하는 아카이빙 플랫폼",
+    useCase: "이미지 하나만으로는 설명이 안 되는, 기사·레퍼런스·자기 메모가 뒤섞인 초기 리서치를 정리할 때 씁니다. 여러 사람이 같은 채널에 자료를 계속 추가하며 팀 전체의 리서치 아카이브를 함께 키워가는 데도 적합합니다.",
+    pricing: "freemium",
+    pricingDetail: "무료 플랜은 전체 저장(커넥션) 개수에 제한이 있고, Premium은 이 제한을 없애며 리더 모드·테이블 뷰 같은 열람 기능을 더해줍니다(정확한 구독료는 확인 필요).",
+    koreanFriendly: "none",
+    strength: "이미지뿐 아니라 텍스트·PDF·링크를 같은 채널 안에서 자유롭게 연결할 수 있어, 순수 이미지 아카이브보다 리서치 노트에 더 가깝게 씁니다.",
+    caution: "이미지 중심 사이트보다 화면이 텍스트 위주라 빠르게 스캔하며 영감을 얻기보다는 차분히 읽고 정리하는 용도에 더 맞습니다.",
+    alternatives: ["Cosmos", "Milanote"],
+    sources: [
+      "https://www.are.na/editorial/on-pricing",
+      "https://help.are.na/docs/getting-started/premium-features",
+      "https://www.are.na/about"
+    ]
+  },
+  {
+    name: "Land-book",
+    url: "https://land-book.com",
+    group: "reference",
+    tagline: "랜딩페이지만 모아 산업·스타일별로 정리한 갤러리",
+    useCase: "새 서비스의 랜딩페이지 구조를 짜기 전에 같은 업종이나 비슷한 톤의 랜딩페이지를 섹션 단위(히어로, 요금제, FAQ 등)로 비교하고 싶을 때 씁니다. 클라이언트에게 톤앤매너를 설명할 때 근거 화면으로 몇 개 골라 보여주는 용도로도 자주 씁니다.",
+    pricing: "freemium",
+    pricingDetail: "무료 Basic 플랜은 볼 수 있는 카테고리와 보드 개수(3개)가 제한되고, 필터와 무제한 보드를 쓰려면 Pro가 월 9달러입니다(2026-09 확인).",
+    koreanFriendly: "none",
+    strength: "전체 사이트가 아니라 랜딩페이지 한 종류만 다루면서 섹션 단위 필터를 제공해, 페이지 하나를 처음부터 끝까지 설계할 때 참고 흐름을 짜기 좋습니다.",
+    caution: "큐레이션 대상이 대부분 스타트업·SaaS 랜딩페이지라, 커머스나 공공·금융처럼 성격이 다른 서비스에는 참고할 사례가 상대적으로 적습니다.",
+    alternatives: ["Lapa Ninja", "One Page Love", "SaaS Landing Page"],
+    sources: [
+      "https://land-book.com/pro",
+      "https://land-book.com/submission-guidelines",
+      "https://www.tinystartups.com/tools/land-book"
+    ]
+  },
+  {
+    name: "Muzli",
+    url: "https://muz.li",
+    group: "reference",
+    tagline: "새 탭을 열 때마다 디자인 소식을 보여주는 브라우저 확장",
+    useCase: "따로 시간 내서 레퍼런스 사이트를 도는 대신, 새 탭을 열 때마다 자동으로 뜨는 최신 디자인·트렌드 아티클을 훑어보며 감을 유지하고 싶을 때 씁니다. 특정 주제를 깊게 팔 때보다는 매일 짧게 최신 흐름을 놓치지 않을 때 유용합니다.",
+    pricing: "freemium",
+    pricingDetail: "확장 프로그램 설치와 기본 피드 열람은 무료이며, 광고 제거와 커스터마이징이 되는 Muzli PRO는 별도 유료 구독입니다(정확한 금액은 확인 필요).",
+    koreanFriendly: "none",
+    strength: "직접 찾아 들어가야 하는 다른 사이트들과 달리 새 탭이라는 습관적 진입점에 자동으로 노출되어 큐레이션 피로도가 가장 낮습니다.",
+    caution: "과거 InVision 산하였다가 2024년 말 InVision이 서비스를 종료한 뒤 별도 법인(Muzli X)으로 운영되고 있어, 깊이 있는 아카이브보다는 가벼운 트렌드 서핑용으로 보는 편이 안전합니다.",
+    alternatives: ["Awwwards", "Behance", "Land-book"],
+    sources: [
+      "https://muz.li/pro/",
+      "https://medium.muz.li/muzli-invision-3c62eb938734",
+      "https://www.designwhine.com/invision-shutdown-2024/"
+    ]
+  },
+  {
+    name: "Notefolio(노트폴리오)",
+    url: "https://notefolio.net",
+    group: "reference",
+    tagline: "국내 최대 규모의 한국 디자이너 포트폴리오 플랫폼",
+    useCase: "국내 실무 감각에 맞는 레퍼런스, 예를 들어 한국 서비스의 UI나 국내 클라이언트 취향의 브랜딩 사례가 필요할 때 가장 먼저 찾아봅니다. 취업·이직 시즌에는 같은 직무·연차대 국내 디자이너들의 포트폴리오 구성 방식을 비교하는 용도로도 많이 씁니다.",
+    pricing: "free",
+    pricingDetail: "열람과 작품 업로드, 댓글·채팅은 무료이며, 일정 활동을 쌓으면 신청할 수 있는 PRO 인증과 별개로 온라인 강의인 노트폴리오 클래스는 유료로 운영됩니다.",
+    koreanFriendly: "full",
+    strength: "해외 사이트들과 달리 국내 채용 시장과 클라이언트 취향에 맞춰진 포트폴리오가 모여 있어, 한국에서 통하는 톤앤매너를 파악하기에 가장 적합합니다.",
+    caution: "해외 대형 서비스에 비해 산업 다양성과 총 작품 수는 적어서, 글로벌 트렌드나 비주류 분야 레퍼런스는 다른 사이트와 함께 찾아야 합니다.",
+    alternatives: ["Behance", "Dribbble", "브런치스토리"],
+    sources: [
+      "https://notefolio.net/",
+      "https://help.notefolio.net/hc/ko",
+      "https://namu.wiki/w/%EB%85%B8%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4"
+    ]
+  },
+  {
+    name: "GDWEB(지디웹)",
+    url: "https://www.gdweb.co.kr",
+    group: "reference",
+    tagline: "2005년부터 이어진 국내 대표 웹·모바일 디자인 어워드",
+    useCase: "국내 기업·브랜드 사이트를 만들 때 국내 대기업이나 에이전시가 실제로 어떤 수준과 스타일로 사이트를 만들었는지 연도·산업별 수상작으로 확인할 때 씁니다. 해외 트렌드가 아니라 국내 발주처 눈높이에 맞는 완성도 기준을 잡고 싶을 때 기준점으로도 씁니다.",
+    pricing: "free",
+    pricingDetail: "수상작 아카이브 열람은 무료이며, 자사 사이트를 어워드에 출품하려면 별도 접수 절차와 참가 비용이 있습니다(정확한 금액은 확인 필요).",
+    koreanFriendly: "full",
+    strength: "모빌리티·제약바이오 같은 산업 카테고리별로 시상해, 업종에 맞는 국내 기업 사이트 사례만 골라 보기 편합니다.",
+    caution: "심사 기준이 대기업·에이전시가 만든 대형 웹사이트에 맞춰져 있어, 스타트업이나 개인 프로젝트 규모의 레퍼런스로는 눈높이가 다소 맞지 않을 수 있습니다.",
+    alternatives: ["Awwwards", "웹어워드코리아", "노트폴리오"],
+    sources: [
+      "https://www.gdweb.co.kr/main/",
+      "https://biz.heraldcorp.com/article/10664166",
+      "https://ppcle.com/blog/web-design-gdweb"
+    ]
+  },
+  {
+    name: "Unsplash",
+    url: "https://unsplash.com",
+    group: "assets",
+    tagline: "고화질 무료 스톡 사진을 모아둔 대표 사이트",
+    useCase: "상세페이지나 블로그 커버 이미지에 쓸 감성적인 사진이 급하게 필요할 때 가장 먼저 검색합니다. 유료 스톡 사이트를 결제하기 전에 비슷한 느낌의 무료 사진으로 초안을 채울 때도 유용합니다.",
+    pricing: "free",
+    pricingDetail: "사진 다운로드 자체는 로그인 없이도 원본 해상도까지 완전 무료이며, Unsplash+ 구독(출시 당시 기준 월 7달러 안팎, 확인 필요)은 저작권 분쟁 배상과 AI 학습 제외 옵션 같은 법적 보장이 필요할 때만 추가로 고려하면 됩니다.",
+    koreanFriendly: "partial",
+    strength: "CC0에 가까운 단순한 라이선스 덕분에 출처 표기 없이도 상업적으로 바로 쓸 수 있어 라이선스 검토 부담이 가장 적습니다.",
+    caution: "무료 라이선스에는 저작권 분쟁 시 배상(indemnification) 조항이 없어 인물 사진 등 초상권 문제가 걸리면 전적으로 사용자가 책임을 져야 합니다.",
+    alternatives: ["Pexels", "Pixabay", "Freepik"],
+    sources: [
+      "https://unsplash.com/plus/license",
+      "https://unsplash.com/blog/introducing-unsplash",
+      "https://toolradar.com/tools/unsplash/pricing"
+    ]
+  },
+  {
+    name: "Pexels",
+    url: "https://www.pexels.com",
+    group: "assets",
+    tagline: "저작권 걱정 없이 쓰는 무료 사진·영상 스톡 사이트",
+    useCase: "인스타그램 카드뉴스나 유튜브 썸네일에 넣을 인물·라이프스타일 사진이 필요할 때 Unsplash와 함께 열어두고 비교합니다. 영상 소스가 필요한 프로젝트에서는 무료 스톡 푸티지를 구하는 용도로도 자주 씁니다.",
+    pricing: "free",
+    pricingDetail: "사진과 영상 모두 회원가입 없이 원본 해상도로 무제한 다운로드할 수 있고, 별도 유료 등급 없이 Canva 계정으로 로그인하면 Canva 편집기 안에서 바로 불러와 쓸 수 있습니다.",
+    koreanFriendly: "full",
+    strength: "정지 이미지뿐 아니라 무료 영상 푸티지 라이브러리가 커서 모션 콘텐츠 소재까지 한 곳에서 해결됩니다.",
+    caution: "라이선스가 사진 자체의 자유로운 사용은 허용하지만 사진에 등장하는 인물이나 브랜드 로고 같은 제3자의 권리까지 보장해주지는 않아, 인물이 특정되는 사진을 광고에 쓸 때는 모델 초상권을 별도로 확인해야 합니다.",
+    alternatives: ["Unsplash", "Pixabay", "Freepik"],
+    sources: [
+      "https://help.pexels.com/hc/en-us/articles/360042295214-Can-I-use-the-photos-and-videos-for-a-commercial-project",
+      "https://help.pexels.com/hc/en-us/articles/360042295174-What-is-the-license-of-the-photos-and-videos-on-Pexels",
+      "https://www.pexels.com/terms-of-service/"
+    ]
+  },
+  {
+    name: "Freepik",
+    url: "https://www.freepik.com",
+    group: "assets",
+    tagline: "벡터·사진·PSD를 아우르는 올인원 디자인 소재 사이트",
+    useCase: "카드뉴스나 상세페이지에 쓸 벡터 일러스트, 아이콘, PSD 목업을 한꺼번에 찾을 때 엽니다. 마감이 급한데 직접 그릴 시간이 없는 배경 패턴이나 목업 소스를 구할 때도 요긴합니다.",
+    pricing: "freemium",
+    pricingDetail: "무료 회원은 하루 10개까지 다운로드할 수 있지만 매번 'Freepik 제공' 표기를 넣어야 하고, 표기 없이 쓰려면 월 약 14.5달러(연간 결제 기준)부터 시작하는 프리미엄 구독이 필요합니다.",
+    koreanFriendly: "full",
+    strength: "포토샵 PSD 목업이나 파워포인트 템플릿처럼 완성형 편집 파일이 많아 처음부터 직접 만들지 않고 소스를 변형해 빠르게 결과물을 낼 수 있습니다.",
+    caution: "2026년 4월 사명이 'Magnific'으로 바뀌면서 스톡 소재와 AI 생성 도구가 한 플랫폼으로 통합됐고, AI로 생성한 이미지는 엔터프라이즈 요금제가 아니면 저작권 분쟁 배상 보장 대상에서 빠집니다.",
+    alternatives: ["Shutterstock", "Adobe Stock", "Vecteezy"],
+    sources: [
+      "https://www.freepik.com/ai/docs/pricing",
+      "https://www.freepik.com/ai/docs/legal-aspects-and-usage-rights",
+      "https://support.freepik.com/s/article/What-is-the-download-limit-with-Essential-Plan",
+      "https://thenextweb.com/news/freepik-rebrands-as-magnific"
+    ]
+  },
+  {
+    name: "Google Fonts",
+    url: "https://fonts.google.com",
+    group: "assets",
+    tagline: "구글이 무료로 공개한 오픈소스 웹폰트 모음",
+    useCase: "웹사이트나 상세페이지 시안에 쓸 폰트를 고를 때 라이선스 걱정 없이 바로 임베드 코드를 복사해 씁니다. Noto Sans KR처럼 한글을 지원하는 폰트가 필요할 때도 가장 먼저 확인합니다.",
+    pricing: "free",
+    pricingDetail: "모든 폰트가 SIL Open Font License나 Apache 2.0으로 배포되어 다운로드, 웹 임베드, 앱·인쇄물 내장까지 완전히 무료이며 별도 요금이나 사용료가 없습니다.",
+    koreanFriendly: "full",
+    strength: "웹폰트 로딩 속도 최적화(서브셋 분할, CDN 캐싱)가 기본 제공돼 디자이너가 성능까지 따로 신경 쓰지 않아도 됩니다.",
+    caution: "SIL Open Font License가 적용된 폰트는 수정해서 재배포할 때 원래 폰트 이름을 그대로 쓸 수 없다는 'Reserved Font Name' 제약이 있어, 폰트를 커스터마이징해 자체 배포하려는 경우에는 라이선스 전문을 다시 확인해야 합니다.",
+    alternatives: ["눈누(noonnu)", "Adobe Fonts", "Font Squirrel"],
+    sources: [
+      "https://developers.google.com/fonts/faq",
+      "https://en.wikipedia.org/wiki/Google_Fonts",
+      "https://font-converters.com/licensing/google-fonts-license"
+    ]
+  },
+  {
+    name: "눈누 (noonnu)",
+    url: "https://noonnu.cc",
+    group: "assets",
+    tagline: "상업용 무료 한글 폰트를 모아 보여주는 큐레이션 사이트",
+    useCase: "브랜딩이나 상세페이지에 쓸 한글 폰트를 고를 때 라이선스별로 필터링해서 찾습니다. 클라이언트 작업물에 넣기 전에 특정 폰트가 임베딩이나 BI·CI 사용까지 허용되는지 확인할 때도 들어갑니다.",
+    pricing: "free",
+    pricingDetail: "사이트 이용과 폰트 다운로드 자체는 전부 무료이며 로그인도 필요 없지만, 실제 폰트 파일은 눈누가 아니라 각 제작사 서버나 깃허브로 연결돼 내려받는 구조입니다.",
+    koreanFriendly: "full",
+    strength: "폰트별로 허용 범위(웹사이트, 인쇄, 포장, BI/CI, 영상, 임베딩, 판매용 콘텐츠 등)를 표로 정리해 보여줘서 한글 폰트 특유의 복잡한 라이선스를 한눈에 비교할 수 있습니다.",
+    caution: "눈누는 라이선스 요약만 제공할 뿐 원본 계약의 주체는 각 제작사이므로, 요약표만 보고 쓰지 말고 반드시 다운로드 페이지에서 최신 라이선스 전문을 다시 확인해야 폰트마다 다른 상업적 이용 조건 때문에 생기는 분쟁을 피할 수 있습니다.",
+    alternatives: ["Google Fonts", "공유마당", "산돌구름"],
+    sources: [
+      "https://noonnu.cc/en/questions",
+      "https://namu.wiki/w/%EB%88%88%EB%88%84",
+      "https://wacomkoreablog.com/1590"
+    ]
+  },
+  {
+    name: "Lucide",
+    url: "https://lucide.dev",
+    group: "assets",
+    tagline: "가볍고 일관된 스타일의 오픈소스 SVG 아이콘 세트",
+    useCase: "웹서비스나 어드민 UI에 쓸 아이콘 세트를 고를 때 React·Vue 컴포넌트로 바로 설치해서 씁니다. Feather Icons 스타일을 좋아하지만 아이콘 개수가 부족했던 프로젝트에서 대체재로 자주 선택합니다.",
+    pricing: "free",
+    pricingDetail: "ISC 라이선스로 배포되는 완전 오픈소스라 개인·상업 프로젝트 어디에 써도 비용이 들지 않습니다.",
+    koreanFriendly: "partial",
+    strength: "Feather Icons를 포크해 커뮤니티가 활발히 신규 아이콘을 추가하고 있어 원조보다 아이콘 종류가 훨씬 빠르게 늘어나고 있습니다.",
+    caution: "ISC 라이선스 자체는 상업적 이용에 거의 제약이 없지만 저작권 고지 문구를 남겨야 한다는 조건이 있어, 아이콘 파일을 통째로 잘라내 사내 디자인 시스템에 재배포할 때는 라이선스 고지를 빠뜨리지 않도록 주의해야 합니다.",
+    alternatives: ["Feather Icons", "Heroicons", "Font Awesome"],
+    sources: [
+      "https://lucide.dev/license",
+      "https://github.com/lucide-icons/lucide",
+      "https://www.npmjs.com/package/lucide-react"
+    ]
+  },
+  {
+    name: "unDraw",
+    url: "https://undraw.co",
+    group: "assets",
+    tagline: "색상을 자유롭게 바꿔 쓰는 무료 SVG 일러스트 라이브러리",
+    useCase: "랜딩페이지나 빈 상태(empty state) 화면에 넣을 일러스트가 필요한데 브랜드 컬러에 맞춰야 할 때 씁니다. 사이트에서 바로 메인 컬러만 바꿔서 SVG로 내려받으면 별도 편집 없이 바로 적용할 수 있습니다.",
+    pricing: "free",
+    pricingDetail: "가입이나 출처 표기, 다운로드 개수 제한 없이 전부 무료로 쓸 수 있습니다.",
+    koreanFriendly: "partial",
+    strength: "다운로드 전에 사이트에서 색상 하나만 바꾸면 전체 일러스트 세트의 톤이 통일되게 바뀌어 브랜드 컬러 적용이 매우 빠릅니다.",
+    caution: "무료이긴 하지만 라이선스상 이 일러스트로 AI·머신러닝 모델을 학습시키는 것과 원본을 그대로 모아 재판매하거나 경쟁 라이브러리를 만드는 것은 금지되어 있어, 완전한 CC0는 아니라는 점을 알아둬야 합니다.",
+    alternatives: ["Storyset", "Humaaans", "ManyPixels"],
+    sources: ["https://undraw.co/license", "https://undraw.co/", "https://pixels.market/blog/undraw-license"]
+  },
+  {
+    name: "remove.bg",
+    url: "https://www.remove.bg",
+    group: "imageTools",
+    tagline: "업로드 한 번으로 배경을 지워주는 누끼 도구",
+    useCase: "이커머스 상세페이지나 인물 프로필 사진에서 배경을 빠르게 지우고 투명 PNG로 뽑아야 할 때 씁니다. 포토샵 펜 툴로 일일이 따내기엔 시간이 없는 대량 상품 사진 작업에서 특히 자주 켭니다.",
+    pricing: "freemium",
+    pricingDetail: "무료로는 매달 50크레딧 한도 내에서 저해상도(0.25메가픽셀) 미리보기만 저장할 수 있고, 고해상도 다운로드는 장당 약 0.13~0.23달러의 크레딧을 사거나 월 9달러부터 시작하는 구독이 필요합니다(확인 필요).",
+    koreanFriendly: "full",
+    strength: "머리카락이나 반투명한 유리잔처럼 경계가 까다로운 피사체도 별도 브러시 보정 없이 자동으로 깔끔하게 분리합니다.",
+    caution: "무료 다운로드 해상도가 인쇄용으로는 부족하고, 상품 사진을 대량으로 처리하는 팀은 크레딧 소모가 빨라 구독료 부담이 생각보다 커질 수 있습니다.",
+    alternatives: ["Photoroom", "Adobe Express", "Clipping Magic"],
+    sources: [
+      "https://comparedge.com/tools/remove-bg/pricing",
+      "https://costbench.com/software/ai-design-tools/remove-bg/",
+      "https://top50aitools.com/pricing/remove-bg"
+    ]
+  },
+  {
+    name: "Upscayl",
+    url: "https://upscayl.org",
+    group: "imageTools",
+    tagline: "내 컴퓨터에서 무료로 돌리는 오픈소스 AI 업스케일러",
+    useCase: "저해상도 제품 사진이나 오래된 로고 파일을 인쇄용 고해상도로 키워야 하는데 매번 크레딧을 사기 아까울 때 씁니다. 인터넷 연결 없이 로컬에서 처리하고 싶은 민감한 이미지 작업에도 적합합니다.",
+    pricing: "free",
+    pricingDetail: "데스크톱 앱은 완전 오픈소스로 다운로드·업스케일 횟수 제한이 전혀 없이 무료이며, 최근 추가된 'Upscayl Cloud'는 GPU가 약한 PC를 위한 선택형 유료 서비스(월 12~25달러 선, 베타, 확인 필요)로 필수는 아닙니다.",
+    koreanFriendly: "partial",
+    strength: "클라우드로 이미지를 올리지 않고 로컬 GPU에서 전부 처리하기 때문에 외부에 유출되면 안 되는 미공개 프로젝트 이미지도 안심하고 키울 수 있습니다.",
+    caution: "Vulkan을 지원하는 그래픽카드가 없으면 처리 속도가 매우 느리거나 아예 실행이 안 될 수 있어 내장 그래픽만 있는 노트북에서는 실용성이 떨어집니다.",
+    alternatives: ["Magnific AI", "Let's Enhance", "Topaz Gigapixel AI"],
+    sources: [
+      "https://github.com/upscayl/upscayl",
+      "https://upscayl.org/download",
+      "https://www.tooljunction.io/ai-tools/upscayl"
+    ]
+  },
+  {
+    name: "Magnific AI",
+    url: "https://magnific.ai",
+    group: "imageTools",
+    tagline: "디테일을 새로 그려 넣는 창의형 AI 업스케일러",
+    useCase: "AI로 생성한 이미지나 저해상도 원본을 인쇄물 수준으로 키우면서 질감과 디테일까지 새로 살리고 싶을 때 씁니다. 단순 확대가 아니라 '더 그럴듯하게' 다시 그려주는 결과물이 필요한 포스터·아트워크 작업에 주로 씁니다.",
+    pricing: "paid",
+    pricingDetail: "2026년 4월 Freepik이 'Magnific'으로 리브랜딩되면서 기존 단독 요금제($39~299)는 사라졌고, 지금은 월 약 13달러(8,000크레딧)부터 시작하는 통합 크레딧 요금제 안에서 업스케일 기능을 씁니다(확인 필요).",
+    koreanFriendly: "full",
+    strength: "해상도만 키우는 다른 업스케일러와 달리 'Creativity' 슬라이더로 없던 질감과 디테일을 AI가 새로 그려 넣어 원본보다 더 정교해 보이는 결과를 만들어냅니다.",
+    caution: "디테일을 새로 만들어내는 방식이라 원본에 없던 형태가 생기는 경우가 있어 인물 사진이나 제품 사진처럼 정확도가 중요한 작업에는 과도한 보정이 될 수 있습니다.",
+    alternatives: ["Let's Enhance", "Topaz Gigapixel AI", "Krea AI"],
+    sources: [
+      "https://www.myarchitectai.com/blog/magnific-ai-pricing",
+      "https://www.renderahouse.com/blog/magnific-ai-pricing",
+      "https://thenextweb.com/news/freepik-rebrands-as-magnific"
+    ]
+  },
+  {
+    name: "Squoosh",
+    url: "https://squoosh.app",
+    group: "imageTools",
+    tagline: "여러 압축 포맷을 눈으로 비교해보는 이미지 최적화 도구",
+    useCase: "웹사이트 로딩 속도를 줄이려고 이미지를 WebP나 AVIF로 바꿀 때 화질과 파일 크기를 눈으로 비교하면서 최적 압축률을 찾습니다. 별도 프로그램 설치 없이 브라우저 탭 하나로 바로 결과를 확인할 수 있어 급할 때 자주 엽니다.",
+    pricing: "free",
+    pricingDetail: "구글 크롬랩스가 만든 오픈소스 웹앱으로 회원가입이나 워터마크 없이 완전히 무료이며, PWA로 설치하면 오프라인에서도 계속 쓸 수 있습니다.",
+    koreanFriendly: "partial",
+    strength: "화면을 반으로 나눠 원본과 압축본을 동시에 보여주기 때문에 감으로 압축률을 정하지 않고 실제 화질 차이를 확인하면서 최적값을 찾을 수 있습니다.",
+    caution: "핵심 코드의 마지막 업데이트가 2024년 8월로 멈춰 있어 최신 이미지 포맷이나 최신 브라우저 대응이 더뎌질 위험이 있습니다.",
+    alternatives: ["TinyPNG", "ImageOptim", "Compressor.io"],
+    sources: [
+      "https://forum.cloudron.io/topic/4075/squoosh-image-optimisation-by-google-chrome-labs",
+      "https://lininn.cn/page/squoosh-google-image-compressor-2026",
+      "https://sourceforge.net/software/product/Squoosh/"
+    ]
+  },
+  {
+    name: "TinyPNG",
+    url: "https://tinypng.com",
+    group: "imageTools",
+    tagline: "드래그만 하면 용량을 줄여주는 PNG·JPG 압축 도구",
+    useCase: "블로그나 상세페이지에 올리기 전에 사진 용량이 너무 커서 로딩이 느릴 때 화질 차이가 거의 없이 용량만 확 줄이고 싶을 때 씁니다. 워드프레스에 이미지를 대량으로 올리기 전 일괄 압축 단계로도 자주 씁니다.",
+    pricing: "freemium",
+    pricingDetail: "웹사이트에서는 한 번에 최대 20장(장당 5MB)까지 압축 횟수 제한 없이 무료로 쓸 수 있고, API로 자동화하면 매달 500회까지만 무료이며 초과분부터 장당 약 0.009달러가 과금됩니다.",
+    koreanFriendly: "partial",
+    strength: "PNG의 색상 정보를 줄이는 독자적인 압축 방식 덕분에 육안으로는 화질 차이가 거의 안 보이면서도 파일 크기를 크게 줄여줍니다.",
+    caution: "웹사이트 버전은 한 번에 20장까지만 올릴 수 있어 수백 장 단위의 이미지를 정기적으로 처리해야 한다면 API 요금이나 반복 업로드의 번거로움을 감안해야 합니다.",
+    alternatives: ["Squoosh", "ImageOptim", "Compressor.io"],
+    sources: [
+      "https://tinypng.com/",
+      "https://tinify.com/pricing/api",
+      "https://www.onzlabs.com/blog/tinypng-alternative-free-image-compressor"
+    ]
+  },
+  {
+    name: "Photopea",
+    url: "https://www.photopea.com",
+    group: "imageTools",
+    tagline: "설치 없이 브라우저에서 쓰는 포토샵 대체 편집기",
+    useCase: "회사 PC에 포토샵이 없거나 라이선스가 만료됐는데 PSD 파일을 급하게 열어서 수정해야 할 때 씁니다. 레이어, 마스크, 조정 레이어 같은 포토샵 기능을 거의 그대로 브라우저에서 써야 하는 상황에 적합합니다.",
+    pricing: "freemium",
+    pricingDetail: "레이어 편집, 필터, PSD 저장까지 핵심 기능은 광고를 보는 조건으로 완전히 무료이며, 프리미엄(월 5달러 안팎, 확인 필요)을 결제하면 광고가 사라지고 AI 배경 제거 같은 기능이 추가됩니다.",
+    koreanFriendly: "full",
+    strength: "PSD·AI·XD·Sketch 파일을 변환 없이 그대로 열고 저장할 수 있어 협업 중에 포토샵이 없는 팀원도 원본 파일을 그대로 주고받을 수 있습니다.",
+    caution: "무료로 쓰면 화면 옆 배너 광고가 계속 떠 있어 작업 공간이 좁아지고, 용량이 큰 PSD 파일을 다룰 때는 데스크톱 포토샵보다 반응 속도가 느립니다.",
+    alternatives: ["GIMP", "Adobe Photoshop", "Pixlr"],
+    sources: [
+      "https://costbench.com/software/design/photopea/",
+      "https://checkthat.ai/brands/photopea/pricing",
+      "https://photoquill.com/guides/photopea-no-ads"
+    ]
+  },
+  {
+    name: "Let's Enhance",
+    url: "https://letsenhance.io",
+    group: "imageTools",
+    tagline: "사진 해상도와 화질을 함께 끌어올리는 AI 보정 도구",
+    useCase: "고객이 보내준 저화질 제품 사진을 인쇄물이나 대형 배너에 써야 하는데 원본을 다시 찍을 수 없을 때 화질을 복원하듯 키웁니다. 업스케일과 동시에 노이즈 제거, 배경 제거까지 한 번에 처리하고 싶을 때도 이 사이트부터 켭니다.",
+    pricing: "freemium",
+    pricingDetail: "가입 시 10크레딧을 무료로 주지만 매달 갱신되는 게 아니라 체험용 일회성 크레딧이고, 이후에는 월 9달러(연간 결제, 100크레딧)부터 시작하는 구독이 필요합니다.",
+    koreanFriendly: "none",
+    strength: "업스케일용 AI 모델을 6종류로 나눠 인물, 제품, 일러스트 등 사진 종류에 맞는 모델을 직접 골라 쓸 수 있어 범용 업스케일러보다 결과물이 용도에 더 잘 맞습니다.",
+    caution: "무료로 받는 크레딧이 10개뿐이라 실제 업무에 지속적으로 쓰려면 결국 유료 결제가 필요하고, 최대 350메가픽셀 같은 고해상도 처리는 상위 플랜에서만 열립니다.",
+    alternatives: ["Magnific AI", "Upscayl", "Topaz Gigapixel AI"],
+    sources: [
+      "https://letsenhance.io/pricing",
+      "https://letsenhance.io/",
+      "https://www.tooljunction.io/ai-tools/letsenhance-ai"
+    ]
+  },
+  {
+    name: "Coolors",
+    url: "https://coolors.co",
+    group: "devUtil",
+    tagline: "스페이스바로 색상 조합을 빠르게 뽑아주는 팔레트 생성기",
+    useCase: "브랜드 컬러나 프레젠테이션 배색을 정해야 하는데 감이 안 잡힐 때 스페이스바만 누르면서 마음에 드는 조합이 나올 때까지 랜덤으로 돌려봅니다. 마음에 든 팔레트를 CSS 변수나 이미지로 바로 내보내 개발자에게 전달할 때도 씁니다.",
+    pricing: "freemium",
+    pricingDetail: "팔레트 생성과 탐색은 무료지만 저장 가능한 팔레트가 10개로 제한되어 있고, Pro(월 3달러 안팎, 연간 결제 기준, 확인 필요)로 올리면 무제한 저장과 AI 팔레트 생성, 대비 체크 기능이 열립니다.",
+    koreanFriendly: "partial",
+    strength: "생성된 팔레트마다 접근성 대비(contrast) 점수를 바로 보여줘서 디자인 시안 단계에서부터 WCAG 기준을 고려한 배색을 고를 수 있습니다.",
+    caution: "무료 계정은 저장 팔레트 10개가 꽉 차면 기존 것을 지워야 새로 저장할 수 있어, 여러 프로젝트를 동시에 진행하는 프리랜서에게는 금방 답답해지는 제한입니다.",
+    alternatives: ["Adobe Color", "Realtime Colors", "Paletton"],
+    sources: ["https://coolors.co/pricing", "https://coolors.co/", "https://tooliverse.ai/tools/coolors"]
+  },
+  {
+    name: "Excalidraw",
+    url: "https://excalidraw.com",
+    group: "devUtil",
+    tagline: "손그림 느낌으로 빠르게 그리는 화이트보드 다이어그램 도구",
+    useCase: "회의 중에 아이디어를 즉석에서 그림으로 그려서 설명해야 할 때 로그인 없이 바로 열어 씁니다. 플로우차트나 와이어프레임 초안을 정색하고 만들 필요 없이 손그림 느낌 그대로 슬랙이나 노션에 캡처해서 공유할 때도 유용합니다.",
+    pricing: "free",
+    pricingDetail: "핵심 에디터는 오픈소스로 완전히 무료이며 실시간 공동작업까지 가능하고, 프로젝트를 클라우드에 영구 저장하고 팀 폴더로 관리하려면 월 6달러(연간)부터인 Excalidraw+가 필요합니다.",
+    koreanFriendly: "full",
+    strength: "손으로 그린 듯한 스케치 스타일이 기본값이라 완성도 낮은 러프 아이디어를 공유해도 '미완성 시안'처럼 보이지 않고 자연스럽게 받아들여집니다.",
+    caution: "무료 버전은 브라우저 로컬 저장이 기본이라 캐시를 지우거나 다른 기기에서 열면 이전 작업물이 안 보일 수 있어 중요한 다이어그램은 따로 내보내기를 해둬야 합니다.",
+    alternatives: ["tldraw", "Whimsical", "Miro"],
+    sources: [
+      "https://plus.excalidraw.com/pricing",
+      "https://en.wikipedia.org/wiki/Excalidraw",
+      "https://costbench.com/software/diagramming/excalidraw/"
+    ]
+  },
+  {
+    name: "Carbon",
+    url: "https://carbon.now.sh",
+    group: "devUtil",
+    tagline: "코드를 예쁜 이미지로 캡처해주는 스크린샷 생성기",
+    useCase: "블로그 글이나 X(트위터)에 코드 스니펫을 올릴 때 터미널 스크린샷 대신 배경과 그림자가 예쁘게 들어간 이미지를 만들려고 씁니다. 발표 자료 슬라이드에 코드를 넣을 때도 폰트와 테마만 골라 바로 붙여넣기 좋습니다.",
+    pricing: "free",
+    pricingDetail: "회원가입이나 워터마크 없이 완전히 무료로 쓸 수 있으며, 유료 요금제 자체가 없습니다.",
+    koreanFriendly: "partial",
+    strength: "다양한 에디터 테마와 배경 그러데이션이 기본 내장돼 있어 별도 디자인 툴 없이도 세련된 코드 이미지를 몇 초 만에 만들 수 있습니다.",
+    caution: "핵심 저장소가 2024년 12월 이후로 커밋이 없는 사실상 방치 상태라 접속 지연이나 갑작스러운 서비스 중단 가능성을 염두에 둬야 합니다.",
+    alternatives: ["Ray.so", "Snappify", "CodeSnap"],
+    sources: [
+      "https://dev.to/railly/i-built-an-open-source-alternative-to-carbonnowsh-cg9",
+      "https://snappify.com/blog/carbon-now-sh-alternatives"
+    ]
+  },
+  {
+    name: "Realtime Colors",
+    url: "https://www.realtimecolors.com",
+    group: "devUtil",
+    tagline: "실제 웹사이트 목업에 색을 입혀보는 팔레트 미리보기 도구",
+    useCase: "색상 코드만 보고는 실제 화면에서 어떤 느낌일지 감이 안 잡힐 때 텍스트, 배경, 버튼 색을 각각 바꿔가며 가짜 랜딩페이지 위에서 바로 확인합니다. 클라이언트에게 배색 시안을 설명할 때 색상표 대신 이 목업 화면을 보여주면 설득이 훨씬 빠릅니다.",
+    pricing: "free",
+    pricingDetail: "로그인이나 워터마크 없이 모든 기능이 완전히 무료이며, CSS·SCSS·Tailwind 코드와 이미지 파일까지 제한 없이 내보낼 수 있습니다.",
+    koreanFriendly: "partial",
+    strength: "텍스트, 배경, 강조색을 따로따로 조절하면서 접근성 대비 체크까지 실시간으로 보여줘서 팔레트만 뽑아주는 도구보다 실제 화면 적용 결과를 훨씬 구체적으로 검증할 수 있습니다.",
+    caution: "미리보기 목업이 일반적인 랜딩페이지 레이아웃 하나로 고정돼 있어 대시보드나 모바일 앱처럼 다른 형태의 화면에는 색상이 실제로 어떻게 보일지 별도로 확인해야 합니다.",
+    alternatives: ["Coolors", "Happy Hues", "Adobe Color"],
+    sources: [
+      "https://www.realtimecolors.com/",
+      "https://nologin.tools/tool/realtimecolors-com/",
+      "https://github.com/juxtopposed/realtimecolors"
+    ]
+  },
+  {
+    name: "Whimsical",
+    url: "https://whimsical.com",
+    group: "devUtil",
+    tagline: "플로우차트와 와이어프레임을 함께 그리는 협업 보드",
+    useCase: "서비스 기획 단계에서 사용자 플로우와 화면 와이어프레임을 같은 보드 안에서 오가며 정리해야 할 때 씁니다. 기획자와 디자이너가 각자 다른 툴을 쓰다가 결과물을 다시 맞추는 대신 처음부터 한 보드에서 같이 작업할 때 특히 편합니다.",
+    pricing: "freemium",
+    pricingDetail: "무료 요금제는 팀 보드 3개, AI 기능은 평생 100회로 제한되지만 기본 플로우차트·와이어프레임·마인드맵 기능 자체에는 기간 제한이 없고, Pro는 월 10달러 선부터입니다(확인 필요).",
+    koreanFriendly: "partial",
+    strength: "플로우차트, 와이어프레임, 마인드맵, 스티키노트를 서로 다른 툴로 옮기지 않고 한 보드 안에서 문서처럼 이어 붙여 쓸 수 있습니다.",
+    caution: "무료 요금제는 만들 수 있는 보드 수 자체가 3개로 묶여 있어 여러 프로젝트를 동시에 굴리는 팀은 생각보다 빨리 유료 전환을 고민하게 됩니다.",
+    alternatives: ["Miro", "FigJam", "Excalidraw"],
+    sources: [
+      "https://whimsicalaireview.org/pricing",
+      "https://costbench.com/software/diagramming/whimsical/",
+      "https://comparedge.com/tools/whimsical/pricing"
+    ]
+  }
+];

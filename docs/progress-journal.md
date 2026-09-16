@@ -85,3 +85,45 @@
 ### 남은 과제
 - 리뷰/별점/비교함은 아직 브라우저 로컬 저장입니다. Phase 1의 서버 저장 전환 시 `lib/reviews.ts`, `lib/compare.ts`의 저장 함수만 교체하면 됩니다.
 - 조사 기준일(2026-09) 이후 변경은 `scripts/merge-research.js`로 재생성하는 운영 루틴이 필요합니다.
+
+---
+
+## 2026-09-16 업데이트: 유용한 사이트 디렉터리 + AI 미디어 도구 6종 추가
+
+### 1) 유용한 사이트 디렉터리 (`/resources`)
+도구 리뷰만큼 무겁게 평가하지는 않지만 실무에서 자주 여는 사이트 31개를 조사해 네 그룹으로 정리했습니다.
+
+- **레퍼런스 / 인스피레이션 (12)**: Pinterest, Behance, Dribbble, Awwwards, Mobbin, Savee, Cosmos, Are.na, Land-book, Muzli, 노트폴리오, GDWEB
+- **무료 에셋 (7)**: Unsplash, Pexels, Freepik, Google Fonts, 눈누, Lucide, unDraw
+- **이미지 보정 · 변환 (7)**: remove.bg, Upscayl, Magnific AI, Squoosh, TinyPNG, Photopea, Let's Enhance
+- **실무 유틸리티 (5)**: Coolors, Excalidraw, Carbon, Realtime Colors, Whimsical
+
+각 사이트마다 한 줄 정체성, 실무에서 언제 여는지, 다른 곳 대비 강점, 주의할 점, 가격 조건, 한국어 사용 편의, 비슷한 사이트를 적었습니다. 특히 **라이선스 주의점을 구체적으로** 남겼습니다. 예를 들어 눈누는 폰트마다 제작사 라이선스가 다르다는 점, unDraw는 AI 학습 사용이 금지된다는 점, Unsplash는 저작권 분쟁 배상 조항이 없다는 점, Google Fonts는 OFL의 Reserved Font Name 제약이 있다는 점을 적었습니다.
+
+화면에는 키워드 검색, 그룹 필터, "무료/부분 무료만", "한국어로 쓰기 편한 곳만" 필터를 붙였고 `/api/resources` 엔드포인트도 함께 열었습니다.
+
+### 2) AI 미디어 도구 6종을 도구 카탈로그에 추가 (25개 → 31개)
+Higgsfield, Runway, HeyGen(영상·아바타), ElevenLabs, Suno(음성·음악), Topaz Labs(화질 개선)를 기존 도구와 같은 평가 체계(점수, 별점, 비교, 추천, 기능 매트릭스)로 추가했습니다.
+
+조사 과정에서 확인한 주요 사실:
+- Higgsfield: 2026-08-17 시리즈 B 4억 달러(기업가치 54억 달러), 2026-02 Forbes 보도로 인종차별·비동의 딥페이크 콘텐츠 논란과 X 계정 정지
+- Runway: Aleph 2.0 전환과 구모델 단종, 유튜브 학습데이터 저작권 집단소송 확대
+- HeyGen: 2026-05-15 무제한 요금제 폐지 후 전면 크레딧제 전환
+- ElevenLabs: Eleven v3 정식 출시와 시리즈 D 5억 달러(기업가치 110억 달러), 2026-05 BIPA 집단소송 피소
+- Suno: 2025-11 Warner Music 소송 합의·라이선싱, 2026-06 시리즈 D 4억 달러. Universal·Sony 소송은 진행형이라 상업적 사용 시 주의가 필요합니다
+- Topaz Labs: 2025-10-03 영구 라이선스 판매 종료 후 구독제 전환
+
+### 3) 검증 방식
+하위 모델 서브에이전트 4개가 웹 검색으로 조사했고, 메인 세션에서 파급력이 큰 주장(Topaz 영구 라이선스 종료, Suno-Warner 합의, Higgsfield 논란, 각 사 투자 유치, Freepik→Magnific 리브랜딩, Dribbble 요금)을 다시 검색해 교차 확인했습니다. 출처가 엇갈리는 항목(Topaz 구독가, Mobbin Pro 요금)은 임의로 고르지 않고 "출처마다 다르다"고 명시했습니다.
+
+### 4) 파이프라인·버그 수정
+- `scripts/merge-research.js`가 `resources-*.json`과 도구 객체에 포함된 기능 매트릭스까지 처리하도록 확장했습니다.
+- 도구 배치 없이 스크립트를 돌리면 `data/tools.ts`를 빈 배열로 덮어쓰던 문제를 고쳤습니다(작업 중 실제로 발생해 git에서 복구했습니다).
+- GNB 링크가 6개가 되면서 모바일에서 단어가 쪼개지던 문제를 가로 스크롤로 바꿔 고쳤습니다.
+
+### 테스트
+- `tests/resources.test.ts` 추가, `tests/data.test.ts`·`tests/api.test.ts` 확장 (총 40개 테스트 통과)
+- `next build` 통과, 헤드리스 브라우저로 필터·검색·모바일 가로 넘침까지 확인
+
+### 참고: "enhance.net"
+요청에 있던 "enhance.net"은 실제로 존재하는 레퍼런스 사이트가 아닙니다. 도메인 형태로 보아 **behance.net(비핸스)** 을 가리킨 것으로 보이며, 비핸스는 레퍼런스 그룹에 이미 포함했습니다. 이미지 보정 도구를 뜻한 것이라면 **Let's Enhance(letsenhance.io)** 가 가장 가까워 이미지 그룹에 함께 넣었습니다.

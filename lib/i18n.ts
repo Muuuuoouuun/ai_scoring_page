@@ -27,7 +27,11 @@ export const dictionary = {
       "긴 자료를 빨리 소화해야 한다",
       "검색 결과 출처 확인이 번거롭다",
       "전문 디자이너 리소스가 부족하다",
-      "MVP 제작 인력이 부족하다"
+      "MVP 제작 인력이 부족하다",
+      "브랜드 광고 외주비가 부담된다",
+      "영상 나레이션 녹음이 번거롭다",
+      "배경음악 저작권이 부담스럽다",
+      "저해상도 사진·영상 화질이 낮다"
     ],
     problemDesc: "이 상황에 맞는 도구를 확인하세요.",
     featuredTitle: "주요 리뷰",
@@ -216,7 +220,11 @@ export const dictionary = {
       "We must digest long material quickly",
       "Checking search sources is tedious",
       "We lack professional design resources",
-      "We lack people to build an MVP"
+      "We lack people to build an MVP",
+      "Ad production budgets are too tight",
+      "Recording voiceovers is a chore",
+      "Background music licensing is a burden",
+      "Our photos and video are low resolution"
     ],
     problemDesc: "See tools mapped to this situation.",
     featuredTitle: "Featured Reviews",

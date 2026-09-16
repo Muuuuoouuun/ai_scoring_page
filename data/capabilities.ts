@@ -535,5 +535,125 @@ export const capabilityProfiles: Record<string, ToolCapabilityProfile> = {
       "https://www.nocode.mba/articles/manus-ai-pricing",
       "https://play.google.com/store/apps/details?id=tech.butterfly.app"
     ]
+  },
+  "Higgsfield": {
+    capabilities: {
+      freePlan: { level: "partial", note: "워터마크 있고 상업적 이용 불가" },
+      koreanSupport: { level: "partial", note: "UI 일부 영어, 한국어 프롬프트 인식 낮음" },
+      aiAssistant: { level: "partial", note: "Supercomputer 챗 에이전트로 파이프라인 실행" },
+      agentAutomation: { level: "partial", note: "Supercomputer가 생성·후처리 자동 실행" },
+      apiIntegrations: { level: "partial", note: "공식 SDK 미비, MCP 연동은 일부 존재" },
+      teamAdmin: { level: "partial", note: "Team/Scale/Enterprise 플랜별 권한 차등" },
+      dataExport: { level: "full", note: "MP4·PNG 다운로드" },
+      ssoSecurity: { level: "partial", note: "Scale/Enterprise 플랜부터 SSO 제공" },
+      mobileApp: { level: "none" },
+      offlineLocal: { level: "none" }
+    },
+    roles: ["marketing", "design"],
+    teamFit: ["solo", "small", "mid"],
+    sources: [
+      "https://higgsfield.ai/team-plan",
+      "https://higgsfield.ai/enterprise",
+      "https://higgsfield.ai/creator-hub/help-center/account/who-owns-my-generations-and-can-i-use-them-commercially"
+    ]
+  },
+  "Runway": {
+    capabilities: {
+      freePlan: { level: "partial", note: "125크레딧 1회성, 매달 재충전 없음" },
+      koreanSupport: { level: "none", note: "한국어 UI 미지원, 프롬프트 품질 저하" },
+      aiAssistant: { level: "none" },
+      agentAutomation: { level: "partial", note: "Workflows로 다단계 파이프라인 수동 구성" },
+      apiIntegrations: { level: "full", note: "REST API, Picsart 등 외부 연동" },
+      teamAdmin: { level: "partial", note: "세부 권한은 Enterprise부터 제공" },
+      dataExport: { level: "full", note: "MP4·이미지, 4K 업스케일 내보내기" },
+      ssoSecurity: { level: "partial", note: "Enterprise 플랜부터 SSO·감사로그" },
+      mobileApp: { level: "full", note: "iOS·Android 앱 제공" },
+      offlineLocal: { level: "none" }
+    },
+    roles: ["design", "marketing", "engineering"],
+    teamFit: ["solo", "small", "mid", "large"],
+    sources: [
+      "https://help.runwayml.com/hc/en-us/articles/48625698573075-Enterprise-Features",
+      "https://runway.com/news/company-news/introducing-team-plan",
+      "https://docs.runway.team/api/overview"
+    ]
+  },
+  "HeyGen": {
+    capabilities: {
+      freePlan: { level: "partial", note: "월 3편, 720p, 워터마크 포함" },
+      koreanSupport: { level: "partial", note: "한국어 립싱크 우수, UI는 영어 중심" },
+      aiAssistant: { level: "partial", note: "Video Agent가 프롬프트로 영상 자동 구성" },
+      agentAutomation: { level: "partial", note: "Video Agent가 스크립트→영상 자동 수행" },
+      apiIntegrations: { level: "full", note: "아바타·번역 API, LMS·CRM 연동" },
+      teamAdmin: { level: "full", note: "Business 이상 역할 기반 권한·브랜드킷" },
+      dataExport: { level: "full", note: "MP4 다운로드, API 대량 내보내기" },
+      ssoSecurity: { level: "partial", note: "Enterprise부터 SAML SSO·SCIM" },
+      mobileApp: { level: "full", note: "iOS·Android 앱 제공" },
+      offlineLocal: { level: "none" }
+    },
+    roles: ["marketing", "sales", "ops"],
+    teamFit: ["solo", "small", "mid", "large"],
+    sources: [
+      "https://www.heygen.com/enterprise/pricing",
+      "https://www.heygen.com/business",
+      "https://help.heygen.com/en/articles/11391941-video-translation-languages-we-support"
+    ]
+  },
+  "ElevenLabs": {
+    capabilities: {
+      freePlan: { level: "partial", note: "월 1만 크레딧, 상업 이용 제한" },
+      koreanSupport: { level: "partial", note: "음성 품질 개선, UI는 영어 중심" },
+      aiAssistant: { level: "full", note: "ElevenAgents 대화형 음성 AI" },
+      agentAutomation: { level: "full", note: "MCP·API 툴콜 기반 다단계 자동화" },
+      apiIntegrations: { level: "full", note: "TTS·Agents 공개 API 제공" },
+      teamAdmin: { level: "full", note: "Business/Enterprise 워크스페이스" },
+      dataExport: { level: "full", note: "MP3/WAV 다운로드" },
+      ssoSecurity: { level: "partial", note: "Enterprise 플랜 전용 SSO" },
+      mobileApp: { level: "partial", note: "리더 앱만 있고 편집 앱은 없음" },
+      offlineLocal: { level: "none" }
+    },
+    roles: ["marketing", "design", "ops"],
+    teamFit: ["solo", "small", "mid", "large"],
+    sources: [
+      "https://elevenlabs.io/pricing",
+      "https://elevenlabs.io/blog/eleven-v3-is-now-generally-available"
+    ]
+  },
+  "Suno": {
+    capabilities: {
+      freePlan: { level: "partial", note: "일 50크레딧, 비상업적 이용만 가능" },
+      koreanSupport: { level: "partial", note: "한국어 가사 가능하나 발음 부자연스러움" },
+      aiAssistant: { level: "partial", note: "Studio 2.0 채팅바로 악기·프리셋 요청" },
+      agentAutomation: { level: "none" },
+      apiIntegrations: { level: "none", note: "공식 공개 API 없음" },
+      teamAdmin: { level: "none", note: "팀 워크스페이스·권한 기능 없음" },
+      dataExport: { level: "full", note: "MP3/WAV, 유료 플랜은 스템 파일도 제공" },
+      ssoSecurity: { level: "none" },
+      mobileApp: { level: "full", note: "iOS/Android 앱, 평점 4.8 이상" },
+      offlineLocal: { level: "none" }
+    },
+    roles: ["marketing", "design"],
+    teamFit: ["solo", "small"],
+    sources: ["https://help.suno.com/en/articles/9601985", "https://suno.com/blog/v5-5"]
+  },
+  "Topaz Labs": {
+    capabilities: {
+      freePlan: { level: "none", note: "상시 무료 요금제 없이 체험판만 제공" },
+      koreanSupport: { level: "partial", note: "UI 영어 전용, 처리 품질은 언어 무관" },
+      aiAssistant: { level: "none" },
+      agentAutomation: { level: "partial", note: "Autopilot·배치 처리로 일괄 자동 보정" },
+      apiIntegrations: { level: "partial", note: "Premiere 플러그인 중심, 공개 API 제한적" },
+      teamAdmin: { level: "none", note: "팀 권한·워크스페이스 기능 없음" },
+      dataExport: { level: "full", note: "PNG/TIFF, MP4/ProRes 등 표준 내보내기" },
+      ssoSecurity: { level: "none" },
+      mobileApp: { level: "partial", note: "Gigapixel iOS 앱만 별도 제공" },
+      offlineLocal: { level: "full", note: "핵심 기능은 로컬 GPU 실행(일부 클라우드)" }
+    },
+    roles: ["design", "marketing"],
+    teamFit: ["solo", "small", "mid"],
+    sources: [
+      "https://docs.topazlabs.com/topaz-video/system-requirements",
+      "https://www.topazlabs.com/news/the-next-gen-release---april-2026"
+    ]
   }
 };
