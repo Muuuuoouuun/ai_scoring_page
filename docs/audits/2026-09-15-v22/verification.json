@@ -1,0 +1,35 @@
+{
+  "catalogCount": 34,
+  "addedTools": 14,
+  "addedFeatures": 56,
+  "promotions": 4,
+  "testsPassed": 287,
+  "typecheck": "passed",
+  "build": "passed",
+  "browserChecks": [
+    "34 catalog results",
+    "6 PMS filter results",
+    "new Asana detail sources/review/feature input paths",
+    "custom service saved, relinked to Notion, private note preserved",
+    "related subscriptions form prefilled Notion",
+    "personal related Notion/Miro offers",
+    "390px workspace and similarity and promotions layouts without horizontal overflow",
+    "DeepSeek alternatives restricted to models",
+    "no browser console errors"
+  ],
+  "limits": [
+    "Official information linking only; no new external OAuth account integration",
+    "Official reviewed opportunities; no claim of account eligibility or new discount event",
+    "No real email sent; prior missing mail environment not changed"
+  ],
+  "deployment": "succeeded",
+  "version": 22,
+  "commit": "5e645626b5dde2a28f27fab07dcc20603bec70e4",
+  "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+  "productionChecks": [
+    "34 results and all new category labels visible",
+    "Asana common-feature recommendation mode and URL work",
+    "4 official promotion programs visible"
+  ],
+  "localQaRecordCleanup": "one created V22 test library record removed; existing records preserved"
+}

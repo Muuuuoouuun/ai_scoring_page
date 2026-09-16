@@ -1,0 +1,48 @@
+✔ checkedAt and cosmetic offer copy do not create another material version (178.309375ms)
+✔ same-day reviewed price correction updates original card; immutable receipt survives (75.2995ms)
+✔ queued ended offer never enters provider (63.636084ms)
+✔ queued withdrawn offer never enters provider (70.411333ms)
+✔ absolute deadline blocks an already queued offer at the exact instant (50.630583ms)
+✔ date-only deadline uses explicit conservative bounds without inventing official zone (49.940583ms)
+✔ explicit constraint is retained and does not silently qualify {"maxPrice":10,"currency":"USD"} (55.285833ms)
+✔ explicit constraint is retained and does not silently qualify {"maxPrice":50000,"currency":"KRW"} (53.519833ms)
+✔ explicit constraint is retained and does not silently qualify {"neededFeatures":["offline-document-editing"]} (52.080125ms)
+✔ explicit constraint is retained and does not silently qualify {"minBenefitMonths":18} (51.632541ms)
+✔ unknown tax fails a price ceiling, known all-period prices and features can qualify (43.730542ms)
+✔ eligibility change invalidates prior confirmation but permits a relevant correction (56.1595ms)
+✔ legacy eligible string is not stamped by an unrelated save (48.404ms)
+✔ unreviewed same-revision material edits hold dispatch (50.521458ms)
+✔ withdrawal remains on original card even with new app alerts disabled (56.872583ms)
+✔ legacy accepted date-key baseline is held honestly and later change can correct (54.442041ms)
+✖ feature-only change irrelevant to required features updates card without another email (54.905875ms)
+✔ revision-only advances preserve read state and never repeat the same offer (72.067459ms)
+✔ old read target cannot mark a newer material correction read (49.6885ms)
+✔ new announcement from one tool has its own card and shares hide topic (54.725958ms)
+✔ cards export/delete stays private and late generation cannot recreate deleted personal rows (57.435708ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 20
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1457.818958
+
+✖ failing tests:
+
+test at tests/notice-versions.test.mjs:27:1
+✖ feature-only change irrelevant to required features updates card without another email (54.905875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:27:369)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

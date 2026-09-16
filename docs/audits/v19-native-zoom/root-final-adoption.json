@@ -1,0 +1,70 @@
+{
+  "adoptedAt": "2026-09-15T00:02:09.835295+09:00",
+  "changedIDs": [
+    "5.1.4",
+    "6.3.4"
+  ],
+  "unchangedOtherGateCount": 150,
+  "counts": {
+    "PASS": 143,
+    "GAP": 4,
+    "UNVERIFIED": 5
+  },
+  "scores": [
+    {
+      "area": "정체성·기획 일치",
+      "score": 86.25
+    },
+    {
+      "area": "내용·최신성",
+      "score": 100.0
+    },
+    {
+      "area": "디자인",
+      "score": 100.0
+    },
+    {
+      "area": "사용성",
+      "score": 100.0
+    },
+    {
+      "area": "쾌적성·접근성",
+      "score": 93.75
+    },
+    {
+      "area": "유용성",
+      "score": 92.5
+    },
+    {
+      "area": "커뮤니티",
+      "score": 100.0
+    },
+    {
+      "area": "개인 기능",
+      "score": 81.25
+    },
+    {
+      "area": "배포·운영",
+      "score": 93.75
+    }
+  ],
+  "areasAtLeast88": 7,
+  "goalComplete": false,
+  "independentChecksPassed": 36,
+  "candidateSHA256": "b672e955b2949fd01c0aa73afbc0e0d4df030b10ad4a678ff5fe074cc6046042",
+  "adoptedJSON": "/Users/bigmac_moon/dev/ai_score/docs/audits/2026-09-14-score-worksheet-v19.json",
+  "adoptedJSONSHA256": "c925ef3c13e1edad30fd9aab5629472220fc91b513ac5efa88aa35c2346c5a0b",
+  "source": "d5efa3e11997e4a6d19cf28029246546e3a2a5bc",
+  "publication": {
+    "source": "d5efa3e11997e4a6d19cf28029246546e3a2a5bc",
+    "version": 21,
+    "versionId": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_775a2c15a3cc8191bb0de212dc42bfa8",
+    "deploymentId": "appgdep_6aa806e7e530819183a877eae9421c27",
+    "status": "succeeded",
+    "updatedAt": "2026-09-14T14:39:07.129272+00:00",
+    "environmentRevision": 2,
+    "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+    "access": "owner-private/custom; one allowed account, zero external users/groups; unchanged",
+    "observedBy": "Root actual Sites receipts preserved in docs/audits/v19-native-zoom/site-deployment-receipts.json; reviewer read and cross-checked the saved receipts, without calling Sites/Git."
+  }
+}

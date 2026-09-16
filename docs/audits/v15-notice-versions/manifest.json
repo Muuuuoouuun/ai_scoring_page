@@ -1,0 +1,255 @@
+{
+  "source": "b8d35c036f0541446fafa746652406a81b19f0a6",
+  "files": [
+    {
+      "file": "ais-v15-code-review.md",
+      "bytes": 10436,
+      "sha256": "8552f9124e08c65e4150095f2beddfe6f54b3cf5c663cb1fbd64f50c179a52e5"
+    },
+    {
+      "file": "ais-v15-correction-expiry.out",
+      "bytes": 3384,
+      "sha256": "92a00286c4ea17f16a66e209d226b08898fadce77337508e5e8bcef36a8472d7"
+    },
+    {
+      "file": "ais-v15-default-billing-cases.mjs",
+      "bytes": 3646,
+      "sha256": "5a81fa1667a2a71a3c35cfc000f5b647209b3ab255a9bec6d40588f3bc5edb8a"
+    },
+    {
+      "file": "ais-v15-default-billing-cases.out",
+      "bytes": 492,
+      "sha256": "093991a389234b6db609a53d434e02ea146ed13a462c53796c9e4c93c9ef78d8"
+    },
+    {
+      "file": "ais-v15-default-billing-green.tap",
+      "bytes": 3306,
+      "sha256": "c140488ccc1d6937fd5029da15c12b56c9d485da0905d43945035d9df9eb49ef"
+    },
+    {
+      "file": "ais-v15-default-billing-red.tap",
+      "bytes": 3047,
+      "sha256": "b044f7c652b5d0a855a5376d4d9d6d77291f20b8e9e4c07997e641a2f22f0fd4"
+    },
+    {
+      "file": "ais-v15-default-billing-review.md",
+      "bytes": 4324,
+      "sha256": "f0414ee100ebefa82e3fc985e6fd2c8e0485e4ff012a36fb8a8ee3c7d9a7c9e5"
+    },
+    {
+      "file": "ais-v15-default-billing-root-tests.out",
+      "bytes": 318,
+      "sha256": "d76780bc6a95a1c96b6fb64b806d03d10c1617afecc64d9070b8f22fae17c6db"
+    },
+    {
+      "file": "ais-v15-existing-regressions-final.out",
+      "bytes": 4863,
+      "sha256": "73e132e78ce61410f1ed9cacfe58982c09216f04597d544bef35b7f3353d57b8"
+    },
+    {
+      "file": "ais-v15-existing-regressions.out",
+      "bytes": 4858,
+      "sha256": "4620f3af159bdfce6cc047b81c70dbb4caca9e94a2d47f45c25717f9b673952e"
+    },
+    {
+      "file": "ais-v15-final-tests.tap",
+      "bytes": 40059,
+      "sha256": "066dd5668ced8b552b11c75aaed00e27332e38f4bcb6968a2468fe9324f5d99e"
+    },
+    {
+      "file": "ais-v15-first-green.tap",
+      "bytes": 1622,
+      "sha256": "1db0f98bf03a0df9f22b86190d85dc0e9ed91594099016d08c815f0d19383b04"
+    },
+    {
+      "file": "ais-v15-guards-delete.out",
+      "bytes": 1437,
+      "sha256": "08dd76d657285d107570542c1a253833d6458fa6fadecb90cf906a63322de8bf"
+    },
+    {
+      "file": "ais-v15-independent-cases.mjs",
+      "bytes": 7517,
+      "sha256": "2c401910e5cad9c3c18feb68beb128226a1598208f3777d78ac7d8616ff85f31"
+    },
+    {
+      "file": "ais-v15-independent-cases.out",
+      "bytes": 7640,
+      "sha256": "b765d695d04bcf4102b2ae60a3580998f09086248081a074eda835396f215447"
+    },
+    {
+      "file": "ais-v15-independent-final.out",
+      "bytes": 12998,
+      "sha256": "a500a02c95b9558ff2ef5675c0b45432ad1094d5fcf2becff6eda2a95cf26dc5"
+    },
+    {
+      "file": "ais-v15-independent-latest.out",
+      "bytes": 14083,
+      "sha256": "69bfb181c3f38b32bc74036db5259fe9b0c112194be8ec72a7685e0b4d4ee281"
+    },
+    {
+      "file": "ais-v15-initial-red.tap",
+      "bytes": 19714,
+      "sha256": "ffa0d81b030ed0e39831500797ba1ca267d696c4d616226cd66e056427780f24"
+    },
+    {
+      "file": "ais-v15-notice-red.md",
+      "bytes": 10043,
+      "sha256": "bc914018c600feb5ef8a33e3995f9b4541396ee8c2bdedf4cf979917ffe66856"
+    },
+    {
+      "file": "ais-v15-notice-red.test.mjs",
+      "bytes": 10581,
+      "sha256": "f625a0818d51081f45f73112fc47445170d02007a2382ee3c5fc7cd1b9335567"
+    },
+    {
+      "file": "ais-v15-notice-version-design-review.md",
+      "bytes": 23619,
+      "sha256": "537d887e88b3a50630f84a62efa63ddefdae02ce197f5eb96dcb13d9f6404de2"
+    },
+    {
+      "file": "ais-v15-notices-current.tap",
+      "bytes": 2273,
+      "sha256": "fe3be253034a4ca12cd9ef8cd6b5ebdbc98d60b7a30bebd320eb69ed0e19596a"
+    },
+    {
+      "file": "ais-v15-offer-facts.json",
+      "bytes": 11369,
+      "sha256": "0599f435a0d65ed0820b85064c49422f98c2a3922e6f120b980ef49acf1553fc"
+    },
+    {
+      "file": "ais-v15-promotion-source-review.md",
+      "bytes": 8493,
+      "sha256": "994b78d59b4422abbbfc6c16bbdb2f0154ed383f8f4f310dc02caaecfd945ab4"
+    },
+    {
+      "file": "ais-v15-race-expectations.md",
+      "bytes": 14480,
+      "sha256": "e9e5b87be309f2340e4cea98d158034c54911028b11909af2e7e4fb0c5cb51a5"
+    },
+    {
+      "file": "ais-v15-race-run.fixed-initial.tap",
+      "bytes": 9572,
+      "sha256": "6eaec0b7067f9a904fc7b95b0c5b101e3806c56473e6293237be0c62bbec0807"
+    },
+    {
+      "file": "ais-v15-race-run.fixed.json",
+      "bytes": 12137,
+      "sha256": "dd3737680a503b9037eae089206f73fef2bcaaf72adb86b8069d841b511a221b"
+    },
+    {
+      "file": "ais-v15-race-run.fixed.tap",
+      "bytes": 9115,
+      "sha256": "d78548218942332835addd3d19632133ab01d7affe0e918cf4968e4519d5e582"
+    },
+    {
+      "file": "ais-v15-race-run.initial.tap",
+      "bytes": 8690,
+      "sha256": "d829a844fe22666a705538df22b7f47e0f552c28e53ba479a853f05233d7edeb"
+    },
+    {
+      "file": "ais-v15-race-run.json",
+      "bytes": 12270,
+      "sha256": "67e09bb01d9675b5f714a3971386c3c6995a4dc87dea00524a25474e36896d2a"
+    },
+    {
+      "file": "ais-v15-race-run.md",
+      "bytes": 9900,
+      "sha256": "1e92c1045c5f66c8be43c39ad20c038fa86332de5634c368340f3da0dd038ab7"
+    },
+    {
+      "file": "ais-v15-race-run.pre-cleanup-race.tap",
+      "bytes": 10009,
+      "sha256": "280b64756feba5e20750d272103650e5e244d865455bf1f7c12939fb8e8e1b7b"
+    },
+    {
+      "file": "ais-v15-race-run.red.json",
+      "bytes": 12270,
+      "sha256": "67e09bb01d9675b5f714a3971386c3c6995a4dc87dea00524a25474e36896d2a"
+    },
+    {
+      "file": "ais-v15-race-run.red.md",
+      "bytes": 7490,
+      "sha256": "d8cfa72a60625d11206bab947403db366a47a61d78d08537912cb51ba49148d1"
+    },
+    {
+      "file": "ais-v15-race-run.red.tap",
+      "bytes": 11097,
+      "sha256": "39a2c969b9a142931bc9e0a2ff3f0d4f227a38436b0dec5696abebdf4930fe19"
+    },
+    {
+      "file": "ais-v15-race-run.red.test.mjs",
+      "bytes": 18332,
+      "sha256": "a7444dd83ed689df2cb0368b4f2572a0ad20c2452d84ca2c353a9a4945629e41"
+    },
+    {
+      "file": "ais-v15-race-run.tap",
+      "bytes": 11097,
+      "sha256": "39a2c969b9a142931bc9e0a2ff3f0d4f227a38436b0dec5696abebdf4930fe19"
+    },
+    {
+      "file": "ais-v15-race-run.test.mjs",
+      "bytes": 18339,
+      "sha256": "9caf8e431941c00d5eeea598d7ba444b88afbd4e20f0ea3c31e2e0b9d3513e15"
+    },
+    {
+      "file": "ais-v15-regression-1.tap",
+      "bytes": 20006,
+      "sha256": "0928c36011a81eeba730d9afb9c7ca4c07b8851795e13cf14e702f7885b67b3a"
+    },
+    {
+      "file": "ais-v15-regression-2.tap",
+      "bytes": 19349,
+      "sha256": "5de715904856c7a2294b183876a1d508019e50e7460383761088a7473345d872"
+    },
+    {
+      "file": "ais-v15-regression-3.tap",
+      "bytes": 20013,
+      "sha256": "3f56bd08d73fcf2f9976d230460db553ca9bd9b35c794a53794685ec8e102509"
+    },
+    {
+      "file": "ais-v15-relevance-green.tap",
+      "bytes": 2092,
+      "sha256": "4ec3561f83d7868321b9b1ed0bbf869e20256e83c677bd9a2560c7339c73e78a"
+    },
+    {
+      "file": "ais-v15-relevance-red.tap",
+      "bytes": 2754,
+      "sha256": "6ff0fd45823cdc40b72f9a2761cf07ecce5cccc24eb9b714773b3c60561fe5d6"
+    },
+    {
+      "file": "ais-v15-score-review.md",
+      "bytes": 12250,
+      "sha256": "a1c9f84445442b97037256b6dfbabe2d82d383d088e34bca4bcf07290b7daae6"
+    },
+    {
+      "file": "archive-validation.json",
+      "bytes": 317,
+      "sha256": "ded8fc2da957370d5e35918d3c8ca9c9372cbd08054308453c919dfe4d93db11"
+    },
+    {
+      "file": "deployment-receipt.json",
+      "bytes": 1085,
+      "sha256": "2872daa24f263fddd4816eab9d89fc412e3f9043792855317f34917bee1f490e"
+    },
+    {
+      "file": "local-promotions-desktop.png",
+      "bytes": 112007,
+      "sha256": "6adc089bc163f396ad194d0bfc209f8d057fc6395c58c3d6877889a7285738b8"
+    },
+    {
+      "file": "local-settings-desktop.png",
+      "bytes": 143084,
+      "sha256": "b0ac0f48ac4e39ab5aa9da9cc0eeecccc5d0429d66b79cbe590d4d146157d2e1"
+    },
+    {
+      "file": "local-settings-mobile.png",
+      "bytes": 119243,
+      "sha256": "bbe00fe389f2ee59d1284304cd5259524649da08ead2612d0041aa96d0365de1"
+    },
+    {
+      "file": "production-promotions.png",
+      "bytes": 112007,
+      "sha256": "6adc089bc163f396ad194d0bfc209f8d057fc6395c58c3d6877889a7285738b8"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "filter": "errors_only=true, since_minutes=15, limit=30",
+  "events": [
+    {
+      "at": "2026-09-12T13:14:08.799Z",
+      "level": "info",
+      "message": "GET https://ais-discovery-hub.aaahaaah19.chatgpt.site/api/logos/make?v=%2Flogos%2Fmake.ico",
+      "outcome": "canceled",
+      "wallTimeMs": 211,
+      "cpuTimeMs": 4,
+      "reportedError": null,
+      "statusCode": null
+    }
+  ],
+  "note": "Returned event is info-level canceled logo fetch, not a reported Worker exception. Immediate navigation/reload occurred in this period; causation not proved."
+}

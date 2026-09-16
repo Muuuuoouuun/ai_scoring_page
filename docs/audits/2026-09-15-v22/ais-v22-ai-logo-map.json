@@ -1,0 +1,62 @@
+[
+  {
+    "id": "microsoft-copilot",
+    "sourceURL": "https://copilot.microsoft.com/static/cmc/favicon.svg",
+    "discoveredOn": "https://copilot.microsoft.com/",
+    "localPath": "/private/tmp/ais-v22-ai-assets/microsoft-copilot.svg",
+    "mime": "image/svg+xml",
+    "bytes": 3436,
+    "sha256": "c5b0ad0fc0c6fd9c49131a972635e1aba4e65a0d0385c01d5be8735921d7ef8b",
+    "logo": "/logos/microsoft-copilot.svg"
+  },
+  {
+    "id": "adobe-firefly",
+    "sourceURL": "https://firefly.adobe.com/releases/453c990875c01baddc6ee90ba4397e211733c53c/assets/fi_android_192-DXlUnW6D.png",
+    "discoveredOn": "https://firefly.adobe.com/",
+    "localPath": "/private/tmp/ais-v22-ai-assets/adobe-firefly.png",
+    "mime": "image/png",
+    "bytes": 7195,
+    "sha256": "a1bfa88c8ccf656beff5b54e947e0b9240ab36025fdac858c729b78e8c529ed8",
+    "logo": "/logos/adobe-firefly.png"
+  },
+  {
+    "id": "runway",
+    "sourceURL": "https://runway.com/icon.png?icon.35ps9bmugbe1e.png",
+    "discoveredOn": "https://runway.com/",
+    "localPath": "/private/tmp/ais-v22-ai-assets/runway.png",
+    "mime": "image/png",
+    "bytes": 4846,
+    "sha256": "f545e0e706d0c6be0e8602a8e8d685d4f43ab72880bd5e6a234916e765ff2b70",
+    "logo": "/logos/runway.png"
+  },
+  {
+    "id": "elevenlabs",
+    "sourceURL": "https://elevenlabs.io/icon.svg?c23f5371fdd26632",
+    "discoveredOn": "https://elevenlabs.io/",
+    "localPath": "/private/tmp/ais-v22-ai-assets/elevenlabs.svg",
+    "mime": "image/svg+xml",
+    "bytes": 404,
+    "sha256": "a8ccade64d9d38696c6f47a17ad1eb6d941d687bea0adc7af9b2ccce0e26c29a",
+    "logo": "/logos/elevenlabs.svg"
+  },
+  {
+    "id": "deepseek-v4-1-flash",
+    "sourceURL": "https://www.deepseek.com/favicon.ico",
+    "discoveredOn": "https://www.deepseek.com/",
+    "localPath": "/private/tmp/ais-v22-ai-assets/deepseek-v4-1-flash.ico",
+    "mime": "image/vnd.microsoft.icon",
+    "bytes": 209762,
+    "sha256": "30a4420e6e4dcb17fd7de560c5004346c2bc8cd971d2d5f5ee15326603e51321",
+    "logo": "/logos/deepseek-v4-1-flash.ico"
+  },
+  {
+    "id": "mistral-vibe",
+    "sourceURL": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/cb/b6/2c/cbb62c3c-306a-de63-b9ab-50dba3f27466/Placeholder.mill/400x400bb-75.webp",
+    "discoveredOn": "https://apps.apple.com/us/app/vibe-by-mistral-ex-le-chat/id6740410176",
+    "localPath": "/private/tmp/ais-v22-ai-assets/mistral-vibe.webp",
+    "mime": "image/webp",
+    "bytes": 8844,
+    "sha256": "139c8458ca53a24cc603f06fc52a95b05675d569419be7d1ca987d4d64a4353b",
+    "logo": "/logos/mistral-vibe.webp"
+  }
+]

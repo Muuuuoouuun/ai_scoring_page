@@ -1,0 +1,30 @@
+{
+  "source": "d5efa3e11997e4a6d19cf28029246546e3a2a5bc",
+  "gitClean": true,
+  "wranglerTriggers": {},
+  "scheduledWordOccurrences": 0,
+  "goal": {
+    "status": "active",
+    "updatedAt": 1789398519
+  },
+  "scoreCounts": {
+    "PASS": 143,
+    "GAP": 4,
+    "UNVERIFIED": 5
+  },
+  "areasAtLeast88": 7,
+  "realEmailSent": false,
+  "siteModified": false,
+  "files": [
+    {
+      "name": "ais-v20-scheduler-code-research.md",
+      "bytes": 12694,
+      "sha256": "6ce4690f9970b138a093788b5f23be245248fdbb69d4520cc695c728cddc4812"
+    },
+    {
+      "name": "live-readiness.json",
+      "bytes": 2293,
+      "sha256": "3fe85a042c04900d324034aa3eb4103a840c64f782edd86fbb26457f1ce58d32"
+    }
+  ]
+}

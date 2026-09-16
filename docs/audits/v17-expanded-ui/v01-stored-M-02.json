@@ -1,0 +1,24 @@
+{
+  "scroll": {
+    "height": 8676,
+    "width": 375,
+    "x": 0,
+    "y": 633
+  },
+  "url": "http://localhost:5173/my?tab=savings",
+  "viewport": {
+    "doc": 375,
+    "height": 844,
+    "scale": 1,
+    "width": 390
+  },
+  "visibleText": [
+    "비교 종료일",
+    "새 계약 이용 시작·전환일",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA · 요금제 미입력 · 조건 이력 2건. 연결된 실제 결제는 예정 청구에서 제외합니다. 기존 조건 확인",
+    "새 요금제",
+    "서비스·요금제 이름",
+    "1회 청구 금액 · KRW",
+    "통화KRWUSDEURJPY"
+  ]
+}

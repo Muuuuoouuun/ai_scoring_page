@@ -1,0 +1,37 @@
+{
+  "scroll": {
+    "height": 3659,
+    "width": 375,
+    "x": 0,
+    "y": 504
+  },
+  "url": "http://localhost:5173/my?tab=subscription",
+  "viewport": {
+    "doc": 375,
+    "height": 844,
+    "scale": 1,
+    "width": 390
+  },
+  "visibleText": [
+    "₩19,000",
+    "조건 미확인: 결제일 0건 · 예정 금액 0회 · 세금 1건. 사용량 과금 0건의 추가 청구는 총액에 포함되지 않습니다.",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA갱신 중",
+    "요금제 미입력 · ₩20,000 / 월",
+    "기간별 지출과 청구 확인",
+    "시작일",
+    "종료일",
+    "2026-09-01부터 2026-12-12까지 청구 일정 3건을 표시합니다.",
+    "2026-09-01 ~ 2026-12-12 · 한국 날짜 기준 · 통화별 계산",
+    "계약 조건 이력",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA · 이 계약의 조건을 날짜별로 보관합니다. 실제 결제·환불 기록은 각 기록의 금액과 통화를 유지합니다.",
+    "변경 조건",
+    "새 조건 적용일모르면 빈칸 · 적용 전까지 이전 조건 유지",
+    "모르면 빈칸 · 적용 전까지 이전 조건 유지",
+    "요금제",
+    "이미 변경되었으나 적용일을 모름 · 오늘 이후 금액을 미확인으로 처리",
+    "회당 금액KRW · 0은 없음 확인",
+    "KRW · 0은 없음 확인",
+    "통화KRW · 원USD · 달러EUR · 유로JPY · 엔",
+    "결제 주기매월3개월마다매년개월 수 지정다음 1회만"
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "active": "변경안 날짜별 금액",
+    "clientWidth": 952,
+    "docWidth": 952,
+    "dpr": 2,
+    "height": 398,
+    "scrollHeight": 10727,
+    "scrollY": 3829,
+    "url": "http://localhost:5173/my?tab=savings",
+    "width": 960,
+    "end": {
+      "bottom": 1098.015625,
+      "top": 96.390625
+    },
+    "file": "S09-right-tables-complete-01.jpg"
+  },
+  {
+    "active": "변경안 날짜별 금액",
+    "clientWidth": 952,
+    "docWidth": 952,
+    "dpr": 2,
+    "height": 398,
+    "scrollHeight": 10727,
+    "scrollY": 4028,
+    "url": "http://localhost:5173/my?tab=savings",
+    "width": 960,
+    "end": {
+      "bottom": 899.015625,
+      "top": -102.609375
+    },
+    "file": "S09-right-tables-complete-02.jpg"
+  },
+  {
+    "active": "변경안 날짜별 금액",
+    "clientWidth": 952,
+    "docWidth": 952,
+    "dpr": 2,
+    "height": 398,
+    "scrollHeight": 10727,
+    "scrollY": 4227,
+    "url": "http://localhost:5173/my?tab=savings",
+    "width": 960,
+    "end": {
+      "bottom": 700.015625,
+      "top": -301.609375
+    },
+    "file": "S09-right-tables-complete-03.jpg"
+  },
+  {
+    "active": "변경안 날짜별 금액",
+    "clientWidth": 952,
+    "docWidth": 952,
+    "dpr": 2,
+    "height": 398,
+    "scrollHeight": 10727,
+    "scrollY": 4426,
+    "url": "http://localhost:5173/my?tab=savings",
+    "width": 960,
+    "end": {
+      "bottom": 501.015625,
+      "top": -500.609375
+    },
+    "file": "S09-right-tables-complete-04.jpg"
+  },
+  {
+    "active": "변경안 날짜별 금액",
+    "clientWidth": 952,
+    "docWidth": 952,
+    "dpr": 2,
+    "height": 398,
+    "scrollHeight": 10727,
+    "scrollY": 4625,
+    "url": "http://localhost:5173/my?tab=savings",
+    "width": 960,
+    "end": {
+      "bottom": 302.015625,
+      "top": -699.609375
+    },
+    "file": "S09-right-tables-complete-05.jpg"
+  }
+]

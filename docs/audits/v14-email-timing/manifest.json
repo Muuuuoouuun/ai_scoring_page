@@ -1,0 +1,100 @@
+{
+  "files": [
+    {
+      "path": "ais-v14-batch-before.tap",
+      "bytes": 7026,
+      "sha256": "0aadd436d60d182d009be170914d7b3e65382f162c35ef7c642cac6934365ff7"
+    },
+    {
+      "path": "ais-v14-calendar-review.md",
+      "bytes": 13295,
+      "sha256": "e7ee1db264c03e0992809a4b0ce83e5c22c2136441ffe7a1fae4ecdb5f202196"
+    },
+    {
+      "path": "ais-v14-cancellation-before.tap",
+      "bytes": 6563,
+      "sha256": "65e8add99ecb6553d4772a01eb892c01502def2e6970d0e8d2b19687efd1ac96"
+    },
+    {
+      "path": "ais-v14-dispatch-review.md",
+      "bytes": 15231,
+      "sha256": "f48fc1778b8c36e618389a18e54695eff13fa59f870251c41fc421729a07418f"
+    },
+    {
+      "path": "ais-v14-email-red.json",
+      "bytes": 4412,
+      "sha256": "981da8402bfc5984f7af98460f4b2e99c19130ba93d1b7987805531122cd8b7c"
+    },
+    {
+      "path": "ais-v14-email-red.md",
+      "bytes": 9041,
+      "sha256": "b0fb0fb6c7fa702581f535f67f3b47e5780fe07964241f9f079292909b980bd7"
+    },
+    {
+      "path": "ais-v14-email-red.test.mjs",
+      "bytes": 7980,
+      "sha256": "3559256d98c26628c989bec56b5a22bfc3a601559b454f7edfb494ad1beb6f48"
+    },
+    {
+      "path": "ais-v14-final-tests.tap",
+      "bytes": 17822,
+      "sha256": "3a7e66824783d39a2e2122c6de6417b252096c576e0605f55b83164b2baded85"
+    },
+    {
+      "path": "ais-v14-score-boundary.md",
+      "bytes": 6771,
+      "sha256": "2d994c409465dbf76510861a718f534aa02e5edf71d3d9173f76bec3a91ebe85"
+    },
+    {
+      "path": "ais-v14-settings-review.md",
+      "bytes": 7342,
+      "sha256": "6581ac18ae80b56873618bfed0e886ddef6bda6e80be6f7168f8959db2cb1d1c"
+    },
+    {
+      "path": "ais-v14-test-compatibility.md",
+      "bytes": 13381,
+      "sha256": "a212a8edb3e2b58b00776926ad5575ce10d336464b596a5ba2eb9e911d7f05f6"
+    },
+    {
+      "path": "ais-v14-timing-cases.md",
+      "bytes": 25853,
+      "sha256": "d0701b9e1e32674a9aa927bf94626c5a30129d84feef8dd6a01ea05acc9709a7"
+    },
+    {
+      "path": "archive-validation.json",
+      "bytes": 405,
+      "sha256": "45847467e44d9f8054d3a74f039a70aca3ec75965c9f6d4be5eb86f76b9e7a30"
+    },
+    {
+      "path": "before-red.tap",
+      "bytes": 5281,
+      "sha256": "a416b1b4e66af3d386902d85b25682b7adca334db3a6361f14a540314d13526b"
+    },
+    {
+      "path": "deployment-receipt.json",
+      "bytes": 1164,
+      "sha256": "611edcd7ae9a7ab59b431cf997b978fb6e7364c533bc85c41e06aa6de9f2f1e5"
+    },
+    {
+      "path": "notifications-390.png",
+      "bytes": 43816,
+      "sha256": "404819238aa5ec89647df87c2d59f9cdb1af943e4f6d5e29a09ce3a0ed579fb0"
+    },
+    {
+      "path": "production-status.png",
+      "bytes": 44054,
+      "sha256": "062acccf51bec3b21831f808b0233745e8e56fe5837242a81e336e86b759e875"
+    },
+    {
+      "path": "score-verification.json",
+      "bytes": 519,
+      "sha256": "da91d4d78b191909e824973bdaeff236a8e3808366a54d8d8ad55d9d3ff24a44"
+    },
+    {
+      "path": "settings-390.png",
+      "bytes": 87553,
+      "sha256": "b7a1e1d58d4551b62c27347f03a0ccfdc118926827090b57bafafe9fdd193f90"
+    }
+  ],
+  "count": 19
+}

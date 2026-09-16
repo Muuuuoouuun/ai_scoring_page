@@ -1,0 +1,192 @@
+{
+  "capturedAt": "2026-09-12T13:15:06.505Z",
+  "documentWidth": 1265,
+  "elapsedMs": 10000,
+  "framed": false,
+  "images": [
+    {
+      "alt": "Canva 로고",
+      "loaded": true,
+      "source": "/api/logos/canva"
+    },
+    {
+      "alt": "ChatGPT 공식 앱 아이콘",
+      "loaded": true,
+      "source": "/api/logos/chatgpt"
+    },
+    {
+      "alt": "Claude 로고",
+      "loaded": true,
+      "source": "/api/logos/claude"
+    },
+    {
+      "alt": "Anthropic 공식 브랜드 마크",
+      "loaded": true,
+      "source": "/api/logos/claude-fable-5-1"
+    },
+    {
+      "alt": "Cursor 로고",
+      "loaded": true,
+      "source": "/api/logos/cursor"
+    },
+    {
+      "alt": "Figma 로고",
+      "loaded": true,
+      "source": "/api/logos/figma"
+    },
+    {
+      "alt": "Gemini 로고",
+      "loaded": true,
+      "source": "/api/logos/gemini"
+    },
+    {
+      "alt": "Gemini 공식 브랜드 마크",
+      "loaded": true,
+      "source": "/api/logos/gemini-3-8-flash"
+    },
+    {
+      "alt": "Gemini Notebook 로고",
+      "loaded": true,
+      "source": "/api/logos/notebooklm"
+    },
+    {
+      "alt": "GitHub 공식 마크",
+      "loaded": true,
+      "source": "/api/logos/github-copilot"
+    },
+    {
+      "alt": "OpenAI 공식 브랜드 마크",
+      "loaded": true,
+      "source": "/api/logos/gpt-6-astra"
+    },
+    {
+      "alt": "Linear 로고",
+      "loaded": true,
+      "source": "/api/logos/linear"
+    },
+    {
+      "alt": "Make 로고",
+      "loaded": true,
+      "source": "/api/logos/make"
+    },
+    {
+      "alt": "Midjourney 공식 브랜드 마크",
+      "loaded": true,
+      "source": "/api/logos/midjourney"
+    },
+    {
+      "alt": "Notion 로고",
+      "loaded": true,
+      "source": "/api/logos/notion"
+    },
+    {
+      "alt": "Perplexity 로고",
+      "loaded": true,
+      "source": "/api/logos/perplexity"
+    },
+    {
+      "alt": "Slack 로고",
+      "loaded": true,
+      "source": "/api/logos/slack"
+    },
+    {
+      "alt": "Supabase 로고",
+      "loaded": true,
+      "source": "/api/logos/supabase"
+    },
+    {
+      "alt": "Vercel 로고",
+      "loaded": true,
+      "source": "/api/logos/vercel"
+    },
+    {
+      "alt": "Zapier 로고",
+      "loaded": true,
+      "source": "/api/logos/zapier"
+    }
+  ],
+  "initialDocumentPath": "/explore",
+  "initialVisibility": "visible",
+  "longTasks": {
+    "count": 0,
+    "maxMs": 0,
+    "over50Ms": 0,
+    "supported": true,
+    "totalMs": 0
+  },
+  "navigation": {
+    "domCompleteMs": 4832.800000011921,
+    "domInteractiveMs": 3765.5,
+    "encodedBytes": 6411,
+    "responseEndMs": 1938.4000000059605,
+    "transferBytes": 6711,
+    "type": "navigate"
+  },
+  "observerStartedAt": 5441,
+  "path": "/explore",
+  "rawLayout": {
+    "count": 0,
+    "sessionMax": 0,
+    "supported": true
+  },
+  "readings": {
+    "CLS": {
+      "id": "v4-1789218901988-8552597968160",
+      "navigationType": "navigate",
+      "rating": "good",
+      "value": 0
+    },
+    "FCP": {
+      "id": "v4-1789218901988-4801046747741",
+      "navigationType": "navigate",
+      "rating": "poor",
+      "value": 3792
+    },
+    "INP": {
+      "id": "v4-1789218901988-6477870169172",
+      "navigationType": "navigate",
+      "rating": "good",
+      "value": 56
+    },
+    "LCP": {
+      "id": "v4-1789218901988-4977556874027",
+      "navigationType": "navigate",
+      "rating": "needs-improvement",
+      "value": 3792
+    },
+    "TTFB": {
+      "id": "v4-1789218901988-8634047526393",
+      "navigationType": "navigate",
+      "rating": "poor",
+      "value": 1936.9000000059605
+    }
+  },
+  "resources": {
+    "count": 63,
+    "encodedBytes": 638442,
+    "scriptEncodedBytes": 0,
+    "transferBytes": 16016,
+    "unknownSizes": 26
+  },
+  "scrollWidth": 1265,
+  "supportedEntries": [
+    "element",
+    "event",
+    "first-input",
+    "interaction-contentful-paint",
+    "largest-contentful-paint",
+    "layout-shift",
+    "long-animation-frame",
+    "longtask",
+    "mark",
+    "measure",
+    "navigation",
+    "paint",
+    "resource",
+    "soft-navigation",
+    "visibility-state"
+  ],
+  "viewport": "1280 × 720",
+  "visibility": "visible",
+  "visibilityChanges": 0
+}

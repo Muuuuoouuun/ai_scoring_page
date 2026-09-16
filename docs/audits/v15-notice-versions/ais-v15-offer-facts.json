@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "offer-fact-schema-proposal",
+  "offerId": "google-ai-pro-us-students-2026",
+  "toolId": "gemini",
+  "regionCodes": ["US"],
+  "checkedAt": "2026-09-12",
+  "sourceObservedAtUtc": "2026-09-12T14:29:00Z/2026-09-12T14:33:00Z",
+  "derivedAtUtc": "2026-09-12T14:44:19Z",
+  "basisReport": {
+    "path": "/private/tmp/ais-v15-promotion-source-review.md",
+    "sha256": "994b78d59b4422abbbfc6c16bbdb2f0154ed383f8f4f310dc02caaecfd945ab4",
+    "method": "공식 본문을 재검증한 보고서의 사실을 구조화한 제안이며 Site 데이터 변경이 아니다."
+  },
+  "statusSemantics": {
+    "supported": "이 미국 학생 혜택에 명시된 사실만 해당한다. 개인의 자격 승인이나 실제 사용 검증을 뜻하지 않는다.",
+    "conditional": "출처가 명시한 조건을 충족해야 하는 사실이다. 조건을 생략해 supported로 승격하지 않는다.",
+    "unknown": "해당 혜택에 포함된다는 직접 근거 또는 해당 값이 확인되지 않았다.",
+    "featureIds": "기능 ID와 플랜·연도·용량 값을 분리한다. 기존 도구 기능과 ID를 연결해도 그 도구의 status를 이 혜택에 상속하지 않는다."
+  },
+  "sources": [
+    {
+      "id": "us-student-page",
+      "url": "https://gemini.google/us/students/?hl=en",
+      "scope": "미국 학생 페이지의 무료 Pro 플랜 FAQ, 일반 기능 소개, 하단 가격 조건",
+      "publishedOrUpdatedAt": null
+    },
+    {
+      "id": "student-offer-terms",
+      "url": "https://one.google.com/offer/studentoffer8",
+      "scope": "국가별 학생 혜택의 공통 기간·자격·결제·이용 한도 약관",
+      "publishedOrUpdatedAt": "2026-08-19"
+    },
+    {
+      "id": "student-offer-help",
+      "url": "https://support.google.com/googleone/answer/17422238?hl=en-GB",
+      "scope": "여러 학생 혜택 중 미국 12개월 Pro 체험, 신청·전환·재인증 안내",
+      "publishedOrUpdatedAt": null
+    }
+  ],
+  "publicOfferStatus": {
+    "value": "active",
+    "status": "supported",
+    "meaning": "확인 시점에 미국 공식 페이지가 모집을 안내하며 공개된 등록 마감일 이전이다.",
+    "personalEligibility": "unknown",
+    "claimFlowCompleted": false,
+    "sourceUrl": "https://gemini.google/us/students/?hl=en"
+  },
+  "offerFeatures": [
+    {
+      "id": "gemini-usage-limits",
+      "name": "Gemini 사용 한도",
+      "status": "supported",
+      "included": true,
+      "value": 4,
+      "unit": "multiplier",
+      "comparisonBaseline": null,
+      "sourceScope": "미국 무료 Google AI Pro 학생 플랜 FAQ의 명시적 혜택 목록",
+      "condition": "학생 혜택 자격과 약관 적용. 세부 한도와 배수 비교 기준은 미확인이고 한도는 변경될 수 있다.",
+      "sourceUrl": "https://gemini.google/us/students/?hl=en",
+      "conditionSourceUrl": "https://one.google.com/offer/studentoffer8"
+    },
+    {
+      "id": "google-cloud-storage",
+      "name": "Google 저장공간",
+      "status": "supported",
+      "included": true,
+      "value": 5,
+      "unit": "TB",
+      "additionalToExistingStorage": null,
+      "sourceScope": "미국 무료 Google AI Pro 학생 플랜 FAQ의 명시적 혜택 목록",
+      "condition": "학생 혜택 자격과 기간 적용. 기존 저장공간에 5TB를 추가한다는 뜻으로 확장하지 않는다.",
+      "sourceUrl": "https://gemini.google/us/students/?hl=en"
+    },
+    {
+      "id": "gemini-spark-access",
+      "name": "Gemini Spark 이용",
+      "status": "supported",
+      "included": true,
+      "usageLimit": null,
+      "sourceScope": "미국 무료 Google AI Pro 학생 플랜 FAQ의 명시적 혜택 목록",
+      "condition": "학생 혜택 자격과 기간 적용. 개별 기능·기기·사용량 한도는 이 목록만으로 확인되지 않는다.",
+      "sourceUrl": "https://gemini.google/us/students/?hl=en"
+    },
+    {
+      "id": "gemini-omni-access",
+      "name": "Gemini Omni 이용",
+      "status": "supported",
+      "included": true,
+      "usageLimit": null,
+      "sourceScope": "미국 무료 Google AI Pro 학생 플랜 FAQ의 명시적 혜택 목록",
+      "condition": "학생 혜택 자격과 기간 적용. 개별 기능·기기·사용량 한도는 이 목록만으로 확인되지 않는다.",
+      "sourceUrl": "https://gemini.google/us/students/?hl=en"
+    }
+  ],
+  "generalPageCapabilities": [
+    {
+      "id": "class-material-upload",
+      "name": "수업 자료 업로드",
+      "status": "unknown",
+      "includedInOffer": null,
+      "capabilityMentionObserved": true,
+      "countsAsOfferGuarantee": false,
+      "sourceScope": "학생 페이지의 일반 학습 기능 소개",
+      "condition": "이 기능 소개를 학생 Pro 플랜의 파일 종류·용량·횟수 보장으로 승격하지 않는다.",
+      "sourceUrl": "https://gemini.google/us/students/?hl=en"
+    },
+    {
+      "id": "study-notebooks",
+      "name": "학습 노트북",
+      "status": "unknown",
+      "includedInOffer": null,
+      "capabilityMentionObserved": true,
+      "countsAsOfferGuarantee": false,
+      "sourceScope": "학생 페이지의 일반 학습 기능 소개",
+      "condition": "소개된 기능의 플랜별 제공 범위와 학생 혜택 포함 조건은 별도 확인이 필요하다.",
+      "sourceUrl": "https://gemini.google/us/students/?hl=en"
+    },
+    {
+      "id": "interactive-learning-visualizations",
+      "name": "대화형 학습 시각화",
+      "status": "unknown",
+      "includedInOffer": null,
+      "capabilityMentionObserved": true,
+      "countsAsOfferGuarantee": false,
+      "sourceScope": "학생 페이지의 일반 학습 기능 소개",
+      "condition": "소개된 기능의 플랜별 제공 범위와 학생 혜택 포함 조건은 별도 확인이 필요하다.",
+      "sourceUrl": "https://gemini.google/us/students/?hl=en"
+    },
+    {
+      "id": "gemini-live",
+      "name": "Gemini Live",
+      "status": "unknown",
+      "includedInOffer": null,
+      "capabilityMentionObserved": true,
+      "countsAsOfferGuarantee": false,
+      "sourceScope": "학생 페이지의 일반 학습 기능 소개",
+      "condition": "소개된 기능의 플랜별 제공 범위와 학생 혜택 포함 조건은 별도 확인이 필요하다.",
+      "sourceUrl": "https://gemini.google/us/students/?hl=en"
+    }
+  ],
+  "excludedFeatures": [
+    {
+      "id": "youtube-premium",
+      "name": "YouTube Premium",
+      "included": false,
+      "evidenceStatus": "explicitly_excluded",
+      "sourceScope": "미국 12개월 무료 Google AI Pro 체험",
+      "sourceUrl": "https://support.google.com/googleone/answer/17422238?hl=en-GB"
+    },
+    {
+      "id": "youtube-premium-lite",
+      "name": "YouTube Premium Lite",
+      "included": false,
+      "evidenceStatus": "explicitly_excluded",
+      "sourceScope": "미국 12개월 무료 Google AI Pro 체험",
+      "sourceUrl": "https://support.google.com/googleone/answer/17422238?hl=en-GB"
+    }
+  ],
+  "duration": {
+    "months": 12,
+    "status": "supported",
+    "startsOnEvent": "offer_redemption",
+    "endsAt": null,
+    "sourceUrl": "https://one.google.com/offer/studentoffer8"
+  },
+  "introductoryPrice": {
+    "amount": 0,
+    "status": "supported",
+    "normalization": "등록일부터 12개월간 구독 혜택 비용이 없다는 문장을 숫자 0으로 정규화",
+    "currencyCodeExplicit": null,
+    "currencySymbolExplicit": null,
+    "billingPeriod": "offer_period",
+    "qualifyingPaymentMethodRequired": true,
+    "taxIncluded": null,
+    "taxRate": null,
+    "taxEvidenceStatus": "unknown",
+    "sourceUrl": "https://one.google.com/offer/studentoffer8"
+  },
+  "renewal": {
+    "displayedAmount": 19.99,
+    "amountStatus": "supported",
+    "currencySymbolExplicit": "$",
+    "currencyCodeExplicit": null,
+    "currencyInference": {
+      "code": "USD",
+      "status": "inferred",
+      "basis": "미국 지역 페이지의 달러 기호 가격이라는 문맥 해석이며 해당 가격 문장에 ISO 통화 코드가 직접 표시된 것은 아니다."
+    },
+    "billingUnit": "month",
+    "billingInterval": 1,
+    "beginsAfter": "offer_period",
+    "firstChargeAt": null,
+    "autoRenewal": true,
+    "autoRenewalStatus": "conditional",
+    "condition": "혜택 종료 전에 취소하지 않으면 국가별 해당 플랜의 정상 월요금이 청구된다. 법상 추가 동의가 필요한 경우는 예외다.",
+    "taxIncluded": null,
+    "taxRate": null,
+    "taxEvidenceStatus": "unknown",
+    "futurePriceLocked": null,
+    "futurePriceLockStatus": "unknown",
+    "accountCheckoutTotal": null,
+    "priceSourceUrl": "https://gemini.google/us/students/?hl=en",
+    "policySourceUrl": "https://one.google.com/offer/studentoffer8",
+    "displayGuidance": "현재 공개된 갱신 표기 가격으로 표시한다. 세금 포함 총액이나 체험 종료 시점까지 고정된 가격으로 표시하지 않는다."
+  },
+  "redemptionDeadline": {
+    "date": "2026-12-31",
+    "dateStatus": "supported",
+    "precision": "date",
+    "localTime": null,
+    "timeZone": null,
+    "instant": null,
+    "exactTimeStatus": "unknown",
+    "sourceUrls": ["https://gemini.google/us/students/?hl=en", "https://one.google.com/offer/studentoffer8"]
+  },
+  "eligibility": {
+    "status": "conditional",
+    "minimumAge": 18,
+    "institutionRegionCodes": ["US"],
+    "requiresStudentVerification": true,
+    "verificationProvider": "SheerID",
+    "requiresPersonalGoogleAccount": true,
+    "requiresQualifyingPaymentMethod": true,
+    "personalEligibilityChecked": false,
+    "condition": "자격 있는 미국 고등교육기관의 학생이어야 하며 약관의 계정·가족 그룹·구독 제외 조건이 적용된다. 이 객체의 요약만으로 최종 자격을 판정하지 않는다.",
+    "sourceUrls": ["https://one.google.com/offer/studentoffer8", "https://support.google.com/googleone/answer/17422238?hl=en-GB"]
+  },
+  "links": {
+    "publicOfferUrl": "https://gemini.google/us/students/?hl=en",
+    "claimUrl": "https://one.google.com/ai-student?plans=1%2C2",
+    "claimLinkObservedOnOfficialPage": true,
+    "claimDestinationObservation": "공개 읽기 요청은 Google 계정 로그인으로 리디렉션됐다. 이후 신청·계정별 제안·결제 금액은 확인하지 않았다.",
+    "genericStudentUrl": "https://gemini.google/students/",
+    "genericUrlRegionCaveat": "이번 접근은 독일어 지역판을 반환했으므로 미국 가격·혜택 근거로 사용하지 않는다."
+  },
+  "integrationRules": [
+    "offerFeatures의 supported 네 항목만 이 혜택의 명시적 포함 기능으로 사용할 수 있다.",
+    "generalPageCapabilities의 unknown은 도구 기능의 부재 판정이 아니다. 학생 Pro 혜택에 포함된다는 근거의 범위가 미확인이라는 뜻이다.",
+    "명시적 제외는 included:false로 유지한다. 유료 전환 이후 다른 번들의 제공 가능성을 무료 체험의 조건부 포함으로 옮기지 않는다.",
+    "통화 추론, 세금 미확인, 미래 가격 고정 미확인을 가격 표시에서 보존한다.",
+    "날짜 전용 마감에 임의 시각이나 시간대를 붙이지 않는다. 확인일 변경만으로 혜택 내용 변경을 주장하지 않는다."
+  ]
+}

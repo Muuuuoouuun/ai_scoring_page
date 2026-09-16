@@ -1,0 +1,14 @@
+command: node --experimental-strip-types /private/tmp/ais-v12-feedback-boundary-check.mjs
+exit_code: 0
+PASS old cohort remains outside after reopen+answer
+PASS answered but no evaluable responses => null, not0
+PASS exact actor+scope deletion preserves guest,beta,alpha personal
+PASS exact UTC cutoff inclusive/current inclusive/outside+future excluded
+PASS past version excluded from current metric but retained in own export
+PASS comment stays parameterized data,admin feedback exposes no raw token/hash/account ID
+Independent memory/API cases passed: 6
+
+Final V12 small-repair recheck, 2026-09-12:
+Same command rerun after Feedback.tsx c98d2afbcc9d1981f51318bc4503b0d4c4cadf962c396b4955372f7e070a5c55.
+exit_code: 0
+All six independent memory/API cases passed again with identical PASS lines.

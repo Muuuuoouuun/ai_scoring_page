@@ -1,0 +1,5 @@
+'use client';
+import {useState,useEffect} from 'react';
+import {useApp,api} from './Provider';
+import {Bookmark,Check} from './Icons';
+export default function SaveContent({type,target,title}:{type:string;target:string;title:string}){const {user,signIn,toast}=useApp(),[saved,setSaved]=useState(false),[busy,setBusy]=useState(false);async function save(){if(!user){sessionStorage.setItem('ais-pending-content',type+':'+target);signIn();return;}setBusy(true);try{await api('/api/workspace',{method:'POST',body:JSON.stringify({action:'save',ifAbsent:true,kind:'saved',target:type+':'+target,payload:{type,target,title}})});setSaved(true);toast('저장한 콘텐츠에 추가했습니다.');}catch(e){toast((e as Error).message);}finally{setBusy(false);}}useEffect(()=>{if(user&&sessionStorage.getItem('ais-pending-content')===type+':'+target){sessionStorage.removeItem('ais-pending-content');void save();}},[user,type,target]);return <button className="button secondary small" onClick={save} disabled={busy}>{saved?<Check size={15}/>:<Bookmark size={15}/>} {saved?'저장됨':'저장'}</button>;}

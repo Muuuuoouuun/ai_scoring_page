@@ -1,0 +1,1529 @@
+{
+  "checkedAt": "2026-09-12T11:55:29.261Z",
+  "scope": "actual TypeScript modules; memory SQLite API; no browser/network/Site edits",
+  "sourceHashes": {
+    "lib/catalog-search.ts": "5a4d5a9ba272efb042920712214f7dce1e8c00ef0434adb7a468eaad010a9e80",
+    "lib/catalog.ts": "838e47c9d26bdea76f6d6be217d9e1c80d4d99cdf6e85692cde875754a56d140",
+    "components/Recommend.tsx": "bbf4f0decf140c722a7eb0c07604ac76c17b1f846ef09e29acc71156d301429d",
+    "components/SearchMeaning.tsx": "4f016ac036db2196b0e7deba74a037d887f578821719447fecbb56491bb6af6b",
+    "components/Explore.tsx": "ccf9e876e47df8c6f03181986f1727010e33765a1559f610e83866e7afbcfa08",
+    "app/api/search/route.ts": "4ec15ffc24583d9deaa6db99a337ffcadcbe4de55b5459408901662933e3a94e"
+  },
+  "sourceUnchangedDuringRun": true,
+  "observations": [
+    {
+      "query": "보고서 작성, 광고는 제외하고",
+      "meaning": {
+        "positive": "보고서 작성,",
+        "exclusions": [],
+        "unresolvedExclusions": [
+          "광고는"
+        ],
+        "requirements": [],
+        "free": false
+      },
+      "count": 8,
+      "top6": [
+        {
+          "id": "claude",
+          "relevance": 37.169238069005594,
+          "matchedFeatures": [
+            {
+              "name": "글 작성·수정",
+              "description": "글의 초안을 만들고 표현과 구성을 다듬습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://claude.com/pricing"
+            }
+          ]
+        },
+        {
+          "id": "perplexity",
+          "relevance": 14.110645781783122,
+          "matchedFeatures": [
+            {
+              "name": "Research",
+              "description": "복잡한 주제에 대해 심층 조사 보고서를 만듭니다.",
+              "status": "conditional",
+              "condition": "플랜별 접근 한도가 적용되며 모델 조합은 자동 선택됩니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            },
+            {
+              "name": "파일 분석",
+              "description": "문서와 이미지를 추가해 문맥을 제공하고 분석합니다.",
+              "status": "conditional",
+              "condition": "업로드 한도와 고급 기능은 플랜에 따라 달라집니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            }
+          ]
+        },
+        {
+          "id": "gemini",
+          "relevance": 13.75,
+          "matchedFeatures": [
+            {
+              "name": "대화·문서 분석",
+              "description": "질문에 답하고 여러 문서의 내용을 분석하도록 요청할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://gemini.google/release-notes/"
+            }
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "relevance": 12.323763854522081,
+          "matchedFeatures": [
+            {
+              "name": "다양한 자료 가져오기",
+              "description": "PDF, Google 문서, 웹 URL, 공개 YouTube URL 등을 소스로 추가합니다.",
+              "status": "conditional",
+              "condition": "지원 형식·파일 크기·소스 수 한도가 적용됩니다.",
+              "sourceUrl": "https://support.google.com/gemininotebook/answer/16215270?hl=ko"
+            }
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "relevance": 11.25,
+          "matchedFeatures": [
+            {
+              "name": "문서·시각 자료 분석",
+              "description": "문서와 PDF의 도표·차트·표를 이해하는 데 사용할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://www.anthropic.com/claude/fable"
+            }
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "relevance": 3.75,
+          "matchedFeatures": []
+        }
+      ]
+    },
+    {
+      "query": "Notion으로 문서를 쓰되 광고는 제외하고",
+      "meaning": {
+        "positive": "",
+        "exclusions": [],
+        "unresolvedExclusions": [
+          "notion으로 문서를 쓰되 광고는"
+        ],
+        "requirements": [],
+        "free": false
+      },
+      "count": 0,
+      "top6": []
+    },
+    {
+      "query": "Notion과 광고를 제외하고 문서 작성",
+      "meaning": {
+        "positive": "문서 작성",
+        "exclusions": [],
+        "unresolvedExclusions": [
+          "notion과 광고를"
+        ],
+        "requirements": [],
+        "free": false
+      },
+      "count": 8,
+      "top6": [
+        {
+          "id": "claude",
+          "relevance": 51.67945182695636,
+          "matchedFeatures": [
+            {
+              "name": "글 작성·수정",
+              "description": "글의 초안을 만들고 표현과 구성을 다듬습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://claude.com/pricing"
+            }
+          ]
+        },
+        {
+          "id": "gemini",
+          "relevance": 33.28064127385229,
+          "matchedFeatures": [
+            {
+              "name": "대화·문서 분석",
+              "description": "질문에 답하고 여러 문서의 내용을 분석하도록 요청할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://gemini.google/release-notes/"
+            }
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "relevance": 31.431662649647365,
+          "matchedFeatures": [
+            {
+              "name": "문서·시각 자료 분석",
+              "description": "문서와 PDF의 도표·차트·표를 이해하는 데 사용할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://www.anthropic.com/claude/fable"
+            }
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "relevance": 13.41123513374584,
+          "matchedFeatures": [
+            {
+              "name": "다양한 자료 가져오기",
+              "description": "PDF, Google 문서, 웹 URL, 공개 YouTube URL 등을 소스로 추가합니다.",
+              "status": "conditional",
+              "condition": "지원 형식·파일 크기·소스 수 한도가 적용됩니다.",
+              "sourceUrl": "https://support.google.com/gemininotebook/answer/16215270?hl=ko"
+            }
+          ]
+        },
+        {
+          "id": "perplexity",
+          "relevance": 11.510213757950764,
+          "matchedFeatures": [
+            {
+              "name": "파일 분석",
+              "description": "문서와 이미지를 추가해 문맥을 제공하고 분석합니다.",
+              "status": "conditional",
+              "condition": "업로드 한도와 고급 기능은 플랜에 따라 달라집니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            },
+            {
+              "name": "Research",
+              "description": "복잡한 주제에 대해 심층 조사 보고서를 만듭니다.",
+              "status": "conditional",
+              "condition": "플랜별 접근 한도가 적용되며 모델 조합은 자동 선택됩니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            }
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "relevance": 8.09014250530051,
+          "matchedFeatures": []
+        }
+      ]
+    },
+    {
+      "query": "바코드 도구는 제외하고 문서 작성",
+      "meaning": {
+        "positive": "문서 작성",
+        "exclusions": [],
+        "unresolvedExclusions": [
+          "바코드 도구는"
+        ],
+        "requirements": [],
+        "free": false
+      },
+      "count": 8,
+      "top6": [
+        {
+          "id": "claude",
+          "relevance": 51.67945182695636,
+          "matchedFeatures": [
+            {
+              "name": "글 작성·수정",
+              "description": "글의 초안을 만들고 표현과 구성을 다듬습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://claude.com/pricing"
+            }
+          ]
+        },
+        {
+          "id": "gemini",
+          "relevance": 33.28064127385229,
+          "matchedFeatures": [
+            {
+              "name": "대화·문서 분석",
+              "description": "질문에 답하고 여러 문서의 내용을 분석하도록 요청할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://gemini.google/release-notes/"
+            }
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "relevance": 31.431662649647365,
+          "matchedFeatures": [
+            {
+              "name": "문서·시각 자료 분석",
+              "description": "문서와 PDF의 도표·차트·표를 이해하는 데 사용할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://www.anthropic.com/claude/fable"
+            }
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "relevance": 13.41123513374584,
+          "matchedFeatures": [
+            {
+              "name": "다양한 자료 가져오기",
+              "description": "PDF, Google 문서, 웹 URL, 공개 YouTube URL 등을 소스로 추가합니다.",
+              "status": "conditional",
+              "condition": "지원 형식·파일 크기·소스 수 한도가 적용됩니다.",
+              "sourceUrl": "https://support.google.com/gemininotebook/answer/16215270?hl=ko"
+            }
+          ]
+        },
+        {
+          "id": "perplexity",
+          "relevance": 11.510213757950764,
+          "matchedFeatures": [
+            {
+              "name": "파일 분석",
+              "description": "문서와 이미지를 추가해 문맥을 제공하고 분석합니다.",
+              "status": "conditional",
+              "condition": "업로드 한도와 고급 기능은 플랜에 따라 달라집니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            },
+            {
+              "name": "Research",
+              "description": "복잡한 주제에 대해 심층 조사 보고서를 만듭니다.",
+              "status": "conditional",
+              "condition": "플랜별 접근 한도가 적용되며 모델 조합은 자동 선택됩니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            }
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "relevance": 8.09014250530051,
+          "matchedFeatures": []
+        }
+      ]
+    },
+    {
+      "query": "그림자는 빼고 보고서 작성",
+      "meaning": {
+        "positive": "보고서 작성",
+        "exclusions": [],
+        "unresolvedExclusions": [
+          "그림자는"
+        ],
+        "requirements": [],
+        "free": false
+      },
+      "count": 8,
+      "top6": [
+        {
+          "id": "claude",
+          "relevance": 37.169238069005594,
+          "matchedFeatures": [
+            {
+              "name": "글 작성·수정",
+              "description": "글의 초안을 만들고 표현과 구성을 다듬습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://claude.com/pricing"
+            }
+          ]
+        },
+        {
+          "id": "perplexity",
+          "relevance": 14.110645781783122,
+          "matchedFeatures": [
+            {
+              "name": "Research",
+              "description": "복잡한 주제에 대해 심층 조사 보고서를 만듭니다.",
+              "status": "conditional",
+              "condition": "플랜별 접근 한도가 적용되며 모델 조합은 자동 선택됩니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            },
+            {
+              "name": "파일 분석",
+              "description": "문서와 이미지를 추가해 문맥을 제공하고 분석합니다.",
+              "status": "conditional",
+              "condition": "업로드 한도와 고급 기능은 플랜에 따라 달라집니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            }
+          ]
+        },
+        {
+          "id": "gemini",
+          "relevance": 13.75,
+          "matchedFeatures": [
+            {
+              "name": "대화·문서 분석",
+              "description": "질문에 답하고 여러 문서의 내용을 분석하도록 요청할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://gemini.google/release-notes/"
+            }
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "relevance": 12.323763854522081,
+          "matchedFeatures": [
+            {
+              "name": "다양한 자료 가져오기",
+              "description": "PDF, Google 문서, 웹 URL, 공개 YouTube URL 등을 소스로 추가합니다.",
+              "status": "conditional",
+              "condition": "지원 형식·파일 크기·소스 수 한도가 적용됩니다.",
+              "sourceUrl": "https://support.google.com/gemininotebook/answer/16215270?hl=ko"
+            }
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "relevance": 11.25,
+          "matchedFeatures": [
+            {
+              "name": "문서·시각 자료 분석",
+              "description": "문서와 PDF의 도표·차트·표를 이해하는 데 사용할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://www.anthropic.com/claude/fable"
+            }
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "relevance": 3.75,
+          "matchedFeatures": []
+        }
+      ]
+    },
+    {
+      "query": "Notion은 제외하지 말고 문서 작성",
+      "meaning": {
+        "positive": "notion은 포함 문서 작성",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "count": 8,
+      "top6": [
+        {
+          "id": "claude",
+          "relevance": 43.67945182695636,
+          "matchedFeatures": [
+            {
+              "name": "글 작성·수정",
+              "description": "글의 초안을 만들고 표현과 구성을 다듬습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://claude.com/pricing"
+            }
+          ]
+        },
+        {
+          "id": "gemini",
+          "relevance": 33.28064127385229,
+          "matchedFeatures": [
+            {
+              "name": "대화·문서 분석",
+              "description": "질문에 답하고 여러 문서의 내용을 분석하도록 요청할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://gemini.google/release-notes/"
+            }
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "relevance": 31.431662649647365,
+          "matchedFeatures": [
+            {
+              "name": "문서·시각 자료 분석",
+              "description": "문서와 PDF의 도표·차트·표를 이해하는 데 사용할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://www.anthropic.com/claude/fable"
+            }
+          ]
+        },
+        {
+          "id": "notion",
+          "relevance": 20.249182379339018,
+          "matchedFeatures": []
+        },
+        {
+          "id": "notebooklm",
+          "relevance": 13.41123513374584,
+          "matchedFeatures": [
+            {
+              "name": "다양한 자료 가져오기",
+              "description": "PDF, Google 문서, 웹 URL, 공개 YouTube URL 등을 소스로 추가합니다.",
+              "status": "conditional",
+              "condition": "지원 형식·파일 크기·소스 수 한도가 적용됩니다.",
+              "sourceUrl": "https://support.google.com/gemininotebook/answer/16215270?hl=ko"
+            }
+          ]
+        },
+        {
+          "id": "perplexity",
+          "relevance": 11.510213757950764,
+          "matchedFeatures": [
+            {
+              "name": "파일 분석",
+              "description": "문서와 이미지를 추가해 문맥을 제공하고 분석합니다.",
+              "status": "conditional",
+              "condition": "업로드 한도와 고급 기능은 플랜에 따라 달라집니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            },
+            {
+              "name": "Research",
+              "description": "복잡한 주제에 대해 심층 조사 보고서를 만듭니다.",
+              "status": "conditional",
+              "condition": "플랜별 접근 한도가 적용되며 모델 조합은 자동 선택됩니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "모델을 제외하지 말고 코딩",
+      "meaning": {
+        "positive": "모델을 포함 코딩",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "count": 9,
+      "top6": [
+        {
+          "id": "claude-fable-5-1",
+          "relevance": 31.304421724930172,
+          "matchedFeatures": [
+            {
+              "name": "코딩",
+              "description": "코드베이스 전반의 구현·검토·성능 개선 작업에 사용할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://www.anthropic.com/claude/fable"
+            }
+          ]
+        },
+        {
+          "id": "github-copilot",
+          "relevance": 26.031660589866082,
+          "matchedFeatures": [
+            {
+              "name": "코드 제안",
+              "description": "IDE에서 코드를 입력할 때 제안을 받습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://docs.github.com/en/copilot/get-started/what-is-github-copilot"
+            },
+            {
+              "name": "코드 대화",
+              "description": "코드의 동작과 문제 해결 방법을 질문합니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://docs.github.com/en/copilot/get-started/what-is-github-copilot"
+            },
+            {
+              "name": "개발 작업 위임",
+              "description": "조사·계획·코드 변경과 검토할 PR 준비를 요청합니다.",
+              "status": "conditional",
+              "condition": "기능, 플랜과 조직 정책에 따라 접근 범위가 다릅니다.",
+              "sourceUrl": "https://docs.github.com/en/copilot/get-started/what-is-github-copilot"
+            }
+          ]
+        },
+        {
+          "id": "gpt-6-astra",
+          "relevance": 14.59161547647759,
+          "matchedFeatures": []
+        },
+        {
+          "id": "claude",
+          "relevance": 13.75,
+          "matchedFeatures": [
+            {
+              "name": "파일 생성·코드 실행",
+              "description": "파일을 만들거나 편집하고 코드를 실행합니다.",
+              "status": "conditional",
+              "condition": "플랜별 사용량 한도가 적용됩니다.",
+              "sourceUrl": "https://claude.com/pricing"
+            }
+          ]
+        },
+        {
+          "id": "cursor",
+          "relevance": 9.489901120638027,
+          "matchedFeatures": [
+            {
+              "name": "Agent",
+              "description": "프로젝트의 개발 작업을 에이전트에 요청합니다.",
+              "status": "conditional",
+              "condition": "Hobby는 Agent 요청 수가 제한됩니다.",
+              "sourceUrl": "https://cursor.com/pricing"
+            },
+            {
+              "name": "Projects 베타",
+              "description": "지속적인 프로젝트 문맥을 유지하며 여러 개발 작업을 조정합니다.",
+              "status": "conditional",
+              "condition": "9월 10일 기준 베타로 순차 제공 중입니다.",
+              "sourceUrl": "https://cursor.com/changelog"
+            }
+          ]
+        },
+        {
+          "id": "figma",
+          "relevance": 8.75,
+          "matchedFeatures": [
+            {
+              "name": "개발 전달·고급 기능",
+              "description": "Dev Mode와 고급 프로토타입 등으로 구현에 필요한 정보를 다룹니다.",
+              "status": "conditional",
+              "condition": "플랜과 Full·Dev 등 좌석 종류에 따라 접근 범위가 다릅니다.",
+              "sourceUrl": "https://www.figma.com/pricing/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "무료가 아닌 이미지 생성",
+      "meaning": {
+        "positive": "이미지 생성",
+        "exclusions": [],
+        "unresolvedExclusions": [
+          "무료가"
+        ],
+        "requirements": [],
+        "free": false
+      },
+      "count": 3,
+      "top6": [
+        {
+          "id": "gemini",
+          "relevance": 125.35003605954807,
+          "matchedFeatures": [
+            {
+              "name": "이미지 생성",
+              "description": "Nano Banana를 활용한 이미지 생성을 지원합니다.",
+              "status": "conditional",
+              "condition": "계정, 지역과 사용량 제한을 확인해야 합니다.",
+              "sourceUrl": "https://gemini.google/release-notes/"
+            }
+          ]
+        },
+        {
+          "id": "midjourney",
+          "relevance": 102.05501407463278,
+          "matchedFeatures": [
+            {
+              "name": "텍스트로 이미지 생성",
+              "description": "웹의 Imagine 입력창에 프롬프트를 작성해 이미지를 생성합니다.",
+              "status": "conditional",
+              "condition": "웹과 Discord는 현재 무료 체험 없이 유료 구독이 필요합니다.",
+              "sourceUrl": "https://docs.midjourney.com/hc/en-us/articles/33390732264589-Creating-on-Web"
+            }
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "relevance": 97.40523392378572,
+          "matchedFeatures": [
+            {
+              "name": "이미지 생성",
+              "description": "텍스트 설명을 이미지로 만들 수 있습니다.",
+              "status": "conditional",
+              "condition": "무료 플랜은 이미지 생성 횟수와 속도가 제한됩니다.",
+              "sourceUrl": "https://chatgpt.com/pricing/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "무료가 아니어도 이미지 생성",
+      "meaning": {
+        "positive": "무료가 아니어도 이미지 생성",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "count": 3,
+      "top6": [
+        {
+          "id": "midjourney",
+          "relevance": 54.05501407463277,
+          "matchedFeatures": [
+            {
+              "name": "텍스트로 이미지 생성",
+              "description": "웹의 Imagine 입력창에 프롬프트를 작성해 이미지를 생성합니다.",
+              "status": "conditional",
+              "condition": "웹과 Discord는 현재 무료 체험 없이 유료 구독이 필요합니다.",
+              "sourceUrl": "https://docs.midjourney.com/hc/en-us/articles/33390732264589-Creating-on-Web"
+            }
+          ]
+        },
+        {
+          "id": "gemini",
+          "relevance": 53.35003605954807,
+          "matchedFeatures": [
+            {
+              "name": "이미지 생성",
+              "description": "Nano Banana를 활용한 이미지 생성을 지원합니다.",
+              "status": "conditional",
+              "condition": "계정, 지역과 사용량 제한을 확인해야 합니다.",
+              "sourceUrl": "https://gemini.google/release-notes/"
+            }
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "relevance": 47.00523392378572,
+          "matchedFeatures": [
+            {
+              "name": "이미지 생성",
+              "description": "텍스트 설명을 이미지로 만들 수 있습니다.",
+              "status": "conditional",
+              "condition": "무료 플랜은 이미지 생성 횟수와 속도가 제한됩니다.",
+              "sourceUrl": "https://chatgpt.com/pricing/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "코딩뿐만 아니라 문서도",
+      "meaning": {
+        "positive": "코딩뿐만 아니라 문서도",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "count": 8,
+      "top6": [
+        {
+          "id": "gemini",
+          "relevance": 33.28064127385229,
+          "matchedFeatures": [
+            {
+              "name": "대화·문서 분석",
+              "description": "질문에 답하고 여러 문서의 내용을 분석하도록 요청할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://gemini.google/release-notes/"
+            }
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "relevance": 31.431662649647365,
+          "matchedFeatures": [
+            {
+              "name": "문서·시각 자료 분석",
+              "description": "문서와 PDF의 도표·차트·표를 이해하는 데 사용할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://www.anthropic.com/claude/fable"
+            }
+          ]
+        },
+        {
+          "id": "claude",
+          "relevance": 21.510213757950766,
+          "matchedFeatures": [
+            {
+              "name": "글 작성·수정",
+              "description": "글의 초안을 만들고 표현과 구성을 다듬습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://claude.com/pricing"
+            }
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "relevance": 13.41123513374584,
+          "matchedFeatures": [
+            {
+              "name": "다양한 자료 가져오기",
+              "description": "PDF, Google 문서, 웹 URL, 공개 YouTube URL 등을 소스로 추가합니다.",
+              "status": "conditional",
+              "condition": "지원 형식·파일 크기·소스 수 한도가 적용됩니다.",
+              "sourceUrl": "https://support.google.com/gemininotebook/answer/16215270?hl=ko"
+            }
+          ]
+        },
+        {
+          "id": "perplexity",
+          "relevance": 11.510213757950764,
+          "matchedFeatures": [
+            {
+              "name": "파일 분석",
+              "description": "문서와 이미지를 추가해 문맥을 제공하고 분석합니다.",
+              "status": "conditional",
+              "condition": "업로드 한도와 고급 기능은 플랜에 따라 달라집니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            },
+            {
+              "name": "Research",
+              "description": "복잡한 주제에 대해 심층 조사 보고서를 만듭니다.",
+              "status": "conditional",
+              "condition": "플랜별 접근 한도가 적용되며 모델 조합은 자동 선택됩니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            }
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "relevance": 8.09014250530051,
+          "matchedFeatures": []
+        }
+      ]
+    },
+    {
+      "query": "Notion과 Slack은 제외하고 협업",
+      "meaning": {
+        "positive": "협업",
+        "exclusions": [
+          {
+            "type": "tool",
+            "value": "slack",
+            "label": "Slack"
+          },
+          {
+            "type": "tool",
+            "value": "notion",
+            "label": "Notion"
+          }
+        ],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "count": 2,
+      "top6": [
+        {
+          "id": "vercel",
+          "relevance": 21.2188758248682,
+          "matchedFeatures": []
+        },
+        {
+          "id": "canva",
+          "relevance": 3.1828313737302296,
+          "matchedFeatures": []
+        }
+      ]
+    },
+    {
+      "query": "이미지 생성이 아닌 보고서 작성",
+      "meaning": {
+        "positive": "보고서 작성",
+        "exclusions": [
+          {
+            "type": "category",
+            "value": "image",
+            "label": "디자인·이미지"
+          }
+        ],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "count": 8,
+      "top6": [
+        {
+          "id": "claude",
+          "relevance": 37.169238069005594,
+          "matchedFeatures": [
+            {
+              "name": "글 작성·수정",
+              "description": "글의 초안을 만들고 표현과 구성을 다듬습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://claude.com/pricing"
+            }
+          ]
+        },
+        {
+          "id": "perplexity",
+          "relevance": 14.110645781783122,
+          "matchedFeatures": [
+            {
+              "name": "Research",
+              "description": "복잡한 주제에 대해 심층 조사 보고서를 만듭니다.",
+              "status": "conditional",
+              "condition": "플랜별 접근 한도가 적용되며 모델 조합은 자동 선택됩니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            },
+            {
+              "name": "파일 분석",
+              "description": "문서와 이미지를 추가해 문맥을 제공하고 분석합니다.",
+              "status": "conditional",
+              "condition": "업로드 한도와 고급 기능은 플랜에 따라 달라집니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            }
+          ]
+        },
+        {
+          "id": "gemini",
+          "relevance": 13.75,
+          "matchedFeatures": [
+            {
+              "name": "대화·문서 분석",
+              "description": "질문에 답하고 여러 문서의 내용을 분석하도록 요청할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://gemini.google/release-notes/"
+            }
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "relevance": 12.323763854522081,
+          "matchedFeatures": [
+            {
+              "name": "다양한 자료 가져오기",
+              "description": "PDF, Google 문서, 웹 URL, 공개 YouTube URL 등을 소스로 추가합니다.",
+              "status": "conditional",
+              "condition": "지원 형식·파일 크기·소스 수 한도가 적용됩니다.",
+              "sourceUrl": "https://support.google.com/gemininotebook/answer/16215270?hl=ko"
+            }
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "relevance": 11.25,
+          "matchedFeatures": [
+            {
+              "name": "문서·시각 자료 분석",
+              "description": "문서와 PDF의 도표·차트·표를 이해하는 데 사용할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://www.anthropic.com/claude/fable"
+            }
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "relevance": 3.75,
+          "matchedFeatures": []
+        }
+      ]
+    },
+    {
+      "query": "Notion 없이 보고서 작성",
+      "meaning": {
+        "positive": "보고서 작성",
+        "exclusions": [
+          {
+            "type": "tool",
+            "value": "notion",
+            "label": "Notion"
+          }
+        ],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "count": 7,
+      "top6": [
+        {
+          "id": "claude",
+          "relevance": 37.169238069005594,
+          "matchedFeatures": [
+            {
+              "name": "글 작성·수정",
+              "description": "글의 초안을 만들고 표현과 구성을 다듬습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://claude.com/pricing"
+            }
+          ]
+        },
+        {
+          "id": "perplexity",
+          "relevance": 14.110645781783122,
+          "matchedFeatures": [
+            {
+              "name": "Research",
+              "description": "복잡한 주제에 대해 심층 조사 보고서를 만듭니다.",
+              "status": "conditional",
+              "condition": "플랜별 접근 한도가 적용되며 모델 조합은 자동 선택됩니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            },
+            {
+              "name": "파일 분석",
+              "description": "문서와 이미지를 추가해 문맥을 제공하고 분석합니다.",
+              "status": "conditional",
+              "condition": "업로드 한도와 고급 기능은 플랜에 따라 달라집니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            }
+          ]
+        },
+        {
+          "id": "gemini",
+          "relevance": 13.75,
+          "matchedFeatures": [
+            {
+              "name": "대화·문서 분석",
+              "description": "질문에 답하고 여러 문서의 내용을 분석하도록 요청할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://gemini.google/release-notes/"
+            }
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "relevance": 12.323763854522081,
+          "matchedFeatures": [
+            {
+              "name": "다양한 자료 가져오기",
+              "description": "PDF, Google 문서, 웹 URL, 공개 YouTube URL 등을 소스로 추가합니다.",
+              "status": "conditional",
+              "condition": "지원 형식·파일 크기·소스 수 한도가 적용됩니다.",
+              "sourceUrl": "https://support.google.com/gemininotebook/answer/16215270?hl=ko"
+            }
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "relevance": 11.25,
+          "matchedFeatures": [
+            {
+              "name": "문서·시각 자료 분석",
+              "description": "문서와 PDF의 도표·차트·표를 이해하는 데 사용할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://www.anthropic.com/claude/fable"
+            }
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "relevance": 3.75,
+          "matchedFeatures": []
+        }
+      ]
+    },
+    {
+      "query": "보고서 작성",
+      "meaning": {
+        "positive": "보고서 작성",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "count": 8,
+      "top6": [
+        {
+          "id": "claude",
+          "relevance": 37.169238069005594,
+          "matchedFeatures": [
+            {
+              "name": "글 작성·수정",
+              "description": "글의 초안을 만들고 표현과 구성을 다듬습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://claude.com/pricing"
+            }
+          ]
+        },
+        {
+          "id": "perplexity",
+          "relevance": 14.110645781783122,
+          "matchedFeatures": [
+            {
+              "name": "Research",
+              "description": "복잡한 주제에 대해 심층 조사 보고서를 만듭니다.",
+              "status": "conditional",
+              "condition": "플랜별 접근 한도가 적용되며 모델 조합은 자동 선택됩니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            },
+            {
+              "name": "파일 분석",
+              "description": "문서와 이미지를 추가해 문맥을 제공하고 분석합니다.",
+              "status": "conditional",
+              "condition": "업로드 한도와 고급 기능은 플랜에 따라 달라집니다.",
+              "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro"
+            }
+          ]
+        },
+        {
+          "id": "gemini",
+          "relevance": 13.75,
+          "matchedFeatures": [
+            {
+              "name": "대화·문서 분석",
+              "description": "질문에 답하고 여러 문서의 내용을 분석하도록 요청할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://gemini.google/release-notes/"
+            }
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "relevance": 12.323763854522081,
+          "matchedFeatures": [
+            {
+              "name": "다양한 자료 가져오기",
+              "description": "PDF, Google 문서, 웹 URL, 공개 YouTube URL 등을 소스로 추가합니다.",
+              "status": "conditional",
+              "condition": "지원 형식·파일 크기·소스 수 한도가 적용됩니다.",
+              "sourceUrl": "https://support.google.com/gemininotebook/answer/16215270?hl=ko"
+            }
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "relevance": 11.25,
+          "matchedFeatures": [
+            {
+              "name": "문서·시각 자료 분석",
+              "description": "문서와 PDF의 도표·차트·표를 이해하는 데 사용할 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://www.anthropic.com/claude/fable"
+            }
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "relevance": 3.75,
+          "matchedFeatures": []
+        }
+      ]
+    },
+    {
+      "query": "이미지 생성",
+      "meaning": {
+        "positive": "이미지 생성",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "count": 3,
+      "top6": [
+        {
+          "id": "gemini",
+          "relevance": 125.35003605954807,
+          "matchedFeatures": [
+            {
+              "name": "이미지 생성",
+              "description": "Nano Banana를 활용한 이미지 생성을 지원합니다.",
+              "status": "conditional",
+              "condition": "계정, 지역과 사용량 제한을 확인해야 합니다.",
+              "sourceUrl": "https://gemini.google/release-notes/"
+            }
+          ]
+        },
+        {
+          "id": "midjourney",
+          "relevance": 102.05501407463278,
+          "matchedFeatures": [
+            {
+              "name": "텍스트로 이미지 생성",
+              "description": "웹의 Imagine 입력창에 프롬프트를 작성해 이미지를 생성합니다.",
+              "status": "conditional",
+              "condition": "웹과 Discord는 현재 무료 체험 없이 유료 구독이 필요합니다.",
+              "sourceUrl": "https://docs.midjourney.com/hc/en-us/articles/33390732264589-Creating-on-Web"
+            }
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "relevance": 97.40523392378572,
+          "matchedFeatures": [
+            {
+              "name": "이미지 생성",
+              "description": "텍스트 설명을 이미지로 만들 수 있습니다.",
+              "status": "conditional",
+              "condition": "무료 플랜은 이미지 생성 횟수와 속도가 제한됩니다.",
+              "sourceUrl": "https://chatgpt.com/pricing/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "art",
+      "meaning": {
+        "positive": "art",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "count": 1,
+      "top6": [
+        {
+          "id": "claude",
+          "relevance": 71.80674021862973,
+          "matchedFeatures": [
+            {
+              "name": "Artifacts",
+              "description": "대화와 별도로 결과물을 확인하고 발전시킬 수 있습니다.",
+              "status": "supported",
+              "condition": "",
+              "sourceUrl": "https://claude.com/pricing"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filterChecks": [
+    {
+      "q": "",
+      "options": {
+        "category": "image"
+      },
+      "count": 3,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "",
+      "options": {
+        "kind": "model"
+      },
+      "count": 3,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "",
+      "options": {
+        "free": true
+      },
+      "count": 17,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "",
+      "options": {
+        "korean": true
+      },
+      "count": 8,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "",
+      "options": {
+        "owned": []
+      },
+      "count": 0,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "",
+      "options": {
+        "owned": [
+          "notion",
+          "chatgpt",
+          "unknown-id"
+        ]
+      },
+      "count": 2,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "",
+      "options": {
+        "category": "image",
+        "kind": "model"
+      },
+      "count": 0,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "코딩",
+      "options": {
+        "category": "image"
+      },
+      "count": 1,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "코딩",
+      "options": {
+        "kind": "model"
+      },
+      "count": 3,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "코딩",
+      "options": {
+        "free": true
+      },
+      "count": 7,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "코딩",
+      "options": {
+        "korean": true
+      },
+      "count": 2,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "코딩",
+      "options": {
+        "owned": []
+      },
+      "count": 0,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "코딩",
+      "options": {
+        "owned": [
+          "notion",
+          "chatgpt",
+          "unknown-id"
+        ]
+      },
+      "count": 0,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "코딩",
+      "options": {
+        "category": "image",
+        "kind": "model"
+      },
+      "count": 0,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "이미지 생성",
+      "options": {
+        "category": "image"
+      },
+      "count": 1,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "이미지 생성",
+      "options": {
+        "kind": "model"
+      },
+      "count": 0,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "이미지 생성",
+      "options": {
+        "free": true
+      },
+      "count": 2,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "이미지 생성",
+      "options": {
+        "korean": true
+      },
+      "count": 2,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "이미지 생성",
+      "options": {
+        "owned": []
+      },
+      "count": 0,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "이미지 생성",
+      "options": {
+        "owned": [
+          "notion",
+          "chatgpt",
+          "unknown-id"
+        ]
+      },
+      "count": 1,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "이미지 생성",
+      "options": {
+        "category": "image",
+        "kind": "model"
+      },
+      "count": 0,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "보고서 작성",
+      "options": {
+        "category": "image"
+      },
+      "count": 0,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "보고서 작성",
+      "options": {
+        "kind": "model"
+      },
+      "count": 2,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "보고서 작성",
+      "options": {
+        "free": true
+      },
+      "count": 6,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "보고서 작성",
+      "options": {
+        "korean": true
+      },
+      "count": 5,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "보고서 작성",
+      "options": {
+        "owned": []
+      },
+      "count": 0,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "보고서 작성",
+      "options": {
+        "owned": [
+          "notion",
+          "chatgpt",
+          "unknown-id"
+        ]
+      },
+      "count": 2,
+      "subsetAndConstraints": true
+    },
+    {
+      "q": "보고서 작성",
+      "options": {
+        "category": "image",
+        "kind": "model"
+      },
+      "count": 0,
+      "subsetAndConstraints": true
+    }
+  ],
+  "apiChecks": [
+    {
+      "query": "%",
+      "type": "all",
+      "status": 200,
+      "result": {
+        "count": 0,
+        "total": 0,
+        "counts": {
+          "tool": 0,
+          "guide": 0,
+          "news": 0,
+          "event": 0,
+          "community": 0,
+          "comparison": 0
+        },
+        "partial": false
+      }
+    },
+    {
+      "query": "",
+      "type": "all",
+      "status": 200,
+      "result": {
+        "count": 0,
+        "total": 0,
+        "counts": {},
+        "partial": false
+      }
+    },
+    {
+      "query": "Notion",
+      "type": "tool",
+      "status": 200,
+      "result": {
+        "count": 1,
+        "total": 3,
+        "counts": {
+          "tool": 1,
+          "guide": 1,
+          "news": 1,
+          "event": 0,
+          "community": 0,
+          "comparison": 0
+        },
+        "partial": false
+      }
+    },
+    {
+      "query": "ChatGPT",
+      "type": "all",
+      "status": 200,
+      "result": {
+        "count": 2,
+        "total": 2,
+        "counts": {
+          "tool": 1,
+          "guide": 0,
+          "news": 1,
+          "event": 0,
+          "community": 0,
+          "comparison": 0
+        },
+        "partial": false
+      }
+    },
+    {
+      "query": "양자중력 실험장비 원격 교정",
+      "type": "all",
+      "status": 200,
+      "result": {
+        "count": 0,
+        "total": 0,
+        "counts": {
+          "tool": 0,
+          "guide": 0,
+          "news": 0,
+          "event": 0,
+          "community": 0,
+          "comparison": 0
+        },
+        "partial": false
+      }
+    },
+    {
+      "query": "161 characters",
+      "type": "all",
+      "status": 400,
+      "result": {
+        "error": "검색 조건을 확인해주세요."
+      }
+    },
+    {
+      "query": "Notion",
+      "type": "invalid",
+      "status": 400,
+      "result": {
+        "error": "검색 조건을 확인해주세요."
+      }
+    }
+  ],
+  "catalogAndOptionsUnchanged": true
+}

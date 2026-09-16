@@ -1,0 +1,48 @@
+✔ checkedAt and cosmetic offer copy do not create another material version (198.911166ms)
+✔ same-day reviewed price correction updates original card; immutable receipt survives (74.753875ms)
+✔ queued ended offer never enters provider (62.476334ms)
+✔ queued withdrawn offer never enters provider (73.319292ms)
+✔ absolute deadline blocks an already queued offer at the exact instant (51.722708ms)
+✔ date-only deadline uses explicit conservative bounds without inventing official zone (53.514125ms)
+✔ explicit constraint is retained and does not silently qualify {"maxPrice":10,"currency":"USD"} (57.617584ms)
+✔ explicit constraint is retained and does not silently qualify {"maxPrice":50000,"currency":"KRW"} (57.466584ms)
+✔ explicit constraint is retained and does not silently qualify {"neededFeatures":["offline-document-editing"]} (53.371041ms)
+✔ explicit constraint is retained and does not silently qualify {"minBenefitMonths":18} (52.773375ms)
+✔ unknown tax fails a price ceiling, known all-period prices and features can qualify (51.013584ms)
+✔ eligibility change invalidates prior confirmation but permits a relevant correction (55.927916ms)
+✔ legacy eligible string is not stamped by an unrelated save (44.343083ms)
+✔ unreviewed same-revision material edits hold dispatch (50.736625ms)
+✔ withdrawal remains on original card even with new app alerts disabled (56.648917ms)
+✔ legacy accepted date-key baseline is held honestly and later change can correct (58.105833ms)
+✔ feature-only change irrelevant to required features updates card without another email (61.110584ms)
+✔ revision-only advances preserve read state and never repeat the same offer (73.36825ms)
+✔ old read target cannot mark a newer material correction read (53.604417ms)
+✔ new announcement from one tool has its own card and shares hide topic (56.528041ms)
+✔ cards export/delete stays private and late generation cannot recreate deleted personal rows (59.892792ms)
+✔ A to B to A is a new correction for the recipient who was told B (60.312958ms)
+✔ removing an interest stops email but keeps an existing correction readable (57.809042ms)
+✖ a saved upcoming bill works with default app settings and never recreates a deleted contract (49.712917ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 23
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1728.750292
+
+✖ failing tests:
+
+test at tests/notice-versions.test.mjs:34:1
+✖ a saved upcoming bill works with default app settings and never recreates a deleted contract (49.712917ms)
+  Error: no such column: "subscription" - should this be a string literal in single-quotes?
+      at Object.runSync (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:14:206)
+      at Object.batch (file:///Users/bigmac_moon/dev/ai_score/site/tests/api-harness.mjs:13:182)
+      at Object.generateNotifications (/Users/bigmac_moon/dev/ai_score/site/lib/notifications.ts:26:45)
+      at async TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:34:440)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    code: 'ERR_SQLITE_ERROR',
+    errcode: 1,
+    errstr: 'SQL logic error'
+  }

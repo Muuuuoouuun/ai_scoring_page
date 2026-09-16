@@ -1,0 +1,43 @@
+{
+  "scroll": {
+    "height": 3659,
+    "width": 375,
+    "x": 0,
+    "y": 2815
+  },
+  "url": "http://localhost:5173/my?tab=subscription",
+  "viewport": {
+    "doc": 375,
+    "height": 844,
+    "scale": 1,
+    "width": 390
+  },
+  "visibleText": [
+    "실제 개인 순지출",
+    "기록한 내 부담 − 내 환불액",
+    "남은 예상 개인 부담",
+    "날짜별 예상 부담 · 결제 미연결",
+    "개인 실제 + 남은 예상",
+    "미확인 개인 금액은 합산 제외",
+    "실제 개인 금액 미확인 0건 · 남은 예상 부담 미확인 0회. 결제와 연결한 청구는 내 부담액을 모르는 경우에도 예상에 다시 넣지 않습니다. 통화별로 합산하며 환산하지 않습니다.",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "2026-09-12 · 환불 −₩1,000 · V10 로컬 검증용 환불",
+    "실제 개인 환불액 ₩500",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "2026-09-12 · 결제 ₩20,000 · V10 로컬 검증용 결제",
+    "실제 개인 부담액 ₩10,000",
+    "실제 정산 ₩20,000 · 수수료 포함, 원 통화 금액과 별도 표시",
+    "실제 결제일 *",
+    "실제 내 부담액 통화KRWUSDEURJPY",
+    "내가 실제 부담한 금액KRW",
+    "KRW",
+    "개인 금액은 결제·환불마다 기록합니다. 모르면 빈칸, 부담이 없음을 확인했으면 0을 입력하세요. 계약의 예상 부담액과 구분해 합산합니다.",
+    "카드에 실제 정산된 금액 (선택)",
+    "정산 통화KRWUSDEURJPY",
+    "실제 정산 총액 · 수수료 포함KRW",
+    "KRW",
+    "총액에 포함된 수수료 메모KRW",
+    "KRW",
+    "AI·SaaS를 이해하고, 나에게 맞게."
+  ]
+}
