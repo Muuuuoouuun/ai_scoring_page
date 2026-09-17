@@ -7,7 +7,7 @@ import SearchClient from "@/app/search/SearchClient";
 export default function SearchPage() {
 
   return (
-    <main className="search-journal-page">
+    <main id="main-content" className="search-journal-page">
       <section className="section search-journal-hero">
         <span className="section-kicker">MATCH WORKBENCH</span>
         <h1>{t.searchTitle}</h1>

@@ -13,42 +13,10 @@ export function CommunityContent({ tool }: { tool: Tool }) {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const loadReviews = useCallback(async () => {
-    try {
-      const res = await fetch(`/api/reviews/${tool.id}`);
-      if (res.ok) setReviews(await res.json());
-    } finally {
-      setLoading(false);
-    }
-  }, [tool.id]);
-
-  useEffect(() => {
-    loadReviews();
-  }, [loadReviews]);
-
-  const locale = lang === "ko" ? "ko-KR" : "en-US";
-
-  return (
-    <div className="tab-content">
-      <div className="community-grid" style={{ gridTemplateColumns: "1fr" }}>
-        <section>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
-            <h2 style={{ margin: 0 }}>
-              {t.latestReviews}
-              <span style={{ color: "var(--muted)", fontWeight: 400, fontSize: "1rem", marginLeft: "0.5rem" }}>
-                ({reviews.length})
-              </span>
-            </h2>
-            <Link href="/community" className="secondary-button" style={{ fontSize: "0.875rem" }}>
-              {lang === "ko" ? "전체 보기 →" : "View all →"}
-            </Link>
-          </div>
-
-          {loading ? (
-            <p style={{ color: "var(--muted)" }}>{lang === "ko" ? "불러오는 중..." : "Loading..."}</p>
-          ) : reviews.length === 0 ? (
-            <div className="card" style={{ textAlign: "center", padding: "2rem" }}>
-              <p style={{ color: "var(--muted)" }}>
+    return (
+        <div className="card empty-state-card">
+            <h2>{t.tabCommunity}</h2>
+            <p className="text-muted">
                 {lang === "ko"
                   ? "아직 리뷰가 없습니다. 첫 번째 리뷰를 남겨보세요!"
                   : "No reviews yet. Be the first!"}

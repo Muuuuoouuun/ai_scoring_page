@@ -7,97 +7,14 @@ import { useLanguage } from "@/components/LanguageProvider";
 const formatDate = (iso: string, locale: string) =>
   new Intl.DateTimeFormat(locale, { dateStyle: "medium", timeStyle: "short" }).format(new Date(iso));
 
-export function DiscussionContent({ tool }: { tool: Tool }) {
-  const { t, lang } = useLanguage();
-  const [discussions, setDiscussions] = useState<Discussion[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-  const [nickname, setNickname] = useState("");
-  const [submitting, setSubmitting] = useState(false);
-  const [replyingTo, setReplyingTo] = useState<string | null>(null);
-  const [replyContent, setReplyContent] = useState("");
-  const [replyNickname, setReplyNickname] = useState("");
-  const [error, setError] = useState("");
-
-  const loadDiscussions = useCallback(async () => {
-    setLoading(true);
-    try {
-      const res = await fetch(`/api/discussions/${tool.id}`);
-      if (res.ok) setDiscussions(await res.json());
-    } finally {
-      setLoading(false);
-    }
-  }, [tool.id]);
-
-  useEffect(() => {
-    loadDiscussions();
-  }, [loadDiscussions]);
-
-  const handlePost = async () => {
-    if (!title.trim() || !content.trim()) return;
-    setSubmitting(true);
-    setError("");
-    try {
-      const res = await fetch(`/api/discussions/${tool.id}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title, content, nickname })
-      });
-      if (!res.ok) {
-        const data = await res.json();
-        setError(data.error ?? "오류 발생");
-        return;
-      }
-      const newDiscussion: Discussion = await res.json();
-      setDiscussions((prev) => [newDiscussion, ...prev]);
-      setTitle("");
-      setContent("");
-      setNickname("");
-    } catch {
-      setError("네트워크 오류");
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const handleReply = async (discussionId: string) => {
-    if (!replyContent.trim()) return;
-    setSubmitting(true);
-    try {
-      const res = await fetch(`/api/discussions/${tool.id}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ replyTo: discussionId, replyContent, nickname: replyNickname })
-      });
-      if (res.ok) {
-        await loadDiscussions();
-        setReplyingTo(null);
-        setReplyContent("");
-        setReplyNickname("");
-      }
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const locale = lang === "ko" ? "ko-KR" : "en-US";
-
-  return (
-    <div className="tab-content">
-      {/* 새 토론 작성 */}
-      <section className="card" style={{ marginBottom: "1.5rem" }}>
-        <strong style={{ display: "block", marginBottom: "1rem" }}>
-          {lang === "ko" ? "새 토론 시작" : "Start a Discussion"}
-        </strong>
-        <div className="form-field">
-          <span className="form-field-label">{t.nickname}</span>
-          <input
-            value={nickname}
-            onChange={(e) => setNickname(e.target.value)}
-            maxLength={24}
-            placeholder={t.nicknamePlaceholder}
-          />
+    return (
+        <div className="card empty-state-card">
+            <h2>{t.tabDiscussion}</h2>
+            <p className="text-muted">
+                {lang === "ko"
+                    ? "이 도구의 장단점에 대해 자유롭게 토론해보세요. (준비 중)"
+                    : "Discuss the pros and cons of this tool freely. (Coming soon)"}
+            </p>
         </div>
         <div className="form-field">
           <span className="form-field-label">{lang === "ko" ? "제목" : "Title"}</span>

@@ -17,37 +17,44 @@ export function CapabilityComparisonTable({
   toolName: string;
   rows: CapabilityComparison[];
 }) {
+  const { lang, t } = useLanguage();
 
   return (
     <section className="card comparison-card">
-      <div className="comparison-head-block">
+      <div className="comparison-card-head">
         <span className="section-kicker">CAPABILITY DELTA</span>
-        <h2>{t.comparisonTitle}</h2>
-        <p className="text-muted">{t.comparisonDesc}</p>
+        <strong>{t.comparisonTitle}</strong>
       </div>
-
-      <div className="comparison-list">
+      <div className="comparison-table" role="table" aria-label={lang === "ko" ? "도구 기능 비교표" : "Capability comparison"}>
+        <div className="comparison-head" role="row">
+          <span role="columnheader">{t.comparisonTarget}</span>
+          <span role="columnheader" className="comparison-col-better">
+            {toolName} {t.comparisonBetter}
+          </span>
+          <span role="columnheader" className="comparison-col-worse">
+            {toolName} {t.comparisonWorse}
+          </span>
+        </div>
         {rows.map((row) => (
-          <article className="comparison-block" key={row.competitor}>
-            <header className="comparison-block-head">
-              <span className="comparison-vs">{t.comparisonTarget}</span>
-              <strong>{row.competitor}</strong>
-            </header>
-            <div className="comparison-split">
-              <div className="comparison-cell comparison-cell-better">
-                <span className="comparison-cell-label">
-                  {toolName} {t.comparisonBetter}
-                </span>
-                <p>{row.worksBetterHere}</p>
-              </div>
-              <div className="comparison-cell comparison-cell-worse">
-                <span className="comparison-cell-label">
-                  {toolName} {t.comparisonWorse}
-                </span>
-                <p>{row.weakerHere}</p>
-              </div>
-            </div>
-          </article>
+          <div key={row.competitor} className="comparison-row" role="row">
+            <strong role="cell" className="comparison-competitor">
+              {row.competitor}
+            </strong>
+            <span
+              role="cell"
+              className="comparison-cell comparison-cell-better"
+              data-label={`${toolName} ${t.comparisonBetter}`}
+            >
+              {row.worksBetterHere}
+            </span>
+            <span
+              role="cell"
+              className="comparison-cell comparison-cell-worse"
+              data-label={`${toolName} ${t.comparisonWorse}`}
+            >
+              {row.weakerHere}
+            </span>
+          </div>
         ))}
       </div>
     </section>

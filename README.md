@@ -3,10 +3,12 @@
 같은 문제를 겪는 팀들이 어떤 도구를 놓고 무엇을 포기했는지, 근거와 함께 나란히 봅니다.
 점수마다 근거를, 비교마다 되는 것과 안 되는 것을, 그리고 쓰지 말아야 할 조건을 함께 적습니다.
 
-> **이름은 잠정입니다.** 화면·메타데이터·문서가 읽는 브랜드 문자열은 `lib/brand.ts`
-> 한 곳에 모여 있으므로, 이름을 바꿀 때 고칠 파일은 그 하나입니다.
-> (이전 이름 `g2`는 실존하는 B2B 리뷰 사이트 G2.com과 충돌했습니다. 상표보다
-> 포지셔닝이 문제였습니다 — "별점 사이트와 다르다"고 말하는 제품의 이름이 그 별점 사이트였습니다.)
+## What's included
+- **Next.js UI** with landing, search, tool review, and about pages.
+- **Judgment-first data model** with human impact scores and verdict badges.
+- **API routes** for tools, search, and admin creation with validation.
+- **PostgreSQL schema** for production persistence.
+- **Integration tests** for API endpoints.
 
 ## 핵심 동선
 
@@ -41,8 +43,12 @@ npm test         # 메모리 저장소로
 npm run test:db  # DATABASE_URL을 붙여 Postgres 어댑터까지
 ```
 
-`tests/community-store.test.ts`는 **메모리와 Postgres 두 구현에 같은 테스트를 돌립니다.**
-어댑터를 바꿔도 화면 동작이 달라지지 않는다는 것을 이걸로 보장합니다.
+## Design system
+디자인 토큰, 타이포그래피 스케일, 테마 규칙은 `docs/design-system.md`에 정리되어 있습니다.
+색상·간격을 바꿀 때는 컴포넌트 CSS가 아니라 `app/globals.css` 상단의 토큰을 수정하세요.
+
+## Database schema
+The PostgreSQL schema lives in `db/schema.sql`. Wire this up with your preferred ORM or query layer for production.
 
 ## 이 저장소가 지키는 규칙
 

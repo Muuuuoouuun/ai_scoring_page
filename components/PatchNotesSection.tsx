@@ -113,52 +113,35 @@ export function PatchNotesSection({
           </article>
         ))}
       </div>
-
-      <div className="grid">
-        <input
-          value={title}
-          onChange={(event) => setTitle(event.target.value)}
-          placeholder={t.patchTitleInput}
-        />
-        <textarea
-          value={change}
-          onChange={(event) => setChange(event.target.value)}
-          rows={3}
-          placeholder={t.patchChangeInput}
-        />
-        <textarea
-          value={errorRisk}
-          onChange={(event) => setErrorRisk(event.target.value)}
-          rows={3}
-          placeholder={t.patchRiskInput}
-        />
-        <div className="patch-form-row">
-          <label className="form-field-label">{t.patchImpact}</label>
-          <select
-            value={impact}
-            onChange={(e) => setImpact(e.target.value as "high" | "medium" | "low")}
-            className="patch-impact-select"
-          >
-            <option value="high">{t.patchImpactHigh}</option>
-            <option value="medium">{t.patchImpactMedium}</option>
-            <option value="low">{t.patchImpactLow}</option>
-          </select>
-          <label className="patch-outage-label">
-            <input
-              type="checkbox"
-              checked={isOutage}
-              onChange={(e) => setIsOutage(e.target.checked)}
-            />
-            {t.patchIsOutage}
-          </label>
-        </div>
-        <button
-          className="secondary-button"
-          type="button"
-          onClick={onAdd}
-          disabled={loading}
-        >
-          {saved ? `✓ ${t.saved}` : t.patchAdd}
+      <div className="patch-note-form">
+        <label className="form-field">
+          <span className="form-field-label">{t.patchTitleInput}</span>
+          <input
+            value={title}
+            onChange={(event) => setTitle(event.target.value)}
+            placeholder={t.patchTitleInput}
+          />
+        </label>
+        <label className="form-field">
+          <span className="form-field-label">{t.patchChangeInput}</span>
+          <textarea
+            value={change}
+            onChange={(event) => setChange(event.target.value)}
+            rows={3}
+            placeholder={t.patchChangeInput}
+          />
+        </label>
+        <label className="form-field">
+          <span className="form-field-label">{t.patchRiskInput}</span>
+          <textarea
+            value={errorRisk}
+            onChange={(event) => setErrorRisk(event.target.value)}
+            rows={3}
+            placeholder={t.patchRiskInput}
+          />
+        </label>
+        <button className="secondary-button" type="button" onClick={onAdd}>
+          {t.patchAdd}
         </button>
       </div>
 

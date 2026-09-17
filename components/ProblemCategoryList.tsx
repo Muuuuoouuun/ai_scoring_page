@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { copy as t } from "@/lib/copy";
-import { getRankedTags, getTagLabel, countToolsForTag } from "@/lib/problems";
+import { useLanguage } from "@/components/LanguageProvider";
+import { tools } from "@/data/tools";
 
 /**
  * 홈과 검색이 같은 태그 목록을 씁니다.
@@ -12,6 +12,12 @@ import { getRankedTags, getTagLabel, countToolsForTag } from "@/lib/problems";
 export function ProblemCategoryList() {
   const tags = getRankedTags();
 
+  // Same matching rule the search page uses, so the count on a row is the count you land on.
+  const matchesFor = (problem: string) =>
+    tools.filter((tool) =>
+      tool.problemContexts.some((context) => context.toLowerCase().includes(problem.toLowerCase()))
+    );
+
   return (
     <section className="section problem-journal-section">
       <div className="journal-section-head">
@@ -20,17 +26,36 @@ export function ProblemCategoryList() {
         <p className="text-muted">{t.problemDesc}</p>
       </div>
       <div className="situation-list">
-        {tags.map((tag) => {
-          const count = countToolsForTag(tag.id);
+        {t.problems.map((problem, index) => {
+          const matched = matchesFor(problem);
+          const cautions = matched.filter((tool) => tool.verdictBadges.thinkCarefully).length;
+
           return (
-            <Link className="situation-row" href={`/search?tag=${tag.id}`} key={tag.id}>
+            <Link className="situation-row" href={`/search?problem=${encodeURIComponent(problem)}`} key={problem}>
+              <span className="situation-index">{String(index + 1).padStart(2, "0")}</span>
               <span className="situation-copy">
-                <strong>{getTagLabel(tag)}</strong>
-                <small>{tag.description}</small>
+                <strong>{problem}</strong>
+                <small>
+                  {matched.length > 0
+                    ? matched
+                        .slice(0, 3)
+                        .map((tool) => tool.name)
+                        .join(" · ")
+                    : lang === "ko"
+                      ? "아직 매칭된 도구가 없습니다."
+                      : "No mapped tools yet."}
+                </small>
               </span>
-              <span className="situation-count">
-                {count}
-                <em>{"개 후보"}</em>
+              <span className="situation-stats">
+                <span className="situation-count">
+                  <b>{matched.length}</b>
+                  <em>{lang === "ko" ? "도구" : "tools"}</em>
+                </span>
+                {cautions > 0 ? (
+                  <span className="situation-caution">
+                    {lang === "ko" ? `주의 ${cautions}` : `${cautions} caution`}
+                  </span>
+                ) : null}
               </span>
               <span className="situation-arrow" aria-hidden="true">
                 →

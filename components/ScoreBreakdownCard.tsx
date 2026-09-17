@@ -35,26 +35,16 @@ export function ScoreBreakdownCard({
         <span>{totalScore}</span>
         <small>/100</small>
       </p>
-      {/*
-        근거는 아래 "점수 근거와 이의" 섹션에서 한 번만 보여줍니다.
-        같은 문장을 두 곳에 두면 페이지만 길어지고 읽는 사람은 두 번 읽습니다.
-      */}
-      <p className="score-basis-note">{t.scoreBasisNote}</p>
-      <div className="score-grid score-grid-compact">
-        {SCORE_FACET_KEYS.map((key) => {
-          const facet = scoreBreakdown[key];
-          return (
-            <div key={key} className={`score-row score-row-${scoreTone(facet.score)}`}>
-              <div className="score-row-head">
-                <span>{labels[key]}</span>
-                <strong>{facet.score}</strong>
-              </div>
-              <div className="score-bar" aria-hidden="true">
-                <span style={{ width: `${facet.score}%` }} />
-              </div>
-            </div>
-          );
-        })}
+      <div className="score-grid">
+        {Object.entries(scoreBreakdown).map(([key, value]) => (
+          <div key={key} className="score-row">
+            <span className="score-row-label">{labels[key as keyof ScoreBreakdown]}</span>
+            <span className="score-row-bar" aria-hidden="true">
+              <span style={{ width: `${Math.min(100, Math.max(0, value))}%` }} />
+            </span>
+            <strong className="score-row-value">{value}</strong>
+          </div>
+        ))}
       </div>
     </section>
   );

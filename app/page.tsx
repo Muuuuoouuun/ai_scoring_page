@@ -22,7 +22,7 @@ export default function HomePage() {
   const disqualifiers = tools.reduce((sum, tool) => sum + tool.review.doNotUseIf.length, 0);
 
   return (
-    <main className="home-journal">
+    <main id="main-content" className="home-journal">
       <section className="home-hero-canvas">
         <Hero />
       </section>
