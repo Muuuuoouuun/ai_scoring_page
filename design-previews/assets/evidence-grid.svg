@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sheet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffefa"/>
+      <stop offset=".5" stop-color="#f8f6ef"/>
+      <stop offset="1" stop-color="#e8e1d5"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#37646a" stop-opacity=".58"/>
+      <stop offset=".52" stop-color="#b08a52" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#453c34" stop-opacity=".6"/>
+    </linearGradient>
+    <filter id="paperGrain">
+      <feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0.28 0 0 0 0 0.24 0 0 0 0 0.19 0 0 0 .05 0"/>
+    </filter>
+    <pattern id="auditGrid" width="120" height="84" patternUnits="userSpaceOnUse">
+      <path d="M0 0H120V84H0Z" fill="none" stroke="#453c34" stroke-opacity=".04"/>
+      <path d="M30 0V84M60 0V84M90 0V84M0 42H120" stroke="#453c34" stroke-opacity=".026"/>
+    </pattern>
+    <mask id="edgeFade">
+      <radialGradient id="edgeFadeGradient" cx="52%" cy="46%" r="76%">
+        <stop offset="0" stop-color="#fff"/>
+        <stop offset=".68" stop-color="#fff"/>
+        <stop offset="1" stop-color="#000"/>
+      </radialGradient>
+      <rect width="1600" height="900" fill="url(#edgeFadeGradient)"/>
+    </mask>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sheet)"/>
+  <rect width="1600" height="900" fill="url(#auditGrid)"/>
+
+  <g mask="url(#edgeFade)" opacity=".92">
+    <g transform="translate(210 178)" fill="none" stroke="#453c34">
+      <rect x="0" y="0" width="870" height="500" rx="18" stroke-opacity=".08"/>
+      <path d="M0 92H870M0 184H870M0 276H870M0 368H870M180 0V500M392 0V500M606 0V500" stroke-opacity=".065"/>
+      <g stroke-linecap="round" stroke-width="3">
+        <path d="M46 52H132" stroke-opacity=".18"/>
+        <path d="M230 52H342" stroke="#b08a52" stroke-opacity=".4"/>
+        <path d="M442 52H552" stroke="#37646a" stroke-opacity=".26"/>
+        <path d="M650 52H812" stroke-opacity=".15"/>
+
+        <path d="M48 144H138" stroke="#37646a" stroke-opacity=".24"/>
+        <path d="M232 144H350" stroke-opacity=".18"/>
+        <path d="M442 144H578" stroke="#b08a52" stroke-opacity=".34"/>
+        <path d="M650 144H784" stroke-opacity=".12"/>
+
+        <path d="M48 236H120" stroke-opacity=".12"/>
+        <path d="M232 236H356" stroke="#b08a52" stroke-opacity=".34"/>
+        <path d="M442 236H548" stroke-opacity=".17"/>
+        <path d="M650 236H806" stroke="#37646a" stroke-opacity=".22"/>
+
+        <path d="M48 328H150" stroke="#b08a52" stroke-opacity=".3"/>
+        <path d="M232 328H326" stroke-opacity=".14"/>
+        <path d="M442 328H584" stroke="#37646a" stroke-opacity=".22"/>
+        <path d="M650 328H812" stroke-opacity=".15"/>
+
+        <path d="M48 420H130" stroke-opacity=".13"/>
+        <path d="M232 420H360" stroke="#37646a" stroke-opacity=".24"/>
+        <path d="M442 420H550" stroke-opacity=".16"/>
+        <path d="M650 420H790" stroke="#b08a52" stroke-opacity=".32"/>
+      </g>
+    </g>
+
+    <g transform="translate(1128 196)" fill="none" stroke-linecap="round">
+      <circle cx="0" cy="0" r="164" stroke="#453c34" stroke-opacity=".08"/>
+      <circle cx="0" cy="0" r="122" stroke="#453c34" stroke-opacity=".08"/>
+      <circle cx="0" cy="0" r="80" stroke="#453c34" stroke-opacity=".08"/>
+      <path d="M0 -164A164 164 0 0 1 152 62" stroke="url(#mark)" stroke-width="9"/>
+      <path d="M0 -122A122 122 0 0 1 96 75" stroke="#b08a52" stroke-opacity=".46" stroke-width="5"/>
+      <path d="M0 -80A80 80 0 0 1 65 47" stroke="#37646a" stroke-opacity=".36" stroke-width="3"/>
+      <path d="M-104 -72L-22 -18L34 -116L84 20L146 -64" stroke="#453c34" stroke-opacity=".22" stroke-width="1.4"/>
+      <g fill="#453c34" stroke="none" opacity=".34">
+        <circle cx="-104" cy="-72" r="4"/>
+        <circle cx="-22" cy="-18" r="4"/>
+        <circle cx="34" cy="-116" r="4"/>
+        <circle cx="84" cy="20" r="4"/>
+        <circle cx="146" cy="-64" r="4"/>
+      </g>
+    </g>
+
+    <g transform="translate(1040 540)" fill="none" stroke="#453c34">
+      <path d="M0 0C94-70 184-74 270-20s168 54 254-8" stroke-opacity=".16" stroke-width="1.4"/>
+      <path d="M0 44C94-26 184-30 270 24s168 54 254-8" stroke="#b08a52" stroke-opacity=".34" stroke-width="1.8"/>
+      <path d="M0 88C94 18 184 14 270 68s168 54 254-8" stroke="#37646a" stroke-opacity=".24" stroke-width="1.4"/>
+    </g>
+  </g>
+
+  <g transform="translate(214 108)" font-family="Manrope, Pretendard, system-ui, sans-serif" fill="#453c34">
+    <text x="0" y="0" font-size="18" font-weight="800" letter-spacing="3" opacity=".64">EVIDENCE GRID</text>
+    <text x="0" y="34" font-size="13" font-weight="700" opacity=".42">audit table / review signal architecture</text>
+  </g>
+
+  <rect width="1600" height="900" filter="url(#paperGrain)" opacity=".7"/>
+  <rect width="1600" height="900" fill="#fff" opacity=".14"/>
+</svg>

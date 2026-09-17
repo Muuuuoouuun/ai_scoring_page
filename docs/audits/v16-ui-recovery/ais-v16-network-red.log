@@ -1,0 +1,40 @@
+✖ a failed network request provides a readable recovery action and does not retry a write (32.0065ms)
+✔ a server validation message is retained rather than described as a connection failure (24.380917ms)
+✔ a successful request keeps its JSON response and supplied headers (4.677458ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 213.967291
+
+✖ failing tests:
+
+test at tests/client-api.test.mjs:13:1
+✖ a failed network request provides a readable recovery action and does not retry a write (32.0065ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /연결 상태를 확인/. Input:
+  
+  'TypeError: Failed to fetch'
+  
+      at async TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/client-api.test.mjs:16:3)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: TypeError: Failed to fetch
+        at file:///Users/bigmac_moon/dev/ai_score/site/tests/client-api.test.mjs:15:44
+        at api (evalmachine.<anonymous>:31:60)
+        at file:///Users/bigmac_moon/dev/ai_score/site/tests/client-api.test.mjs:16:28
+        at waitForActual (node:assert:632:21)
+        at strict.rejects (node:assert:769:31)
+        at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/client-api.test.mjs:16:16)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.start (node:internal/test_runner/test:1191:17)
+        at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17),
+    expected: /연결 상태를 확인/,
+    operator: 'rejects',
+    diff: 'simple'
+  }

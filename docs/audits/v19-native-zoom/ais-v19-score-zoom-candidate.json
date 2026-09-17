@@ -1,0 +1,2993 @@
+{
+  "source": "d5efa3e11997e4a6d19cf28029246546e3a2a5bc",
+  "date": "2026-09-14",
+  "method": "Four equal binary gates per fixed subcategory; PASS=W/4; GAP/UNVERIFIED=0; no demonstrated current cap",
+  "areas": [
+    {
+      "name": "정체성·기획 일치",
+      "groups": [
+        [
+          "정보 중심",
+          25,
+          [
+            {
+              "name": "Service copy leads with AI/SaaS discovery and learning.",
+              "state": "PASS",
+              "evidence": "C1; Q:9",
+              "id": "1.1.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "The root route remains information-first after authentication.",
+              "state": "PASS",
+              "evidence": "C1; Q:9",
+              "id": "1.1.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "The discovery home itself exposes current changes, tools, learning and people/event discovery.",
+              "state": "PASS",
+              "evidence": "H5; P5:5 — Home now contains upcoming verified events and real published top-level community entries, with honest empty/error states; source and local rendered task observed.",
+              "id": "1.1.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Personal management is opt-in from a separate route.",
+              "state": "PASS",
+              "evidence": "C1",
+              "id": "1.1.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "전체 범위",
+          35,
+          [
+            {
+              "name": "Tool discovery/detail/comparison has a usable public path.",
+              "state": "PASS",
+              "evidence": "T; V4a",
+              "id": "1.2.1",
+              "weight": 8.75,
+              "earned": 8.75
+            },
+            {
+              "name": "Guide/news/event routes exist with substantive content.",
+              "state": "PASS",
+              "evidence": "C2; Q:13,22,27",
+              "id": "1.2.2",
+              "weight": 8.75,
+              "earned": 8.75
+            },
+            {
+              "name": "Public contributions and moderation have a working path.",
+              "state": "PASS",
+              "evidence": "Q:28; T",
+              "id": "1.2.3",
+              "weight": 8.75,
+              "earned": 8.75
+            },
+            {
+              "name": "The retained private/operational minimum, including email, is implemented.",
+              "state": "GAP",
+              "evidence": "E9/D9 — Dated condition history, actual personal amounts and dated transition/refund/overlap comparison are implemented. Actual email, unattended timing and operating feedback/cadence remain incomplete; umbrella gate remains GAP. E14/D14: V14 timing, immutable batching and owned receipt workflow improve implementation; actual email/unattended operation and cadence remain incomplete, GAP retained.",
+              "id": "1.2.4",
+              "weight": 8.75,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "비회원 가치",
+          20,
+          [
+            {
+              "name": "Application-level public reading/search works without personal records.",
+              "state": "PASS",
+              "evidence": "T; Q:27",
+              "id": "1.3.1",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Application-level comparison works without account persistence.",
+              "state": "PASS",
+              "evidence": "C2; local public route checks",
+              "id": "1.3.2",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "General cancellation information is public at application level.",
+              "state": "PASS",
+              "evidence": "Q:15,30; C3",
+              "id": "1.3.3",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "An external anonymous visitor completes a deployed public-information task.",
+              "state": "UNVERIFIED",
+              "evidence": "Hosting remains owner-only; no anonymous external-visitor observation",
+              "id": "1.3.4",
+              "weight": 5,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "개인 영역 분리",
+          20,
+          [
+            {
+              "name": "My Workspace has a separate entry and authenticated content boundary.",
+              "state": "PASS",
+              "evidence": "C1; C3",
+              "id": "1.4.1",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Private records are excluded from public search.",
+              "state": "PASS",
+              "evidence": "T: global search/private-record test",
+              "id": "1.4.2",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Public contribution requires an explicit public-content choice.",
+              "state": "PASS",
+              "evidence": "C3; community form",
+              "id": "1.4.3",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Private/public data meanings are explained in the product.",
+              "state": "PASS",
+              "evidence": "C3: privacy/about; Q:14",
+              "id": "1.4.4",
+              "weight": 5,
+              "earned": 5
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "내용·최신성",
+      "groups": [
+        [
+          "공식 출처",
+          30,
+          [
+            {
+              "name": "Catalog/content include relevant official source URLs.",
+              "state": "PASS",
+              "evidence": "C2; SA",
+              "id": "2.1.1",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Model identities and principal specification claims have independent official verification.",
+              "state": "PASS",
+              "evidence": "SA: all three models",
+              "id": "2.1.2",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "A sampled current product change has independent official verification and correction.",
+              "state": "PASS",
+              "evidence": "SA: ChatGPT September 11; Q:21",
+              "id": "2.1.3",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Remaining catalog claim/source pairs have a complete current audit trail.",
+              "state": "PASS",
+              "evidence": "CA5:3,14,20–43; CV5:9–15,26–55; L6 — All20 entries/75 feature-source pairs audited, required corrections checked, last obsolete Midjourney supplementary source link corrected in current source. V6P confirms publication of the locally checked correction; this gate credits the complete documentary/source audit, not hands-on product testing.",
+              "id": "2.1.4",
+              "weight": 7.5,
+              "earned": 7.5
+            }
+          ]
+        ],
+        [
+          "실제 로고",
+          15,
+          [
+            {
+              "name": "Named tools use actual logo asset files rather than invented initial avatars.",
+              "state": "PASS",
+              "evidence": "C2: public/logos and ToolLogo",
+              "id": "2.2.1",
+              "weight": 3.75,
+              "earned": 3.75
+            },
+            {
+              "name": "Logo origin links are retained alongside catalog entries.",
+              "state": "PASS",
+              "evidence": "C2: logoSource; source page",
+              "id": "2.2.2",
+              "weight": 3.75,
+              "earned": 3.75
+            },
+            {
+              "name": "Representative rendered logos load without failures.",
+              "state": "PASS",
+              "evidence": "Q:33; OQ: mobile image loading checks",
+              "id": "2.2.3",
+              "weight": 3.75,
+              "earned": 3.75
+            },
+            {
+              "name": "All current deployed logo assets have individually verified provenance/render outcomes.",
+              "state": "PASS",
+              "evidence": "E7 — All20 deployed /explore images individually complete && naturalWidth>0, IDs recorded; full-page screenshot shows each logo beside its label. Combines with inherited CA5/CV5 provenance receipts. Narrow initial lazy loading11/20 is separately disclosed.",
+              "id": "2.2.4",
+              "weight": 3.75,
+              "earned": 3.75
+            }
+          ]
+        ],
+        [
+          "기능/업데이트",
+          25,
+          [
+            {
+              "name": "Tool details show structured supported/conditional/unknown functions.",
+              "state": "PASS",
+              "evidence": "C2",
+              "id": "2.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Curated updates state a concrete change and link its source.",
+              "state": "PASS",
+              "evidence": "C2; SA; Q:21",
+              "id": "2.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Feed ingestion has defined product scope and retained-error/review behavior.",
+              "state": "PASS",
+              "evidence": "SA/SF; T; Q:21",
+              "id": "2.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "V4's new live feed path is observed end-to-end on the deployment.",
+              "state": "PASS",
+              "evidence": "P5:11–12 — Production Copilot content/logo and Midjourney content checks succeeded; /news?tab=feed rendered10 Copilot and15 Midjourney items with last-success dates. Bounded to this observed path, not all providers.",
+              "id": "2.3.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "불확실성·날짜",
+          20,
+          [
+            {
+              "name": "Source check dates are separate from publication dates.",
+              "state": "PASS",
+              "evidence": "C2; Q:21",
+              "id": "2.4.1",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Absent publication dates, plans or support remain explicitly unknown.",
+              "state": "PASS",
+              "evidence": "C2; about/detail",
+              "id": "2.4.2",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Changed/failed source state is not silently promoted to verified fact.",
+              "state": "PASS",
+              "evidence": "T: source recovery regressions; SF correction",
+              "id": "2.4.3",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Past opportunities are marked ended and unchecked conditions remain conditional.",
+              "state": "PASS",
+              "evidence": "C2; event/promotion date logic",
+              "id": "2.4.4",
+              "weight": 5,
+              "earned": 5
+            }
+          ]
+        ],
+        [
+          "모델/앱 구분",
+          10,
+          [
+            {
+              "name": "Data model distinguishes model, AI app and SaaS.",
+              "state": "PASS",
+              "evidence": "C2: catalog types",
+              "id": "2.5.1",
+              "weight": 2.5,
+              "earned": 2.5
+            },
+            {
+              "name": "Visible labels expose the distinction.",
+              "state": "PASS",
+              "evidence": "C2: ToolUI/detail",
+              "id": "2.5.2",
+              "weight": 2.5,
+              "earned": 2.5
+            },
+            {
+              "name": "Model identities are independently confirmed against official specifications.",
+              "state": "PASS",
+              "evidence": "SA",
+              "id": "2.5.3",
+              "weight": 2.5,
+              "earned": 2.5
+            },
+            {
+              "name": "User app experience is not represented as a model benchmark.",
+              "state": "PASS",
+              "evidence": "C3: about; ToolReviews",
+              "id": "2.5.4",
+              "weight": 2.5,
+              "earned": 2.5
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "디자인",
+      "groups": [
+        [
+          "성숙한 테마",
+          25,
+          [
+            {
+              "name": "Shared palette and surface tokens establish a restrained theme.",
+              "state": "PASS",
+              "evidence": "C4: CSS variables",
+              "id": "3.1.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Shared Korean typography and heading scale are defined.",
+              "state": "PASS",
+              "evidence": "C4",
+              "id": "3.1.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Brand/copy/layout are adapted to AIs rather than represented as copied references.",
+              "state": "PASS",
+              "evidence": "Q:9; C1",
+              "id": "3.1.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "The complete rendered V4 theme has a documented visual critique.",
+              "state": "PASS",
+              "evidence": "E10/D10 — Independent documented critique across the complete shared theme in28 principal D/M screens; references are inspiration, not clones. Critique completion does not imply all issues resolved.",
+              "id": "3.1.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "정보 계층",
+          25,
+          [
+            {
+              "name": "Pages use consistent title/summary/section hierarchy.",
+              "state": "PASS",
+              "evidence": "C1/C2/C3",
+              "id": "3.2.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Principal actions are visually distinguished from secondary actions.",
+              "state": "PASS",
+              "evidence": "C4: shared button treatments; source components",
+              "id": "3.2.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Dense tool/billing data are grouped into tables, sections and disclosures.",
+              "state": "PASS",
+              "evidence": "C2/C3",
+              "id": "3.2.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Current desktop/mobile information hierarchy is visually checked across every principal screen.",
+              "state": "PASS",
+              "evidence": "E10/D10 — All28 pre-inventoried principal screens have actual D/M hierarchy critique. Invalid46/77 captures replaced by87/86; filled and empty QA states and local/production boundaries retained. Expanded-state/zoom/reader gaps remain separate.",
+              "id": "3.2.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "밀도/여백",
+          25,
+          [
+            {
+              "name": "Reading widths, line heights and spacing rules constrain text density.",
+              "state": "PASS",
+              "evidence": "C4",
+              "id": "3.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Representative 390px detail/modal screens have no horizontal overflow.",
+              "state": "PASS",
+              "evidence": "Q:33",
+              "id": "3.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Mobile controls use explicit readable input sizes and adequate target dimensions.",
+              "state": "PASS",
+              "evidence": "C4: mobile font/target rules",
+              "id": "3.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Representative desktop private screen fits a 1440px viewport.",
+              "state": "PASS",
+              "evidence": "V4b: clientWidth/scrollWidth both 1440; limited to observed screen",
+              "id": "3.3.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "전 화면 일관성",
+          25,
+          [
+            {
+              "name": "Public pages share shell and navigation components.",
+              "state": "PASS",
+              "evidence": "C1",
+              "id": "3.4.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Personal forms/dialogs share styling and interaction primitives.",
+              "state": "PASS",
+              "evidence": "C3/C4",
+              "id": "3.4.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Responsive styles and state labels are reused across views.",
+              "state": "PASS",
+              "evidence": "C3/C4",
+              "id": "3.4.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "New guide/search/admin/expanded-billing screens have a complete cross-screen visual comparison.",
+              "state": "PASS",
+              "evidence": "Historical V16 evidence: Q:50; no complete current visual comparison artifact E10:99–113 later supplement settlement, monthly/admin table right columns and normal term preview. Saved comparison fine-print83 and complete expanded-state cross-screen coverage still incomplete; no additional point. Current V17: E17V: Existing documented 28-principal desktop/mobile visual critiques are connected to current V01–V09 expanded-state viewport observations and the explicit V10 cross-screen comparison in ais-v17-cross-screen-review.md. Stored comparison fine print/history/warnings, full condition and record forms through their final controls, payment/refund/settlement, both sides of billing/monthly/admin tables, all three dated-comparison details and held/ineligible/multicurrency/preperiod/confirmed results, simple transition calculation, production search/result/filter/empty states, representative complete guide, and actual-role admin/feedback expansions have documented direct visual readings. Reviewer personally read117 images; bounded independent reviewer reports document68 more, total185 opened including one rejected and three limited captures; the189-file manifest is not an all-images-read claim. Four excluded and three limited captures are preserved with explicit replacement/coverage, and all189 file hashes/byte counts independently matched. Local synthetic fixtures and production QA/empty states stay distinct; viewport, document width and raster dimensions stay distinct. This credits completion of the fixed visual comparison, not perfect design, every value branch, native zoom, screen-reader speech, real-user tasks, actual email or production replay of all local captures.",
+              "id": "3.4.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "사용성",
+      "groups": [
+        [
+          "주요 과제",
+          40,
+          [
+            {
+              "name": "Public search leads to a useful content result on the deployment.",
+              "state": "PASS",
+              "evidence": "V4a: guide search",
+              "id": "4.1.1",
+              "weight": 10,
+              "earned": 10
+            },
+            {
+              "name": "Personal billing/refund/cancellation tasks work in representative local UI.",
+              "state": "PASS",
+              "evidence": "Q:31–32; P5:6,8–9 adds local linked billing/date-filter/hide/restore/Savings interactions.; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "4.1.2",
+              "weight": 10,
+              "earned": 10
+            },
+            {
+              "name": "Author/report/moderation actions work in deployed UI.",
+              "state": "PASS",
+              "evidence": "Q:28",
+              "id": "4.1.3",
+              "weight": 10,
+              "earned": 10
+            },
+            {
+              "name": "V4 comparison save, private edit and full reload work in deployed UI.",
+              "state": "PASS",
+              "evidence": "V4b",
+              "id": "4.1.4",
+              "weight": 10,
+              "earned": 10
+            }
+          ]
+        ],
+        [
+          "탐색/검색",
+          20,
+          [
+            {
+              "name": "Five primary destinations and contextual links are available.",
+              "state": "PASS",
+              "evidence": "C1; Q:9,33",
+              "id": "4.2.1",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Global search spans existing public content types.",
+              "state": "PASS",
+              "evidence": "T; V4a",
+              "id": "4.2.2",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Specialized tool filters and no-results preserve declared scope.",
+              "state": "PASS",
+              "evidence": "C2: Explore/searchCatalog; code inspection",
+              "id": "4.2.3",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Search result types and active state are visible and adjustable.",
+              "state": "PASS",
+              "evidence": "C2: GlobalSearch; V4a",
+              "id": "4.2.4",
+              "weight": 5,
+              "earned": 5
+            }
+          ]
+        ],
+        [
+          "상태/복구",
+          20,
+          [
+            {
+              "name": "Save operations expose pending/success/failure state and do not treat failed HTTP as saved.",
+              "state": "PASS",
+              "evidence": "C3; Q:29; API helper; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "4.3.1",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Failed reads/searches expose a retry path.",
+              "state": "PASS",
+              "evidence": "C2/C3",
+              "id": "4.3.2",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Guest draft→authentication→restore and network interruption are observed end-to-end in the current UI.",
+              "state": "PASS",
+              "evidence": "E16R: Root-observed current local React UI: ordinary guest community→Claude question draft→development authentication→same open form/context/values restored with consent unchecked; Claude/Figma drafts isolated; reply retains parent/body and a new submitted reply has the correct Claude parent context. Final review-before-login-final.json→review-after-login-final.json preserves all 14 non-consent fields, including usedAt=2026-09-11; consent true→false. Actual local dev-server stop→submit connection error with draft retained→restart→one local question saved. Final screenshots and DB receipts preserved; earlier date-13 review-login-green.json is superseded and earns no final restoration credit. No real external ChatGPT authentication, expired-session edit recovery, or accepted-response-loss/idempotency claim.",
+              "id": "4.3.3",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Missing resources, invalid input and forbidden writes have explicit error paths.",
+              "state": "PASS",
+              "evidence": "T; Q:27",
+              "id": "4.3.4",
+              "weight": 5,
+              "earned": 5
+            }
+          ]
+        ],
+        [
+          "키보드/폼",
+          20,
+          [
+            {
+              "name": "Forms use labelled native controls and bounded inputs.",
+              "state": "PASS",
+              "evidence": "C3",
+              "id": "4.4.1",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "A skip link and visible keyboard focus styling exist.",
+              "state": "PASS",
+              "evidence": "C1/C4",
+              "id": "4.4.2",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "A completed save restores focus to the originating control.",
+              "state": "PASS",
+              "evidence": "Q:31; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "4.4.3",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "V4 delete dialog cycles Tab/Shift+Tab, closes with Escape, restores focus and preserves data on cancel.",
+              "state": "PASS",
+              "evidence": "V4b",
+              "id": "4.4.4",
+              "weight": 5,
+              "earned": 5
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "쾌적성·접근성",
+      "groups": [
+        [
+          "반응형",
+          25,
+          [
+            {
+              "name": "Representative public 390px detail/search screens fit and operate.",
+              "state": "PASS",
+              "evidence": "Q:30,33",
+              "id": "5.1.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Representative new private 390px billing/refund forms fit and operate.",
+              "state": "PASS",
+              "evidence": "Q:31–32; P5:7 requested390×844 but observed document395px; containers fit395px. This corroborates representative narrow-screen behavior without claiming a complete390px or zoom matrix.",
+              "id": "5.1.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Representative desktop 1440px private screen has matching viewport/document width.",
+              "state": "PASS",
+              "evidence": "V4b",
+              "id": "5.1.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Zoom/reflow and the complete screen matrix are measured.",
+              "state": "PASS",
+              "evidence": "Historical V17 evidence: No 200% zoom/reflow or complete viewport sweep evidence Current V19: E19Z: Root performed actual native Chrome200% on the fixed existing28 principal screens (P01–P20,A01,M01–M07), current important S01–S12 expanded bodies and G01/A02/E01/controlled-local E02. Independent original-image reviews plus source-linked screenshot JSON measured reflow, full body/footer/modal endpoints and table ends. Each principal raw sequence is CSS960x398,DPR2,document952/952 with bottom reached; screenshots953x395 are distinguished from CSS geometry. Actual keyboard table right ends (277/290,left13), common modal focus/return and dock/footer focus are recorded. Separate current form bodies and last controls are read; initial loading/mistargeted/refund/toast captures are retained and replaced with valid follow-ups. The long selected subscription identity was repaired and re-read at200%, then100%/390px. The fixed original matrix permits structural reuse and explicitly absent-data limits; these are itemized in ais-v19-zoom-completeness-review.md, not silently counted as observed data. This completes the unchanged5.1.4 measurement scope, not all data combinations,400%,screen-reader output,WCAG certification,actual user research or every possible error route. The actual ErrorView controlled render/reset is not production boundary-failure proof.",
+              "id": "5.1.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "읽기/대비",
+          25,
+          [
+            {
+              "name": "Measured primary text/button contrast meets the documented thresholds.",
+              "state": "PASS",
+              "evidence": "Q:33; OQ contrasts",
+              "id": "5.2.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Korean font sizing and line height, including mobile inputs, are explicit.",
+              "state": "PASS",
+              "evidence": "C4",
+              "id": "5.2.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Support/uncertainty/error meaning is expressed in text, not color alone.",
+              "state": "PASS",
+              "evidence": "C2/C3",
+              "id": "5.2.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Screen-reader reading order, descriptions and status announcements have an observed run.",
+              "state": "UNVERIFIED",
+              "evidence": "No screen-reader run supplied",
+              "id": "5.2.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "렌더 성능",
+          25,
+          [
+            {
+              "name": "Representative load/render timing is measured with method and environment.",
+              "state": "PASS",
+              "evidence": "E7/M7 — Eight production load observations across home/explore/my at actual desktop/narrow widths, timestamps/visibility/document scope/late start/cache limits. Seven miss fixed load budgets; measurement credit does not mark latency resolved.",
+              "id": "5.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Interaction responsiveness is measured on a principal task.",
+              "state": "PASS",
+              "evidence": "E7 strict timed exploration — sequential document query plus writing filter, one result observed;93ms host wall time including automation dispatch,2476ms capture window including2100ms Event Timing wait. Document INP56ms includes diagnostic controls and is not isolated per-action latency. Earlier delayed samples retained.",
+              "id": "5.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Layout stability is measured during initial/async rendering.",
+              "state": "PASS",
+              "evidence": "E7/M7 — Initial and later async/task CLS/raw document shift values observed. Narrow/my CLS0.034716, other recorded values0..0.0012545; strict task unchanged. Document/input-exclusion/cutoff limits preserved.",
+              "id": "5.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Resource/long-task costs are measured under a stated budget.",
+              "state": "PASS",
+              "evidence": "E7/M7 — Prior fixed unit/window/count/byte/long-task budgets compared with actual production navigation/resources/script/long-task observations. Uncontrolled cache and unknown byte coverage preserved; known-zero script bytes not treated as free.",
+              "id": "5.3.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "오류/안정성",
+          25,
+          [
+            {
+              "name": "Current complete build/type validation is reported successful.",
+              "state": "PASS",
+              "evidence": "Q:26; V4 source/deploy evidence; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "5.4.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "API/calculation suite passes freshly.",
+              "state": "PASS",
+              "evidence": "T: 35/35; T5 fresh independent48/48 API/billing tests passed during final V5 recheck; V6 changes only one catalog source URL.; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "5.4.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Observed navigation and deployed author flows no longer exhibit the prior link error.",
+              "state": "PASS",
+              "evidence": "Q:28–29,33",
+              "id": "5.4.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Source failure recovery and critical data-edit regressions have passing checks.",
+              "state": "PASS",
+              "evidence": "T; independent fix review; R5 final independently verifies all8 original V5 review findings resolved; T5 covers targeted regressions.; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "5.4.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "유용성",
+      "groups": [
+        [
+          "상세/비교",
+          30,
+          [
+            {
+              "name": "Details explain use, constraints, environment and source-backed functions.",
+              "state": "PASS",
+              "evidence": "C2",
+              "id": "6.1.1",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Side-by-side comparison exposes relevant differences and source links.",
+              "state": "PASS",
+              "evidence": "C2; V4a comparison screen/save",
+              "id": "6.1.2",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Unassessed editorial evidence is distinguished from available user evidence.",
+              "state": "PASS",
+              "evidence": "C2/C3",
+              "id": "6.1.3",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "A representative person/task demonstrates choosing between candidates from the comparison evidence.",
+              "state": "UNVERIFIED",
+              "evidence": "No observed comparison-understanding task; saving is not understanding",
+              "id": "6.1.4",
+              "weight": 7.5,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "검색/추천",
+          25,
+          [
+            {
+              "name": "Anonymous application-level query retrieves relevant available content.",
+              "state": "PASS",
+              "evidence": "T; V4a",
+              "id": "6.2.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Explicit required conditions do not treat unknown as supported.",
+              "state": "PASS",
+              "evidence": "C2",
+              "id": "6.2.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Recommendations state work/function reasons rather than invented fitness percentages.",
+              "state": "PASS",
+              "evidence": "C2: Recommend/about",
+              "id": "6.2.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "A varied set of realistic purpose/condition queries has evaluated relevance.",
+              "state": "PASS",
+              "evidence": "E11/R11 — Frozen20 plus independently frozen16 evaluated against real catalog output; initial32/36 and intermediate35/36 preserved, final36/36 minimum criteria after correction. Exposed16 are regression cases, not fresh holdout. Partial lower-rank precision limitations remain; this is evaluation completion, not universal relevance or real-user outcome proof.",
+              "id": "6.2.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "콘텐츠/활용법",
+          25,
+          [
+            {
+              "name": "Guides include concrete practice inputs and prerequisites.",
+              "state": "PASS",
+              "evidence": "C2; Q:22",
+              "id": "6.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Guides explain steps, output checks and likely failure recovery.",
+              "state": "PASS",
+              "evidence": "C2; Q:22",
+              "id": "6.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Guides link official sources and label direct-execution status honestly.",
+              "state": "PASS",
+              "evidence": "C2; Q:22",
+              "id": "6.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "A complete representative guide is reproduced and its result checked.",
+              "state": "PASS",
+              "evidence": "Historical V17 evidence: Direct execution results are explicitly unregistered. Current V19: E19N: On2026-09-14 root reproduced the existing notion-task-board guide in actual Notion UI using an explicitly synthetic private QA database; no API writes were used, as reported by root. The original five steps are connected by UI capture evidence: /database creation, the original three tasks and status/priority/due-date properties, a board added to the same database and grouped by status, ascending due-date sort and high-priority filter retained after view navigation/reload then cleared, and an actual card memo plus status change. All three original result checks were read: the same three tasks in unfiltered table/board, weekly-report status changed from not-started to in-progress in both views (board0/2/1), and the exact Sep16→Sep17→Sep18 date order maintained. Independent reviewer directly opened all17 QA-cropped JPGs and read corresponding metadata; early incomplete states and the later filter-persistence and synchronization evidence are preserved in ais-v19-notion-evidence-review.md. Root performed the actions; reviewer observed stored images, not a second independent live UI run. This credits agent reproduction and result checking of one existing guide, not all four guides, representative-human understanding, native200%/VoiceOver, or publication alone. E19P separately records the now-successful publication of the per-guide verification history; it is not a substitute for the guide execution evidence.",
+              "id": "6.3.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "조건/근거",
+          20,
+          [
+            {
+              "name": "Update meaning/affected conditions and source dates are available.",
+              "state": "PASS",
+              "evidence": "C2; SA",
+              "id": "6.4.1",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Events/promotions expose audience, time and eligibility conditions.",
+              "state": "PASS",
+              "evidence": "C2",
+              "id": "6.4.2",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Cost comparison distinguishes cheaper price from prepayment feasibility.",
+              "state": "PASS",
+              "evidence": "T; Q:19",
+              "id": "6.4.3",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Unknown conditions and source failures are visible rather than silently assumed satisfied.",
+              "state": "PASS",
+              "evidence": "C2/C3; T",
+              "id": "6.4.4",
+              "weight": 5,
+              "earned": 5
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "커뮤니티",
+      "groups": [
+        [
+          "평가/후기/제안",
+          30,
+          [
+            {
+              "name": "Reviews require work, plan, use date and relationship disclosure.",
+              "state": "PASS",
+              "evidence": "C3; T",
+              "id": "7.1.1",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Rating aggregation deduplicates latest account/tool reviews and excludes missing axes.",
+              "state": "PASS",
+              "evidence": "T",
+              "id": "7.1.2",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Feature proposals remain distinguishable from verified official facts.",
+              "state": "PASS",
+              "evidence": "C3",
+              "id": "7.1.3",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Review author/edit/reply behavior has representative UI evidence.",
+              "state": "PASS",
+              "evidence": "OQ: local review/edit/reply; unchanged core retained and API checks current",
+              "id": "7.1.4",
+              "weight": 7.5,
+              "earned": 7.5
+            }
+          ]
+        ],
+        [
+          "질문/답변",
+          25,
+          [
+            {
+              "name": "Question submission exists without a personal tool/subscription prerequisite.",
+              "state": "PASS",
+              "evidence": "C3: postSchema/community form/route",
+              "id": "7.2.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "A reply links to the published parent with server validation.",
+              "state": "PASS",
+              "evidence": "T; C3",
+              "id": "7.2.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Threads expose answers and author controls.",
+              "state": "PASS",
+              "evidence": "C3; OQ local reply task",
+              "id": "7.2.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "A deleted/hidden parent with other authors' replies has an observed readable UI task.",
+              "state": "PASS",
+              "evidence": "E16P: Root-observed actual local React UI with two explicitly synthetic, different user_id parent/reply records: published baseline→hidden parent→deleted parent→reply B full body/author/date readable→return to list; reviewer directly read all three original captures, including both hidden/deleted fallback states. Fixture cleanup recorded. This proves the fixed readable UI task, not two real people/accounts, production identity isolation, or execution of the actual author/admin mutation controls.",
+              "id": "7.2.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "영속성/소유권",
+          25,
+          [
+            {
+              "name": "Server account identity governs contribution mutation.",
+              "state": "PASS",
+              "evidence": "T",
+              "id": "7.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Other-account edit/delete attempts are rejected.",
+              "state": "PASS",
+              "evidence": "T",
+              "id": "7.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Deployed author edits survive a new read and deletion is observed.",
+              "state": "PASS",
+              "evidence": "Q:28",
+              "id": "7.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Account deletion removes own content/ratings while preserving other users' reply data.",
+              "state": "PASS",
+              "evidence": "T",
+              "id": "7.3.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "신고/표시",
+          20,
+          [
+            {
+              "name": "A deployed report is accepted.",
+              "state": "PASS",
+              "evidence": "Q:28",
+              "id": "7.4.1",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Moderation requires the configured administrator.",
+              "state": "PASS",
+              "evidence": "T; Q:28–29",
+              "id": "7.4.2",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Hide, nonvisibility, restore and resolve work in deployed UI.",
+              "state": "PASS",
+              "evidence": "Q:28",
+              "id": "7.4.3",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Relationship, proposal and experience/official-fact distinctions are visible.",
+              "state": "PASS",
+              "evidence": "C3",
+              "id": "7.4.4",
+              "weight": 5,
+              "earned": 5
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "개인 기능",
+      "groups": [
+        [
+          "로그인/계정격리",
+          25,
+          [
+            {
+              "name": "Real Sites account identity is observed in the deployment.",
+              "state": "PASS",
+              "evidence": "Q:29",
+              "id": "8.1.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Read/update/delete/export scope is account-isolated in API tests.",
+              "state": "PASS",
+              "evidence": "T; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "8.1.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Forged identity and cross-origin writes are rejected in recorded checks.",
+              "state": "PASS",
+              "evidence": "T; Q:27",
+              "id": "8.1.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Cross-device/account isolation is observed with independent real production sessions.",
+              "state": "UNVERIFIED",
+              "evidence": "No independent second-account/device observation supplied",
+              "id": "8.1.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "도구/저장/모음",
+          20,
+          [
+            {
+              "name": "Tool quick-save persists without overwriting existing private notes/status.",
+              "state": "PASS",
+              "evidence": "T; Q:29",
+              "id": "8.2.1",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Custom tool and collection CRUD paths use owned server records.",
+              "state": "PASS",
+              "evidence": "C3; API ownership structure",
+              "id": "8.2.2",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Selected comparison is saved into the account.",
+              "state": "PASS",
+              "evidence": "V4a/V4b; T",
+              "id": "8.2.3",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Private reason/outcome edits survive a full production reload.",
+              "state": "PASS",
+              "evidence": "V4b",
+              "id": "8.2.4",
+              "weight": 5,
+              "earned": 5
+            }
+          ]
+        ],
+        [
+          "비용/절약",
+          25,
+          [
+            {
+              "name": "Fixed billing, currencies, bundle dedupe and period boundaries pass checks.",
+              "state": "PASS",
+              "evidence": "T; T5/R5; P5:15 production linked payment fullreload: actual3000+remaining6000=forecast9000; confirmed Sep15, expected Oct15/Nov15; cleanup complete.; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "8.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Missing dates, new prices, seats/tax, usage budgets and refund dates pass focused checks.",
+              "state": "PASS",
+              "evidence": "T; Q:17–18,31–32; R5 confirms anchor/currency/legacy bundle/share/known residual handling fixes; T5 passes.; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "8.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Savings applies known features/duration/prepayment and labels uncertainty.",
+              "state": "PASS",
+              "evidence": "T; Q:19; P5:9 rendered local Savings fixture: monthly240000 vs switched260000, monthly cheaper20000; conservative upfront270000 exceeds250000 ceiling. Full dated scenario modeling is not claimed.",
+              "id": "8.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Retained reconciliation/custom-period/history/transition-cost comparison cases are implemented.",
+              "state": "PASS",
+              "evidence": "E8/E9/D9/W9 — Retained reconciliation, custom periods and dated history preserved. Canonical existing invoices and a separately dated candidate are compared over the same period; remaining charges, access overlap, dated fees/proration/confirmed refunds, actual matching, currency vectors, gross upfront limits and unknown holds are implemented. Private server-computed snapshots preserve original inputs/source; recalculation is explicit.26 new engine/API tests,109 total; local and deployed browser paths verified.",
+              "id": "8.3.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "해지/알림",
+          20,
+          [
+            {
+              "name": "Public payment-path help and residual-obligation behavior are observed.",
+              "state": "PASS",
+              "evidence": "Q:30–31; T",
+              "id": "8.4.1",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "App notice matching/dedupe and email eligibility/consent guards are implemented/tested.",
+              "state": "PASS",
+              "evidence": "T; C3; R5 final stale settings protection and explicit topic restoration tested; no provider delivery credit.",
+              "id": "8.4.2",
+              "weight": 5,
+              "earned": 5
+            },
+            {
+              "name": "Customer-facing topic hide/not-interested and offered notification timing are complete.",
+              "state": "GAP",
+              "evidence": "P5:8; R5 final; T5 verify hide→unrelated settings save→explicit restoration, including stale-payload protection. Offered unattended timing remains incomplete; binary conjunction remains GAP. E14/D14: V14 timing, immutable batching and owned receipt workflow improve implementation; actual email/unattended operation and cadence remain incomplete, GAP retained.",
+              "id": "8.4.3",
+              "weight": 5,
+              "earned": 0
+            },
+            {
+              "name": "Consented actual email delivery and unattended processing operate.",
+              "state": "GAP",
+              "evidence": "No actual configured email/provider receipt or unattended processing evidence. Guard/unit tests and app visibility do not substitute; GAP unchanged. E14/D14: V14 timing, immutable batching and owned receipt workflow improve implementation; actual email/unattended operation and cadence remain incomplete, GAP retained.",
+              "id": "8.4.4",
+              "weight": 5,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "내보내기/삭제",
+          10,
+          [
+            {
+              "name": "Export includes owned records, contributions and new saved fields.",
+              "state": "PASS",
+              "evidence": "T; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "8.5.1",
+              "weight": 2.5,
+              "earned": 2.5
+            },
+            {
+              "name": "Deletion rejects wrong confirmation and removes owned private data.",
+              "state": "PASS",
+              "evidence": "T; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "8.5.2",
+              "weight": 2.5,
+              "earned": 2.5
+            },
+            {
+              "name": "Deletion preserves other users' reply data and removes own rating identity.",
+              "state": "PASS",
+              "evidence": "T",
+              "id": "8.5.3",
+              "weight": 2.5,
+              "earned": 2.5
+            },
+            {
+              "name": "Complete deployed export/download verification and full-account destructive flow are observed.",
+              "state": "UNVERIFIED",
+              "evidence": "Production author-post deletion is not full-account export/delete",
+              "id": "8.5.4",
+              "weight": 2.5,
+              "earned": 0
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "배포·운영",
+      "groups": [
+        [
+          "실제 배포",
+          25,
+          [
+            {
+              "name": "V4 deployment success is reported for the exact source ID.",
+              "state": "PASS",
+              "evidence": "V4a; P5:3 also records V5 success source beeb02a1e58ecdab6864d5206885b4d14d2d7ba7 at2026-09-12T08:17:24Z. V6P also confirms single-link correction publication; literal original V4 gate name retained.; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "9.1.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "The real site URL serves the new application.",
+              "state": "PASS",
+              "evidence": "V4a/V4b",
+              "id": "9.1.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Hosting access scope and operator identity are explicitly checked.",
+              "state": "PASS",
+              "evidence": "Q:6,29; owner-only preview",
+              "id": "9.1.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Build source/runtime setup and secret separation are documented and checked.",
+              "state": "PASS",
+              "evidence": "Q:26; OQ environment/security notes; C3 runtime config",
+              "id": "9.1.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "배포 후 핵심동작",
+          25,
+          [
+            {
+              "name": "Public navigation/search works on the deployed build.",
+              "state": "PASS",
+              "evidence": "V4a; Q:33",
+              "id": "9.2.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Owned tool save/reload works in real deployment.",
+              "state": "PASS",
+              "evidence": "Q:29; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "9.2.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Deployed contribution/moderation/delete flow works.",
+              "state": "PASS",
+              "evidence": "Q:28",
+              "id": "9.2.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "New comparison/private-edit/full-reload flow works on V4.",
+              "state": "PASS",
+              "evidence": "V4b",
+              "id": "9.2.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "데이터 영속성",
+          25,
+          [
+            {
+              "name": "D1 schema/owned storage implementation is connected rather than local-only.",
+              "state": "PASS",
+              "evidence": "C3; Q:29; P5:15 additionally proves deployed linked-payment persistence and cleanup; current literal expression-index migration exercised in T5/R5.; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "9.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Real private tool records survive reload.",
+              "state": "PASS",
+              "evidence": "Q:29; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "9.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Real public contributions survive write/edit/new-read.",
+              "state": "PASS",
+              "evidence": "Q:28",
+              "id": "9.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "New nested private saved fields survive a full V4 reload.",
+              "state": "PASS",
+              "evidence": "V4b; E8/D8 — V8 date-aware history/personal ledger/API and deployed task verification strengthens this existing PASS; no additional earned points.",
+              "id": "9.3.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "동기화/운영상태",
+          25,
+          [
+            {
+              "name": "A real source-sync run and partial-failure state have been recorded.",
+              "state": "PASS",
+              "evidence": "OQ: deployed first-three source check; SA; P5:11 additionally observes Copilot/Midjourney success and OpenAI403 retained as failure.",
+              "id": "9.4.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Authorized operations exposes moderation, sync and delivery-state data.",
+              "state": "PASS",
+              "evidence": "C3; Q:28–29",
+              "id": "9.4.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "New feed scopes are observed through the deployed sync→display path.",
+              "state": "PASS",
+              "evidence": "P5:11–12 — Deployed source check→stored feed→visible feed observed for Copilot and Midjourney. OpenAI403 remains reported as failure, not verified freshness.",
+              "id": "9.4.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Required unattended/email operations and operating feedback/cadence are complete.",
+              "state": "GAP",
+              "evidence": "Actual feed-sync display now independently credited at9.4.3. Required unattended email/sync cadence and operating feedback remain incomplete; GAP unchanged. E14/D14: V14 timing, immutable batching and owned receipt workflow improve implementation; actual email/unattended operation and cadence remain incomplete, GAP retained.",
+              "id": "9.4.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    {
+      "area": "정체성·기획 일치",
+      "score": 86.25
+    },
+    {
+      "area": "내용·최신성",
+      "score": 100.0
+    },
+    {
+      "area": "디자인",
+      "score": 100.0
+    },
+    {
+      "area": "사용성",
+      "score": 100.0
+    },
+    {
+      "area": "쾌적성·접근성",
+      "score": 93.75
+    },
+    {
+      "area": "유용성",
+      "score": 92.5
+    },
+    {
+      "area": "커뮤니티",
+      "score": 100.0
+    },
+    {
+      "area": "개인 기능",
+      "score": 81.25
+    },
+    {
+      "area": "배포·운영",
+      "score": 93.75
+    }
+  ],
+  "sourceContext": {
+    "deployedSource": "d5efa3e11997e4a6d19cf28029246546e3a2a5bc",
+    "deployedAt": "2026-09-14T14:39:07.129272+00:00",
+    "siteUrl": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+    "access": "owner-private",
+    "environmentRevision": 2,
+    "sitesVersion": 21,
+    "sitesVersionId": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_775a2c15a3cc8191bb0de212dc42bfa8",
+    "deploymentId": "appgdep_6aa806e7e530819183a877eae9421c27",
+    "publicationStatus": "succeeded",
+    "previousDeployedSource": "79afc174c8add32c772839c4d3556d03e91213bd",
+    "previousDeployedAt": "2026-09-14T13:58:58.844096+00:00",
+    "currentSourceMeaning": "Saved root receipts confirm successful Sites21 publication. No worktree/pending-publication claim applies. Reviewer did not query Git/Sites.",
+    "changeScope": "Sites20 published the existing Notion guide reproduction history. Sites21 adds full selected subscription identity help in RecordForm; save/selection handling and option text remain unchanged. Native200% scores use actual matrix observations and repair checks, not publication alone.",
+    "historicalContext": "Original V17 and earlier contexts, first pre-publication V19 proposal, and the interim Sites20 guide-only candidate remain in explicitly historical fields."
+  },
+  "baseline": {
+    "worksheet": "/private/tmp/ais-score-worksheet-v4.json",
+    "source": "8b8611b95c9461082638f455177b3a5fe9b7cea9",
+    "preserved": "All152 IDs/criterion names and38 subcategory weights unchanged; only evidence/status updated."
+  },
+  "counts": {
+    "PASS": 143,
+    "GAP": 4,
+    "UNVERIFIED": 5
+  },
+  "changes": [
+    {
+      "id": "5.1.4",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "previousEarned": 0,
+      "earned": 6.25,
+      "delta": 6.25,
+      "reason": "E19Z: Root performed actual native Chrome200% on the fixed existing28 principal screens (P01–P20,A01,M01–M07), current important S01–S12 expanded bodies and G01/A02/E01/controlled-local E02. Independent original-image reviews plus source-linked screenshot JSON measured reflow, full body/footer/modal endpoints and table ends. Each principal raw sequence is CSS960x398,DPR2,document952/952 with bottom reached; screenshots953x395 are distinguished from CSS geometry. Actual keyboard table right ends (277/290,left13), common modal focus/return and dock/footer focus are recorded. Separate current form bodies and last controls are read; initial loading/mistargeted/refund/toast captures are retained and replaced with valid follow-ups. The long selected subscription identity was repaired and re-read at200%, then100%/390px. The fixed original matrix permits structural reuse and explicitly absent-data limits; these are itemized in ais-v19-zoom-completeness-review.md, not silently counted as observed data. This completes the unchanged5.1.4 measurement scope, not all data combinations,400%,screen-reader output,WCAG certification,actual user research or every possible error route. The actual ErrorView controlled render/reset is not production boundary-failure proof."
+    },
+    {
+      "id": "6.3.4",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "previousEarned": 0,
+      "earned": 6.25,
+      "delta": 6.25,
+      "reason": "E19N: On2026-09-14 root reproduced the existing notion-task-board guide in actual Notion UI using an explicitly synthetic private QA database; no API writes were used, as reported by root. The original five steps are connected by UI capture evidence: /database creation, the original three tasks and status/priority/due-date properties, a board added to the same database and grouped by status, ascending due-date sort and high-priority filter retained after view navigation/reload then cleared, and an actual card memo plus status change. All three original result checks were read: the same three tasks in unfiltered table/board, weekly-report status changed from not-started to in-progress in both views (board0/2/1), and the exact Sep16→Sep17→Sep18 date order maintained. Independent reviewer directly opened all17 QA-cropped JPGs and read corresponding metadata; early incomplete states and the later filter-persistence and synchronization evidence are preserved in ais-v19-notion-evidence-review.md. Root performed the actions; reviewer observed stored images, not a second independent live UI run. This credits agent reproduction and result checking of one existing guide, not all four guides, representative-human understanding, native200%/VoiceOver, or publication alone. E19P separately records the now-successful publication of the per-guide verification history; it is not a substitute for the guide execution evidence."
+    }
+  ],
+  "caps": {
+    "current": null,
+    "rule": "Major security/privacy defect, broken core flow or failed deployment caps affected areas at60. No current trigger demonstrated. Explicit omissions independently block overall."
+  },
+  "overall": "incomplete: V19 candidate changes only fixed5.1.4 and6.3.4 to PASS after actual native200% fixed-matrix measurement and one complete existing Notion guide reproduction/result check. PASS143/GAP4/UNVERIFIED5; comfort/accessibility93.75,usefulness92.5; seven of nine areas reach88. Sites21 sourced5efa3e11997e4a6d19cf28029246546e3a2a5bc successfully deployed with unchanged private audience. Actual VoiceOver output, email/unattended operations/cadence, external anonymous task and independent real production sessions, representative comparison understanding and full-account destructive observation remain open. Goal-control tool state is reported blocked despite explicitly resumed progressing work; no bypass or goal completion is claimed.",
+  "evidenceRegister": {
+    "BASE": "/private/tmp/ais-score-worksheet-v4.md — frozen original criterion/evidence register; inherited Q/T/V4a/V4b/OQ/SA/SF/C1-C4/V-B-A tokens retain their historical meanings and are not relabeled as new V6 browser checks.",
+    "P5": "docs/audits/2026-09-12-v5-browser-evidence.md — parent-recorded local and production QA; source/deploy:3, home:5, billing:6/15, measured-width limits:7/13, hide:8, Savings:9, source/feed:11–12.",
+    "CA5": "docs/audits/2026-09-12-catalog-complete-v5.md — all20 entries/75 pairs documentary official-source audit, coverage:3/14/20–43; individual AI/SaaS audit detail in matching catalog-ai-v5/catalog-saas-v5 files.",
+    "CV5": "docs/audits/2026-09-12-v5-catalog-corrections.md — correction-to-audit comparison,20/75 coverage and171 predicates; only required unresolved URL at:15 subsequently fixed in L6. Recommendations:17–24 are explicitly optional refinements.",
+    "L6": "Current site/data/catalog.json read and SHA256 recorded in sourceContext:20 entries,75 feature pairs; corrected official Midjourney source present and obsolete link absent. Same already audited URL; no new external source research or deployment observation.",
+    "H5": "Current site/app/page.tsx:6–9 — published top-level community query and upcoming-event cards; supported by P5:5 local observation. No fabricated activity or need for a minimum real review count.",
+    "R5": "docs/audits/2026-09-12-v5-recheck.md final verification — all8 original findings resolved, with disclosure of source/API/browser boundaries.",
+    "T5": "Reviewer final V5 run node --test --test-reporter=dot tests/api.test.mjs tests/billing.test.mjs:48/48 passed; isolated single-issue recheck also passed. V6 changes no billing/API code.",
+    "V6P": "Root final dispatch: source c7124c3fa9f64caa817a10e879b15b72b00a7739 deployed successfully2026-09-12T08:25:16Z, same owner-private URL/environment revision2. V6 changes only the previously audited Midjourney supplementary URL; no new reviewer browser or Git operation.",
+    "E7": "docs/audits/2026-09-12-v7-browser-evidence.md",
+    "M7": "docs/audits/2026-09-12-v7-performance-method.md",
+    "D7": "docs/audits/2026-09-12-v7-score-delta.md",
+    "E8": "docs/audits/2026-09-12-v8-history-verification.md —83 tests/type/build; exact source private publication; local and deployed dated conditions, personal payment/refund and cleanup; no new reader/zoom/latency evidence.",
+    "D8": "docs/audits/2026-09-12-v8-score-delta.md — independent read-only frozen-gate interpretation; zero numerical change.",
+    "E9": "docs/audits/2026-09-12-v9-transition-verification.md —109 tests/type/build; exact private publication; local/deployed dated comparison, preserved results, responsive boundaries and cleanup.",
+    "D9": "docs/audits/2026-09-12-v9-gate-834-recheck.md —independent read-only frozen8.3.4 interpretation; dated transition gap no longer remains.",
+    "W9": "docs/audits/2026-09-12-v9-workflow-audit.md —independent private API/UI audit; found future-currency budget and stale preview issues fixed and rechecked.",
+    "E10": "docs/audits/2026-09-12-v10-visual-verification.md — exact source/publications; local and production measurements; actual image reviews; invalid capture exclusions; new UI warning and normal recovery. No real zoom/reader/email evidence.",
+    "D10": "docs/audits/2026-09-12-v10-frozen-gate-assessment.md — independent original wording/weight check; only3.1.4 and3.2.4 earn6.25 each.",
+    "E11": "docs/audits/2026-09-12-v11-search-verification.md —125 tests/type/build, actual local and production UI, unchanged audience, deployment receipt and limitations.",
+    "R11": "docs/audits/v11-query-benchmark/ais-v11-relevance-final-regression-2.md — independent frozen36 minimum-criterion evaluation; initial32/36 and intermediate35/36 receipts retained; fixed6.2.4 interpretation separated from precision limitations.",
+    "E12": "docs/audits/2026-09-12-v12-feedback-verification.md — optional separated feedback, no fixed gate status delta",
+    "E13": "docs/audits/2026-09-12-v13-performance-verification.md — Actual Home RSC deferred-D1 RED→GREEN, preserved public selection/empty/error states, 139 existing +4 streaming tests, local final-state UI and same-browser six-before/six-after production measurements. No additional gate credit.",
+    "E14": "docs/audits/2026-09-12-v14-email-verification.md — 184 regression +4 Home tests, type/build, independent source reviews, local timing save/reload/recovery and 390px, deployed settings/status, source-specific owner-private receipt. No actual provider or unattended evidence.",
+    "D14": "docs/audits/v14-email-timing/ais-v14-score-boundary.md — independent fixed152/38/9 arithmetic and four umbrella GAP boundary; zero numerical change.",
+    "E16R": "docs/audits/v16-ui-recovery/ — draft-after-login-green.json; context-isolation-green.json; reply-login-green.json; ais-v16-reply-context-red.json/green.json; review-before-login-final.json and review-after-login-final.json; network-failure-green.json/png; network-retry-green.png; root sequence account and ais-v16-final-code-review.md. Red and superseded observations retained separately.",
+    "E16P": "docs/audits/v16-ui-recovery/ — parent-published.png, parent-hidden.png, parent-deleted.png/json, ais-v16-thread-fixture.md/py and ais-v16-local-cleanup.json; root actual UI observation plus reviewer direct image reading; synthetic local users only.",
+    "P16": "docs/audits/v16-ui-recovery/deployment-receipt.json — succeeded owner-private Sites version18, source2d54809d51bc2cacd096bd403e187afadcda078a, 2026-09-12T15:50:21.869820+00:00, environment revision2. This publication receipt does not relabel the local recovery/fixture tasks as production observations.",
+    "E17V": "docs/audits/v17-expanded-ui/manifest.json; docs/audits/v17-expanded-ui/ais-v17-cross-screen-review.md and linked independent V03/V04/V05/V07/V08/green visual reports. Existing V10 28-principal critique reused as historical context; original bytes and failed captures preserved.",
+    "E19N": "docs/audits/v19-native-guide/ais-v19-notion-evidence-review.md; preserved01–17 JPG/JSON in that directory. Root performed actual Notion UI reproduction; independent reviewer directly read all17 QA crops. Original five steps and three result checks are retained, as are initial incomplete and final synchronization observations. Only one existing guide was reproduced; other guides and representative-human comparison understanding remain separate.",
+    "E19P": {
+      "source": "d5efa3e11997e4a6d19cf28029246546e3a2a5bc",
+      "version": 21,
+      "versionId": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_775a2c15a3cc8191bb0de212dc42bfa8",
+      "deploymentId": "appgdep_6aa806e7e530819183a877eae9421c27",
+      "status": "succeeded",
+      "updatedAt": "2026-09-14T14:39:07.129272+00:00",
+      "environmentRevision": 2,
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+      "access": "owner-private/custom; one allowed account, zero external users/groups; unchanged",
+      "observedBy": "Root actual Sites receipts preserved in docs/audits/v19-native-zoom/site-deployment-receipts.json; reviewer read and cross-checked the saved receipts, without calling Sites/Git."
+    },
+    "E19Z": {
+      "criterion": "5.1.4 unchanged",
+      "decision": "PASS proposed; root adoption required",
+      "report": "/private/tmp/ais-v19-zoom-completeness-review.md",
+      "reportSHA256": "dc2e5693d2af61eacf7245e4eaf7a1c55d257ace218b5c7c4164158101c647fc",
+      "rootExecutionReport": "/Users/bigmac_moon/dev/ai_score/docs/audits/2026-09-14-v19-execution-review.md",
+      "rootExecutionReportSHA256": "a13ecb3b74f75aa1659564794d231c76a915477f7f606cd53ee59deb73ca3e09",
+      "matrixFile": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/principal-matrix.json",
+      "matrixSHA256": "b3323974b79650a787db7ec326bb906a1eabb6b908d5f891f8865aac8d0e44a6",
+      "fixedScopeFile": "/Users/bigmac_moon/dev/ai_score/docs/audits/v17-expanded-ui/ais-v17-native-gate-scope.md",
+      "independentReports": [
+        {
+          "file": "/private/tmp/ais-v19-zoom-public-1-review.md",
+          "sha256": "4cc6c5295ee726ff769bbc765e740123865a1856e87f83f2d7b68aafa9539f16"
+        },
+        {
+          "file": "/private/tmp/ais-v19-zoom-public-2-review.md",
+          "sha256": "62b2c3db7197a1e0dcb46431e84d857a1a0255f336d0a88fd7dfb4776d015758"
+        },
+        {
+          "file": "/private/tmp/ais-v19-zoom-public-states-review.md",
+          "sha256": "2a4a9c151e74644725d7d044780b37e4b114b534a27f5f4b9c8a8f0fb6aee23d"
+        },
+        {
+          "file": "/private/tmp/ais-v19-zoom-private-review.md",
+          "sha256": "22eccb34caebc4253a7bad17246b0c5d9027d5a3af0441035e31d5d4204545a6"
+        },
+        {
+          "file": "/private/tmp/ais-v19-subscription-identity-review.md",
+          "sha256": "50b46bf928d0397840ad7817825db7225e243b8d8d60452a998a11aa657a40b5"
+        }
+      ],
+      "nativeZoomEvidence": [
+        "docs/audits/v19-native-zoom/actual-chrome-200.txt",
+        "docs/audits/v19-native-zoom/actual-local-chrome-200.txt"
+      ],
+      "scope": "Actual native200% fixed28 principal matrix, current important S01–S12 bodies, measured overflow/endpoints and actual keyboard observations. Existing D/M and structure-equivalent states are reused as documented; unobserved missing-data variants are not claimed as live data. No additional reader/performance/research score."
+    },
+    "E19VO": "Root reports VoiceOver GUI ON, process check false, no observed speech/caption output, getApp timeout, then OFF restored. This is not a confirmed screen-reader run or a diagnosed application defect. Fixed5.2.4 stays UNVERIFIED. docs/audits/v19-native-guide/ais-v19-voiceover-normal-start.md preserves the normal-UI scope and observation limits.",
+    "E18X": "docs/audits/2026-09-13-v18-export-guide-verification.md and v18-export-guide-preflight/download-verification.json. Actual deployed685-byte JSON download with8arrays was checked; posts1, other7arrays empty. Full-account deletion was not executed. Partial evidence does not complete8.5.4."
+  },
+  "previousChanges": [
+    {
+      "id": "1.1.3",
+      "name": "The discovery home itself exposes current changes, tools, learning and people/event discovery.",
+      "from": "GAP",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "H5; P5:5 — Home now contains upcoming verified events and real published top-level community entries, with honest empty/error states; source and local rendered task observed."
+    },
+    {
+      "id": "2.1.4",
+      "name": "Remaining catalog claim/source pairs have a complete current audit trail.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 7.5,
+      "evidence": "CA5:3,14,20–43; CV5:9–15,26–55; L6 — All20 entries/75 feature-source pairs audited, required corrections checked, last obsolete Midjourney supplementary source link corrected in current source. V6P confirms publication of the locally checked correction; this gate credits the complete documentary/source audit, not hands-on product testing."
+    },
+    {
+      "id": "2.3.4",
+      "name": "V4's new live feed path is observed end-to-end on the deployment.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "P5:11–12 — Production Copilot content/logo and Midjourney content checks succeeded; /news?tab=feed rendered10 Copilot and15 Midjourney items with last-success dates. Bounded to this observed path, not all providers."
+    },
+    {
+      "id": "9.4.3",
+      "name": "New feed scopes are observed through the deployed sync→display path.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "P5:11–12 — Deployed source check→stored feed→visible feed observed for Copilot and Midjourney. OpenAI403 remains reported as failure, not verified freshness."
+    },
+    {
+      "id": "2.2.4",
+      "name": "All current deployed logo assets have individually verified provenance/render outcomes.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 3.75,
+      "evidence": "E7 — All20 deployed /explore images individually complete && naturalWidth>0, IDs recorded; full-page screenshot shows each logo beside its label. Combines with inherited CA5/CV5 provenance receipts. Narrow initial lazy loading11/20 is separately disclosed."
+    },
+    {
+      "id": "5.3.1",
+      "name": "Representative load/render timing is measured with method and environment.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "E7/M7 — Eight production load observations across home/explore/my at actual desktop/narrow widths, timestamps/visibility/document scope/late start/cache limits. Seven miss fixed load budgets; measurement credit does not mark latency resolved."
+    },
+    {
+      "id": "5.3.2",
+      "name": "Interaction responsiveness is measured on a principal task.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "E7 strict timed exploration — sequential document query plus writing filter, one result observed;93ms host wall time including automation dispatch,2476ms capture window including2100ms Event Timing wait. Document INP56ms includes diagnostic controls and is not isolated per-action latency. Earlier delayed samples retained."
+    },
+    {
+      "id": "5.3.3",
+      "name": "Layout stability is measured during initial/async rendering.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "E7/M7 — Initial and later async/task CLS/raw document shift values observed. Narrow/my CLS0.034716, other recorded values0..0.0012545; strict task unchanged. Document/input-exclusion/cutoff limits preserved."
+    },
+    {
+      "id": "5.3.4",
+      "name": "Resource/long-task costs are measured under a stated budget.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "E7/M7 — Prior fixed unit/window/count/byte/long-task budgets compared with actual production navigation/resources/script/long-task observations. Uncontrolled cache and unknown byte coverage preserved; known-zero script bytes not treated as free."
+    },
+    {
+      "id": "8.3.4",
+      "name": "Retained reconciliation/custom-period/history/transition-cost comparison cases are implemented.",
+      "from": "GAP",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "E8/E9/D9/W9 — Retained reconciliation, custom periods and dated history preserved. Canonical existing invoices and a separately dated candidate are compared over the same period; remaining charges, access overlap, dated fees/proration/confirmed refunds, actual matching, currency vectors, gross upfront limits and unknown holds are implemented. Private server-computed snapshots preserve original inputs/source; recalculation is explicit.26 new engine/API tests,109 total; local and deployed browser paths verified."
+    },
+    {
+      "id": "3.1.4",
+      "name": "The complete rendered V4 theme has a documented visual critique.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "E10/D10 — Independent documented critique across the complete shared theme in28 principal D/M screens; references are inspiration, not clones. Critique completion does not imply all issues resolved."
+    },
+    {
+      "id": "3.2.4",
+      "name": "Current desktop/mobile information hierarchy is visually checked across every principal screen.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "E10/D10 — All28 pre-inventoried principal screens have actual D/M hierarchy critique. Invalid46/77 captures replaced by87/86; filled and empty QA states and local/production boundaries retained. Expanded-state/zoom/reader gaps remain separate."
+    },
+    {
+      "id": "6.2.4",
+      "name": "A varied set of realistic purpose/condition queries has evaluated relevance.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "E11/R11 — Frozen20 plus independently frozen16 evaluated against real catalog output; initial32/36 and intermediate35/36 preserved, final36/36 minimum criteria after correction. Exposed16 are regression cases, not fresh holdout. Partial lower-rank precision limitations remain; this is evaluation completion, not universal relevance or real-user outcome proof."
+    }
+  ],
+  "v15Verification": "2026-09-13-v15-notice-verification.md",
+  "v15StateChanges": [],
+  "v15ScoreDelta": 0,
+  "v16Proposal": {
+    "status": "PROPOSED: root owns final worksheet adoption; original V15 files unchanged",
+    "baselineFile": "/Users/bigmac_moon/dev/ai_score/docs/audits/2026-09-13-score-worksheet-v15.json",
+    "baselineSHA256": "507dccc9fafa4d25bf4065a86bde78e9d8ce59a26673488ce962038823120f45",
+    "scope": [
+      "4.3.3",
+      "7.2.4"
+    ],
+    "publication": {
+      "source": "2d54809d51bc2cacd096bd403e187afadcda078a",
+      "version": 18,
+      "status": "succeeded",
+      "at": "2026-09-12T15:50:21.869820+00:00",
+      "environmentRevision": 2,
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+      "observedBy": "root; receipt read by reviewer"
+    },
+    "uiEvidenceEnvironment": "localhost current React UI with development authentication and synthetic local fixtures; not independent real external production accounts",
+    "historicalSourceContext": "Inherited sourceContext fields remain historical as received from V15; this v16Proposal.publication records the verified V16 receipt. Existing evidence is preserved for all 150 non-target gates.",
+    "independentReview": "Read supplied artifacts and code-review report; directly opened baseline/hidden/deleted parent, connection-error and retry-success images; independently compared final review fields and recomputed all weights, totals and ID deltas. No browser/Sites/source/Git/operational mutations; no new test run is claimed.",
+    "remainingUnverified": [
+      "1.3.4",
+      "3.4.4",
+      "5.1.4",
+      "5.2.4",
+      "6.1.4",
+      "6.3.4",
+      "8.1.4",
+      "8.5.4"
+    ],
+    "remainingGap": [
+      "1.2.4",
+      "8.4.3",
+      "8.4.4",
+      "9.4.4"
+    ],
+    "independentVerification": {
+      "areas": 9,
+      "groups": 38,
+      "gates": 152,
+      "allIDsUnique": true,
+      "fixedNamesIDsWeightsPreserved": true,
+      "all150OtherGateObjectsIncludingEvidenceUnchanged": true,
+      "changedIDs": [
+        "4.3.3",
+        "7.2.4"
+      ],
+      "counts": {
+        "PASS": 140,
+        "GAP": 4,
+        "UNVERIFIED": 8
+      },
+      "scores": [
+        {
+          "area": "정체성·기획 일치",
+          "score": 86.25
+        },
+        {
+          "area": "내용·최신성",
+          "score": 100.0
+        },
+        {
+          "area": "디자인",
+          "score": 93.75
+        },
+        {
+          "area": "사용성",
+          "score": 100
+        },
+        {
+          "area": "쾌적성·접근성",
+          "score": 87.5
+        },
+        {
+          "area": "유용성",
+          "score": 86.25
+        },
+        {
+          "area": "커뮤니티",
+          "score": 100.0
+        },
+        {
+          "area": "개인 기능",
+          "score": 81.25
+        },
+        {
+          "area": "배포·운영",
+          "score": 93.75
+        }
+      ],
+      "areasAtLeast88": 5,
+      "all9AtLeast88": false,
+      "finalReviewNonConsentFieldsIdentical": 14,
+      "finalReviewDate": "2026-09-11",
+      "restoredConsent": false,
+      "capsAndMethodUnchanged": true
+    }
+  },
+  "historicalSourceContextThroughV15": {
+    "deployedSource": "a0d353c7577805b5616f608409f0f1a00936e6cc",
+    "deployedAt": "2026-09-12T14:19:47.070504+00:00",
+    "siteUrl": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+    "access": "owner-private",
+    "incrementalV6Change": "midjourney.sourceUrls replaces https://www.midjourney.com/updates/version-8-2 with https://updates.midjourney.com/version-8-2/",
+    "v6SourceSHA": "c7124c3fa9f64caa817a10e879b15b72b00a7739",
+    "v6PublicationStatus": "succeeded, reported by root; same owner-private URL, environment revision2",
+    "currentCatalogSHA256": "6582363e298f29c7189190ab768a8d9edd88c5e47ab42fd6c6a0b5d4571cdee5",
+    "previousDeployedSource": "ac64bc580e198ca8e7a3f7342752a5e28a6b097e",
+    "previousDeployedAt": "2026-09-12T13:13:28.082461Z",
+    "environmentRevision": 2,
+    "v7PublicationStatus": "succeeded; owner-private; environment revision2",
+    "v8PublicationStatus": "succeeded; owner-private; environment revision2",
+    "v9PublicationStatus": "succeeded; owner-private; environment revision2",
+    "v10PublicationStatus": "succeeded; Sites version12; owner-private; environment revision2",
+    "v11PublicationStatus": "succeeded; Sites version13; owner-private; environment revision2",
+    "v12PublicationStatus": "succeeded; Sites version14; owner-private; environment revision2",
+    "v13PublicationStatus": "succeeded; owner-private; Sites version15; environment revision2",
+    "v13Change": "Home shell no longer awaits recent posts; controlled RSC dependency regression and paired route measurements kept separate from gate credit.",
+    "v14PublicationStatus": "succeeded; owner-private; Sites version16; environment revision2",
+    "v14Change": "Explicit email timing, immutable grouped delivery, private receipts, atomic optout/hide and race protection. On-refresh only; no actual email or unattended proof."
+  },
+  "v16Adoption": {
+    "status": "accepted by root after independent frozen-gate verification",
+    "metadataOnlyRepair": "Current sourceContext deployment/source fields now reflect V16; inherited stale fields are preserved in historicalSourceContextThroughV15. No additional gate changes.",
+    "report": "docs/audits/2026-09-13-v16-community-verification.md",
+    "evidence": "docs/audits/v16-ui-recovery/",
+    "stateChanges": [
+      "4.3.3",
+      "7.2.4"
+    ],
+    "counts": {
+      "PASS": 140,
+      "GAP": 4,
+      "UNVERIFIED": 8
+    },
+    "areasAtLeast88": 5
+  },
+  "v16ChangesPreservedForHistory": [
+    {
+      "id": "4.3.3",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "previousEarned": 0,
+      "earned": 5,
+      "delta": 5,
+      "reason": "E16R: Root-observed current local React UI: ordinary guest community→Claude question draft→development authentication→same open form/context/values restored with consent unchecked; Claude/Figma drafts isolated; reply retains parent/body and a new submitted reply has the correct Claude parent context. Final review-before-login-final.json→review-after-login-final.json preserves all 14 non-consent fields, including usedAt=2026-09-11; consent true→false. Actual local dev-server stop→submit connection error with draft retained→restart→one local question saved. Final screenshots and DB receipts preserved; earlier date-13 review-login-green.json is superseded and earns no final restoration credit. No real external ChatGPT authentication, expired-session edit recovery, or accepted-response-loss/idempotency claim."
+    },
+    {
+      "id": "7.2.4",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "previousEarned": 0,
+      "earned": 6.25,
+      "delta": 6.25,
+      "reason": "E16P: Root-observed actual local React UI with two explicitly synthetic, different user_id parent/reply records: published baseline→hidden parent→deleted parent→reply B full body/author/date readable→return to list; reviewer directly read all three original captures, including both hidden/deleted fallback states. Fixture cleanup recorded. This proves the fixed readable UI task, not two real people/accounts, production identity isolation, or execution of the actual author/admin mutation controls."
+    }
+  ],
+  "historicalSourceContextThroughV16": {
+    "deployedSource": "2d54809d51bc2cacd096bd403e187afadcda078a",
+    "deployedAt": "2026-09-12T15:50:21.869820+00:00",
+    "siteUrl": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+    "access": "owner-private",
+    "incrementalV6Change": "midjourney.sourceUrls replaces https://www.midjourney.com/updates/version-8-2 with https://updates.midjourney.com/version-8-2/",
+    "v6SourceSHA": "c7124c3fa9f64caa817a10e879b15b72b00a7739",
+    "v6PublicationStatus": "succeeded, reported by root; same owner-private URL, environment revision2",
+    "currentCatalogSHA256": "b45b6a75cf69dd34915dcb95e65fd8354a112bf8d0942139c268fadb357876c7",
+    "previousDeployedSource": "b8d35c036f0541446fafa746652406a81b19f0a6",
+    "previousDeployedAt": "2026-09-12T15:08:51.958405+00:00",
+    "environmentRevision": 2,
+    "v7PublicationStatus": "succeeded; owner-private; environment revision2",
+    "v8PublicationStatus": "succeeded; owner-private; environment revision2",
+    "v9PublicationStatus": "succeeded; owner-private; environment revision2",
+    "v10PublicationStatus": "succeeded; Sites version12; owner-private; environment revision2",
+    "v11PublicationStatus": "succeeded; Sites version13; owner-private; environment revision2",
+    "v12PublicationStatus": "succeeded; Sites version14; owner-private; environment revision2",
+    "v13PublicationStatus": "succeeded; owner-private; Sites version15; environment revision2",
+    "v13Change": "Home shell no longer awaits recent posts; controlled RSC dependency regression and paired route measurements kept separate from gate credit.",
+    "v14PublicationStatus": "succeeded; owner-private; Sites version16; environment revision2",
+    "v14Change": "Explicit email timing, immutable grouped delivery, private receipts, atomic optout/hide and race protection. On-refresh only; no actual email or unattended proof.",
+    "v16PublicationStatus": "succeeded; owner-private; Sites version18; environment revision2",
+    "v16Change": "Restore community draft context after sign-in, retain review date input and provide network failure recovery. Two fixed UI observation gates now PASS."
+  },
+  "v17Proposal": {
+    "status": "PROPOSED: root owns adoption; original V16 worksheet unchanged",
+    "baselineFile": "/Users/bigmac_moon/dev/ai_score/docs/audits/2026-09-13-score-worksheet-v16.json",
+    "baselineSHA256": "a86ce424dd361d18e470635573f3c9b04215fb7f854bada740f6a60da5421f1c",
+    "scope": [
+      "3.4.4"
+    ],
+    "sourceAtCaptureStart": "2d54809d51bc2cacd096bd403e187afadcda078a",
+    "publication": {
+      "source": "97022e07918cc0254a252b6e7a219e35fb00e9bb",
+      "status": "succeeded",
+      "version": 19,
+      "versionId": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_7706ab31eb948191ad712d969e4053e3",
+      "deploymentId": "appgdep_6aa57fa607b8819195b104c892a52351",
+      "updatedAt": "2026-09-12T16:37:26.448721+00:00",
+      "environmentRevision": 2,
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+      "access": "owner-private/custom; one account, zero external users/groups",
+      "observedBy": "root terminal tool receipt reported to reviewer; reviewer did not call Sites"
+    },
+    "environment": "Private expanded screens: actual localhost React UI and explicitly synthetic existing records; confirmed result uses documented temporary tax fixture restored by root. Search/guide/admin: actual prior production deployment with real allowed role and existing QA/zero-data states. Do not relabel all captures as V19 production.",
+    "criterionInterpretation": "Complete documented cross-screen visual observation; not visual perfection, all value combinations, 200%/native reflow, screen-reader execution, real-user research or production replay of every local screenshot.",
+    "reportHashes": [
+      {
+        "file": "/private/tmp/ais-v17-cross-screen-review.md",
+        "sha256": "038cbc1feb36202821130be05cdf6c32f431b579b99afe468104d8015a52e8fd"
+      },
+      {
+        "file": "/private/tmp/ais-v17-v03-review.md",
+        "sha256": "dd0f1ca72fead50798917ee7c91b9aeac3746c6ef2203aca4b6d01a826f17723"
+      },
+      {
+        "file": "/private/tmp/ais-v17-v04-review.md",
+        "sha256": "a7d401fe3f1069c5eac2a23918a74df9394b979674291215db691f50c41cc528"
+      },
+      {
+        "file": "/private/tmp/ais-v17-v05-review.md",
+        "sha256": "987ff8c1a3df48fa9b32e793243dfd8795760c10e45411f2f2c110efc9eddd6d"
+      },
+      {
+        "file": "/private/tmp/ais-v17-v07-review.md",
+        "sha256": "5daad3c34dc23f0a72d367d093553e409ba83ce55f095dd034c52da54ca2b8c7"
+      },
+      {
+        "file": "/private/tmp/ais-v17-v08-review.md",
+        "sha256": "d8384ed9005e959482447bb9288c031d130731a315be7f3ff4db29cca728812a"
+      },
+      {
+        "file": "/private/tmp/ais-v17-v04-v05-green-review.md",
+        "sha256": "dc34fa655b5ae645170ab1a4ed56f554c27ead6447198dc8ff16a9f02fa3432c"
+      }
+    ],
+    "manifest": {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v17-expanded-ui/manifest.json",
+      "sha256": "d073a7156a0bd6ff962e53b8249c82226145c301d081c2cfefe2db9e0043bb17",
+      "files": 189,
+      "hashAndBytesMismatches": [],
+      "states": {
+        "available": 182,
+        "excluded": 4,
+        "limited": 3
+      }
+    },
+    "readingCounts": {
+      "thisReviewer": 117,
+      "otherIndependentReports": 68,
+      "totalActuallyOpenedAcrossReviewers": 185,
+      "includesRejected": 1,
+      "includesLimited": 3,
+      "notOpened": 4,
+      "notOpenedFiles": [
+        "v08-search-M-01.jpg",
+        "v08-search-M-02.jpg",
+        "v08-search-D-valid-01.jpg",
+        "v06-date-validation-M.jpg"
+      ]
+    },
+    "remainingUnverified": [
+      "1.3.4",
+      "5.1.4",
+      "5.2.4",
+      "6.1.4",
+      "6.3.4",
+      "8.1.4",
+      "8.5.4"
+    ],
+    "remainingGap": [
+      "1.2.4",
+      "8.4.3",
+      "8.4.4",
+      "9.4.4"
+    ],
+    "scopeLimits": [
+      "Long single-line input/select values are not fully visible in static captures.",
+      "Green refund/monthly collapsed interiors reuse their earlier actually opened, unaffected-area observations.",
+      "One normal mobile filter capture shows result card and principal footer but clips the bottom feedback-link margin; shared footer is read elsewhere.",
+      "No newly invented state-combination, native zoom, reader, real-user or email completion credit."
+    ],
+    "independentVerification": {
+      "baselineSHA256": "a86ce424dd361d18e470635573f3c9b04215fb7f854bada740f6a60da5421f1c",
+      "areas": 9,
+      "groups": 38,
+      "gates": 152,
+      "allIDsUnique": true,
+      "fixedAreaGroupNamesGateIDsNamesAndWeightsIdentical": true,
+      "other151GateObjectsIncludingEvidenceIdentical": true,
+      "changedGateIDs": [
+        "3.4.4"
+      ],
+      "methodAndCapsIdentical": true,
+      "allGroupWeightsSumTo100PerArea": true,
+      "fourEqualBinaryGatesPerGroup": true,
+      "counts": {
+        "PASS": 141,
+        "GAP": 4,
+        "UNVERIFIED": 7
+      },
+      "scores": [
+        {
+          "area": "정체성·기획 일치",
+          "score": 86.25
+        },
+        {
+          "area": "내용·최신성",
+          "score": 100.0
+        },
+        {
+          "area": "디자인",
+          "score": 100.0
+        },
+        {
+          "area": "사용성",
+          "score": 100.0
+        },
+        {
+          "area": "쾌적성·접근성",
+          "score": 87.5
+        },
+        {
+          "area": "유용성",
+          "score": 86.25
+        },
+        {
+          "area": "커뮤니티",
+          "score": 100.0
+        },
+        {
+          "area": "개인 기능",
+          "score": 81.25
+        },
+        {
+          "area": "배포·운영",
+          "score": 93.75
+        }
+      ],
+      "scoreDeltas": [
+        {
+          "area": "정체성·기획 일치",
+          "before": 86.25,
+          "after": 86.25,
+          "delta": 0.0
+        },
+        {
+          "area": "내용·최신성",
+          "before": 100.0,
+          "after": 100.0,
+          "delta": 0.0
+        },
+        {
+          "area": "디자인",
+          "before": 93.75,
+          "after": 100.0,
+          "delta": 6.25
+        },
+        {
+          "area": "사용성",
+          "before": 100,
+          "after": 100.0,
+          "delta": 0.0
+        },
+        {
+          "area": "쾌적성·접근성",
+          "before": 87.5,
+          "after": 87.5,
+          "delta": 0.0
+        },
+        {
+          "area": "유용성",
+          "before": 86.25,
+          "after": 86.25,
+          "delta": 0.0
+        },
+        {
+          "area": "커뮤니티",
+          "before": 100.0,
+          "after": 100.0,
+          "delta": 0.0
+        },
+        {
+          "area": "개인 기능",
+          "before": 81.25,
+          "after": 81.25,
+          "delta": 0.0
+        },
+        {
+          "area": "배포·운영",
+          "before": 93.75,
+          "after": 93.75,
+          "delta": 0.0
+        }
+      ],
+      "areasAtLeast88": 5,
+      "all9AtLeast88": false,
+      "scopeGatesOnly": true,
+      "originalWorksheetNotWritten": true,
+      "manifestFilesHashAndBytesChecked": 189,
+      "manifestMismatches": []
+    }
+  },
+  "v17Adoption": {
+    "status": "ACCEPTED by root after independent fixed-structure, gate-object and arithmetic verification",
+    "verifiedAt": "2026-09-12T16:49:34.935117+00:00",
+    "source": "97022e07918cc0254a252b6e7a219e35fb00e9bb",
+    "baselineFile": "/Users/bigmac_moon/dev/ai_score/docs/audits/2026-09-13-score-worksheet-v16.json",
+    "baselineSHA256": "a86ce424dd361d18e470635573f3c9b04215fb7f854bada740f6a60da5421f1c",
+    "proposalFile": "/Users/bigmac_moon/dev/ai_score/docs/audits/v17-expanded-ui/ais-v17-score-worksheet-proposed.json",
+    "proposalSHA256": "93e8174aba4259ee43a651a9322506c4b7ebb1179b92dbc559c94a1a391ea445",
+    "verification": {
+      "areas": 9,
+      "groups": 38,
+      "gates": 152,
+      "changedGateIDs": [
+        "3.4.4"
+      ],
+      "other151GateObjectsIdentical": true,
+      "fixedCriteriaAndWeightsIdentical": true,
+      "methodAndCapsIdentical": true,
+      "scoresRecalculated": true,
+      "counts": {
+        "PASS": 141,
+        "GAP": 4,
+        "UNVERIFIED": 7
+      },
+      "areasAtLeast88": 5,
+      "all9AtLeast88": false
+    },
+    "evidenceDirectory": "/Users/bigmac_moon/dev/ai_score/docs/audits/v17-expanded-ui",
+    "publicationReceipt": "/Users/bigmac_moon/dev/ai_score/docs/audits/v17-expanded-ui/publication.json",
+    "nativeCoordination": "No answer received to the existing Chrome coordination request; native zoom and VoiceOver tests remain unverified.",
+    "historicalProposalPreserved": "v17Proposal and copied proposal file are the independent pre-adoption record."
+  },
+  "v17ChangesPreservedForHistory": [
+    {
+      "id": "3.4.4",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "previousEarned": 0,
+      "earned": 6.25,
+      "delta": 6.25,
+      "reason": "E17V: Existing documented 28-principal desktop/mobile visual critiques are connected to current V01–V09 expanded-state viewport observations and the explicit V10 cross-screen comparison in ais-v17-cross-screen-review.md. Stored comparison fine print/history/warnings, full condition and record forms through their final controls, payment/refund/settlement, both sides of billing/monthly/admin tables, all three dated-comparison details and held/ineligible/multicurrency/preperiod/confirmed results, simple transition calculation, production search/result/filter/empty states, representative complete guide, and actual-role admin/feedback expansions have documented direct visual readings. Reviewer personally read117 images; bounded independent reviewer reports document68 more, total185 opened including one rejected and three limited captures; the189-file manifest is not an all-images-read claim. Four excluded and three limited captures are preserved with explicit replacement/coverage, and all189 file hashes/byte counts independently matched. Local synthetic fixtures and production QA/empty states stay distinct; viewport, document width and raster dimensions stay distinct. This credits completion of the fixed visual comparison, not perfect design, every value branch, native zoom, screen-reader speech, real-user tasks, actual email or production replay of all local captures."
+    }
+  ],
+  "v19Proposal": {
+    "status": "PROPOSED: root owns worksheet adoption; source/score originals unchanged",
+    "baselineFile": "/Users/bigmac_moon/dev/ai_score/docs/audits/2026-09-13-score-worksheet-v17.json",
+    "baselineSHA256": "895aad1891a618b309f0ed1ee600ede5b45cfd93aa21062e5b4033796eac3859",
+    "scope": [
+      "6.3.4"
+    ],
+    "baseSource": "97022e07918cc0254a252b6e7a219e35fb00e9bb",
+    "uncommittedImplementationChanges": true,
+    "finalSource": null,
+    "publication": "No new publication is claimed. Existing sourceContext deployment is the prior97022/Sites19 baseline; root will supply final source and receipt.",
+    "evidenceDate": "2026-09-14",
+    "guideId": "notion-task-board",
+    "rootExecution": "Actual Notion UI; explicitly synthetic private QA, no API writes as reported by root",
+    "independentReview": {
+      "file": "/private/tmp/ais-v19-notion-evidence-review.md",
+      "sha256": "f8a77d84a1e6cd8aa5952bd915b2a318fe8540f5fb19785d0d87c63ebababdd8",
+      "imagesActuallyOpened": 17,
+      "imagesNotNewLiveRuns": true,
+      "files": [
+        {
+          "file": "/private/tmp/ais-v19-native-guide/01-database-command.jpg",
+          "sha256": "34f06f267e36d7b5608ad2733e8933378611885c55ccab3741108e191294ec7c",
+          "bytes": 42273,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/01-database-command.json",
+          "metadataSHA256": "8bd58d0e5b8ecf57678125ac5f8250c200ed19c9549b9e4e2a0eabfc65c96323",
+          "captureWidth": 1920,
+          "captureHeight": 852
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/02-three-tasks-initial.jpg",
+          "sha256": "2f4e8b5f8ca092d5a4e2c0d96bdfb01bc417b169e41cf756bf1c2f0f4571e013",
+          "bytes": 36461,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/02-three-tasks-initial.json",
+          "metadataSHA256": "8bd58d0e5b8ecf57678125ac5f8250c200ed19c9549b9e4e2a0eabfc65c96323",
+          "captureWidth": 1920,
+          "captureHeight": 852
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/03-table-complete.jpg",
+          "sha256": "6f8995f111878c2d2179e9a537f842e51bd551f1a51701f7f9b9c226530f4de2",
+          "bytes": 45190,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/03-table-complete.json",
+          "metadataSHA256": "8bd58d0e5b8ecf57678125ac5f8250c200ed19c9549b9e4e2a0eabfc65c96323",
+          "captureWidth": 1920,
+          "captureHeight": 852
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/04-add-board-menu.jpg",
+          "sha256": "07a73126acf7d6aa94614521214f2f961f74b22fbed16c22f42c937700d3bddf",
+          "bytes": 48743,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/04-add-board-menu.json",
+          "metadataSHA256": "8bd58d0e5b8ecf57678125ac5f8250c200ed19c9549b9e4e2a0eabfc65c96323",
+          "captureWidth": 1920,
+          "captureHeight": 852
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/05-board-setup-status.jpg",
+          "sha256": "d59d1e22ae331d3220198398adba2f283d722ff2787633c5645abf5375bdc3f3",
+          "bytes": 61877,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/05-board-setup-status.json",
+          "metadataSHA256": "8bd58d0e5b8ecf57678125ac5f8250c200ed19c9549b9e4e2a0eabfc65c96323",
+          "captureWidth": 1920,
+          "captureHeight": 852
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/06-board-three-groups.jpg",
+          "sha256": "3960f3611a36e0dad51097eef075f6764567622404ca03fed5a579786ea1820c",
+          "bytes": 63105,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/06-board-three-groups.json",
+          "metadataSHA256": "8bd58d0e5b8ecf57678125ac5f8250c200ed19c9549b9e4e2a0eabfc65c96323",
+          "captureWidth": 1920,
+          "captureHeight": 852
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/07-board-clean.jpg",
+          "sha256": "eb1852b7a2cbf4e25977f0b2530238dd2ae87bc1a106259cfaff63dc6e9fcd58",
+          "bytes": 42203,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/07-board-clean.json",
+          "metadataSHA256": "8bd58d0e5b8ecf57678125ac5f8250c200ed19c9549b9e4e2a0eabfc65c96323",
+          "captureWidth": 1920,
+          "captureHeight": 852
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/08-sort-oldest-first.jpg",
+          "sha256": "46c6bb7965a2fa5580bc3a731d98d0a180d318139be6276936530fbf39002427",
+          "bytes": 48452,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/08-sort-oldest-first.json",
+          "metadataSHA256": "8bd58d0e5b8ecf57678125ac5f8250c200ed19c9549b9e4e2a0eabfc65c96323",
+          "captureWidth": 1920,
+          "captureHeight": 852
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/09-table-sorted.jpg",
+          "sha256": "6c791a1ae80adfa4dde70d55826d513c1c3a7cf6fe8eb3347e58636db73785c5",
+          "bytes": 48857,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/09-table-sorted.json",
+          "metadataSHA256": "8bd58d0e5b8ecf57678125ac5f8250c200ed19c9549b9e4e2a0eabfc65c96323",
+          "captureWidth": 1920,
+          "captureHeight": 852
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/10-high-priority-filter.jpg",
+          "sha256": "023e0b9ab728a7f72de406c73c809a9b7218d9310fb4cfb6c7f90ecc1b3d5169",
+          "bytes": 42847,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/10-high-priority-filter.json",
+          "metadataSHA256": "8bd58d0e5b8ecf57678125ac5f8250c200ed19c9549b9e4e2a0eabfc65c96323",
+          "captureWidth": 1920,
+          "captureHeight": 852
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/11-board-unfiltered-while-table-filtered.jpg",
+          "sha256": "77599cdc9823fd656bc5ab82739a3cf84c5abee2079df0d185f7e1052a13dd8b",
+          "bytes": 42356,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/11-board-unfiltered-while-table-filtered.json",
+          "metadataSHA256": "8bd58d0e5b8ecf57678125ac5f8250c200ed19c9549b9e4e2a0eabfc65c96323",
+          "captureWidth": 1920,
+          "captureHeight": 852
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/12-filter-persisted-after-reload.jpg",
+          "sha256": "b4cec95a4e9091ad9ee5cdcdd63838b9d878711ab8a1843de05d0950a03d907b",
+          "bytes": 38623,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/12-filter-persisted-after-reload.json",
+          "metadataSHA256": "b1a4dbea32921384b63563e08fd3ffa9021b0352ef9b4f59fe2e0db0a88832aa",
+          "captureWidth": 1920,
+          "captureHeight": 796
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/13-filter-persisted-expanded.jpg",
+          "sha256": "97d38bf777484285a5587ef230fd1175e688e13b2e6ade36d2680e27c328a6b8",
+          "bytes": 41341,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/13-filter-persisted-expanded.json",
+          "metadataSHA256": "b1a4dbea32921384b63563e08fd3ffa9021b0352ef9b4f59fe2e0db0a88832aa",
+          "captureWidth": 1920,
+          "captureHeight": 796
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/14-table-filter-cleared.jpg",
+          "sha256": "15f827216a3c1ab9efed1428ae1132d81775ce73409cd5ae3b12e17f1bb8459a",
+          "bytes": 47486,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/14-table-filter-cleared.json",
+          "metadataSHA256": "b1a4dbea32921384b63563e08fd3ffa9021b0352ef9b4f59fe2e0db0a88832aa",
+          "captureWidth": 1920,
+          "captureHeight": 796
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/15-card-memo-status-changed.jpg",
+          "sha256": "0b64d464b6dca68720f5cd6758e63b717c8dec7601eca62bc04749e9c1874558",
+          "bytes": 46736,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/15-card-memo-status-changed.json",
+          "metadataSHA256": "6f5e42f62fb7ecb7c57ea2e4a1352c4f70bc22b176386599c6a45094ebfa8adc",
+          "captureWidth": 1920,
+          "captureHeight": 796
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/16-board-status-synced.jpg",
+          "sha256": "40f57bf11896ad8d5ffdd2c67b3be7ccc998b0331ae07324fbdc88ccab22c739",
+          "bytes": 42357,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/16-board-status-synced.json",
+          "metadataSHA256": "b441c5f27ee5bf4838088bb0c36bd1b87d0f328b483e26ad75f0f4e3d596d21b",
+          "captureWidth": 1920,
+          "captureHeight": 796
+        },
+        {
+          "file": "/private/tmp/ais-v19-native-guide/17-table-status-synced.jpg",
+          "sha256": "efa681dfc0e3320e5e5ca605291b8577eaed40a987ce9e4e1a666f56caf0e549",
+          "bytes": 47424,
+          "metadataFile": "/private/tmp/ais-v19-native-guide/17-table-status-synced.json",
+          "metadataSHA256": "b441c5f27ee5bf4838088bb0c36bd1b87d0f328b483e26ad75f0f4e3d596d21b",
+          "captureWidth": 1920,
+          "captureHeight": 796
+        }
+      ],
+      "rasterNote": "QA crops01–11 are1640×852;12–17 are1640×796. JSON captures record width1920 and corresponding heights. Neither is native zoom/VoiceOver evidence."
+    },
+    "criterionBoundary": "Original five guide steps and three result checks only. One agent reproduction is not all guides, user research, comparison-understanding or assistive-technology evidence. Publishing a verified-history label is separate implementation work and not falsely claimed complete.",
+    "remainingUnverified": [
+      "1.3.4",
+      "5.1.4",
+      "5.2.4",
+      "6.1.4",
+      "8.1.4",
+      "8.5.4"
+    ],
+    "remainingGap": [
+      "1.2.4",
+      "8.4.3",
+      "8.4.4",
+      "9.4.4"
+    ],
+    "independentVerification": {
+      "areas": 9,
+      "groups": 38,
+      "gates": 152,
+      "uniqueIDs": true,
+      "allAreaGroupNamesGateIDsCriteriaWeightsIdentical": true,
+      "other151GateObjectsIncludingEvidenceIdentical": true,
+      "changedIDs": [
+        "6.3.4"
+      ],
+      "methodCapsIdentical": true,
+      "fourEqualBinaryGatesPerGroup": true,
+      "areaMaximumWeights100": true,
+      "counts": {
+        "PASS": 142,
+        "GAP": 4,
+        "UNVERIFIED": 6
+      },
+      "scores": [
+        {
+          "area": "정체성·기획 일치",
+          "score": 86.25
+        },
+        {
+          "area": "내용·최신성",
+          "score": 100.0
+        },
+        {
+          "area": "디자인",
+          "score": 100.0
+        },
+        {
+          "area": "사용성",
+          "score": 100.0
+        },
+        {
+          "area": "쾌적성·접근성",
+          "score": 87.5
+        },
+        {
+          "area": "유용성",
+          "score": 92.5
+        },
+        {
+          "area": "커뮤니티",
+          "score": 100.0
+        },
+        {
+          "area": "개인 기능",
+          "score": 81.25
+        },
+        {
+          "area": "배포·운영",
+          "score": 93.75
+        }
+      ],
+      "scoreDeltas": [
+        {
+          "area": "정체성·기획 일치",
+          "before": 86.25,
+          "after": 86.25,
+          "delta": 0.0
+        },
+        {
+          "area": "내용·최신성",
+          "before": 100.0,
+          "after": 100.0,
+          "delta": 0.0
+        },
+        {
+          "area": "디자인",
+          "before": 100.0,
+          "after": 100.0,
+          "delta": 0.0
+        },
+        {
+          "area": "사용성",
+          "before": 100.0,
+          "after": 100.0,
+          "delta": 0.0
+        },
+        {
+          "area": "쾌적성·접근성",
+          "before": 87.5,
+          "after": 87.5,
+          "delta": 0.0
+        },
+        {
+          "area": "유용성",
+          "before": 86.25,
+          "after": 92.5,
+          "delta": 6.25
+        },
+        {
+          "area": "커뮤니티",
+          "before": 100.0,
+          "after": 100.0,
+          "delta": 0.0
+        },
+        {
+          "area": "개인 기능",
+          "before": 81.25,
+          "after": 81.25,
+          "delta": 0.0
+        },
+        {
+          "area": "배포·운영",
+          "before": 93.75,
+          "after": 93.75,
+          "delta": 0.0
+        }
+      ],
+      "areasAtLeast88": 6,
+      "all9AtLeast88": false,
+      "nativeZoomAndScreenReaderStillUnverified": true,
+      "baselineUnchanged": true
+    }
+  },
+  "historicalSourceContextThroughV17": {
+    "deployedSource": "97022e07918cc0254a252b6e7a219e35fb00e9bb",
+    "deployedAt": "2026-09-12T16:37:26.448721+00:00",
+    "siteUrl": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+    "access": "owner-private",
+    "environmentRevision": 2,
+    "previousDeployedSource": "2d54809d51bc2cacd096bd403e187afadcda078a",
+    "previousDeployedAt": "2026-09-12T15:50:21.869820+00:00",
+    "v17PublicationStatus": "succeeded; owner-private; Sites version19; environment revision2; reported by root",
+    "v17Change": "Bounded visual repairs and completed fixed expanded-state cross-screen critique. Native zoom/reflow and observed screen-reader gates remain unchanged and UNVERIFIED.",
+    "historicalContext": "Full inherited V16 sourceContext preserved in historicalSourceContextThroughV16."
+  },
+  "historicalV19PrePublicationContext": {
+    "proposalFile": "/private/tmp/ais-v19-score-proposal.json",
+    "proposalSHA256": "3dfe9e7dd8cbd3184af9d4f8f6e12965ff52443c21e14df524193bd584454884",
+    "source": "97022e07918cc0254a252b6e7a219e35fb00e9bb",
+    "sourceContext": {
+      "deployedSource": "97022e07918cc0254a252b6e7a219e35fb00e9bb",
+      "deployedAt": "2026-09-12T16:37:26.448721+00:00",
+      "siteUrl": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+      "access": "owner-private",
+      "environmentRevision": 2,
+      "previousDeployedSource": "2d54809d51bc2cacd096bd403e187afadcda078a",
+      "previousDeployedAt": "2026-09-12T15:50:21.869820+00:00",
+      "v17PublicationStatus": "succeeded; owner-private; Sites version19; environment revision2; reported by root",
+      "v17Change": "Bounded visual repairs and completed fixed expanded-state cross-screen critique. Native zoom/reflow and observed screen-reader gates remain unchanged and UNVERIFIED.",
+      "historicalContext": "Full inherited V16 sourceContext preserved in historicalSourceContextThroughV16.",
+      "v19Worktree": {
+        "baseCommittedSource": "97022e07918cc0254a252b6e7a219e35fb00e9bb",
+        "hasUncommittedChanges": true,
+        "finalSource": null,
+        "publicationStatus": "pending final source and publication; no new deployment success claimed",
+        "scope": "Root is preparing the verification-history display for the single reproduced guide. Last deployed sourceContext fields remain the existing Sites19 deployment of97022.",
+        "reportedBy": "root; reviewer did not read Git or call Sites"
+      }
+    },
+    "overall": "incomplete: this V19 proposal changes only fixed gate6.3.4 to PASS for the actual reproduction and checked result of one existing Notion guide. Usefulness86.25→92.5; all other eight area scores are unchanged. Six of nine areas reach88; four retained GAP and six UNVERIFIED gates remain. Actual email/unattended operations, external visitor and independent real-session evidence, native zoom/reflow and observed screen-reader tasks, representative comparison-understanding, and deployed full export/download/destructive observation remain open. The new per-guide verification display is an uncommitted worktree change; final source/publication are pending.",
+    "changes": [
+      {
+        "id": "6.3.4",
+        "from": "UNVERIFIED",
+        "to": "PASS",
+        "previousEarned": 0,
+        "earned": 6.25,
+        "delta": 6.25,
+        "reason": "E19N: On2026-09-14 root reproduced the existing notion-task-board guide in actual Notion UI using an explicitly synthetic private QA database; no API writes were used, as reported by root. The original five steps are connected by UI capture evidence: /database creation, the original three tasks and status/priority/due-date properties, a board added to the same database and grouped by status, ascending due-date sort and high-priority filter retained after view navigation/reload then cleared, and an actual card memo plus status change. All three original result checks were read: the same three tasks in unfiltered table/board, weekly-report status changed from not-started to in-progress in both views (board0/2/1), and the exact Sep16→Sep17→Sep18 date order maintained. Independent reviewer directly opened all17 QA-cropped JPGs and read corresponding metadata; early incomplete states and the later filter-persistence and synchronization evidence are preserved in ais-v19-notion-evidence-review.md. Root performed the actions; reviewer observed stored images, not a second independent live UI run. This credits agent reproduction and result checking of one existing guide, not all four guides, representative-human understanding, native200%/VoiceOver, or deployment of the pending per-guide verification display."
+      }
+    ],
+    "E19N": "/private/tmp/ais-v19-notion-evidence-review.md; /private/tmp/ais-v19-native-guide/01–17 JPG/JSON. Actual Notion UI reproduction by root and independent reading of17 QA crops; original V18 five-step/three-check preflight retained. Per-guide Site display change is not yet committed/published.",
+    "targetGateEvidence": "Historical V17 evidence: Direct execution results are explicitly unregistered. Current V19: E19N: On2026-09-14 root reproduced the existing notion-task-board guide in actual Notion UI using an explicitly synthetic private QA database; no API writes were used, as reported by root. The original five steps are connected by UI capture evidence: /database creation, the original three tasks and status/priority/due-date properties, a board added to the same database and grouped by status, ascending due-date sort and high-priority filter retained after view navigation/reload then cleared, and an actual card memo plus status change. All three original result checks were read: the same three tasks in unfiltered table/board, weekly-report status changed from not-started to in-progress in both views (board0/2/1), and the exact Sep16→Sep17→Sep18 date order maintained. Independent reviewer directly opened all17 QA-cropped JPGs and read corresponding metadata; early incomplete states and the later filter-persistence and synchronization evidence are preserved in ais-v19-notion-evidence-review.md. Root performed the actions; reviewer observed stored images, not a second independent live UI run. This credits agent reproduction and result checking of one existing guide, not all four guides, representative-human understanding, native200%/VoiceOver, or deployment of the pending per-guide verification display.",
+    "note": "Historical pre-publication snapshot only. The inherited v19Proposal also remains the original proposal record. Current metadata is sourceContext and v19AdoptionCandidate."
+  },
+  "currentVerificationContext": {
+    "inheritedGateEvidenceSemantics": "All150 non-target gate objects/evidence are preserved from V17. Current source/partial progress context is separate from terse historical scoring strings. Only5.1.4 and6.3.4 are proposed state/earned changes.",
+    "5.1.4": {
+      "state": "PASS",
+      "decision": "Proposed after final bounded actual200% completeness review; not an authoritative root adoption.",
+      "observedScope": "Original28 principal rows and current important S01–S12 expanded bodies; actual native200%, CSS960x398/DPR2, no document overflow in raw principal sequences, body/footer/modal endpoints, actual table right ends and common focus/dock/skip observations.",
+      "remainingLimitations": "Absent operational data and equivalent-content variants remain explicitly unobserved, not new required combinations. Actual reader output,400%,every error path and user research are not implied.",
+      "evidence": "/private/tmp/ais-v19-zoom-completeness-review.md",
+      "externalDependency": "Prior Chrome coordination resolved; root restored local and deployed domains to100% at end."
+    },
+    "5.2.4": {
+      "state": "UNVERIFIED",
+      "currentProgress": "Root observed the normal settings switch ON but process check false and no actual caption/speech, followed by getApp timeout and OFF restoration.",
+      "decision": "No observed reading order/descriptions/status announcements; cannot substitute GUI toggle/AX tree.",
+      "externalDependency": "A functioning permitted reader session with actual output remains needed; exact root cause is not established."
+    },
+    "8.5.4": {
+      "state": "UNVERIFIED",
+      "currentProgress": "V18 actual download completed. The file contains8arrays with only posts nonempty.",
+      "remaining": "Complete deployed verification scope and the separate full-account destructive flow remain unobserved. Neither per-post deletion nor opening/cancelling a delete dialog completes it.",
+      "externalDependency": "An intentionally authorized full-account deletion scope and appropriate session must be available before performing the destructive observation; no deletion is authorized by this score draft."
+    },
+    "1.3.4": {
+      "state": "UNVERIFIED",
+      "remaining": "An actual external anonymous deployed task, with the required access arrangement. Owner session/local guest does not satisfy it; audience remains private."
+    },
+    "6.1.4": {
+      "state": "UNVERIFIED",
+      "remaining": "Observed representative choice/hold based on comparison evidence. No new external-person-count requirement is introduced; implementation knowledge or a saved QA comparison is not this observation."
+    },
+    "8.1.4": {
+      "state": "UNVERIFIED",
+      "remaining": "Independent real production account/device sessions. Synthetic user_id tests and same-owner new tabs remain bounded evidence."
+    },
+    "operationalGaps": {
+      "ids": [
+        "1.2.4",
+        "8.4.3",
+        "8.4.4",
+        "9.4.4"
+      ],
+      "state": "GAP",
+      "implementedButInsufficient": "Timing/consent/immutable delivery/version correction/private receipts/optional feedback have previous implementation evidence.",
+      "remaining": "Actual authorized provider/sender configuration, consenting recipient and receipt/delivery distinction; supported unattended execution independent of visits; actual operating feedback/cadence remain incomplete. No provider keys, sender, scheduler activation or fake operating data are supplied by this candidate."
+    },
+    "goalControl": {
+      "reportedToolState": "blocked",
+      "userIntent": "User explicitly requested resumption; actual task work resumed and progressed through Notion execution, guide publication and native zoom checks.",
+      "boundary": "The callable goal tools do not resume a blocked goal. Codex app control was explicitly denied; no alternative-app/CLI/internal-state bypass is proposed or performed. This candidate changes no goal state and does not label the resumed work as no progress.",
+      "evidence": "docs/audits/v19-native-guide/ais-v19-goal-resume-path.md; latest root status message."
+    }
+  },
+  "v19AdoptionCandidate": {
+    "status": "READY_FOR_ROOT_ADOPTION; independent proposal only",
+    "scope": [
+      "5.1.4",
+      "6.3.4"
+    ],
+    "baselineFile": "/Users/bigmac_moon/dev/ai_score/docs/audits/2026-09-13-score-worksheet-v17.json",
+    "baselineSHA256": "895aad1891a618b309f0ed1ee600ede5b45cfd93aa21062e5b4033796eac3859",
+    "guideOnlyCandidateFile": "/private/tmp/ais-v19-score-final-candidate.json",
+    "guideOnlyCandidateSHA256": "9561f17418501ff13fae53b5c6501612e97593b006beed917a87ca20cd134764",
+    "source": "d5efa3e11997e4a6d19cf28029246546e3a2a5bc",
+    "publication": {
+      "source": "d5efa3e11997e4a6d19cf28029246546e3a2a5bc",
+      "version": 21,
+      "versionId": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_775a2c15a3cc8191bb0de212dc42bfa8",
+      "deploymentId": "appgdep_6aa806e7e530819183a877eae9421c27",
+      "status": "succeeded",
+      "updatedAt": "2026-09-14T14:39:07.129272+00:00",
+      "environmentRevision": 2,
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+      "access": "owner-private/custom; one allowed account, zero external users/groups; unchanged",
+      "observedBy": "Root actual Sites receipts preserved in docs/audits/v19-native-zoom/site-deployment-receipts.json; reviewer read and cross-checked the saved receipts, without calling Sites/Git."
+    },
+    "stateChanges": [
+      "5.1.4",
+      "6.3.4"
+    ],
+    "counts": {
+      "PASS": 143,
+      "GAP": 4,
+      "UNVERIFIED": 5
+    },
+    "areasAtLeast88": 7,
+    "goalComplete": false,
+    "nativeZoomDecision": "5.1.4 PASS proposed after fixed scope completeness review; no standard or weights changed",
+    "readerDecision": "5.2.4 remains UNVERIFIED; no actual reader output observed",
+    "historicalProposalMeaning": "v19Proposal is the original guide-only prepublication record; historicalV19GuideOnlyCandidate is the interim Sites20 candidate. This object and sourceContext describe the current Sites21 proposal.",
+    "independentVerification": {
+      "checks": {
+        "9Areas": true,
+        "38Groups": true,
+        "152UniqueGates": true,
+        "orderedIDsUnchanged": true,
+        "areaGroupNamesWeightsUnchanged": true,
+        "allCriteriaIDsWeightsUnchanged": true,
+        "other150ObjectsIncludingEvidenceUnchanged": true,
+        "only514634ChangedFromV17": true,
+        "only514ChangedFromGuideOnlyCandidate": true,
+        "exact514Criterion": true,
+        "exact634Criterion": true,
+        "targets625Each": true,
+        "fourEqualBinaryGatesPerGroup": true,
+        "areaMaxima100": true,
+        "counts143_4_5": true,
+        "scoresRecomputedExact": true,
+        "comfort9375": true,
+        "usefulness925": true,
+        "sevenAreasAtLeast88": true,
+        "twoAreasStillBelow88": true,
+        "onlyTwoAreaDeltas625": true,
+        "readerGateUnchangedU": true,
+        "methodCapsUnchanged": true,
+        "changesOnly514634": true,
+        "sourceMatchesCurrentVersionReceipt": true,
+        "deploymentVersionReceiptConsistent": true,
+        "historicalInitialProposalUnchanged": true,
+        "historicalFieldsUnchanged": true,
+        "complete28PrincipalIDs": true,
+        "rawPrincipalMetricsVerified": true,
+        "45LatestActualImagesExistAndRasterVerified": true,
+        "finalToastActuallyOpaque": true,
+        "originalSevenRestorationReceiptExact": true
+      },
+      "counts": {
+        "PASS": 143,
+        "GAP": 4,
+        "UNVERIFIED": 5
+      },
+      "scores": [
+        {
+          "area": "정체성·기획 일치",
+          "score": 86.25
+        },
+        {
+          "area": "내용·최신성",
+          "score": 100.0
+        },
+        {
+          "area": "디자인",
+          "score": 100.0
+        },
+        {
+          "area": "사용성",
+          "score": 100.0
+        },
+        {
+          "area": "쾌적성·접근성",
+          "score": 93.75
+        },
+        {
+          "area": "유용성",
+          "score": 92.5
+        },
+        {
+          "area": "커뮤니티",
+          "score": 100.0
+        },
+        {
+          "area": "개인 기능",
+          "score": 81.25
+        },
+        {
+          "area": "배포·운영",
+          "score": 93.75
+        }
+      ],
+      "areasAtLeast88": 7,
+      "all9AtLeast88": false,
+      "changedGateIDs": [
+        "5.1.4",
+        "6.3.4"
+      ],
+      "boundary": "Saved actual observations/image and arithmetic audit only. No new live browser/Git/Sites/provider/reader/data actions."
+    }
+  },
+  "historicalV19GuideOnlyCandidate": {
+    "file": "/private/tmp/ais-v19-score-final-candidate.json",
+    "sha256": "9561f17418501ff13fae53b5c6501612e97593b006beed917a87ca20cd134764",
+    "source": "79afc174c8add32c772839c4d3556d03e91213bd",
+    "sourceContext": {
+      "deployedSource": "79afc174c8add32c772839c4d3556d03e91213bd",
+      "deployedAt": "2026-09-14T13:58:58.844096+00:00",
+      "siteUrl": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+      "access": "owner-private",
+      "environmentRevision": 2,
+      "sitesVersion": 20,
+      "sitesVersionId": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_18ffb37559d08191899a78646eb728c8",
+      "deploymentId": "appgdep_6aa7fd6857008191850f347830b63dde",
+      "publicationStatus": "succeeded",
+      "previousDeployedSource": "97022e07918cc0254a252b6e7a219e35fb00e9bb",
+      "previousDeployedAt": "2026-09-12T16:37:26.448721+00:00",
+      "currentSourceMeaning": "Root-reported current HEAD and successful Sites20 deployment. No uncommitted or pending-publication field applies to this current snapshot. Independent reviewer did not query Git/Sites.",
+      "changeScope": "The existing notion-task-board guide now has its specific actual reproduction/verification history. The score delta credits guide execution and checked results, not publication alone.",
+      "historicalContext": "Inherited source contexts and pre-publication pending claims are preserved only in historicalSourceContextThroughV15/16/17, historicalV19PrePublicationContext and the prior v16/v17/v19 proposal records."
+    },
+    "counts": {
+      "PASS": 142,
+      "GAP": 4,
+      "UNVERIFIED": 6
+    },
+    "totals": [
+      {
+        "area": "정체성·기획 일치",
+        "score": 86.25
+      },
+      {
+        "area": "내용·최신성",
+        "score": 100.0
+      },
+      {
+        "area": "디자인",
+        "score": 100.0
+      },
+      {
+        "area": "사용성",
+        "score": 100.0
+      },
+      {
+        "area": "쾌적성·접근성",
+        "score": 87.5
+      },
+      {
+        "area": "유용성",
+        "score": 92.5
+      },
+      {
+        "area": "커뮤니티",
+        "score": 100.0
+      },
+      {
+        "area": "개인 기능",
+        "score": 81.25
+      },
+      {
+        "area": "배포·운영",
+        "score": 93.75
+      }
+    ],
+    "overall": "incomplete: V19 candidate changes only fixed6.3.4 to PASS for one complete existing Notion guide reproduced in actual UI with its results checked. Usefulness92.5; six of nine areas reach88; GAP4 and UNVERIFIED6 remain. Sites20 source79afc174c8add32c772839c4d3556d03e91213bd successfully deployed at2026-09-14T13:58:58.844096+00:00 with unchanged private audience. Actual200% verification is in progress, not yet a complete-matrix PASS; VoiceOver output was not observed. Actual email/unattended operation/cadence, external visitor and independent real production sessions, representative comparison understanding and full-account destructive observation remain open. Goal-control state is reported blocked despite explicitly resumed, progressing work; no forbidden resume bypass or completion change is claimed.",
+    "adoptionCandidate": {
+      "status": "READY_FOR_ROOT_ADOPTION; not an authoritative adoption by this independent reviewer",
+      "scope": [
+        "6.3.4"
+      ],
+      "baselineFile": "/Users/bigmac_moon/dev/ai_score/docs/audits/2026-09-13-score-worksheet-v17.json",
+      "baselineSHA256": "895aad1891a618b309f0ed1ee600ede5b45cfd93aa21062e5b4033796eac3859",
+      "initialProposalFile": "/private/tmp/ais-v19-score-proposal.json",
+      "initialProposalSHA256": "3dfe9e7dd8cbd3184af9d4f8f6e12965ff52443c21e14df524193bd584454884",
+      "source": "79afc174c8add32c772839c4d3556d03e91213bd",
+      "publication": {
+        "source": "79afc174c8add32c772839c4d3556d03e91213bd",
+        "version": 20,
+        "versionId": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_18ffb37559d08191899a78646eb728c8",
+        "deploymentId": "appgdep_6aa7fd6857008191850f347830b63dde",
+        "status": "succeeded",
+        "updatedAt": "2026-09-14T13:58:58.844096+00:00",
+        "environmentRevision": 2,
+        "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+        "access": "owner-private/custom; one allowed account, zero external users/groups; unchanged",
+        "observedBy": "root reported actual deployment receipt and current HEAD; independent reviewer did not call Sites or Git"
+      },
+      "historicalProposalMeaning": "v19Proposal is preserved as the initial pre-publication proposal; sourceContext and this candidate metadata describe the current deployment.",
+      "stateChanges": [
+        "6.3.4"
+      ],
+      "counts": {
+        "PASS": 142,
+        "GAP": 4,
+        "UNVERIFIED": 6
+      },
+      "areasAtLeast88": 6,
+      "goalComplete": false,
+      "nativeZoomDecision": "5.1.4 remains UNVERIFIED pending root final matrix assessment",
+      "readerDecision": "5.2.4 remains UNVERIFIED; no actual reader output observed",
+      "independentVerification": {
+        "checks": {
+          "9areas": true,
+          "38groups": true,
+          "152uniqueIDs": true,
+          "allIDsUnchanged": true,
+          "areaGroupNamesAndWeightsUnchanged": true,
+          "allGateCriteriaIDsWeightsUnchanged": true,
+          "other151GateObjectsEvidenceUnchanged": true,
+          "only634Changed": true,
+          "only634StateEarnedChanged": true,
+          "targetExactCriterion": true,
+          "targetPASS625": true,
+          "fourEqualBinaryGatesEveryGroup": true,
+          "eachAreaMaximum100": true,
+          "counts142_4_6": true,
+          "recomputedScoresMatch": true,
+          "usefulness925": true,
+          "sixAreasAtLeast88": true,
+          "onlyUsefulnessDelta625": true,
+          "nativeGatesRemainU": true,
+          "methodCapsUnchanged": true,
+          "changesExactly634": true,
+          "currentSourceExact": true,
+          "currentPublicationExact": true,
+          "currentSourceContextNoPendingWorktree": true,
+          "historicalV17ContextPreserved": true,
+          "initialProposalMetadataPreserved": true,
+          "previousHistoricalRecordsPreserved": true,
+          "35DurableNotionEvidenceCopiesMatch": true
+        },
+        "counts": {
+          "PASS": 142,
+          "GAP": 4,
+          "UNVERIFIED": 6
+        },
+        "scores": [
+          {
+            "area": "정체성·기획 일치",
+            "score": 86.25
+          },
+          {
+            "area": "내용·최신성",
+            "score": 100.0
+          },
+          {
+            "area": "디자인",
+            "score": 100.0
+          },
+          {
+            "area": "사용성",
+            "score": 100.0
+          },
+          {
+            "area": "쾌적성·접근성",
+            "score": 87.5
+          },
+          {
+            "area": "유용성",
+            "score": 92.5
+          },
+          {
+            "area": "커뮤니티",
+            "score": 100.0
+          },
+          {
+            "area": "개인 기능",
+            "score": 81.25
+          },
+          {
+            "area": "배포·운영",
+            "score": 93.75
+          }
+        ],
+        "areasAtLeast88": 6,
+        "all9AtLeast88": false,
+        "changedGateIDs": [
+          "6.3.4"
+        ],
+        "scopeBoundary": "No new browser/Git/Sites/reader run or source test run. This is a fixed-ledger metadata/arithmetic audit using existing evidence and root publication report."
+      }
+    },
+    "currentVerificationContext": {
+      "inheritedGateEvidenceSemantics": "All151 non-target gate objects, including terse historical evidence strings, are preserved byte-for-object from V17. They describe the inherited scoring record, not an assertion that newer partial work never happened. Current scope is clarified here without extra credit.",
+      "5.1.4": {
+        "state": "UNVERIFIED",
+        "currentProgress": "User explicitly coordinated a Chrome pause; root set actual native200% and is completing the fixed existing matrix with independent image review. Partial evidence exists.",
+        "decision": "No final PASS or complete-matrix claim in this candidate. Root may evaluate later using the unchanged criterion.",
+        "externalDependency": "The prior Chrome coordination wait was resolved. Remaining work is active verification, not that old permission blocker."
+      },
+      "5.2.4": {
+        "state": "UNVERIFIED",
+        "currentProgress": "Root observed the normal settings switch ON but process check false and no actual caption/speech, followed by getApp timeout and OFF restoration.",
+        "decision": "No observed reading order/descriptions/status announcements; cannot substitute GUI toggle/AX tree.",
+        "externalDependency": "A functioning permitted reader session with actual output remains needed; exact root cause is not established."
+      },
+      "8.5.4": {
+        "state": "UNVERIFIED",
+        "currentProgress": "V18 actual download completed. The file contains8arrays with only posts nonempty.",
+        "remaining": "Complete deployed verification scope and the separate full-account destructive flow remain unobserved. Neither per-post deletion nor opening/cancelling a delete dialog completes it.",
+        "externalDependency": "An intentionally authorized full-account deletion scope and appropriate session must be available before performing the destructive observation; no deletion is authorized by this score draft."
+      },
+      "1.3.4": {
+        "state": "UNVERIFIED",
+        "remaining": "An actual external anonymous deployed task, with the required access arrangement. Owner session/local guest does not satisfy it; audience remains private."
+      },
+      "6.1.4": {
+        "state": "UNVERIFIED",
+        "remaining": "Observed representative choice/hold based on comparison evidence. No new external-person-count requirement is introduced; implementation knowledge or a saved QA comparison is not this observation."
+      },
+      "8.1.4": {
+        "state": "UNVERIFIED",
+        "remaining": "Independent real production account/device sessions. Synthetic user_id tests and same-owner new tabs remain bounded evidence."
+      },
+      "operationalGaps": {
+        "ids": [
+          "1.2.4",
+          "8.4.3",
+          "8.4.4",
+          "9.4.4"
+        ],
+        "state": "GAP",
+        "implementedButInsufficient": "Timing/consent/immutable delivery/version correction/private receipts/optional feedback have previous implementation evidence.",
+        "remaining": "Actual authorized provider/sender configuration, consenting recipient and receipt/delivery distinction; supported unattended execution independent of visits; actual operating feedback/cadence remain incomplete. No provider keys, sender, scheduler activation or fake operating data are supplied by this candidate."
+      },
+      "goalControl": {
+        "reportedToolState": "blocked",
+        "userIntent": "User explicitly requested resumption; actual task work resumed and progressed through Notion execution, guide publication and native zoom checks.",
+        "boundary": "The callable goal tools do not resume a blocked goal. Codex app control was explicitly denied; no alternative-app/CLI/internal-state bypass is proposed or performed. This candidate changes no goal state and does not label the resumed work as no progress.",
+        "evidence": "docs/audits/v19-native-guide/ais-v19-goal-resume-path.md; latest root status message."
+      }
+    },
+    "note": "Earlier Sites20/guide-only candidate, never an authoritative adoption. The actual200% review was still incomplete at that snapshot."
+  }
+}

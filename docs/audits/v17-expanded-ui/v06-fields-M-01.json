@@ -1,0 +1,25 @@
+{
+  "scroll": {
+    "height": 7058,
+    "width": 375,
+    "x": 0,
+    "y": 0
+  },
+  "url": "http://localhost:5173/my?tab=savings",
+  "viewport": {
+    "doc": 375,
+    "height": 844,
+    "scale": 1,
+    "width": 390
+  },
+  "visibleText": [
+    "마이페이지",
+    "사용 중인 도구와 필요한 정보를 관리하세요.",
+    "구독 변경 비교",
+    "같은 날짜 범위에서 유지안과 변경안의 실제·예정 지출을 확인하세요.",
+    "기존 구독V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "비교 시작일",
+    "비교 종료일",
+    "새 계약 이용 시작·전환일"
+  ]
+}

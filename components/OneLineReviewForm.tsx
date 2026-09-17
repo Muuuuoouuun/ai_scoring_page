@@ -1,30 +1,9 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
+import type { ReviewItem } from "@/lib/reviews";
+import { useToolReviews } from "@/components/useToolReviews";
 import { useLanguage } from "@/components/LanguageProvider";
-
-type ReviewItem = {
-  id: string;
-  nickname: string;
-  line: string;
-  detail: string;
-  rating: number;
-  imageUrl?: string;
-  createdAt: string;
-};
-
-const storageKey = (toolId: string) => `g2-reviews-${toolId}`;
-
-const parseReviewList = (raw: string | null): ReviewItem[] => {
-  if (!raw) return [];
-  try {
-    const parsed = JSON.parse(raw) as ReviewItem[];
-    if (!Array.isArray(parsed)) return [];
-    return parsed.filter((item) => item && item.id && item.line);
-  } catch {
-    return [];
-  }
-};
 
 const formatDate = (iso: string, locale: string) =>
   new Intl.DateTimeFormat(locale, {
@@ -40,13 +19,9 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
   const [rating, setRating] = useState(4);
   const [hoverRating, setHoverRating] = useState(0);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
-  const [reviews, setReviews] = useState<ReviewItem[]>([]);
+  const { reviews, add } = useToolReviews(toolId);
   const [saved, setSaved] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    setReviews(parseReviewList(localStorage.getItem(storageKey(toolId))));
-  }, [toolId]);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -69,9 +44,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
       imageUrl: imagePreview || undefined, // Store temporary object URL
       createdAt: new Date().toISOString()
     };
-    const next = [item, ...reviews].slice(0, 30);
-    localStorage.setItem(storageKey(toolId), JSON.stringify(next));
-    setReviews(next);
+    add(item);
     
     // Reset Form
     setNickname("");
@@ -86,7 +59,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
   };
 
   return (
-    <section className="card review-form-card">
+    <section className="card review-form-card" id="review-form">
       <strong>{t.reviewWrite}</strong>
       
       <div className="form-field">

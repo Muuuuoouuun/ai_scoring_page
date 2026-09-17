@@ -1,0 +1,122 @@
+{
+  "baselineSHA256": "a86ce424dd361d18e470635573f3c9b04215fb7f854bada740f6a60da5421f1c",
+  "areas": 9,
+  "groups": 38,
+  "gates": 152,
+  "allIDsUnique": true,
+  "fixedAreaGroupNamesGateIDsNamesAndWeightsIdentical": true,
+  "other151GateObjectsIncludingEvidenceIdentical": true,
+  "changedGateIDs": [
+    "3.4.4"
+  ],
+  "methodAndCapsIdentical": true,
+  "allGroupWeightsSumTo100PerArea": true,
+  "fourEqualBinaryGatesPerGroup": true,
+  "counts": {
+    "PASS": 141,
+    "GAP": 4,
+    "UNVERIFIED": 7
+  },
+  "scores": [
+    {
+      "area": "정체성·기획 일치",
+      "score": 86.25
+    },
+    {
+      "area": "내용·최신성",
+      "score": 100.0
+    },
+    {
+      "area": "디자인",
+      "score": 100.0
+    },
+    {
+      "area": "사용성",
+      "score": 100.0
+    },
+    {
+      "area": "쾌적성·접근성",
+      "score": 87.5
+    },
+    {
+      "area": "유용성",
+      "score": 86.25
+    },
+    {
+      "area": "커뮤니티",
+      "score": 100.0
+    },
+    {
+      "area": "개인 기능",
+      "score": 81.25
+    },
+    {
+      "area": "배포·운영",
+      "score": 93.75
+    }
+  ],
+  "scoreDeltas": [
+    {
+      "area": "정체성·기획 일치",
+      "before": 86.25,
+      "after": 86.25,
+      "delta": 0.0
+    },
+    {
+      "area": "내용·최신성",
+      "before": 100.0,
+      "after": 100.0,
+      "delta": 0.0
+    },
+    {
+      "area": "디자인",
+      "before": 93.75,
+      "after": 100.0,
+      "delta": 6.25
+    },
+    {
+      "area": "사용성",
+      "before": 100,
+      "after": 100.0,
+      "delta": 0.0
+    },
+    {
+      "area": "쾌적성·접근성",
+      "before": 87.5,
+      "after": 87.5,
+      "delta": 0.0
+    },
+    {
+      "area": "유용성",
+      "before": 86.25,
+      "after": 86.25,
+      "delta": 0.0
+    },
+    {
+      "area": "커뮤니티",
+      "before": 100.0,
+      "after": 100.0,
+      "delta": 0.0
+    },
+    {
+      "area": "개인 기능",
+      "before": 81.25,
+      "after": 81.25,
+      "delta": 0.0
+    },
+    {
+      "area": "배포·운영",
+      "before": 93.75,
+      "after": 93.75,
+      "delta": 0.0
+    }
+  ],
+  "areasAtLeast88": 5,
+  "all9AtLeast88": false,
+  "scopeGatesOnly": true,
+  "originalWorksheetNotWritten": true,
+  "manifestFilesHashAndBytesChecked": 189,
+  "manifestMismatches": [],
+  "proposalFile": "/private/tmp/ais-v17-score-worksheet-proposed.json",
+  "proposalSHA256": "93e8174aba4259ee43a651a9322506c4b7ebb1179b92dbc559c94a1a391ea445"
+}

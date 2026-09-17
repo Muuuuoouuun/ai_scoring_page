@@ -1,0 +1,421 @@
+{
+  "baseline": {
+    "checkedAt": "2026-09-12T14:59:10.412Z",
+    "hashes": {
+      "lib/notice-candidates.ts": "33ef6f44b1d8bd03090649782de40237320299a7186cb758302d2fd63816e0d6",
+      "lib/notice-sources.ts": "6b39a91474d28268b0872ecdd93c0994251906e38aedc7e81e0dad03d5128b55",
+      "lib/notifications.ts": "ef97f7ff17b0bf907d66d8ce718c0c6be4e269144c793020b627bd51609a2ba7",
+      "lib/email-delivery.ts": "eb4010f2d3f7f3f5fabcbecf80ee24efd3ab7e4b17005830209bca2eacde0abd",
+      "tests/api-harness.mjs": "e7fba02fd5b8d6519e76cdd20ea677dfb8d5c2ea55ad9627cf0e15136d1d5d34",
+      "app/api/workspace/route.ts": "76aaa99b7f5b299f0ff51a93c4083b4b790ccc58cb4a0cacae0793b35cbccb14",
+      "data/promotions.json": "cc03e0344c38b102a0c98858fb5668c257804c776f2f677233769419be64fc8e",
+      "data/catalog.json": "b45b6a75cf69dd34915dcb95e65fd8354a112bf8d0942139c268fadb357876c7"
+    },
+    "network": "provider mocks only",
+    "source": "actual modules + in-memory SQLite; no Site writes"
+  },
+  "exitCode": 0,
+  "counts": {
+    "total": 16,
+    "passed": 16,
+    "failed": 0,
+    "behaviorPassed": 15,
+    "behaviorFailed": 0,
+    "snapshotChecks": 1
+  },
+  "testChange": "Only normalize absent dispatch row to null next_digest_not_before; original no-slot-consumption expectation preserved.",
+  "tests": [
+    {
+      "number": 1,
+      "pass": true,
+      "name": "R2 checkedAt-only and explicit revision-only preserve sent/read/card identity",
+      "observations": [
+        {
+          "requests": 1,
+          "cardIds": [
+            "c3d5a345-e9a6-4068-b721-8ebf98d9a723",
+            "c3d5a345-e9a6-4068-b721-8ebf98d9a723",
+            "c3d5a345-e9a6-4068-b721-8ebf98d9a723"
+          ],
+          "read": 1,
+          "sourceRevision": 2,
+          "headRevision": 2
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "pass": true,
+      "name": "R3 paused old generator cannot regress newer head/card or queue",
+      "observations": [
+        {
+          "head": {
+            "card_key": "promotion:local-race-offer",
+            "revision": 2,
+            "event_revision": 2,
+            "version": "ed8e0d46881df148e9c40edaa1962139a3c6a211ab113213c76324d13c883592",
+            "conflict": 0,
+            "updated_at": "2026-09-12T10:00:00.000Z"
+          },
+          "cardRevision": 2,
+          "queues": [
+            {
+              "status": "queued",
+              "attempts": 0
+            },
+            {
+              "status": "queued",
+              "attempts": 0
+            }
+          ],
+          "requests": 0
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "pass": true,
+      "name": "R3/R4 old deployed worker must not cancel the newer reviewed queue (matched)",
+      "observations": [
+        {
+          "mode": "matched",
+          "oldWorkerResult": {
+            "sent": 0,
+            "configured": true
+          },
+          "beforeQueue": "queued",
+          "afterQueue": "queued",
+          "queueError": null,
+          "headRevision": 2,
+          "cardRevision": 2,
+          "staleRequests": 0,
+          "newWorkerResult": {
+            "sent": 1,
+            "configured": true
+          },
+          "totalRequests": 1
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "pass": true,
+      "name": "R3/R4 old deployed worker must not cancel the newer reviewed queue (digest)",
+      "observations": [
+        {
+          "mode": "digest",
+          "oldWorkerResult": {
+            "sent": 0,
+            "configured": true
+          },
+          "beforeQueue": "queued",
+          "afterQueue": "queued",
+          "queueError": null,
+          "headRevision": 2,
+          "cardRevision": 2,
+          "staleRequests": 0,
+          "newWorkerResult": {
+            "sent": 1,
+            "configured": true
+          },
+          "totalRequests": 1
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "pass": true,
+      "name": "R8 source changes after candidate read before pending-queue scan: latest queue and daily slot remain intact",
+      "observations": [
+        {
+          "result": {
+            "sent": 0,
+            "configured": true
+          },
+          "currentQueue": {
+            "status": "queued",
+            "error": null,
+            "attempts": 0
+          },
+          "dispatchOutcome": null,
+          "nextDigest": null,
+          "requests": 0,
+          "headRevision": 2
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "pass": true,
+      "name": "R8 head advances after reads before plan CAS: no dependent write/provider/slot",
+      "observations": [
+        {
+          "stage": "plan",
+          "mutation": "head",
+          "result": {
+            "sent": 0,
+            "configured": true
+          },
+          "delivery": [],
+          "outbox": [
+            {
+              "status": "queued",
+              "attempts": 0
+            }
+          ],
+          "digest": null,
+          "requests": 0
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "pass": true,
+      "name": "R8 settings advances after reads before plan CAS: no dependent write/provider/slot",
+      "observations": [
+        {
+          "stage": "plan",
+          "mutation": "settings",
+          "result": {
+            "sent": 0,
+            "configured": true
+          },
+          "delivery": [],
+          "outbox": [
+            {
+              "status": "cancelled",
+              "attempts": 0
+            }
+          ],
+          "digest": null,
+          "requests": 0
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "pass": true,
+      "name": "R8 head advances after reads before attempt CAS: no dependent write/provider/slot",
+      "observations": [
+        {
+          "stage": "attempt",
+          "mutation": "head",
+          "result": {
+            "sent": 0,
+            "configured": true
+          },
+          "delivery": [
+            {
+              "status": "prepared",
+              "attempts": 0
+            }
+          ],
+          "outbox": [
+            {
+              "status": "prepared",
+              "attempts": 0
+            }
+          ],
+          "digest": null,
+          "requests": 0
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "pass": true,
+      "name": "R8 settings advances after reads before attempt CAS: no dependent write/provider/slot",
+      "observations": [
+        {
+          "stage": "attempt",
+          "mutation": "settings",
+          "result": {
+            "sent": 0,
+            "configured": true
+          },
+          "delivery": [
+            {
+              "status": "cancelled",
+              "attempts": 0
+            }
+          ],
+          "outbox": [
+            {
+              "status": "cancelled",
+              "attempts": 0
+            }
+          ],
+          "digest": null,
+          "requests": 0
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "pass": true,
+      "name": "R9 multi-item attempt fails closed for head",
+      "observations": [
+        {
+          "missing": "head",
+          "requests": 0,
+          "delivery": [
+            {
+              "status": "prepared",
+              "attempts": 0
+            }
+          ],
+          "outbox": [
+            {
+              "status": "prepared",
+              "attempts": 0
+            },
+            {
+              "status": "prepared",
+              "attempts": 0
+            }
+          ],
+          "slot": null
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "pass": true,
+      "name": "R9 multi-item attempt fails closed for card",
+      "observations": [
+        {
+          "missing": "card",
+          "requests": 0,
+          "delivery": [
+            {
+              "status": "prepared",
+              "attempts": 0
+            }
+          ],
+          "outbox": [
+            {
+              "status": "prepared",
+              "attempts": 0
+            },
+            {
+              "status": "prepared",
+              "attempts": 0
+            }
+          ],
+          "slot": null
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "pass": true,
+      "name": "R9 multi-item attempt fails closed for foreign-pointer",
+      "observations": [
+        {
+          "missing": "foreign-pointer",
+          "requests": 0,
+          "delivery": [
+            {
+              "status": "prepared",
+              "attempts": 0
+            }
+          ],
+          "outbox": [
+            {
+              "status": "prepared",
+              "attempts": 0
+            },
+            {
+              "status": "prepared",
+              "attempts": 0
+            }
+          ],
+          "slot": null
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "pass": true,
+      "name": "R10 late accepted old request retains receipt and immutable payload without regressing latest card",
+      "observations": [
+        {
+          "oldStatus": "accepted",
+          "oldProviderId": "mock-late-r1",
+          "cardRevision": 2,
+          "requests": 2,
+          "requestKeys": [
+            "ais-delivery-2e0e20ee-dd7b-4cde-992e-e156dcdca91e",
+            "ais-delivery-38824107-2830-4a4a-ae0b-30172465d906"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "pass": true,
+      "name": "P6 late generator after deletion cannot recreate private data or delete shared head/Beta",
+      "observations": [
+        {
+          "requests": 0,
+          "alphaCards": 0,
+          "betaCards": 2,
+          "sharedHead": {
+            "card_key": "promotion:local-race-offer",
+            "revision": 1,
+            "event_revision": 1,
+            "version": "0c36d6cab87f3043f8f2647d01f9947ae3896df0aef2e69aeb58dd9148ad6c9e",
+            "conflict": 0,
+            "updated_at": "2026-09-12T10:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "pass": true,
+      "name": "P6 late provider receipt after deletion cannot recreate private data or affect Beta",
+      "observations": [
+        {
+          "result": {
+            "sent": 0,
+            "configured": true
+          },
+          "requests": 1,
+          "privateAlphaRows": 0,
+          "betaCards": 2
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "pass": true,
+      "name": "source snapshot stability (detect concurrent parent edits, not a product behavior gate)",
+      "observations": [
+        {
+          "before": {
+            "lib/notice-candidates.ts": "33ef6f44b1d8bd03090649782de40237320299a7186cb758302d2fd63816e0d6",
+            "lib/notice-sources.ts": "6b39a91474d28268b0872ecdd93c0994251906e38aedc7e81e0dad03d5128b55",
+            "lib/notifications.ts": "ef97f7ff17b0bf907d66d8ce718c0c6be4e269144c793020b627bd51609a2ba7",
+            "lib/email-delivery.ts": "eb4010f2d3f7f3f5fabcbecf80ee24efd3ab7e4b17005830209bca2eacde0abd",
+            "tests/api-harness.mjs": "e7fba02fd5b8d6519e76cdd20ea677dfb8d5c2ea55ad9627cf0e15136d1d5d34",
+            "app/api/workspace/route.ts": "76aaa99b7f5b299f0ff51a93c4083b4b790ccc58cb4a0cacae0793b35cbccb14",
+            "data/promotions.json": "cc03e0344c38b102a0c98858fb5668c257804c776f2f677233769419be64fc8e",
+            "data/catalog.json": "b45b6a75cf69dd34915dcb95e65fd8354a112bf8d0942139c268fadb357876c7"
+          },
+          "after": {
+            "lib/notice-candidates.ts": "33ef6f44b1d8bd03090649782de40237320299a7186cb758302d2fd63816e0d6",
+            "lib/notice-sources.ts": "6b39a91474d28268b0872ecdd93c0994251906e38aedc7e81e0dad03d5128b55",
+            "lib/notifications.ts": "ef97f7ff17b0bf907d66d8ce718c0c6be4e269144c793020b627bd51609a2ba7",
+            "lib/email-delivery.ts": "eb4010f2d3f7f3f5fabcbecf80ee24efd3ab7e4b17005830209bca2eacde0abd",
+            "tests/api-harness.mjs": "e7fba02fd5b8d6519e76cdd20ea677dfb8d5c2ea55ad9627cf0e15136d1d5d34",
+            "app/api/workspace/route.ts": "76aaa99b7f5b299f0ff51a93c4083b4b790ccc58cb4a0cacae0793b35cbccb14",
+            "data/promotions.json": "cc03e0344c38b102a0c98858fb5668c257804c776f2f677233769419be64fc8e",
+            "data/catalog.json": "b45b6a75cf69dd34915dcb95e65fd8354a112bf8d0942139c268fadb357876c7"
+          },
+          "changed": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+  "source": "a0d353c7577805b5616f608409f0f1a00936e6cc",
+  "version_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_a4a11a1abe9c8191b8aaa33b71052dcd",
+  "version_number": 16,
+  "deployment_id": "appgdep_6aa55f760dcc8191b67f69ff1c862498",
+  "status": "succeeded",
+  "updated_at": "2026-09-12T14:19:47.070504+00:00",
+  "environment_revision": 2,
+  "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+  "access": {"role":"owner","access_mode":"custom","allowed_accounts":1,"external_visitors":0,"workspace_groups":0,"tenant_groups":0},
+  "server_archive": {"file_count":216,"size_bytes":2969600,"content_hash":"sha256:5ff9f2d6c4e4e4be19b5dfa602c1c8ef3de8cfd03694a8b01139b880f98b7c01"},
+  "validation": {"regression_tests":184,"regression_failures":0,"home_streaming_tests":4,"home_failures":0,"typescript":"pass","sites_build":"pass","diff_check":"pass"},
+  "runtime_checks": {"settings_render":"pass","notification_status_render":"pass","console_errors":0,"worker_errors_only_since_minutes":10,"worker_events":[],"actual_email_receipt":"unverified","unattended_dispatch":"not_connected"}
+}

@@ -1,0 +1,23 @@
+{
+  "scroll": {
+    "height": 8262,
+    "width": 375,
+    "x": 0,
+    "y": 6957
+  },
+  "url": "http://localhost:5173/my?tab=savings",
+  "viewport": {
+    "doc": 375,
+    "height": 844,
+    "scale": 1,
+    "width": 390
+  },
+  "visibleText": [
+    "선택 이유",
+    "사용·변경 결과",
+    "저장한 요금 비교 1개",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA → V10-QA-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+    "2026-09-12 – 2027-09-11 · 검토 중 · 저장 2026-09-12",
+    "원계약·결제 기록이 변경되었습니다. 저장 당시 결과를 유지합니다."
+  ]
+}

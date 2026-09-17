@@ -1,0 +1,27 @@
+{
+  "file": "v17-production-home.jpg",
+  "sha256": "f03a285d7b64cf5f0ed70325b8bb5922fa4d91313638f5e680a3308e4a59fe48",
+  "bytes": 33783,
+  "raster": {
+    "width": 395,
+    "height": 754,
+    "format": "JPEG"
+  },
+  "captureMetadata": {
+    "scroll": {
+      "height": 3528,
+      "width": 395,
+      "x": 0,
+      "y": 0
+    },
+    "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/",
+    "viewport": {
+      "doc": 395,
+      "height": 783,
+      "scale": 1,
+      "width": 410
+    }
+  },
+  "source": "97022e07918cc0254a252b6e7a219e35fb00e9bb",
+  "scope": "Post-publish home smoke only"
+}

@@ -1,0 +1,127 @@
+TAP version 13
+# BASELINE {"checkedAt":"2026-09-12T14:54:25.916Z","hashes":{"lib/notice-candidates.ts":"167bf3711e51548d8170b1f83b4398ffb0cbd0ae6f413008dc957d85e02b3639","lib/notice-sources.ts":"24479abde21f4935d8ec0019eb1c85df631da3fb0a45428aee8c3f25c3013df1","lib/notifications.ts":"ef97f7ff17b0bf907d66d8ce718c0c6be4e269144c793020b627bd51609a2ba7","lib/email-delivery.ts":"0edf92ce5dd2f71f87b6f19e3e6f6be5bdf69d791bf43d1da2b65b27c85e7891","tests/api-harness.mjs":"e7fba02fd5b8d6519e76cdd20ea677dfb8d5c2ea55ad9627cf0e15136d1d5d34","app/api/workspace/route.ts":"76aaa99b7f5b299f0ff51a93c4083b4b790ccc58cb4a0cacae0793b35cbccb14","data/promotions.json":"cc03e0344c38b102a0c98858fb5668c257804c776f2f677233769419be64fc8e","data/catalog.json":"b45b6a75cf69dd34915dcb95e65fd8354a112bf8d0942139c268fadb357876c7"},"network":"provider mocks only","source":"actual modules + in-memory SQLite; no Site writes"}
+# Subtest: R2 checkedAt-only and explicit revision-only preserve sent/read/card identity
+ok 1 - R2 checkedAt-only and explicit revision-only preserve sent/read/card identity
+  ---
+  duration_ms: 176.241708
+  type: 'test'
+  ...
+# {"requests":1,"cardIds":["81c10ea5-afbf-459b-bd24-37f5a0a1be2a","81c10ea5-afbf-459b-bd24-37f5a0a1be2a","81c10ea5-afbf-459b-bd24-37f5a0a1be2a"],"read":1,"sourceRevision":2,"headRevision":2}
+# Subtest: R3 paused old generator cannot regress newer head/card or queue
+ok 2 - R3 paused old generator cannot regress newer head/card or queue
+  ---
+  duration_ms: 124.330584
+  type: 'test'
+  ...
+# {"head":{"card_key":"promotion:local-race-offer","revision":2,"event_revision":2,"version":"ed8e0d46881df148e9c40edaa1962139a3c6a211ab113213c76324d13c883592","conflict":0,"updated_at":"2026-09-12T10:00:00.000Z"},"cardRevision":2,"queues":[{"status":"queued","attempts":0},{"status":"queued","attempts":0}],"requests":0}
+# Subtest: R3/R4 old deployed worker must not cancel the newer reviewed queue
+not ok 3 - R3/R4 old deployed worker must not cancel the newer reviewed queue
+  ---
+  duration_ms: 120.2585
+  type: 'test'
+  location: '/private/tmp/ais-v15-race-run.test.mjs:68:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    a stale module must not revoke the newer source queue
+    + actual - expected
+    
+    + 'cancelled'
+    - 'queued'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'queued'
+  actual: 'cancelled'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/tmp/ais-v15-race-run.test.mjs:73:82)
+    async Test.run (node:internal/test_runner/test:1332:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:911:7)
+  ...
+# {"oldWorkerResult":{"sent":0,"configured":true},"beforeQueue":"queued","afterQueue":"cancelled","queueError":"Notice is no longer eligible","headRevision":2,"cardRevision":2,"requests":0}
+# Subtest: R8 head advances after reads before plan CAS: no dependent write/provider/slot
+ok 4 - R8 head advances after reads before plan CAS: no dependent write/provider/slot
+  ---
+  duration_ms: 108.385625
+  type: 'test'
+  ...
+# {"stage":"plan","mutation":"head","result":{"sent":0,"configured":true},"delivery":[],"outbox":[{"status":"queued","attempts":0}],"digest":null,"requests":0}
+# Subtest: R8 settings advances after reads before plan CAS: no dependent write/provider/slot
+ok 5 - R8 settings advances after reads before plan CAS: no dependent write/provider/slot
+  ---
+  duration_ms: 55.117583
+  type: 'test'
+  ...
+# {"stage":"plan","mutation":"settings","result":{"sent":0,"configured":true},"delivery":[],"outbox":[{"status":"cancelled","attempts":0}],"digest":null,"requests":0}
+# Subtest: R8 head advances after reads before attempt CAS: no dependent write/provider/slot
+ok 6 - R8 head advances after reads before attempt CAS: no dependent write/provider/slot
+  ---
+  duration_ms: 102.705958
+  type: 'test'
+  ...
+# {"stage":"attempt","mutation":"head","result":{"sent":0,"configured":true},"delivery":[{"status":"prepared","attempts":0}],"outbox":[{"status":"prepared","attempts":0}],"digest":null,"requests":0}
+# Subtest: R8 settings advances after reads before attempt CAS: no dependent write/provider/slot
+ok 7 - R8 settings advances after reads before attempt CAS: no dependent write/provider/slot
+  ---
+  duration_ms: 48.574375
+  type: 'test'
+  ...
+# {"stage":"attempt","mutation":"settings","result":{"sent":0,"configured":true},"delivery":[{"status":"cancelled","attempts":0}],"outbox":[{"status":"cancelled","attempts":0}],"digest":null,"requests":0}
+# Subtest: R9 multi-item attempt fails closed for head
+ok 8 - R9 multi-item attempt fails closed for head
+  ---
+  duration_ms: 52.925125
+  type: 'test'
+  ...
+# {"missing":"head","requests":0,"delivery":[{"status":"prepared","attempts":0}],"outbox":[{"status":"prepared","attempts":0},{"status":"prepared","attempts":0}],"slot":null}
+# Subtest: R9 multi-item attempt fails closed for card
+ok 9 - R9 multi-item attempt fails closed for card
+  ---
+  duration_ms: 53.684041
+  type: 'test'
+  ...
+# {"missing":"card","requests":0,"delivery":[{"status":"prepared","attempts":0}],"outbox":[{"status":"prepared","attempts":0},{"status":"prepared","attempts":0}],"slot":null}
+# Subtest: R9 multi-item attempt fails closed for foreign-pointer
+ok 10 - R9 multi-item attempt fails closed for foreign-pointer
+  ---
+  duration_ms: 55.621666
+  type: 'test'
+  ...
+# {"missing":"foreign-pointer","requests":0,"delivery":[{"status":"prepared","attempts":0}],"outbox":[{"status":"prepared","attempts":0},{"status":"prepared","attempts":0}],"slot":null}
+# Subtest: R10 late accepted old request retains receipt and immutable payload without regressing latest card
+ok 11 - R10 late accepted old request retains receipt and immutable payload without regressing latest card
+  ---
+  duration_ms: 103.248084
+  type: 'test'
+  ...
+# {"oldStatus":"accepted","oldProviderId":"mock-late-r1","cardRevision":2,"requests":2,"requestKeys":["ais-delivery-1dfa092b-de37-4b61-a4a3-ba070303ce28","ais-delivery-5cb3b69d-9b55-44b1-867e-842115174248"]}
+# Subtest: P6 late generator after deletion cannot recreate private data or delete shared head/Beta
+ok 12 - P6 late generator after deletion cannot recreate private data or delete shared head/Beta
+  ---
+  duration_ms: 49.228167
+  type: 'test'
+  ...
+# {"requests":0,"alphaCards":0,"betaCards":2,"sharedHead":{"card_key":"promotion:local-race-offer","revision":1,"event_revision":1,"version":"0c36d6cab87f3043f8f2647d01f9947ae3896df0aef2e69aeb58dd9148ad6c9e","conflict":0,"updated_at":"2026-09-12T10:00:00.000Z"}}
+# Subtest: P6 late provider receipt after deletion cannot recreate private data or affect Beta
+ok 13 - P6 late provider receipt after deletion cannot recreate private data or affect Beta
+  ---
+  duration_ms: 71.236333
+  type: 'test'
+  ...
+# {"result":{"sent":0,"configured":true},"requests":1,"privateAlphaRows":0,"betaCards":2}
+# Subtest: source snapshot stability (detect concurrent parent edits, not a product behavior gate)
+ok 14 - source snapshot stability (detect concurrent parent edits, not a product behavior gate)
+  ---
+  duration_ms: 0.675541
+  type: 'test'
+  ...
+# {"before":{"lib/notice-candidates.ts":"167bf3711e51548d8170b1f83b4398ffb0cbd0ae6f413008dc957d85e02b3639","lib/notice-sources.ts":"24479abde21f4935d8ec0019eb1c85df631da3fb0a45428aee8c3f25c3013df1","lib/notifications.ts":"ef97f7ff17b0bf907d66d8ce718c0c6be4e269144c793020b627bd51609a2ba7","lib/email-delivery.ts":"0edf92ce5dd2f71f87b6f19e3e6f6be5bdf69d791bf43d1da2b65b27c85e7891","tests/api-harness.mjs":"e7fba02fd5b8d6519e76cdd20ea677dfb8d5c2ea55ad9627cf0e15136d1d5d34","app/api/workspace/route.ts":"76aaa99b7f5b299f0ff51a93c4083b4b790ccc58cb4a0cacae0793b35cbccb14","data/promotions.json":"cc03e0344c38b102a0c98858fb5668c257804c776f2f677233769419be64fc8e","data/catalog.json":"b45b6a75cf69dd34915dcb95e65fd8354a112bf8d0942139c268fadb357876c7"},"after":{"lib/notice-candidates.ts":"167bf3711e51548d8170b1f83b4398ffb0cbd0ae6f413008dc957d85e02b3639","lib/notice-sources.ts":"24479abde21f4935d8ec0019eb1c85df631da3fb0a45428aee8c3f25c3013df1","lib/notifications.ts":"ef97f7ff17b0bf907d66d8ce718c0c6be4e269144c793020b627bd51609a2ba7","lib/email-delivery.ts":"0edf92ce5dd2f71f87b6f19e3e6f6be5bdf69d791bf43d1da2b65b27c85e7891","tests/api-harness.mjs":"e7fba02fd5b8d6519e76cdd20ea677dfb8d5c2ea55ad9627cf0e15136d1d5d34","app/api/workspace/route.ts":"76aaa99b7f5b299f0ff51a93c4083b4b790ccc58cb4a0cacae0793b35cbccb14","data/promotions.json":"cc03e0344c38b102a0c98858fb5668c257804c776f2f677233769419be64fc8e","data/catalog.json":"b45b6a75cf69dd34915dcb95e65fd8354a112bf8d0942139c268fadb357876c7"},"changed":[]}
+1..14
+# tests 14
+# suites 0
+# pass 13
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1274.574125

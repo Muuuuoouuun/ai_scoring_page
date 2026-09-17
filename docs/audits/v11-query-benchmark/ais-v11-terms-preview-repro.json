@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-09-12T11:26:00.819Z",
+  "mode": "read-only source, actual extracted check(), memory SQLite API",
+  "window": [
+    "2026-09-12",
+    "2027-09-11"
+  ],
+  "sameDayAppend": {
+    "error": "",
+    "conflictingHistory": 1,
+    "currencies": {},
+    "scheduleCount": 0,
+    "unknownFutureAmounts": 0,
+    "pendingTerms": 0
+  },
+  "sameDayApi": {
+    "status": 400,
+    "data": {
+      "error": "같은 적용일의 조건이 있습니다. 해당 이력을 정정해주세요."
+    },
+    "allPrivateRecordsByteIdentical": true
+  },
+  "newDayAppend": {
+    "error": "",
+    "conflictingHistory": 0,
+    "currencies": {
+      "KRW": {
+        "monthly": 20000,
+        "expected": 240000,
+        "count": 1
+      }
+    },
+    "scheduleCount": 12,
+    "scheduleFirst": "2026-10-01",
+    "scheduleLast": "2027-09-01",
+    "unknownFutureAmounts": 0,
+    "pendingTerms": 0
+  },
+  "sameDayCorrection": {
+    "error": "",
+    "conflictingHistory": 0,
+    "currencies": {
+      "KRW": {
+        "monthly": 20000,
+        "expected": 240000,
+        "count": 1
+      }
+    },
+    "scheduleCount": 12,
+    "scheduleFirst": "2026-10-01",
+    "scheduleLast": "2027-09-01",
+    "unknownFutureAmounts": 0,
+    "pendingTerms": 0
+  },
+  "sameDayCorrectionApiStatus": 200
+}

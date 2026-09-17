@@ -1,0 +1,31 @@
+✔ checkedAt and cosmetic offer copy do not create another material version (178.907375ms)
+✔ same-day reviewed price correction updates original card; immutable receipt survives (73.749416ms)
+✔ queued ended offer never enters provider (63.042084ms)
+✔ queued withdrawn offer never enters provider (70.676ms)
+✔ absolute deadline blocks an already queued offer at the exact instant (52.395833ms)
+✔ date-only deadline uses explicit conservative bounds without inventing official zone (52.565167ms)
+✔ explicit constraint is retained and does not silently qualify {"maxPrice":10,"currency":"USD"} (59.046375ms)
+✔ explicit constraint is retained and does not silently qualify {"maxPrice":50000,"currency":"KRW"} (57.136667ms)
+✔ explicit constraint is retained and does not silently qualify {"neededFeatures":["offline-document-editing"]} (55.586291ms)
+✔ explicit constraint is retained and does not silently qualify {"minBenefitMonths":18} (52.999583ms)
+✔ unknown tax fails a price ceiling, known all-period prices and features can qualify (50.066166ms)
+✔ eligibility change invalidates prior confirmation but permits a relevant correction (58.573083ms)
+✔ legacy eligible string is not stamped by an unrelated save (46.252292ms)
+✔ unreviewed same-revision material edits hold dispatch (51.408208ms)
+✔ withdrawal remains on original card even with new app alerts disabled (58.846167ms)
+✔ legacy accepted date-key baseline is held honestly and later change can correct (63.615083ms)
+✔ feature-only change irrelevant to required features updates card without another email (75.670333ms)
+✔ revision-only advances preserve read state and never repeat the same offer (63.603375ms)
+✔ old read target cannot mark a newer material correction read (62.61875ms)
+✔ new announcement from one tool has its own card and shares hide topic (55.826167ms)
+✔ cards export/delete stays private and late generation cannot recreate deleted personal rows (61.034791ms)
+✔ A to B to A is a new correction for the recipient who was told B (59.121042ms)
+✔ removing an interest stops email but keeps an existing correction readable (65.363167ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1663.542333

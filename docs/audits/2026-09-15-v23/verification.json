@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-15",
+  "source": "d0bbda59dcd38cbd782bbbbe3d3f2701de36d16f",
+  "version": 23,
+  "deploymentStatus": "succeeded",
+  "tests": {
+    "fullSuitePassed": 293,
+    "typecheck": "passed",
+    "build": "passed",
+    "independentTargetedPassed": 43
+  },
+  "browser": {
+    "documentDrafting": "writing features shown; Jira dashboard absent",
+    "documentSummary": "summary evidence shown; Jira dashboard absent",
+    "projectStatusReporting": "Jira report/dashboard still first",
+    "canvaAlternatives": [
+      "adobe-firefly",
+      "microsoft-copilot"
+    ],
+    "responsive": {
+      "requestedWidth": 390,
+      "contentWidth": 375,
+      "clientWidth": 375,
+      "horizontalOverflow": false
+    },
+    "consoleErrors": [],
+    "viewportReset": true,
+    "productionHandoff": "Existing Codex tab queued; Chrome became unavailable after local QA. No post-deployment Chrome rendering claim.",
+    "localServer": "stopped"
+  },
+  "constraints": {
+    "externalAccountConnection": "deferred by explicit user instruction",
+    "actualExternalConnectionPerformed": false,
+    "realUserNotificationsSent": false
+  },
+  "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+  "deploymentId": "appgdep_6aa81b26c188819190d87f561fcca457",
+  "versionId": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_94ee03d04638819181e5414ca7c7a037",
+  "environmentRevision": 2
+}

@@ -1,0 +1,186 @@
+{
+  "before-home": {
+    "TTFB": {
+      "values": [
+        431.09999999403954,
+        2581.5,
+        3159.699999988079
+      ],
+      "median": 2581.5,
+      "worst": 3159.699999988079,
+      "budget": 800,
+      "misses": 2
+    },
+    "FCP": {
+      "values": [
+        1152,
+        4616,
+        5436
+      ],
+      "median": 4616,
+      "worst": 5436,
+      "budget": 1800,
+      "misses": 2
+    },
+    "LCP": {
+      "values": [
+        1152,
+        4616,
+        5436
+      ],
+      "median": 4616,
+      "worst": 5436,
+      "budget": 2500,
+      "misses": 2
+    },
+    "CLS": {
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "median": 0,
+      "worst": 0,
+      "budget": 0.1,
+      "misses": 0
+    }
+  },
+  "before-explore": {
+    "TTFB": {
+      "values": [
+        2383.9000000059605,
+        85.5,
+        4215.800000011921
+      ],
+      "median": 2383.9000000059605,
+      "worst": 4215.800000011921,
+      "budget": 800,
+      "misses": 2
+    },
+    "FCP": {
+      "values": [
+        4780,
+        500,
+        4560
+      ],
+      "median": 4560,
+      "worst": 4780,
+      "budget": 1800,
+      "misses": 2
+    },
+    "LCP": {
+      "values": [
+        4780,
+        500,
+        4560
+      ],
+      "median": 4560,
+      "worst": 4780,
+      "budget": 2500,
+      "misses": 2
+    },
+    "CLS": {
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "median": 0,
+      "worst": 0,
+      "budget": 0.1,
+      "misses": 0
+    }
+  },
+  "after-home": {
+    "TTFB": {
+      "values": [
+        232.2999999821186,
+        68,
+        68.7000000178814
+      ],
+      "median": 68.7000000178814,
+      "worst": 232.2999999821186,
+      "budget": 800,
+      "misses": 0
+    },
+    "FCP": {
+      "values": [
+        460,
+        612,
+        520
+      ],
+      "median": 520,
+      "worst": 612,
+      "budget": 1800,
+      "misses": 0
+    },
+    "LCP": {
+      "values": [
+        460,
+        612,
+        520
+      ],
+      "median": 520,
+      "worst": 612,
+      "budget": 2500,
+      "misses": 0
+    },
+    "CLS": {
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "median": 0,
+      "worst": 0,
+      "budget": 0.1,
+      "misses": 0
+    }
+  },
+  "after-explore": {
+    "TTFB": {
+      "values": [
+        1936.9000000059605,
+        2291,
+        2634.199999988079
+      ],
+      "median": 2291,
+      "worst": 2634.199999988079,
+      "budget": 800,
+      "misses": 3
+    },
+    "FCP": {
+      "values": [
+        3792,
+        4296,
+        4544
+      ],
+      "median": 4296,
+      "worst": 4544,
+      "budget": 1800,
+      "misses": 3
+    },
+    "LCP": {
+      "values": [
+        3792,
+        4296,
+        4544
+      ],
+      "median": 4296,
+      "worst": 4544,
+      "budget": 2500,
+      "misses": 3
+    },
+    "CLS": {
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "median": 0,
+      "worst": 0,
+      "budget": 0.1,
+      "misses": 0
+    }
+  }
+}

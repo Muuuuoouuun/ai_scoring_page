@@ -1,0 +1,28 @@
+{
+  "scroll": {
+    "height": 4455,
+    "width": 1425,
+    "x": 0,
+    "y": 0
+  },
+  "url": "http://localhost:5173/my?tab=savings",
+  "viewport": {
+    "doc": 1425,
+    "height": 900,
+    "scale": 1,
+    "width": 1440
+  },
+  "visibleText": [
+    "마이페이지",
+    "사용 중인 도구와 필요한 정보를 관리하세요.",
+    "구독 변경 비교",
+    "같은 날짜 범위에서 유지안과 변경안의 실제·예정 지출을 확인하세요.",
+    "기존 구독V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "비교 시작일",
+    "비교 종료일",
+    "새 계약 이용 시작·전환일",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA · 요금제 미입력 · 조건 이력 2건. 연결된 실제 결제는 예정 청구에서 제외합니다. 기존 조건 확인",
+    "새 요금제",
+    "서비스·요금제 이름"
+  ]
+}

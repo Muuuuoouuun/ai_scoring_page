@@ -1,0 +1,65 @@
+{
+  "notionGuideDeployment": {
+    "id": "appgdep_6aa7fd6857008191850f347830b63dde",
+    "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+    "title": "AIs — AI·SaaS 탐색과 활용",
+    "version_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_18ffb37559d08191899a78646eb728c8",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+    "screenshot_asset_pointer": "sediment://file_00000000c17881f7b1d58cb69127633f",
+    "provider_deployment_id": "site---6aa42f3ab3ec81919d0048d508baa661",
+    "failure_message": null,
+    "env_set_revision": 2,
+    "updated_at": "2026-09-14T13:58:58.844096+00:00"
+  },
+  "subscriptionIdentityDeployment": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "id": "appgdep_6aa806e7e530819183a877eae9421c27",
+      "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+      "title": "AIs — AI·SaaS 탐색과 활용",
+      "version_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_775a2c15a3cc8191bb0de212dc42bfa8",
+      "type": "publish",
+      "status": "succeeded",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+      "screenshot_asset_pointer": null,
+      "provider_deployment_id": "site---6aa42f3ab3ec81919d0048d508baa661",
+      "failure_message": null,
+      "env_set_revision": 2,
+      "updated_at": "2026-09-14T14:39:07.129272+00:00"
+    },
+    "isError": false
+  },
+  "subscriptionIdentityVersion": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "id": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_775a2c15a3cc8191bb0de212dc42bfa8",
+      "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+      "version_number": 21,
+      "source": {
+        "commit_sha": "d5efa3e11997e4a6d19cf28029246546e3a2a5bc"
+      },
+      "archive_storage": {
+        "archive_format": "tar",
+        "sediment_file_id": "file_000000000ed8820799c14ee6180263b3",
+        "content_hash": "sha256:87065705bff5ac41de128544ff70b65ab1dc3b1912f7db9566278becfa31ebc7",
+        "size_bytes": 3041280,
+        "file_count": 218
+      },
+      "screenshot_url": null,
+      "deployment_id": null
+    },
+    "isError": false
+  }
+}

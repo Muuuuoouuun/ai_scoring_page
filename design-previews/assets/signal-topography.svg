@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffefa"/>
+      <stop offset=".48" stop-color="#f7f4ec"/>
+      <stop offset="1" stop-color="#ebe5da"/>
+    </linearGradient>
+    <linearGradient id="axis" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#453c34" stop-opacity="0"/>
+      <stop offset=".4" stop-color="#b08a52" stop-opacity=".42"/>
+      <stop offset=".7" stop-color="#37646a" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#453c34" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="field" cx="64%" cy="38%" r="58%">
+      <stop offset="0" stop-color="#e7d2a8" stop-opacity=".46"/>
+      <stop offset=".46" stop-color="#b08a52" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#b08a52" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".82" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0.27 0 0 0 0 0.24 0 0 0 0 0.20 0 0 0 .055 0"/>
+    </filter>
+    <pattern id="microGrid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#453c34" stroke-opacity=".035" stroke-width="1"/>
+      <path d="M28 0V56M0 28H56" fill="none" stroke="#37646a" stroke-opacity=".026" stroke-width="1"/>
+    </pattern>
+    <mask id="softFade">
+      <rect width="1600" height="900" fill="url(#fadeMask)"/>
+    </mask>
+    <radialGradient id="fadeMask" cx="50%" cy="42%" r="78%">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".74" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#paper)"/>
+  <rect width="1600" height="900" fill="url(#microGrid)"/>
+  <rect width="1600" height="900" fill="url(#field)"/>
+
+  <g mask="url(#softFade)" fill="none" stroke-linecap="round">
+    <g stroke="#453c34" stroke-opacity=".12" stroke-width="1.4">
+      <path d="M-64 658C108 574 238 584 362 646c166 83 293 78 433-25 142-105 300-120 476-36 122 58 250 68 394-5"/>
+      <path d="M-78 702C102 625 255 640 378 694c166 72 288 65 433-36 148-104 298-126 482-45 122 54 258 56 386-15"/>
+      <path d="M-104 745C82 684 262 680 416 742c154 62 289 52 442-47 148-96 300-105 474-33 119 49 243 43 361-20"/>
+      <path d="M-48 612C112 520 246 532 390 590c156 63 276 56 414-41 148-104 306-145 492-58 128 60 250 80 389 22"/>
+      <path d="M-20 562C154 454 306 496 444 544c143 50 244 35 364-54 154-115 318-159 508-72 127 58 250 92 390 42"/>
+    </g>
+
+    <g stroke="#b08a52" stroke-opacity=".38" stroke-width="1.7">
+      <path d="M180 640C279 530 421 508 544 564c115 52 164 151 286 160 149 11 219-132 346-152 118-18 205 61 270 139"/>
+      <path d="M246 590C356 502 452 497 558 548c105 51 162 129 281 134 138 6 207-116 328-132 102-13 175 42 234 100"/>
+      <path d="M318 552C418 500 493 508 582 552c91 45 161 99 262 102 113 3 188-85 298-99 76-10 140 20 192 65"/>
+      <path d="M417 530C493 514 550 530 615 562c75 36 151 61 234 58 89-4 162-58 251-68 46-5 91 4 132 25"/>
+    </g>
+
+    <g stroke="#37646a" stroke-opacity=".24" stroke-width="1.2">
+      <path d="M97 296C238 211 370 210 493 273c147 75 254 61 400-42 153-108 317-122 493-39 79 37 154 48 229 31"/>
+      <path d="M132 337C268 272 386 275 502 326c139 61 248 49 385-45 146-100 314-120 486-44 87 38 166 52 247 40"/>
+      <path d="M176 378C299 332 412 342 526 379c126 41 230 30 360-54 143-92 305-104 463-40 88 36 171 45 251 33"/>
+    </g>
+  </g>
+
+  <g transform="translate(1118 218)" fill="none" stroke-linecap="round">
+    <circle cx="0" cy="0" r="154" stroke="#453c34" stroke-opacity=".09" stroke-width="1"/>
+    <circle cx="0" cy="0" r="118" stroke="#453c34" stroke-opacity=".11" stroke-width="1"/>
+    <circle cx="0" cy="0" r="82" stroke="#453c34" stroke-opacity=".13" stroke-width="1"/>
+    <path d="M0 -154A154 154 0 0 1 149 39" stroke="#b08a52" stroke-opacity=".58" stroke-width="8"/>
+    <path d="M0 -118A118 118 0 0 1 98 65" stroke="#37646a" stroke-opacity=".36" stroke-width="5"/>
+    <path d="M0 -82A82 82 0 0 1 76 31" stroke="#453c34" stroke-opacity=".28" stroke-width="3"/>
+    <line x1="-186" y1="0" x2="186" y2="0" stroke="#453c34" stroke-opacity=".1"/>
+    <line x1="0" y1="-186" x2="0" y2="186" stroke="#453c34" stroke-opacity=".1"/>
+    <circle cx="0" cy="0" r="5" fill="#453c34" fill-opacity=".38" stroke="none"/>
+  </g>
+
+  <g transform="translate(174 178)" font-family="Manrope, Pretendard, system-ui, sans-serif" fill="#453c34">
+    <text x="0" y="0" font-size="18" font-weight="800" letter-spacing="3" opacity=".62">SIGNAL TOPOGRAPHY</text>
+    <text x="0" y="34" font-size="13" font-weight="700" opacity=".42">score contour / product judgment field</text>
+    <path d="M0 58H280" stroke="#b08a52" stroke-opacity=".42"/>
+  </g>
+
+  <rect width="1600" height="900" fill="#fff" opacity=".18"/>
+  <rect width="1600" height="900" filter="url(#grain)" opacity=".58"/>
+</svg>

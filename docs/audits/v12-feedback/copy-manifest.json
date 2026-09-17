@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ais-v12-feedback-review.md",
+    "bytes": 15970,
+    "sha256": "598ac3cd08ae0211ae9379a69bc0b1184dec7643b13e7ba4b5a09d1a1b09d70e"
+  },
+  {
+    "name": "ais-v12-feedback-boundary-check.mjs",
+    "bytes": 3997,
+    "sha256": "9d8738b3972d4187eb39ad8e1474a729b67bb493f1fa5240da0e84d9bd8be039"
+  },
+  {
+    "name": "ais-v12-feedback-boundary-check.txt",
+    "bytes": 794,
+    "sha256": "913e403507f6d33280c7c8bd7093db0cde8febaa973deed317249fe739d03381"
+  },
+  {
+    "name": "ais-v12-operations-requirements.md",
+    "bytes": 20674,
+    "sha256": "eda25ec739446eb30b9a918794c2a5698b82c0a387adbd4c86ff6b23d2989014"
+  },
+  {
+    "name": "ais-v12-scheduling-capability-review.md",
+    "bytes": 11110,
+    "sha256": "a27153041125b1986332451c7a85aaaf8a4f45535edd4c1af2347dcc605442ea"
+  },
+  {
+    "name": "ais-v12-final-tests.log",
+    "bytes": 13657,
+    "sha256": "42f48d825a6a2da7349a0cf9ba495f4494c91f5d0ab50c49650befaeac5fef8c"
+  }
+]
