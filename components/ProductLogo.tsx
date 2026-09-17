@@ -30,19 +30,6 @@ const getPaletteIndex = (name: string) => {
   return Math.abs(hash);
 };
 
-const LOCAL_LOGO_MAP: Record<string, string> = {
-  Airtable: "/images/logos/airtable.svg",
-  Figma: "/images/logos/figma.svg",
-  Gong: "/images/logos/gong.svg",
-  Jasper: "/images/logos/jasper.svg",
-  Linear: "/images/logos/linear.svg",
-  Miro: "/images/logos/miro.svg",
-  Notion: "/images/logos/notion.png",
-  Replit: "/images/logos/replit.svg",
-  Slack: "/images/logos/slack.svg",
-  Zapier: "/images/logos/zapier.svg"
-};
-
 export function ProductLogo({ name, size = "md" }: ProductLogoProps) {
   const [imgError, setImgError] = useState(false);
 
@@ -51,6 +38,11 @@ export function ProductLogo({ name, size = "md" }: ProductLogoProps) {
   const style = {
     background: `linear-gradient(135deg, ${startColor}, ${endColor})`,
     color: startColor === "#d2c4b9" ? "#453c34" : "#fff8ef"
+  };
+
+  const LOCAL_LOGO_MAP: Record<string, string> = {
+    Notion: "/images/logos/notion.png",
+    Slack: "/images/logos/slack.svg"
   };
 
   const imageSrc = LOCAL_LOGO_MAP[name];

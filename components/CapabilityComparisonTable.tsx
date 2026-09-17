@@ -20,7 +20,7 @@ export function CapabilityComparisonTable({
   toolName: string;
   rows: CapabilityComparison[];
 }) {
-  const { lang, t } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <section className="card feature-card comparison-card">
@@ -28,11 +28,11 @@ export function CapabilityComparisonTable({
       <strong>🎯 {t.comparisonTitle}</strong>
       <div className="comparison-table" role="table" aria-label="도구 기능 비교표">
         <div className="comparison-head" role="row">
-          <span role="columnheader">{t.comparisonTarget}</span>
-          <span role="columnheader" className="comparison-col-better">
+          <span>{t.comparisonTarget}</span>
+          <span className="highlight-better">
             {toolName} {t.comparisonBetter}
           </span>
-          <span role="columnheader" className="comparison-col-worse">
+          <span>
             {toolName} {t.comparisonWorse}
           </span>
         </div>

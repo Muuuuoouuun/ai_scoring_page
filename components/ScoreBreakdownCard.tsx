@@ -20,7 +20,8 @@ export function ScoreBreakdownCard({
   score?: ToolScore;
   rank?: RankInfo;
 }) {
-  const labels: Record<(typeof SCORE_FACET_KEYS)[number], string> = {
+  const { t } = useLanguage();
+  const labels: Record<keyof ScoreBreakdown, string> = {
     functionality: t.scoreLabels[0],
     uiux: t.scoreLabels[1],
     reliability: t.scoreLabels[2],

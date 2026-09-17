@@ -1,36 +1,23 @@
 import { searchTools } from "@/lib/tools";
-import type { ToolGenre, VerdictBadges } from "@/lib/types";
-
-const BADGE_KEYS: (keyof VerdictBadges)[] = ["timeSaver", "thinkCarefully", "lockinRisk"];
-const TEAM_SIZES = ["1-5", "6-30", "30+"];
+import type { VerdictBadges } from "@/lib/types";
 
 const parseBadges = (badgesParam: string | null): Partial<VerdictBadges> | undefined => {
   if (!badgesParam) return undefined;
-  const requested = badgesParam.split(",").map((value) => value.trim());
   const badges: Partial<VerdictBadges> = {};
-  BADGE_KEYS.forEach((key) => {
-    if (requested.includes(key)) badges[key] = true;
+  badgesParam.split(",").forEach((badge) => {
+    if (badge === "timeSaver") badges.timeSaver = true;
+    if (badge === "thinkCarefully") badges.thinkCarefully = true;
+    if (badge === "lockinRisk") badges.lockinRisk = true;
   });
-  return Object.keys(badges).length > 0 ? badges : undefined;
-};
-
-const parseGenres = (genresParam: string | null): ToolGenre[] | undefined => {
-  if (!genresParam) return undefined;
-  const genres = genresParam
-    .split(",")
-    .filter((genre): genre is ToolGenre =>
-      genre === "ai" || genre === "it" || genre === "githubProject" || genre === "saas"
-    );
-  return genres.length > 0 ? genres : undefined;
+  return badges;
 };
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const query = searchParams.get("query") ?? undefined;
-  const tagId = searchParams.get("tag") ?? undefined;
+  const problem = searchParams.get("problem") ?? undefined;
   const badges = parseBadges(searchParams.get("badges"));
-  const genres = parseGenres(searchParams.get("genres"));
 
-  const tools = searchTools({ query, problem, badges, genres });
+  const tools = searchTools({ query, problem, badges });
   return Response.json({ tools }, { status: 200 });
 }

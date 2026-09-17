@@ -1,6 +1,4 @@
 import type { Tool } from "@/lib/types";
-import { reviews } from "@/data/reviews";
-import { problemAngles } from "@/data/problem-angles";
 
 /**
  * 도구 기본 데이터. 평가 상세(점수, 비교, 패치 이력, 출처)는 data/evaluations.ts 에 있습니다.
@@ -505,17 +503,3 @@ export const tools: Tool[] = [
     updatedAt: "2026-09-15T00:00:00Z"
   }
 ];
-
-/**
- * 리뷰가 없는 도구는 화면에 올리지 않습니다.
- * 조용히 빈 값으로 넘어가면 예전처럼 "내용 없는 리뷰"가 다시 생기므로 빌드 시점에 실패시킵니다.
- */
-export const tools: Tool[] = toolFacts.map((fact) => {
-  const review = reviews[fact.id];
-  if (!review) {
-    throw new Error(
-      `[data/tools] "${fact.name}"(${fact.id})의 리뷰가 없습니다. data/reviews.ts에 먼저 작성하세요.`
-    );
-  }
-  return { ...fact, review };
-});

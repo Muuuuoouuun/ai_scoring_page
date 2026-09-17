@@ -4,7 +4,6 @@ import { useState, useRef } from "react";
 import type { ReviewItem } from "@/lib/reviews";
 import { useToolReviews } from "@/components/useToolReviews";
 import { useLanguage } from "@/components/LanguageProvider";
-import type { UserReview } from "@/lib/types";
 
 const formatDate = (iso: string, locale: string) =>
   new Intl.DateTimeFormat(locale, {
@@ -12,31 +11,8 @@ const formatDate = (iso: string, locale: string) =>
     timeStyle: "short"
   }).format(new Date(iso));
 
-const TRUST_WEIGHT: Record<string, number> = {
-  "1년 이상": 3,
-  "6개월-1년": 2,
-  "1-6개월": 1,
-  "1개월 미만": 0
-};
-
-function TrustBadge({ review }: { review: UserReview }) {
-  const weight =
-    review.usagePeriod != null ? (TRUST_WEIGHT[review.usagePeriod] ?? 0) : 0;
-  if (!review.role && !review.teamSize && !review.usagePeriod) return null;
-  return (
-    <div className="review-trust-meta">
-      {review.role ? <span className="trust-chip">{review.role}</span> : null}
-      {review.teamSize ? <span className="trust-chip">{review.teamSize}</span> : null}
-      {review.usagePeriod ? (
-        <span className={`trust-chip trust-chip--period trust-weight-${weight}`}>
-          {review.usagePeriod}
-        </span>
-      ) : null}
-    </div>
-  );
-}
-
 export function OneLineReviewForm({ toolId }: { toolId: string }) {
+  const { lang, t } = useLanguage();
   const [nickname, setNickname] = useState("");
   const [line, setLine] = useState("");
   const [detail, setDetail] = useState("");
@@ -45,56 +21,19 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const { reviews, add } = useToolReviews(toolId);
   const [saved, setSaved] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState(false);
-  const [error, setError] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      setImagePreview(URL.createObjectURL(file));
-    }
-  }, [loadReviews]);
-
-  const onSave = async () => {
-    if (!line.trim() || loading) return;
-    setLoading(true);
-    try {
-      const res = await fetch("/api/reviews", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          toolId,
-          nickname: nickname.trim() || t.anonymous,
-          line: line.trim(),
-          detail: detail.trim() || undefined,
-          rating,
-          role: role.trim() || undefined,
-          teamSize: teamSize || undefined,
-          usagePeriod: usagePeriod || undefined
-        })
-      });
-      if (!res.ok) return;
-      const { review } = await res.json();
-      setReviews((prev) => [review, ...prev].slice(0, 30));
-      setNickname("");
-      setLine("");
-      setDetail("");
-      setRating(4);
-      setRole("");
-      setTeamSize("");
-      setUsagePeriod("");
-      setImagePreview(null);
-      if (fileInputRef.current) fileInputRef.current.value = "";
-      setSaved(true);
-      setTimeout(() => setSaved(false), 2000);
-    } finally {
-      setLoading(false);
+      // Create a local object URL to preview the image for now
+      // Since there's no backend, we just store this local URL or a dummy path
+      const url = URL.createObjectURL(file);
+      setImagePreview(url);
     }
   };
 
-  const onSave = async () => {
+  const onSave = () => {
     if (!line.trim()) return;
     const item: ReviewItem = {
       id: crypto.randomUUID(),
@@ -122,77 +61,45 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
   return (
     <section className="card review-form-card" id="review-form">
       <strong>{t.reviewWrite}</strong>
-      {error ? <p className="form-status error">{error}</p> : null}
       
-      <label className="form-field">
+      <div className="form-field">
         <span className="form-field-label">{t.nickname}</span>
         <input
           value={nickname}
-          onChange={(e) => setNickname(e.target.value)}
+          onChange={(event) => setNickname(event.target.value)}
           maxLength={24}
           placeholder={t.nicknamePlaceholder}
         />
-      </label>
-
-      <label className="form-field">
-        <span className="form-field-label">{t.oneLine}</span>
-        <input
-          value={line}
-          onChange={(e) => setLine(e.target.value)}
-          maxLength={120}
-          placeholder={t.oneLinePlaceholder}
-        />
-      </label>
-
-      <label className="form-field">
-        <span className="form-field-label">{t.detail}</span>
-        <textarea
-          value={detail}
-          onChange={(e) => setDetail(e.target.value)}
-          rows={4}
-          placeholder={t.detailPlaceholder}
-        />
-      </label>
-
-      {/* 신뢰도 메타 필드 */}
-      <div className="form-row-3">
-        <div className="form-field">
-          <span className="form-field-label">{t.reviewRole}</span>
-          <input
-            value={role}
-            onChange={(e) => setRole(e.target.value)}
-            maxLength={50}
-            placeholder={t.reviewRolePlaceholder}
-          />
-        </div>
-        <div className="form-field">
-          <span className="form-field-label">{t.reviewTeamSize}</span>
-          <select value={teamSize} onChange={(e) => setTeamSize(e.target.value)}>
-            <option value="">{t.filterAll}</option>
-            {teamSizeOptions.map((opt) => (
-              <option key={opt} value={opt}>{opt}</option>
-            ))}
-          </select>
-        </div>
-        <div className="form-field">
-          <span className="form-field-label">{t.reviewUsagePeriod}</span>
-          <select value={usagePeriod} onChange={(e) => setUsagePeriod(e.target.value)}>
-            <option value="">{t.filterAll}</option>
-            {usagePeriodOptions.map((opt) => (
-              <option key={opt} value={opt}>{opt}</option>
-            ))}
-          </select>
-        </div>
       </div>
 
       <div className="form-field">
-        <span className="form-field-label">{t.attachmentOptional}</span>
+        <span className="form-field-label">{t.oneLine}</span>
+        <input
+          value={line}
+          onChange={(event) => setLine(event.target.value)}
+          maxLength={120}
+          placeholder={t.oneLinePlaceholder}
+        />
+      </div>
+
+      <div className="form-field">
+        <span className="form-field-label">{t.detail}</span>
+        <textarea
+          value={detail}
+          onChange={(event) => setDetail(event.target.value)}
+          rows={4}
+          placeholder={t.detailPlaceholder}
+        />
+      </div>
+
+      <div className="form-field">
+        <span className="form-field-label">Attachment (Optional)</span>
         <div className="image-upload-wrapper">
           <label className="image-upload-label">
-            <input
-              type="file"
-              accept="image/*"
-              hidden
+            <input 
+              type="file" 
+              accept="image/*" 
+              hidden 
               onChange={handleImageChange}
               ref={fileInputRef}
             />
@@ -201,7 +108,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
               <circle cx="8.5" cy="8.5" r="1.5" />
               <polyline points="21 15 16 10 5 21" />
             </svg>
-            {t.uploadScreenshot}
+            Upload Screenshot
           </label>
           {imagePreview && (
             <div className="image-preview-area">
@@ -215,9 +122,9 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
 
       <div className="form-field">
         <span className="form-field-label">{t.rating}</span>
-        <div
-          className="rating-row"
-          role="radiogroup"
+        <div 
+          className="rating-row" 
+          role="radiogroup" 
           aria-label="리뷰 평점"
           onMouseLeave={() => setHoverRating(0)}
         >
@@ -240,27 +147,24 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
         </div>
       </div>
 
-      <button className="button review-submit-button" type="button" onClick={onSave} disabled={saving}>
+      <button className="button" type="button" onClick={onSave} style={{ marginTop: '0.5rem', width: 'fit-content' }}>
         {saved ? (
           <>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <polyline points="20 6 9 17 4 12" />
+              <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
             {t.saved}
           </>
-        ) : loading ? (
-          "저장 중..."
         ) : (
-          saving ? t.reviewSaving : t.saveReview
+          t.saveReview
         )}
       </button>
 
       <div className="review-list">
-        <strong className="review-list-title">
-          {t.reviewList} <span>({reviews.length})</span>
+        <strong style={{ marginTop: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>
+          {t.reviewList} <span style={{color: 'var(--muted)', fontWeight: 400}}>({reviews.length})</span>
         </strong>
-        {loading ? <p className="text-muted">{t.reviewLoading}</p> : null}
-        {!loading && reviews.length === 0 ? <p className="text-muted">{t.firstReview}</p> : null}
+        {reviews.length === 0 ? <p style={{color: 'var(--muted)'}}>{t.firstReview}</p> : null}
         
         {reviews.map((review) => (
           <article key={review.id} className="review-item">
@@ -274,13 +178,13 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
                   {review.rating}.0
                 </span>
               </strong>
-              <time dateTime={review.createdAt}>
-                {formatDate(review.createdAt, lang === "ko" ? "ko-KR" : "en-US")}
-              </time>
+              <time dateTime={review.createdAt}>{formatDate(review.createdAt, lang === "ko" ? "ko-KR" : "en-US")}</time>
             </div>
-            <TrustBadge review={review} />
+            
             <p>{review.line}</p>
+            
             {review.detail ? <small>{review.detail}</small> : null}
+            
             {review.imageUrl && (
               <div className="review-item-images">
                 <img src={review.imageUrl} alt="Review attachment" />
@@ -289,6 +193,6 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
           </article>
         ))}
       </div>
-    </details>
+    </section>
   );
 }

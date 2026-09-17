@@ -1,13 +1,14 @@
 "use client";
 
-import { copy as t } from "@/lib/copy";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export function AlternativesSection({ alternatives }: { alternatives: string[] }) {
+  const { t } = useLanguage();
 
   return (
-    <section className="card alternatives-card">
+    <section className="card">
       <strong>{t.alternatives}</strong>
-      <ul className="alternatives-list">
+      <ul>
         {alternatives.map((alternative) => (
           <li key={alternative}>{alternative}</li>
         ))}

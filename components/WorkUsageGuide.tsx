@@ -1,16 +1,15 @@
 "use client";
 
 import type { WorkPlaybook } from "@/lib/insights";
-import { copy as t } from "@/lib/copy";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export function WorkUsageGuide({ playbook }: { playbook: WorkPlaybook[] }) {
+  const { t } = useLanguage();
 
   return (
-    <details className="card feature-card collapsible">
-      <summary>
-        {t.workGuide}
-        <span className="summary-count">{playbook.length}</span>
-      </summary>
+    <section className="card feature-card">
+      <span className="section-kicker">PRACTICAL GUIDE</span>
+      <strong>{t.workGuide}</strong>
       <div className="grid">
         {playbook.map((item) => (
           <article className="usage-item" key={item.title}>
@@ -26,6 +25,6 @@ export function WorkUsageGuide({ playbook }: { playbook: WorkPlaybook[] }) {
           </article>
         ))}
       </div>
-    </details>
+    </section>
   );
 }

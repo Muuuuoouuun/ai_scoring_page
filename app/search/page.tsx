@@ -1,8 +1,9 @@
 "use client";
 
 import { Suspense } from "react";
-import { copy as t } from "@/lib/copy";
+import { useLanguage } from "@/components/LanguageProvider";
 import SearchClient from "@/app/search/SearchClient";
+import { tools } from "@/data/tools";
 
 export default function SearchPage() {
   const { t } = useLanguage();
@@ -10,14 +11,14 @@ export default function SearchPage() {
   const problemContexts = Array.from(new Set(tools.map((tool) => tool.problemContexts[0]))).slice(0, 12);
 
   return (
-    <main id="main-content" className="search-journal-page">
+    <main className="search-journal-page">
       <section className="section search-journal-hero">
         <span className="section-kicker">MATCH WORKBENCH</span>
         <h1>{t.searchTitle}</h1>
         <p>{t.searchDesc}</p>
       </section>
       <Suspense fallback={<p className="section">{t.searchLoading}</p>}>
-        <SearchClient />
+        <SearchClient tools={tools} problemContexts={problemContexts} />
       </Suspense>
     </main>
   );

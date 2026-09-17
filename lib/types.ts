@@ -1,34 +1,3 @@
-export type Review = {
-  id: string;
-  toolId: string;
-  userId: string;
-  nickname: string;
-  line: string;
-  detail: string;
-  rating: number;
-  createdAt: string;
-};
-
-export type DiscussionReply = {
-  id: string;
-  discussionId: string;
-  userId: string;
-  nickname: string;
-  content: string;
-  createdAt: string;
-};
-
-export type Discussion = {
-  id: string;
-  toolId: string;
-  userId: string;
-  nickname: string;
-  title: string;
-  content: string;
-  replies: DiscussionReply[];
-  createdAt: string;
-};
-
 export type ImpactScores = {
   judgmentSpeed: number;
   thinkingDepth: number;
@@ -42,15 +11,13 @@ export type VerdictBadges = {
   lockinRisk: boolean;
 };
 
-export type ToolGenre = "ai" | "it" | "githubProject" | "saas";
-
 export type Tool = {
   id: string;
   name: string;
   description: string;
-  genres: ToolGenre[];
   problemContexts: string[];
   whyExist: string;
+  impact: ImpactScores;
   bestCase: string;
   worstCase: string;
   verdictBadges: VerdictBadges;
