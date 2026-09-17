@@ -3,48 +3,54 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/components/LanguageProvider";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { JournalIcon } from "@/components/JournalIcon";
+import { isNavigationActive, primaryNavigation } from "@/lib/navigation";
 
 export function Gnb() {
-  const { lang, setLang, t } = useLanguage();
   const pathname = usePathname();
-
-  const links = [
-    { href: "/search", label: t.navSearch },
-    { href: "/community", label: t.navCommunity },
-    { href: "/about", label: t.navAbout }
-  ];
+  const { lang, setLang } = useLanguage();
 
   return (
-    <nav className="site-nav" aria-label={lang === "ko" ? "주요 메뉴" : "Primary"}>
-      <Link className="brand-lockup" href="/" aria-label="g2 judgment journal home">
-        <span className="brand-mark">g2</span>
+    <nav className="site-gnb" aria-label={lang === "ko" ? "전역 탐색" : "Global navigation"}>
+      <Link className="brand-lockup" href="/" aria-label="TOPAI judgment journal home">
+        <span className="brand-mark">AI</span>
         <span className="brand-copy">
-          <strong>{brand.tagline}</strong>
+          <strong>TOPAI</strong>
+          <small>AI tool field notes</small>
         </span>
       </Link>
-      <div className="nav-links">
-        {links.map((link) => {
-          const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
+      <div className="nav-links" role="navigation" aria-label={lang === "ko" ? "주요 페이지" : "Primary pages"}>
+        {primaryNavigation.map((item) => {
+          const isActive = isNavigationActive(item, pathname);
+
           return (
             <Link
-              key={link.href}
-              href={link.href}
-              className={active ? "active" : ""}
-              aria-current={active ? "page" : undefined}
+              aria-current={isActive ? "page" : undefined}
+              className={`nav-link ${isActive ? "active" : ""}`}
+              href={item.href}
+              key={item.href}
             >
-              {link.label}
+              <span className="nav-link-code" aria-hidden="true">
+                <JournalIcon name={item.icon} />
+                <small>{item.code}</small>
+              </span>
+              <span className="nav-link-copy">
+                <strong>{item.label[lang]}</strong>
+                <small>{item.summary[lang]}</small>
+              </span>
             </Link>
           );
         })}
       </div>
-      <div className="nav-utility">
-        <div className="lang-switch" role="group" aria-label={lang === "ko" ? "언어 선택" : "Language"}>
+      <div className="nav-actions">
+        <Link className="nav-start-link" href="/search">
+          {lang === "ko" ? "문제 입력" : "Start"}
+        </Link>
+        <div className="lang-switch" aria-label="Language switch">
           <button
             type="button"
             className={lang === "ko" ? "active" : ""}
             onClick={() => setLang("ko")}
-            aria-pressed={lang === "ko"}
           >
             KO
           </button>
@@ -52,12 +58,10 @@ export function Gnb() {
             type="button"
             className={lang === "en" ? "active" : ""}
             onClick={() => setLang("en")}
-            aria-pressed={lang === "en"}
           >
             EN
           </button>
         </div>
-        <ThemeToggle />
       </div>
     </nav>
   );

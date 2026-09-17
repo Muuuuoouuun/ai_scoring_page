@@ -1,5 +1,5 @@
 import { searchTools } from "@/lib/tools";
-import type { VerdictBadges } from "@/lib/types";
+import type { ToolGenre, VerdictBadges } from "@/lib/types";
 
 const BADGE_KEYS: (keyof VerdictBadges)[] = ["timeSaver", "thinkCarefully", "lockinRisk"];
 const TEAM_SIZES = ["1-5", "6-30", "30+"];
@@ -14,23 +14,23 @@ const parseBadges = (badgesParam: string | null): Partial<VerdictBadges> | undef
   return Object.keys(badges).length > 0 ? badges : undefined;
 };
 
+const parseGenres = (genresParam: string | null): ToolGenre[] | undefined => {
+  if (!genresParam) return undefined;
+  const genres = genresParam
+    .split(",")
+    .filter((genre): genre is ToolGenre =>
+      genre === "ai" || genre === "it" || genre === "githubProject" || genre === "saas"
+    );
+  return genres.length > 0 ? genres : undefined;
+};
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const query = searchParams.get("query") ?? undefined;
   const tagId = searchParams.get("tag") ?? undefined;
   const badges = parseBadges(searchParams.get("badges"));
+  const genres = parseGenres(searchParams.get("genres"));
 
-  const teamSizeParam = searchParams.get("teamSize");
-  const teamSize = teamSizeParam && TEAM_SIZES.includes(teamSizeParam) ? teamSizeParam : undefined;
-
-  const results = searchTools({ query, tagId, badges, teamSize });
-
-  return Response.json(
-    {
-      /** 이 문제에서 되는 것 / 안 되는 것을 함께 돌려줍니다. 결과 카드가 매칭 이유를 보여줄 수 있도록. */
-      results: results.map(({ tool, angle }) => ({ tool, angle })),
-      count: results.length
-    },
-    { status: 200 }
-  );
+  const tools = searchTools({ query, problem, badges, genres });
+  return Response.json({ tools }, { status: 200 });
 }

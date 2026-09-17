@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { Tool, ToolProblemAngle } from "@/lib/types";
 import { VerdictBadgeList } from "@/components/VerdictBadgeList";
 import { ProductLogo } from "@/components/ProductLogo";
+import { GenrePillList } from "@/components/GenrePillList";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getToolMeta } from "@/lib/insights";
 
@@ -39,19 +40,7 @@ export function ToolCard({ tool, variant = "default" }: { tool: Tool; variant?: 
           </span>
         </div>
       </div>
-      <p className="tool-card-desc">{tool.description}</p>
-      {variant === "feature" ? (
-        <>
-          <p className="tool-card-why">{tool.whyExist}</p>
-          <div className="badge-list" aria-label={lang === "ko" ? "문제 상황" : "Problem contexts"}>
-            {tool.problemContexts.slice(0, 3).map((context) => (
-              <span className="badge context-badge" key={context}>
-                {context}
-              </span>
-            ))}
-          </div>
-        </>
-      ) : null}
+      <GenrePillList genres={tool.genres} />
       <VerdictBadgeList badges={tool.verdictBadges} />
       <div className="tool-card-footer">
         <div

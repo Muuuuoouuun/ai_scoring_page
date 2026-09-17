@@ -1,26 +1,10 @@
 "use client";
 
 import type { PatchNote } from "@/lib/insights";
-import type { PatchUpdate } from "@/lib/types";
+import { ADMIN_USER_ID } from "@/lib/admin";
+import type { PatchImpact, PatchUpdate } from "@/lib/types";
 import { useLanguage } from "@/components/LanguageProvider";
 import { ADMIN_USER_ID } from "@/lib/admin";
-
-const IMPACT_CLASS: Record<string, string> = {
-  high: "impact-high",
-  medium: "impact-medium",
-  low: "impact-low"
-};
-
-function toPatchNote(p: PatchUpdate): PatchNote {
-  return {
-    date: p.patchDate,
-    title: p.title,
-    change: p.change,
-    errorRisk: p.errorRisk,
-    impact: p.impact,
-    isOutage: p.isOutage
-  };
-}
 
 export function PatchNotesSection({
   toolId,
@@ -33,75 +17,110 @@ export function PatchNotesSection({
   const [title, setTitle] = useState("");
   const [change, setChange] = useState("");
   const [errorRisk, setErrorRisk] = useState("");
-  const [impact, setImpact] = useState<"high" | "medium" | "low">("medium");
-  const [isOutage, setIsOutage] = useState(false);
-  const [serverNotes, setServerNotes] = useState<PatchNote[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [saved, setSaved] = useState(false);
+  const [impact, setImpact] = useState<PatchImpact>("medium");
+  const [hasIncident, setHasIncident] = useState(false);
+  const [authorName, setAuthorName] = useState("");
+  const [serverNotes, setServerNotes] = useState<PatchUpdate[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [status, setStatus] = useState("");
+  const [error, setError] = useState("");
 
-  const combinedNotes = useMemo(
+  const combinedNotes = useMemo<PatchNote[]>(
     () => [...serverNotes, ...notes],
     [serverNotes, notes]
   );
 
+  const impactLabels: Record<PatchImpact, string> = {
+    low: t.patchImpactLow,
+    medium: t.patchImpactMedium,
+    high: t.patchImpactHigh
+  };
+
   useEffect(() => {
-    fetch(`/api/patch-notes?toolId=${encodeURIComponent(toolId)}`)
-      .then((res) => res.json())
-      .then((data) => setServerNotes((data.patches ?? []).map(toPatchNote)))
-      .catch(() => {});
-  }, [toolId]);
+    let cancelled = false;
+
+    const loadPatches = async () => {
+      setLoading(true);
+      setError("");
+      try {
+        const response = await fetch(`/api/tool/${toolId}/patches`, { cache: "no-store" });
+        if (!response.ok) throw new Error("Failed to load patches");
+        const data = (await response.json()) as { patches: PatchUpdate[] };
+        if (!cancelled) setServerNotes(data.patches);
+      } catch {
+        if (!cancelled) setError(t.patchLoadError);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    };
+
+    void loadPatches();
+    return () => {
+      cancelled = true;
+    };
+  }, [toolId, t.patchLoadError]);
 
   const onAdd = async () => {
-    if (!title || !change || !errorRisk || loading) return;
-    setLoading(true);
+    if (!title || !change || !errorRisk) return;
+
+    setSaving(true);
+    setStatus("");
+    setError("");
+
     try {
-      const res = await fetch("/api/patch-notes", {
+      const response = await fetch(`/api/tool/${toolId}/patches`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "X-Admin-Token": ADMIN_USER_ID
+          "x-user-id": ADMIN_USER_ID,
+          "x-user-nickname": authorName.trim() || "Admin User"
         },
-        body: JSON.stringify({ toolId, title, change, errorRisk, impact, isOutage })
+        body: JSON.stringify({
+          title,
+          change,
+          errorRisk,
+          impact,
+          hasIncident,
+          authorName
+        })
       });
-      if (!res.ok) return;
-      const { patch } = await res.json();
-      setServerNotes((prev) => [toPatchNote(patch), ...prev]);
+
+      if (!response.ok) throw new Error("Failed to save patch");
+
+      const data = (await response.json()) as { patch: PatchUpdate };
+      setServerNotes((current) => [data.patch, ...current]);
       setTitle("");
       setChange("");
       setErrorRisk("");
       setImpact("medium");
-      setIsOutage(false);
-      setSaved(true);
-      setTimeout(() => setSaved(false), 2000);
+      setHasIncident(false);
+      setAuthorName("");
+      setStatus(t.patchSaved);
+      setTimeout(() => setStatus(""), 2000);
+    } catch {
+      setError(t.patchSaveError);
     } finally {
-      setLoading(false);
+      setSaving(false);
     }
-  };
-
-  const impactLabel = (val?: "high" | "medium" | "low") => {
-    if (!val) return null;
-    const map = { high: t.patchImpactHigh, medium: t.patchImpactMedium, low: t.patchImpactLow };
-    return map[val];
   };
 
   return (
     <section className="card">
       <strong>{t.patchTitle}</strong>
       <p>{t.patchDesc}</p>
-
+      {loading ? <small className="text-muted">{t.patchLoading}</small> : null}
+      {error ? <p className="form-status error">{error}</p> : null}
+      {status ? <p className="form-status success">{status}</p> : null}
       <div className="grid">
         {combinedNotes.map((note, index) => (
           <article key={`${note.date}-${note.title}-${index}`} className="patch-note-item">
             <div className="patch-note-meta">
               <small>{note.date}</small>
-              {note.impact ? (
-                <span className={`patch-impact-badge ${IMPACT_CLASS[note.impact]}`}>
-                  {t.patchImpact}: {impactLabel(note.impact)}
-                </span>
-              ) : null}
-              {note.isOutage ? (
-                <span className="patch-outage-badge">{t.patchIsOutage}</span>
-              ) : null}
+              <span className={`impact-pill ${note.impact ?? "medium"}`}>
+                {impactLabels[note.impact ?? "medium"]}
+              </span>
+              {note.hasIncident ? <span className="incident-pill">{t.patchIncidentLabel}</span> : null}
             </div>
             <h3>{note.title}</h3>
             <p>
@@ -110,38 +129,55 @@ export function PatchNotesSection({
             <p>
               <strong>{t.patchRisk}:</strong> {note.errorRisk}
             </p>
+            {note.authorName ? <small className="text-muted">{t.patchAuthor}: {note.authorName}</small> : null}
           </article>
         ))}
       </div>
-      <div className="patch-note-form">
-        <label className="form-field">
-          <span className="form-field-label">{t.patchTitleInput}</span>
+      <div className="grid">
+        <input
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+          placeholder={t.patchTitleInput}
+        />
+        <textarea
+          value={change}
+          onChange={(event) => setChange(event.target.value)}
+          rows={3}
+          placeholder={t.patchChangeInput}
+        />
+        <textarea
+          value={errorRisk}
+          onChange={(event) => setErrorRisk(event.target.value)}
+          rows={3}
+          placeholder={t.patchRiskInput}
+        />
+        <div className="form-row">
+          <select
+            value={impact}
+            onChange={(event) => setImpact(event.target.value as PatchImpact)}
+            aria-label={t.patchImpact}
+          >
+            <option value="low">{t.patchImpactLow}</option>
+            <option value="medium">{t.patchImpactMedium}</option>
+            <option value="high">{t.patchImpactHigh}</option>
+          </select>
           <input
-            value={title}
-            onChange={(event) => setTitle(event.target.value)}
-            placeholder={t.patchTitleInput}
+            value={authorName}
+            onChange={(event) => setAuthorName(event.target.value)}
+            maxLength={40}
+            placeholder={t.patchAuthorInput}
           />
-        </label>
-        <label className="form-field">
-          <span className="form-field-label">{t.patchChangeInput}</span>
-          <textarea
-            value={change}
-            onChange={(event) => setChange(event.target.value)}
-            rows={3}
-            placeholder={t.patchChangeInput}
+        </div>
+        <label className="checkbox-line">
+          <input
+            type="checkbox"
+            checked={hasIncident}
+            onChange={(event) => setHasIncident(event.target.checked)}
           />
+          <span>{t.patchIncident}</span>
         </label>
-        <label className="form-field">
-          <span className="form-field-label">{t.patchRiskInput}</span>
-          <textarea
-            value={errorRisk}
-            onChange={(event) => setErrorRisk(event.target.value)}
-            rows={3}
-            placeholder={t.patchRiskInput}
-          />
-        </label>
-        <button className="secondary-button" type="button" onClick={onAdd}>
-          {t.patchAdd}
+        <button className="secondary-button" type="button" onClick={onAdd} disabled={saving}>
+          {saving ? t.patchSaving : t.patchAdd}
         </button>
       </div>
 

@@ -5,6 +5,7 @@ import { LanguageProvider } from "@/components/LanguageProvider";
 import { Gnb } from "@/components/Gnb";
 import { JournalRail } from "@/components/JournalRail";
 import { AppFooter } from "@/components/AppFooter";
+import { BottomDock } from "@/components/BottomDock";
 
 import { GlobalBackgroundSVG } from "@/components/GlobalBackgroundSVG";
 
@@ -30,8 +31,8 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: brand.title,
-  description: brand.description
+  title: "TOPAI | Judgment-led SaaS + AI Reviews",
+  description: "Human-centered reviews of SaaS and AI tools, grounded in judgment and impact."
 };
 
 export const viewport: Viewport = {
@@ -59,12 +60,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           본문 바로가기
         </a>
         <GlobalBackgroundSVG />
-        <CompareProvider>
-            <Gnb />
-            <JournalRail />
-            {children}
-            <AppFooter />
-        </CompareProvider>
+        <LanguageProvider>
+          <Gnb />
+          <JournalRail />
+          {children}
+          <AppFooter />
+          <BottomDock />
+        </LanguageProvider>
       </body>
     </html>
   );

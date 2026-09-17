@@ -4,7 +4,8 @@ import { Hero } from "@/components/Hero";
 import { PrinciplesBar } from "@/components/PrinciplesBar";
 import { ProblemCategoryList } from "@/components/ProblemCategoryList";
 import { ToolCard } from "@/components/ToolCard";
-import { copy as t } from "@/lib/copy";
+import { JournalArchiveSection } from "@/components/JournalArchiveSection";
+import { useLanguage } from "@/components/LanguageProvider";
 import { tools } from "@/data/tools";
 import { problemTags } from "@/lib/problems";
 import { getTotalScore } from "@/lib/insights";
@@ -65,7 +66,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-
+      <ProblemCategoryList />
+      <JournalArchiveSection compact />
       <PrinciplesBar />
     </main>
   );

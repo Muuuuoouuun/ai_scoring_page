@@ -1,10 +1,5 @@
-import type {
-  CapabilityComparison,
-  PatchNote,
-  ScoreBreakdown,
-  Tool,
-  WorkPlaybook
-} from "@/lib/types";
+import type { ImpactScores, Tool } from "@/lib/types";
+import type { PatchImpact } from "@/lib/types";
 
 export type ScoreBreakdown = {
   functionality: number;
@@ -21,12 +16,16 @@ export type CapabilityComparison = {
 };
 
 export type PatchNote = {
+  id?: string;
+  toolId?: string;
   date: string;
   title: string;
   change: string;
   errorRisk: string;
-  impact?: "high" | "medium" | "low";
-  isOutage?: boolean;
+  impact?: PatchImpact;
+  hasIncident?: boolean;
+  authorName?: string;
+  createdAt?: string;
 };
 
 export type WorkPlaybook = {
@@ -35,24 +34,26 @@ export type WorkPlaybook = {
   recommendation: string;
 };
 
-export type FeatureStatus = "supported" | "partial" | "unsupported";
+export const impactDimensions = [
+  "judgmentSpeed",
+  "thinkingDepth",
+  "executionDensity",
+  "collaborationClarity"
+] as const;
 
-export type FeatureCheckItem = {
-  name: string;
-  status: FeatureStatus;
-  note?: string;
-};
+export type ImpactDimension = (typeof impactDimensions)[number];
 
-export type FeatureChecklist = {
-  coreFeatures: FeatureCheckItem[];
-  limitations: FeatureCheckItem[];
-};
-
-export type ToolMeta = {
-  teamSize: "1-10" | "10-100" | "100+" | "any";
-  workType: "engineering" | "design" | "marketing" | "operations" | "sales" | "any";
-  onboardingDifficulty: "easy" | "medium" | "hard";
-  shortDiff: string;
+export type SignalBenchmark = {
+  peerCount: number;
+  toolAverage: number;
+  corpusAverage: number;
+  overallRank: number;
+  averages: ImpactScores;
+  deltas: Record<ImpactDimension, number>;
+  ranks: Record<ImpactDimension, number>;
+  leaders: Record<ImpactDimension, { id: string; name: string; value: number }>;
+  strongestDimension: ImpactDimension;
+  softestDimension: ImpactDimension;
 };
 
 export type ToolInsight = {
@@ -265,6 +266,11 @@ const overrides: Record<string, Partial<ToolInsight>> = {
 
 const clamp = (score: number) => Math.max(0, Math.min(100, score));
 
+const roundOne = (value: number) => Math.round(value * 10) / 10;
+
+const averageImpact = (tool: Tool) =>
+  roundOne(impactDimensions.reduce((sum, dimension) => sum + tool.impact[dimension], 0) / impactDimensions.length);
+
 const deriveScoreBreakdown = (tool: Tool): ScoreBreakdown => ({
   functionality: clamp(tool.impact.executionDensity * 10 + 10),
   uiux: clamp(tool.impact.collaborationClarity * 10),
@@ -341,5 +347,58 @@ export const getToolInsight = (tool: Tool): ToolInsight => {
     workPlaybook: deriveWorkPlaybook(tool),
     featureChecklist: deriveFeatureChecklist(tool.id),
     ...overrides[tool.id]
+  };
+};
+
+export const getToolSignalBenchmark = (tool: Tool, corpus: Tool[]): SignalBenchmark => {
+  const peerCount = corpus.length;
+  const sortedByAverage = [...corpus].sort((a, b) => averageImpact(b) - averageImpact(a));
+  const overallRank = sortedByAverage.findIndex((item) => item.id === tool.id) + 1;
+  const corpusAverage = roundOne(
+    corpus.reduce((sum, item) => sum + averageImpact(item), 0) / Math.max(peerCount, 1)
+  );
+
+  const averages = impactDimensions.reduce((acc, dimension) => {
+    acc[dimension] = roundOne(
+      corpus.reduce((sum, item) => sum + item.impact[dimension], 0) / Math.max(peerCount, 1)
+    );
+    return acc;
+  }, {} as ImpactScores);
+
+  const deltas = impactDimensions.reduce((acc, dimension) => {
+    acc[dimension] = roundOne(tool.impact[dimension] - averages[dimension]);
+    return acc;
+  }, {} as Record<ImpactDimension, number>);
+
+  const ranks = impactDimensions.reduce((acc, dimension) => {
+    const sorted = [...corpus].sort((a, b) => b.impact[dimension] - a.impact[dimension]);
+    acc[dimension] = sorted.findIndex((item) => item.id === tool.id) + 1;
+    return acc;
+  }, {} as Record<ImpactDimension, number>);
+
+  const leaders = impactDimensions.reduce((acc, dimension) => {
+    const leader = [...corpus].sort((a, b) => b.impact[dimension] - a.impact[dimension])[0] ?? tool;
+    acc[dimension] = {
+      id: leader.id,
+      name: leader.name,
+      value: leader.impact[dimension]
+    };
+    return acc;
+  }, {} as SignalBenchmark["leaders"]);
+
+  const strongestDimension = [...impactDimensions].sort((a, b) => deltas[b] - deltas[a])[0];
+  const softestDimension = [...impactDimensions].sort((a, b) => deltas[a] - deltas[b])[0];
+
+  return {
+    peerCount,
+    toolAverage: averageImpact(tool),
+    corpusAverage,
+    overallRank,
+    averages,
+    deltas,
+    ranks,
+    leaders,
+    strongestDimension,
+    softestDimension
   };
 };

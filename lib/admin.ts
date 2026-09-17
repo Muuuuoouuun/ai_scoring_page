@@ -1,16 +1,23 @@
-export const ADMIN_USER_ID = "admin-9e9b87f3-7b17-4ab9-9c3a-15359e0a2f95";
+import type { RequestActor } from "@/lib/types";
 
-/**
- * Extracts the actor ID from the request headers.
- * Clients should send X-User-Id (any user) or X-Admin-Token (admin).
- */
-export function getActorId(request: Request): string | null {
-  return request.headers.get("x-user-id") ?? null;
-}
+export const ADMIN_USER_ID = "00000000-0000-0000-0000-000000000001";
+export const ANONYMOUS_USER_ID = "anonymous";
 
-/**
- * Returns true when the request carries a valid admin token.
- */
-export function isAdminRequest(request: Request): boolean {
-  return request.headers.get("x-admin-token") === ADMIN_USER_ID;
-}
+export const getActorFromHeaders = (headers: Headers): RequestActor => {
+  const id = headers.get("x-user-id")?.trim() || ANONYMOUS_USER_ID;
+  const nickname = headers.get("x-user-nickname")?.trim() || (id === ANONYMOUS_USER_ID ? "Anonymous" : "Admin User");
+
+  return {
+    id,
+    nickname,
+    role: id === ADMIN_USER_ID ? "admin" : "user"
+  };
+};
+
+export const requireAdmin = (headers: Headers): RequestActor | Response => {
+  const actor = getActorFromHeaders(headers);
+  if (actor.role !== "admin") {
+    return Response.json({ message: "Admin permission required." }, { status: 403 });
+  }
+  return actor;
+};

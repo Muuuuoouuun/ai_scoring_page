@@ -4,9 +4,8 @@ import Link from "next/link";
 import type { Tool } from "@/lib/types";
 import { VerdictBadgeList } from "@/components/VerdictBadgeList";
 import { ProductLogo } from "@/components/ProductLogo";
-import { copy as t } from "@/lib/copy";
-import { getTag, getTagLabel } from "@/lib/problems";
-import { getTotalScore } from "@/lib/insights";
+import { GenrePillList } from "@/components/GenrePillList";
+import { useLanguage } from "@/components/LanguageProvider";
 
 /**
  * 상세 페이지 히어로.
@@ -33,9 +32,15 @@ export function ToolHeader({ tool }: { tool: Tool }) {
           </span>
         </div>
       </div>
-
-      <p className="tool-hero-verdict">{tool.review.verdict}</p>
-
+      <p>{tool.description}</p>
+      <GenrePillList genres={tool.genres} />
+      <div className="badge-list" aria-label={lang === "ko" ? "문제 상황" : "Problem contexts"}>
+        {tool.problemContexts.map((context) => (
+          <span className="badge context-badge" key={context}>
+            {context}
+          </span>
+        ))}
+      </div>
       <VerdictBadgeList badges={tool.verdictBadges} />
 
       <p className="tool-hero-desc">{tool.description}</p>

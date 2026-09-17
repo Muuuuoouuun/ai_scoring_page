@@ -4,6 +4,10 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import type { UserReview } from "@/lib/types";
 
+type ReviewItem = UserReview & {
+  imageUrl?: string;
+};
+
 const formatDate = (iso: string, locale: string) =>
   new Intl.DateTimeFormat(locale, {
     dateStyle: "medium",
@@ -46,15 +50,40 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
   const [usagePeriod, setUsagePeriod] = useState("");
   const [reviews, setReviews] = useState<UserReview[]>([]);
   const [saved, setSaved] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    fetch(`/api/reviews?toolId=${encodeURIComponent(toolId)}`)
-      .then((res) => res.json())
-      .then((data) => setReviews(data.reviews ?? []))
-      .catch(() => {});
-  }, [toolId]);
+    let cancelled = false;
+
+    const loadReviews = async () => {
+      setLoading(true);
+      setError("");
+      try {
+        const response = await fetch(`/api/tool/${toolId}/reviews`, { cache: "no-store" });
+        if (!response.ok) throw new Error("Failed to load reviews");
+        const data = (await response.json()) as { reviews: UserReview[] };
+        if (!cancelled) setReviews(data.reviews);
+      } catch {
+        if (!cancelled) setError(t.reviewLoadError);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    };
+
+    void loadReviews();
+    return () => {
+      cancelled = true;
+    };
+  }, [toolId, t.reviewLoadError]);
+
+  useEffect(() => {
+    return () => {
+      if (imagePreview) URL.revokeObjectURL(imagePreview);
+    };
+  }, [imagePreview]);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -100,17 +129,52 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
     }
   };
 
-  const teamSizeOptions = lang === "ko"
-    ? ["1-10명", "10-50명", "50-200명", "200명+"]
-    : ["1-10", "10-50", "50-200", "200+"];
+  const onSave = async () => {
+    if (!line.trim()) return;
 
-  const usagePeriodOptions = lang === "ko"
-    ? ["1개월 미만", "1-6개월", "6개월-1년", "1년 이상"]
-    : ["< 1 month", "1-6 months", "6-12 months", "1+ year"];
+    setSaving(true);
+    setError("");
+    setSaved(false);
+
+    try {
+      const response = await fetch(`/api/tool/${toolId}/reviews`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-user-nickname": nickname.trim() || t.anonymous
+        },
+        body: JSON.stringify({
+          nickname,
+          line,
+          detail,
+          rating
+        })
+      });
+
+      if (!response.ok) throw new Error("Failed to save review");
+
+      const data = (await response.json()) as { review: UserReview };
+      setReviews((current) => [data.review, ...current].slice(0, 30));
+      setNickname("");
+      setLine("");
+      setDetail("");
+      setRating(4);
+      setImagePreview(null);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2000);
+    } catch {
+      setError(t.reviewSaveError);
+    } finally {
+      setSaving(false);
+    }
+  };
 
   return (
     <section className="card review-form-card">
       <strong>{t.reviewWrite}</strong>
+      {error ? <p className="form-status error">{error}</p> : null}
       
       <label className="form-field">
         <span className="form-field-label">{t.nickname}</span>
@@ -174,7 +238,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
       </div>
 
       <div className="form-field">
-        <span className="form-field-label">Attachment (Optional)</span>
+        <span className="form-field-label">{t.attachmentOptional}</span>
         <div className="image-upload-wrapper">
           <label className="image-upload-label">
             <input
@@ -189,7 +253,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
               <circle cx="8.5" cy="8.5" r="1.5" />
               <polyline points="21 15 16 10 5 21" />
             </svg>
-            Upload Screenshot
+            {t.uploadScreenshot}
           </label>
           {imagePreview && (
             <div className="image-preview-area">
@@ -228,7 +292,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
         </div>
       </div>
 
-      <button className="button review-submit-button" type="button" onClick={onSave}>
+      <button className="button review-submit-button" type="button" onClick={onSave} disabled={saving}>
         {saved ? (
           <>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -239,7 +303,7 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
         ) : loading ? (
           "저장 중..."
         ) : (
-          t.saveReview
+          saving ? t.reviewSaving : t.saveReview
         )}
       </button>
 
@@ -247,7 +311,8 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
         <strong className="review-list-title">
           {t.reviewList} <span>({reviews.length})</span>
         </strong>
-        {reviews.length === 0 ? <p className="text-muted">{t.firstReview}</p> : null}
+        {loading ? <p className="text-muted">{t.reviewLoading}</p> : null}
+        {!loading && reviews.length === 0 ? <p className="text-muted">{t.firstReview}</p> : null}
         
         {reviews.map((review) => (
           <article key={review.id} className="review-item">

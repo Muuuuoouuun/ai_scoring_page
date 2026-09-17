@@ -1,7 +1,5 @@
 import { tools } from "@/data/tools";
-import { getAngle } from "@/lib/problems";
-import { getTotalScore } from "@/lib/insights";
-import type { Tool, ToolProblemAngle, VerdictBadges } from "@/lib/types";
+import type { Tool, ToolGenre, VerdictBadges } from "@/lib/types";
 
 export const getAllTools = (): Tool[] => tools;
 
@@ -11,15 +9,7 @@ export const getToolById = (id: string): Tool | undefined =>
 const normalize = (value: string) => value.trim().toLowerCase();
 
 const toolText = (tool: Tool) =>
-  [
-    tool.name,
-    tool.description,
-    tool.whyExist,
-    tool.bestCase,
-    tool.worstCase,
-    tool.review.verdict,
-    ...tool.alternatives
-  ]
+  [tool.name, tool.description, tool.whyExist, ...tool.genres, ...tool.problemContexts, tool.bestCase, tool.worstCase]
     .join(" ")
     .toLowerCase();
 
@@ -37,12 +27,19 @@ export type SearchQuery = {
   teamSize?: string;
 };
 
-export type SearchResult = {
-  tool: Tool;
-  score: number;
-  /** 이 문제에서 되는 것 / 안 되는 것. tagId로 검색했을 때만 채워집니다. */
-  angle?: ToolProblemAngle;
-};
+export const searchTools = ({
+  query,
+  problem,
+  badges,
+  genres
+}: {
+  query?: string;
+  problem?: string;
+  badges?: Partial<VerdictBadges>;
+  genres?: ToolGenre[];
+}): Tool[] => {
+  const cleanedQuery = query ? normalize(query) : "";
+  const cleanedProblem = problem ? normalize(problem) : "";
 
 /**
  * 검색은 이 함수 하나뿐입니다.
@@ -70,10 +67,28 @@ export const searchTools = ({ query, tagId, badges, teamSize }: SearchQuery): Se
         if (!toolText(tool).includes(cleanedQuery)) return null;
         score += 2;
       }
-
-      if (activeBadges.length > 0) {
-        if (!badgesMatch(tool, badges ?? {})) return null;
-        score += 1;
+      if (cleanedProblem) {
+        const matchesProblem = tool.problemContexts.some((context) =>
+          normalize(context).includes(cleanedProblem)
+        );
+        if (matchesProblem) {
+          score += 3;
+        }
+      }
+      if (badges) {
+        if (badgesMatch(tool, badges)) {
+          score += 1;
+        } else {
+          return { tool, score: -1 };
+        }
+      }
+      if (genres && genres.length > 0) {
+        const matchesGenres = genres.every((genre) => tool.genres.includes(genre));
+        if (matchesGenres) {
+          score += 2;
+        } else {
+          return { tool, score: -1 };
+        }
       }
 
       if (teamSize) {
@@ -88,6 +103,7 @@ export const searchTools = ({ query, tagId, badges, teamSize }: SearchQuery): Se
 
       return { tool, score, angle: tagId ? getAngle(tool.id, tagId) : undefined };
     })
-    .filter((entry): entry is SearchResult => entry !== null)
-    .sort((a, b) => b.score - a.score);
+    .filter(({ score }) => score > 0 || (!query && !problem && !badges && (!genres || genres.length === 0)))
+    .sort((a, b) => b.score - a.score)
+    .map(({ tool }) => tool);
 };

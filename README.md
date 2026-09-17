@@ -1,4 +1,4 @@
-# AIs — 도구를 고르기 전에 떨어뜨리는 곳
+# TOPAI Judgment MVP
 
 같은 문제를 겪는 팀들이 어떤 도구를 놓고 무엇을 포기했는지, 근거와 함께 나란히 봅니다.
 점수마다 근거를, 비교마다 되는 것과 안 되는 것을, 그리고 쓰지 말아야 할 조건을 함께 적습니다.
@@ -7,6 +7,8 @@
 - **Next.js UI** with landing, search, tool review, and about pages.
 - **Judgment-first data model** with human impact scores and verdict badges.
 - **API routes** for tools, search, and admin creation with validation.
+- **Genre filters** for AI, IT, GitHub Project, and SaaS discovery.
+- **Reddit-style community surfaces** with votes, comments, sorting, and genre boards.
 - **PostgreSQL schema** for production persistence.
 - **Integration tests** for API endpoints.
 
@@ -48,67 +50,24 @@ npm run test:db  # DATABASE_URL을 붙여 Postgres 어댑터까지
 색상·간격을 바꿀 때는 컴포넌트 CSS가 아니라 `app/globals.css` 상단의 토큰을 수정하세요.
 
 ## Database schema
-The PostgreSQL schema lives in `db/schema.sql`. Wire this up with your preferred ORM or query layer for production.
+The PostgreSQL schema lives in `db/schema.sql`. Set `DATABASE_URL` to persist reviews, patch updates, and audit logs in Postgres. Without `DATABASE_URL`, the API uses an in-memory local fallback.
 
-## 이 저장소가 지키는 규칙
-
-리뷰 사이트에서 가장 쉽게 무너지는 건 "그럴듯한 가짜"입니다.
-아래는 코드와 테스트로 강제하고 있는 규칙입니다.
-
-| 규칙 | 강제하는 곳 |
-| --- | --- |
-| 점수에는 근거가 반드시 붙는다 | `ScoreFacet` 타입, `lib/validators.ts`, 화면 노출 |
-| 어떤 문장도 도구 간에 공유되지 않는다 | `tests/review-integrity.test.ts` |
-| 확인되지 않은 변경 이력은 지어내지 않는다 | 빈 배열 + "확인된 변경 이력 없음" 표시 |
-| 확인 시점을 적었다면 확인한 사람도 있어야 한다 | `tests/review-integrity.test.ts` |
-| 표본 3 미만에서는 평균을 만들지 않는다 | `lib/community/consensus.ts`, `db/community.sql`의 뷰 |
-| 반박에는 20자 이상 근거가 필요하다 | 타입 상수 하나를 API·메모리·DB 세 곳이 공유 |
-| 리뷰가 없는 도구는 화면에 올라가지 않는다 | `data/tools.ts`가 빌드 시점에 실패 |
-
-> ⚠️ 현재 리뷰 본문은 **검수 전 초안**입니다. 모든 도구 화면에 그렇게 표시됩니다.
-> 공개 전 확인이 필요한 항목은 `docs/review-verification-queue.md`에 정리되어 있습니다.
-
-## 구조
-
-```
-data/
-  tools.ts           도구 기본 사실 (리뷰가 없으면 빌드 실패)
-  reviews.ts         도구별 리뷰 본문 — 편집 콘텐츠의 진실 출처
-  problem-tags.ts    공유 문제 태그
-  problem-angles.ts  도구 × 태그별 되는 것 / 안 되는 것
-lib/
-  brand.ts           제품 이름·태그라인·한 문장 — 브랜드 단일 출처
-  copy.ts            화면 문구 단일 출처 (한국어 단일)
-  problems.ts        태그 조회
-  tools.ts           검색 (클라이언트·서버가 같은 함수를 씁니다)
-  insights.ts        총점 계산만 — 파생 로직 없음
-  community/         저장소 인터페이스 · 메모리/Postgres 어댑터 · 집계 · 익명 저자
-db/community.sql     커뮤니티 스키마
+```bash
+psql "$DATABASE_URL" -f db/schema.sql
 ```
 
-도구와 리뷰는 **git이 진실의 출처**이고, DB는 사용자 기여만 소유합니다.
-그래서 커뮤니티 테이블은 `tools`에 외래키를 걸지 않습니다.
+## API Endpoints
+- `GET /api/tools`
+- `GET /api/tool/:id`
+- `GET /api/search?query=&problem=&badges=`
+- `GET /api/search?genres=ai,it,githubProject,saas`
+- `POST /api/tool` (admin)
+- `GET /api/tool/:id/reviews`
+- `POST /api/tool/:id/reviews`
+- `GET /api/tool/:id/patches`
+- `POST /api/tool/:id/patches` (admin)
+- `GET /api/audit?toolId=` (admin)
 
-## 화면
-
-| 경로 | 하는 일 |
-| --- | --- |
-| `/` | 문제 상황 목록 → 후보로 들어가는 입구 |
-| `/search` | 문제·팀 규모·판단 배지로 후보 좁히기 |
-| `/tools/:id` | 한 도구의 총평·항목 점수와 근거·탈락 조건·가격·이탈 비용 |
-| `/compare?tools=a,b,c&tag=` | 2~3개를 같은 행에 놓고 비교 |
-| `/community` | 우리가 아직 확인하지 못한 것들(열린 질문 보드) |
-| `/about` | 이 사이트가 지키는 규칙과, 각 규칙이 강제되는 위치 |
-
-## API
-
-| | |
-| --- | --- |
-| `GET /api/tools` | 전체 도구 |
-| `GET /api/tool/:id` | 도구 하나 |
-| `GET /api/search?tag=&query=&badges=&teamSize=` | 검색. 태그로 찾으면 매칭 이유가 함께 옵니다 |
-| `POST /api/tool` | 도구 생성 (검증만, 저장 없음) |
-| `GET/POST /api/tools/:id/dissent` | 항목별 반박 |
-| `GET/POST /api/tools/:id/decisions` | 도입 결정 기록 |
-| `GET/POST /api/tools/:id/breakage` | 고장 제보 (검수 전까지 비공개) |
-| `POST /api/decisions/:id/recheck` | "지금도 쓰나요" 갱신 (본인만) |
+## Admin
+Use the seeded admin ID for admin-only actions:
+`00000000-0000-0000-0000-000000000001`
