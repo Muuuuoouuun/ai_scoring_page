@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "observations": [
+    {
+      "control": "브랜드 관리",
+      "editingMatches": 0
+    },
+    {
+      "control": "이미지 입력",
+      "editingMatches": 0
+    },
+    {
+      "tool": "chatgpt",
+      "writingFeatures": [
+        {
+          "name": "문서 초안·편집",
+          "status": "conditional",
+          "condition": "편집 동작은 플랜·기기·워크스페이스 설정·모델·계정별 제공 상태에 따라 다릅니다.",
+          "sourceUrl": "https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt"
+        }
+      ],
+      "writingQueryHasCurrentEvidence": true
+    },
+    {
+      "tool": "notion",
+      "writingFeatures": [
+        {
+          "name": "문서 작성·편집",
+          "status": "supported",
+          "condition": "기본 문서 편집 기능입니다. Notion AI 이용 조건은 별도로 적용됩니다.",
+          "sourceUrl": "https://www.notion.com/help/writing-and-editing-basics"
+        }
+      ],
+      "writingQueryHasCurrentEvidence": true
+    },
+    {
+      "tool": "gemini",
+      "writingFeatures": [
+        {
+          "name": "문서 작성·편집 (Canvas)",
+          "status": "conditional",
+          "condition": "Gemini 로그인 필요. 직접 텍스트·서식 편집은 컴퓨터 웹 화면 기준입니다.",
+          "sourceUrl": "https://support.google.com/gemini/answer/16047321?hl=en-NZ"
+        }
+      ],
+      "writingQueryHasCurrentEvidence": true
+    }
+  ],
+  "canva": [
+    {
+      "tool": "adobe-firefly",
+      "matches": [
+        "image-editing"
+      ]
+    },
+    {
+      "tool": "microsoft-copilot",
+      "matches": [
+        "image-editing"
+      ]
+    }
+  ]
+}

@@ -1,48 +1,34 @@
-import type { Tool } from "@/lib/types";
+import type {
+  CapabilityComparison,
+  ScoreBreakdown,
+  Tool,
+  ToolCapabilityProfile,
+  ToolEvaluation,
+  WorkPlaybook
+} from "@/lib/types";
+import { evaluations } from "@/data/evaluations";
+import { capabilityProfiles } from "@/data/capabilities";
+import { tools as catalog } from "@/data/tools";
+import { computeToolScore, rankItems, type RankInfo, type ToolScore } from "@/lib/scoring";
 
-export type ScoreBreakdown = {
-  functionality: number;
-  uiux: number;
-  reliability: number;
-  comfort: number;
-  pricing: number;
-};
+export type {
+  CapabilityComparison,
+  ExternalRating,
+  PatchImpactLevel,
+  PatchNote,
+  ScoreBreakdown,
+  SourceReference,
+  ToolEvaluation,
+  WorkPlaybook
+} from "@/lib/types";
 
-export type CapabilityComparison = {
-  competitor: string;
-  worksBetterHere: string;
-  weakerHere: string;
-};
-
-export type PatchNote = {
-  date: string;
-  title: string;
-  change: string;
-  errorRisk: string;
-};
-
-export type WorkPlaybook = {
-  title: string;
-  howToUse: string;
-  recommendation: string;
-};
-
-export type ToolInsight = {
+export type ToolInsight = ToolEvaluation & {
+  /** 종합 점수 (편집 점수 70% + 외부 평가 30%) */
   totalScore: number;
-  scoreBreakdown: ScoreBreakdown;
-  oneLine: string;
-  comparisons: CapabilityComparison[];
-  patchNotes: PatchNote[];
-  workPlaybook: WorkPlaybook[];
-};
-
-const overrides: Record<string, Partial<ToolInsight>> = {
-  "d41f50a2-3b7c-4f7e-8c73-1b8d0b0fe21a": {
-    oneLine: "팀의 작업 체계를 한 곳으로 통합할 때 강력하지만, 운영 원칙이 약하면 빠르게 복잡해집니다."
-  },
-  "ef6b79b4-7c1e-4df0-95f1-9011f412e1cb": {
-    oneLine: "빠른 협업에는 강하지만, 비동기 원칙이 없으면 깊은 몰입을 해치기 쉽습니다."
-  }
+  score: ToolScore;
+  rank?: RankInfo;
+  /** true면 외부 조사 기반 데이터, false면 임팩트 점수에서 자동 유도한 기본값 */
+  isResearched: boolean;
 };
 
 const clamp = (score: number) => Math.max(0, Math.min(100, score));
@@ -68,21 +54,6 @@ const deriveComparisons = (tool: Tool): CapabilityComparison[] => [
   }
 ];
 
-const derivePatchNotes = (tool: Tool): PatchNote[] => [
-  {
-    date: "2026-01-15",
-    title: "워크스페이스 탐색 업데이트",
-    change: "프로젝트 뷰와 저장 필터를 개선해 필요한 정보를 더 빠르게 찾을 수 있게 했습니다.",
-    errorRisk: "기존 북마크 링크는 업데이트 전 화면을 열 수 있어 재저장이 필요할 수 있습니다."
-  },
-  {
-    date: "2025-11-02",
-    title: "권한 및 정책 변경",
-    change: "감사 로그와 공유 경계 관리를 위한 관리자 제어 항목을 확장했습니다.",
-    errorRisk: "권한 설정이 잘못되면 협업자가 핵심 페이지에 일시적으로 접근하지 못할 수 있습니다."
-  }
-];
-
 const deriveWorkPlaybook = (tool: Tool): WorkPlaybook[] => [
   {
     title: "주간 의사결정 리뷰",
@@ -96,24 +67,52 @@ const deriveWorkPlaybook = (tool: Tool): WorkPlaybook[] => [
   }
 ];
 
-export const getToolInsight = (tool: Tool): ToolInsight => {
-  const scoreBreakdown = deriveScoreBreakdown(tool);
-  const totalScore = Math.round(
-    (scoreBreakdown.functionality +
-      scoreBreakdown.uiux +
-      scoreBreakdown.reliability +
-      scoreBreakdown.comfort +
-      scoreBreakdown.pricing) /
-      5
-  );
-
+const buildEvaluation = (tool: Tool): { evaluation: ToolEvaluation; isResearched: boolean } => {
+  const researched = evaluations[tool.id];
+  if (researched) return { evaluation: researched, isResearched: true };
   return {
-    totalScore,
-    scoreBreakdown,
-    oneLine: `${tool.name}는 팀의 실행 속도를 높이지만, 인지 과부하를 막기 위한 사용 원칙이 반드시 필요합니다.`,
-    comparisons: deriveComparisons(tool),
-    patchNotes: derivePatchNotes(tool),
-    workPlaybook: deriveWorkPlaybook(tool),
-    ...overrides[tool.id]
+    isResearched: false,
+    evaluation: {
+      oneLine: `${tool.name}는 팀의 실행 속도를 높이지만, 인지 과부하를 막기 위한 사용 원칙이 반드시 필요합니다.`,
+      scoreBreakdown: deriveScoreBreakdown(tool),
+      keyFeatures: [],
+      pricingSummary: "",
+      koreaNote: "",
+      comparisons: deriveComparisons(tool),
+      patchNotes: [],
+      workPlaybook: deriveWorkPlaybook(tool),
+      externalRatings: [],
+      sources: [],
+      researchedAt: ""
+    }
+  };
+};
+
+let rankCache: Map<string, RankInfo> | null = null;
+
+/** 카탈로그 전체의 종합 점수 순위 (지연 계산, 캐시) */
+const getRankIndex = (): Map<string, RankInfo> => {
+  if (!rankCache) {
+    rankCache = rankItems(catalog, (tool) => computeToolScore(buildEvaluation(tool).evaluation).composite);
+  }
+  return rankCache;
+};
+
+export const getToolEvaluation = (toolId: string): ToolEvaluation | undefined => evaluations[toolId];
+
+export const getCapabilityProfile = (tool: Pick<Tool, "name">): ToolCapabilityProfile | undefined =>
+  capabilityProfiles[tool.name];
+
+export const getToolScore = (tool: Tool): ToolScore => computeToolScore(buildEvaluation(tool).evaluation);
+
+export const getToolInsight = (tool: Tool): ToolInsight => {
+  const { evaluation, isResearched } = buildEvaluation(tool);
+  const score = computeToolScore(evaluation);
+  return {
+    ...evaluation,
+    totalScore: score.composite,
+    score,
+    rank: getRankIndex().get(tool.id),
+    isResearched
   };
 };

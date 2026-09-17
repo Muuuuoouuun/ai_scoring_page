@@ -1,0 +1,1653 @@
+{
+  "source": "123de1697a5a6c40a8d7666fd08df80ffbb6c9dc",
+  "date": "2026-09-12",
+  "method": "Four equal binary gates per fixed subcategory; PASS=W/4; GAP/UNVERIFIED=0; no demonstrated current cap",
+  "areas": [
+    {
+      "name": "정체성·기획 일치",
+      "groups": [
+        [
+          "정보 중심",
+          25,
+          [
+            {
+              "name": "Service copy leads with AI/SaaS discovery and learning.",
+              "state": "PASS",
+              "evidence": "C1; Q:9",
+              "id": "1.1.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "The root route remains information-first after authentication.",
+              "state": "PASS",
+              "evidence": "C1; Q:9",
+              "id": "1.1.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "The discovery home itself exposes current changes, tools, learning and people/event discovery.",
+              "state": "PASS",
+              "evidence": "H5; P5:5 — Home now contains upcoming verified events and real published top-level community entries, with honest empty/error states; source and local rendered task observed.",
+              "id": "1.1.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Personal management is opt-in from a separate route.",
+              "state": "PASS",
+              "evidence": "C1",
+              "id": "1.1.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "전체 범위",
+          35,
+          [
+            {
+              "name": "Tool discovery/detail/comparison has a usable public path.",
+              "state": "PASS",
+              "evidence": "T; V4a",
+              "id": "1.2.1",
+              "weight": 8.75,
+              "earned": 8.75
+            },
+            {
+              "name": "Guide/news/event routes exist with substantive content.",
+              "state": "PASS",
+              "evidence": "C2; Q:13,22,27",
+              "id": "1.2.2",
+              "weight": 8.75,
+              "earned": 8.75
+            },
+            {
+              "name": "Public contributions and moderation have a working path.",
+              "state": "PASS",
+              "evidence": "Q:28; T",
+              "id": "1.2.3",
+              "weight": 8.75,
+              "earned": 8.75
+            },
+            {
+              "name": "The retained private/operational minimum, including email, is implemented.",
+              "state": "GAP",
+              "evidence": "V5 reconciliation/reporting, home and hide controls now have implementation/QA evidence (P5/R5/T5). Full condition history/dated transition scope, actual email, unattended timing and operating feedback/cadence remain incomplete; the umbrella gate remains GAP.",
+              "id": "1.2.4",
+              "weight": 8.75,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "비회원 가치",
+          20,
+          [
+            {
+              "name": "Application-level public reading/search works without personal records.",
+              "state": "PASS",
+              "evidence": "T; Q:27",
+              "id": "1.3.1",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Application-level comparison works without account persistence.",
+              "state": "PASS",
+              "evidence": "C2; local public route checks",
+              "id": "1.3.2",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "General cancellation information is public at application level.",
+              "state": "PASS",
+              "evidence": "Q:15,30; C3",
+              "id": "1.3.3",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "An external anonymous visitor completes a deployed public-information task.",
+              "state": "UNVERIFIED",
+              "evidence": "Hosting remains owner-only; no anonymous external-visitor observation",
+              "id": "1.3.4",
+              "weight": 5.0,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "개인 영역 분리",
+          20,
+          [
+            {
+              "name": "My Workspace has a separate entry and authenticated content boundary.",
+              "state": "PASS",
+              "evidence": "C1; C3",
+              "id": "1.4.1",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Private records are excluded from public search.",
+              "state": "PASS",
+              "evidence": "T: global search/private-record test",
+              "id": "1.4.2",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Public contribution requires an explicit public-content choice.",
+              "state": "PASS",
+              "evidence": "C3; community form",
+              "id": "1.4.3",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Private/public data meanings are explained in the product.",
+              "state": "PASS",
+              "evidence": "C3: privacy/about; Q:14",
+              "id": "1.4.4",
+              "weight": 5.0,
+              "earned": 5.0
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "내용·최신성",
+      "groups": [
+        [
+          "공식 출처",
+          30,
+          [
+            {
+              "name": "Catalog/content include relevant official source URLs.",
+              "state": "PASS",
+              "evidence": "C2; SA",
+              "id": "2.1.1",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Model identities and principal specification claims have independent official verification.",
+              "state": "PASS",
+              "evidence": "SA: all three models",
+              "id": "2.1.2",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "A sampled current product change has independent official verification and correction.",
+              "state": "PASS",
+              "evidence": "SA: ChatGPT September 11; Q:21",
+              "id": "2.1.3",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Remaining catalog claim/source pairs have a complete current audit trail.",
+              "state": "PASS",
+              "evidence": "CA5:3,14,20–43; CV5:9–15,26–55; L6 — All20 entries/75 feature-source pairs audited, required corrections checked, last obsolete Midjourney supplementary source link corrected in current source. V6P confirms publication of the locally checked correction; this gate credits the complete documentary/source audit, not hands-on product testing.",
+              "id": "2.1.4",
+              "weight": 7.5,
+              "earned": 7.5
+            }
+          ]
+        ],
+        [
+          "실제 로고",
+          15,
+          [
+            {
+              "name": "Named tools use actual logo asset files rather than invented initial avatars.",
+              "state": "PASS",
+              "evidence": "C2: public/logos and ToolLogo",
+              "id": "2.2.1",
+              "weight": 3.75,
+              "earned": 3.75
+            },
+            {
+              "name": "Logo origin links are retained alongside catalog entries.",
+              "state": "PASS",
+              "evidence": "C2: logoSource; source page",
+              "id": "2.2.2",
+              "weight": 3.75,
+              "earned": 3.75
+            },
+            {
+              "name": "Representative rendered logos load without failures.",
+              "state": "PASS",
+              "evidence": "Q:33; OQ: mobile image loading checks",
+              "id": "2.2.3",
+              "weight": 3.75,
+              "earned": 3.75
+            },
+            {
+              "name": "All current deployed logo assets have individually verified provenance/render outcomes.",
+              "state": "PASS",
+              "evidence": "E7 — All20 deployed /explore images individually complete && naturalWidth>0, IDs recorded; full-page screenshot shows each logo beside its label. Combines with inherited CA5/CV5 provenance receipts. Narrow initial lazy loading11/20 is separately disclosed.",
+              "id": "2.2.4",
+              "weight": 3.75,
+              "earned": 3.75
+            }
+          ]
+        ],
+        [
+          "기능/업데이트",
+          25,
+          [
+            {
+              "name": "Tool details show structured supported/conditional/unknown functions.",
+              "state": "PASS",
+              "evidence": "C2",
+              "id": "2.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Curated updates state a concrete change and link its source.",
+              "state": "PASS",
+              "evidence": "C2; SA; Q:21",
+              "id": "2.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Feed ingestion has defined product scope and retained-error/review behavior.",
+              "state": "PASS",
+              "evidence": "SA/SF; T; Q:21",
+              "id": "2.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "V4's new live feed path is observed end-to-end on the deployment.",
+              "state": "PASS",
+              "evidence": "P5:11–12 — Production Copilot content/logo and Midjourney content checks succeeded; /news?tab=feed rendered10 Copilot and15 Midjourney items with last-success dates. Bounded to this observed path, not all providers.",
+              "id": "2.3.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "불확실성·날짜",
+          20,
+          [
+            {
+              "name": "Source check dates are separate from publication dates.",
+              "state": "PASS",
+              "evidence": "C2; Q:21",
+              "id": "2.4.1",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Absent publication dates, plans or support remain explicitly unknown.",
+              "state": "PASS",
+              "evidence": "C2; about/detail",
+              "id": "2.4.2",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Changed/failed source state is not silently promoted to verified fact.",
+              "state": "PASS",
+              "evidence": "T: source recovery regressions; SF correction",
+              "id": "2.4.3",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Past opportunities are marked ended and unchecked conditions remain conditional.",
+              "state": "PASS",
+              "evidence": "C2; event/promotion date logic",
+              "id": "2.4.4",
+              "weight": 5.0,
+              "earned": 5.0
+            }
+          ]
+        ],
+        [
+          "모델/앱 구분",
+          10,
+          [
+            {
+              "name": "Data model distinguishes model, AI app and SaaS.",
+              "state": "PASS",
+              "evidence": "C2: catalog types",
+              "id": "2.5.1",
+              "weight": 2.5,
+              "earned": 2.5
+            },
+            {
+              "name": "Visible labels expose the distinction.",
+              "state": "PASS",
+              "evidence": "C2: ToolUI/detail",
+              "id": "2.5.2",
+              "weight": 2.5,
+              "earned": 2.5
+            },
+            {
+              "name": "Model identities are independently confirmed against official specifications.",
+              "state": "PASS",
+              "evidence": "SA",
+              "id": "2.5.3",
+              "weight": 2.5,
+              "earned": 2.5
+            },
+            {
+              "name": "User app experience is not represented as a model benchmark.",
+              "state": "PASS",
+              "evidence": "C3: about; ToolReviews",
+              "id": "2.5.4",
+              "weight": 2.5,
+              "earned": 2.5
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "디자인",
+      "groups": [
+        [
+          "성숙한 테마",
+          25,
+          [
+            {
+              "name": "Shared palette and surface tokens establish a restrained theme.",
+              "state": "PASS",
+              "evidence": "C4: CSS variables",
+              "id": "3.1.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Shared Korean typography and heading scale are defined.",
+              "state": "PASS",
+              "evidence": "C4",
+              "id": "3.1.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Brand/copy/layout are adapted to AIs rather than represented as copied references.",
+              "state": "PASS",
+              "evidence": "Q:9; C1",
+              "id": "3.1.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "The complete rendered V4 theme has a documented visual critique.",
+              "state": "UNVERIFIED",
+              "evidence": "No complete current screenshot-based visual assessment supplied",
+              "id": "3.1.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "정보 계층",
+          25,
+          [
+            {
+              "name": "Pages use consistent title/summary/section hierarchy.",
+              "state": "PASS",
+              "evidence": "C1/C2/C3",
+              "id": "3.2.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Principal actions are visually distinguished from secondary actions.",
+              "state": "PASS",
+              "evidence": "C4: shared button treatments; source components",
+              "id": "3.2.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Dense tool/billing data are grouped into tables, sections and disclosures.",
+              "state": "PASS",
+              "evidence": "C2/C3",
+              "id": "3.2.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Current desktop/mobile information hierarchy is visually checked across every principal screen.",
+              "state": "UNVERIFIED",
+              "evidence": "Q:50 remains open; representative task observations are narrower",
+              "id": "3.2.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "밀도/여백",
+          25,
+          [
+            {
+              "name": "Reading widths, line heights and spacing rules constrain text density.",
+              "state": "PASS",
+              "evidence": "C4",
+              "id": "3.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Representative 390px detail/modal screens have no horizontal overflow.",
+              "state": "PASS",
+              "evidence": "Q:33",
+              "id": "3.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Mobile controls use explicit readable input sizes and adequate target dimensions.",
+              "state": "PASS",
+              "evidence": "C4: mobile font/target rules",
+              "id": "3.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Representative desktop private screen fits a 1440px viewport.",
+              "state": "PASS",
+              "evidence": "V4b: clientWidth/scrollWidth both 1440; limited to observed screen",
+              "id": "3.3.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "전 화면 일관성",
+          25,
+          [
+            {
+              "name": "Public pages share shell and navigation components.",
+              "state": "PASS",
+              "evidence": "C1",
+              "id": "3.4.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Personal forms/dialogs share styling and interaction primitives.",
+              "state": "PASS",
+              "evidence": "C3/C4",
+              "id": "3.4.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Responsive styles and state labels are reused across views.",
+              "state": "PASS",
+              "evidence": "C3/C4",
+              "id": "3.4.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "New guide/search/admin/expanded-billing screens have a complete cross-screen visual comparison.",
+              "state": "UNVERIFIED",
+              "evidence": "Q:50; no complete current visual comparison artifact",
+              "id": "3.4.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "사용성",
+      "groups": [
+        [
+          "주요 과제",
+          40,
+          [
+            {
+              "name": "Public search leads to a useful content result on the deployment.",
+              "state": "PASS",
+              "evidence": "V4a: guide search",
+              "id": "4.1.1",
+              "weight": 10.0,
+              "earned": 10.0
+            },
+            {
+              "name": "Personal billing/refund/cancellation tasks work in representative local UI.",
+              "state": "PASS",
+              "evidence": "Q:31–32; P5:6,8–9 adds local linked billing/date-filter/hide/restore/Savings interactions.",
+              "id": "4.1.2",
+              "weight": 10.0,
+              "earned": 10.0
+            },
+            {
+              "name": "Author/report/moderation actions work in deployed UI.",
+              "state": "PASS",
+              "evidence": "Q:28",
+              "id": "4.1.3",
+              "weight": 10.0,
+              "earned": 10.0
+            },
+            {
+              "name": "V4 comparison save, private edit and full reload work in deployed UI.",
+              "state": "PASS",
+              "evidence": "V4b",
+              "id": "4.1.4",
+              "weight": 10.0,
+              "earned": 10.0
+            }
+          ]
+        ],
+        [
+          "탐색/검색",
+          20,
+          [
+            {
+              "name": "Five primary destinations and contextual links are available.",
+              "state": "PASS",
+              "evidence": "C1; Q:9,33",
+              "id": "4.2.1",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Global search spans existing public content types.",
+              "state": "PASS",
+              "evidence": "T; V4a",
+              "id": "4.2.2",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Specialized tool filters and no-results preserve declared scope.",
+              "state": "PASS",
+              "evidence": "C2: Explore/searchCatalog; code inspection",
+              "id": "4.2.3",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Search result types and active state are visible and adjustable.",
+              "state": "PASS",
+              "evidence": "C2: GlobalSearch; V4a",
+              "id": "4.2.4",
+              "weight": 5.0,
+              "earned": 5.0
+            }
+          ]
+        ],
+        [
+          "상태/복구",
+          20,
+          [
+            {
+              "name": "Save operations expose pending/success/failure state and do not treat failed HTTP as saved.",
+              "state": "PASS",
+              "evidence": "C3; Q:29; API helper",
+              "id": "4.3.1",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Failed reads/searches expose a retry path.",
+              "state": "PASS",
+              "evidence": "C2/C3",
+              "id": "4.3.2",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Guest draft→authentication→restore and network interruption are observed end-to-end in the current UI.",
+              "state": "UNVERIFIED",
+              "evidence": "Draft code exists, but no complete current browser recovery observation",
+              "id": "4.3.3",
+              "weight": 5.0,
+              "earned": 0
+            },
+            {
+              "name": "Missing resources, invalid input and forbidden writes have explicit error paths.",
+              "state": "PASS",
+              "evidence": "T; Q:27",
+              "id": "4.3.4",
+              "weight": 5.0,
+              "earned": 5.0
+            }
+          ]
+        ],
+        [
+          "키보드/폼",
+          20,
+          [
+            {
+              "name": "Forms use labelled native controls and bounded inputs.",
+              "state": "PASS",
+              "evidence": "C3",
+              "id": "4.4.1",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "A skip link and visible keyboard focus styling exist.",
+              "state": "PASS",
+              "evidence": "C1/C4",
+              "id": "4.4.2",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "A completed save restores focus to the originating control.",
+              "state": "PASS",
+              "evidence": "Q:31",
+              "id": "4.4.3",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "V4 delete dialog cycles Tab/Shift+Tab, closes with Escape, restores focus and preserves data on cancel.",
+              "state": "PASS",
+              "evidence": "V4b",
+              "id": "4.4.4",
+              "weight": 5.0,
+              "earned": 5.0
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "쾌적성·접근성",
+      "groups": [
+        [
+          "반응형",
+          25,
+          [
+            {
+              "name": "Representative public 390px detail/search screens fit and operate.",
+              "state": "PASS",
+              "evidence": "Q:30,33",
+              "id": "5.1.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Representative new private 390px billing/refund forms fit and operate.",
+              "state": "PASS",
+              "evidence": "Q:31–32; P5:7 requested390×844 but observed document395px; containers fit395px. This corroborates representative narrow-screen behavior without claiming a complete390px or zoom matrix.",
+              "id": "5.1.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Representative desktop 1440px private screen has matching viewport/document width.",
+              "state": "PASS",
+              "evidence": "V4b",
+              "id": "5.1.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Zoom/reflow and the complete screen matrix are measured.",
+              "state": "UNVERIFIED",
+              "evidence": "No 200% zoom/reflow or complete viewport sweep evidence",
+              "id": "5.1.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "읽기/대비",
+          25,
+          [
+            {
+              "name": "Measured primary text/button contrast meets the documented thresholds.",
+              "state": "PASS",
+              "evidence": "Q:33; OQ contrasts",
+              "id": "5.2.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Korean font sizing and line height, including mobile inputs, are explicit.",
+              "state": "PASS",
+              "evidence": "C4",
+              "id": "5.2.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Support/uncertainty/error meaning is expressed in text, not color alone.",
+              "state": "PASS",
+              "evidence": "C2/C3",
+              "id": "5.2.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Screen-reader reading order, descriptions and status announcements have an observed run.",
+              "state": "UNVERIFIED",
+              "evidence": "No screen-reader run supplied",
+              "id": "5.2.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "렌더 성능",
+          25,
+          [
+            {
+              "name": "Representative load/render timing is measured with method and environment.",
+              "state": "PASS",
+              "evidence": "E7/M7 — Eight production load observations across home/explore/my at actual desktop/narrow widths, timestamps/visibility/document scope/late start/cache limits. Seven miss fixed load budgets; measurement credit does not mark latency resolved.",
+              "id": "5.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Interaction responsiveness is measured on a principal task.",
+              "state": "PASS",
+              "evidence": "E7 strict timed exploration — sequential document query plus writing filter, one result observed;93ms host wall time including automation dispatch,2476ms capture window including2100ms Event Timing wait. Document INP56ms includes diagnostic controls and is not isolated per-action latency. Earlier delayed samples retained.",
+              "id": "5.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Layout stability is measured during initial/async rendering.",
+              "state": "PASS",
+              "evidence": "E7/M7 — Initial and later async/task CLS/raw document shift values observed. Narrow/my CLS0.034716, other recorded values0..0.0012545; strict task unchanged. Document/input-exclusion/cutoff limits preserved.",
+              "id": "5.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Resource/long-task costs are measured under a stated budget.",
+              "state": "PASS",
+              "evidence": "E7/M7 — Prior fixed unit/window/count/byte/long-task budgets compared with actual production navigation/resources/script/long-task observations. Uncontrolled cache and unknown byte coverage preserved; known-zero script bytes not treated as free.",
+              "id": "5.3.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "오류/안정성",
+          25,
+          [
+            {
+              "name": "Current complete build/type validation is reported successful.",
+              "state": "PASS",
+              "evidence": "Q:26; V4 source/deploy evidence",
+              "id": "5.4.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "API/calculation suite passes freshly.",
+              "state": "PASS",
+              "evidence": "T: 35/35; T5 fresh independent48/48 API/billing tests passed during final V5 recheck; V6 changes only one catalog source URL.",
+              "id": "5.4.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Observed navigation and deployed author flows no longer exhibit the prior link error.",
+              "state": "PASS",
+              "evidence": "Q:28–29,33",
+              "id": "5.4.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Source failure recovery and critical data-edit regressions have passing checks.",
+              "state": "PASS",
+              "evidence": "T; independent fix review; R5 final independently verifies all8 original V5 review findings resolved; T5 covers targeted regressions.",
+              "id": "5.4.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "유용성",
+      "groups": [
+        [
+          "상세/비교",
+          30,
+          [
+            {
+              "name": "Details explain use, constraints, environment and source-backed functions.",
+              "state": "PASS",
+              "evidence": "C2",
+              "id": "6.1.1",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Side-by-side comparison exposes relevant differences and source links.",
+              "state": "PASS",
+              "evidence": "C2; V4a comparison screen/save",
+              "id": "6.1.2",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Unassessed editorial evidence is distinguished from available user evidence.",
+              "state": "PASS",
+              "evidence": "C2/C3",
+              "id": "6.1.3",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "A representative person/task demonstrates choosing between candidates from the comparison evidence.",
+              "state": "UNVERIFIED",
+              "evidence": "No observed comparison-understanding task; saving is not understanding",
+              "id": "6.1.4",
+              "weight": 7.5,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "검색/추천",
+          25,
+          [
+            {
+              "name": "Anonymous application-level query retrieves relevant available content.",
+              "state": "PASS",
+              "evidence": "T; V4a",
+              "id": "6.2.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Explicit required conditions do not treat unknown as supported.",
+              "state": "PASS",
+              "evidence": "C2",
+              "id": "6.2.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Recommendations state work/function reasons rather than invented fitness percentages.",
+              "state": "PASS",
+              "evidence": "C2: Recommend/about",
+              "id": "6.2.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "A varied set of realistic purpose/condition queries has evaluated relevance.",
+              "state": "UNVERIFIED",
+              "evidence": "Current tests emphasize exact titles/selected tasks, not broad relevance evaluation",
+              "id": "6.2.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "콘텐츠/활용법",
+          25,
+          [
+            {
+              "name": "Guides include concrete practice inputs and prerequisites.",
+              "state": "PASS",
+              "evidence": "C2; Q:22",
+              "id": "6.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Guides explain steps, output checks and likely failure recovery.",
+              "state": "PASS",
+              "evidence": "C2; Q:22",
+              "id": "6.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Guides link official sources and label direct-execution status honestly.",
+              "state": "PASS",
+              "evidence": "C2; Q:22",
+              "id": "6.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "A complete representative guide is reproduced and its result checked.",
+              "state": "UNVERIFIED",
+              "evidence": "Direct execution results are explicitly unregistered",
+              "id": "6.3.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "조건/근거",
+          20,
+          [
+            {
+              "name": "Update meaning/affected conditions and source dates are available.",
+              "state": "PASS",
+              "evidence": "C2; SA",
+              "id": "6.4.1",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Events/promotions expose audience, time and eligibility conditions.",
+              "state": "PASS",
+              "evidence": "C2",
+              "id": "6.4.2",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Cost comparison distinguishes cheaper price from prepayment feasibility.",
+              "state": "PASS",
+              "evidence": "T; Q:19",
+              "id": "6.4.3",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Unknown conditions and source failures are visible rather than silently assumed satisfied.",
+              "state": "PASS",
+              "evidence": "C2/C3; T",
+              "id": "6.4.4",
+              "weight": 5.0,
+              "earned": 5.0
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "커뮤니티",
+      "groups": [
+        [
+          "평가/후기/제안",
+          30,
+          [
+            {
+              "name": "Reviews require work, plan, use date and relationship disclosure.",
+              "state": "PASS",
+              "evidence": "C3; T",
+              "id": "7.1.1",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Rating aggregation deduplicates latest account/tool reviews and excludes missing axes.",
+              "state": "PASS",
+              "evidence": "T",
+              "id": "7.1.2",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Feature proposals remain distinguishable from verified official facts.",
+              "state": "PASS",
+              "evidence": "C3",
+              "id": "7.1.3",
+              "weight": 7.5,
+              "earned": 7.5
+            },
+            {
+              "name": "Review author/edit/reply behavior has representative UI evidence.",
+              "state": "PASS",
+              "evidence": "OQ: local review/edit/reply; unchanged core retained and API checks current",
+              "id": "7.1.4",
+              "weight": 7.5,
+              "earned": 7.5
+            }
+          ]
+        ],
+        [
+          "질문/답변",
+          25,
+          [
+            {
+              "name": "Question submission exists without a personal tool/subscription prerequisite.",
+              "state": "PASS",
+              "evidence": "C3: postSchema/community form/route",
+              "id": "7.2.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "A reply links to the published parent with server validation.",
+              "state": "PASS",
+              "evidence": "T; C3",
+              "id": "7.2.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Threads expose answers and author controls.",
+              "state": "PASS",
+              "evidence": "C3; OQ local reply task",
+              "id": "7.2.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "A deleted/hidden parent with other authors' replies has an observed readable UI task.",
+              "state": "UNVERIFIED",
+              "evidence": "Database preservation test passes, but no corresponding browser reading observation",
+              "id": "7.2.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "영속성/소유권",
+          25,
+          [
+            {
+              "name": "Server account identity governs contribution mutation.",
+              "state": "PASS",
+              "evidence": "T",
+              "id": "7.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Other-account edit/delete attempts are rejected.",
+              "state": "PASS",
+              "evidence": "T",
+              "id": "7.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Deployed author edits survive a new read and deletion is observed.",
+              "state": "PASS",
+              "evidence": "Q:28",
+              "id": "7.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Account deletion removes own content/ratings while preserving other users' reply data.",
+              "state": "PASS",
+              "evidence": "T",
+              "id": "7.3.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "신고/표시",
+          20,
+          [
+            {
+              "name": "A deployed report is accepted.",
+              "state": "PASS",
+              "evidence": "Q:28",
+              "id": "7.4.1",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Moderation requires the configured administrator.",
+              "state": "PASS",
+              "evidence": "T; Q:28–29",
+              "id": "7.4.2",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Hide, nonvisibility, restore and resolve work in deployed UI.",
+              "state": "PASS",
+              "evidence": "Q:28",
+              "id": "7.4.3",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Relationship, proposal and experience/official-fact distinctions are visible.",
+              "state": "PASS",
+              "evidence": "C3",
+              "id": "7.4.4",
+              "weight": 5.0,
+              "earned": 5.0
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "개인 기능",
+      "groups": [
+        [
+          "로그인/계정격리",
+          25,
+          [
+            {
+              "name": "Real Sites account identity is observed in the deployment.",
+              "state": "PASS",
+              "evidence": "Q:29",
+              "id": "8.1.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Read/update/delete/export scope is account-isolated in API tests.",
+              "state": "PASS",
+              "evidence": "T",
+              "id": "8.1.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Forged identity and cross-origin writes are rejected in recorded checks.",
+              "state": "PASS",
+              "evidence": "T; Q:27",
+              "id": "8.1.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Cross-device/account isolation is observed with independent real production sessions.",
+              "state": "UNVERIFIED",
+              "evidence": "No independent second-account/device observation supplied",
+              "id": "8.1.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "도구/저장/모음",
+          20,
+          [
+            {
+              "name": "Tool quick-save persists without overwriting existing private notes/status.",
+              "state": "PASS",
+              "evidence": "T; Q:29",
+              "id": "8.2.1",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Custom tool and collection CRUD paths use owned server records.",
+              "state": "PASS",
+              "evidence": "C3; API ownership structure",
+              "id": "8.2.2",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Selected comparison is saved into the account.",
+              "state": "PASS",
+              "evidence": "V4a/V4b; T",
+              "id": "8.2.3",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Private reason/outcome edits survive a full production reload.",
+              "state": "PASS",
+              "evidence": "V4b",
+              "id": "8.2.4",
+              "weight": 5.0,
+              "earned": 5.0
+            }
+          ]
+        ],
+        [
+          "비용/절약",
+          25,
+          [
+            {
+              "name": "Fixed billing, currencies, bundle dedupe and period boundaries pass checks.",
+              "state": "PASS",
+              "evidence": "T; T5/R5; P5:15 production linked payment fullreload: actual3000+remaining6000=forecast9000; confirmed Sep15, expected Oct15/Nov15; cleanup complete.",
+              "id": "8.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Missing dates, new prices, seats/tax, usage budgets and refund dates pass focused checks.",
+              "state": "PASS",
+              "evidence": "T; Q:17–18,31–32; R5 confirms anchor/currency/legacy bundle/share/known residual handling fixes; T5 passes.",
+              "id": "8.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Savings applies known features/duration/prepayment and labels uncertainty.",
+              "state": "PASS",
+              "evidence": "T; Q:19; P5:9 rendered local Savings fixture: monthly240000 vs switched260000, monthly cheaper20000; conservative upfront270000 exceeds250000 ceiling. Full dated scenario modeling is not claimed.",
+              "id": "8.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Retained reconciliation/custom-period/history/transition-cost comparison cases are implemented.",
+              "state": "GAP",
+              "evidence": "P5:6,9,15; R5/T5 verify explicit matching, custom periods/cycles and partial transition-cost arithmetic. Full preserved condition history and full dated transition/refund/overlap model are still tracked incomplete. Binary gate remains GAP.",
+              "id": "8.3.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "해지/알림",
+          20,
+          [
+            {
+              "name": "Public payment-path help and residual-obligation behavior are observed.",
+              "state": "PASS",
+              "evidence": "Q:30–31; T",
+              "id": "8.4.1",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "App notice matching/dedupe and email eligibility/consent guards are implemented/tested.",
+              "state": "PASS",
+              "evidence": "T; C3; R5 final stale settings protection and explicit topic restoration tested; no provider delivery credit.",
+              "id": "8.4.2",
+              "weight": 5.0,
+              "earned": 5.0
+            },
+            {
+              "name": "Customer-facing topic hide/not-interested and offered notification timing are complete.",
+              "state": "GAP",
+              "evidence": "P5:8; R5 final; T5 verify hide→unrelated settings save→explicit restoration, including stale-payload protection. Offered unattended timing remains incomplete; binary conjunction remains GAP.",
+              "id": "8.4.3",
+              "weight": 5.0,
+              "earned": 0
+            },
+            {
+              "name": "Consented actual email delivery and unattended processing operate.",
+              "state": "GAP",
+              "evidence": "No actual configured email/provider receipt or unattended processing evidence. Guard/unit tests and app visibility do not substitute; GAP unchanged.",
+              "id": "8.4.4",
+              "weight": 5.0,
+              "earned": 0
+            }
+          ]
+        ],
+        [
+          "내보내기/삭제",
+          10,
+          [
+            {
+              "name": "Export includes owned records, contributions and new saved fields.",
+              "state": "PASS",
+              "evidence": "T",
+              "id": "8.5.1",
+              "weight": 2.5,
+              "earned": 2.5
+            },
+            {
+              "name": "Deletion rejects wrong confirmation and removes owned private data.",
+              "state": "PASS",
+              "evidence": "T",
+              "id": "8.5.2",
+              "weight": 2.5,
+              "earned": 2.5
+            },
+            {
+              "name": "Deletion preserves other users' reply data and removes own rating identity.",
+              "state": "PASS",
+              "evidence": "T",
+              "id": "8.5.3",
+              "weight": 2.5,
+              "earned": 2.5
+            },
+            {
+              "name": "Complete deployed export/download verification and full-account destructive flow are observed.",
+              "state": "UNVERIFIED",
+              "evidence": "Production author-post deletion is not full-account export/delete",
+              "id": "8.5.4",
+              "weight": 2.5,
+              "earned": 0
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "배포·운영",
+      "groups": [
+        [
+          "실제 배포",
+          25,
+          [
+            {
+              "name": "V4 deployment success is reported for the exact source ID.",
+              "state": "PASS",
+              "evidence": "V4a; P5:3 also records V5 success source beeb02a1e58ecdab6864d5206885b4d14d2d7ba7 at2026-09-12T08:17:24Z. V6P also confirms single-link correction publication; literal original V4 gate name retained.",
+              "id": "9.1.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "The real site URL serves the new application.",
+              "state": "PASS",
+              "evidence": "V4a/V4b",
+              "id": "9.1.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Hosting access scope and operator identity are explicitly checked.",
+              "state": "PASS",
+              "evidence": "Q:6,29; owner-only preview",
+              "id": "9.1.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Build source/runtime setup and secret separation are documented and checked.",
+              "state": "PASS",
+              "evidence": "Q:26; OQ environment/security notes; C3 runtime config",
+              "id": "9.1.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "배포 후 핵심동작",
+          25,
+          [
+            {
+              "name": "Public navigation/search works on the deployed build.",
+              "state": "PASS",
+              "evidence": "V4a; Q:33",
+              "id": "9.2.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Owned tool save/reload works in real deployment.",
+              "state": "PASS",
+              "evidence": "Q:29",
+              "id": "9.2.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Deployed contribution/moderation/delete flow works.",
+              "state": "PASS",
+              "evidence": "Q:28",
+              "id": "9.2.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "New comparison/private-edit/full-reload flow works on V4.",
+              "state": "PASS",
+              "evidence": "V4b",
+              "id": "9.2.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "데이터 영속성",
+          25,
+          [
+            {
+              "name": "D1 schema/owned storage implementation is connected rather than local-only.",
+              "state": "PASS",
+              "evidence": "C3; Q:29; P5:15 additionally proves deployed linked-payment persistence and cleanup; current literal expression-index migration exercised in T5/R5.",
+              "id": "9.3.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Real private tool records survive reload.",
+              "state": "PASS",
+              "evidence": "Q:29",
+              "id": "9.3.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Real public contributions survive write/edit/new-read.",
+              "state": "PASS",
+              "evidence": "Q:28",
+              "id": "9.3.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "New nested private saved fields survive a full V4 reload.",
+              "state": "PASS",
+              "evidence": "V4b",
+              "id": "9.3.4",
+              "weight": 6.25,
+              "earned": 6.25
+            }
+          ]
+        ],
+        [
+          "동기화/운영상태",
+          25,
+          [
+            {
+              "name": "A real source-sync run and partial-failure state have been recorded.",
+              "state": "PASS",
+              "evidence": "OQ: deployed first-three source check; SA; P5:11 additionally observes Copilot/Midjourney success and OpenAI403 retained as failure.",
+              "id": "9.4.1",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Authorized operations exposes moderation, sync and delivery-state data.",
+              "state": "PASS",
+              "evidence": "C3; Q:28–29",
+              "id": "9.4.2",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "New feed scopes are observed through the deployed sync→display path.",
+              "state": "PASS",
+              "evidence": "P5:11–12 — Deployed source check→stored feed→visible feed observed for Copilot and Midjourney. OpenAI403 remains reported as failure, not verified freshness.",
+              "id": "9.4.3",
+              "weight": 6.25,
+              "earned": 6.25
+            },
+            {
+              "name": "Required unattended/email operations and operating feedback/cadence are complete.",
+              "state": "GAP",
+              "evidence": "Actual feed-sync display now independently credited at9.4.3. Required unattended email/sync cadence and operating feedback remain incomplete; GAP unchanged.",
+              "id": "9.4.4",
+              "weight": 6.25,
+              "earned": 0
+            }
+          ]
+        ]
+      ]
+    }
+  ],
+  "totals": [
+    {
+      "area": "정체성·기획 일치",
+      "score": 86.25
+    },
+    {
+      "area": "내용·최신성",
+      "score": 100.0
+    },
+    {
+      "area": "디자인",
+      "score": 81.25
+    },
+    {
+      "area": "사용성",
+      "score": 95.0
+    },
+    {
+      "area": "쾌적성·접근성",
+      "score": 87.5
+    },
+    {
+      "area": "유용성",
+      "score": 80.0
+    },
+    {
+      "area": "커뮤니티",
+      "score": 93.75
+    },
+    {
+      "area": "개인 기능",
+      "score": 75.0
+    },
+    {
+      "area": "배포·운영",
+      "score": 93.75
+    }
+  ],
+  "sourceContext": {
+    "deployedSource": "123de1697a5a6c40a8d7666fd08df80ffbb6c9dc",
+    "deployedAt": "2026-09-12T08:45:51.734799Z",
+    "siteUrl": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+    "access": "owner-private",
+    "incrementalV6Change": "midjourney.sourceUrls replaces https://www.midjourney.com/updates/version-8-2 with https://updates.midjourney.com/version-8-2/",
+    "v6SourceSHA": "c7124c3fa9f64caa817a10e879b15b72b00a7739",
+    "v6PublicationStatus": "succeeded, reported by root; same owner-private URL, environment revision2",
+    "currentCatalogSHA256": "6582363e298f29c7189190ab768a8d9edd88c5e47ab42fd6c6a0b5d4571cdee5",
+    "previousDeployedSource": "c7124c3fa9f64caa817a10e879b15b72b00a7739",
+    "previousDeployedAt": "2026-09-12T08:25:16Z",
+    "environmentRevision": 2,
+    "v7PublicationStatus": "succeeded; owner-private; environment revision2"
+  },
+  "baseline": {
+    "worksheet": "/private/tmp/ais-score-worksheet-v4.json",
+    "source": "8b8611b95c9461082638f455177b3a5fe9b7cea9",
+    "preserved": "All152 IDs/criterion names and38 subcategory weights unchanged; only evidence/status updated."
+  },
+  "counts": {
+    "PASS": 134,
+    "GAP": 5,
+    "UNVERIFIED": 13
+  },
+  "changes": [
+    {
+      "id": "2.2.4",
+      "name": "All current deployed logo assets have individually verified provenance/render outcomes.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 3.75,
+      "evidence": "E7 — All20 deployed /explore images individually complete && naturalWidth>0, IDs recorded; full-page screenshot shows each logo beside its label. Combines with inherited CA5/CV5 provenance receipts. Narrow initial lazy loading11/20 is separately disclosed."
+    },
+    {
+      "id": "5.3.1",
+      "name": "Representative load/render timing is measured with method and environment.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "E7/M7 — Eight production load observations across home/explore/my at actual desktop/narrow widths, timestamps/visibility/document scope/late start/cache limits. Seven miss fixed load budgets; measurement credit does not mark latency resolved."
+    },
+    {
+      "id": "5.3.2",
+      "name": "Interaction responsiveness is measured on a principal task.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "E7 strict timed exploration — sequential document query plus writing filter, one result observed;93ms host wall time including automation dispatch,2476ms capture window including2100ms Event Timing wait. Document INP56ms includes diagnostic controls and is not isolated per-action latency. Earlier delayed samples retained."
+    },
+    {
+      "id": "5.3.3",
+      "name": "Layout stability is measured during initial/async rendering.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "E7/M7 — Initial and later async/task CLS/raw document shift values observed. Narrow/my CLS0.034716, other recorded values0..0.0012545; strict task unchanged. Document/input-exclusion/cutoff limits preserved."
+    },
+    {
+      "id": "5.3.4",
+      "name": "Resource/long-task costs are measured under a stated budget.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "E7/M7 — Prior fixed unit/window/count/byte/long-task budgets compared with actual production navigation/resources/script/long-task observations. Uncontrolled cache and unknown byte coverage preserved; known-zero script bytes not treated as free."
+    }
+  ],
+  "caps": {
+    "current": null,
+    "rule": "Major security/privacy defect, broken core flow or failed deployment caps affected areas at60. No current trigger demonstrated. Explicit omissions independently block overall."
+  },
+  "overall": "incomplete: five numerical areas below88; initial latency budget failures and explicit retained scope remain open",
+  "evidenceRegister": {
+    "BASE": "/private/tmp/ais-score-worksheet-v4.md — frozen original criterion/evidence register; inherited Q/T/V4a/V4b/OQ/SA/SF/C1-C4/V-B-A tokens retain their historical meanings and are not relabeled as new V6 browser checks.",
+    "P5": "docs/audits/2026-09-12-v5-browser-evidence.md — parent-recorded local and production QA; source/deploy:3, home:5, billing:6/15, measured-width limits:7/13, hide:8, Savings:9, source/feed:11–12.",
+    "CA5": "docs/audits/2026-09-12-catalog-complete-v5.md — all20 entries/75 pairs documentary official-source audit, coverage:3/14/20–43; individual AI/SaaS audit detail in matching catalog-ai-v5/catalog-saas-v5 files.",
+    "CV5": "docs/audits/2026-09-12-v5-catalog-corrections.md — correction-to-audit comparison,20/75 coverage and171 predicates; only required unresolved URL at:15 subsequently fixed in L6. Recommendations:17–24 are explicitly optional refinements.",
+    "L6": "Current site/data/catalog.json read and SHA256 recorded in sourceContext:20 entries,75 feature pairs; corrected official Midjourney source present and obsolete link absent. Same already audited URL; no new external source research or deployment observation.",
+    "H5": "Current site/app/page.tsx:6–9 — published top-level community query and upcoming-event cards; supported by P5:5 local observation. No fabricated activity or need for a minimum real review count.",
+    "R5": "docs/audits/2026-09-12-v5-recheck.md final verification — all8 original findings resolved, with disclosure of source/API/browser boundaries.",
+    "T5": "Reviewer final V5 run node --test --test-reporter=dot tests/api.test.mjs tests/billing.test.mjs:48/48 passed; isolated single-issue recheck also passed. V6 changes no billing/API code.",
+    "V6P": "Root final dispatch: source c7124c3fa9f64caa817a10e879b15b72b00a7739 deployed successfully2026-09-12T08:25:16Z, same owner-private URL/environment revision2. V6 changes only the previously audited Midjourney supplementary URL; no new reviewer browser or Git operation.",
+    "E7": "docs/audits/2026-09-12-v7-browser-evidence.md",
+    "M7": "docs/audits/2026-09-12-v7-performance-method.md",
+    "D7": "docs/audits/2026-09-12-v7-score-delta.md"
+  },
+  "previousChanges": [
+    {
+      "id": "1.1.3",
+      "name": "The discovery home itself exposes current changes, tools, learning and people/event discovery.",
+      "from": "GAP",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "H5; P5:5 — Home now contains upcoming verified events and real published top-level community entries, with honest empty/error states; source and local rendered task observed."
+    },
+    {
+      "id": "2.1.4",
+      "name": "Remaining catalog claim/source pairs have a complete current audit trail.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 7.5,
+      "evidence": "CA5:3,14,20–43; CV5:9–15,26–55; L6 — All20 entries/75 feature-source pairs audited, required corrections checked, last obsolete Midjourney supplementary source link corrected in current source. V6P confirms publication of the locally checked correction; this gate credits the complete documentary/source audit, not hands-on product testing."
+    },
+    {
+      "id": "2.3.4",
+      "name": "V4's new live feed path is observed end-to-end on the deployment.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "P5:11–12 — Production Copilot content/logo and Midjourney content checks succeeded; /news?tab=feed rendered10 Copilot and15 Midjourney items with last-success dates. Bounded to this observed path, not all providers."
+    },
+    {
+      "id": "9.4.3",
+      "name": "New feed scopes are observed through the deployed sync→display path.",
+      "from": "UNVERIFIED",
+      "to": "PASS",
+      "earnedDelta": 6.25,
+      "evidence": "P5:11–12 — Deployed source check→stored feed→visible feed observed for Copilot and Midjourney. OpenAI403 remains reported as failure, not verified freshness."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "scroll": {
+    "height": 4849,
+    "width": 1425,
+    "x": 0,
+    "y": 2052
+  },
+  "url": "http://localhost:5173/my?tab=savings",
+  "viewport": {
+    "doc": 1425,
+    "height": 900,
+    "scale": 1,
+    "width": 1440
+  }
+}

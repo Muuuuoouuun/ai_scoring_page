@@ -1,0 +1,12 @@
+'use client';
+import {useState} from 'react';
+import help from '@/data/cancellation-help.json';
+import {catalog,findTool} from '@/lib/catalog';
+import type {PrivateRecord} from './RecordForm';
+import {ArrowUpRight} from './Icons';
+export default function CancellationHelp({records,initialTool=''}:{records?:PrivateRecord[];initialTool?:string}){
+ const [selected,setSelected]=useState(initialTool),[route,setRoute]=useState('unknown');
+ const tool=records?findTool(records.find(r=>r.id===selected)?.payload.toolId):findTool(selected);
+ const h=route==='apple'?help.find(h=>h.route==='app_store'):route==='google'?help.find(h=>h.route==='google_play'):route==='web'?help.find(h=>h.toolId===tool?.id&&h.route==='web'):null;
+ return <div className="panel"><h3>공식 해지 경로 확인</h3><div className="form-grid"><label className="field">{records?'구독':'서비스'}<select value={selected} onChange={e=>{setSelected(e.target.value);setRoute(records?.find(r=>r.id===e.target.value)?.payload.paymentRoute||'unknown');}}><option value="">선택해주세요</option>{records?records.map(r=><option key={r.id} value={r.id}>{r.payload.name}</option>):catalog.filter(t=>t.kind!=='model').map(t=><option key={t.id} value={t.id}>{t.name}</option>)}</select></label><label className="field">실제 결제 경로<select value={route} onChange={e=>setRoute(e.target.value)}><option value="unknown">확인 필요</option><option value="web">서비스 웹사이트</option><option value="apple">App Store</option><option value="google">Google Play</option></select></label></div>{h?<><p>{h.scope}</p><ol className="steps">{h.steps.map(s=><li key={s}>{s}</li>)}</ol><p className="note">{h.summary}</p><a className="button secondary small" href={h.url} target="_blank" rel="noreferrer" style={{marginTop:15}}>공식 해지 안내<ArrowUpRight size={14}/></a></>:route==='unknown'?<div className="note"><strong>영수증에서 실제 청구처를 먼저 확인하세요.</strong><ol className="steps"><li>이메일 영수증이나 카드 명세서에서 청구처와 주문 번호를 확인합니다.</li><li>Apple·Google 결제라면 해당 계정의 구독 목록을 확인합니다.</li><li>웹 결제라면 결제한 계정으로 로그인합니다. 계정을 찾기 어렵다면 영수증을 준비해 청구처 고객 지원에 문의하세요.</li></ol>앱을 삭제하거나 다른 계정에서 로그아웃해도 구독은 해지되지 않습니다.</div>:<p className="note">{!selected?'서비스와 결제 경로를 선택하면 확인된 공식 안내를 보여드립니다.':'이 서비스의 구체적인 웹 해지 경로는 아직 확인되지 않았습니다. 공식 사이트의 결제 설정 또는 고객 지원을 확인하세요.'}{tool&&<a className="text-link" href={tool.homepage} target="_blank" rel="noreferrer" style={{marginLeft:8}}>공식 사이트<ArrowUpRight size={12}/></a>}</p>}<span className="metadata" style={{marginTop:13}}>해지는 해당 결제처에서 직접 진행합니다. 이용 종료일·잔여 청구·환불 가능 여부는 별도로 확인하세요.</span></div>;
+}

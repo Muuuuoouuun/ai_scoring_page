@@ -1,0 +1,162 @@
+AIs request failed unknown
+✔ email mode, named time zone and receiving time survive the actual settings route (143.372625ms)
+✔ invalid named time zone or wall time is rejected rather than silently defaulted (51.547792ms)
+✔ opting out atomically cancels queued email before returning without changing another account (45.832042ms)
+✔ an outbox cancellation failure rolls back the settings change in the same transaction (40.680375ms)
+✖ one digest includes all new notices once and persists the provider receipt (38.110917ms)
+✖ receiving time is honored and a consumed or empty digest waits until the next local date (42.032ms)
+✖ matched batches have a rolling 24-hour cap that persists across mode and zone changes (42.553416ms)
+✖ legacy unconfirmed timing never sends; explicit time confirmation enables the current slot (38.765709ms)
+✖ parallel refresh claims one batch and makes only one first provider request (33.599292ms)
+✖ retry keeps exact bytes and key, honors backoff, and starts its window at first attempt (32.9235ms)
+✖ provider attempts stop at three and an expired ambiguous retry never gets a fresh identity (38.144541ms)
+✖ a late failed attempt cannot overwrite a newer accepted receipt after lease replacement (39.482292ms)
+✖ receipt storage failure preserves uncertainty and known provider identity instead of a new send (30.973875ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 4
+ℹ fail 9
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 776.478875
+
+✖ failing tests:
+
+test at tests/email-delivery.test.mjs:52:1
+✖ one digest includes all new notices once and persists the provider receipt (38.110917ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:55:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/email-delivery.test.mjs:62:1
+✖ receiving time is honored and a consumed or empty digest waits until the next local date (42.032ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:67:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/email-delivery.test.mjs:71:1
+✖ matched batches have a rolling 24-hour cap that persists across mode and zone changes (42.553416ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  4 !== 3
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:77:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 3,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/email-delivery.test.mjs:83:1
+✖ legacy unconfirmed timing never sends; explicit time confirmation enables the current slot (38.765709ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:86:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/email-delivery.test.mjs:90:1
+✖ parallel refresh claims one batch and makes only one first provider request (33.599292ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:95:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/email-delivery.test.mjs:99:1
+✖ retry keeps exact bytes and key, honors backoff, and starts its window at first attempt (32.9235ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:104:36)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/email-delivery.test.mjs:109:1
+✖ provider attempts stop at three and an expired ambiguous retry never gets a fresh identity (38.144541ms)
+  Error: no such table: email_deliveries
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:112:43)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    code: 'ERR_SQLITE_ERROR',
+    errcode: 1,
+    errstr: 'SQL logic error'
+  }
+
+test at tests/email-delivery.test.mjs:115:1
+✖ a late failed attempt cannot overwrite a newer accepted receipt after lease replacement (39.482292ms)
+  Error: no such table: email_deliveries
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:120:16)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    code: 'ERR_SQLITE_ERROR',
+    errcode: 1,
+    errstr: 'SQL logic error'
+  }
+
+test at tests/email-delivery.test.mjs:124:1
+✖ receipt storage failure preserves uncertainty and known provider identity instead of a new send (30.973875ms)
+  AssertionError [ERR_ASSERTION]: durable delivery table required
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:126:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

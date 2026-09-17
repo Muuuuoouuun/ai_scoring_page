@@ -1,0 +1,12 @@
+✔ owner-only default reminder is idempotent and creates neither email nor shared billing head (170.278042ms)
+✔ new opt-out settings win over a generator which read no settings (67.655125ms)
+✔ changed owned subscription payload prevents an obsolete default card commit (67.728834ms)
+✔ default card transaction rolls back its version row when card insert fails (72.610208ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 526.92

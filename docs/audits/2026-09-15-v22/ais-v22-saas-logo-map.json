@@ -1,0 +1,84 @@
+[
+  {
+    "id": "airtable",
+    "sourceUrl": "https://www.airtable.com/favicon.ico",
+    "officialPage": "https://www.airtable.com/",
+    "localPath": "/private/tmp/ais-v22-saas-assets/airtable.png",
+    "sitePath": "/logos/airtable.png",
+    "bytes": 1505,
+    "contentType": "image/vnd.microsoft.icon",
+    "sha256": "8020f46841434ab3782fa38d6b8d6c47b3ea69fc025ba8f8d3608e87c36c9aa3"
+  },
+  {
+    "id": "asana",
+    "sourceUrl": "https://asana.com/assets/img/brand/asana-logo-favicon.ico",
+    "officialPage": "https://asana.com/",
+    "localPath": "/private/tmp/ais-v22-saas-assets/asana.ico",
+    "sitePath": "/logos/asana.ico",
+    "bytes": 41662,
+    "contentType": "image/vnd.microsoft.icon",
+    "sha256": "a42ae227f92cc034bed8015af2bb5664327c3ef4c207e3dc6cd06e8642845e77"
+  },
+  {
+    "id": "clickup",
+    "sourceUrl": "https://clickup.com/favicons/apple-touch-icon.png",
+    "officialPage": "https://clickup.com/",
+    "localPath": "/private/tmp/ais-v22-saas-assets/clickup.png",
+    "sitePath": "/logos/clickup.png",
+    "bytes": 8660,
+    "contentType": "image/png",
+    "sha256": "fb45023441f0794d1ece6ef59542d360c8bf4f4c3bde2c84c4d546ae8019ed72"
+  },
+  {
+    "id": "jira",
+    "sourceUrl": "https://atlassian.design/assets/d4e428e45e71/logos/jira_app.zip",
+    "officialPage": "https://atlassian.design/foundations/logos",
+    "archiveMember": "jira/SVG/Jira_icon.svg",
+    "localPath": "/private/tmp/ais-v22-saas-assets/jira.svg",
+    "sitePath": "/logos/jira.svg",
+    "bytes": 1045,
+    "contentType": "image/svg+xml",
+    "sha256": "ad20a13973de9ff9b4ad7354881c84ba2207b9117b6aad9bfce68b611c6fb9a8"
+  },
+  {
+    "id": "microsoft-teams",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/16/ca/28/16ca28fe-5065-6a4a-cc6c-672203d398d9/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
+    "officialPage": "https://apps.apple.com/us/app/microsoft-teams/id1113153706",
+    "localPath": "/private/tmp/ais-v22-saas-assets/microsoft-teams.jpg",
+    "sitePath": "/logos/microsoft-teams.jpg",
+    "bytes": 18307,
+    "contentType": "image/jpeg",
+    "sha256": "71e66a7cdd4d62083051e323667b55f587c72bceffe1dad10d7986e8950fce83"
+  },
+  {
+    "id": "miro",
+    "sourceUrl": "https://framerusercontent.com/images/6FBG66PBxjV2QFaDfIdUi5mi9A.png",
+    "officialPage": "https://miro.com/",
+    "localPath": "/private/tmp/ais-v22-saas-assets/miro.png",
+    "sitePath": "/logos/miro.png",
+    "bytes": 1273,
+    "contentType": "image/png",
+    "sha256": "6d1a97e6922fee40efab035b669d1feb74d54074721b968321183a715213b605"
+  },
+  {
+    "id": "monday",
+    "sourceUrl": "https://cdn.prod.website-files.com/656da6fea306219773d04208/65af6bd6e742d497b5f23f69_645898132bbaac20f1963919_256x256.png",
+    "officialPage": "https://monday.com/",
+    "localPath": "/private/tmp/ais-v22-saas-assets/monday.png",
+    "sitePath": "/logos/monday.png",
+    "bytes": 4373,
+    "contentType": "image/png",
+    "sha256": "03c5839ffc8eaec1759f3ce99e329d1cb52e8de5e9cff1e0f0e779fe604c6c08"
+  },
+  {
+    "id": "trello",
+    "sourceUrl": "https://atlassian.design/assets/d4e428e45e71/logos/trello_app.zip",
+    "officialPage": "https://atlassian.design/foundations/logos",
+    "archiveMember": "trello/svg/Trello_icon.svg",
+    "localPath": "/private/tmp/ais-v22-saas-assets/trello.svg",
+    "sitePath": "/logos/trello.svg",
+    "bytes": 717,
+    "contentType": "image/svg+xml",
+    "sha256": "8e0693f3d8c757c43cf702bb34e7d57012792355f1a8799207d006cf7d84f211"
+  }
+]

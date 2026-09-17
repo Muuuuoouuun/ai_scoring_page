@@ -1,0 +1,402 @@
+{
+  "checkedAt": "2026-09-12T11:59:36.584Z",
+  "sourceHash": "4aaa20828ebf9bfb7aed0688653cbe59276913173bcfe143a93942cbb7a09be5",
+  "sourceUnchangedDuringRun": true,
+  "featureQueries": 73,
+  "returnedFeatureChecks": 345,
+  "coveredProducts": [
+    "canva",
+    "chatgpt",
+    "claude",
+    "claude-fable-5-1",
+    "cursor",
+    "figma",
+    "gemini",
+    "gemini-3-8-flash",
+    "github-copilot",
+    "gpt-6-astra",
+    "linear",
+    "make",
+    "midjourney",
+    "notebooklm",
+    "notion",
+    "perplexity",
+    "slack",
+    "supabase",
+    "vercel",
+    "zapier"
+  ],
+  "originalFeatureAndUseCasePreserved": true,
+  "catalogUnchanged": true,
+  "edges": [
+    {
+      "q": "비상업용 웹 배포",
+      "meaning": {
+        "positive": "비상업용 웹 배포",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "results": [
+        {
+          "id": "vercel",
+          "requirements": [],
+          "features": [
+            "저장소 기반 배포",
+            "트래픽·성능 확인",
+            "CDN·컴퓨팅"
+          ]
+        }
+      ]
+    },
+    {
+      "q": "상업용은 필요 없고 웹 앱 배포",
+      "meaning": {
+        "positive": "웹 앱 배포",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "results": [
+        {
+          "id": "vercel",
+          "requirements": [],
+          "features": [
+            "저장소 기반 배포",
+            "트래픽·성능 확인",
+            "CDN·컴퓨팅"
+          ]
+        }
+      ]
+    },
+    {
+      "q": "오프라인은 필요 없고 문서 요약",
+      "meaning": {
+        "positive": "문서 요약",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "results": [
+        {
+          "id": "gemini",
+          "requirements": [],
+          "features": [
+            "대화·문서 분석"
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "requirements": [],
+          "features": [
+            "문서·시각 자료 분석"
+          ]
+        },
+        {
+          "id": "claude",
+          "requirements": [],
+          "features": [
+            "글 작성·수정"
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "requirements": [],
+          "features": [
+            "다양한 자료 가져오기"
+          ]
+        },
+        {
+          "id": "perplexity",
+          "requirements": [],
+          "features": [
+            "파일 분석",
+            "Research"
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "requirements": [],
+          "features": []
+        },
+        {
+          "id": "gpt-6-astra",
+          "requirements": [],
+          "features": []
+        },
+        {
+          "id": "notion",
+          "requirements": [],
+          "features": []
+        }
+      ]
+    },
+    {
+      "q": "무제한이 아닌 문서 요약",
+      "meaning": {
+        "positive": "문서 요약",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "results": [
+        {
+          "id": "gemini",
+          "requirements": [],
+          "features": [
+            "대화·문서 분석"
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "requirements": [],
+          "features": [
+            "문서·시각 자료 분석"
+          ]
+        },
+        {
+          "id": "claude",
+          "requirements": [],
+          "features": [
+            "글 작성·수정"
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "requirements": [],
+          "features": [
+            "다양한 자료 가져오기"
+          ]
+        },
+        {
+          "id": "perplexity",
+          "requirements": [],
+          "features": [
+            "파일 분석",
+            "Research"
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "requirements": [],
+          "features": []
+        },
+        {
+          "id": "gpt-6-astra",
+          "requirements": [],
+          "features": []
+        },
+        {
+          "id": "notion",
+          "requirements": [],
+          "features": []
+        }
+      ]
+    },
+    {
+      "q": "인터넷 연결 없이 기기 안에서만 문서를 요약",
+      "meaning": {
+        "positive": "문서를 요약",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [
+          "오프라인 사용",
+          "기기 내부에서만 처리"
+        ],
+        "free": false
+      },
+      "results": [
+        {
+          "id": "gemini",
+          "requirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": [
+            "대화·문서 분석"
+          ]
+        },
+        {
+          "id": "claude-fable-5-1",
+          "requirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": [
+            "문서·시각 자료 분석"
+          ]
+        },
+        {
+          "id": "claude",
+          "requirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": [
+            "글 작성·수정"
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "requirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": [
+            "다양한 자료 가져오기"
+          ]
+        },
+        {
+          "id": "perplexity",
+          "requirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": [
+            "파일 분석",
+            "Research"
+          ]
+        },
+        {
+          "id": "chatgpt",
+          "requirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": []
+        },
+        {
+          "id": "gpt-6-astra",
+          "requirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": []
+        },
+        {
+          "id": "notion",
+          "requirements": [
+            "오프라인 사용",
+            "기기 내부에서만 처리"
+          ],
+          "features": []
+        }
+      ]
+    },
+    {
+      "q": "무료 플랜에서 한 번의 입력으로 네 단계 자동화",
+      "meaning": {
+        "positive": "무료 플랜에서 한 번의 입력으로   자동화",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [
+          "네 단계 처리"
+        ],
+        "free": true
+      },
+      "results": [
+        {
+          "id": "zapier",
+          "requirements": [
+            "네 단계 처리의 무료 플랜 이용 범위"
+          ],
+          "features": [
+            "트리거·액션 자동화",
+            "Tables·Forms",
+            "다단계 워크플로"
+          ]
+        },
+        {
+          "id": "make",
+          "requirements": [
+            "네 단계 처리의 무료 플랜 이용 범위"
+          ],
+          "features": [
+            "Make AI Agents",
+            "시각적 워크플로"
+          ]
+        }
+      ]
+    },
+    {
+      "q": "무료로 그룹 허들 회의를 하고 싶어요",
+      "meaning": {
+        "positive": "무료로 그룹 허들 회의를 하고 싶어요",
+        "exclusions": [],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": true
+      },
+      "results": [
+        {
+          "id": "slack",
+          "requirements": [],
+          "features": [
+            "허들",
+            "AI 요약"
+          ]
+        }
+      ]
+    },
+    {
+      "q": "코딩 도구는 제외하고 개인 업무 정리",
+      "meaning": {
+        "positive": "개인 업무 정리",
+        "exclusions": [
+          {
+            "type": "purpose",
+            "value": "coding",
+            "label": "코딩 중심 도구"
+          }
+        ],
+        "unresolvedExclusions": [],
+        "requirements": [],
+        "free": false
+      },
+      "results": [
+        {
+          "id": "notion",
+          "requirements": [],
+          "features": []
+        },
+        {
+          "id": "chatgpt",
+          "requirements": [],
+          "features": [
+            "Deep Research"
+          ]
+        },
+        {
+          "id": "notebooklm",
+          "requirements": [],
+          "features": [
+            "학습 자료 변환"
+          ]
+        },
+        {
+          "id": "linear",
+          "requirements": [],
+          "features": [
+            "이슈와 사이클"
+          ]
+        },
+        {
+          "id": "slack",
+          "requirements": [],
+          "features": [
+            "채널과 메시지"
+          ]
+        },
+        {
+          "id": "perplexity",
+          "requirements": [],
+          "features": []
+        }
+      ]
+    }
+  ]
+}

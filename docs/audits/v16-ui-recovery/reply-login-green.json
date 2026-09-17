@@ -1,0 +1,7 @@
+{
+  "author": "로컬 답글 복귀 검증",
+  "body": "[V16 로컬 GREEN] 로그인 후에도 같은 원문에 복원되는 답글 초안입니다. 실제 사용자 답글이 아닙니다.",
+  "consent": false,
+  "form": "답글 작성",
+  "url": "http://localhost:5173/community/54a0e210-b90d-47c5-8d94-5252fe90e1ef?write=reply"
+}

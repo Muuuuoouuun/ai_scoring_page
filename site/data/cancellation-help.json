@@ -1,0 +1,161 @@
+[
+  {
+    "id": "apple-app-store",
+    "toolId": null,
+    "name": "Apple App Store 구독 해지",
+    "route": "app_store",
+    "scope": "Apple에서 청구한 구독; 결제한 Apple 계정으로 진행",
+    "url": "https://support.apple.com/ko-kr/118428",
+    "steps": [
+      "iPhone 설정 → 사용자 이름",
+      "구독 → 취소할 구독",
+      "구독 취소 → 취소 상태와 만료일 확인"
+    ],
+    "summary": "iPhone 설정에서 이름 → 구독 → 해당 구독 → 구독 취소를 선택하고, 남은 이용기간은 화면에 표시된 만료일로 확인하세요. 무료·할인 체험의 갱신을 막으려면 종료 최소 24시간 전에 취소해야 하며, 환불은 별도 요청과 자격 확인이 필요합니다.",
+    "refundUrl": "https://support.apple.com/billing",
+    "sourceUrls": [
+      "https://support.apple.com/ko-kr/118428",
+      "https://support.apple.com/billing"
+    ],
+    "checkedAt": "2026-09-12"
+  },
+  {
+    "id": "google-play",
+    "toolId": null,
+    "name": "Google Play 정기 결제 해지",
+    "route": "google_play",
+    "scope": "Google Play에서 구매한 정기 결제; 구매한 Google 계정으로 진행",
+    "url": "https://support.google.com/googleplay/answer/7018481?hl=ko",
+    "steps": [
+      "Google Play 정기 결제",
+      "취소할 구독 선택",
+      "정기 결제 취소 → 화면 안내에 따라 완료"
+    ],
+    "summary": "Google Play의 정기 결제에서 해당 구독을 취소하면 다음 갱신이 중단되고, 이미 결제한 기간에는 계속 이용할 수 있습니다. 앱 삭제만으로는 취소되지 않으며, 과거 결제의 환불은 별도 정책에 따라 판단됩니다.",
+    "refundUrl": "https://support.google.com/googleplay/answer/15574908?hl=en",
+    "sourceUrls": [
+      "https://support.google.com/googleplay/answer/7018481?hl=ko",
+      "https://support.google.com/googleplay/answer/15574908?hl=en"
+    ],
+    "checkedAt": "2026-09-12"
+  },
+  {
+    "id": "chatgpt-web",
+    "toolId": "chatgpt",
+    "name": "ChatGPT 웹 결제 해지",
+    "route": "web",
+    "scope": "chatgpt.com에서 구매한 개인 구독; Business는 워크스페이스 결제 설정, Enterprise·Edu는 별도 계약 확인",
+    "url": "https://help.openai.com/en/articles/7232927",
+    "steps": [
+      "ChatGPT 계정 메뉴 → Settings",
+      "Billing",
+      "Cancel plan에서 Cancel"
+    ],
+    "summary": "웹에서 결제한 개인 구독은 Settings → Billing에서 취소하며, 다음 결제 최소 24시간 전에 진행하세요. 일반적인 해지 후 유료 기능은 현재 결제기간 종료까지 유지되지만 이전 결제가 자동 환불되지는 않으며, 환불이 승인되면 이용이 더 일찍 종료될 수 있습니다.",
+    "refundUrl": "https://help.openai.com/en/articles/7232927",
+    "sourceUrls": [
+      "https://help.openai.com/en/articles/7232927"
+    ],
+    "checkedAt": "2026-09-12"
+  },
+  {
+    "id": "claude-web",
+    "toolId": "claude",
+    "name": "Claude 웹 결제 해지",
+    "route": "web",
+    "scope": "웹에서 결제한 Claude Pro·Max 개인 구독",
+    "url": "https://support.claude.com/en/articles/8325617-cancel-your-pro-or-max-subscription",
+    "steps": [
+      "Claude 이름 또는 이니셜 → Settings",
+      "Billing",
+      "Cancel"
+    ],
+    "summary": "웹에서 구매한 Pro·Max는 Settings → Billing에서 다음 결제 최소 24시간 전에 취소하세요. 해지는 현재 결제기간 종료에 적용되어 그때까지 이용할 수 있으며, 환불은 약관·법률상 자격에 따른 별도 요청으로 보장되지 않습니다.",
+    "refundUrl": "https://support.claude.com/en/articles/12386328-request-a-refund-for-a-paid-claude-plan",
+    "sourceUrls": [
+      "https://support.claude.com/en/articles/8325617-cancel-your-pro-or-max-subscription",
+      "https://support.claude.com/en/articles/12386328-request-a-refund-for-a-paid-claude-plan"
+    ],
+    "checkedAt": "2026-09-12"
+  },
+  {
+    "id": "gemini-web",
+    "toolId": "gemini",
+    "name": "Gemini / Google AI 웹 결제 해지",
+    "route": "web",
+    "scope": "Google One에서 직접 결제한 개인 Google AI 구독; 앱스토어·통신사 결제는 해당 결제처 확인",
+    "url": "https://support.google.com/googleone/answer/16476811?hl=en",
+    "steps": [
+      "Gemini → Settings & help",
+      "Manage subscription → Google One 설정",
+      "Cancel membership → Cancel"
+    ],
+    "summary": "Gemini의 Settings & help → Manage subscription에서 Google One 설정을 열어 멤버십을 취소하면 다음 결제가 중단되고 현재 결제기간까지 혜택을 이용할 수 있습니다. 기간 종료 후 AI·추가 스토리지 혜택이 끝나며, 해지만으로 환불이 보장되지는 않습니다.",
+    "refundUrl": "https://support.google.com/googleone/answer/9056360?hl=ko",
+    "sourceUrls": [
+      "https://support.google.com/googleone/answer/16476811?hl=en",
+      "https://support.google.com/googleone/answer/9056360?hl=ko"
+    ],
+    "checkedAt": "2026-09-12"
+  },
+  {
+    "id": "notion-web",
+    "toolId": "notion",
+    "name": "Notion 웹 결제 해지",
+    "route": "web",
+    "scope": "해당 유료 워크스페이스의 웹 구독; 워크스페이스마다 요금제가 별도",
+    "url": "https://www.notion.com/help/upgrade-or-downgrade-your-plan",
+    "steps": [
+      "데스크톱 사이드바 Settings → Billing",
+      "Change plan → Free → Continue",
+      "Downgrade → 적용일 확인"
+    ],
+    "summary": "해당 워크스페이스의 Settings → Billing → Change plan에서 Free로 낮추면 현재 결제기간 종료 후 무료 요금제로 전환되고 그때까지 유료 기능을 이용할 수 있습니다. 환불은 자동으로 처리되지 않으므로, 신청 시점 등 공식 조건을 확인해 별도로 문의하세요.",
+    "refundUrl": "https://www.notion.com/help/refunds",
+    "sourceUrls": [
+      "https://www.notion.com/help/upgrade-or-downgrade-your-plan",
+      "https://www.notion.com/help/refunds"
+    ],
+    "checkedAt": "2026-09-12"
+  },
+  {
+    "id": "canva-web",
+    "toolId": "canva",
+    "name": "Canva 웹 결제 해지",
+    "route": "web",
+    "scope": "Canva에서 직접 결제한 계정·팀의 구독; App Store·Google Play 구매는 각 스토어에서 해지",
+    "url": "https://www.canva.com/help/cancel-canva-plan/",
+    "steps": [
+      "해당 Canva 계정·팀 → 프로필 → Settings",
+      "Billing → Cancel plan",
+      "Continue cancellation → 사유 선택 → Continue cancellation",
+      "Cancel subscription → 확인 이메일 확인"
+    ],
+    "summary": "해당 계정·팀의 Settings → Billing → Cancel plan에서 마지막 Cancel subscription까지 완료하고 확인 이메일을 확인하세요. 다음 결제는 중단되고 현재 결제기간까지 유료 기능을 이용할 수 있지만, 환불은 별도 검토 대상이며 대부분의 구독은 환불되지 않습니다.",
+    "refundUrl": "https://www.canva.com/help/subscription-refunds/",
+    "sourceUrls": [
+      "https://www.canva.com/help/cancel-canva-plan/",
+      "https://www.canva.com/help/subscription-refunds/"
+    ],
+    "checkedAt": "2026-09-12"
+  },
+  {
+    "id": "figma-web",
+    "toolId": "figma",
+    "name": "Figma 웹 결제 해지",
+    "route": "web",
+    "scope": "Professional 팀 구독; Organization·Enterprise는 Figma 지원팀에 문의",
+    "url": "https://help.figma.com/hc/en-us/articles/360046216313-Upgrade-or-downgrade-your-plan",
+    "steps": [
+      "파일 브라우저에서 Professional 팀 선택",
+      "Admin → Settings → Plan",
+      "Cancel plan → 사유 선택 → Cancel plan"
+    ],
+    "summary": "Professional 팀의 Admin → Settings → Plan에서 해지하면 현재 결제기간까지 유료 기능을 이용한 뒤 Starter로 전환됩니다. 해지 후에도 기간 내 추가한 좌석은 마지막 청구서에 반영될 수 있고 환불은 보장되지 않으며, Organization·Enterprise는 지원팀에 문의해야 합니다.",
+    "refundUrl": "https://help.figma.com/hc/en-us/articles/360046216313-Upgrade-or-downgrade-your-plan",
+    "sourceUrls": [
+      "https://help.figma.com/hc/en-us/articles/360046216313-Upgrade-or-downgrade-your-plan"
+    ],
+    "checkedAt": "2026-09-12"
+  }
+]

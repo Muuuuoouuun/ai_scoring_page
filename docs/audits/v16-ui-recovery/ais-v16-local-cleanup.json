@@ -1,0 +1,18 @@
+{
+  "deletedOnlyLocalV16PostIds": [
+    "54a0e210-b90d-47c5-8d94-5252fe90e1ef",
+    "e8034f2c-8c52-41e0-ac0c-5e14262f9986",
+    "b47f5034-4911-4917-9807-b71d4f673f66"
+  ],
+  "checks": {
+    "posts": {
+      "restoredRows": 2,
+      "exactlyMatchesBefore": true
+    },
+    "private_records": {
+      "restoredRows": 7,
+      "exactlyMatchesBefore": true
+    }
+  },
+  "fixtureSeedsAlreadyRemoved": true
+}

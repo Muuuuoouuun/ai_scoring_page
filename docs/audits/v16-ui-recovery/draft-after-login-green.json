@@ -1,0 +1,42 @@
+{
+  "filter": "claude",
+  "forms": 1,
+  "url": "http://localhost:5173/community?write=question&tool=claude",
+  "values": [
+    {
+      "type": "select-one",
+      "value": "question"
+    },
+    {
+      "type": "select-one",
+      "value": "claude"
+    },
+    {
+      "type": "text",
+      "value": "로컬 UI 검증"
+    },
+    {
+      "type": "select-one",
+      "value": "none"
+    },
+    {
+      "type": "text",
+      "value": "[로컬 검증] 로그인 복귀 초안"
+    },
+    {
+      "type": "textarea",
+      "value": "로컬 환경의 작성 복귀 검증용 초안입니다. 실제 사용 후기나 공개 게시물이 아닙니다."
+    },
+    {
+      "checked": false,
+      "type": "checkbox",
+      "value": "on"
+    }
+  ],
+  "viewport": {
+    "doc": 1265,
+    "height": 720,
+    "scale": 1,
+    "width": 1280
+  }
+}

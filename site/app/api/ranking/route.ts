@@ -1,0 +1,3 @@
+import {rows} from '@/lib/db';
+import {json,failure} from '@/lib/http';
+export async function GET(request:Request){try{const p=new URL(request.url).searchParams,days=p.get('days')==='30'?30:7,task=p.get('task')||'';const result=await rows<{tool_id:string;participants:number}>("SELECT tool_id,COUNT(DISTINCT user_id) participants FROM posts WHERE kind='review' AND status='published' AND created_at>=? AND (?='' OR task=?) GROUP BY tool_id ORDER BY participants DESC,tool_id LIMIT 30",new Date(Date.now()-days*86400000).toISOString(),task,task);return json({ranking:result,days});}catch(e){return failure(e);}}

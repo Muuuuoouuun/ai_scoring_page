@@ -1,0 +1,46 @@
+{
+  "scroll": {
+    "height": 4400,
+    "width": 375,
+    "x": 0,
+    "y": 2361
+  },
+  "url": "http://localhost:5173/my?tab=subscription",
+  "viewport": {
+    "doc": 375,
+    "height": 844,
+    "scale": 1,
+    "width": 390
+  },
+  "visibleText": [
+    "2026-11-01",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "₩20,000날짜별 조건 적용",
+    "예정 · 미연결",
+    "2026-12-01",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "₩20,000날짜별 조건 적용",
+    "날짜별 조건 적용",
+    "예정 · 미연결",
+    "월별 합계와 내 부담액",
+    "월",
+    "실제 순지출",
+    "남은 예상 청구",
+    "2026-09",
+    "₩19,000",
+    "확인된 금액 없음",
+    "2026-10",
+    "확인된 금액 없음",
+    "₩20,000",
+    "2026-11",
+    "확인된 금액 없음",
+    "₩20,000",
+    "2026-12",
+    "확인된 금액 없음",
+    "₩20,000",
+    "실제 개인 순지출",
+    "기록한 내 부담 − 내 환불액",
+    "남은 예상 개인 부담",
+    "날짜별 예상 부담 · 결제 미연결"
+  ]
+}

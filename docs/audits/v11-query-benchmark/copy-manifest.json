@@ -1,0 +1,177 @@
+[
+  {
+    "file": "ais-v11-search-final-repro.json",
+    "bytes": 48678,
+    "sha256": "4af0da6ea42880ce3cd14637dc0690c0bdbf2487bef85d0e40df02a4cdb9c568"
+  },
+  {
+    "file": "ais-v11-search-final-recheck.mjs",
+    "bytes": 4280,
+    "sha256": "617fce98be08115baf6d5b643ee67bc29297718e5760f2e4fae18aaff74df577"
+  },
+  {
+    "file": "ais-v11-relevance-initial-source-snapshot.json",
+    "bytes": 89144,
+    "sha256": "aec63b85482013de76b260b0cf4b4ccf0921f76dee604b1c6b5c2dedef930126"
+  },
+  {
+    "file": "ais-v11-relevance-holdout-freeze.json",
+    "bytes": 445,
+    "sha256": "4a2ae0a140d9b9801e311f889799fe0a726087686dea79391f488c7968661679"
+  },
+  {
+    "file": "ais-v11-search-final-evidence-checks.json",
+    "bytes": 8408,
+    "sha256": "c59ac80f18b3fa9447ee92a6939571676b6f7e0e0ac55a389ba4d33bfc7bbec4"
+  },
+  {
+    "file": "ais-v11-search-code-review.md",
+    "bytes": 9853,
+    "sha256": "a122bd8548ceffb4dddf2ee8b1078d83df9b28098971b7982183332a2af4a7bf"
+  },
+  {
+    "file": "ais-v11-terms-preview-repro.json",
+    "bytes": 1274,
+    "sha256": "bd7f9aa3f0c363564bdb6978d0bdae7dd1529e00a850538fd63ff615f2166630"
+  },
+  {
+    "file": "ais-v11-relevance-final-regression-2.md",
+    "bytes": 11653,
+    "sha256": "6aa658a00826b7a4edb93cb6c878b7c0874c0c148097227917ee54301d805fc7"
+  },
+  {
+    "file": "ais-v11-search-final-repro.mjs",
+    "bytes": 4278,
+    "sha256": "c07e36207386117010d199255116ff6aa6da5ba8e214c1a6f3f278f3cd4ec4cf"
+  },
+  {
+    "file": "ais-v11-relevance-final-regression-2-evaluate.cjs",
+    "bytes": 6107,
+    "sha256": "bc57c612a265b42285715654a4eb8fdd1d55a7e9f665ae6f1c7a0c65d775947f"
+  },
+  {
+    "file": "ais-v11-search-code-repro.mjs",
+    "bytes": 4277,
+    "sha256": "8ea7c6ba68f9c31fccdcfc79470236fc81a3d844cc3fe3600d3bf792b4a6cef4"
+  },
+  {
+    "file": "ais-v11-search-design-review.md",
+    "bytes": 19115,
+    "sha256": "9932bd4928ee4049d74ac825d4b8f6293d6975fe82cbaf7d4e5a835fd070914d"
+  },
+  {
+    "file": "ais-v11-relevance-final-regression-2-source-snapshot.json",
+    "bytes": 93213,
+    "sha256": "e3e31319ec12c2538debb96393f777c88fd98504ea3af5b223d8cae72efb8ce6"
+  },
+  {
+    "file": "ais-v11-relevance-final-regression-2-runner.cjs",
+    "bytes": 5751,
+    "sha256": "bd4b20486e15b66c1a2ad96a7d17fe4c335d668ccbec3e634504f2bfb433ccf3"
+  },
+  {
+    "file": "ais-v11-relevance-final-regression.json",
+    "bytes": 227295,
+    "sha256": "62d8e20e04e8d520b0d230174f8d3a8d9c5b0f4525524e4956cec2716d95f0c8"
+  },
+  {
+    "file": "ais-v11-relevance-initial-observations.md",
+    "bytes": 18334,
+    "sha256": "fdc1447eefdc8aa859102b864c1359d29212685a3cda6d03967a81191935a382"
+  },
+  {
+    "file": "ais-v11-relevance-final-regression-runner.cjs",
+    "bytes": 5667,
+    "sha256": "27ced4a432365b57b9054da4fcacd5afe63fae5fcca24a0396a0ca1abc13d4cf"
+  },
+  {
+    "file": "ais-v11-relevance-initial-evaluate.cjs",
+    "bytes": 6160,
+    "sha256": "6366398016286731ab75bd908310bebe0164eee4f6118c6bb48394133a7f95b5"
+  },
+  {
+    "file": "ais-v11-terms-preview-repro.test.mjs",
+    "bytes": 4899,
+    "sha256": "741bdd6a7edadbe3da5d9b2c54b1c52e15c5c913fc76edd35ce941bfc6faa9a2"
+  },
+  {
+    "file": "ais-v11-search-precision-rules.md",
+    "bytes": 11870,
+    "sha256": "7474b31255c7d28427a272cf3315aacdbe5ca56ac4e0050c0c3164c8c3ecb1b0"
+  },
+  {
+    "file": "ais-v11-relevance-final-regression-evaluate.cjs",
+    "bytes": 6072,
+    "sha256": "9ae8e055d74761d5e88721705e5d813ba1b751a642a5fd31bb11f84ec3045ca8"
+  },
+  {
+    "file": "ais-v11-relevance-final-regression-2.json",
+    "bytes": 225830,
+    "sha256": "db8e5bc7a385a15b30a8df5de4efa65ec4fcb7cd4cf0cb870668467b3e888ceb"
+  },
+  {
+    "file": "ais-v11-relevance-final-regression-source-snapshot.json",
+    "bytes": 92636,
+    "sha256": "257c291cd40048bce9e6619c7c63721182662ab3292e9c08a1929cdf4965aa98"
+  },
+  {
+    "file": "ais-v11-relevance-initial-observations.json",
+    "bytes": 245879,
+    "sha256": "ecd4579147f4553d84bb33eecc877834ac229b15758d91c4b08df6036dcd48c7"
+  },
+  {
+    "file": "ais-v11-relevance-holdout-cases.json",
+    "bytes": 15429,
+    "sha256": "d0103236ed0b9f064c5fefa919034f777926ddbb952b40e2e79d973b05e9ce64"
+  },
+  {
+    "file": "ais-v11-terms-preview-repro.md",
+    "bytes": 5033,
+    "sha256": "768df48ce7abb044e3d8083075006ce670eee1227e8888d0c1f681f7f93a400b"
+  },
+  {
+    "file": "ais-v11-search-code-repro.json",
+    "bytes": 58838,
+    "sha256": "667ae7003f82a0b0f67ba5f31fd419f6b1787ef2772f8d02e636b93b3e6e9580"
+  },
+  {
+    "file": "ais-v11-visual-review.md",
+    "bytes": 5960,
+    "sha256": "226c0916eeac7896c8a1666a7b0cbef4eb3e22c7107dbf7615d9b4664b06ca66"
+  },
+  {
+    "file": "ais-v11-relevance-final-regression.md",
+    "bytes": 11932,
+    "sha256": "fbd329f208a9f300542b53761057f08813e6c65e3e4b8f73f2d32acb508fdb72"
+  },
+  {
+    "file": "ais-v11-search-final-recheck.json",
+    "bytes": 48678,
+    "sha256": "ec3b214e1f2d9f76bf65d9ff82e2ba1e39e98a575441055051930fa58102c589"
+  },
+  {
+    "file": "ais-v11-search-final-source-checks.json",
+    "bytes": 9207,
+    "sha256": "d15c4d25c97c5f7dfdfecdfc1b2f9606e1d833cee972e6105fba0c8244444d95"
+  },
+  {
+    "file": "ais-v11-search-final-code-review.md",
+    "bytes": 8258,
+    "sha256": "88258857ff913155154e2597c4565e4a39eae0eedd0f35c9360c1846d7197532"
+  },
+  {
+    "file": "ais-v11-relevance-initial-runner.cjs",
+    "bytes": 4638,
+    "sha256": "5ae20717787af10458422dc6cd462b7ceab1f53a513953b461a59d59d0adc046"
+  },
+  {
+    "file": "ais-v10-purpose-query-cases.json",
+    "bytes": 7310,
+    "sha256": "322fb90697148e6b77a53e8de2ca720f4cfd3041433bfb882113aacca294bd9c"
+  },
+  {
+    "file": "ais-v10-purpose-query-runner.cjs",
+    "bytes": 6206,
+    "sha256": "aa495ed488b182e5ce9bec8fd5483a114e52c8c4f5a2681f0f410e4c5b8a0410"
+  }
+]

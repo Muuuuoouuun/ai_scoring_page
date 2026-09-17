@@ -1,0 +1,265 @@
+{
+  "source": "2d54809d51bc2cacd096bd403e187afadcda078a",
+  "date": "2026-09-13",
+  "scope": "V16 local/production observations are distinguished in the audit; filenames containing green may include explicitly superseded intermediate results.",
+  "files": [
+    {
+      "file": "ais-v16-archive-validation.json",
+      "bytes": 378,
+      "sha256": "85049b32ece36bcc7bf106337c45ab0af9bb687524d26967bd7224b25d43074a",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "ais-v16-build-gate-proposal.py",
+      "bytes": 7756,
+      "sha256": "932bacea2b8482f4dd394e2705887d40ce1d15e1973aac1f5b2f189b8fe879f9",
+      "actualMime": "text/plain"
+    },
+    {
+      "file": "ais-v16-draft-flow-review.md",
+      "bytes": 14114,
+      "sha256": "1d78ade1aba369d18de8d99979c3487d867419176872f26f9efb0de378eacd1d",
+      "actualMime": "text/plain"
+    },
+    {
+      "file": "ais-v16-draft-red.log",
+      "bytes": 1411,
+      "sha256": "bbc54b38a6931f530c3f170abbbbc990554057d9df496ee6e86ce0bd6493a6bf",
+      "actualMime": "text/plain"
+    },
+    {
+      "file": "ais-v16-draft-review-tests.mjs",
+      "bytes": 9989,
+      "sha256": "e50a8b93d462709b6055b2f3dcc2f7f27d20e37d785f2c8f3a24afc303311eb0",
+      "actualMime": "text/plain"
+    },
+    {
+      "file": "ais-v16-final-code-review.md",
+      "bytes": 8711,
+      "sha256": "c343c178d983af57a12ab64f6c323e156553f506bc89f24b50a7a4b2e7e20e9b",
+      "actualMime": "text/plain"
+    },
+    {
+      "file": "ais-v16-gate-assessment.json",
+      "bytes": 78043,
+      "sha256": "e4e2a542ee38de412b196cf0969aeec3cf2a0aaf5799684b0a48c987b2b92242",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "ais-v16-gate-assessment.md",
+      "bytes": 8852,
+      "sha256": "cecc27edce3b0a6f77f7c9f4dda33a3dcb968b7f851678967544c412ad56e0f1",
+      "actualMime": "text/plain"
+    },
+    {
+      "file": "ais-v16-home.log",
+      "bytes": 1027,
+      "sha256": "1dc4136292624b64df710d8652edece590439d5f429e15272ca193cf103db328",
+      "actualMime": "text/plain"
+    },
+    {
+      "file": "ais-v16-local-cleanup.json",
+      "bytes": 402,
+      "sha256": "89776fdb653241b413fc0c68d8ed376eae33e0fb004c62afadbc0c0167e90b47",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "ais-v16-network-red.log",
+      "bytes": 1862,
+      "sha256": "b3796a64d6691566a796f73f4074c92595a52d3c721be3889255cf3fdf901400",
+      "actualMime": "text/plain"
+    },
+    {
+      "file": "ais-v16-regression.log",
+      "bytes": 42445,
+      "sha256": "1f0a999380fb668e1f1c8175b5d54e1ee9d538d1886cf411053bbdcade9e0a66",
+      "actualMime": "text/plain"
+    },
+    {
+      "file": "ais-v16-reply-context-green.json",
+      "bytes": 891,
+      "sha256": "ff6f04a922c74db3e437f2976104a2738ae23a9963ca08903b2e55b05c2888d3",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "ais-v16-reply-context-red.json",
+      "bytes": 581,
+      "sha256": "4e89ebc394572cefc274270a4173fd4f2a7404cd5d1222804514113efc3c6e5f",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "ais-v16-scheduler-capability.md",
+      "bytes": 14115,
+      "sha256": "2b0751793d2def8f7cc3a9fdcb29ca7dd3f658ad508a8510b7c56b40f3110b84",
+      "actualMime": "text/plain"
+    },
+    {
+      "file": "ais-v16-thread-fixture.md",
+      "bytes": 6849,
+      "sha256": "2d6ccb3ee8870c2b535d075c44bb2447bdbf0913491dc9758abc99984427240c",
+      "actualMime": "text/plain"
+    },
+    {
+      "file": "ais-v16-thread-fixture.py",
+      "bytes": 10427,
+      "sha256": "5b83dc46cbdfe6459fd61320c7f1440c109d907e9c0948a1ea923e659ebb74c8",
+      "actualMime": "text/plain"
+    },
+    {
+      "file": "ais-v16-ui-gate-inventory.md",
+      "bytes": 20913,
+      "sha256": "15903e682fc969450c1009ff4f262bee22684f954a68fe3d666048d8855aad87",
+      "actualMime": "text/plain"
+    },
+    {
+      "file": "context-isolation-green.json",
+      "bytes": 242,
+      "sha256": "d467bbffb5a5da593596c8617fee83edc82be4d336ee336b50446776d26f3b3b",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "deployment-receipt.json",
+      "bytes": 1679,
+      "sha256": "a0f1c91fdb611561812fb0cb3a6d24f9bc3024ea93c4a8e8b1cdec637f53aa33",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "draft-after-login-green.json",
+      "bytes": 829,
+      "sha256": "cbea0ca13eefc0791b02c5d099e75388d6347a832bf19d3f61c98083c1d161e9",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "draft-after-login-green.png",
+      "bytes": 90469,
+      "sha256": "39b1395bd6232037acabd78f2ce22d19605c8dc7e46f583305074c2c4d3ab5ff",
+      "actualMime": "image/jpeg"
+    },
+    {
+      "file": "draft-after-login-red.png",
+      "bytes": 45148,
+      "sha256": "c1907366c3fcf6d55c0f00777f0935aea0338e3a3f4e77f7fd846c1c33b9231d",
+      "actualMime": "image/jpeg"
+    },
+    {
+      "file": "draft-before-login-red.png",
+      "bytes": 88724,
+      "sha256": "4fb65e65fbca5283fccffea4ca57c237fece1b1f0f89fc11fd2dfbad23380d4c",
+      "actualMime": "image/jpeg"
+    },
+    {
+      "file": "network-failure-green.json",
+      "bytes": 490,
+      "sha256": "cbc665b5716f7ac1e381f1d0d461bdea0ea6f2b4504eb8cffc34ee8c2e7621bb",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "network-failure-green.png",
+      "bytes": 96846,
+      "sha256": "777e43eed12d0a9e357681583d2d4172dd77b7a73331c60adc325f1a6c443f13",
+      "actualMime": "image/jpeg"
+    },
+    {
+      "file": "network-failure-red.png",
+      "bytes": 92886,
+      "sha256": "a46cce68844b1649e7eebc9371fb670ce8b58889224599ca6d0effadc96716ec",
+      "actualMime": "image/jpeg"
+    },
+    {
+      "file": "network-retry-green.png",
+      "bytes": 47538,
+      "sha256": "061d9c9ab319bad526e38a69a69fd6a1fb8e9867bf81bb061c21282d3add532a",
+      "actualMime": "image/jpeg"
+    },
+    {
+      "file": "parent-deleted.json",
+      "bytes": 1026,
+      "sha256": "b3d4845505f679f0b8115b58361a0c899bebb38ee23c48264feb81e83ba31c85",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "parent-deleted.png",
+      "bytes": 52453,
+      "sha256": "77d6732d4086ce3960ed9e1a178a7c49d832fa10d0e3b1d5b58ce6ce4c6ebe9e",
+      "actualMime": "image/jpeg"
+    },
+    {
+      "file": "parent-hidden.png",
+      "bytes": 52453,
+      "sha256": "77d6732d4086ce3960ed9e1a178a7c49d832fa10d0e3b1d5b58ce6ce4c6ebe9e",
+      "actualMime": "image/jpeg"
+    },
+    {
+      "file": "parent-published.png",
+      "bytes": 79934,
+      "sha256": "5425702c356ce5697a82076d94d28db8f3da59d5a47d03c3b077dbe561e76990",
+      "actualMime": "image/jpeg"
+    },
+    {
+      "file": "production-form-smoke.json",
+      "bytes": 277,
+      "sha256": "6ec9afed42cae42134ed6a609cb0e3c81ff06607f2ff730bc072b68319e769c5",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "production-home-smoke.json",
+      "bytes": 271,
+      "sha256": "50d72109b22c560c3b03e98b37b81f958e389c0b2bd988f08e5af8c3acac43d0",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "production-worker-errors.json",
+      "bytes": 79,
+      "sha256": "e498ea1fe0604e60af3edc278d79bcd5cc36af0a136a8a4466a267df99973a5f",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "reply-login-green.json",
+      "bytes": 332,
+      "sha256": "79d2230110470180dacbe51948ce9ebba4ffd5d55bab2b6354927d574ab07453",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "reply-login-green.png",
+      "bytes": 94624,
+      "sha256": "e5c18e955acc66ae569b1ce4712eaa45372f538bfa8e5b0fbee46fbbb0ccda1a",
+      "actualMime": "image/jpeg"
+    },
+    {
+      "file": "review-after-login-final.json",
+      "bytes": 1215,
+      "sha256": "6aaeaf3398292b4eddc96277a2529a88b3fcac5d224a2a4c970ce93052d6c480",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "review-after-login-final.png",
+      "bytes": 117920,
+      "sha256": "13d1e61edb73345c776dba0d095a42d11dff27d66e1eb0c717e449dd2490c2c9",
+      "actualMime": "image/jpeg"
+    },
+    {
+      "file": "review-before-login-final.json",
+      "bytes": 1343,
+      "sha256": "7baa9d1e733c9008b74eecbdfd3f2001a86d5a6197dfeaea3b91cb87a8b52e91",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "review-login-green.json",
+      "bytes": 1229,
+      "sha256": "a5ca3a7202b3d658824517b69c2f7ccca98d18810e352b8c5df26180aa2e9831",
+      "actualMime": "application/json"
+    },
+    {
+      "file": "review-login-green.png",
+      "bytes": 117925,
+      "sha256": "a0e50c0b767cebfe2f875113a46998ee345bdb1a33f83a6c9d3de807acf74675",
+      "actualMime": "image/jpeg"
+    },
+    {
+      "file": "review-mobile.png",
+      "bytes": 97593,
+      "sha256": "1cad3565020afb649fd5e1062b83d3329c41740a6d4f0160e740ece088b85e71",
+      "actualMime": "image/jpeg"
+    }
+  ]
+}

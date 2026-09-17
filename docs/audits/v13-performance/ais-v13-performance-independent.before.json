@@ -1,0 +1,781 @@
+{
+  "mode": "before",
+  "calculatedAt": "2026-09-12T13:18:25.555551+00:00",
+  "sourceDirectory": "/Users/bigmac_moon/dev/ai_score/docs/audits/v13-performance",
+  "budgets": {
+    "TTFB": 800.0,
+    "FCP": 1800.0,
+    "LCP": 2500.0,
+    "CLS": 0.1
+  },
+  "expectedPerPhase": 6,
+  "protocolPath": "/Users/bigmac_moon/dev/ai_score/docs/superpowers/plans/2026-09-12-home-streaming.md",
+  "protocolSha256": "44830b1fce6841af7928bb868109f0c1b773fc2470c83b7be969841d1e2ad124",
+  "samples": [
+    {
+      "sample": "before-home-1",
+      "phase": "before",
+      "route": "/",
+      "index": 1,
+      "sourcePath": "/Users/bigmac_moon/dev/ai_score/docs/audits/v13-performance/before-home-1.json",
+      "sha256": "a3719a1d200c508ccfe09931109dd2448a058194d98989c3152f7beace077776",
+      "environment": {
+        "capturedAt": "2026-09-12T12:57:47.756Z",
+        "initialDocumentPath": "/",
+        "path": "/",
+        "viewport": "1280 × 720",
+        "documentWidth": 1265,
+        "scrollWidth": 1265,
+        "elapsedMs": 10002,
+        "observerStartedAt": 1127,
+        "framed": false,
+        "initialVisibility": "visible",
+        "visibility": "visible",
+        "visibilityChanges": 0
+      },
+      "navigation": {
+        "domCompleteMs": 1118.7000000178814,
+        "domInteractiveMs": 1108.9000000059605,
+        "encodedBytes": 14003,
+        "responseEndMs": 433.2000000178814,
+        "transferBytes": 14303,
+        "type": "reload"
+      },
+      "metrics": {
+        "TTFB": 431.09999999403954,
+        "FCP": 1152,
+        "LCP": 1152,
+        "CLS": 0
+      },
+      "metricMetadata": {
+        "TTFB": {
+          "id": "v4-1789217858948-3714778369948",
+          "navigationType": "reload",
+          "rating": "good"
+        },
+        "FCP": {
+          "id": "v4-1789217858948-9894360231088",
+          "navigationType": "reload",
+          "rating": "good"
+        },
+        "LCP": {
+          "id": "v4-1789217858948-3341885113850",
+          "navigationType": "reload",
+          "rating": "good"
+        },
+        "CLS": {
+          "id": "v4-1789217858948-6956485220059",
+          "navigationType": "reload",
+          "rating": "good"
+        }
+      },
+      "budgetExceeded": {
+        "TTFB": false,
+        "FCP": false,
+        "LCP": false,
+        "CLS": false
+      },
+      "rawLayout": {
+        "count": 0,
+        "sessionMax": 0,
+        "supported": true
+      },
+      "longTasks": {
+        "count": 0,
+        "maxMs": 0,
+        "over50Ms": 0,
+        "supported": true,
+        "totalMs": 0
+      },
+      "resources": {
+        "count": 49,
+        "encodedBytes": 501177,
+        "scriptEncodedBytes": 0,
+        "transferBytes": 7800,
+        "unknownSizes": 24
+      },
+      "images": {
+        "loaded": 9,
+        "total": 9
+      },
+      "supportedEntries": [
+        "element",
+        "event",
+        "first-input",
+        "interaction-contentful-paint",
+        "largest-contentful-paint",
+        "layout-shift",
+        "long-animation-frame",
+        "longtask",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource",
+        "soft-navigation",
+        "visibility-state"
+      ],
+      "issues": []
+    },
+    {
+      "sample": "before-explore-1",
+      "phase": "before",
+      "route": "/explore",
+      "index": 1,
+      "sourcePath": "/Users/bigmac_moon/dev/ai_score/docs/audits/v13-performance/before-explore-1.json",
+      "sha256": "80d61dac03d9040060e819566e60e513db9043c53d536b7dbff5c62781bf06f4",
+      "environment": {
+        "capturedAt": "2026-09-12T12:58:53.994Z",
+        "initialDocumentPath": "/explore",
+        "path": "/explore",
+        "viewport": "1280 × 720",
+        "documentWidth": 1265,
+        "scrollWidth": 1265,
+        "elapsedMs": 10003,
+        "observerStartedAt": 4794,
+        "framed": false,
+        "initialVisibility": "visible",
+        "visibility": "visible",
+        "visibilityChanges": 0
+      },
+      "navigation": {
+        "domCompleteMs": 4786.800000011921,
+        "domInteractiveMs": 4747.300000011921,
+        "encodedBytes": 6894,
+        "responseEndMs": 2385.800000011921,
+        "transferBytes": 7194,
+        "type": "navigate"
+      },
+      "metrics": {
+        "TTFB": 2383.9000000059605,
+        "FCP": 4780,
+        "LCP": 4780,
+        "CLS": 0
+      },
+      "metricMetadata": {
+        "TTFB": {
+          "id": "v4-1789217928873-6116611407873",
+          "navigationType": "navigate",
+          "rating": "poor"
+        },
+        "FCP": {
+          "id": "v4-1789217928873-8781022526005",
+          "navigationType": "navigate",
+          "rating": "poor"
+        },
+        "LCP": {
+          "id": "v4-1789217928872-1682115699864",
+          "navigationType": "navigate",
+          "rating": "poor"
+        },
+        "CLS": {
+          "id": "v4-1789217928873-4724433456631",
+          "navigationType": "navigate",
+          "rating": "good"
+        }
+      },
+      "budgetExceeded": {
+        "TTFB": true,
+        "FCP": true,
+        "LCP": true,
+        "CLS": false
+      },
+      "rawLayout": {
+        "count": 0,
+        "sessionMax": 0,
+        "supported": true
+      },
+      "longTasks": {
+        "count": 0,
+        "maxMs": 0,
+        "over50Ms": 0,
+        "supported": true,
+        "totalMs": 0
+      },
+      "resources": {
+        "count": 63,
+        "encodedBytes": 641661,
+        "scriptEncodedBytes": 3170,
+        "transferBytes": 81665,
+        "unknownSizes": 24
+      },
+      "images": {
+        "loaded": 20,
+        "total": 20
+      },
+      "supportedEntries": [
+        "element",
+        "event",
+        "first-input",
+        "interaction-contentful-paint",
+        "largest-contentful-paint",
+        "layout-shift",
+        "long-animation-frame",
+        "longtask",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource",
+        "soft-navigation",
+        "visibility-state"
+      ],
+      "issues": []
+    },
+    {
+      "sample": "before-home-2",
+      "phase": "before",
+      "route": "/",
+      "index": 2,
+      "sourcePath": "/Users/bigmac_moon/dev/ai_score/docs/audits/v13-performance/before-home-2.json",
+      "sha256": "34d1a7048eca3170a08a683b9b0f2dbe3a7c5942850a52f41e47166322e49c27",
+      "environment": {
+        "capturedAt": "2026-09-12T12:59:42.829Z",
+        "initialDocumentPath": "/",
+        "path": "/",
+        "viewport": "1280 × 720",
+        "documentWidth": 1265,
+        "scrollWidth": 1265,
+        "elapsedMs": 10005,
+        "observerStartedAt": 5747,
+        "framed": false,
+        "initialVisibility": "visible",
+        "visibility": "visible",
+        "visibilityChanges": 0
+      },
+      "navigation": {
+        "domCompleteMs": 5602.399999976158,
+        "domInteractiveMs": 4583.199999988079,
+        "encodedBytes": 14003,
+        "responseEndMs": 2582.5999999940395,
+        "transferBytes": 14303,
+        "type": "navigate"
+      },
+      "metrics": {
+        "TTFB": 2581.5,
+        "FCP": 4616,
+        "LCP": 4616,
+        "CLS": 0
+      },
+      "metricMetadata": {
+        "TTFB": {
+          "id": "v4-1789217978628-1372894252481",
+          "navigationType": "navigate",
+          "rating": "poor"
+        },
+        "FCP": {
+          "id": "v4-1789217978628-2795469176680",
+          "navigationType": "navigate",
+          "rating": "poor"
+        },
+        "LCP": {
+          "id": "v4-1789217978627-7544993965353",
+          "navigationType": "navigate",
+          "rating": "poor"
+        },
+        "CLS": {
+          "id": "v4-1789217978628-4681199743706",
+          "navigationType": "navigate",
+          "rating": "good"
+        }
+      },
+      "budgetExceeded": {
+        "TTFB": true,
+        "FCP": true,
+        "LCP": true,
+        "CLS": false
+      },
+      "rawLayout": {
+        "count": 0,
+        "sessionMax": 0,
+        "supported": true
+      },
+      "longTasks": {
+        "count": 0,
+        "maxMs": 0,
+        "over50Ms": 0,
+        "supported": true,
+        "totalMs": 0
+      },
+      "resources": {
+        "count": 49,
+        "encodedBytes": 546593,
+        "scriptEncodedBytes": 0,
+        "transferBytes": 7200,
+        "unknownSizes": 24
+      },
+      "images": {
+        "loaded": 9,
+        "total": 9
+      },
+      "supportedEntries": [
+        "element",
+        "event",
+        "first-input",
+        "interaction-contentful-paint",
+        "largest-contentful-paint",
+        "layout-shift",
+        "long-animation-frame",
+        "longtask",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource",
+        "soft-navigation",
+        "visibility-state"
+      ],
+      "issues": []
+    },
+    {
+      "sample": "before-explore-2",
+      "phase": "before",
+      "route": "/explore",
+      "index": 2,
+      "sourcePath": "/Users/bigmac_moon/dev/ai_score/docs/audits/v13-performance/before-explore-2.json",
+      "sha256": "61215cc3f321160b9491187ef34cf33e50c9494b54e97f741b9732c9a48932ec",
+      "environment": {
+        "capturedAt": "2026-09-12T12:59:52.958Z",
+        "initialDocumentPath": "/explore",
+        "path": "/explore",
+        "viewport": "1280 × 720",
+        "documentWidth": 1265,
+        "scrollWidth": 1265,
+        "elapsedMs": 10003,
+        "observerStartedAt": 479,
+        "framed": false,
+        "initialVisibility": "visible",
+        "visibility": "visible",
+        "visibilityChanges": 0
+      },
+      "navigation": {
+        "domCompleteMs": 470.199999988079,
+        "domInteractiveMs": 460.09999999403954,
+        "encodedBytes": 6408,
+        "responseEndMs": 86.09999999403954,
+        "transferBytes": 6708,
+        "type": "navigate"
+      },
+      "metrics": {
+        "TTFB": 85.5,
+        "FCP": 500,
+        "LCP": 500,
+        "CLS": 0
+      },
+      "metricMetadata": {
+        "TTFB": {
+          "id": "v4-1789217983494-5813375905631",
+          "navigationType": "navigate",
+          "rating": "good"
+        },
+        "FCP": {
+          "id": "v4-1789217983494-5891706193452",
+          "navigationType": "navigate",
+          "rating": "good"
+        },
+        "LCP": {
+          "id": "v4-1789217983494-3137256944774",
+          "navigationType": "navigate",
+          "rating": "good"
+        },
+        "CLS": {
+          "id": "v4-1789217983494-4169670561952",
+          "navigationType": "navigate",
+          "rating": "good"
+        }
+      },
+      "budgetExceeded": {
+        "TTFB": false,
+        "FCP": false,
+        "LCP": false,
+        "CLS": false
+      },
+      "rawLayout": {
+        "count": 0,
+        "sessionMax": 0,
+        "supported": true
+      },
+      "longTasks": {
+        "count": 0,
+        "maxMs": 0,
+        "over50Ms": 0,
+        "supported": true,
+        "totalMs": 0
+      },
+      "resources": {
+        "count": 63,
+        "encodedBytes": 638491,
+        "scriptEncodedBytes": 0,
+        "transferBytes": 8700,
+        "unknownSizes": 26
+      },
+      "images": {
+        "loaded": 20,
+        "total": 20
+      },
+      "supportedEntries": [
+        "element",
+        "event",
+        "first-input",
+        "interaction-contentful-paint",
+        "largest-contentful-paint",
+        "layout-shift",
+        "long-animation-frame",
+        "longtask",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource",
+        "soft-navigation",
+        "visibility-state"
+      ],
+      "issues": []
+    },
+    {
+      "sample": "before-home-3",
+      "phase": "before",
+      "route": "/",
+      "index": 3,
+      "sourcePath": "/Users/bigmac_moon/dev/ai_score/docs/audits/v13-performance/before-home-3.json",
+      "sha256": "d980b3644da62ff7389949b92072513dec6468c20b988eb891fffd4c6d33427f",
+      "environment": {
+        "capturedAt": "2026-09-12T13:00:35.372Z",
+        "initialDocumentPath": "/",
+        "path": "/",
+        "viewport": "1280 × 720",
+        "documentWidth": 1265,
+        "scrollWidth": 1265,
+        "elapsedMs": 10002,
+        "observerStartedAt": 5693,
+        "framed": false,
+        "initialVisibility": "visible",
+        "visibility": "visible",
+        "visibilityChanges": 0
+      },
+      "navigation": {
+        "domCompleteMs": 5671.9000000059605,
+        "domInteractiveMs": 5395.300000011921,
+        "encodedBytes": 14003,
+        "responseEndMs": 3163.800000011921,
+        "transferBytes": 14303,
+        "type": "navigate"
+      },
+      "metrics": {
+        "TTFB": 3159.699999988079,
+        "FCP": 5436,
+        "LCP": 5436,
+        "CLS": 0
+      },
+      "metricMetadata": {
+        "TTFB": {
+          "id": "v4-1789218031126-9291267055133",
+          "navigationType": "navigate",
+          "rating": "poor"
+        },
+        "FCP": {
+          "id": "v4-1789218031126-6185540399813",
+          "navigationType": "navigate",
+          "rating": "poor"
+        },
+        "LCP": {
+          "id": "v4-1789218031126-4766837255746",
+          "navigationType": "navigate",
+          "rating": "poor"
+        },
+        "CLS": {
+          "id": "v4-1789218031126-3860432425266",
+          "navigationType": "navigate",
+          "rating": "good"
+        }
+      },
+      "budgetExceeded": {
+        "TTFB": true,
+        "FCP": true,
+        "LCP": true,
+        "CLS": false
+      },
+      "rawLayout": {
+        "count": 0,
+        "sessionMax": 0,
+        "supported": true
+      },
+      "longTasks": {
+        "count": 0,
+        "maxMs": 0,
+        "over50Ms": 0,
+        "supported": true,
+        "totalMs": 0
+      },
+      "resources": {
+        "count": 49,
+        "encodedBytes": 546593,
+        "scriptEncodedBytes": 0,
+        "transferBytes": 7200,
+        "unknownSizes": 24
+      },
+      "images": {
+        "loaded": 9,
+        "total": 9
+      },
+      "supportedEntries": [
+        "element",
+        "event",
+        "first-input",
+        "interaction-contentful-paint",
+        "largest-contentful-paint",
+        "layout-shift",
+        "long-animation-frame",
+        "longtask",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource",
+        "soft-navigation",
+        "visibility-state"
+      ],
+      "issues": []
+    },
+    {
+      "sample": "before-explore-3",
+      "phase": "before",
+      "route": "/explore",
+      "index": 3,
+      "sourcePath": "/Users/bigmac_moon/dev/ai_score/docs/audits/v13-performance/before-explore-3.json",
+      "sha256": "791f97bd50bb333f06055b189a28b1a96c755817b2675f895fcd70016b5b3e56",
+      "environment": {
+        "capturedAt": "2026-09-12T13:06:03.511Z",
+        "initialDocumentPath": "/explore",
+        "path": "/explore",
+        "viewport": "1280 × 720",
+        "documentWidth": 1265,
+        "scrollWidth": 1265,
+        "elapsedMs": 10002,
+        "observerStartedAt": 4584,
+        "framed": false,
+        "initialVisibility": "visible",
+        "visibility": "visible",
+        "visibilityChanges": 0
+      },
+      "navigation": {
+        "domCompleteMs": 4577.0999999940395,
+        "domInteractiveMs": 4514.5,
+        "encodedBytes": 6408,
+        "responseEndMs": 4217.0999999940395,
+        "transferBytes": 6708,
+        "type": "navigate"
+      },
+      "metrics": {
+        "TTFB": 4215.800000011921,
+        "FCP": 4560,
+        "LCP": 4560,
+        "CLS": 0
+      },
+      "metricMetadata": {
+        "TTFB": {
+          "id": "v4-1789218358151-4423271681197",
+          "navigationType": "navigate",
+          "rating": "poor"
+        },
+        "FCP": {
+          "id": "v4-1789218358151-5749158651278",
+          "navigationType": "navigate",
+          "rating": "poor"
+        },
+        "LCP": {
+          "id": "v4-1789218358151-4481852601171",
+          "navigationType": "navigate",
+          "rating": "poor"
+        },
+        "CLS": {
+          "id": "v4-1789218358151-2550689331647",
+          "navigationType": "navigate",
+          "rating": "good"
+        }
+      },
+      "budgetExceeded": {
+        "TTFB": true,
+        "FCP": true,
+        "LCP": true,
+        "CLS": false
+      },
+      "rawLayout": {
+        "count": 0,
+        "sessionMax": 0,
+        "supported": true
+      },
+      "longTasks": {
+        "count": 0,
+        "maxMs": 0,
+        "over50Ms": 0,
+        "supported": true,
+        "totalMs": 0
+      },
+      "resources": {
+        "count": 63,
+        "encodedBytes": 638488,
+        "scriptEncodedBytes": 0,
+        "transferBytes": 25171,
+        "unknownSizes": 26
+      },
+      "images": {
+        "loaded": 20,
+        "total": 20
+      },
+      "supportedEntries": [
+        "element",
+        "event",
+        "first-input",
+        "interaction-contentful-paint",
+        "largest-contentful-paint",
+        "layout-shift",
+        "long-animation-frame",
+        "longtask",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource",
+        "soft-navigation",
+        "visibility-state"
+      ],
+      "issues": []
+    }
+  ],
+  "summaries": {
+    "before": {
+      "/": {
+        "TTFB": {
+          "budget": 800.0,
+          "unit": "ms",
+          "count": 3,
+          "missingCount": 0,
+          "median": 2581.5,
+          "min": 431.09999999403954,
+          "worst": 3159.699999988079,
+          "exceedCount": 2,
+          "allValuesInSampleOrder": [
+            431.09999999403954,
+            2581.5,
+            3159.699999988079
+          ]
+        },
+        "FCP": {
+          "budget": 1800.0,
+          "unit": "ms",
+          "count": 3,
+          "missingCount": 0,
+          "median": 4616,
+          "min": 1152,
+          "worst": 5436,
+          "exceedCount": 2,
+          "allValuesInSampleOrder": [
+            1152,
+            4616,
+            5436
+          ]
+        },
+        "LCP": {
+          "budget": 2500.0,
+          "unit": "ms",
+          "count": 3,
+          "missingCount": 0,
+          "median": 4616,
+          "min": 1152,
+          "worst": 5436,
+          "exceedCount": 2,
+          "allValuesInSampleOrder": [
+            1152,
+            4616,
+            5436
+          ]
+        },
+        "CLS": {
+          "budget": 0.1,
+          "unit": "unitless",
+          "count": 3,
+          "missingCount": 0,
+          "median": 0,
+          "min": 0,
+          "worst": 0,
+          "exceedCount": 0,
+          "allValuesInSampleOrder": [
+            0,
+            0,
+            0
+          ]
+        },
+        "loadSamplesExceedingAnyBudget": 2,
+        "loadSamplesWithUnknownMetric": 0,
+        "sampleCount": 3
+      },
+      "/explore": {
+        "TTFB": {
+          "budget": 800.0,
+          "unit": "ms",
+          "count": 3,
+          "missingCount": 0,
+          "median": 2383.9000000059605,
+          "min": 85.5,
+          "worst": 4215.800000011921,
+          "exceedCount": 2,
+          "allValuesInSampleOrder": [
+            2383.9000000059605,
+            85.5,
+            4215.800000011921
+          ]
+        },
+        "FCP": {
+          "budget": 1800.0,
+          "unit": "ms",
+          "count": 3,
+          "missingCount": 0,
+          "median": 4560,
+          "min": 500,
+          "worst": 4780,
+          "exceedCount": 2,
+          "allValuesInSampleOrder": [
+            4780,
+            500,
+            4560
+          ]
+        },
+        "LCP": {
+          "budget": 2500.0,
+          "unit": "ms",
+          "count": 3,
+          "missingCount": 0,
+          "median": 4560,
+          "min": 500,
+          "worst": 4780,
+          "exceedCount": 2,
+          "allValuesInSampleOrder": [
+            4780,
+            500,
+            4560
+          ]
+        },
+        "CLS": {
+          "budget": 0.1,
+          "unit": "unitless",
+          "count": 3,
+          "missingCount": 0,
+          "median": 0,
+          "min": 0,
+          "worst": 0,
+          "exceedCount": 0,
+          "allValuesInSampleOrder": [
+            0,
+            0,
+            0
+          ]
+        },
+        "loadSamplesExceedingAnyBudget": 2,
+        "loadSamplesWithUnknownMetric": 0,
+        "sampleCount": 3
+      }
+    }
+  },
+  "comparisons": {}
+}

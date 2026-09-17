@@ -1,0 +1,23 @@
+{
+  "scroll": {
+    "height": 8404,
+    "width": 375,
+    "x": 0,
+    "y": 6957
+  },
+  "url": "http://localhost:5173/my?tab=savings",
+  "viewport": {
+    "doc": 375,
+    "height": 844,
+    "scale": 1,
+    "width": 390
+  },
+  "visibleText": [
+    "비교 제목",
+    "선택 상태검토 중유지변경 예정보류관심 없음",
+    "선택 이유",
+    "사용·변경 결과",
+    "저장한 요금 비교 1개",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA → V10-QA-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+  ]
+}

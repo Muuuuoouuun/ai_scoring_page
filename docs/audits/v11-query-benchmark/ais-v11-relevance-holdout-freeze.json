@@ -1,0 +1,12 @@
+{
+  "frozenAt": "2026-09-12T11:38:37.267204+00:00",
+  "sha256": "d0103236ed0b9f064c5fefa919034f777926ddbb952b40e2e79d973b05e9ce64",
+  "caseCount": 16,
+  "path": "/private/tmp/ais-v11-relevance-holdout-cases.json",
+  "outputsObserved": false,
+  "evaluationExecuted": false,
+  "uniqueQueries": true,
+  "overlapWithV10Queries": 0,
+  "v10CasesUnchanged": true,
+  "catalogSha256": "6582363e298f29c7189190ab768a8d9edd88c5e47ab42fd6c6a0b5d4571cdee5"
+}

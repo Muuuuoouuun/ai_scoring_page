@@ -1,0 +1,4 @@
+The following is a diff from the previous accessibility tree for Window: "AIs — AI·SaaS 탐색과 활용" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~					11 버튼 확대/축소: 200%
++		199 container 확대/축소: 125%
++					202 container 확대/축소: 200%

@@ -1,0 +1,47 @@
+{
+  "scroll": {
+    "height": 4400,
+    "width": 375,
+    "x": 0,
+    "y": 1935
+  },
+  "url": "http://localhost:5173/my?tab=subscription",
+  "viewport": {
+    "doc": 375,
+    "height": 844,
+    "scale": 1,
+    "width": 390
+  },
+  "visibleText": [
+    "예정 금액 미확인 0회 · 세금 미확인 1건 · 사용량 과금 0건. 확인되지 않은 세금·추가 사용료는 합계에 포함되지 않습니다.",
+    "청구 예정일",
+    "구독",
+    "예상 금액",
+    "결제 확인",
+    "2026-10-01",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "₩20,000날짜별 조건 적용",
+    "날짜별 조건 적용",
+    "예정 · 미연결",
+    "2026-11-01",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "₩20,000날짜별 조건 적용",
+    "날짜별 조건 적용",
+    "예정 · 미연결",
+    "2026-12-01",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "₩20,000날짜별 조건 적용",
+    "날짜별 조건 적용",
+    "예정 · 미연결",
+    "월별 합계와 내 부담액",
+    "월",
+    "실제 순지출",
+    "남은 예상 청구",
+    "2026-09",
+    "₩19,000",
+    "확인된 금액 없음",
+    "2026-10",
+    "확인된 금액 없음",
+    "₩20,000"
+  ]
+}

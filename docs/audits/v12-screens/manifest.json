@@ -1,0 +1,74 @@
+[
+  {
+    "name": "admin-320-expanded.jpg",
+    "bytes": 17770,
+    "sha256": "bd82f0794fee0a3d14a69d4496a0153279ff1650754484bd55def62627da63bc",
+    "width": 305,
+    "height": 705,
+    "format": "JPEG"
+  },
+  {
+    "name": "admin-desktop-counts.jpg",
+    "bytes": 53060,
+    "sha256": "f15c27b688f2ae3060ba8c4355fb483d3fbe6cf1b97957ec43a219210aa13b8a",
+    "width": 1265,
+    "height": 889,
+    "format": "JPEG"
+  },
+  {
+    "name": "admin-desktop.jpg",
+    "bytes": 52455,
+    "sha256": "9fb2c1e0ff945fb57eeb1aac5c8199f53406d77740c89988854acc70dd82c0cf",
+    "width": 1265,
+    "height": 889,
+    "format": "JPEG"
+  },
+  {
+    "name": "guest-320.jpg",
+    "bytes": 21282,
+    "sha256": "b6e4d667ba6109daa3726d605b386ef0e7c4ed284452f707abaf5b79e0bd2fdc",
+    "width": 305,
+    "height": 705,
+    "format": "JPEG"
+  },
+  {
+    "name": "information-mobile-saved.jpg",
+    "bytes": 31681,
+    "sha256": "2492c3beb2f888906f340c1f525f66921a6e8ced84c7fe702934535254ffb5a7",
+    "width": 375,
+    "height": 812,
+    "format": "JPEG"
+  },
+  {
+    "name": "network-error-input-retained.jpg",
+    "bytes": 30553,
+    "sha256": "bfc695d9ecfe4270681ae4b28af809a5c6cfd428a8141fb3b2431244ba0d7bab",
+    "width": 375,
+    "height": 812,
+    "format": "JPEG"
+  },
+  {
+    "name": "personal-mobile-saved.jpg",
+    "bytes": 32596,
+    "sha256": "fa84c2c69969cef7605162665084bdceaa8ce37f3d8bb080c8dc0605c548af30",
+    "width": 375,
+    "height": 812,
+    "format": "JPEG"
+  },
+  {
+    "name": "production-admin-empty.jpg",
+    "bytes": 42714,
+    "sha256": "bba7b6fe5d319c7728a75ae7a538af5371181c6843cbac099627a3d3eaabc835",
+    "width": 1265,
+    "height": 712,
+    "format": "JPEG"
+  },
+  {
+    "name": "production-personal-entry.jpg",
+    "bytes": 25169,
+    "sha256": "88a011dee4bfd1eacf44b6df165b4cac4ffb97367ea0b93f862f1fd6c2d9763f",
+    "width": 1265,
+    "height": 712,
+    "format": "JPEG"
+  }
+]

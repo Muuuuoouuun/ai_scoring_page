@@ -7,7 +7,8 @@ import { tools } from "@/data/tools";
 
 export default function SearchPage() {
   const { t } = useLanguage();
-  const problemContexts = Array.from(new Set(tools.flatMap((tool) => tool.problemContexts))).slice(0, 8);
+  // 도구마다 대표 문제 상황 1개씩 노출해 SaaS와 AI 도구가 고르게 보이도록 합니다.
+  const problemContexts = Array.from(new Set(tools.map((tool) => tool.problemContexts[0]))).slice(0, 12);
 
   return (
     <main className="search-journal-page">

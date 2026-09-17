@@ -1,0 +1,14 @@
+{
+  "archiveBytes": 842009,
+  "archiveSHA256": "b8469c94736515871237e1d7c7a3679bbcd043df97930103621709295be7dda3",
+  "allTarEntries": 472,
+  "appleDoubleEntries": 236,
+  "realFiles": 216,
+  "realUncompressedBytes": 2794657,
+  "requiredPresent": [
+    "dist/server/index.js",
+    "dist/.openai/hosting.json",
+    "dist/.openai/drizzle/0003_condemned_darkhawk.sql"
+  ],
+  "environmentFilesPresent": false
+}

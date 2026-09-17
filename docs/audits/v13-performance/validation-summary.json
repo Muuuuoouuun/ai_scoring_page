@@ -1,0 +1,59 @@
+{
+  "source": "ac64bc580e198ca8e7a3f7342752a5e28a6b097e",
+  "regression": {
+    "command": "node --experimental-strip-types --test tests/*.test.mjs",
+    "pass": 139,
+    "fail": 0,
+    "exitCode": 0
+  },
+  "streaming": {
+    "command": "node --conditions=react-server --test tests/home-streaming.mjs",
+    "pass": 4,
+    "fail": 0,
+    "exitCode": 0,
+    "before": {
+      "pass": 3,
+      "fail": 1,
+      "exitCode": 1
+    }
+  },
+  "types": {
+    "command": "./node_modules/.bin/tsc --noEmit",
+    "exitCode": 0
+  },
+  "build": {
+    "command": "node /Users/bigmac_moon/.codex/plugins/cache/openai-bundled/sites/0.1.66/scripts/build-site.mjs",
+    "exitCode": 0,
+    "knownNotice": "Vinext static route classifier reports some routes as Unknown; build succeeded."
+  },
+  "browserLocal": {
+    "searchSubmitted": "보고서 작성",
+    "searchResultStatus": "8개 결과",
+    "postDetailHeading": "검증용 후기 — 원문 수정 확인",
+    "postDetailWasInitiallyLoading": true,
+    "consoleErrors": 0,
+    "narrowRequestedViewport": "390 x 844",
+    "narrowDocumentWidth": 375,
+    "narrowScrollWidth": 375,
+    "pendingTransitionVisuallyCaptured": false,
+    "note": "Screenshots show real resolved local page. Full-page screenshot after scrolling has fixed header at current viewport position; not a true full-page browser painting artifact or deployment thumbnail."
+  },
+  "productionFinal": {
+    "homeURL": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/",
+    "searchInputCount": 1,
+    "homeHeadingObserved": true,
+    "emptyCommunityObserved": true,
+    "pendingStatusCount": 0,
+    "searchResults": 8,
+    "communityNavigationObserved": true,
+    "consoleErrors": 0,
+    "temporaryTabsClosed": [
+      13,
+      14
+    ],
+    "resultTab": 1,
+    "stableProviderTab": "dc55a816-fe99-468b-9178-d709dbbcd998",
+    "viewportOverrideReset": true,
+    "handoff": "open_in_codex queued; stable tab marked deliverable"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "scroll": {
+    "height": 5980,
+    "width": 375,
+    "x": 0,
+    "y": 4474
+  },
+  "url": "http://localhost:5173/my?tab=savings",
+  "viewport": {
+    "doc": 375,
+    "height": 844,
+    "scale": 1,
+    "width": 390
+  },
+  "visibleText": [
+    "한 번에 준비 가능한 금액 · EUR",
+    "한 번에 준비 가능한 금액 · JPY",
+    "비용이 낮아도 필요한 기능이나 이용 기간을 충족하지 못하면 추천하지 않습니다. 준비 금액은 같은 날의 총청구액과 비교합니다.",
+    "새 계약의 첫 청구일과 기준일을 확인해주세요.",
+    "저장한 요금 비교 1개",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA → V10-QA-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+  ]
+}

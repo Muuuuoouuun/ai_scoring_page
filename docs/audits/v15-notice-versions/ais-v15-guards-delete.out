@@ -1,0 +1,30 @@
+✔ AUDIT missing one current card stops the entire immutable batch before attempts (171.50075ms)
+BILLING_DELETE {"before":[{"card_key":"billing:8374478e-45b0-494f-ac22-c12b0af4c944:2026-09-15","revision":1,"event_revision":1,"version":"984017eac4c8ba314d518a57a81e19f5641188ff03ad6ff35a99065d914b1054","conflict":0,"updated_at":"2026-09-12T10:00:00.000Z"}],"after":[{"card_key":"billing:8374478e-45b0-494f-ac22-c12b0af4c944:2026-09-15","revision":1,"event_revision":1,"version":"984017eac4c8ba314d518a57a81e19f5641188ff03ad6ff35a99065d914b1054","conflict":0,"updated_at":"2026-09-12T10:00:00.000Z"}]}
+✖ AUDIT private billing source heads are removed by delete my data (69.642375ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 389.71425
+
+✖ failing tests:
+
+test at ../../../../private/tmp/ais-v15-independent-cases.mjs:47:1
+✖ AUDIT private billing source heads are removed by delete my data (69.642375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///private/tmp/ais-v15-independent-cases.mjs:48:757)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

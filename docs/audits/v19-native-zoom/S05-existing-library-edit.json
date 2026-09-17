@@ -1,0 +1,50 @@
+[
+  {
+    "dpr": 2,
+    "h": 358,
+    "height": 398,
+    "rh": 358.1953125,
+    "rw": 620,
+    "sh": 726,
+    "sw": 613,
+    "top": 0,
+    "url": "http://localhost:5173/my",
+    "w": 613,
+    "width": 960,
+    "x": 166.25,
+    "y": 19.8984375,
+    "file": "S05-existing-library-edit-01.jpg"
+  },
+  {
+    "dpr": 2,
+    "h": 358,
+    "height": 398,
+    "rh": 358.1953125,
+    "rw": 620,
+    "sh": 726,
+    "sw": 613,
+    "top": 199,
+    "url": "http://localhost:5173/my",
+    "w": 613,
+    "width": 960,
+    "x": 166.25,
+    "y": 19.8984375,
+    "file": "S05-existing-library-edit-02.jpg"
+  },
+  {
+    "dpr": 2,
+    "h": 358,
+    "height": 398,
+    "rh": 358.1953125,
+    "rw": 620,
+    "sh": 726,
+    "sw": 613,
+    "top": 368,
+    "url": "http://localhost:5173/my",
+    "w": 613,
+    "width": 960,
+    "x": 166.25,
+    "y": 19.8984375,
+    "file": "S05-existing-library-edit-03.jpg"
+  }
+]
