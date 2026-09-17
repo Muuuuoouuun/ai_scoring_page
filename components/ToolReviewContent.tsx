@@ -8,6 +8,7 @@ import { AlternativesSection } from "@/components/AlternativesSection";
 import { RelatedTools } from "@/components/RelatedTools";
 import { ScoreBreakdownCard } from "@/components/ScoreBreakdownCard";
 import { CapabilityComparisonTable } from "@/components/CapabilityComparisonTable";
+import { FeatureChecklistSection } from "@/components/FeatureChecklistSection";
 import { PatchNotesSection } from "@/components/PatchNotesSection";
 import { WorkUsageGuide } from "@/components/WorkUsageGuide";
 import { AdoptionFacts } from "@/components/AdoptionFacts";
@@ -75,7 +76,44 @@ export function ToolReviewContent({
         </button>
       </div>
 
-      <RelatedTools tools={related} />
+      {activeTab === "review" && (
+        <div className="tab-content review-grid-layout">
+          <div className="review-main-column">
+            <section className="section card">
+              <strong>{t.whyExists}</strong>
+              <p>{tool.whyExist}</p>
+            </section>
+            <ScoreBreakdownCard totalScore={insight.totalScore} scoreBreakdown={insight.scoreBreakdown} />
+            <section className="card">
+              <strong>{t.reviewSummary}</strong>
+              <p>{insight.oneLine}</p>
+            </section>
+            <BestWorstNarratives bestCase={tool.bestCase} worstCase={tool.worstCase} />
+            <OneLineReviewForm toolId={tool.id} />
+            <PatchNotesSection toolId={tool.id} notes={insight.patchNotes} />
+          </div>
+
+          <aside className="review-sidebar-column">
+            <ImpactMeterGrid impact={tool.impact} />
+            <FeatureChecklistSection checklist={insight.featureChecklist} />
+            <CapabilityComparisonTable toolName={tool.name} rows={insight.comparisons} />
+            <WorkUsageGuide playbook={insight.workPlaybook} />
+            <AlternativesSection alternatives={tool.alternatives} />
+          </aside>
+        </div>
+      )}
+
+      {activeTab === "discussion" && <DiscussionContent tool={tool} />}
+      {activeTab === "community" && <CommunityContent tool={tool} />}
+
+      <section className="section">
+        <h2>{t.relatedTools}</h2>
+        <div className="grid grid-3">
+          {related.map((item) => (
+            <ToolCard key={item.id} tool={item} />
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

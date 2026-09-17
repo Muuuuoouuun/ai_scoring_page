@@ -28,17 +28,49 @@ CREATE TABLE users (
 );
 
 -- Basic Mock Data for MVP
-INSERT INTO users (id, email, nickname, role) VALUES 
+INSERT INTO users (id, email, nickname, role) VALUES
 ('00000000-0000-0000-0000-000000000001', 'admin@aisite.com', 'Admin User', 'admin'),
 ('00000000-0000-0000-0000-000000000002', 'test@user.com', 'Test User', 'user');
 
--- ============================================================================
--- 커뮤니티 스키마는 db/community.sql 에 있습니다.
---
--- 분리한 이유: 위 tools 테이블은 현재 앱이 쓰지 않습니다.
--- 도구와 리뷰 본문은 코드(data/tools.ts, data/reviews.ts)가 진실의 출처이고,
--- DB가 소유하는 건 사용자 기여뿐입니다.
---
---   psql "$DATABASE_URL" -f db/community.sql
---   또는 npm run db:setup
--- ============================================================================
+-- [Phase 1] User Reviews
+CREATE TABLE user_reviews (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  tool_id TEXT NOT NULL,
+  nickname TEXT NOT NULL DEFAULT 'Anonymous',
+  line TEXT NOT NULL,
+  detail TEXT,
+  rating INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),
+  image_url TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+CREATE INDEX user_reviews_tool_id_idx ON user_reviews (tool_id);
+CREATE INDEX user_reviews_created_at_idx ON user_reviews (created_at DESC);
+
+-- [Phase 1] Patch Updates (admin only)
+CREATE TABLE patch_updates (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  tool_id TEXT NOT NULL,
+  title TEXT NOT NULL,
+  change TEXT NOT NULL,
+  error_risk TEXT NOT NULL,
+  author_id UUID REFERENCES users(id),
+  patch_date DATE NOT NULL DEFAULT CURRENT_DATE,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+CREATE INDEX patch_updates_tool_id_idx ON patch_updates (tool_id);
+
+-- [Phase 1] Audit Log
+CREATE TABLE audit_logs (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  actor_id TEXT NOT NULL,
+  action TEXT NOT NULL,   -- 'CREATE_REVIEW' | 'CREATE_PATCH_NOTE'
+  resource_type TEXT NOT NULL,
+  resource_id TEXT NOT NULL,
+  payload JSONB,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+CREATE INDEX audit_logs_actor_id_idx ON audit_logs (actor_id);
+CREATE INDEX audit_logs_created_at_idx ON audit_logs (created_at DESC);

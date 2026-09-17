@@ -4,25 +4,12 @@ import Link from "next/link";
 import type { Tool, ToolProblemAngle } from "@/lib/types";
 import { VerdictBadgeList } from "@/components/VerdictBadgeList";
 import { ProductLogo } from "@/components/ProductLogo";
-import { copy as t } from "@/lib/copy";
-import { useCompare } from "@/components/CompareProvider";
-import { getTotalScore } from "@/lib/insights";
+import { useLanguage } from "@/components/LanguageProvider";
+import { getToolMeta } from "@/lib/insights";
 
-export function ToolCard({
-  tool,
-  variant = "default",
-  angle,
-  selectable = false
-}: {
-  tool: Tool;
-  variant?: "default" | "feature";
-  /** 이 문제에서 되는 것 / 안 되는 것. 문제로 검색했을 때만 들어옵니다. */
-  angle?: ToolProblemAngle;
-  selectable?: boolean;
-}) {
-  const { isSelected, toggle, isFull } = useCompare();
-  const total = getTotalScore(tool.review.scoreBreakdown);
-  const picked = isSelected(tool.id);
+export function ToolCard({ tool }: { tool: Tool }) {
+  const { t } = useLanguage();
+  const meta = getToolMeta(tool.id);
 
   return (
     <article className={`card tool-card tool-card-${variant} ${picked ? "is-picked" : ""}`}>
@@ -58,8 +45,13 @@ export function ToolCard({
         </div>
       ) : (
         <p className="tool-card-desc">{tool.description}</p>
-      )}
-
+        {meta?.shortDiff ? (
+          <p className="tool-card-diff">
+            <span className="tool-card-diff-label">{t.shortDiffLabel}</span>
+            {meta.shortDiff}
+          </p>
+        ) : null}
+      </div>
       <VerdictBadgeList badges={tool.verdictBadges} />
 
       <div className="tool-card-footer">

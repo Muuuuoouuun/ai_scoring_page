@@ -116,98 +116,40 @@ export type Tool = {
   updatedAt: string;
 };
 
-/* ──────────────────────────────────────────────────────────────────────────
- * 문제 상황 태그 (P1)
- *
- * 자유 문장 대신 공유 태그를 씁니다. id가 언어와 무관한 안정 식별자라
- * 한국어/영어 어느 화면에서 눌러도 같은 결과가 나옵니다.
- * ────────────────────────────────────────────────────────────────────────── */
-
-export type ProblemTag = {
+export type UserReview = {
   id: string;
-  ko: string;
-  en: string;
-  description: string;
+  toolId: string;
+  nickname: string;
+  line: string;
+  detail?: string;
+  rating: number;
+  imageUrl?: string;
+  // 신뢰도 메타 (커뮤니티 가중치용)
+  role?: string;
+  teamSize?: string;
+  usagePeriod?: string;
+  createdAt: string;
 };
 
-/** 이 도구가 이 문제에서 되는 것 / 안 되는 것. 검색 결과 카드에 노출됩니다. */
-export type ToolProblemAngle = {
-  tagId: string;
-  angle: string;
-  limitation: string;
+export type PatchUpdate = {
+  id: string;
+  toolId: string;
+  title: string;
+  change: string;
+  errorRisk: string;
+  authorId?: string;
+  patchDate: string;
+  impact?: "high" | "medium" | "low";
+  isOutage?: boolean;
+  createdAt: string;
 };
 
-/* ──────────────────────────────────────────────────────────────────────────
- * 도입 판단 정보 (P1)
- *
- * 기존 모델은 "이 도구가 어떤 도구인가"는 답했지만 결정권자가 회의에서 실제로 받는
- * 세 가지 질문에는 답하지 못했습니다.
- *   1. 우리 팀 규모에 맞는가 → teamFit
- *   2. 도입에 실제로 무엇을 지불하는가 → adoption(사람의 시간) · pricingModel(돈) · exitCost(나갈 때)
- *   3. 언제 사지 말아야 하는가 → doNotUseIf
- * 그리고 이 단정들을 믿을 근거 → reviewMeta
- * ────────────────────────────────────────────────────────────────────────── */
-
-export type TeamSizeBand = "1-5" | "6-30" | "30+";
-export type FitLevel = "fits" | "conditional" | "avoid";
-
-export type TeamFit = {
-  band: TeamSizeBand;
-  fit: FitLevel;
-  note: string;
-};
-
-export type AdoptionDifficulty = "low" | "medium" | "high";
-
-export type AdoptionCost = {
-  difficulty: AdoptionDifficulty;
-  /** 첫 효용까지 */
-  timeToValue: string;
-  /** 규칙이 굳을 때까지. timeToValue와의 격차가 도입 실패의 실제 신호입니다. */
-  timeToSettle: string;
-  requiredOwner: string;
-  firstMonthRisk: string;
-};
-
-export type PricingUnit = "per-seat" | "per-usage" | "flat" | "hybrid";
-
-export type PricingModel = {
-  unit: PricingUnit;
-  entryCost: string;
-  /** 비용이 튀는 조건. 도입 실패는 첫 견적이 아니라 갱신에서 터집니다. 확인된 게 없으면 빈 배열. */
-  spikeTriggers: string[];
-  freeTierReality: string;
-  /** "YYYY-MM". 가격은 이 사이트에서 가장 빨리 틀려지는 데이터라 화면이 스스로 경고할 수 있게 합니다. */
-  asOf: string;
-};
-
-export type ExitDifficulty = "easy" | "manageable" | "hard" | "trapped";
-
-export type ExitCost = {
-  difficulty: ExitDifficulty;
-  /** 내보내면 실제로 뭐가 나오고 뭐가 깨지는가 */
-  exportReality: string;
-  whatYouLose: string;
-  switchWindow: string;
-};
-
-export type EvidenceKind =
-  | "hands-on"
-  | "team-deployment"
-  | "user-interview"
-  | "vendor-doc"
-  | "public-incident";
-
-export type EvidenceSource = {
-  kind: EvidenceKind;
-  note: string;
-};
-
-export type ReviewMeta = {
-  reviewedBy: string;
-  /** "YYYY-MM-DD" */
-  reviewedAt: string;
-  usageContext: string;
-  /** 최소 1개. 실사용과 공식 문서 인용은 화면에서 다른 무게로 보여야 합니다. */
-  evidence: EvidenceSource[];
+export type AuditLog = {
+  id: string;
+  actorId: string;
+  action: "CREATE_REVIEW" | "CREATE_PATCH_NOTE";
+  resourceType: string;
+  resourceId: string;
+  payload?: unknown;
+  createdAt: string;
 };
