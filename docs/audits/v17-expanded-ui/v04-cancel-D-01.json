@@ -1,0 +1,32 @@
+{
+  "scroll": {
+    "height": 1010,
+    "width": 1425,
+    "x": 0,
+    "y": 0
+  },
+  "url": "http://localhost:5173/my?tab=cancellation",
+  "viewport": {
+    "doc": 1425,
+    "height": 900,
+    "scale": 1,
+    "width": 1440
+  },
+  "visibleText": [
+    "마이페이지",
+    "사용 중인 도구와 필요한 정보를 관리하세요.",
+    "해지 기록",
+    "공식 해지 경로 확인",
+    "구독선택해주세요V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "실제 결제 경로확인 필요서비스 웹사이트App StoreGoogle Play",
+    "해지 기록 추가",
+    "연결할 구독 *구독 선택V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA · 요금제 미입력 · 2026-10-01",
+    "진행 상태해지 준비해지 신청함해지 확인됨이용 종료됨",
+    "결제 경로서비스 웹사이트App StoreGoogle Play확인 필요",
+    "해지 확인일",
+    "잔여 청구 횟수 · 미확인 빈칸, 없음 0",
+    "이용 종료일",
+    "공식 서비스에서 직접 해지한 내용을 기록합니다. 신청만으로 해지 완료를 표시하지 않습니다. 신청·확인·종료 상태는 조건 이력에도 남습니다. 준비 상태로 되돌리거나 메모를 삭제해도 이미 기록한 계약 상태를 되돌리지 않습니다. 적용일을 모르면 기록일 기준으로 보관합니다.",
+    "메모"
+  ]
+}

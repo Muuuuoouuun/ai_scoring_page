@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { PrinciplesBar } from "@/components/PrinciplesBar";
 import { ProblemCategoryList } from "@/components/ProblemCategoryList";
@@ -7,8 +8,7 @@ import { ToolCard } from "@/components/ToolCard";
 import { JournalArchiveSection } from "@/components/JournalArchiveSection";
 import { useLanguage } from "@/components/LanguageProvider";
 import { tools } from "@/data/tools";
-import { problemTags } from "@/lib/problems";
-import { getTotalScore } from "@/lib/insights";
+import { resources } from "@/data/resources";
 
 export default function HomePage() {
   /*
@@ -67,7 +67,26 @@ export default function HomePage() {
         </div>
       </section>
       <ProblemCategoryList />
-      <JournalArchiveSection compact />
+      {resources.length > 0 ? (
+        <section className="section">
+          <div className="card resource-teaser">
+            <div>
+              <span className="section-kicker">USEFUL SITES</span>
+              <h2 className="section-title">{t.resourcesTitle}</h2>
+              <p className="text-muted">{t.resourcesDesc}</p>
+              <ul className="resource-teaser-names">
+                {resources.slice(0, 8).map((site) => (
+                  <li key={site.name}>{site.name}</li>
+                ))}
+                <li>+{Math.max(0, resources.length - 8)}</li>
+              </ul>
+            </div>
+            <Link className="button" href="/resources">
+              {t.resourceCta}
+            </Link>
+          </div>
+        </section>
+      ) : null}
       <PrinciplesBar />
     </main>
   );

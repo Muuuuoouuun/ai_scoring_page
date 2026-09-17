@@ -1,0 +1,5 @@
+1. 현재 구현은 **Resend** 발송 API를 사용한다. 사용 가능한 계정/API 키(`RESEND_API_KEY`)와 Resend에서 발신이 인증된 주소(`EMAIL_FROM`)가 필요하며, 키 값은 대화에 게시하지 않고 운영 환경에 설정한다. [예시 키](/Users/bigmac_moon/dev/ai_score/site/.env.example)
+2. `SITE_URL`에는 실제 배포 주소가 필요하다. 위 세 환경값이 모두 있어야 이메일 수신 설정을 켤 수 있다. [구성 검사](/Users/bigmac_moon/dev/ai_score/site/lib/email-delivery.ts:14)
+3. 수신함을 확인할 수 있는 **로그인 계정의 이메일 주소**와 실제 수신 동의가 필요하다. 설정에서 `email=true`, `emailMode`(digest/matched), `emailTimeZone`, `emailTime`을 명시해 저장하면 서버가 `emailAddress`와 `emailTimingConfirmed`를 기록한다(수신자용 환경변수 없음). [저장 처리](/Users/bigmac_moon/dev/ai_score/site/lib/workspace-settings.ts:39)
+4. 시험 시각 이후 발송 가능한 실제 관심 알림이 있어야 하며, 알림 화면의 ‘새로 확인’으로 처리한 **제공사 접수 기록과 실제 수신함 도착**을 각각 확인한다. 항목이 없으면 발송하지 않는다. [현재 실행 진입점](/Users/bigmac_moon/dev/ai_score/site/app/api/notifications/route.ts)
+5. 무방문 검증에는 별도로 **지원되는 예약 실행 호스트·주기·인증된 실행 연결 방식**이 필요하다. 현재는 인증 사용자 refresh 경로만 있고 예약 진입점/예약 비밀키 환경변수는 구현돼 있지 않으므로, 메일 환경값만으로 무인 실행이 연결되지는 않는다. [현재 경계](/Users/bigmac_moon/dev/ai_score/site/README.md:27)

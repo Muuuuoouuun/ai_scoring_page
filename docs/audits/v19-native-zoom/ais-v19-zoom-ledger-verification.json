@@ -1,0 +1,919 @@
+{
+  "date": "2026-09-14",
+  "checks": {
+    "9Areas": true,
+    "38Groups": true,
+    "152UniqueGates": true,
+    "orderedIDsUnchanged": true,
+    "areaGroupNamesWeightsUnchanged": true,
+    "allCriteriaIDsWeightsUnchanged": true,
+    "other150ObjectsIncludingEvidenceUnchanged": true,
+    "only514634ChangedFromV17": true,
+    "only514ChangedFromGuideOnlyCandidate": true,
+    "exact514Criterion": true,
+    "exact634Criterion": true,
+    "targets625Each": true,
+    "fourEqualBinaryGatesPerGroup": true,
+    "areaMaxima100": true,
+    "counts143_4_5": true,
+    "scoresRecomputedExact": true,
+    "comfort9375": true,
+    "usefulness925": true,
+    "sevenAreasAtLeast88": true,
+    "twoAreasStillBelow88": true,
+    "onlyTwoAreaDeltas625": true,
+    "readerGateUnchangedU": true,
+    "methodCapsUnchanged": true,
+    "changesOnly514634": true,
+    "sourceMatchesCurrentVersionReceipt": true,
+    "deploymentVersionReceiptConsistent": true,
+    "historicalInitialProposalUnchanged": true,
+    "historicalFieldsUnchanged": true,
+    "complete28PrincipalIDs": true,
+    "rawPrincipalMetricsVerified": true,
+    "45LatestActualImagesExistAndRasterVerified": true,
+    "finalToastActuallyOpaque": true,
+    "originalSevenRestorationReceiptExact": true,
+    "readOnlyInputHashesUnchanged": true,
+    "candidateJSONRoundtrip": true,
+    "priorHistoricalQualityBodyPreserved": true
+  },
+  "counts": {
+    "PASS": 143,
+    "GAP": 4,
+    "UNVERIFIED": 5
+  },
+  "scores": [
+    {
+      "area": "정체성·기획 일치",
+      "score": 86.25
+    },
+    {
+      "area": "내용·최신성",
+      "score": 100.0
+    },
+    {
+      "area": "디자인",
+      "score": 100.0
+    },
+    {
+      "area": "사용성",
+      "score": 100.0
+    },
+    {
+      "area": "쾌적성·접근성",
+      "score": 93.75
+    },
+    {
+      "area": "유용성",
+      "score": 92.5
+    },
+    {
+      "area": "커뮤니티",
+      "score": 100.0
+    },
+    {
+      "area": "개인 기능",
+      "score": 81.25
+    },
+    {
+      "area": "배포·운영",
+      "score": 93.75
+    }
+  ],
+  "areasAtLeast88": 7,
+  "changedIDsFromV17": [
+    "5.1.4",
+    "6.3.4"
+  ],
+  "changedIDsFromGuideOnlyCandidate": [
+    "5.1.4"
+  ],
+  "publication": {
+    "source": "d5efa3e11997e4a6d19cf28029246546e3a2a5bc",
+    "version": 21,
+    "versionId": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_775a2c15a3cc8191bb0de212dc42bfa8",
+    "deploymentId": "appgdep_6aa806e7e530819183a877eae9421c27",
+    "status": "succeeded",
+    "updatedAt": "2026-09-14T14:39:07.129272+00:00",
+    "environmentRevision": 2,
+    "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+    "access": "owner-private/custom; one allowed account, zero external users/groups; unchanged",
+    "observedBy": "Root actual Sites receipts preserved in docs/audits/v19-native-zoom/site-deployment-receipts.json; reviewer read and cross-checked the saved receipts, without calling Sites/Git."
+  },
+  "inputHashes": {
+    "/Users/bigmac_moon/dev/ai_score/docs/audits/2026-09-13-score-worksheet-v17.json": "895aad1891a618b309f0ed1ee600ede5b45cfd93aa21062e5b4033796eac3859",
+    "/private/tmp/ais-v19-score-final-candidate.json": "9561f17418501ff13fae53b5c6501612e97593b006beed917a87ca20cd134764",
+    "/Users/bigmac_moon/dev/ai_score/docs/2026-09-12-site-quality-review.md": "1b29a28448530ba2c4e3836e104bc9b1384cb0e5b6847689494ead812c8a72d0",
+    "/Users/bigmac_moon/dev/ai_score/docs/audits/2026-09-14-v19-execution-review.md": "a13ecb3b74f75aa1659564794d231c76a915477f7f606cd53ee59deb73ca3e09",
+    "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/principal-matrix.json": "b3323974b79650a787db7ec326bb906a1eabb6b908d5f891f8865aac8d0e44a6",
+    "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/site-deployment-receipts.json": "9d0f054e9b68691b85f68659a9188fdbda9ca1f740c1092f7d6c08c558f2a7bd"
+  },
+  "principalRawVerification": [
+    {
+      "id": "P01",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P01.json",
+      "sha256": "f4f263354bf18d7c7cfb89b26fb6ff76183c83a7674b2ea052eb633b97b5624c",
+      "captures": 10,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P02",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P02.json",
+      "sha256": "7ee9732709c950a43b95d08d1ab36c483e85843dfa53b4d632c1fbdb45c2af0a",
+      "captures": 14,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P03",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P03-loaded.json",
+      "sha256": "5029704dc086237008d640ec1eae94777b8391d2ba92f21ee2157b4a940e8fc1",
+      "captures": 6,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P04",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P04.json",
+      "sha256": "af13a2150e5777306ec2e318aee70b094698fbf4f066ff995925c75a4a4fc646",
+      "captures": 11,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P05",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P05.json",
+      "sha256": "db081a7ce8a9c2fd788fca2b243838d20fa0922e769464ee511b1c5d69393562",
+      "captures": 9,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P06",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P06.json",
+      "sha256": "5bfe252632f22217c13646cef6e2d915012635bc4f394401c78d86326611bad8",
+      "captures": 10,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P07",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P07-loaded.json",
+      "sha256": "12c48ceeeda05aa3f5ca75cf8d453c99b13bdaa685ffdc48907efa329e3ae60c",
+      "captures": 3,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P08",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P08.json",
+      "sha256": "46d47b3008668a720fad1b56d20bf922a18eaf655f98479dbbfbb290713ad5c1",
+      "captures": 5,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P09",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P09.json",
+      "sha256": "c4629194599130987dd7c2dae6ea63f2bdede5a3eea8850250341223ddb4d060",
+      "captures": 11,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P10",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P10.json",
+      "sha256": "8770297cd1b940d5cd0dee209319f4ba6585d8461f7fed98d8b3f268958bb378",
+      "captures": 20,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P11",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P11.json",
+      "sha256": "f82b021c8f1fa6edc52774b87cb17b1ff1138d175a596facfe55ccd5c9a7a417",
+      "captures": 5,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P12",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P12.json",
+      "sha256": "b2c02d27b30aa84f2f9aac6380167b5249dd84c4d3e7e841aca5f9c5439ab6f4",
+      "captures": 24,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P13",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P13.json",
+      "sha256": "74eecdc6c500819b3beec286b314a04a2fd19d38f5f9c430c339e35851f6b162",
+      "captures": 5,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P14",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P14.json",
+      "sha256": "5a5755950437fee97e0f3a6899f6d0970e0a7035b04e38d41097b39d613e8035",
+      "captures": 7,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P15",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P15.json",
+      "sha256": "b5cf4806a297e0ce62b5a390515b5b306443a0c60eb6c60310b7d86c6c6f6593",
+      "captures": 5,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P16",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P16.json",
+      "sha256": "ff29840fc28e401d8dc6b919220abca369022297c691b9779949f6c7602d919d",
+      "captures": 19,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P17",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P17-loaded.json",
+      "sha256": "1669dc1dd3464009d0a71a44505bf9a9f38a278f1a054e023b6e2b9636c727f9",
+      "captures": 4,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P18",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P18-local-thread.json",
+      "sha256": "3576c9d76c5f8f5b505399e90c958b46b5c87f02d95466d885e43132e02d8517",
+      "captures": 5,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P19",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P19.json",
+      "sha256": "cb13f0a54705e9c3f02f68b716e2135340e4184195550b5b3ebe73a908a32a96",
+      "captures": 5,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "P20",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/P20.json",
+      "sha256": "eb6db9af936f68d19ba290e4ef94a57b98435e3e60e2bb19b16f999a7c696b2a",
+      "captures": 7,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "A01",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/A01.json",
+      "sha256": "2bca84a051efca2bb57b95df3cc9ff606d2514e8de3172a33cc3b94e7f394bf6",
+      "captures": 12,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "M01",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/M01.json",
+      "sha256": "180f2de44bd4588f22eb2d83c7f68687d42410ed5ecca71b0f8a8171f01e132b",
+      "captures": 4,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "M02",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/M02.json",
+      "sha256": "02422e7477f4f9415f6120a0cab8d93bd5ed4b6e017b4b8625045713107d044c",
+      "captures": 4,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "M03",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/M03.json",
+      "sha256": "710727fc572d9b3ba0491e7d8d68b5d5ca9633bde720da2da0881f144da0c9b2",
+      "captures": 4,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "M04",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/M04.json",
+      "sha256": "4d91b202a2e14a256567dbe3d586bfa3d5b60157d79b299f561e7a3aa218c197",
+      "captures": 5,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "M05",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/M05.json",
+      "sha256": "4e730315f562455f7651da486bf61085bb42c5c1b7bd0784cc6eed0765ab63e0",
+      "captures": 5,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "M06",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/M06.json",
+      "sha256": "71c74a15505420ceda096127e0342ca4e7f8c570ed339fb82dbbf7a3c7c5dcb9",
+      "captures": 5,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    },
+    {
+      "id": "M07",
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/M07.json",
+      "sha256": "fda0a8e439c023a0b693e5bfa1f9bb066615a2fefd6e2f837c0c66a78698fc51",
+      "captures": 10,
+      "countMatches": true,
+      "all960398DPR2": true,
+      "allNoDocumentOverflow": true,
+      "bottomReachedWithin1CSSpx": true,
+      "allImagesExist": true
+    }
+  ],
+  "latest45DirectlyReadImages": [
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/E02-local-error-component-01.jpg",
+      "sha256": "be507c91d06d35765bacd8a1849d1f731b1c9115bf4bf7ceb4351329ddabfc3a",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/E02-local-error-component-02.jpg",
+      "sha256": "360dbbc681b6172f7fb9cb9048f2aeaadb484cd4be23f340cfa9547e71c9abc4",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/E02-local-reset.jpg",
+      "sha256": "9b2d64b184e342cb9413bdfb077423c4f0a7a57976e198db5faee57adb9c9659",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-dock-one.jpg",
+      "sha256": "a6b5fda78a15957cda8578c89587b39a608004a6f936cc97c618e16b425be245",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-dock-three.jpg",
+      "sha256": "9be507d46b7a86f16b1238001cc551ad00af98ae5bd73747d9ecdf63e61eee72",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-dock-footer-focus.jpg",
+      "sha256": "0ae0be3b952c36a9378c9465000700583f400921b0a214091159384dc9bbf6ae",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-footer-before-dock-focus.jpg",
+      "sha256": "dd1bcd1f50c1eff675add4ab5f9e1efb1710c622820fa9f1b9e0d36ef70ec0b0",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-skip-main.jpg",
+      "sha256": "0647e7758c2954f84d5e430e4573ab863d906625761d7162eaf803d270a12cd1",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-local-save-toast.jpg",
+      "sha256": "be53c7472368889386460ee08382c84aa3f015c9565b9c7723bb03024a39243d",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S04-report-inline.jpg",
+      "sha256": "c3bb1dbdf515a8ff72bc4d55a0c764160e255b6fcfb8805bc6c3d1e0267b9d98",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S04-community-delete-review-01.jpg",
+      "sha256": "79ad1de0b647d28306b7dc023e599d8defde5f67ef4360a73cbbdb5d8f1f4ed9",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-local-save-toast-expired.jpg",
+      "sha256": "f600453f61d822c7e857f3a2c46eec190ebcdd114f77a8f4048eb339bab88090",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-feedback-form-01.jpg",
+      "sha256": "e3171dc5aeb6d84e2d50d2c38d1b1d9a926700e32f23f3c78f85231c0ccb4898",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-feedback-form-02.jpg",
+      "sha256": "94e459da09974c9dcdb4acd603aa0506c7688b1f3f2699540686d3d03d2a617d",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-feedback-form-03.jpg",
+      "sha256": "de1aee29f53d6408e03612fd29c6d9329965633ea15c5aef1c7b9d02acd57cd8",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S05-saved-record-edit-01.jpg",
+      "sha256": "27c648b3ce54a43ff68d47fba89de49ffce626e8a690d5763fb74808b7bcdd86",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S05-saved-record-edit-02.jpg",
+      "sha256": "24e099c3e2d840db4256c30865b1adf06ffa9612837316f757cd1f9115a6a69a",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S04-feature-proposal-form-01.jpg",
+      "sha256": "bede8c62967e15989c3a257968ebf68c008fd26fa1337df5beeb92e9876d4630",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S04-feature-proposal-form-02.jpg",
+      "sha256": "d2e57b2fc3b564b1cbba724f8b79a8bf7266465ea45c90adbd952aa4a40db114",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S04-feature-proposal-form-03.jpg",
+      "sha256": "4350ffe640b06e569d19108bd17c3f7dc845cd91a2543ad98349cdc38f1ac3b5",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S04-feature-proposal-form-04.jpg",
+      "sha256": "c27f82bbd033b7dc3658f60bd150a9e5717ea6af6a523f4236e258f6debe80a5",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/M02-local-long-saved-01.jpg",
+      "sha256": "f2e9d40174e083fab0a846b554eb748a21584f26d4da0dc77ecbd6ab0c34eb94",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/M02-local-long-saved-02.jpg",
+      "sha256": "92f1d4af29e708565dacd5c2a14622269a1ce6a1ef39091b695911bdd0340c68",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/M02-local-long-saved-03.jpg",
+      "sha256": "bb1cf95d1dce5b72ff02bd7a1fdb925e275054c3a745b31aa18875a71e0feda8",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/M02-local-long-saved-04.jpg",
+      "sha256": "0dd8b8f9e27b89470dc476fee1cdc896f90673ded66dbea96e33040adb021c00",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S03-existing-score-filters-01.jpg",
+      "sha256": "d732c4701494683494a51036d3d425a053eeb930c7ad48e163d8325ebb3a010d",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S03-existing-score-filters-02.jpg",
+      "sha256": "87db1fd33fc1661c131dca5e53b14fec489a2821d259731b4cf99bec2ee18eef",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S03-existing-score-filters-03.jpg",
+      "sha256": "fa3e2f4c50386ab04449a667c19a626e6d9278e3b86faa81ed67f0548c5aa9e3",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S06-new-custom-paused-expanded-01.jpg",
+      "sha256": "e22c34d1a803b5613e09037e02085c52468654ffa9018e969f895ee37a0b78c4",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S06-new-custom-paused-expanded-02.jpg",
+      "sha256": "2d395ea7d2b7b663d03ff2456458ff6e47e74568033e6e758b1b10f4ee5cb0e4",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S06-new-custom-paused-expanded-03.jpg",
+      "sha256": "d9f73bc792f756f14e8dfd181cb3fd712ac8f2a50b067f08fda25ee51ac85745",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S06-new-custom-paused-expanded-04.jpg",
+      "sha256": "2c931873adf570fb46a4772da6eef9e507b322046b3c3574fc83adaf5c56bf1a",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S06-new-custom-paused-expanded-05.jpg",
+      "sha256": "174d4cff6ba0de94d6fb9b9900df1628a54c957bbf8e4bb197ca928dc6eab269",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S06-new-custom-paused-expanded-06.jpg",
+      "sha256": "ed6438782a93fae5c32b5583298319cab485924462d6678e37cd956e9657c18c",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S06-new-custom-paused-expanded-07.jpg",
+      "sha256": "665a79089c7e7ba7cb25baab0bbe78f3fb95b3b5510aa6b9cdf5b3468c9dc480",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S06-new-custom-paused-expanded-08.jpg",
+      "sha256": "5cca1646a8db771e304e656e99911dd5a2783a212ead09ebbcc47e1764cf1e45",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S06-new-custom-paused-expanded-09.jpg",
+      "sha256": "e056a3d94f57150dfca65be613ac2f9c57aa30608392e5821bda1e7ef4ff20e5",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S06-new-custom-paused-expanded-10.jpg",
+      "sha256": "047f4f353507d51ceca9f46086d867edc633c0722881ace22c2b91f244095741",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-save-toast-transition-0.jpg",
+      "sha256": "524867254a48720b683d7d1ee869b103aa3d837e628ad22e123c255c10d99566",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-save-toast-transition-1.jpg",
+      "sha256": "148900035caf986aae405a4dbb78d18763a1ded3a5d6c02b29e7144610f58295",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-save-toast-transition-2.jpg",
+      "sha256": "771e637e6add3a490eb50bedd74ebe45448c81a35c6c6709f2a3ef0f67092eb2",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-save-toast-transition-3.jpg",
+      "sha256": "9a7ed1dca5dac15f272b0b53942393eb05a8ec0447598f5a32346f9ebac70711",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-save-toast-transition-4.jpg",
+      "sha256": "782d85d2287c46d65fc60d5fee67216fb829d568ec70eb64e2030bcaa15bfe45",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-save-toast-transition-5.jpg",
+      "sha256": "974dd26ed2047a0c2f185c166de007cd25c9010e873afa88ccd1e3e0b53a51ae",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    },
+    {
+      "file": "/Users/bigmac_moon/dev/ai_score/docs/audits/v19-native-zoom/S01-save-toast-transition-6.jpg",
+      "sha256": "ef2a3409b506a24093326a5b4004f8092d7f4391d9c004fc933b1c875af3ab9f",
+      "format": "JPEG",
+      "raster": [
+        953,
+        395
+      ],
+      "reviewMode": "Direct original view_image inspection in this latest bounded task, followed by independent file/header verification; not a new live browser run."
+    }
+  ],
+  "reportReferences": [
+    {
+      "file": "/private/tmp/ais-v19-zoom-public-1-review.md",
+      "sha256": "4cc6c5295ee726ff769bbc765e740123865a1856e87f83f2d7b68aafa9539f16"
+    },
+    {
+      "file": "/private/tmp/ais-v19-zoom-public-2-review.md",
+      "sha256": "62b2c3db7197a1e0dcb46431e84d857a1a0255f336d0a88fd7dfb4776d015758"
+    },
+    {
+      "file": "/private/tmp/ais-v19-zoom-public-states-review.md",
+      "sha256": "2a4a9c151e74644725d7d044780b37e4b114b534a27f5f4b9c8a8f0fb6aee23d"
+    },
+    {
+      "file": "/private/tmp/ais-v19-zoom-private-review.md",
+      "sha256": "22eccb34caebc4253a7bad17246b0c5d9027d5a3af0441035e31d5d4204545a6"
+    },
+    {
+      "file": "/private/tmp/ais-v19-subscription-identity-review.md",
+      "sha256": "50b46bf928d0397840ad7817825db7225e243b8d8d60452a998a11aa657a40b5"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "/private/tmp/ais-v19-zoom-completeness-review.md",
+      "sha256": "dc2e5693d2af61eacf7245e4eaf7a1c55d257ace218b5c7c4164158101c647fc",
+      "bytes": 13235
+    },
+    {
+      "file": "/private/tmp/ais-v19-score-zoom-candidate.json",
+      "sha256": "b672e955b2949fd01c0aa73afbc0e0d4df030b10ad4a678ff5fe074cc6046042",
+      "bytes": 143749
+    },
+    {
+      "file": "/private/tmp/ais-v19-score-zoom-candidate.md",
+      "sha256": "30574b42645e2a48e58a3245851fa825c1fbabb2146a67e1080387dfe67a3ce6",
+      "bytes": 20287
+    },
+    {
+      "file": "/private/tmp/ais-v19-quality-review-zoom-candidate.md",
+      "sha256": "8f9c79e3627ff442ce150d4c9867dffd2fe8bc99298b0c4e795cdca6985a8415",
+      "bytes": 36772
+    }
+  ],
+  "scope": "No source,authoritative docs,Git,Sites,browser,operations or goal state changes. Historical guide-only candidate preserved,not overwritten."
+}

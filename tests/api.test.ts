@@ -293,3 +293,31 @@ describe("API routes", () => {
     expect(audit.auditLogs[0].actor.role).toBe("admin");
   });
 });
+
+describe("resources API", () => {
+  it("returns the useful-sites directory", async () => {
+    const { GET } = await import("@/app/api/resources/route");
+    const response = await GET(new Request("http://localhost/api/resources"));
+    const data = await response.json();
+    expect(response.status).toBe(200);
+    expect(Array.isArray(data.resources)).toBe(true);
+  });
+
+  it("filters the directory by group and pricing", async () => {
+    const { GET } = await import("@/app/api/resources/route");
+    const response = await GET(new Request("http://localhost/api/resources?group=reference&freeOnly=true"));
+    const data = await response.json();
+    expect(response.status).toBe(200);
+    for (const site of data.resources) {
+      expect(site.group).toBe("reference");
+      expect(site.pricing).not.toBe("paid");
+    }
+  });
+
+  it("ignores an unknown group instead of returning nothing", async () => {
+    const { GET } = await import("@/app/api/resources/route");
+    const all = await (await GET(new Request("http://localhost/api/resources"))).json();
+    const bogus = await (await GET(new Request("http://localhost/api/resources?group=nope"))).json();
+    expect(bogus.resources.length).toBe(all.resources.length);
+  });
+});

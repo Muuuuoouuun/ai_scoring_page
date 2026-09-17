@@ -1,0 +1,7 @@
+import Link from '@/components/Link';
+import {notFound} from 'next/navigation';
+import {updates,dateLabel} from '@/lib/content';
+import {ToolLogo} from '@/components/ToolUI';
+import SaveContent from '@/components/SaveContent';
+import {ArrowUpRight} from '@/components/Icons';
+export default async function Page({params}:{params:Promise<{id:string}>}){const {id}=await params,u=updates.find(u=>u.id===id);if(!u)notFound();return <main className="container page article" id="main"><div className="breadcrumb"><Link href="/news">소식·행사</Link><span>/</span><span>공식 업데이트</span></div><div className="actions"><ToolLogo tool={u.tool} size={36}/><span>{u.tool.name}</span><span className="badge">공식 출처 요약</span></div><h1>{u.title}</h1><p className="metadata">게시 {dateLabel(u.publishedAt)} · 내용 확인 {dateLabel(u.tool.checkedAt)}</p><div className="line-section"><p>{u.summary}</p><dl className="line-section"><dt>적용 대상</dt><dd>{u.audience}</dd><dt>제공 상태</dt><dd>{u.rollout}</dd><dt>확인 방식</dt><dd>공식 문서 확인 · 직접 실행 결과 미등록</dd></dl><p className="note" style={{marginTop:23}}>서비스 제공사의 공지에서 핵심 내용을 정리했습니다. 실제 적용 시점과 제공 플랜은 계정·지역에 따라 다를 수 있으므로 원문에서 확인하세요.</p><div className="actions" style={{marginTop:23}}><a href={u.sourceUrl} target="_blank" rel="noreferrer" className="button primary">공식 원문 읽기<ArrowUpRight size={16}/></a><SaveContent type="news" target={u.id} title={u.title}/></div></div><div className="line-section"><Link className="text-link" href={'/tools/'+u.id}>{u.tool.name} 기능·조건 확인<ArrowUpRight size={15}/></Link></div></main>;}

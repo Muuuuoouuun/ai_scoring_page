@@ -20,6 +20,12 @@ export function Hero() {
         <Link className="button button-lg" href="/search">
           {t.heroCta}
         </Link>
+        <Link className="secondary-button" href="/recommend">
+          {t.recommendCta}
+        </Link>
+        <span className="hero-note" aria-hidden="true">
+          Human signal over tool noise
+        </span>
       </div>
     </section>
   );

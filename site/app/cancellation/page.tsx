@@ -1,0 +1,3 @@
+import CancellationHelp from '@/components/CancellationHelp';
+import Link from '@/components/Link';
+export default async function Page({searchParams}:{searchParams:Promise<{tool?:string}>}){const {tool}=await searchParams;return <main className="container page" id="main"><div className="page-title"><div><span className="eyebrow">Subscription help</span><h1>구독 해지 안내</h1><p>실제 결제 경로를 확인하고 공식 안내로 진행하세요.</p></div><Link className="button secondary" href="/my?tab=cancellation">내 해지 진행 기록</Link></div><CancellationHelp initialTool={tool}/><p className="note" style={{marginTop:24}}>일반 안내는 로그인 없이 이용할 수 있습니다. 개인 구독과 해지 기록은 마이페이지에 저장됩니다.</p></main>;}

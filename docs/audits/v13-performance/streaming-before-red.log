@@ -1,0 +1,35 @@
+{"method":"dependency/stream-order check, not a latency budget","node":"v24.18.0","react":"19.2.6","homeSHA256":"810663475dc2a83450390f37a7104df83ef389a2ea46bc29542ccf45d8083782","clientBoundaryModules":["components/ToolUI","components/Icons"]}
+{"case":"pending community dependency","heroBefore":false,"formBefore":false,"quickSearchBefore":false,"postBefore":false,"postAfter":true,"homeSHA256":"810663475dc2a83450390f37a7104df83ef389a2ea46bc29542ccf45d8083782","queryCount":1}
+✖ Home hero and search shell stream while recent published posts remain pending; post follows release (114.273167ms)
+✔ real Home SQL keeps newest three published top-level posts and excludes hidden/deleted/reply rows (35.493917ms)
+✔ empty community returns truthful invitation without a fabricated published post (33.650458ms)
+✔ D1 failure keeps shell and explicit unavailable state, distinct from no published posts (24.125958ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 365.643709
+
+✖ failing tests:
+
+test at ../../../../../private/tmp/ais-v13-streaming-test-proposal.mjs:105:1
+✖ Home hero and search shell stream while recent published posts remain pending; post follows release (114.273167ms)
+  AssertionError [ERR_ASSERTION]: RED dependency: Home hero is blocked by the pending recent-posts D1 read
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///private/tmp/ais-v13-streaming-test-proposal.mjs:113:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+exit_code=1

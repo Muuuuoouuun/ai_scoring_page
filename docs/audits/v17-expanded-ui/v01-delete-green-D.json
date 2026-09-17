@@ -1,0 +1,41 @@
+{
+  "scroll": {
+    "height": 2716,
+    "width": 1425,
+    "x": 0,
+    "y": 1803
+  },
+  "url": "http://localhost:5173/my?tab=savings",
+  "viewport": {
+    "doc": 1425,
+    "height": 900,
+    "scale": 1,
+    "width": 1440
+  },
+  "visibleText": [
+    "필수 기능·이용 기간·선결제 조건",
+    "유지안: 필수 기능·사용량·전체 이용 기간미확인충족·확인미충족",
+    "변경안: 필수 기능·사용량·전체 이용 기간미확인충족·확인미충족",
+    "새 요금·할인 적용 자격 (제한 없음 포함)미확인충족·확인미충족",
+    "서비스·결제 경로를 바꿀 의향미확인충족·확인미충족",
+    "한 번에 준비 가능한 금액 · KRW",
+    "한 번에 준비 가능한 금액 · USD",
+    "한 번에 준비 가능한 금액 · EUR",
+    "한 번에 준비 가능한 금액 · JPY",
+    "비용이 낮아도 필요한 기능이나 이용 기간을 충족하지 못하면 추천하지 않습니다. 준비 금액은 같은 날의 총청구액과 비교합니다.",
+    "저장한 요금 비교 1개",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA → V10-QA-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+    "2026-09-12 – 2027-09-11 · 검토 중 · 저장 2026-09-12",
+    "원계약·결제 기록이 변경되었습니다. 저장 당시 결과를 유지합니다.",
+    "월·연 결제 간단 계산",
+    "동일 기간의 요금 비교",
+    "월 결제와 연 결제의 지출을 같은 사용 기간으로 비교합니다.",
+    "월 결제 금액 *",
+    "연 결제 금액 · 1년 총액 *",
+    "사용 예정 기간 (개월)",
+    "통화KRWUSDEURJPY",
+    "요금 비교 삭제",
+    "‘V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA → V10-QA-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB’ 비교 기록을 삭제할까요?",
+    "AI·SaaS를 이해하고, 나에게 맞게."
+  ]
+}

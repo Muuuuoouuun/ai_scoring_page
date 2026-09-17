@@ -19,28 +19,13 @@ export function Gnb() {
           <small>AI tool field notes</small>
         </span>
       </Link>
-      <div className="nav-links" role="navigation" aria-label={lang === "ko" ? "주요 페이지" : "Primary pages"}>
-        {primaryNavigation.map((item) => {
-          const isActive = isNavigationActive(item, pathname);
-
-          return (
-            <Link
-              aria-current={isActive ? "page" : undefined}
-              className={`nav-link ${isActive ? "active" : ""}`}
-              href={item.href}
-              key={item.href}
-            >
-              <span className="nav-link-code" aria-hidden="true">
-                <JournalIcon name={item.icon} />
-                <small>{item.code}</small>
-              </span>
-              <span className="nav-link-copy">
-                <strong>{item.label[lang]}</strong>
-                <small>{item.summary[lang]}</small>
-              </span>
-            </Link>
-          );
-        })}
+      <div className="nav-links">
+        <Link href="/search">{t.navSearch}</Link>
+        <Link href="/recommend">{t.navRecommend}</Link>
+        <Link href="/compare">{t.navCompare}</Link>
+        <Link href="/resources">{t.navResources}</Link>
+        <Link href="/community">{t.navCommunity}</Link>
+        <Link href="/about">{t.navAbout}</Link>
       </div>
       <div className="nav-actions">
         <Link className="nav-start-link" href="/search">

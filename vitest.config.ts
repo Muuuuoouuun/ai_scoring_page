@@ -8,6 +8,8 @@ export default defineConfig({
     }
   },
   test: {
-    environment: "node"
+    environment: "node",
+    // 루트 Next 앱의 테스트만 실행합니다. site/ 는 자체 툴체인(node --test)을 씁니다.
+    include: ["tests/**/*.test.ts"]
   }
 });

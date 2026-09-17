@@ -1,0 +1,460 @@
+{
+  "sourceAtStart": "79afc174c8add32c772839c4d3556d03e91213bd",
+  "finalSource": "d5efa3e11997e4a6d19cf28029246546e3a2a5bc",
+  "nativeZoomEvidence": [
+    "actual-chrome-200.txt",
+    "actual-local-chrome-200.txt"
+  ],
+  "rasterNote": "Regular tab screenshots are953x395; actual CSSviewport960x398. Native screenshot sizes differ.",
+  "rows": [
+    {
+      "id": "P01",
+      "evidence": "P01.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/",
+      "environment": "production current signed-in owner",
+      "captures": 10,
+      "startY": 0,
+      "endY": 1747.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P02",
+      "evidence": "P02.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/explore",
+      "environment": "production current signed-in owner",
+      "captures": 14,
+      "startY": 0,
+      "endY": 2468,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P03",
+      "evidence": "P03-loaded.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/search?q=Notion",
+      "environment": "production current signed-in owner",
+      "captures": 6,
+      "startY": 0,
+      "endY": 888,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P04",
+      "evidence": "P04.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/tools/notion",
+      "environment": "production current signed-in owner",
+      "captures": 11,
+      "startY": 0,
+      "endY": 1976.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P05",
+      "evidence": "P05.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/compare?ids=chatgpt,claude,notion",
+      "environment": "production current signed-in owner",
+      "captures": 9,
+      "startY": 0,
+      "endY": 1448,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P06",
+      "evidence": "P06.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/recommend",
+      "environment": "production current signed-in owner",
+      "captures": 10,
+      "startY": 0,
+      "endY": 1671.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P07",
+      "evidence": "P07-loaded.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/ranking",
+      "environment": "production current signed-in owner",
+      "captures": 3,
+      "startY": 0,
+      "endY": 391,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P08",
+      "evidence": "P08.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/guides",
+      "environment": "production current signed-in owner",
+      "captures": 5,
+      "startY": 0,
+      "endY": 688.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P09",
+      "evidence": "P09.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/guides/notion-task-board",
+      "environment": "production current signed-in owner",
+      "captures": 11,
+      "startY": 0,
+      "endY": 1960.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P10",
+      "evidence": "P10.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/news",
+      "environment": "production current signed-in owner",
+      "captures": 20,
+      "startY": 0,
+      "endY": 3633.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P11",
+      "evidence": "P11.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/news?tab=events",
+      "environment": "production current signed-in owner",
+      "captures": 5,
+      "startY": 0,
+      "endY": 712,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P12",
+      "evidence": "P12.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/news?tab=feed",
+      "environment": "production current signed-in owner",
+      "captures": 24,
+      "startY": 0,
+      "endY": 4522,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P13",
+      "evidence": "P13.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/news/chatgpt",
+      "environment": "production current signed-in owner",
+      "captures": 5,
+      "startY": 0,
+      "endY": 771.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P14",
+      "evidence": "P14.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/promotions",
+      "environment": "production current signed-in owner",
+      "captures": 7,
+      "startY": 0,
+      "endY": 1061,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P15",
+      "evidence": "P15.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/cancellation",
+      "environment": "production current signed-in owner",
+      "captures": 5,
+      "startY": 0,
+      "endY": 650,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P16",
+      "evidence": "P16.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/sources",
+      "environment": "production current signed-in owner",
+      "captures": 19,
+      "startY": 0,
+      "endY": 3553,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P17",
+      "evidence": "P17-loaded.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/community",
+      "environment": "production current signed-in owner",
+      "captures": 4,
+      "startY": 0,
+      "endY": 461.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P18",
+      "evidence": "P18-local-thread.json",
+      "url": "http://localhost:5173/community/1e742770-c630-4696-b385-037e20a23fbe",
+      "environment": "local synthetic QA",
+      "captures": 5,
+      "startY": 0,
+      "endY": 757.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P19",
+      "evidence": "P19.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/about",
+      "environment": "production current signed-in owner",
+      "captures": 5,
+      "startY": 0,
+      "endY": 766.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "P20",
+      "evidence": "P20.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/privacy",
+      "environment": "production current signed-in owner",
+      "captures": 7,
+      "startY": 0,
+      "endY": 1144.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "A01",
+      "evidence": "A01.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/admin",
+      "environment": "production current signed-in owner",
+      "captures": 12,
+      "startY": 0,
+      "endY": 2093,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "M01",
+      "evidence": "M01.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/my?tab=library",
+      "environment": "production current signed-in owner",
+      "captures": 4,
+      "startY": 0,
+      "endY": 481.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "M02",
+      "evidence": "M02.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/my?tab=saved",
+      "environment": "production current signed-in owner",
+      "captures": 4,
+      "startY": 0,
+      "endY": 481.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "M03",
+      "evidence": "M03.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/my?tab=subscription",
+      "environment": "production current signed-in owner",
+      "captures": 4,
+      "startY": 0,
+      "endY": 511,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "M04",
+      "evidence": "M04.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/my?tab=savings",
+      "environment": "production current signed-in owner",
+      "captures": 5,
+      "startY": 0,
+      "endY": 618.5,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "M05",
+      "evidence": "M05.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/my?tab=cancellation",
+      "environment": "production current signed-in owner",
+      "captures": 5,
+      "startY": 0,
+      "endY": 696,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "M06",
+      "evidence": "M06.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/my?tab=notifications",
+      "environment": "production current signed-in owner",
+      "captures": 5,
+      "startY": 0,
+      "endY": 666,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "M07",
+      "evidence": "M07.json",
+      "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/my?tab=settings",
+      "environment": "production current signed-in owner",
+      "captures": 10,
+      "startY": 0,
+      "endY": 1596,
+      "bottomReached": true,
+      "documentOverflow": 0,
+      "cssViewport": [
+        960,
+        398
+      ],
+      "devicePixelRatio": 2
+    }
+  ],
+  "notSufficientAlone": "Expanded form/table/state inspections and independent visual review are separately required; this principal inventory alone is not gate PASS."
+}

@@ -12,6 +12,10 @@ import { CapabilityComparisonTable } from "@/components/CapabilityComparisonTabl
 import { FeatureChecklistSection } from "@/components/FeatureChecklistSection";
 import { PatchNotesSection } from "@/components/PatchNotesSection";
 import { WorkUsageGuide } from "@/components/WorkUsageGuide";
+import { KeyFeaturesCard } from "@/components/KeyFeaturesCard";
+import { ExternalRatingsCard } from "@/components/ExternalRatingsCard";
+import { SourceReferences } from "@/components/SourceReferences";
+import { RatingSummaryCard } from "@/components/RatingSummaryCard";
 import { useLanguage } from "@/components/LanguageProvider";
 import { DiscussionContent } from "@/components/DiscussionContent";
 import { CommunityContent } from "@/components/CommunityContent";
@@ -116,6 +120,9 @@ export function ToolReviewContent({
           totalScore={insight.totalScore}
           scoreBreakdown={insight.scoreBreakdown}
           variant="hero"
+          note={insight.isResearched ? t.scoreNote : undefined}
+          score={insight.score}
+          rank={insight.rank}
         />
       </section>
 
@@ -162,17 +169,30 @@ export function ToolReviewContent({
             <section className="card">
               <strong>{t.reviewSummary}</strong>
               <p>{insight.oneLine}</p>
+              {insight.researchedAt ? (
+                <small className="research-stamp">
+                  {t.researchedAt}: {insight.researchedAt}
+                </small>
+              ) : null}
             </section>
+            <KeyFeaturesCard
+              features={insight.keyFeatures}
+              pricingSummary={insight.pricingSummary}
+              koreaNote={insight.koreaNote}
+            />
+            <CapabilityComparisonTable toolId={tool.id} toolName={tool.name} rows={insight.comparisons} />
             <BestWorstNarratives bestCase={tool.bestCase} worstCase={tool.worstCase} />
             <CapabilityComparisonTable toolName={tool.name} rows={insight.comparisons} />
             <OneLineReviewForm toolId={tool.id} />
             <PatchNotesSection toolId={tool.id} notes={insight.patchNotes} />
+            <SourceReferences sources={insight.sources} researchedAt={insight.researchedAt} />
           </div>
 
           <aside className="review-sidebar-column">
+            <RatingSummaryCard toolId={tool.id} score={insight.score} rank={insight.rank} />
             <WorkUsageGuide playbook={insight.workPlaybook} />
-            <ImpactMeterGrid impact={tool.impact} benchmark={benchmark} />
-            <CapabilityComparisonTable toolName={tool.name} rows={insight.comparisons} />
+            <ImpactMeterGrid impact={tool.impact} />
+            <ExternalRatingsCard ratings={insight.externalRatings} researchedAt={insight.researchedAt} />
             <AlternativesSection alternatives={tool.alternatives} />
           </aside>
         </div>
@@ -193,6 +213,7 @@ export function ToolReviewContent({
 
       <section className="section">
         <h2>{t.relatedTools}</h2>
+        <p className="text-muted">{t.relatedDesc}</p>
         <div className="grid grid-3">
           {related.map((item) => (
             <ToolCard key={item.id} tool={item} />

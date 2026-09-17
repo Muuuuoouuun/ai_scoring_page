@@ -6,6 +6,7 @@ import { VerdictBadgeList } from "@/components/VerdictBadgeList";
 import { ProductLogo } from "@/components/ProductLogo";
 import { GenrePillList } from "@/components/GenrePillList";
 import { useLanguage } from "@/components/LanguageProvider";
+import { CompareToggleButton } from "@/components/CompareToggleButton";
 
 /**
  * 상세 페이지 히어로.
@@ -18,18 +19,20 @@ import { useLanguage } from "@/components/LanguageProvider";
  * 10개 도구가 전부 같았던 "TOOL FIELD NOTE" kicker와 "사람 중심 판단 리뷰" 문구는 뺐습니다.
  */
 export function ToolHeader({ tool }: { tool: Tool }) {
-  const total = getTotalScore(tool.review.scoreBreakdown);
+  const { lang, t } = useLanguage();
 
   return (
     <section className="card tool-hero-card">
+      <span className="section-kicker">TOOL FIELD NOTE</span>
       <div className="tool-title-row">
         <ProductLogo name={tool.name} size="lg" />
         <div className="tool-title-body">
           <h1>{tool.name}</h1>
-          <span className="tool-hero-score">
-            {total}
-            <small>/100</small>
-          </span>
+          <small>
+            {tool.category ? `${tool.category} · ` : ""}
+            {lang === "ko" ? "사람 중심 판단 리뷰" : "Human-centered judgment review"}
+          </small>
+          {tool.discontinued ? <span className="badge discontinued-badge">{t.discontinuedLabel}</span> : null}
         </div>
       </div>
       <p>{tool.description}</p>
@@ -41,20 +44,16 @@ export function ToolHeader({ tool }: { tool: Tool }) {
           </span>
         ))}
       </div>
-      <VerdictBadgeList badges={tool.verdictBadges} />
-
-      <p className="tool-hero-desc">{tool.description}</p>
-
-      <div className="badge-list" aria-label={"문제 상황"}>
-        {tool.problemTagIds.map((tagId) => {
-          const tag = getTag(tagId);
-          if (!tag) return null;
-          return (
-            <Link className="badge context-badge" key={tagId} href={`/search?tag=${tagId}`}>
-              {getTagLabel(tag)}
-            </Link>
-          );
-        })}
+      <div className="tool-hero-footer">
+        <VerdictBadgeList badges={tool.verdictBadges} />
+        <div className="tool-hero-actions">
+          <CompareToggleButton toolId={tool.id} />
+          {tool.website ? (
+            <a className="tool-website-link" href={tool.website} target="_blank" rel="noopener noreferrer">
+              {t.websiteLabel} ↗
+            </a>
+          ) : null}
+        </div>
       </div>
     </section>
   );

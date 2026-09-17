@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1789145283246,
+      "tag": "0000_open_vector",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1789200105404,
+      "tag": "0001_easy_scarlet_spider",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1789216098249,
+      "tag": "0002_sloppy_carmella_unuscione",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1789221241078,
+      "tag": "0003_condemned_darkhawk",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1789224856027,
+      "tag": "0004_panoramic_queen_noir",
+      "breakpoints": true
+    }
+  ]
+}

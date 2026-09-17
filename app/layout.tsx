@@ -5,7 +5,7 @@ import { LanguageProvider } from "@/components/LanguageProvider";
 import { Gnb } from "@/components/Gnb";
 import { JournalRail } from "@/components/JournalRail";
 import { AppFooter } from "@/components/AppFooter";
-import { BottomDock } from "@/components/BottomDock";
+import { CompareTray } from "@/components/CompareTray";
 
 import { GlobalBackgroundSVG } from "@/components/GlobalBackgroundSVG";
 
@@ -64,6 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Gnb />
           <JournalRail />
           {children}
+          <CompareTray />
           <AppFooter />
           <BottomDock />
         </LanguageProvider>

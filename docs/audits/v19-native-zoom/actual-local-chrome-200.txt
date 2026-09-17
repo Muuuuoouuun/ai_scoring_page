@@ -1,0 +1,4 @@
+The following is a diff from the previous accessibility tree for Window: "AIs — AI·SaaS 탐색과 활용" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~0 표준 윈도우 AIs — AI·SaaS 탐색과 활용 - 🧪 AIs 로컬 화면 검증 그룹에 속함 - Chrome - Junhyeok, URL: localhost:5173/my, Secondary Actions: Raise
++		284 container 확대/축소: 200%
++					287 container 확대/축소: 200%

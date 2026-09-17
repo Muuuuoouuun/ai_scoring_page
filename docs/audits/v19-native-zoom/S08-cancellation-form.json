@@ -1,0 +1,50 @@
+[
+  {
+    "dpr": 2,
+    "h": 358,
+    "height": 398,
+    "rh": 358.1953125,
+    "rw": 620,
+    "sh": 748,
+    "sw": 613,
+    "top": 0,
+    "url": "http://localhost:5173/my?tab=cancellation",
+    "w": 613,
+    "width": 960,
+    "x": 166.25,
+    "y": 19.8984375,
+    "file": "S08-cancellation-form-01.jpg"
+  },
+  {
+    "dpr": 2,
+    "h": 358,
+    "height": 398,
+    "rh": 358.1953125,
+    "rw": 620,
+    "sh": 748,
+    "sw": 613,
+    "top": 199,
+    "url": "http://localhost:5173/my?tab=cancellation",
+    "w": 613,
+    "width": 960,
+    "x": 166.25,
+    "y": 19.8984375,
+    "file": "S08-cancellation-form-02.jpg"
+  },
+  {
+    "dpr": 2,
+    "h": 358,
+    "height": 398,
+    "rh": 358.1953125,
+    "rw": 620,
+    "sh": 748,
+    "sw": 613,
+    "top": 390.5,
+    "url": "http://localhost:5173/my?tab=cancellation",
+    "w": 613,
+    "width": 960,
+    "x": 166.25,
+    "y": 19.8984375,
+    "file": "S08-cancellation-form-03.jpg"
+  }
+]

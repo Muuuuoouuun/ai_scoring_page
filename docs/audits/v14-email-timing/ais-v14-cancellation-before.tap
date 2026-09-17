@@ -1,0 +1,142 @@
+AIs request failed unknown
+✔ email mode, named time zone and receiving time survive the actual settings route (156.738084ms)
+✔ invalid named time zone or wall time is rejected rather than silently defaulted (60.32525ms)
+✔ opting out atomically cancels queued email before returning without changing another account (50.139625ms)
+✔ an outbox cancellation failure rolls back the settings change in the same transaction (47.287333ms)
+✔ one digest includes all new notices once and persists the provider receipt (49.530875ms)
+✔ receiving time is honored and a consumed or empty digest waits until the next local date (42.9855ms)
+✔ matched batches have a rolling 24-hour cap that persists across mode and zone changes (57.262ms)
+✔ legacy unconfirmed timing never sends; explicit time confirmation enables the current slot (39.935167ms)
+✔ parallel refresh claims one batch and makes only one first provider request (44.456709ms)
+✔ retry keeps exact bytes and key, honors backoff, and starts its window at first attempt (47.612625ms)
+✔ provider attempts stop at three and an expired ambiguous retry never gets a fresh identity (38.954667ms)
+✔ a late failed attempt cannot overwrite a newer accepted receipt after lease replacement (43.521875ms)
+✔ receipt storage failure preserves uncertainty and known provider identity instead of a new send (41.460208ms)
+✖ hide advances the revision so a concurrent settings save cannot erase it (53.497708ms)
+✖ ifAbsent returns existing settings without asking for a mutation revision (49.809125ms)
+✖ consent withdrawal immediately holds attempted retries and preserves the app notice (40.462875ms)
+✖ consent can safely restore never-attempted cancelled candidates while preserving accepted dedup (43.294583ms)
+✖ a stale generator cannot enqueue email after consent was withdrawn (42.996458ms)
+✖ status and exports expose only owned receipt history, and deletion removes every email table (37.200541ms)
+✖ account deletion during an in-flight request cannot recreate private email records (42.498292ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 13
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1194.539583
+
+✖ failing tests:
+
+test at tests/email-delivery.test.mjs:139:1
+✖ hide advances the revision so a concurrent settings save cannot erase it (53.497708ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 409
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:145:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 409,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/email-delivery.test.mjs:150:1
+✖ ifAbsent returns existing settings without asking for a mutation revision (49.809125ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  409 !== 200
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:152:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 409,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/email-delivery.test.mjs:155:1
+✖ consent withdrawal immediately holds attempted retries and preserves the app notice (40.462875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'retryable'
+  - 'needs_review'
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:159:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'retryable',
+    expected: 'needs_review',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/email-delivery.test.mjs:164:1
+✖ consent can safely restore never-attempted cancelled candidates while preserving accepted dedup (43.294583ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:167:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/email-delivery.test.mjs:172:1
+✖ a stale generator cannot enqueue email after consent was withdrawn (42.996458ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:176:9)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/email-delivery.test.mjs:179:1
+✖ status and exports expose only owned receipt history, and deletion removes every email table (37.200541ms)
+  TypeError: Cannot read properties of undefined (reading 'processing')
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:182:85)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7)
+
+test at tests/email-delivery.test.mjs:193:1
+✖ account deletion during an in-flight request cannot recreate private email records (42.498292ms)
+  AssertionError [ERR_ASSERTION]: email_deliveries
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/email-delivery.test.mjs:197:121)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

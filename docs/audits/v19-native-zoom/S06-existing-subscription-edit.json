@@ -1,0 +1,34 @@
+[
+  {
+    "dpr": 2,
+    "h": 358,
+    "height": 398,
+    "rh": 358.1953125,
+    "rw": 620,
+    "sh": 512,
+    "sw": 613,
+    "top": 0,
+    "url": "http://localhost:5173/my?tab=subscription",
+    "w": 613,
+    "width": 960,
+    "x": 166.25,
+    "y": 19.8984375,
+    "file": "S06-existing-subscription-edit-01.jpg"
+  },
+  {
+    "dpr": 2,
+    "h": 358,
+    "height": 398,
+    "rh": 358.1953125,
+    "rw": 620,
+    "sh": 512,
+    "sw": 613,
+    "top": 153.5,
+    "url": "http://localhost:5173/my?tab=subscription",
+    "w": 613,
+    "width": 960,
+    "x": 166.25,
+    "y": 19.8984375,
+    "file": "S06-existing-subscription-edit-02.jpg"
+  }
+]

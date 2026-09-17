@@ -1,0 +1,5 @@
+import Link from '@/components/Link';
+import {guides,dateLabel} from '@/lib/content';
+import {ArrowRight} from '@/components/Icons';
+import SaveContent from '@/components/SaveContent';
+export default function Page(){return <main className="container page" id="main"><div className="page-title"><div><span className="eyebrow">Put it to work</span><h1>활용 가이드</h1><p>필요한 준비부터 실제 작업 순서와 주의점까지.</p></div></div><div className="grid-2">{guides.map(g=><article className="panel" key={g.id}><span className="badge gray">{g.steps.length}단계 가이드</span><h2 style={{margin:'16px 0 10px',fontSize:23}}><Link href={'/guides/'+g.id}>{g.title}</Link></h2><p style={{fontSize:13,marginBottom:21}}>{g.summary}</p><div className="section-heading" style={{margin:0}}><Link className="text-link" href={'/guides/'+g.id}>가이드 읽기<ArrowRight size={15}/></Link><SaveContent type="guide" target={g.id} title={g.title}/></div><span className="metadata" style={{marginTop:17}}>공식 문서 기반 · 확인 {dateLabel(g.checkedAt)}</span></article>)}</div></main>;}

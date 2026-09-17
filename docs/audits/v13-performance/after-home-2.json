@@ -1,0 +1,137 @@
+{
+  "capturedAt": "2026-09-12T13:15:59.287Z",
+  "documentWidth": 1265,
+  "elapsedMs": 10002,
+  "framed": false,
+  "images": [
+    {
+      "alt": "ChatGPT 공식 앱 아이콘",
+      "loaded": true,
+      "source": "/api/logos/chatgpt"
+    },
+    {
+      "alt": "GitHub 공식 마크",
+      "loaded": true,
+      "source": "/api/logos/github-copilot"
+    },
+    {
+      "alt": "Make 로고",
+      "loaded": true,
+      "source": "/api/logos/make"
+    },
+    {
+      "alt": "ChatGPT 공식 앱 아이콘",
+      "loaded": true,
+      "source": "/api/logos/chatgpt"
+    },
+    {
+      "alt": "Claude 로고",
+      "loaded": true,
+      "source": "/api/logos/claude"
+    },
+    {
+      "alt": "Notion 로고",
+      "loaded": true,
+      "source": "/api/logos/notion"
+    },
+    {
+      "alt": "Perplexity 로고",
+      "loaded": true,
+      "source": "/api/logos/perplexity"
+    },
+    {
+      "alt": "Cursor 로고",
+      "loaded": true,
+      "source": "/api/logos/cursor"
+    },
+    {
+      "alt": "Figma 로고",
+      "loaded": true,
+      "source": "/api/logos/figma"
+    }
+  ],
+  "initialDocumentPath": "/",
+  "initialVisibility": "visible",
+  "longTasks": {
+    "count": 0,
+    "maxMs": 0,
+    "over50Ms": 0,
+    "supported": true,
+    "totalMs": 0
+  },
+  "navigation": {
+    "domCompleteMs": 581.9000000059605,
+    "domInteractiveMs": 570.7000000178814,
+    "encodedBytes": 14870,
+    "responseEndMs": 249,
+    "transferBytes": 15170,
+    "type": "navigate"
+  },
+  "observerStartedAt": 586,
+  "path": "/",
+  "rawLayout": {
+    "count": 0,
+    "sessionMax": 0,
+    "supported": true
+  },
+  "readings": {
+    "CLS": {
+      "id": "v4-1789218949914-5860117005682",
+      "navigationType": "navigate",
+      "rating": "good",
+      "value": 0
+    },
+    "FCP": {
+      "id": "v4-1789218949914-9822927891793",
+      "navigationType": "navigate",
+      "rating": "good",
+      "value": 612
+    },
+    "INP": {
+      "id": "v4-1789218949914-2245018585235",
+      "navigationType": "navigate",
+      "rating": "good",
+      "value": 56
+    },
+    "LCP": {
+      "id": "v4-1789218949914-6147043873348",
+      "navigationType": "navigate",
+      "rating": "good",
+      "value": 612
+    },
+    "TTFB": {
+      "id": "v4-1789218949914-4847523075662",
+      "navigationType": "navigate",
+      "rating": "good",
+      "value": 68
+    }
+  },
+  "resources": {
+    "count": 49,
+    "encodedBytes": 546547,
+    "scriptEncodedBytes": 0,
+    "transferBytes": 7200,
+    "unknownSizes": 24
+  },
+  "scrollWidth": 1265,
+  "supportedEntries": [
+    "element",
+    "event",
+    "first-input",
+    "interaction-contentful-paint",
+    "largest-contentful-paint",
+    "layout-shift",
+    "long-animation-frame",
+    "longtask",
+    "mark",
+    "measure",
+    "navigation",
+    "paint",
+    "resource",
+    "soft-navigation",
+    "visibility-state"
+  ],
+  "viewport": "1280 × 720",
+  "visibility": "visible",
+  "visibilityChanges": 0
+}

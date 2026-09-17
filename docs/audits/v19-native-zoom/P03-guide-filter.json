@@ -1,0 +1,38 @@
+[
+  {
+    "active": "가이드",
+    "clientWidth": 952,
+    "docWidth": 952,
+    "dpr": 2,
+    "height": 398,
+    "scrollHeight": 700,
+    "scrollY": 84.5,
+    "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/search?q=Notion&type=guide",
+    "width": 960,
+    "file": "P03-guide-filter-01.jpg"
+  },
+  {
+    "active": "가이드 1",
+    "clientWidth": 952,
+    "docWidth": 952,
+    "dpr": 2,
+    "height": 398,
+    "scrollHeight": 849,
+    "scrollY": 283.5,
+    "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/search?q=Notion&type=guide",
+    "width": 960,
+    "file": "P03-guide-filter-02.jpg"
+  },
+  {
+    "active": "가이드 1",
+    "clientWidth": 952,
+    "docWidth": 952,
+    "dpr": 2,
+    "height": 398,
+    "scrollHeight": 849,
+    "scrollY": 451,
+    "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site/search?q=Notion&type=guide",
+    "width": 960,
+    "file": "P03-guide-filter-03.jpg"
+  }
+]

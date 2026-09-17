@@ -1,0 +1,70 @@
+ABA {"requests":2,"versionRows":[{"source_key":"promotion:audit-offer:36fef7989b3c9b6955b6a44381d6135d23f54d5760c78865c709a1c4dd66ec5e","metadata":"{\"cardKey\":\"promotion:audit-offer\",\"version\":\"36fef7989b3c9b6955b6a44381d6135d23f54d5760c78865c709a1c4dd66ec5e\",\"revision\":1,\"material\":{\"status\":\"active\",\"reviewStatus\":\"verified\",\"region\":[\"US\"],\"eligibility\":[\"만 18세 이상이며 자격이 인정되는 미국 고등교육기관에 재학 중인 학생\",\"SheerID 학생 인증 및 유효한 학교 이메일\",\"개인 Google 계정과 가입 시 유효한 결제수단 필요\",\"가족 그룹, 기업 구매, 할인 Pixel 번들, 제3자 Google One 구독, 감독 대상 계정 등은 약관의 제외 조건 적용\"],\"conditions\":[\"2026년 12월 31일까지 혜택 등록을 마쳐야 함; 공식 페이지는 마감 시각·시간대를 명시하지 않음\",\"학교에서 발급한 Workspace for Education 계정으로는 이용 불가\",\"무료기간 종료 전에 취소하지 않으면 해당 지역의 정상 월 구독료로 자동 전환될 수 있음\",\"학생 자격 유지·재인증이 필요하며 최종 자격은 Google 확인에 따름\",\"유료 플랜으로 전환하면 이 무료 체험으로 돌아갈 수 없습니다.\",\"체험에는 YouTube Premium·Lite가 포함되지 않습니다.\"],\"deadline\":{\"date\":\"2026-12-31\",\"instant\":null,\"timeZone\":null},\"price\":{\"amount\":0,\"currency\":\"USD\",\"period\":\"month\",\"tax\":\"included\"},\"renewalPrice\":{\"amount\":20,\"currency\":\"USD\",\"period\":\"month\",\"tax\":\"included\"},\"benefitMonths\":12,\"benefitDuration\":\"혜택 등록일부터 12개월\",\"features\":[{\"id\":\"document-analysis\",\"status\":\"supported\",\"condition\":\"\",\"sourceUrl\":\"https://example.invalid/docs\"}]},\"correction\":false}"},{"source_key":"promotion:audit-offer:c3c359ca41c527827abd52ce5def33580283143f2fc41dc0646d8d4da35212b3","metadata":"{\"cardKey\":\"promotion:audit-offer\",\"version\":\"c3c359ca41c527827abd52ce5def33580283143f2fc41dc0646d8d4da35212b3\",\"revision\":2,\"material\":{\"status\":\"active\",\"reviewStatus\":\"verified\",\"region\":[\"US\"],\"eligibility\":[\"만 18세 이상이며 자격이 인정되는 미국 고등교육기관에 재학 중인 학생\",\"SheerID 학생 인증 및 유효한 학교 이메일\",\"개인 Google 계정과 가입 시 유효한 결제수단 필요\",\"가족 그룹, 기업 구매, 할인 Pixel 번들, 제3자 Google One 구독, 감독 대상 계정 등은 약관의 제외 조건 적용\"],\"conditions\":[\"2026년 12월 31일까지 혜택 등록을 마쳐야 함; 공식 페이지는 마감 시각·시간대를 명시하지 않음\",\"학교에서 발급한 Workspace for Education 계정으로는 이용 불가\",\"무료기간 종료 전에 취소하지 않으면 해당 지역의 정상 월 구독료로 자동 전환될 수 있음\",\"학생 자격 유지·재인증이 필요하며 최종 자격은 Google 확인에 따름\",\"유료 플랜으로 전환하면 이 무료 체험으로 돌아갈 수 없습니다.\",\"체험에는 YouTube Premium·Lite가 포함되지 않습니다.\"],\"deadline\":{\"date\":\"2026-12-31\",\"instant\":null,\"timeZone\":null},\"price\":{\"amount\":5,\"currency\":\"USD\",\"period\":\"month\",\"tax\":\"included\"},\"renewalPrice\":{\"amount\":20,\"currency\":\"USD\",\"period\":\"month\",\"tax\":\"included\"},\"benefitMonths\":12,\"benefitDuration\":\"혜택 등록일부터 12개월\",\"features\":[{\"id\":\"document-analysis\",\"status\":\"supported\",\"condition\":\"\",\"sourceUrl\":\"https://example.invalid/docs\"}]},\"correction\":true}"}],"card":{"source_version":"36fef7989b3c9b6955b6a44381d6135d23f54d5760c78865c709a1c4dd66ec5e","source_revision":3}}
+✖ AUDIT A-B-A new material revision is not suppressed as already sent A (173.592625ms)
+IRRELEVANT {"requests":2,"title":"미국 대학생 Google AI Pro 12개월 무료"}
+✖ AUDIT irrelevant feature edit does not generate a fresh promotional email (73.04475ms)
+STALEGET {"fresh":"기존 혜택 안내의 조건이 변경되었습니다. 자격을 인증한 미국 대학생에게 등록일부터 12개월간 Google AI Pro를 무료로 제공하는 공식 학생 혜택입니다. · 관심 서비스 · 대상: 미국 · 등록 마감 2026-12-31 (정확한 시각 미확인) · 혜택 USD 5 / 월 · 세금 포함 · 갱신 USD 20 / 월 · 세금 포함 · 혜택 등록일부터 12개월 · 입력한 조건과 일치 · 신청 시 공식 재확인 필요","stale":"기존 혜택 안내의 조건이 변경되었습니다. 자격을 인증한 미국 대학생에게 등록일부터 12개월간 Google AI Pro를 무료로 제공하는 공식 학생 혜택입니다. · 관심 서비스 · 대상: 미국 · 등록 마감 2026-12-31 (정확한 시각 미확인) · 혜택 USD 5 / 월 · 세금 포함 · 갱신 USD 20 / 월 · 세금 포함 · 혜택 등록일부터 12개월 · 입력한 조건과 일치 · 신청 시 공식 재확인 필요","head":{"card_key":"promotion:audit-offer","revision":2,"version":"c3c359ca41c527827abd52ce5def33580283143f2fc41dc0646d8d4da35212b3","conflict":0,"updated_at":"2026-09-12T11:00:00.000Z"},"storedSourceKey":"promotion:audit-offer:c3c359ca41c527827abd52ce5def33580283143f2fc41dc0646d8d4da35212b3"}
+✔ AUDIT old-worker GET does not overwrite current stored card with stale price (68.426875ms)
+RETAINED {"before":1,"after":0,"stored":{"status":"withdrawn"}}
+✖ AUDIT withdrawal remains reviewable after interest removal (56.987084ms)
+✔ AUDIT account deletion removes cards and export is isolated (58.437375ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 2
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 578.099916
+
+✖ failing tests:
+
+test at ../../../../private/tmp/ais-v15-independent-cases.mjs:18:1
+✖ AUDIT A-B-A new material revision is not suppressed as already sent A (173.592625ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 3
+  
+      at TestContext.<anonymous> (file:///private/tmp/ais-v15-independent-cases.mjs:20:348)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 3,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../../../private/tmp/ais-v15-independent-cases.mjs:22:1
+✖ AUDIT irrelevant feature edit does not generate a fresh promotional email (73.04475ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (file:///private/tmp/ais-v15-independent-cases.mjs:23:371)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../../../private/tmp/ais-v15-independent-cases.mjs:28:1
+✖ AUDIT withdrawal remains reviewable after interest removal (56.987084ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///private/tmp/ais-v15-independent-cases.mjs:29:415)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

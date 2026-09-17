@@ -1,23 +1,24 @@
 "use client";
 
 import type { ScoreBreakdown } from "@/lib/insights";
-import { SCORE_FACET_KEYS } from "@/lib/insights";
-import { copy as t } from "@/lib/copy";
-
-const scoreTone = (score: number) => {
-  if (score >= 75) return "high";
-  if (score >= 55) return "mid";
-  return "low";
-};
+import type { RankInfo, ToolScore } from "@/lib/scoring";
+import { useLanguage } from "@/components/LanguageProvider";
+import { TierChip } from "@/components/TierChip";
 
 export function ScoreBreakdownCard({
   totalScore,
   scoreBreakdown,
-  variant = "default"
+  variant = "default",
+  note,
+  score,
+  rank
 }: {
   totalScore: number;
   scoreBreakdown: ScoreBreakdown;
   variant?: "default" | "hero";
+  note?: string;
+  score?: ToolScore;
+  rank?: RankInfo;
 }) {
   const labels: Record<(typeof SCORE_FACET_KEYS)[number], string> = {
     functionality: t.scoreLabels[0],
@@ -31,21 +32,37 @@ export function ScoreBreakdownCard({
     <section className={`card score-breakdown-card score-breakdown-${variant}`}>
       <span className="section-kicker">UTILITY SCORE</span>
       <strong>{t.scoreTitle}</strong>
-      <p className="total-score">
-        <span>{totalScore}</span>
-        <small>/100</small>
-      </p>
+      <div className="total-score-row">
+        <p className="total-score">
+          <span>{totalScore}</span>
+          <small>/100</small>
+        </p>
+        {score ? <TierChip tier={score.tier} /> : null}
+      </div>
+      {score ? (
+        <p className="score-formula">
+          {t.scoreEditorial} {score.editorial}
+          {score.external ? ` · ${t.scoreExternal} ${score.external.score} (${score.external.count}${t.scoreExternalSites})` : ""}
+          {rank ? ` · ${t.rankOverall} ${rank.overall}/${rank.total}` : ""}
+        </p>
+      ) : null}
       <div className="score-grid">
         {Object.entries(scoreBreakdown).map(([key, value]) => (
           <div key={key} className="score-row">
-            <span className="score-row-label">{labels[key as keyof ScoreBreakdown]}</span>
-            <span className="score-row-bar" aria-hidden="true">
-              <span style={{ width: `${Math.min(100, Math.max(0, value))}%` }} />
+            <span>{labels[key as keyof ScoreBreakdown]}</span>
+            <span className="score-bar" aria-hidden="true">
+              <span style={{ width: `${Math.max(0, Math.min(100, value))}%` }} />
             </span>
-            <strong className="score-row-value">{value}</strong>
+            <strong>{value}</strong>
           </div>
         ))}
       </div>
+      {note ? (
+        <small className="score-note">
+          {note}
+          {score?.external ? ` ${t.scoreFormula}.` : ""}
+        </small>
+      ) : null}
     </section>
   );
 }

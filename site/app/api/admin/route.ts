@@ -1,0 +1,7 @@
+import {feedbackSummary} from '@/lib/feedback';
+import {requireAdmin} from '@/lib/admin';
+import {rows,db,one,now} from '@/lib/db';
+import {json,input,failure,ApiError} from '@/lib/http';
+import {z} from 'zod';
+export async function GET(){try{await requireAdmin();const [reports,features,runs,email,feedback]=await Promise.all([rows("SELECT r.id,r.target_id,r.reason,r.status,r.created_at,p.title,p.author,p.body FROM reports r LEFT JOIN posts p ON p.id=r.target_id ORDER BY r.created_at DESC LIMIT 100"),rows("SELECT id,title,body,author,tool_id,created_at,status FROM posts WHERE kind='feature' ORDER BY created_at DESC LIMIT 100"),rows('SELECT * FROM sync_runs ORDER BY started_at DESC LIMIT 10'),rows('SELECT status,COUNT(*) count FROM email_outbox GROUP BY status'),feedbackSummary()]);return json({reports,features,runs,email,feedback});}catch(e){return failure(e);}}
+export async function POST(request:Request){try{await requireAdmin();const p=await input(request,z.object({action:z.enum(['hide','restore','resolve']),id:z.string().uuid()}));if(p.action==='resolve'){await db().prepare("UPDATE reports SET status='resolved' WHERE id=?").bind(p.id).run();}else{const post=await one<{status:string}>('SELECT status FROM posts WHERE id=?',p.id);if(!post||post.status==='deleted')throw new ApiError(404,'대상 글을 찾을 수 없습니다.');await db().prepare('UPDATE posts SET status=?,updated_at=? WHERE id=?').bind(p.action==='hide'?'hidden':'published',now(),p.id).run();}return json({success:true});}catch(e){return failure(e);}}

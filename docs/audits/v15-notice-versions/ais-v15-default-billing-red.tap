@@ -1,0 +1,51 @@
+✔ checkedAt and cosmetic offer copy do not create another material version (178.226125ms)
+✔ same-day reviewed price correction updates original card; immutable receipt survives (75.95025ms)
+✔ queued ended offer never enters provider (62.458667ms)
+✔ queued withdrawn offer never enters provider (72.467833ms)
+✔ absolute deadline blocks an already queued offer at the exact instant (50.628791ms)
+✔ date-only deadline uses explicit conservative bounds without inventing official zone (52.021459ms)
+✔ explicit constraint is retained and does not silently qualify {"maxPrice":10,"currency":"USD"} (56.192333ms)
+✔ explicit constraint is retained and does not silently qualify {"maxPrice":50000,"currency":"KRW"} (56.919083ms)
+✔ explicit constraint is retained and does not silently qualify {"neededFeatures":["offline-document-editing"]} (111.106375ms)
+✔ explicit constraint is retained and does not silently qualify {"minBenefitMonths":18} (53.68925ms)
+✔ unknown tax fails a price ceiling, known all-period prices and features can qualify (51.465ms)
+✔ eligibility change invalidates prior confirmation but permits a relevant correction (54.9165ms)
+✔ legacy eligible string is not stamped by an unrelated save (44.047334ms)
+✔ unreviewed same-revision material edits hold dispatch (50.635125ms)
+✔ withdrawal remains on original card even with new app alerts disabled (56.809333ms)
+✔ legacy accepted date-key baseline is held honestly and later change can correct (57.874041ms)
+✔ feature-only change irrelevant to required features updates card without another email (65.894125ms)
+✔ revision-only advances preserve read state and never repeat the same offer (72.032042ms)
+✔ old read target cannot mark a newer material correction read (59.393ms)
+✔ new announcement from one tool has its own card and shares hide topic (61.221292ms)
+✔ cards export/delete stays private and late generation cannot recreate deleted personal rows (59.002833ms)
+✔ A to B to A is a new correction for the recipient who was told B (60.280334ms)
+✔ removing an interest stops email but keeps an existing correction readable (56.581208ms)
+✖ a saved upcoming bill works with default app settings and never recreates a deleted contract (50.775375ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 23
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1739.899459
+
+✖ failing tests:
+
+test at tests/notice-versions.test.mjs:34:1
+✖ a saved upcoming bill works with default app settings and never recreates a deleted contract (50.775375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///Users/bigmac_moon/dev/ai_score/site/tests/notice-versions.test.mjs:34:433)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,31 +1,32 @@
 "use client";
 
+import Link from "next/link";
 import type { CapabilityComparison } from "@/lib/insights";
-import { copy as t } from "@/lib/copy";
+import { tools } from "@/data/tools";
+import { compareHref } from "@/lib/compare";
+import { useLanguage } from "@/components/LanguageProvider";
 
-/**
- * 대안 도구 대비 "되는 것 / 안 되는 것".
- *
- * 이전 버전은 380px 사이드바 안에 3열 그리드(1fr 2fr 2fr)로 들어가 글자가 겹쳤습니다.
- * 1열 전환 분기가 뷰포트 폭 기준이라 좁은 컨테이너에서는 끝내 걸리지 않았습니다.
- * 이제 competitor마다 블록을 만들고, 내부는 auto-fit으로 컨테이너 폭에 맞춰 접힙니다.
- */
+const findCatalogTool = (name: string) => {
+  const needle = name.trim().toLowerCase();
+  return tools.find((tool) => tool.name.toLowerCase() === needle);
+};
+
 export function CapabilityComparisonTable({
+  toolId,
   toolName,
   rows
 }: {
+  toolId?: string;
   toolName: string;
   rows: CapabilityComparison[];
 }) {
   const { lang, t } = useLanguage();
 
   return (
-    <section className="card comparison-card">
-      <div className="comparison-card-head">
-        <span className="section-kicker">CAPABILITY DELTA</span>
-        <strong>{t.comparisonTitle}</strong>
-      </div>
-      <div className="comparison-table" role="table" aria-label={lang === "ko" ? "도구 기능 비교표" : "Capability comparison"}>
+    <section className="card feature-card comparison-card">
+      <span className="section-kicker">HEAD-TO-HEAD</span>
+      <strong>🎯 {t.comparisonTitle}</strong>
+      <div className="comparison-table" role="table" aria-label="도구 기능 비교표">
         <div className="comparison-head" role="row">
           <span role="columnheader">{t.comparisonTarget}</span>
           <span role="columnheader" className="comparison-col-better">
@@ -35,27 +36,27 @@ export function CapabilityComparisonTable({
             {toolName} {t.comparisonWorse}
           </span>
         </div>
-        {rows.map((row) => (
-          <div key={row.competitor} className="comparison-row" role="row">
-            <strong role="cell" className="comparison-competitor">
-              {row.competitor}
-            </strong>
-            <span
-              role="cell"
-              className="comparison-cell comparison-cell-better"
-              data-label={`${toolName} ${t.comparisonBetter}`}
-            >
-              {row.worksBetterHere}
-            </span>
-            <span
-              role="cell"
-              className="comparison-cell comparison-cell-worse"
-              data-label={`${toolName} ${t.comparisonWorse}`}
-            >
-              {row.weakerHere}
-            </span>
-          </div>
-        ))}
+        {rows.map((row) => {
+          const catalogTool = toolId ? findCatalogTool(row.competitor) : undefined;
+          return (
+            <div key={row.competitor} className="comparison-row" role="row">
+              <strong>
+                {row.competitor}
+                {catalogTool && toolId ? (
+                  <Link className="comparison-compare-link" href={compareHref([toolId, catalogTool.id])}>
+                    {t.compareGo} →
+                  </Link>
+                ) : null}
+              </strong>
+              <span className="highlight-better-text comparison-cell" data-label={`${toolName} ${t.comparisonBetter}`}>
+                {row.worksBetterHere}
+              </span>
+              <span className="text-muted comparison-cell" data-label={`${toolName} ${t.comparisonWorse}`}>
+                {row.weakerHere}
+              </span>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

@@ -5,6 +5,9 @@ import { copy as t } from "@/lib/copy";
 import SearchClient from "@/app/search/SearchClient";
 
 export default function SearchPage() {
+  const { t } = useLanguage();
+  // 도구마다 대표 문제 상황 1개씩 노출해 SaaS와 AI 도구가 고르게 보이도록 합니다.
+  const problemContexts = Array.from(new Set(tools.map((tool) => tool.problemContexts[0]))).slice(0, 12);
 
   return (
     <main id="main-content" className="search-journal-page">

@@ -1,12 +1,10 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useState, useRef } from "react";
+import type { ReviewItem } from "@/lib/reviews";
+import { useToolReviews } from "@/components/useToolReviews";
 import { useLanguage } from "@/components/LanguageProvider";
 import type { UserReview } from "@/lib/types";
-
-type ReviewItem = UserReview & {
-  imageUrl?: string;
-};
 
 const formatDate = (iso: string, locale: string) =>
   new Intl.DateTimeFormat(locale, {
@@ -45,45 +43,12 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
   const [rating, setRating] = useState(4);
   const [hoverRating, setHoverRating] = useState(0);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
-  const [role, setRole] = useState("");
-  const [teamSize, setTeamSize] = useState("");
-  const [usagePeriod, setUsagePeriod] = useState("");
-  const [reviews, setReviews] = useState<UserReview[]>([]);
+  const { reviews, add } = useToolReviews(toolId);
   const [saved, setSaved] = useState(false);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    const loadReviews = async () => {
-      setLoading(true);
-      setError("");
-      try {
-        const response = await fetch(`/api/tool/${toolId}/reviews`, { cache: "no-store" });
-        if (!response.ok) throw new Error("Failed to load reviews");
-        const data = (await response.json()) as { reviews: UserReview[] };
-        if (!cancelled) setReviews(data.reviews);
-      } catch {
-        if (!cancelled) setError(t.reviewLoadError);
-      } finally {
-        if (!cancelled) setLoading(false);
-      }
-    };
-
-    void loadReviews();
-    return () => {
-      cancelled = true;
-    };
-  }, [toolId, t.reviewLoadError]);
-
-  useEffect(() => {
-    return () => {
-      if (imagePreview) URL.revokeObjectURL(imagePreview);
-    };
-  }, [imagePreview]);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -131,48 +96,31 @@ export function OneLineReviewForm({ toolId }: { toolId: string }) {
 
   const onSave = async () => {
     if (!line.trim()) return;
-
-    setSaving(true);
-    setError("");
-    setSaved(false);
-
-    try {
-      const response = await fetch(`/api/tool/${toolId}/reviews`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-user-nickname": nickname.trim() || t.anonymous
-        },
-        body: JSON.stringify({
-          nickname,
-          line,
-          detail,
-          rating
-        })
-      });
-
-      if (!response.ok) throw new Error("Failed to save review");
-
-      const data = (await response.json()) as { review: UserReview };
-      setReviews((current) => [data.review, ...current].slice(0, 30));
-      setNickname("");
-      setLine("");
-      setDetail("");
-      setRating(4);
-      setImagePreview(null);
-      if (fileInputRef.current) fileInputRef.current.value = "";
-
-      setSaved(true);
-      setTimeout(() => setSaved(false), 2000);
-    } catch {
-      setError(t.reviewSaveError);
-    } finally {
-      setSaving(false);
-    }
+    const item: ReviewItem = {
+      id: crypto.randomUUID(),
+      nickname: nickname.trim() || t.anonymous,
+      line: line.trim(),
+      detail: detail.trim(),
+      rating,
+      imageUrl: imagePreview || undefined, // Store temporary object URL
+      createdAt: new Date().toISOString()
+    };
+    add(item);
+    
+    // Reset Form
+    setNickname("");
+    setLine("");
+    setDetail("");
+    setRating(4);
+    setImagePreview(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
+    
+    setSaved(true);
+    setTimeout(() => setSaved(false), 2000);
   };
 
   return (
-    <section className="card review-form-card">
+    <section className="card review-form-card" id="review-form">
       <strong>{t.reviewWrite}</strong>
       {error ? <p className="form-status error">{error}</p> : null}
       

@@ -6,6 +6,12 @@ import type { PatchImpact, PatchUpdate } from "@/lib/types";
 import { useLanguage } from "@/components/LanguageProvider";
 import { ADMIN_USER_ID } from "@/lib/admin";
 
+const impactIndex: Record<NonNullable<PatchNote["impactLevel"]>, number> = {
+  high: 0,
+  medium: 1,
+  low: 2
+};
+
 export function PatchNotesSection({
   toolId,
   notes
@@ -117,10 +123,11 @@ export function PatchNotesSection({
           <article key={`${note.date}-${note.title}-${index}`} className="patch-note-item">
             <div className="patch-note-meta">
               <small>{note.date}</small>
-              <span className={`impact-pill ${note.impact ?? "medium"}`}>
-                {impactLabels[note.impact ?? "medium"]}
-              </span>
-              {note.hasIncident ? <span className="incident-pill">{t.patchIncidentLabel}</span> : null}
+              {note.impactLevel ? (
+                <span className={`badge patch-impact patch-impact-${note.impactLevel}`}>
+                  {t.impactLevels[impactIndex[note.impactLevel]]}
+                </span>
+              ) : null}
             </div>
             <h3>{note.title}</h3>
             <p>

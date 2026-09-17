@@ -1,10 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import type { Tool, ToolProblemAngle } from "@/lib/types";
+import type { Tool } from "@/lib/types";
+import { getToolInsight } from "@/lib/insights";
 import { VerdictBadgeList } from "@/components/VerdictBadgeList";
 import { ProductLogo } from "@/components/ProductLogo";
-import { GenrePillList } from "@/components/GenrePillList";
+import { StarRating } from "@/components/StarRating";
+import { TierChip } from "@/components/TierChip";
+import { CompareToggleButton } from "@/components/CompareToggleButton";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getToolMeta } from "@/lib/insights";
 
@@ -16,29 +19,30 @@ const IMPACT_ORDER: (keyof Tool["impact"])[] = [
 ];
 
 export function ToolCard({ tool, variant = "default" }: { tool: Tool; variant?: "default" | "feature" }) {
-  const { lang, t } = useLanguage();
-  const values = Object.values(tool.impact);
-  const signalScore = Math.round((values.reduce((sum, value) => sum + value, 0) / values.length) * 10) / 10;
-  const tone = signalScore >= 7 ? "high" : signalScore >= 5.5 ? "mid" : "low";
+  const { t } = useLanguage();
+  const insight = getToolInsight(tool);
 
   return (
     <article className={`card tool-card tool-card-${variant}`}>
       <div className="tool-card-meta">
-        <span>FIELD NOTE</span>
-        <span className={`score-chip score-chip-${tone}`}>
-          <b>{signalScore}</b>
-          <small>/10</small>
-        </span>
+        <span>{tool.category ?? "FIELD NOTE"}</span>
+        <span>{insight.rank ? `#${insight.rank.overall} / ${insight.rank.total}` : `${insight.totalScore}/100`}</span>
       </div>
       <div className="tool-card-head">
         <ProductLogo name={tool.name} size="md" />
-        <div className="tool-card-title">
-          <strong>{tool.name}</strong>
-          <span className="tool-card-score" aria-label={`${t.scoreTitle} ${total}`}>
-            {total}
-            <small>/100</small>
-          </span>
-        </div>
+        <strong>{tool.name}</strong>
+      </div>
+      <div className="tool-card-score-row">
+        <StarRating value={insight.score.stars} size="sm" />
+        <TierChip tier={insight.score.tier} size="sm" />
+        {tool.discontinued ? <span className="badge discontinued-badge">{t.discontinuedLabel}</span> : null}
+        <span className="tool-card-total">
+          {insight.totalScore}
+          <small>/100</small>
+        </span>
+      </div>
+      <div>
+        <p className="tool-card-desc">{tool.description}</p>
       </div>
       <GenrePillList genres={tool.genres} />
       <VerdictBadgeList badges={tool.verdictBadges} />
@@ -56,17 +60,7 @@ export function ToolCard({ tool, variant = "default" }: { tool: Tool; variant?: 
         <Link className="tool-link" href={`/tools/${tool.id}`}>
           {t.readReview}
         </Link>
-        {selectable ? (
-          <button
-            type="button"
-            className={`compare-toggle ${picked ? "active" : ""}`}
-            onClick={() => toggle(tool.id)}
-            disabled={!picked && isFull}
-            aria-pressed={picked}
-          >
-            {picked ? t.compareRemove : t.compareAdd}
-          </button>
-        ) : null}
+        <CompareToggleButton toolId={tool.id} />
       </div>
     </article>
   );

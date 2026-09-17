@@ -1,0 +1,54 @@
+[
+  {
+    "id": "vercel-ai-social-paris-2026",
+    "title": "AI Social Club: Paris",
+    "organizer": "Vercel",
+    "toolIds": [
+      "vercel"
+    ],
+    "type": "오프라인",
+    "status": "upcoming",
+    "date": "2026-09-30",
+    "startTime": "16:30",
+    "endTime": "20:00",
+    "timeZone": "Europe/Paris",
+    "startsAt": "2026-09-30T14:30:00Z",
+    "endsAt": "2026-09-30T18:00:00Z",
+    "location": "프랑스 파리 · 상세 주소는 등록 후 안내",
+    "url": "https://luma.com/vercel-ai-social-club-paris",
+    "cost": "무료",
+    "eligibility": "AI 제품을 출시하는 임원·시니어 리더 대상. 비공개 행사이며 주최자 승인 필요.",
+    "summary": "AI 제품 출시와 에이전트 인프라의 실제 운영 경험을 나누는 Vercel 모임.",
+    "sourceUrls": [
+      "https://vercel.com/events",
+      "https://luma.com/vercel-ai-social-club-paris"
+    ],
+    "checkedAt": "2026-09-12"
+  },
+  {
+    "id": "vercel-ai-social-london-2026",
+    "title": "AI Social Club: London",
+    "organizer": "Vercel",
+    "toolIds": [
+      "vercel"
+    ],
+    "type": "오프라인",
+    "status": "upcoming",
+    "date": "2026-10-06",
+    "startTime": "16:30",
+    "endTime": "20:00",
+    "timeZone": "Europe/London",
+    "startsAt": "2026-10-06T15:30:00Z",
+    "endsAt": "2026-10-06T19:00:00Z",
+    "location": "영국 런던 · 상세 주소는 등록 후 안내",
+    "url": "https://luma.com/vercel-ai-social-club-london",
+    "cost": "무료",
+    "eligibility": "AI 제품을 출시하는 임원·시니어 리더 대상. 비공개 행사이며 주최자 승인 필요.",
+    "summary": "AI 제품을 운영하는 리더들이 에이전트 인프라와 제품 출시 경험을 논의하는 Vercel 모임.",
+    "sourceUrls": [
+      "https://vercel.com/events",
+      "https://luma.com/vercel-ai-social-club-london"
+    ],
+    "checkedAt": "2026-09-12"
+  }
+]

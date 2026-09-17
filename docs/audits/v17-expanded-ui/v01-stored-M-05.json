@@ -1,0 +1,32 @@
+{
+  "scroll": {
+    "height": 8676,
+    "width": 375,
+    "x": 0,
+    "y": 2532
+  },
+  "url": "http://localhost:5173/my?tab=savings",
+  "viewport": {
+    "doc": 375,
+    "height": 844,
+    "scale": 1,
+    "width": 390
+  },
+  "visibleText": [
+    "정상가 · 위 금액 기준과 동일 · KRW",
+    "월말·윤년을 반영해 청구합니다. 사용량 추가 요금은 미확인으로 남으며, 일할 금액은 자동 추정하지 않습니다.",
+    "이용 종료일과 마지막 청구일은 다를 수 있습니다. 이미 낸 연 요금은 겹친 이용 비용으로 다시 더하지 않습니다.",
+    "수수료·일할 추가 정산·확인된 환불",
+    "실제 기록에 포함된 수수료는 다시 넣지 마세요. 이미 발생한 환불은 원장 기록을 연결하세요.",
+    "추가 비용·환불·일할 정산을 확인했습니다. 없는 항목은 추가 금액 없음이 확인된 상태입니다.",
+    "필수 기능·이용 기간·선결제 조건",
+    "유지안: 필수 기능·사용량·전체 이용 기간미확인충족·확인미충족",
+    "변경안: 필수 기능·사용량·전체 이용 기간미확인충족·확인미충족",
+    "새 요금·할인 적용 자격 (제한 없음 포함)미확인충족·확인미충족",
+    "서비스·결제 경로를 바꿀 의향미확인충족·확인미충족",
+    "한 번에 준비 가능한 금액 · KRW",
+    "저장한 요금 비교 1개",
+    "V10-QA-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA → V10-QA-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+    "2026-09-12 – 2027-09-11 · 검토 중 · 저장 2026-09-12"
+  ]
+}

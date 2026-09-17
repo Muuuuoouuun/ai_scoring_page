@@ -1,0 +1,3 @@
+import {env} from 'cloudflare:workers';
+import {findTool} from '@/lib/catalog';
+export async function GET(request:Request,{params}:{params:Promise<{id:string}>}){const {id}=await params,t=findTool(id);if(!t)return new Response(null,{status:404});try{const object=await env.BUCKET?.get('logos/'+id);if(object&&object.customMetadata?.source===t.logoSource){const headers=new Headers({'Content-Security-Policy':"default-src 'none'; sandbox",'X-Content-Type-Options':'nosniff','Cache-Control':'public, max-age=3600'});object.writeHttpMetadata(headers);return new Response(object.body,{headers});}}catch{}return Response.redirect(new URL(t.logo,request.url).href,302);}
