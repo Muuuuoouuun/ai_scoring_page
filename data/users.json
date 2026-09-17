@@ -1,0 +1,22 @@
+[
+  {
+    "id": "70cfdc53-c45c-45de-902a-b3aa42c1d44d",
+    "email": "admin@g2.com",
+    "nickname": "Admin",
+    "role": "admin",
+    "passwordHash": "048143d0fbe35fd493b3532769e8c611c3469253fd887fa9e1296fedfb962898",
+    "createdAt": "2026-03-27T08:12:12.280Z",
+    "reviewCount": 0,
+    "points": 0
+  },
+  {
+    "id": "a488668c-5bf1-40aa-bba1-0d1bb972ba71",
+    "email": "test@g2.com",
+    "nickname": "테스트유저",
+    "role": "user",
+    "passwordHash": "511288f967a392720bdcb70c8e55d012790de7cebade79beb64b1e28e11d091d",
+    "createdAt": "2026-03-27T08:12:12.280Z",
+    "reviewCount": 0,
+    "points": 0
+  }
+]

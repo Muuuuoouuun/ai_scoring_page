@@ -51,33 +51,28 @@ export function ToolReviewContent({
         />
       </section>
 
-      <ReviewProvenance meta={tool.review.reviewMeta} />
-
-      <div className="review-grid-layout">
-        <div className="review-main-column">
-          <AdoptionFacts tool={tool} />
-
-          <ScoreDissent toolId={tool.id} scoreBreakdown={insight.scoreBreakdown} />
-
-          <section className="card">
-            <strong>{t.whyExists}</strong>
-            <p>{tool.whyExist}</p>
-          </section>
-
-          <BestWorstNarratives bestCase={tool.bestCase} worstCase={tool.worstCase} />
-
-          <CapabilityComparisonTable toolName={tool.name} rows={insight.comparisons} />
-
-          <DecisionRecords toolId={tool.id} toolName={tool.name} />
-
-          <PatchNotesSection notes={insight.patchNotes} />
-          <BreakageReports toolId={tool.id} />
-        </div>
-
-        <aside className="review-sidebar-column">
-          <WorkUsageGuide playbook={insight.workPlaybook} />
-          <AlternativesSection alternatives={tool.alternatives} />
-        </aside>
+      <div className="tabs-nav">
+        <button
+          data-tab="review"
+          className={`tab-btn ${activeTab === "review" ? "active" : ""}`}
+          onClick={() => setActiveTab("review")}
+        >
+          {t.tabReview}
+        </button>
+        <button
+          data-tab="discussion"
+          className={`tab-btn ${activeTab === "discussion" ? "active" : ""}`}
+          onClick={() => setActiveTab("discussion")}
+        >
+          {t.tabDiscussion}
+        </button>
+        <button
+          data-tab="community"
+          className={`tab-btn ${activeTab === "community" ? "active" : ""}`}
+          onClick={() => setActiveTab("community")}
+        >
+          {t.tabCommunity}
+        </button>
       </div>
 
       <RelatedTools tools={related} />
