@@ -33,7 +33,9 @@ test('global search finds public content and excludes hidden posts and private r
  h.sql.prepare("UPDATE posts SET status='hidden' WHERE id=?").run(p.data.id);
  assert.equal((await query('유일한검색검증')).results.length,0);
  assert.equal((await query('비공개검색검증')).results.length,0);
- assert.equal((await query('%')).results.length,0);
+ const percentResults=(await query('%')).results;
+ assert.ok(percentResults.every(r=>r.id!==p.data.id&&r.title!=='비공개검색검증'));
+ assert.ok(percentResults.every(r=>(r.title+' '+r.summary).includes('%')));
 });
 test('saved comparison retains private choice and outcome across edit, quick-save and export',async()=>{
  const h=harness(),payload={type:'comparison',target:'chatgpt,claude',title:'ChatGPT · Claude 비교',reason:'문서 작업용',outcome:'초안 작성 후 직접 수정',note:'개인 메모'};

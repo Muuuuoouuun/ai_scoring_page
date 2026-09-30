@@ -1,5 +1,25 @@
 [
   {
+    "id": "openai-devday-2026",
+    "title": "OpenAI DevDay 2026",
+    "organizer": "OpenAI",
+    "toolIds": ["chatgpt", "gpt-6-1-sol", "openai-dots", "codex-cloud"],
+    "type": "현장·온라인 키노트",
+    "date": "2026-09-29",
+    "startTime": "08:00",
+    "endTime": "19:00",
+    "timeZone": "America/Los_Angeles",
+    "startsAt": "2026-09-29T15:00:00Z",
+    "endsAt": "2026-09-30T02:00:00Z",
+    "location": "미국 샌프란시스코 Fort Mason · 키노트 온라인 중계",
+    "url": "https://openai.com/index/devday-2026-recap/",
+    "cost": "현장 등록 $650(초청자) · 온라인 키노트 무료",
+    "eligibility": "현장 참가 신청은 마감됐으며 공식 요약이 공개됐습니다. 세션 녹화는 공식 사이트에 게시 예정으로 안내됐지만, 확인되지 않은 다시보기 링크는 제공하지 않습니다.",
+    "summary": "GPT-6.1 Sol, dots, Codex 클라우드 환경을 비롯해 ChatGPT Space와 Decisions API 등 20건 이상의 발표를 공식 요약에서 확인할 수 있습니다.",
+    "sourceUrls": ["https://devday.openai.com/", "https://openai.com/index/devday-2026-recap/"],
+    "checkedAt": "2026-09-30"
+  },
+  {
     "id": "vercel-ai-social-paris-2026",
     "title": "AI Social Club: Paris",
     "organizer": "Vercel",
