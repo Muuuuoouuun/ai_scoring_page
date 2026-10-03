@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {harness} from './api-harness.mjs';
 const base={name:'History QA',plan:'Monthly',amount:30000,currency:'KRW',cycle:'monthly',nextDate:'2026-09-15',anchorDate:'2026-09-15',status:'active',paymentRoute:'web',taxStatus:'included',personalShare:10000};
+// October proposals are reserved future terms for the September test scenarios.
 const proposal=(patch={})=>({action:'append',effectiveFrom:'2026-10-01',reason:'Confirmed October terms',terms:{...base,...patch}});
 test('new contracts have an observed baseline and private, server-owned history',async()=>{
  const h=harness(),r=await h.save('subscription',base);assert.equal(r.status,200);
@@ -21,7 +22,7 @@ test('dated currency and cycle changes preserve earlier paid invoice snapshots a
  assert.deepEqual(JSON.parse(JSON.stringify(report.remaining)),{USD:20000});assert.equal(report.personalActual.KRW,7000);
 });
 test('stale bundle changes and cancellation records leave every row byte-identical',async()=>{
- const h=harness(),a=await h.save('subscription',{...base,bundleId:'suite'}),b=await h.save('subscription',{...base,name:'Peer',bundleId:'suite'}),g=await h.guard('subscription',{},a.data.record.id);
+ const h=harness(undefined,{now:()=>"2026-09-15T12:00:00.000Z"}),a=await h.save('subscription',{...base,bundleId:'suite'}),b=await h.save('subscription',{...base,name:'Peer',bundleId:'suite'}),g=await h.guard('subscription',{},a.data.record.id);
  assert.equal((await h.terms(a.data.record.id,proposal(),g)).status,200);
  const before=JSON.stringify(h.sql.prepare('SELECT * FROM private_records ORDER BY id').all());
  assert.equal((await h.terms(b.data.record.id,proposal({amount:99000}),g)).status,409);
@@ -29,12 +30,12 @@ test('stale bundle changes and cancellation records leave every row byte-identic
  assert.equal(JSON.stringify(h.sql.prepare('SELECT * FROM private_records ORDER BY id').all()),before);
 });
 test('same-revision requests race to one complete shared result',async()=>{
- const h=harness(),a=await h.save('subscription',{...base,bundleId:'race'}),b=await h.save('subscription',{...base,bundleId:'race'}),g=await h.guard('subscription',{},a.data.record.id);
+ const h=harness(undefined,{now:()=>"2026-09-15T12:00:00.000Z"}),a=await h.save('subscription',{...base,bundleId:'race'}),b=await h.save('subscription',{...base,bundleId:'race'}),g=await h.guard('subscription',{},a.data.record.id);
  const r=await Promise.all([h.terms(a.data.record.id,proposal({amount:40000}),g),h.terms(b.data.record.id,proposal({amount:50000}),g)]);assert.deepEqual(r.map(r=>r.status).sort(),[200,409]);
  const data=(await h.call(h.workspace.GET,null,'GET')).data.records;assert.deepEqual(data[0].payload.termsHistory,data[1].payload.termsHistory);assert.equal(data[0].payload.termsHistory.versions.length,2);
 });
 test('corrections append, unknown-date proposals remain pending, and future changes can be voided',async()=>{
- const h=harness(),a=await h.save('subscription',base),sid=a.data.record.id;
+ const h=harness(undefined,{now:()=>"2026-09-15T12:00:00.000Z"}),a=await h.save('subscription',base),sid=a.data.record.id;
  const change=await h.terms(sid,proposal({amount:50000}));assert.equal(change.status,200);const wrong=change.data.history.versions.at(-1).id;
  const corrected=await h.terms(sid,{...proposal({amount:35000}),action:'correct',supersedes:wrong});assert.equal(corrected.status,200);assert.equal(corrected.data.history.versions.length,3);
  const pending=await h.terms(sid,{...proposal({amount:36000}),effectiveFrom:null,alreadyChanged:true});assert.equal(pending.status,200);assert.equal(pending.data.history.versions.at(-1).state,'draft');
@@ -42,7 +43,7 @@ test('corrections append, unknown-date proposals remain pending, and future chan
  assert.equal(voided.data.history.versions.at(-1).state,'void');
 });
 test('term histories are exported and erased with their account; stale edits cannot recreate them',async()=>{
- const h=harness(),a=await h.save('subscription',base),sid=a.data.record.id,g=await h.guard('subscription',{},sid);
+ const h=harness(undefined,{now:()=>"2026-09-15T12:00:00.000Z"}),a=await h.save('subscription',base),sid=a.data.record.id,g=await h.guard('subscription',{},sid);
  assert.equal((await h.terms(sid,proposal())).status,200);
  const exported=await h.call(h.load('app/api/export/route.ts').GET,null,'GET');assert.ok(JSON.stringify(exported.data).includes('billing_terms'));assert.ok(JSON.stringify(exported.data).includes('Confirmed October terms'));
  await h.call(h.workspace.DELETE,{confirmation:'내 기록 삭제'},'DELETE');assert.equal((await h.terms(sid,proposal(),g)).status,404);assert.equal(h.sql.prepare('SELECT COUNT(*) n FROM private_records').get().n,0);
@@ -58,7 +59,7 @@ test('actual personal amounts preserve unknown and zero, and refund bounds are e
  assert.equal((await h.save('payment',{...p,personalAmount:4000,personalCurrency:'KRW'},charge.data.record.id)).status,400);
 });
 test('correcting an unresolved correction replaces its original confirmed condition',async()=>{
- const h=harness(),a=await h.save('subscription',base),sid=a.data.record.id;
+ const h=harness(undefined,{now:()=>"2026-09-15T12:00:00.000Z"}),a=await h.save('subscription',base),sid=a.data.record.id;
  const change=await h.terms(sid,proposal({amount:50000})),wrong=change.data.history.versions.at(-1).id;
  const draft=await h.terms(sid,{...proposal(),action:'correct',supersedes:wrong,effectiveFrom:null,alreadyChanged:true});
  const revised=await h.terms(sid,{...proposal({amount:36000}),action:'correct',supersedes:draft.data.history.versions.at(-1).id,effectiveFrom:null,alreadyChanged:false});
@@ -67,7 +68,7 @@ test('correcting an unresolved correction replaces its original confirmed condit
  assert.equal(confirmed.status,200);const active=h.load('lib/billing.ts').activeTerms(confirmed.data.history);assert.equal(active.some(v=>v.id===wrong),false);assert.equal(active.length,2);
 });
 test('a failed database statement rolls back member writes and the shared history',async()=>{
- const h=harness(),a=await h.save('subscription',{...base,bundleId:'atomic'}),b=await h.save('subscription',{...base,bundleId:'atomic'}),sid=a.data.record.id;
+ const h=harness(undefined,{now:()=>"2026-09-15T12:00:00.000Z"}),a=await h.save('subscription',{...base,bundleId:'atomic'}),b=await h.save('subscription',{...base,bundleId:'atomic'}),sid=a.data.record.id;
  const before=JSON.stringify(h.sql.prepare('SELECT * FROM private_records ORDER BY id').all());
  h.sql.exec("CREATE TRIGGER reject_history_update BEFORE UPDATE ON private_records WHEN NEW.kind='billing_terms' BEGIN SELECT RAISE(ABORT,'Injected rollback check'); END");
  assert.equal((await h.terms(sid,proposal())).status,503);assert.equal(JSON.stringify(h.sql.prepare('SELECT * FROM private_records ORDER BY id').all()),before);
@@ -90,7 +91,7 @@ test('personal refunds use the recorded personal charge currency',async()=>{
  assert.equal((await h.save('payment',{...p,entryType:'refund',refundOfId:charge.data.record.id,amount:10000,personalAmount:100,personalCurrency:'EUR'})).status,400);
 });
 test('confirmed cancellation carries through reserved future price changes without reviving billing',async()=>{
- const h=harness(),a=await h.save('subscription',base),sid=a.data.record.id;
+ const h=harness(undefined,{now:()=>"2026-09-15T12:00:00.000Z"}),a=await h.save('subscription',base),sid=a.data.record.id;
  assert.equal((await h.terms(sid,proposal({amount:50000}))).status,200);
  const cancel=await h.save('cancellation',{subscriptionId:sid,stage:'confirmed',paymentRoute:'web',remainingPayments:0,endDate:'2026-09-12'});assert.equal(cancel.status,200);
  const r=(await h.call(h.workspace.GET,null,'GET')).data.records.find(r=>r.id===sid),summary=h.load('lib/billing.ts').summarizeContracts([{id:sid,...r.payload}],'2026-09-12','2026-12-31');assert.equal(summary.schedule.length,0);

@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {harness} from './api-harness.mjs';
 const base={name:'Scenario QA',amount:20000,currency:'KRW',cycle:'monthly',nextDate:'2026-10-01',anchorDate:'2026-10-01',status:'active',paymentRoute:'web',taxStatus:'included'};
-async function setup(){const h=harness(),s=await h.save('subscription',base),sid=s.data.record.id;return {h,sid,endpoint:h.load('app/api/cost-comparisons/route.ts')};}
+// Capture the September quote before the planned October transition.
+async function setup(){const h=harness(undefined,{now:()=>"2026-09-15T12:00:00.000Z"}),s=await h.save('subscription',base),sid=s.data.record.id;return {h,sid,endpoint:h.load('app/api/cost-comparisons/route.ts')};}
 const conditions={from:'2026-10-01',until:'2026-12-31',switchDate:'2026-10-01',oldBilling:'stop',oldLastChargeDate:null,oldAccess:'ends',oldAccessUntil:'2026-10-31',candidate:{name:'Candidate',amount:30000,currency:'KRW',cycle:'annual',nextDate:'2026-10-01',taxStatus:'included',amountBasis:'total',pricingMode:'fixed'},adjustments:[],extrasConfirmed:true,quoteSource:'Quote QA',quoteCheckedAt:'2026-09-12',criteria:{keepFit:'yes',changeFit:'yes',eligibility:'yes',changeWilling:'yes',budgets:{KRW:100000}}};
 const body=async(h,sid)=>({action:'save',subscriptionId:sid,...await h.guard('subscription',{},sid),title:'October transition',conditions,decision:'consider',reason:'Cost and capacity',outcome:''});
 const financial=h=>JSON.stringify(h.sql.prepare("SELECT * FROM private_records WHERE kind!='costComparison' ORDER BY id").all());

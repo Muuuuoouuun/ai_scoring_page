@@ -58,11 +58,20 @@
         "status": "conditional",
         "condition": "플랜별 심층 리서치 한도가 적용됩니다.",
         "sourceUrl": "https://chatgpt.com/pricing/"
+      },
+      {
+        "name": "Space·Pages 공동 작업",
+        "description": "대화 결과를 Pages로 만들고, 팀원과 함께 편집하거나 댓글에서 ChatGPT에 수정을 요청합니다.",
+        "status": "conditional",
+        "condition": "Pro·Business·Enterprise 대상. 생성·편집·공동 작업은 웹·데스크톱에서, 모바일은 찾기·읽기·공유를 지원합니다. 조직 공유 설정이 적용됩니다.",
+        "sourceUrl": "https://chatgpt.com/features/space/"
       }
     ],
     "limitations": [
       "플랜마다 제공 모델과 도구 한도가 다릅니다.",
-      "중요한 사실과 숫자는 연결된 원문과 대조해야 합니다."
+      "중요한 사실과 숫자는 연결된 원문과 대조해야 합니다.",
+      "Space의 모바일 페이지 생성·편집·공동 작업과 슬라이드·스프레드시트 공동 편집은 아직 제공 예정입니다.",
+      "Pages 공유 시 보기·편집 권한과 워크스페이스 관리자 설정을 확인해야 합니다."
     ],
     "sourceUrls": [
       "https://chatgpt.com/pricing/",
@@ -71,18 +80,21 @@
       "https://chatgpt.com/download/",
       "https://apps.apple.com/us/app/chatgpt/id6448311069",
       "https://learn.chatgpt.com/docs/changelog#codex-2026-09-11-app",
-      "https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt"
+      "https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt",
+      "https://openai.com/index/devday-2026-recap/",
+      "https://chatgpt.com/features/space/"
     ],
-    "checkedAt": "2026-09-12",
+    "checkedAt": "2026-10-03",
     "latestUpdate": {
-      "title": "데스크톱 빠른 대화와 Windows Appshots",
-      "summary": "macOS·Windows 데스크톱 앱에서 Pets의 플로팅 컨트롤로 빠른 대화를 시작하고, Windows에서 Appshots를 사용할 수 있게 되었습니다.",
-      "publishedAt": "2026-09-11",
-      "sourceUrl": "https://learn.chatgpt.com/docs/changelog#codex-2026-09-11-app",
-      "audience": "macOS·Windows 데스크톱 앱 이용자",
-      "rollout": "데스크톱 26.908 · Appshots의 Windows 지원 추가",
-      "id": "chatgpt-2026-09-11",
-      "revision": 1
+      "title": "ChatGPT Space와 Pages 발표",
+      "summary": "Pro·Business·Enterprise에서 자료를 Space에 모으고 Pages를 웹·데스크톱에서 함께 편집할 수 있습니다. 모바일은 찾기·읽기·공유를 지원하며, 모바일 편집과 슬라이드·시트 협업은 예정입니다.",
+      "publishedAt": "2026-09-29",
+      "sourceUrl": "https://openai.com/index/devday-2026-recap/",
+      "audience": "ChatGPT Pro·Business·Enterprise 이용자와 공동 작업 팀",
+      "rollout": "해당 플랜 웹·데스크톱 제공 · 모바일 읽기·공유 지원 · 모바일 편집과 슬라이드·시트 협업 예정",
+      "id": "chatgpt-space-pages-2026-09-29",
+      "revision": 1,
+      "statusLabel": "플랜 제한"
     },
     "logoNote": "ChatGPT 공식 앱 아이콘",
     "logo": "/logos/chatgpt-product.webp",
@@ -130,10 +142,10 @@
       },
       {
         "name": "Artifacts",
-        "description": "대화와 별도로 결과물을 확인하고 발전시킬 수 있습니다.",
-        "status": "supported",
-        "condition": "",
-        "sourceUrl": "https://claude.com/pricing"
+        "description": "대화 옆에서 문서·코드·시각 자료 같은 결과물을 확인하고 편집·공유합니다.",
+        "status": "conditional",
+        "condition": "Free·Pro·Max·Team·Enterprise에서 제공됩니다. 클라우드 코드 실행·파일 생성 설정을 켜야 합니다.",
+        "sourceUrl": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
       },
       {
         "name": "Research",
@@ -141,27 +153,46 @@
         "status": "conditional",
         "condition": "현재 개인 플랜 표에서는 Pro 이상에 포함됩니다.",
         "sourceUrl": "https://claude.com/pricing"
+      },
+      {
+        "name": "Cowork·채팅 통합 대화",
+        "description": "별도 모드를 고르지 않고 같은 대화에서 질문하거나 조사·보고서·스프레드시트 같은 여러 단계의 작업을 맡깁니다.",
+        "status": "conditional",
+        "condition": "Pro·Max의 웹·데스크톱·모바일에 순차 제공됩니다. 같은 플랜도 계정마다 적용 시점이 다릅니다.",
+        "sourceUrl": "https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude"
+      },
+      {
+        "name": "Design·Slides·Docs 템플릿",
+        "description": "디자인·슬라이드·공동 문서 템플릿에서 결과물을 만들고 Claude와 함께 수정합니다.",
+        "status": "conditional",
+        "condition": "유료 플랜 베타. Pro·Max·Team은 기본 활성화, Enterprise는 소유자가 켜야 합니다. 템플릿 시작·편집·공유 설정 변경은 웹·데스크톱에서 지원합니다.",
+        "sourceUrl": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
       }
     ],
     "limitations": [
       "Claude 앱 구독과 Claude API 요금은 별도로 확인해야 합니다.",
-      "플랜과 사용량에 따라 이용 가능한 모델이 달라집니다."
+      "플랜과 사용량에 따라 이용 가능한 모델이 달라집니다.",
+      "클라우드 작업은 노트북을 닫아도 계속되지만, 컴퓨터의 로컬 파일·앱을 사용하는 작업은 Claude Desktop이 열려 있어야 합니다.",
+      "Design·Slides·Docs 템플릿은 무료 플랜에 포함되지 않습니다. 모바일에서는 대화로 제작을 요청하고 결과를 볼 수 있습니다."
     ],
     "sourceUrls": [
       "https://claude.com/pricing",
       "https://support.claude.com/en/articles/10769299-how-to-use-claude-in-your-preferred-language",
-      "https://support.claude.com/en/articles/12138966-release-notes"
+      "https://support.claude.com/en/articles/12138966-release-notes",
+      "https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude",
+      "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
     ],
-    "checkedAt": "2026-09-12",
+    "checkedAt": "2026-10-03",
     "latestUpdate": {
-      "title": "Enterprise용 Smart reports 베타",
-      "summary": "팀의 Claude 사용 방식과 비용, 반복 작업 패턴을 분석하는 보고 기능을 Enterprise 베타로 안내했습니다.",
-      "publishedAt": "2026-09-10",
+      "title": "Claude Cowork와 채팅을 한 대화로 통합",
+      "summary": "질문과 Cowork 작업을 같은 대화에서 이어가는 경험을 Pro·Max에 순차 제공합니다. 기존 채팅·작업·프로젝트가 이어지며, 클라우드 작업과 로컬 컴퓨터 작업의 실행 조건은 다릅니다.",
+      "publishedAt": "2026-09-16",
       "sourceUrl": "https://support.claude.com/en/articles/12138966-release-notes",
-      "audience": "Claude Enterprise 플랜 이용 조직",
-      "rollout": "베타 제공",
-      "id": "claude-2026-09-10",
-      "revision": 1
+      "audience": "Claude Pro·Max 이용자",
+      "rollout": "웹·데스크톱·모바일 순차 제공 · 같은 플랜도 계정별 적용 시점이 다름 · 로컬 작업은 Desktop 실행 필요",
+      "id": "claude-unified-conversations-2026-09-16",
+      "revision": 1,
+      "statusLabel": "순차 제공"
     },
     "logo": "/logos/claude.png"
   },
@@ -225,28 +256,39 @@
         "status": "conditional",
         "condition": "공식 안내 기준 macOS 15 이상 또는 Windows 10 이상이 필요합니다.",
         "sourceUrl": "https://gemini.google/release-notes/"
+      },
+      {
+        "name": "반복 작업 지침 (Skills·Gems 전환)",
+        "description": "반복해서 쓰는 지침을 Skills로 저장하고, 대화에 맞춰 자동 적용하거나 여러 지침을 함께 사용합니다.",
+        "status": "conditional",
+        "condition": "현재 18세 이상 개인 Google 계정의 Gemini 채팅에서 제공됩니다. 회사·학교 계정은 추후 제공 예정입니다.",
+        "sourceUrl": "https://support.google.com/gemini/answer/18560919"
       }
     ],
     "limitations": [
       "Gemini 앱에 보이는 모델과 Gemini API 모델 목록은 다를 수 있습니다.",
-      "일부 신규 기능은 특정 지역·연령·유료 플랜에 먼저 제공됩니다."
+      "일부 신규 기능은 특정 지역·연령·유료 플랜에 먼저 제공됩니다.",
+      "Skills는 현재 Canvas·Deep Research·동영상·음악 생성·Guided Learning에 적용할 수 없습니다.",
+      "Gems의 Skills 자동 전환은 개인 계정 2026년 11월, Workspace 기업·비영리 계정 2027년 3월, 교육 계정 2027년 6월 예정입니다."
     ],
     "sourceUrls": [
       "https://gemini.google/subscriptions/",
       "https://support.google.com/gemini/answer/13575153?hl=en",
       "https://gemini.google/release-notes/",
-      "https://support.google.com/gemini/answer/16047321?hl=en-NZ"
+      "https://support.google.com/gemini/answer/16047321?hl=en-NZ",
+      "https://support.google.com/gemini/answer/18560919"
     ],
-    "checkedAt": "2026-09-12",
+    "checkedAt": "2026-10-03",
     "latestUpdate": {
-      "title": "Windows용 Gemini 앱 출시",
-      "summary": "Windows 10 이상에서 단축키로 Gemini를 호출하고 전용 데스크톱 작업공간을 사용할 수 있게 되었습니다.",
-      "publishedAt": "2026-09-10",
+      "title": "Gemini Skills 출시와 Gems 전환 일정",
+      "summary": "반복 작업 지침을 저장하고 대화에서 자동 적용하거나 조합하는 Skills 제공을 시작했습니다. 현재 18세 이상 개인 Google 계정이 대상이며 Gems는 계정 유형별 일정에 따라 자동 전환될 예정입니다.",
+      "publishedAt": "2026-09-30",
       "sourceUrl": "https://gemini.google/release-notes/",
-      "audience": "Windows 10 이상 PC 이용자",
-      "rollout": "Windows 앱 제공 시작 · 계정별 기능·연결 권한 적용",
-      "id": "gemini-2026-09-10",
-      "revision": 1
+      "audience": "18세 이상 개인 Google 계정 이용자 · 기존 Gems 이용자",
+      "rollout": "Skills 순차 제공 · Gems 전환: 개인 2026년 11월, Workspace 기업·비영리 2027년 3월, 교육 2027년 6월 예정",
+      "id": "gemini-skills-2026-09-30",
+      "revision": 1,
+      "statusLabel": "순차 제공"
     },
     "logo": "/logos/gemini.svg"
   },
@@ -940,11 +982,20 @@
         "status": "conditional",
         "condition": "플랜별 AI 이용 한도 또는 워크스페이스 크레딧이 적용됩니다.",
         "sourceUrl": "https://www.notion.com/help/create-a-database"
+      },
+      {
+        "name": "팀 Skills 지침 라이브러리",
+        "description": "페이지·데이터베이스에 팀 지침을 모아 Notion Agent에서 실행하고, SKILL.md로 내려받아 로컬 에이전트에서 사용합니다.",
+        "status": "conditional",
+        "condition": "Skills 페이지 접근 권한과 Notion AI 이용 조건이 적용됩니다. 자동 선택에는 Skills 데이터베이스와 지침 설명이 필요합니다.",
+        "sourceUrl": "https://www.notion.com/help/create-and-manage-skills"
       }
     ],
     "limitations": [
       "무료·유료 플랜의 협업 및 파일 한도가 다릅니다.",
-      "AI로 데이터베이스를 만드는 기능의 지원 범위와 크레딧 조건을 확인해야 합니다."
+      "AI로 데이터베이스를 만드는 기능의 지원 범위와 크레딧 조건을 확인해야 합니다.",
+      "Skills의 공유·수정은 페이지 권한을 따릅니다. Notion에서 지침이 바뀌면 내려받은 로컬 사본을 다시 받아야 합니다.",
+      "Notion AI 이용 한도는 플랜별로 확인해야 합니다. 별도 Custom MCP 연결은 Business·Enterprise 베타이며 Skills의 제공 조건과 다릅니다."
     ],
     "sourceUrls": [
       "https://www.notion.com/pricing",
@@ -953,18 +1004,21 @@
       "https://www.notion.com/desktop",
       "https://www.notion.com/mobile",
       "https://www.notion.com/releases/2026-09-09",
-      "https://www.notion.com/help/writing-and-editing-basics"
+      "https://www.notion.com/help/writing-and-editing-basics",
+      "https://www.notion.com/releases/2026-09-15",
+      "https://www.notion.com/help/create-and-manage-skills"
     ],
-    "checkedAt": "2026-09-12",
+    "checkedAt": "2026-10-03",
     "latestUpdate": {
-      "title": "에이전트가 사용할 AI 모델 관리",
-      "summary": "Business·Enterprise 워크스페이스 소유자가 Notion Agent와 Custom Agents에서 허용할 AI 모델을 각각 관리할 수 있습니다.",
-      "publishedAt": "2026-09-09",
-      "sourceUrl": "https://www.notion.com/releases/2026-09-09",
-      "audience": "Business·Enterprise 워크스페이스 소유자",
-      "rollout": "제공 중",
-      "id": "notion-2026-09-09",
-      "revision": 1
+      "title": "Notion 3.7: 팀 Skills 라이브러리",
+      "summary": "팀 지침을 페이지·데이터베이스에 저장하고 Notion Agent에서 실행하거나 자동 선택하도록 할 수 있습니다. SKILL.md로 내려받아 로컬 에이전트에서 사용하고, 지침 변경 시 사본을 다시 받습니다.",
+      "publishedAt": "2026-09-15",
+      "sourceUrl": "https://www.notion.com/releases/2026-09-15",
+      "audience": "Notion Agent 이용자와 Skills 페이지를 공유하는 팀",
+      "rollout": "공식 제공 중 · 페이지 접근 권한·Notion AI 이용 조건 적용 · Custom MCP 연결은 별도 Business·Enterprise 베타",
+      "id": "notion-team-skills-2026-09-15",
+      "revision": 1,
+      "statusLabel": "제공 조건 확인"
     },
     "logo": "/logos/notion.png"
   },
@@ -2766,16 +2820,55 @@
     "logoNote": "Anthropic 공식 브랜드 마크",
     "pricing": "API 100만 토큰당 입력 $2 · 출력 $10 · 캐시 읽기 $0.20",
     "korean": "확인 필요",
-    "platforms": ["Claude", "Claude API"],
-    "useCases": ["일상 코딩", "문서 작업", "빠른 프로토타이핑"],
-    "features": [
-      {"name":"코딩·업무 작업","description":"코드 작성과 여러 단계의 업무 작업에 사용합니다.","status":"supported","condition":"","sourceUrl":"https://www.anthropic.com/claude-sonnet-5-5"},
-      {"name":"추론 노력 조절","description":"작업 난도에 맞춰 추론 수준을 조정합니다.","status":"conditional","condition":"Claude 앱·Claude Code와 API의 기본 설정이 다릅니다.","sourceUrl":"https://www.anthropic.com/claude-sonnet-5-5"}
+    "platforms": [
+      "Claude",
+      "Claude API"
     ],
-    "limitations": ["일부 고위험 사이버보안 요청에는 보호 장치와 모델 전환이 적용됩니다.", "한국어별 성능 보장과 계정별 사용 한도는 별도 확인이 필요합니다."],
-    "sourceUrls": ["https://www.anthropic.com/claude-sonnet-5-5"],
-    "checkedAt": "2026-09-30",
-    "latestUpdate": {"id":"claude-sonnet-5-5-2026-09-28","revision":1,"title":"Claude Sonnet 5.5 발표","summary":"일상 코딩과 업무용 Sonnet 신모델을 출시했습니다. API 가격은 기존 Sonnet 5와 동일한 입력 $2·출력 $10/100만 토큰이며, Anthropic은 출력 속도 30% 이상 개선을 발표했습니다.","publishedAt":"2026-09-28","sourceUrl":"https://www.anthropic.com/claude-sonnet-5-5","audience":"Claude 이용자와 Claude API 개발자","rollout":"공식 제공 중 · 계정별 플랜·모델 권한 확인"}
+    "useCases": [
+      "일상 코딩",
+      "문서 작업",
+      "빠른 프로토타이핑"
+    ],
+    "features": [
+      {
+        "name": "코딩·업무 작업",
+        "description": "코드 작성과 여러 단계의 업무 작업에 사용합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5"
+      },
+      {
+        "name": "추론 노력 조절",
+        "description": "작업 난도에 맞춰 추론 수준을 조정합니다.",
+        "status": "conditional",
+        "condition": "Claude 앱·Claude Code와 API의 기본 설정이 다릅니다.",
+        "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5"
+      }
+    ],
+    "limitations": [
+      "일부 고위험 사이버보안 요청에는 보호 장치와 모델 전환이 적용됩니다.",
+      "한국어별 성능 보장과 계정별 사용 한도는 별도 확인이 필요합니다.",
+      "2026년 9월 30일 안내에 따르면 claude-sonnet-4-5-20250929의 Claude API 종료는 2026년 11월 30일 예정입니다. Sonnet 5.5로 이전을 권장하며 외부 클라우드의 종료 일정은 별도로 확인해야 합니다.",
+      "4.5에서 이전할 때 모델 ID뿐 아니라 thinking·도구 사용·출력 설정 등의 요청 호환성을 공식 이전 가이드와 대조하고 검증해야 합니다."
+    ],
+    "sourceUrls": [
+      "https://www.anthropic.com/claude-sonnet-5-5",
+      "https://platform.claude.com/docs/en/release-notes/overview",
+      "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide"
+    ],
+    "checkedAt": "2026-10-03",
+    "latestUpdate": {
+      "id": "claude-sonnet-5-5-2026-09-28",
+      "revision": 2,
+      "title": "Claude Sonnet 5.5 발표",
+      "summary": "일상 코딩과 업무용 Sonnet 신모델을 출시했습니다. API 가격은 기존 Sonnet 5와 동일한 입력 $2·출력 $10/100만 토큰이며, Anthropic은 출력 속도 30% 이상 개선을 발표했습니다. 9월 30일에는 Sonnet 4.5의 Claude API 종료를 2026년 11월 30일로 예고하고 5.5로 이전을 권장했습니다.",
+      "publishedAt": "2026-09-28",
+      "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5",
+      "audience": "Claude 이용자와 Claude API 개발자",
+      "rollout": "공식 제공 중 · 계정별 플랜·모델 권한 확인 · Sonnet 4.5 Claude API 종료는 2026년 11월 30일 예정",
+      "statusLabel": "4.5 API 종료 예정"
+    }
   },
   {
     "id": "gpt-6-1-sol",
