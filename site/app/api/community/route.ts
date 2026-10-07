@@ -3,6 +3,7 @@ import { authenticated,input,json,failure,ApiError } from '@/lib/http';
 import { rows,one,db,id,now } from '@/lib/db';
 import { postSchema } from '@/lib/validation';
 import { findTool } from '@/lib/catalog';
+import { sanitizeRatings } from '@/lib/scoring';
 import { z } from 'zod';
 export const dynamic='force-dynamic';
 export async function GET(request:Request){try{
@@ -12,7 +13,7 @@ export async function GET(request:Request){try{
   sql+=' ORDER BY p.created_at DESC LIMIT 100';
   const postId=url.searchParams.get('id');if(postId){sql="SELECT p.*, (SELECT COUNT(*) FROM reactions r WHERE r.post_id=p.id) helpful, (SELECT COUNT(*) FROM posts c WHERE c.parent_id=p.id AND c.status='published') replies FROM posts p WHERE p.id=? AND p.status='published'";args=[postId];}
   const result=await rows<Record<string,unknown>>(sql,...args);
-  return json({posts:result.map(({user_id,ratings,...p})=>({...p,mine:user_id===user?.userId,ratings:ratings?JSON.parse(String(ratings)):null}))});
+  return json({posts:result.map(({user_id,ratings,...p})=>({...p,mine:user_id===user?.userId,ratings:ratings?sanitizeRatings(ratings):null}))});
 }catch(e){return failure(e);}}
 export async function POST(request:Request){try{
   const user=await authenticated(),p=await input(request,postSchema),stamp=now();

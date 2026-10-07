@@ -23,7 +23,7 @@ function TaskRecommendations(){
   <div className="panel">
    <label className="field">어떤 일을 하려고 하나요?<input value={task} maxLength={200} onChange={e=>setTask(e.target.value)} placeholder="예: 코딩 도구는 제외하고 개인 업무 정리"/></label>
    <div className="actions">
-    <label className="check-label"><input type="checkbox" checked={free} onChange={e=>setFree(e.target.checked)}/>무료 플랜 필요</label>
+    <label className="check-label"><input type="checkbox" checked={free} onChange={e=>setFree(e.target.checked)}/>무료 이용 필요</label>
     <label className="check-label"><input type="checkbox" checked={ko} onChange={e=>setKo(e.target.checked)}/>한국어 지원 확인</label>
     <label className="check-label"><input type="checkbox" checked={onlyMine} disabled={!user} onChange={e=>setOnlyMine(e.target.checked)}/>내 도구함에서 찾기{!user&&' (로그인 필요)'}</label>
    </div>
@@ -36,7 +36,7 @@ function TaskRecommendations(){
    <div className="recommendation-evidence">
     {t.unverifiedRequirements.length>0&&<p className="note warning"><strong>요구 조건 확인 필요</strong><br/>{t.unverifiedRequirements.join(' · ')}. 이 서비스의 등록 근거만으로는 충족 여부를 확인하지 못했습니다.</p>}
     {t.matchedUseCases.length>0&&<p>연결된 업무: {t.matchedUseCases.join(' · ')}</p>}
-    {requestedFree&&<p className="note">무료 플랜이 있는 서비스입니다. 각 기능의 이용 조건은 아래 근거를 확인하세요.</p>}
+    {requestedFree&&<p className="note">무료 이용 범위: {t.pricing}. 요청한 기능의 무료 제공 여부와 한도는 아래 근거를 확인하세요.</p>}
     {t.matchedFeatures.length>0?<ul>{t.matchedFeatures.map(f=><li key={f.name}>
      <strong>{f.name}</strong><span className={'badge '+(f.status==='supported'?'green':'yellow')}>{f.status==='supported'?'지원':f.status==='conditional'?'조건부 지원':'확인 필요'}</span>
      <p>{f.description}</p><p className="feature-condition">{f.condition||'추가 이용 조건은 공식 문서를 확인하세요.'}</p>

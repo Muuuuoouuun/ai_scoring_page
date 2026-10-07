@@ -1,0 +1,98 @@
+.service-detail .detail-top>div:not(.actions){min-width:0}
+.service-detail .detail-top .metadata{font-size:12px;margin-bottom:6px}
+.service-detail .detail-top{padding:8px 0 12px;margin-bottom:20px}
+.service-detail .detail-top h1{font-size:36px;letter-spacing:-1.2px}
+.service-detail .detail-top p{font-size:15px;line-height:1.75;max-width:600px}
+.service-detail .detail-tabs{gap:30px;margin-bottom:24px}
+.service-detail .detail-tabs a{font-size:13px;padding:15px 1px}
+.service-detail .detail-body{grid-template-columns:minmax(0,1fr) 252px;gap:30px}
+.service-detail #overview>.eyebrow{margin-bottom:7px;display:block}
+.service-detail #overview>.section-heading{align-items:center;gap:14px;margin-bottom:14px;flex-wrap:wrap}
+.service-detail #overview h2{font-size:26px;margin:0;letter-spacing:-.8px}
+.service-detail #overview>.section-heading .text-link{font-size:12px;min-height:44px}
+.service-feature-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:24px 0 26px}
+.service-feature-overview>article{min-width:0;display:flex;flex-direction:column;padding:20px 18px;border:1px solid #e1e6ef;border-radius:12px;background:#fff}
+.feature-preview-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:18px}
+.feature-preview-index{font-size:12px;font-weight:550;color:#a3afc3;font-variant-numeric:tabular-nums}
+.service-feature-overview .badge{font-size:10px;padding:4px 7px}
+.service-feature-overview h3{font-size:16px;line-height:1.6;letter-spacing:-.3px;margin:0 0 8px}
+.service-feature-overview p{font-size:13px;line-height:1.85}
+.service-feature-overview .feature-preview-condition{font-size:12px;line-height:1.8;color:#736747;padding-top:12px;margin-top:12px;border-top:1px solid #f0ece0}
+.service-feature-overview .text-link{font-size:12px;min-height:44px;padding-top:10px;margin-top:auto}
+.service-feature-details,.service-limitations details{border:1px solid #e1e6ef;border-radius:10px;background:#fff;padding:2px 18px}
+.service-feature-details>summary,.service-limitations summary{font-size:13px;min-height:48px;display:list-item;padding:15px 0;color:#52617b;line-height:1.6}
+.service-feature-details[open]>summary,.service-limitations details[open]>summary{margin-bottom:16px;border-bottom:1px solid #edf0f5}
+.service-feature-details{padding-bottom:12px}
+.service-feature-details:not([open]){padding-bottom:2px}
+.service-detail .service-limitations{margin-top:12px}
+.service-limitations details[open]{padding-bottom:16px}
+.service-brief{margin-top:18px;min-width:0;overflow-wrap:anywhere}
+.service-brief h3{font-size:13px;line-height:1.6;margin:0 0 7px;color:var(--muted)}
+.service-use-links{display:flex;flex-wrap:wrap;gap:6px 8px}
+.service-use-links a{display:inline-flex;align-items:center;min-height:40px;padding:6px 11px;border:1px solid var(--line);border-radius:5px;background:white;color:var(--blue);font-size:13px;line-height:1.6}
+.service-use-links a:hover{background:#edf2ff;border-color:#bacafa}
+.service-brief-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px;margin:18px 0;padding:20px 22px;border:1px solid #e4e8ef;border-radius:12px;background:#fafbfe}
+.service-brief-facts>div{min-width:0}
+.service-brief-facts dt{font-size:12px;line-height:1.6;color:var(--muted);margin:0 0 5px;font-weight:500}
+.service-brief-facts dd{margin:0;font-size:14px;line-height:1.7;color:var(--ink)}
+.service-brief-price{grid-column:1/-1}
+.service-brief-condition{padding:16px 20px;border:1px solid #efe6c8;background:#fffaf0;border-radius:10px}
+.service-brief-condition h3{margin-bottom:4px;color:#6a5d31}
+.service-brief-condition p{font-size:14px;line-height:1.7;color:var(--ink)}
+.service-brief-condition .text-link{min-height:40px;margin-top:3px}
+.service-brief-provenance{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;margin-top:8px}
+.service-brief-provenance p{font-size:12px;line-height:1.7}
+.service-brief-provenance .text-link{font-size:12px;min-height:40px}
+.service-detail .feature-table{table-layout:fixed}
+.service-detail #features{scroll-margin-top:100px}
+.service-detail .feature-table th{font-size:13px}
+.service-detail .feature-table th:first-child{width:32%}
+.service-detail .feature-table th:nth-child(2){width:21%}
+.service-detail .feature-table td{font-size:14px;line-height:1.75;overflow-wrap:anywhere}
+.service-detail .feature-table td small{font-size:13px;line-height:1.7}
+.service-detail .feature-table .badge{white-space:normal;font-size:12px}
+.service-detail .feature-field-label{display:none}
+.service-detail .feature-condition-copy{font-size:14px;line-height:1.75;color:var(--ink)}
+.service-detail .feature-source{display:inline-flex;font-size:13px;min-height:44px;line-height:1.6;margin-top:5px}
+.service-detail .feature-check-date{font-size:12px;line-height:1.7;margin-top:12px}
+.service-detail .aside-card .service-update-title{font-size:16px;line-height:1.7;margin:10px 0 8px}
+.service-detail .aside-card{border-radius:12px;background:#f7f8fb;padding:22px;position:sticky;top:102px}
+.service-detail .aside-card .service-update-summary{font-size:13px;line-height:1.8}
+.service-detail .aside-card .service-source-note{font-size:12px;line-height:1.8}
+.service-detail .aside-card .text-link{min-height:44px;margin-top:10px}
+.service-detail .related-tool{min-width:0;display:flex;flex-direction:column}
+.service-detail .related-tool .tool-card{height:100%;border-bottom-left-radius:0;border-bottom-right-radius:0}
+.service-detail .related-pair-link{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:48px;padding:10px 20px;border:1px solid var(--line);border-top:0;border-radius:0 0 8px 8px;background:#f7f8fb;font-size:13px;font-weight:600;color:var(--blue);overflow-wrap:anywhere}
+.service-detail .related-pair-link:hover{background:#edf2ff}
+@media(max-width:600px){
+  .service-detail .detail-top{padding:0;margin-bottom:16px;gap:14px}
+  .service-detail .detail-top h1{font-size:29px}
+  .service-detail .detail-top p{font-size:13px}
+  .service-detail .detail-top .actions{gap:8px}
+  .service-detail .detail-tabs{gap:24px;margin-bottom:20px}
+  .service-detail .detail-tabs a{font-size:12px}
+  .service-detail .detail-body{display:flex;flex-direction:column;gap:24px}
+  .service-detail #overview h2{font-size:24px}
+  .service-feature-overview{grid-template-columns:minmax(0,1fr);gap:12px;margin:18px 0 22px}
+  .service-feature-overview>article{padding:20px}
+  .feature-preview-top{margin-bottom:12px}
+  .service-feature-overview h3{font-size:17px}
+  .service-feature-overview .text-link{padding-top:4px;margin-top:8px}
+  .service-brief-facts{padding:18px}
+  .service-detail .aside-card{position:static}
+  .service-use-links a,.service-brief-condition .text-link,.service-brief-provenance .text-link{min-height:44px}
+  .service-detail .feature-table{display:block}
+  .service-detail .feature-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%)}
+  .service-detail .feature-table tbody{display:grid;gap:14px}
+  .service-detail .feature-table tbody tr{display:grid;padding:16px;border:1px solid var(--line);border-radius:7px;background:white}
+  .service-detail .feature-table td{display:block;width:auto;max-width:none;padding:0;border:0;font-size:14px}
+  .service-detail .feature-table td+td{margin-top:14px}
+  .service-detail .feature-table td:first-child strong{display:block;font-size:15px;line-height:1.7}
+  .service-detail .feature-table td small{font-size:13px;margin-top:5px}
+  .service-detail .feature-table .badge{font-size:12px;padding:4px 8px}
+  .service-detail .feature-field-label{display:block;font-size:12px;line-height:1.6;font-weight:500;color:var(--muted);margin-bottom:5px}
+  .service-detail .related-pair-link{padding:10px 18px}
+}
+@media(max-width:380px){
+  .service-brief-facts{grid-template-columns:minmax(0,1fr);gap:12px}
+}
