@@ -58,11 +58,20 @@
         "status": "conditional",
         "condition": "플랜별 심층 리서치 한도가 적용됩니다.",
         "sourceUrl": "https://chatgpt.com/pricing/"
+      },
+      {
+        "name": "Space·Pages 공동 작업",
+        "description": "대화 결과를 Pages로 만들고, 팀원과 함께 편집하거나 댓글에서 ChatGPT에 수정을 요청합니다.",
+        "status": "conditional",
+        "condition": "Pro·Business·Enterprise 대상. 생성·편집·공동 작업은 웹·데스크톱에서, 모바일은 찾기·읽기·공유를 지원합니다. 조직 공유 설정이 적용됩니다.",
+        "sourceUrl": "https://chatgpt.com/features/space/"
       }
     ],
     "limitations": [
       "플랜마다 제공 모델과 도구 한도가 다릅니다.",
-      "중요한 사실과 숫자는 연결된 원문과 대조해야 합니다."
+      "중요한 사실과 숫자는 연결된 원문과 대조해야 합니다.",
+      "Space의 모바일 페이지 생성·편집·공동 작업과 슬라이드·스프레드시트 공동 편집은 아직 제공 예정입니다.",
+      "Pages 공유 시 보기·편집 권한과 워크스페이스 관리자 설정을 확인해야 합니다."
     ],
     "sourceUrls": [
       "https://chatgpt.com/pricing/",
@@ -71,18 +80,21 @@
       "https://chatgpt.com/download/",
       "https://apps.apple.com/us/app/chatgpt/id6448311069",
       "https://learn.chatgpt.com/docs/changelog#codex-2026-09-11-app",
-      "https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt"
+      "https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt",
+      "https://openai.com/index/devday-2026-recap/",
+      "https://chatgpt.com/features/space/"
     ],
-    "checkedAt": "2026-09-12",
+    "checkedAt": "2026-10-03",
     "latestUpdate": {
-      "title": "데스크톱 빠른 대화와 Windows Appshots",
-      "summary": "macOS·Windows 데스크톱 앱에서 Pets의 플로팅 컨트롤로 빠른 대화를 시작하고, Windows에서 Appshots를 사용할 수 있게 되었습니다.",
-      "publishedAt": "2026-09-11",
-      "sourceUrl": "https://learn.chatgpt.com/docs/changelog#codex-2026-09-11-app",
-      "audience": "macOS·Windows 데스크톱 앱 이용자",
-      "rollout": "데스크톱 26.908 · Appshots의 Windows 지원 추가",
-      "id": "chatgpt-2026-09-11",
-      "revision": 1
+      "title": "ChatGPT Space와 Pages 발표",
+      "summary": "Pro·Business·Enterprise에서 자료를 Space에 모으고 Pages를 웹·데스크톱에서 함께 편집할 수 있습니다. 모바일은 찾기·읽기·공유를 지원하며, 모바일 편집과 슬라이드·시트 협업은 예정입니다.",
+      "publishedAt": "2026-09-29",
+      "sourceUrl": "https://openai.com/index/devday-2026-recap/",
+      "audience": "ChatGPT Pro·Business·Enterprise 이용자와 공동 작업 팀",
+      "rollout": "해당 플랜 웹·데스크톱 제공 · 모바일 읽기·공유 지원 · 모바일 편집과 슬라이드·시트 협업 예정",
+      "id": "chatgpt-space-pages-2026-09-29",
+      "revision": 1,
+      "statusLabel": "플랜 제한"
     },
     "logoNote": "ChatGPT 공식 앱 아이콘",
     "logo": "/logos/chatgpt-product.webp",
@@ -130,10 +142,10 @@
       },
       {
         "name": "Artifacts",
-        "description": "대화와 별도로 결과물을 확인하고 발전시킬 수 있습니다.",
-        "status": "supported",
-        "condition": "",
-        "sourceUrl": "https://claude.com/pricing"
+        "description": "대화 옆에서 문서·코드·시각 자료 같은 결과물을 확인하고 편집·공유합니다.",
+        "status": "conditional",
+        "condition": "Free·Pro·Max·Team·Enterprise에서 제공됩니다. 클라우드 코드 실행·파일 생성 설정을 켜야 합니다.",
+        "sourceUrl": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
       },
       {
         "name": "Research",
@@ -141,27 +153,46 @@
         "status": "conditional",
         "condition": "현재 개인 플랜 표에서는 Pro 이상에 포함됩니다.",
         "sourceUrl": "https://claude.com/pricing"
+      },
+      {
+        "name": "Cowork·채팅 통합 대화",
+        "description": "별도 모드를 고르지 않고 같은 대화에서 질문하거나 조사·보고서·스프레드시트 같은 여러 단계의 작업을 맡깁니다.",
+        "status": "conditional",
+        "condition": "Pro·Max의 웹·데스크톱·모바일에 순차 제공됩니다. 같은 플랜도 계정마다 적용 시점이 다릅니다.",
+        "sourceUrl": "https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude"
+      },
+      {
+        "name": "Design·Slides·Docs 템플릿",
+        "description": "디자인·슬라이드·공동 문서 템플릿에서 결과물을 만들고 Claude와 함께 수정합니다.",
+        "status": "conditional",
+        "condition": "유료 플랜 베타. Pro·Max·Team은 기본 활성화, Enterprise는 소유자가 켜야 합니다. 템플릿 시작·편집·공유 설정 변경은 웹·데스크톱에서 지원합니다.",
+        "sourceUrl": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
       }
     ],
     "limitations": [
       "Claude 앱 구독과 Claude API 요금은 별도로 확인해야 합니다.",
-      "플랜과 사용량에 따라 이용 가능한 모델이 달라집니다."
+      "플랜과 사용량에 따라 이용 가능한 모델이 달라집니다.",
+      "클라우드 작업은 노트북을 닫아도 계속되지만, 컴퓨터의 로컬 파일·앱을 사용하는 작업은 Claude Desktop이 열려 있어야 합니다.",
+      "Design·Slides·Docs 템플릿은 무료 플랜에 포함되지 않습니다. 모바일에서는 대화로 제작을 요청하고 결과를 볼 수 있습니다."
     ],
     "sourceUrls": [
       "https://claude.com/pricing",
       "https://support.claude.com/en/articles/10769299-how-to-use-claude-in-your-preferred-language",
-      "https://support.claude.com/en/articles/12138966-release-notes"
+      "https://support.claude.com/en/articles/12138966-release-notes",
+      "https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude",
+      "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
     ],
-    "checkedAt": "2026-09-12",
+    "checkedAt": "2026-10-03",
     "latestUpdate": {
-      "title": "Enterprise용 Smart reports 베타",
-      "summary": "팀의 Claude 사용 방식과 비용, 반복 작업 패턴을 분석하는 보고 기능을 Enterprise 베타로 안내했습니다.",
-      "publishedAt": "2026-09-10",
+      "title": "Claude Cowork와 채팅을 한 대화로 통합",
+      "summary": "질문과 Cowork 작업을 같은 대화에서 이어가는 경험을 Pro·Max에 순차 제공합니다. 기존 채팅·작업·프로젝트가 이어지며, 클라우드 작업과 로컬 컴퓨터 작업의 실행 조건은 다릅니다.",
+      "publishedAt": "2026-09-16",
       "sourceUrl": "https://support.claude.com/en/articles/12138966-release-notes",
-      "audience": "Claude Enterprise 플랜 이용 조직",
-      "rollout": "베타 제공",
-      "id": "claude-2026-09-10",
-      "revision": 1
+      "audience": "Claude Pro·Max 이용자",
+      "rollout": "웹·데스크톱·모바일 순차 제공 · 같은 플랜도 계정별 적용 시점이 다름 · 로컬 작업은 Desktop 실행 필요",
+      "id": "claude-unified-conversations-2026-09-16",
+      "revision": 1,
+      "statusLabel": "순차 제공"
     },
     "logo": "/logos/claude.png"
   },
@@ -225,28 +256,39 @@
         "status": "conditional",
         "condition": "공식 안내 기준 macOS 15 이상 또는 Windows 10 이상이 필요합니다.",
         "sourceUrl": "https://gemini.google/release-notes/"
+      },
+      {
+        "name": "반복 작업 지침 (Skills·Gems 전환)",
+        "description": "반복해서 쓰는 지침을 Skills로 저장하고, 대화에 맞춰 자동 적용하거나 여러 지침을 함께 사용합니다.",
+        "status": "conditional",
+        "condition": "현재 18세 이상 개인 Google 계정의 Gemini 채팅에서 제공됩니다. 회사·학교 계정은 추후 제공 예정입니다.",
+        "sourceUrl": "https://support.google.com/gemini/answer/18560919"
       }
     ],
     "limitations": [
       "Gemini 앱에 보이는 모델과 Gemini API 모델 목록은 다를 수 있습니다.",
-      "일부 신규 기능은 특정 지역·연령·유료 플랜에 먼저 제공됩니다."
+      "일부 신규 기능은 특정 지역·연령·유료 플랜에 먼저 제공됩니다.",
+      "Skills는 현재 Canvas·Deep Research·동영상·음악 생성·Guided Learning에 적용할 수 없습니다.",
+      "Gems의 Skills 자동 전환은 개인 계정 2026년 11월, Workspace 기업·비영리 계정 2027년 3월, 교육 계정 2027년 6월 예정입니다."
     ],
     "sourceUrls": [
       "https://gemini.google/subscriptions/",
       "https://support.google.com/gemini/answer/13575153?hl=en",
       "https://gemini.google/release-notes/",
-      "https://support.google.com/gemini/answer/16047321?hl=en-NZ"
+      "https://support.google.com/gemini/answer/16047321?hl=en-NZ",
+      "https://support.google.com/gemini/answer/18560919"
     ],
-    "checkedAt": "2026-09-12",
+    "checkedAt": "2026-10-03",
     "latestUpdate": {
-      "title": "Windows용 Gemini 앱 출시",
-      "summary": "Windows 10 이상에서 단축키로 Gemini를 호출하고 전용 데스크톱 작업공간을 사용할 수 있게 되었습니다.",
-      "publishedAt": "2026-09-10",
+      "title": "Gemini Skills 출시와 Gems 전환 일정",
+      "summary": "반복 작업 지침을 저장하고 대화에서 자동 적용하거나 조합하는 Skills 제공을 시작했습니다. 현재 18세 이상 개인 Google 계정이 대상이며 Gems는 계정 유형별 일정에 따라 자동 전환될 예정입니다.",
+      "publishedAt": "2026-09-30",
       "sourceUrl": "https://gemini.google/release-notes/",
-      "audience": "Windows 10 이상 PC 이용자",
-      "rollout": "Windows 앱 제공 시작 · 계정별 기능·연결 권한 적용",
-      "id": "gemini-2026-09-10",
-      "revision": 1
+      "audience": "18세 이상 개인 Google 계정 이용자 · 기존 Gems 이용자",
+      "rollout": "Skills 순차 제공 · Gems 전환: 개인 2026년 11월, Workspace 기업·비영리 2027년 3월, 교육 2027년 6월 예정",
+      "id": "gemini-skills-2026-09-30",
+      "revision": 1,
+      "statusLabel": "순차 제공"
     },
     "logo": "/logos/gemini.svg"
   },
@@ -940,11 +982,20 @@
         "status": "conditional",
         "condition": "플랜별 AI 이용 한도 또는 워크스페이스 크레딧이 적용됩니다.",
         "sourceUrl": "https://www.notion.com/help/create-a-database"
+      },
+      {
+        "name": "팀 Skills 지침 라이브러리",
+        "description": "페이지·데이터베이스에 팀 지침을 모아 Notion Agent에서 실행하고, SKILL.md로 내려받아 로컬 에이전트에서 사용합니다.",
+        "status": "conditional",
+        "condition": "Skills 페이지 접근 권한과 Notion AI 이용 조건이 적용됩니다. 자동 선택에는 Skills 데이터베이스와 지침 설명이 필요합니다.",
+        "sourceUrl": "https://www.notion.com/help/create-and-manage-skills"
       }
     ],
     "limitations": [
       "무료·유료 플랜의 협업 및 파일 한도가 다릅니다.",
-      "AI로 데이터베이스를 만드는 기능의 지원 범위와 크레딧 조건을 확인해야 합니다."
+      "AI로 데이터베이스를 만드는 기능의 지원 범위와 크레딧 조건을 확인해야 합니다.",
+      "Skills의 공유·수정은 페이지 권한을 따릅니다. Notion에서 지침이 바뀌면 내려받은 로컬 사본을 다시 받아야 합니다.",
+      "Notion AI 이용 한도는 플랜별로 확인해야 합니다. 별도 Custom MCP 연결은 Business·Enterprise 베타이며 Skills의 제공 조건과 다릅니다."
     ],
     "sourceUrls": [
       "https://www.notion.com/pricing",
@@ -953,18 +1004,21 @@
       "https://www.notion.com/desktop",
       "https://www.notion.com/mobile",
       "https://www.notion.com/releases/2026-09-09",
-      "https://www.notion.com/help/writing-and-editing-basics"
+      "https://www.notion.com/help/writing-and-editing-basics",
+      "https://www.notion.com/releases/2026-09-15",
+      "https://www.notion.com/help/create-and-manage-skills"
     ],
-    "checkedAt": "2026-09-12",
+    "checkedAt": "2026-10-03",
     "latestUpdate": {
-      "title": "에이전트가 사용할 AI 모델 관리",
-      "summary": "Business·Enterprise 워크스페이스 소유자가 Notion Agent와 Custom Agents에서 허용할 AI 모델을 각각 관리할 수 있습니다.",
-      "publishedAt": "2026-09-09",
-      "sourceUrl": "https://www.notion.com/releases/2026-09-09",
-      "audience": "Business·Enterprise 워크스페이스 소유자",
-      "rollout": "제공 중",
-      "id": "notion-2026-09-09",
-      "revision": 1
+      "title": "Notion 3.7: 팀 Skills 라이브러리",
+      "summary": "팀 지침을 페이지·데이터베이스에 저장하고 Notion Agent에서 실행하거나 자동 선택하도록 할 수 있습니다. SKILL.md로 내려받아 로컬 에이전트에서 사용하고, 지침 변경 시 사본을 다시 받습니다.",
+      "publishedAt": "2026-09-15",
+      "sourceUrl": "https://www.notion.com/releases/2026-09-15",
+      "audience": "Notion Agent 이용자와 Skills 페이지를 공유하는 팀",
+      "rollout": "공식 제공 중 · 페이지 접근 권한·Notion AI 이용 조건 적용 · Custom MCP 연결은 별도 Business·Enterprise 베타",
+      "id": "notion-team-skills-2026-09-15",
+      "revision": 1,
+      "statusLabel": "제공 조건 확인"
     },
     "logo": "/logos/notion.png"
   },
@@ -2726,5 +2780,271 @@
       "audience": "Microsoft Teams iOS·iPadOS 앱 이용자",
       "rollout": "App Store 8.16.2 · iOS·iPadOS 17.0 이상"
     }
+  },
+  {
+    "id": "claude-opus-5-5",
+    "name": "Claude Opus 5.5",
+    "kind": "model",
+    "vendor": "Anthropic",
+    "category": "development",
+    "summary": "복잡한 코딩·전문 업무를 위한 Claude 5.5 상위 모델",
+    "description": "Anthropic이 2026년 9월 22일 발표한 모델입니다. 대규모 코드 작업과 지식 업무에 초점을 맞췄으며 Claude 앱과 API·클라우드 플랫폼에서 사용할 수 있습니다. 속도·작업당 비용 개선 수치는 Anthropic 자체 평가입니다.",
+    "homepage": "https://www.anthropic.com/claude-opus-5-5",
+    "logo": "/logos/claude-fable-5-1.png",
+    "logoSource": "https://www.anthropic.com/images/icons/apple-touch-icon.png",
+    "logoNote": "Anthropic 공식 브랜드 마크",
+    "pricing": "API 100만 토큰당 입력 $4 · 출력 $20 · 캐시 읽기 $0.20",
+    "korean": "확인 필요",
+    "platforms": ["Claude", "Claude API", "AWS", "Google Cloud", "Microsoft Azure"],
+    "useCases": ["대규모 코드 작업", "복잡한 지식 업무", "장기 에이전트 작업"],
+    "features": [
+      {"name":"코딩·전문 업무","description":"복잡한 코드베이스 작업과 전문 업무에 사용할 수 있습니다.","status":"supported","condition":"","sourceUrl":"https://www.anthropic.com/claude-opus-5-5"},
+      {"name":"빠른 모드","description":"Claude Code와 Claude Platform에서 별도 빠른 모드를 제공합니다.","status":"conditional","condition":"기본 API 요금과 다른 입력 $8·출력 $40/100만 토큰이 적용됩니다.","sourceUrl":"https://www.anthropic.com/claude-opus-5-5"}
+    ],
+    "limitations": ["일부 사이버보안·생물학 요청은 보호 장치에 따라 다른 모델로 처리될 수 있습니다.", "Anthropic의 성능·비용 비교는 자체 평가이며 실제 작업 결과는 다릅니다."],
+    "sourceUrls": ["https://www.anthropic.com/claude-opus-5-5"],
+    "checkedAt": "2026-09-30",
+    "latestUpdate": {"id":"claude-opus-5-5-2026-09-22","revision":1,"title":"Claude Opus 5.5 발표","summary":"복잡한 코딩·지식 업무용 모델을 출시했습니다. API 기본 요금은 100만 토큰당 입력 $4, 출력 $20이며 Anthropic은 Opus 5 대비 출력 속도와 작업당 비용 개선을 발표했습니다.","publishedAt":"2026-09-22","sourceUrl":"https://www.anthropic.com/claude-opus-5-5","audience":"Claude 이용자와 Claude API·클라우드 플랫폼 개발자","rollout":"공식 제공 중 · 일부 고위험 요청에는 보호 장치와 모델 전환 적용"}
+  },
+  {
+    "id": "claude-sonnet-5-5",
+    "name": "Claude Sonnet 5.5",
+    "kind": "model",
+    "vendor": "Anthropic",
+    "category": "development",
+    "summary": "일상 코딩·문서 작업을 위한 Claude 5.5 모델",
+    "description": "Anthropic이 2026년 9월 28일 발표한 Sonnet 계열 모델입니다. 빠른 반복 작업과 코딩·문서 업무를 겨냥하며 API 가격은 Sonnet 5와 동일합니다. 속도·작업당 비용 개선 수치는 Anthropic 자체 평가입니다.",
+    "homepage": "https://www.anthropic.com/claude-sonnet-5-5",
+    "logo": "/logos/claude-fable-5-1.png",
+    "logoSource": "https://www.anthropic.com/images/icons/apple-touch-icon.png",
+    "logoNote": "Anthropic 공식 브랜드 마크",
+    "pricing": "API 100만 토큰당 입력 $2 · 출력 $10 · 캐시 읽기 $0.20",
+    "korean": "확인 필요",
+    "platforms": [
+      "Claude",
+      "Claude API"
+    ],
+    "useCases": [
+      "일상 코딩",
+      "문서 작업",
+      "빠른 프로토타이핑"
+    ],
+    "features": [
+      {
+        "name": "코딩·업무 작업",
+        "description": "코드 작성과 여러 단계의 업무 작업에 사용합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5"
+      },
+      {
+        "name": "추론 노력 조절",
+        "description": "작업 난도에 맞춰 추론 수준을 조정합니다.",
+        "status": "conditional",
+        "condition": "Claude 앱·Claude Code와 API의 기본 설정이 다릅니다.",
+        "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5"
+      }
+    ],
+    "limitations": [
+      "일부 고위험 사이버보안 요청에는 보호 장치와 모델 전환이 적용됩니다.",
+      "한국어별 성능 보장과 계정별 사용 한도는 별도 확인이 필요합니다.",
+      "2026년 9월 30일 안내에 따르면 claude-sonnet-4-5-20250929의 Claude API 종료는 2026년 11월 30일 예정입니다. Sonnet 5.5로 이전을 권장하며 외부 클라우드의 종료 일정은 별도로 확인해야 합니다.",
+      "4.5에서 이전할 때 모델 ID뿐 아니라 thinking·도구 사용·출력 설정 등의 요청 호환성을 공식 이전 가이드와 대조하고 검증해야 합니다."
+    ],
+    "sourceUrls": [
+      "https://www.anthropic.com/claude-sonnet-5-5",
+      "https://platform.claude.com/docs/en/release-notes/overview",
+      "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide"
+    ],
+    "checkedAt": "2026-10-03",
+    "latestUpdate": {
+      "id": "claude-sonnet-5-5-2026-09-28",
+      "revision": 2,
+      "title": "Claude Sonnet 5.5 발표",
+      "summary": "일상 코딩과 업무용 Sonnet 신모델을 출시했습니다. API 가격은 기존 Sonnet 5와 동일한 입력 $2·출력 $10/100만 토큰이며, Anthropic은 출력 속도 30% 이상 개선을 발표했습니다. 9월 30일에는 Sonnet 4.5의 Claude API 종료를 2026년 11월 30일로 예고하고 5.5로 이전을 권장했습니다.",
+      "publishedAt": "2026-09-28",
+      "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5",
+      "audience": "Claude 이용자와 Claude API 개발자",
+      "rollout": "공식 제공 중 · 계정별 플랜·모델 권한 확인 · Sonnet 4.5 Claude API 종료는 2026년 11월 30일 예정",
+      "statusLabel": "4.5 API 종료 예정"
+    }
+  },
+  {
+    "id": "gpt-6-1-sol",
+    "name": "GPT-6.1 Sol",
+    "kind": "model",
+    "vendor": "OpenAI",
+    "category": "development",
+    "summary": "DevDay 2026에서 발표한 코딩·전문 업무용 모델",
+    "description": "GPT-6 Sol의 업그레이드 모델로, 에이전트 코딩·컴퓨터 사용·전문 업무를 겨냥합니다. DevDay 발표에 따르면 API와 ChatGPT·Codex의 해당 플랜에 제공됩니다. 앱 기능은 연결된 실행 환경에 따라 다릅니다.",
+    "homepage": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+    "logo": "/logos/gpt-6-astra.png",
+    "logoSource": "https://developers.openai.com/favicon.png",
+    "logoNote": "OpenAI 공식 브랜드 마크",
+    "pricing": "API 100만 토큰당 입력 $2 · 출력 $10",
+    "korean": "확인 필요",
+    "platforms": ["OpenAI API", "ChatGPT", "Codex"],
+    "useCases": ["코딩 에이전트", "컴퓨터 사용", "전문 업무"],
+    "features": [
+      {"name":"에이전트 코딩","description":"여러 단계의 개발 작업에 사용합니다.","status":"supported","condition":"작업 실행에는 개발 환경과 도구 연결이 필요합니다.","sourceUrl":"https://openai.com/index/devday-2026-recap/"},
+      {"name":"컴퓨터 사용","description":"연결된 실행 환경에서 컴퓨터 작업에 활용할 수 있습니다.","status":"conditional","condition":"앱·API별 도구 제공 조건을 확인해야 합니다.","sourceUrl":"https://openai.com/index/devday-2026-recap/"}
+    ],
+    "limitations": ["API 과금과 ChatGPT 구독 한도는 별개입니다.", "DevDay의 Astra 대비 성능·가격 비교는 OpenAI 발표 기준입니다."],
+    "sourceUrls": ["https://openai.com/index/devday-2026-recap/", "https://developers.openai.com/api/docs/models/gpt-6.1-sol"],
+    "checkedAt": "2026-09-30",
+    "latestUpdate": {"id":"gpt-6-1-sol-2026-09-29","revision":1,"title":"DevDay 2026: GPT-6.1 Sol 공개","summary":"OpenAI가 에이전트 코딩·컴퓨터 사용·전문 업무를 위한 GPT-6.1 Sol을 발표했습니다. API와 Plus·Pro·Business·Enterprise·Edu에 제공한다고 안내했습니다.","publishedAt":"2026-09-29","sourceUrl":"https://openai.com/index/devday-2026-recap/","audience":"OpenAI API 개발자와 ChatGPT·Codex 해당 플랜 이용자","rollout":"API 및 Plus·Pro·Business·Enterprise·Edu 제공"}
+  },
+  {
+    "id": "openai-dots",
+    "name": "OpenAI dots",
+    "kind": "ai-app",
+    "vendor": "OpenAI",
+    "category": "productivity",
+    "summary": "지속적으로 업무를 맡아 수행하는 OpenAI 에이전트",
+    "description": "DevDay 2026에서 발표한 상시 작동 에이전트입니다. 전용 클라우드 컴퓨터를 바탕으로 업무 맥락을 이어가며 ChatGPT와 연결 서비스에서 작업합니다. 실제 사용은 플랜·지역·관리자 설정에 좌우됩니다.",
+    "homepage": "https://openai.com/index/introducing-dots/",
+    "logo": "/logos/chatgpt-product.webp",
+    "logoSource": "https://developers.openai.com/favicon.png",
+    "logoNote": "OpenAI 공식 앱 아이콘",
+    "pricing": "Pro·Business Premium 등 해당 플랜 · 사용량 한도 적용",
+    "korean": "확인 필요",
+    "platforms": ["ChatGPT", "Slack", "Microsoft Teams"],
+    "useCases": ["지속 업무 위임", "업무 자동화", "팀 협업"],
+    "features": [
+      {"name":"지속 실행 에이전트","description":"업무를 맡아 백그라운드에서 이어서 수행합니다.","status":"conditional","condition":"대상 플랜·지역·사용량 한도가 적용됩니다.","sourceUrl":"https://openai.com/index/introducing-dots/"},
+      {"name":"팀 도구 연결","description":"ChatGPT·Slack·Teams 등 업무 맥락과 연결합니다.","status":"conditional","condition":"조직의 연결·권한 설정이 필요합니다.","sourceUrl":"https://openai.com/index/introducing-dots/"}
+    ],
+    "limitations": ["Enterprise·Edu·Healthcare 베타는 관리자가 켜야 하며 기본으로 꺼져 있습니다.", "제공 지역과 사용량은 플랜별로 다릅니다."],
+    "sourceUrls": ["https://openai.com/index/introducing-dots/", "https://openai.com/index/devday-2026-recap/"],
+    "checkedAt": "2026-09-30",
+    "latestUpdate": {"id":"openai-dots-2026-09-29","revision":1,"title":"DevDay 2026: dots 에이전트 발표","summary":"OpenAI가 업무를 지속적으로 수행하는 dots를 공개했습니다. Pro·Business Premium은 대상 지역에서 이용할 수 있고 Enterprise·Edu·Healthcare는 관리자 활성화 후 베타를 체험할 수 있습니다.","publishedAt":"2026-09-29","sourceUrl":"https://openai.com/index/introducing-dots/","audience":"대상 지역 Pro·Business Premium 및 관리자 승인 베타 조직","rollout":"Pro·Business Premium 대상 지역 제공 · Enterprise·Edu·Healthcare 관리자 활성화 베타"}
+  },
+  {
+    "id": "codex-cloud",
+    "name": "Codex in the cloud",
+    "kind": "ai-app",
+    "vendor": "OpenAI",
+    "category": "development",
+    "summary": "재사용 가능한 클라우드 개발 환경에서 Codex 작업 실행",
+    "description": "DevDay 2026에서 발표한 Codex의 클라우드 작업 방식입니다. 팀이 승인한 설정과 권한을 공유하는 재사용 개발 환경을 구성하고, 컴퓨터·휴대전화 등에서 원격으로 작업을 시작할 수 있습니다.",
+    "homepage": "https://openai.com/index/devday-2026-recap/",
+    "logo": "/logos/chatgpt-product.webp",
+    "logoSource": "https://developers.openai.com/favicon.png",
+    "logoNote": "OpenAI 공식 앱 아이콘",
+    "pricing": "Plus·Pro·Business·Healthcare·Education·Enterprise 플랜",
+    "korean": "확인 필요",
+    "platforms": ["클라우드", "웹", "데스크톱", "모바일 원격"],
+    "useCases": ["원격 개발", "팀 개발 환경", "코딩 에이전트"],
+    "features": [
+      {"name":"재사용 개발 환경","description":"승인된 설정과 권한으로 작업 환경을 재사용합니다.","status":"conditional","condition":"팀·플랜 설정에 따라 접근이 다릅니다.","sourceUrl":"https://openai.com/index/devday-2026-recap/"},
+      {"name":"다중 기기에서 원격 작업","description":"휴대전화 등에서도 클라우드 Codex 작업을 시작·관리합니다.","status":"conditional","condition":"실제 기기·플랜별 제공 범위를 확인해야 합니다.","sourceUrl":"https://openai.com/index/devday-2026-recap/"}
+    ],
+    "limitations": ["클라우드 작업에는 저장소·환경 접근 권한 구성이 필요합니다.", "플랜별 사용 한도와 환경 기능은 공식 문서를 확인해야 합니다."],
+    "sourceUrls": ["https://openai.com/index/devday-2026-recap/"],
+    "checkedAt": "2026-09-30",
+    "latestUpdate": {"id":"codex-cloud-2026-09-29","revision":1,"title":"DevDay 2026: Codex 클라우드 환경","summary":"OpenAI가 재사용 가능한 개발 환경과 여러 기기에서 실행하는 Codex 클라우드 작업을 발표했습니다. Plus·Pro·Business·Healthcare·Education·Enterprise에 제공됩니다.","publishedAt":"2026-09-29","sourceUrl":"https://openai.com/index/devday-2026-recap/","audience":"Codex를 쓰는 개발자·팀","rollout":"Plus·Pro·Business·Healthcare·Education·Enterprise 제공"}
+  },
+  {
+    "id": "grok-4-7",
+    "name": "Grok 4.7",
+    "kind": "model",
+    "vendor": "SpaceXAI",
+    "category": "development",
+    "summary": "코딩과 지식 업무에 초점을 맞춘 Grok 모델",
+    "description": "2026년 9월 21일 발표된 Grok 모델입니다. Cursor, Grok Build, Grok API와 외부 플랫폼에서 제공되며 코딩·지식 업무에 초점을 맞췄습니다. 빠른 변형 모델의 제공 채널과 요금은 일반 모델과 다릅니다.",
+    "homepage": "https://x.ai/news/grok-4-7",
+    "logo": "/logos/grok.svg",
+    "logoSource": "https://x.ai/favicon.ico",
+    "logoNote": "Grok 이름을 표시한 사이트 자체 아이콘",
+    "pricing": "API 100만 토큰당 입력 $2부터 · 출력 $6부터",
+    "korean": "확인 필요",
+    "platforms": ["Grok API", "Grok Build", "Cursor", "외부 플랫폼"],
+    "useCases": ["코딩", "지식 업무", "개발 에이전트"],
+    "features": [
+      {"name":"코딩·지식 업무","description":"개발과 여러 단계의 지식 업무에 활용합니다.","status":"supported","condition":"","sourceUrl":"https://x.ai/news/grok-4-7"},
+      {"name":"빠른 변형 모델","description":"일반 모델보다 출력 속도가 빠른 변형을 제공합니다.","status":"conditional","condition":"속도와 가격은 기본 모델과 다르며 접근 채널별 제공 여부를 확인해야 합니다.","sourceUrl":"https://x.ai/news/grok-4-7"}
+    ],
+    "limitations": ["API 가격은 입력 길이와 모델 변형에 따라 달라질 수 있습니다.", "공식 벤치마크와 안전성 비교는 제공사 발표 기준입니다."],
+    "sourceUrls": ["https://x.ai/news/grok-4-7", "https://docs.x.ai/developers/release-notes"],
+    "checkedAt": "2026-09-30",
+    "latestUpdate": {"id":"grok-4-7-2026-09-21","revision":1,"title":"Grok 4.7 출시","summary":"SpaceXAI가 코딩·지식 업무용 Grok 4.7을 발표했습니다. Cursor·Grok Build·Grok API 등에서 제공하며 API 가격은 100만 토큰당 입력 $2, 출력 $6부터입니다.","publishedAt":"2026-09-21","sourceUrl":"https://x.ai/news/grok-4-7","audience":"Grok Build·Cursor 사용자와 Grok API 개발자","rollout":"Grok Build·Cursor·API 및 일부 외부 플랫폼 제공"}
+  },
+  {
+    "id": "grok-team-bots",
+    "name": "Grok Team Bots",
+    "kind": "ai-app",
+    "vendor": "SpaceXAI",
+    "category": "collaboration",
+    "summary": "팀의 파일·도구·기억을 공유하는 협업 봇",
+    "description": "역할 또는 업무 흐름별 Grok Bot을 팀에 공유하는 기능입니다. 공통 파일·기술·플러그인과 기억을 활용하면서 개인별 대화는 분리됩니다. Slack 채널에서도 팀과 함께 사용할 수 있습니다.",
+    "homepage": "https://x.ai/news/team-bots",
+    "logo": "/logos/grok.svg",
+    "logoSource": "https://x.ai/favicon.ico",
+    "logoNote": "Grok 이름을 표시한 사이트 자체 아이콘",
+    "pricing": "Teams·Enterprise 플랜 · 공개 베타",
+    "korean": "확인 필요",
+    "platforms": ["Grok Bot", "Slack"],
+    "useCases": ["팀 지식 공유", "업무 자동화", "고객 계정 브리핑"],
+    "features": [
+      {"name":"공유 봇","description":"팀원이 같은 봇과 공통 맥락·도구를 사용합니다.","status":"conditional","condition":"Teams·Enterprise 공개 베타에서 제공됩니다.","sourceUrl":"https://x.ai/news/team-bots"},
+      {"name":"개인 대화 분리","description":"공유 봇을 사용해도 개인별 대화와 개인 기억을 분리합니다.","status":"supported","condition":"","sourceUrl":"https://x.ai/news/team-bots"},
+      {"name":"Slack 협업","description":"Slack 채널에 팀 봇을 초대해 함께 질문하고 결과를 봅니다.","status":"conditional","condition":"연결 및 조직 권한 설정이 필요합니다.","sourceUrl":"https://x.ai/news/team-bots"}
+    ],
+    "limitations": ["공개 베타여서 제공 범위와 동작은 바뀔 수 있습니다.", "외부 앱·자격 증명 연결은 조직의 권한 정책을 확인해야 합니다."],
+    "sourceUrls": ["https://x.ai/news/team-bots"],
+    "checkedAt": "2026-09-30",
+    "latestUpdate": {"id":"grok-team-bots-2026-09-28","revision":1,"title":"Grok Team Bots 공개 베타","summary":"팀의 파일·앱·기술·기억을 공통으로 활용하는 공유 Grok Bot이 출시됐습니다. 개인 대화는 분리되며 Teams·Enterprise 플랜에서 공개 베타로 제공됩니다.","publishedAt":"2026-09-28","sourceUrl":"https://x.ai/news/team-bots","audience":"Grok Teams·Enterprise 조직","rollout":"Teams·Enterprise 플랜 공개 베타"}
+  },
+  {
+    "id": "grok-build",
+    "name": "Grok Build",
+    "kind": "ai-app",
+    "vendor": "SpaceXAI",
+    "category": "development",
+    "summary": "프로젝트 관례와 결정을 다음 세션에 기억하는 코딩 도구",
+    "description": "Grok의 개발 도구입니다. 2026년 9월 메모리 기능을 추가해 완료된 작업에서 지속할 만한 규칙·결정·프로젝트 사실을 기록하고 이후 관련 작업에 참고합니다.",
+    "homepage": "https://x.ai/build",
+    "logo": "/logos/grok.svg",
+    "logoSource": "https://x.ai/favicon.ico",
+    "logoNote": "Grok 이름을 표시한 사이트 자체 아이콘",
+    "pricing": "무료 시작 가능 · 플랜별 한도 확인",
+    "korean": "확인 필요",
+    "platforms": ["CLI", "개발 환경"],
+    "useCases": ["코드 작성", "프로젝트 맥락 유지", "개발 작업 자동화"],
+    "features": [
+      {"name":"프로젝트 메모리","description":"세션 사이에 코드 관례·결정·프로젝트 사실을 이어갑니다.","status":"conditional","condition":"새 세션에서 적용되며 첫 완료 턴 뒤부터 기록됩니다.","sourceUrl":"https://x.ai/news/grok-build-memory"},
+      {"name":"메모리 확인","description":"`/memory`로 저장된 파일을 찾아보고 `/dream`으로 메모를 정리합니다.","status":"supported","condition":"","sourceUrl":"https://x.ai/news/grok-build-memory"}
+    ],
+    "limitations": ["진행 중인 임시 상태나 비밀은 메모리 기록 대상이 아니라고 안내합니다.", "메모리는 틀릴 수 있으므로 저장된 프로젝트 정보는 검토해야 합니다."],
+    "sourceUrls": ["https://x.ai/news/grok-build-memory", "https://x.ai/build"],
+    "checkedAt": "2026-09-30",
+    "latestUpdate": {"id":"grok-build-memory-2026-09-16","revision":1,"title":"Grok Build 메모리 기능 추가","summary":"Grok Build가 코드 관례·결정·프로젝트 사실을 작업 후 메모로 남기고 다음 세션에서 관련 내용을 읽도록 개선됐습니다. 새 세션을 시작해야 적용됩니다.","publishedAt":"2026-09-16","sourceUrl":"https://x.ai/news/grok-build-memory","audience":"Grok Build 이용 개발자","rollout":"공식 제공 중 · 새 세션부터 메모리 적용"}
+  },
+  {
+    "id": "grok-voice-transcribe-2",
+    "name": "Grok Voice Transcribe 2.0",
+    "kind": "model",
+    "vendor": "SpaceXAI",
+    "category": "audio",
+    "summary": "배치·실시간 음성 전사를 위한 Grok 모델",
+    "description": "녹음 파일과 실시간 오디오 스트림을 텍스트로 전사하는 모델입니다. 다국어 자동 감지, 녹음 중 언어 전환, 화자 분리와 단어별 타임스탬프 등을 지원합니다. 정확도 비교는 제공사의 평가 조건을 확인해야 합니다.",
+    "homepage": "https://x.ai/news/grok-voice-transcribe-2",
+    "logo": "/logos/grok.svg",
+    "logoSource": "https://x.ai/favicon.ico",
+    "logoNote": "Grok 이름을 표시한 사이트 자체 아이콘",
+    "pricing": "오디오 1시간당 배치 $0.10 · 스트리밍 $0.20",
+    "korean": "다국어 지원 · 한국어별 성능 확인 필요",
+    "platforms": ["Grok Speech-to-Text API"],
+    "useCases": ["회의 전사", "실시간 자막", "음성 에이전트"],
+    "features": [
+      {"name":"배치·실시간 전사","description":"녹음 파일과 스트리밍 오디오를 전사합니다.","status":"supported","condition":"방식별 요금이 다릅니다.","sourceUrl":"https://x.ai/news/grok-voice-transcribe-2"},
+      {"name":"화자·시간 정보","description":"화자 분리와 단어별 타임스탬프를 제공합니다.","status":"supported","condition":"","sourceUrl":"https://x.ai/news/grok-voice-transcribe-2"},
+      {"name":"다국어 전환 감지","description":"녹음 중 언어가 바뀌어도 한 번에 전사합니다.","status":"supported","condition":"","sourceUrl":"https://x.ai/news/grok-voice-transcribe-2"}
+    ],
+    "limitations": ["출시 당시 Speech-to-Text API의 기본 모델은 1.0으로 유지되며 2.0 기본 전환은 추후 예정입니다.", "한국어 전사 정확도는 별도 검증하지 않았습니다."],
+    "sourceUrls": ["https://x.ai/news/grok-voice-transcribe-2"],
+    "checkedAt": "2026-09-30",
+    "latestUpdate": {"id":"grok-voice-transcribe-2-2026-09-18","revision":1,"title":"Grok Voice Transcribe 2.0 출시","summary":"SpaceXAI가 배치·실시간 전사 모델을 출시했습니다. 다국어 자동 감지, 화자 분리, 단어별 시간 정보를 지원하며 오디오 1시간당 배치 $0.10·스트리밍 $0.20입니다.","publishedAt":"2026-09-18","sourceUrl":"https://x.ai/news/grok-voice-transcribe-2","audience":"Speech-to-Text API 개발자","rollout":"2.0 사용 가능 · API 기본 모델 전환은 추후 예정"}
   }
 ]

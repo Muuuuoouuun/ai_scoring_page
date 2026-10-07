@@ -33,7 +33,9 @@ test('global search finds public content and excludes hidden posts and private r
  h.sql.prepare("UPDATE posts SET status='hidden' WHERE id=?").run(p.data.id);
  assert.equal((await query('유일한검색검증')).results.length,0);
  assert.equal((await query('비공개검색검증')).results.length,0);
- assert.equal((await query('%')).results.length,0);
+ const percentResults=(await query('%')).results;
+ assert.ok(percentResults.every(r=>r.id!==p.data.id&&r.title!=='비공개검색검증'));
+ assert.ok(percentResults.every(r=>(r.title+' '+r.summary).includes('%')));
 });
 test('saved comparison retains private choice and outcome across edit, quick-save and export',async()=>{
  const h=harness(),payload={type:'comparison',target:'chatgpt,claude',title:'ChatGPT · Claude 비교',reason:'문서 작업용',outcome:'초안 작성 후 직접 수정',note:'개인 메모'};
@@ -89,8 +91,9 @@ test('explicit billing occurrence matching rejects duplicate bundle charges and 
  assert.equal((await h.save('payment',{...p,plannedDate:'2026-09-14'})).status,400);
 });
 test('billing anchors cannot silently change paid occurrences, and next dates must align',async()=>{
- const h=harness(),s=await h.save('subscription',{...base,bundleId:'suite'}),peer=await h.save('subscription',{...base,bundleId:'suite'});
- await h.save('payment',{subscriptionId:s.data.record.id,amount:30000,currency:'KRW',date:'2026-09-15',plannedDate:'2026-09-15'});
+ // The paid September occurrence precedes the future October terms change.
+ const h=harness(undefined,{now:()=>"2026-09-15T12:00:00.000Z"}),s=await h.save('subscription',{...base,bundleId:'suite'}),peer=await h.save('subscription',{...base,bundleId:'suite'});
+ assert.equal((await h.save('payment',{subscriptionId:s.data.record.id,amount:30000,currency:'KRW',date:'2026-09-15',plannedDate:'2026-09-15'})).status,200);
  assert.equal((await h.save('subscription',{...base,bundleId:'suite',nextDate:'2026-09-16',anchorDate:'2026-09-16'},peer.data.record.id)).status,409);
  assert.equal((await h.save('subscription',{...base,bundleId:'suite',nextDate:'2026-10-01'},s.data.record.id)).status,400);
  assert.equal((await h.terms(s.data.record.id,{action:'append',effectiveFrom:'2026-10-01',reason:'Next confirmed cycle',terms:{...base,bundleId:'suite',anchorDate:'2026-09-15',nextDate:'2026-10-15'}})).status,200);
