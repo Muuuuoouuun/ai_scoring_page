@@ -107,6 +107,6 @@ export function rankCatalog(items:Tool[],query:string,options:SearchOptions={}):
   const coverage=direct.filter(term=>hasTerm(body,term)).length/Math.max(1,direct.length);
   const sufficient=named||(subjects.length?features.length>0||uses.length>0||matchesObject(t.summary):coverage>=0.3);
   const relevance=browsing?1:(!sufficient||!direct.length&&!activeConcepts.length?0:(exact?100:0)+score(names,false)*4+(features[0]?.score||0)*3+features.slice(1,3).reduce((v,f)=>v+f.score,0)+(uses[0]?.score||0)*2+(matchesObject(t.summary)?score(t.summary):0)+score(t.description,false)*0.3);
-  return {...t,relevance,matchedFeatures:features.slice(0,3).map(f=>f.feature),matchedUseCases:uses.slice(0,2).map(u=>u.use),unverifiedRequirements:meaning.requirements.map(r=>r+((options.free||meaning.free)?'의 무료 플랜 이용 범위':''))};
+  return {...t,relevance,matchedFeatures:features.slice(0,3).map(f=>f.feature),matchedUseCases:uses.slice(0,2).map(u=>u.use),unverifiedRequirements:meaning.requirements.map(r=>r+((options.free||meaning.free)?'의 무료 이용 범위':''))};
  }).filter(t=>t.relevance>0).sort((a,b)=>b.relevance-a.relevance||a.name.localeCompare(b.name));
 }
