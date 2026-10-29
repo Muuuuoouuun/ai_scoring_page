@@ -9,9 +9,12 @@ export async function GET(request:Request){try{
   const user=await getChatGPTUser(),url=new URL(request.url),tool=url.searchParams.get('tool'),parent=url.searchParams.get('parent'),kind=url.searchParams.get('kind');
   let sql="SELECT p.*, (SELECT COUNT(*) FROM reactions r WHERE r.post_id=p.id) helpful, (SELECT COUNT(*) FROM posts c WHERE c.parent_id=p.id AND c.status='published') replies FROM posts p WHERE p.status='published'",args:unknown[]=[];
   if(tool){sql+=' AND p.tool_id=?';args.push(tool);}if(parent){sql+=' AND p.parent_id=?';args.push(parent);}else{sql+=' AND p.parent_id IS NULL';}if(kind){sql+=' AND p.kind=?';args.push(kind);}
-  sql+=' ORDER BY p.created_at DESC LIMIT 100';
+  // Replies read chronologically; feed popularity uses only real helpful reactions.
+  sql+=!parent&&url.searchParams.get('sort')==='popular'?' ORDER BY helpful DESC, p.created_at DESC, p.id DESC LIMIT 100':' ORDER BY p.created_at DESC, p.id DESC LIMIT 100';
   const postId=url.searchParams.get('id');if(postId){sql="SELECT p.*, (SELECT COUNT(*) FROM reactions r WHERE r.post_id=p.id) helpful, (SELECT COUNT(*) FROM posts c WHERE c.parent_id=p.id AND c.status='published') replies FROM posts p WHERE p.id=? AND p.status='published'";args=[postId];}
   const result=await rows<Record<string,unknown>>(sql,...args);
+  // Keep the most recent 100 replies, then show that window in conversation order.
+  if(parent&&!postId)result.reverse();
   return json({posts:result.map(({user_id,ratings,...p})=>({...p,mine:user_id===user?.userId,ratings:ratings?JSON.parse(String(ratings)):null}))});
 }catch(e){return failure(e);}}
 export async function POST(request:Request){try{

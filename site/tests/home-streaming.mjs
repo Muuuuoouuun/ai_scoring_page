@@ -2,7 +2,7 @@
  * Home RSC streaming regression checks.
  * Run: node --conditions=react-server --test tests/home-streaming.mjs
  * Real Home/Link/catalog/content/billing/db source and real SQLite migrations.
- * ToolUI/Icons are registered RSC client references; their implementation,
+ * ToolUI/Icons/Discovery are registered RSC client references; their implementation,
  * hydration, browser layout and production latency are outside this test.
  * D1 is an in-memory database behind an explicitly deferred read.
  * No Site, production data, external network or vendor files are written.
@@ -28,7 +28,7 @@ assert.equal(typeof renderToReadableStream,'function');
 assert.equal(typeof registerClientReference,'function');
 const digest=text=>createHash('sha256').update(text).digest('hex');
 const initialHome=fs.readFileSync(path.join(root,'app/page.tsx'),'utf8');
-console.log(JSON.stringify({method:'dependency/stream-order check, not a latency budget',node:process.version,react:React.version,homeSHA256:digest(initialHome),clientBoundaryModules:['components/ToolUI','components/Icons']}));
+console.log(JSON.stringify({method:'dependency/stream-order check, not a latency budget',node:process.version,react:React.version,homeSHA256:digest(initialHome),clientBoundaryModules:['components/ToolUI','components/Icons','components/DiscoveryPicks']}));
 
 function deferred(){let resolve,reject;const promise=new Promise((yes,no)=>{resolve=yes;reject=no;});return {promise,resolve,reject};}
 function watchdog(promise,label){let timer;const guard=new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('Harness watchdog: '+label+' did not settle; this is not a performance threshold')),5000);});return Promise.race([promise,guard]).finally(()=>clearTimeout(timer));}
@@ -66,7 +66,7 @@ function setup(){
   const module={exports:{}};cache.set(file,module);
   const localRequire=name=>{
    if(name==='cloudflare:workers')return {env:{DB:D1}};
-   if(name==='@/components/ToolUI'||name==='@/components/Icons')return clientModule(name.slice(2));
+   if(name==='@/components/ToolUI'||name==='@/components/Icons'||name==='@/components/DiscoveryPicks')return clientModule(name.slice(2));
    if(name.startsWith('@/'))return load(name.slice(2));
    if(name.startsWith('.'))return load(path.resolve(path.dirname(file),name));
    return require(name);

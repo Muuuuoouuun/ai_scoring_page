@@ -1,0 +1,74 @@
+[
+  {
+    "id": "openai-google-cloud-2026-10",
+    "title": "OpenAI 모델과 Codex, Google Cloud로 공급 경로 확대",
+    "topic": "cloud",
+    "summary": "OpenAI와 Google Cloud가 Model Garden에 OpenAI 모델과 Codex 워크플로를 제공하는 협력을 발표했습니다. Google Cloud Marketplace 결제와 기존 클라우드 약정 사용을 지원할 예정이며, 정식 출시는 발표 시점 기준 수 주 내로 안내됐습니다.",
+    "takeaway": "도입을 검토한다면 현재 사용 중인 클라우드의 구매 경로와 데이터 통제 조건을 함께 비교해 보세요. 발표만으로 즉시 이용 가능한 상태로 판단하지 않도록 출시 여부도 확인해야 합니다.",
+    "sourceName": "OpenAI",
+    "sourceTitle": "OpenAI models are coming to Google Cloud",
+    "sourceUrl": "https://openai.com/index/openai-models-google-cloud/",
+    "publishedAt": "2026-10-21",
+    "sourceCheckedAt": "2026-10-22"
+  },
+  {
+    "id": "microsoft-volkswagen-copilot-2026-10",
+    "title": "Volkswagen, 33만 명 이상에 Copilot 도입",
+    "topic": "adoption",
+    "summary": "Microsoft는 Volkswagen Group이 직원 33만 명 이상에게 Copilot을 제공했다고 발표했습니다. Copilot Chat에서 시작한 단계적 도입을 업무 프로세스로 넓히고 있으며, 최근 한 달간 그룹 내 활성 에이전트가 2만 6천 개를 넘었다고 설명했습니다.",
+    "takeaway": "기업 도입 사례에서는 제공 인원, 실제 사용, 업무 성과를 나눠 살펴볼 필요가 있습니다. 이 수치는 해당 기업의 도입 현황이며 산업 전체의 생산성 향상을 측정한 결과는 아닙니다.",
+    "sourceName": "Microsoft",
+    "sourceTitle": "Microsoft empowers more than 330,000 Volkswagen Group employees with Copilot",
+    "sourceUrl": "https://news.microsoft.com/source/2026/10/21/microsoft-empowers-more-than-330000-volkswagen-group-employees-with-copilot/",
+    "publishedAt": "2026-10-21",
+    "sourceCheckedAt": "2026-10-22"
+  },
+  {
+    "id": "notion-agents-2026-10",
+    "title": "Notion, 장시간 에이전트 작업과 AI 비용 관리 확대",
+    "topic": "agents",
+    "summary": "Notion은 컴퓨터·브라우저를 사용하는 에이전트, 최대 24시간 작업, 모델을 자동 선택하는 Auto와 새 크레딧 체계를 발표했습니다. MCP 메모리 동기화는 제공 중이며, AI Command Center는 출시 예정, 자체 API 키 연결은 Enterprise 비공개 알파로 구분했습니다.",
+    "takeaway": "협업 도구를 비교할 때 문서 작성 기능뿐 아니라 에이전트가 실행하는 작업의 권한, 검토 방식, 사용량 과금까지 확인할 시점입니다.",
+    "sourceName": "Notion",
+    "sourceTitle": "Agents, rebuilt to do more for less",
+    "sourceUrl": "https://www.notion.com/releases/2026-10-19",
+    "publishedAt": "2026-10-19",
+    "sourceCheckedAt": "2026-10-22"
+  },
+  {
+    "id": "vercel-shopify-agent-commerce-2026-10",
+    "title": "Vercel·Shopify, 에이전트가 읽고 장바구니를 만드는 상점 공개",
+    "topic": "agents",
+    "summary": "Vercel은 Shopify Hydrogen SDK 기반 오픈소스 상점 템플릿 Vercel Shop을 정식 공개했습니다. 상품 페이지의 기계 판독용 정보와 UCP·MCP 연결로 에이전트가 상품 검색, 재고 확인, 장바구니 구성과 결제 링크 획득을 할 수 있도록 지원합니다.",
+    "takeaway": "온라인 상점의 접근성이 사람과 검색엔진을 넘어 AI 에이전트로 넓어지고 있습니다. 상품 정보의 정확성과 구매 단계별 권한을 함께 설계하는 것이 중요해집니다.",
+    "sourceName": "Vercel",
+    "sourceTitle": "Vercel and Shopify make agents first-class shoppers",
+    "sourceUrl": "https://vercel.com/blog/vercel-and-shopify-make-agents-first-class-shoppers",
+    "publishedAt": "2026-10-16",
+    "sourceCheckedAt": "2026-10-22"
+  },
+  {
+    "id": "vercel-model-usage-2026-10",
+    "title": "Vercel 관측: 오픈 웨이트 모델, 토큰 71.5%·지출 23%",
+    "topic": "cloud",
+    "summary": "Vercel의 10월 AI Gateway Production Index는 9월 게이트웨이 사용량에서 오픈 웨이트 모델의 토큰 비중이 71.5%, 지출 비중이 23%라고 보고했습니다. 토큰당 평균 가격은 전년 12월 대비 47% 낮아졌습니다. Vercel 플랫폼 이용 데이터를 분석한 수치입니다.",
+    "takeaway": "요청량과 비용 점유율은 서로 다른 지표입니다. 모델을 비교할 때 단가뿐 아니라 업무별 품질과 전체 사용량을 함께 보고, 이 결과를 AI 시장 전체의 점유율로 해석하지 마세요.",
+    "sourceName": "Vercel",
+    "sourceTitle": "Open weight takes 71.5% of tokens and 23% of spend",
+    "sourceUrl": "https://vercel.com/blog/ai-gateway-production-index-october-2026",
+    "publishedAt": "2026-10-15",
+    "sourceCheckedAt": "2026-10-22"
+  },
+  {
+    "id": "anthropic-independent-evaluation-2026-10",
+    "title": "Anthropic, 외부 평가기관 METR의 내부 접근 확대",
+    "topic": "governance",
+    "summary": "Anthropic은 METR 평가팀에 내부 도구·시스템에 대한 직원 수준의 접근을 제공하기 시작했다고 발표했습니다. METR은 평가 결과를 공개할 수 있으며, 고객 정보 등 일부 접근 예외와 기밀 정보 삭제 조건도 함께 명시했습니다.",
+    "takeaway": "모델의 성능표와 함께 외부 평가자의 접근 범위, 결과 공개 권한, 예외 조건을 살펴보면 기업의 안전성 검증 방식을 더 구체적으로 비교할 수 있습니다.",
+    "sourceName": "Anthropic",
+    "sourceTitle": "An update on independent evaluators",
+    "sourceUrl": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+    "publishedAt": "2026-10-15",
+    "sourceCheckedAt": "2026-10-22"
+  }
+]

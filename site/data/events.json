@@ -1,9 +1,95 @@
 [
   {
+    "id": "vercel-ai-social-madrid-2026",
+    "title": "AI Social Club: Madrid",
+    "organizer": "Vercel",
+    "toolIds": [
+      "vercel"
+    ],
+    "type": "오프라인 · 초청 행사",
+    "date": "2026-10-22",
+    "endDate": "2026-10-22",
+    "schedulePrecision": "day",
+    "startTime": "",
+    "endTime": "",
+    "timeZone": "Europe/Madrid",
+    "startsAt": "2026-10-21T22:00:00Z",
+    "endsAt": "2026-10-22T22:00:00Z",
+    "location": "스페인 마드리드 · 상세 주소는 등록 후 안내",
+    "url": "https://luma.com/vercel-ai-social-club-madrid",
+    "cost": "미확인 · 주최 측 확인 필요",
+    "registrationStatus": "정원 마감 · 대기 명단 접수 안내",
+    "eligibility": "초청 대상은 AI 제품을 출시하는 임원·시니어 리더입니다. 10월 22일 확인 시 정원 마감과 대기 명단이 안내됐습니다. 일정에는 16:30 도착이 기재돼 있으나 종료 시각은 확인되지 않았습니다.",
+    "summary": "에이전트 인프라 운영과 기업 AI 도입 경험을 나누는 모임. Anthropic, Santander, Mango 등의 참가 연사가 공식 일정에 안내됐습니다.",
+    "sourceUrls": [
+      "https://vercel.com/events",
+      "https://luma.com/vercel-ai-social-club-madrid"
+    ],
+    "checkedAt": "2026-10-22"
+  },
+  {
+    "id": "microsoft-ignite-2026",
+    "title": "Microsoft Ignite 2026",
+    "organizer": "Microsoft",
+    "toolIds": [
+      "microsoft-copilot"
+    ],
+    "type": "현장·온라인",
+    "date": "2026-11-17",
+    "endDate": "2026-11-20",
+    "schedulePrecision": "day",
+    "startTime": "",
+    "endTime": "",
+    "timeZone": "America/Los_Angeles",
+    "startsAt": "2026-11-17T08:00:00Z",
+    "endsAt": "2026-11-21T08:00:00Z",
+    "location": "미국 샌프란시스코 Moscone Center · 온라인 행사장",
+    "url": "https://ignite.microsoft.com/en-US/home",
+    "cost": "온라인 무료 · 현장 Conference pass $2,325",
+    "registrationStatus": "공식 등록 페이지에서 패스별 접수 가능 여부 확인",
+    "eligibility": "개발자, IT·보안 전문가, 파트너와 비즈니스 리더 대상입니다. 현장 패스와 온라인 패스의 이용 범위가 다르며, 일부 실습은 별도 예약이 필요합니다. 세부 일정은 변경될 수 있습니다.",
+    "summary": "Copilot, 에이전트 플랫폼, AI·클라우드, 데이터와 보안의 로드맵을 키노트·기술 세션·실습으로 살펴보는 Microsoft 연례 행사.",
+    "sourceUrls": [
+      "https://ignite.microsoft.com/en-US/home"
+    ],
+    "checkedAt": "2026-10-22"
+  },
+  {
+    "id": "aws-reinvent-2026",
+    "title": "AWS re:Invent 2026",
+    "organizer": "Amazon Web Services",
+    "toolIds": [],
+    "type": "현장 · 일부 키노트 온라인",
+    "date": "2026-11-30",
+    "endDate": "2026-12-04",
+    "schedulePrecision": "day",
+    "startTime": "",
+    "endTime": "",
+    "timeZone": "America/Los_Angeles",
+    "startsAt": "2026-11-30T08:00:00Z",
+    "endsAt": "2026-12-05T08:00:00Z",
+    "location": "미국 라스베이거스 · The Venetian 등 여러 행사장",
+    "url": "https://aws.amazon.com/events/reinvent/",
+    "cost": "현장 정가 $2,499 · 온라인 참가 조건은 공식 안내 확인",
+    "registrationStatus": "등록·세션 좌석 예약 안내 공개 · 잔여석은 공식 페이지 확인",
+    "eligibility": "개발자, 아키텍트, 기업 기술 리더 대상입니다. 현장 패스의 포함 항목과 세션 예약 조건을 확인하세요. 11월 29일 사전 활동은 본 행사 기간과 별도로 안내됩니다.",
+    "summary": "AI, 클라우드 아키텍처, 보안과 개발 생산성 세션을 제공하는 AWS 연례 행사. 키노트와 세션 카탈로그, 역할별 추천 일정이 공개돼 있습니다.",
+    "sourceUrls": [
+      "https://aws.amazon.com/events/reinvent/",
+      "https://aws.amazon.com/events/reinvent/agenda/"
+    ],
+    "checkedAt": "2026-10-22"
+  },
+  {
     "id": "openai-devday-2026",
     "title": "OpenAI DevDay 2026",
     "organizer": "OpenAI",
-    "toolIds": ["chatgpt", "gpt-6-1-sol", "openai-dots", "codex-cloud"],
+    "toolIds": [
+      "chatgpt",
+      "gpt-6-1-sol",
+      "openai-dots",
+      "codex-cloud"
+    ],
     "type": "현장·온라인 키노트",
     "date": "2026-09-29",
     "startTime": "08:00",
@@ -14,10 +100,13 @@
     "location": "미국 샌프란시스코 Fort Mason · 키노트 온라인 중계",
     "url": "https://openai.com/index/devday-2026-recap/",
     "cost": "현장 등록 $650(초청자) · 온라인 키노트 무료",
-    "eligibility": "현장 참가 신청은 마감됐으며 공식 요약이 공개됐습니다. 세션 녹화는 공식 사이트에 게시 예정으로 안내됐지만, 확인되지 않은 다시보기 링크는 제공하지 않습니다.",
+    "eligibility": "행사가 종료됐습니다. 공식 DevDay 페이지와 발표 요약에서 공개된 세션·제품 정보를 확인할 수 있습니다.",
     "summary": "GPT-6.1 Sol, dots, Codex 클라우드 환경을 비롯해 ChatGPT Space와 Decisions API 등 20건 이상의 발표를 공식 요약에서 확인할 수 있습니다.",
-    "sourceUrls": ["https://devday.openai.com/", "https://openai.com/index/devday-2026-recap/"],
-    "checkedAt": "2026-09-30"
+    "sourceUrls": [
+      "https://openai.com/devday/2026/",
+      "https://openai.com/index/devday-2026-recap/"
+    ],
+    "checkedAt": "2026-10-22"
   },
   {
     "id": "vercel-ai-social-paris-2026",
@@ -27,7 +116,6 @@
       "vercel"
     ],
     "type": "오프라인",
-    "status": "upcoming",
     "date": "2026-09-30",
     "startTime": "16:30",
     "endTime": "20:00",
@@ -37,13 +125,13 @@
     "location": "프랑스 파리 · 상세 주소는 등록 후 안내",
     "url": "https://luma.com/vercel-ai-social-club-paris",
     "cost": "무료",
-    "eligibility": "AI 제품을 출시하는 임원·시니어 리더 대상. 비공개 행사이며 주최자 승인 필요.",
+    "eligibility": "행사가 종료됐습니다. AI 제품을 출시하는 임원·시니어 리더 대상의 초청 행사였으며, 공식 행사 페이지에서 개요를 확인할 수 있습니다.",
     "summary": "AI 제품 출시와 에이전트 인프라의 실제 운영 경험을 나누는 Vercel 모임.",
     "sourceUrls": [
       "https://vercel.com/events",
       "https://luma.com/vercel-ai-social-club-paris"
     ],
-    "checkedAt": "2026-09-12"
+    "checkedAt": "2026-10-22"
   },
   {
     "id": "vercel-ai-social-london-2026",
@@ -53,7 +141,6 @@
       "vercel"
     ],
     "type": "오프라인",
-    "status": "upcoming",
     "date": "2026-10-06",
     "startTime": "16:30",
     "endTime": "20:00",
@@ -63,12 +150,12 @@
     "location": "영국 런던 · 상세 주소는 등록 후 안내",
     "url": "https://luma.com/vercel-ai-social-club-london",
     "cost": "무료",
-    "eligibility": "AI 제품을 출시하는 임원·시니어 리더 대상. 비공개 행사이며 주최자 승인 필요.",
+    "eligibility": "행사가 종료됐습니다. AI 제품을 출시하는 임원·시니어 리더 대상의 초청 행사였으며, 공식 행사 페이지에서 개요를 확인할 수 있습니다.",
     "summary": "AI 제품을 운영하는 리더들이 에이전트 인프라와 제품 출시 경험을 논의하는 Vercel 모임.",
     "sourceUrls": [
       "https://vercel.com/events",
       "https://luma.com/vercel-ai-social-club-london"
     ],
-    "checkedAt": "2026-09-12"
+    "checkedAt": "2026-10-22"
   }
 ]

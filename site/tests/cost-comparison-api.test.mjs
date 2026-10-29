@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {harness} from './api-harness.mjs';
 const base={name:'Scenario QA',amount:20000,currency:'KRW',cycle:'monthly',nextDate:'2026-10-01',anchorDate:'2026-10-01',status:'active',paymentRoute:'web',taxStatus:'included'};
-async function setup(){const h=harness(),s=await h.save('subscription',base),sid=s.data.record.id;return {h,sid,endpoint:h.load('app/api/cost-comparisons/route.ts')};}
+// These scenarios reserve an October switch from a September observation date.
+async function setup(now=()=>"2026-09-12T00:00:00.000Z"){const h=harness(undefined,{now}),s=await h.save('subscription',base),sid=s.data.record.id;return {h,sid,endpoint:h.load('app/api/cost-comparisons/route.ts')};}
 const conditions={from:'2026-10-01',until:'2026-12-31',switchDate:'2026-10-01',oldBilling:'stop',oldLastChargeDate:null,oldAccess:'ends',oldAccessUntil:'2026-10-31',candidate:{name:'Candidate',amount:30000,currency:'KRW',cycle:'annual',nextDate:'2026-10-01',taxStatus:'included',amountBasis:'total',pricingMode:'fixed'},adjustments:[],extrasConfirmed:true,quoteSource:'Quote QA',quoteCheckedAt:'2026-09-12',criteria:{keepFit:'yes',changeFit:'yes',eligibility:'yes',changeWilling:'yes',budgets:{KRW:100000}}};
 const body=async(h,sid)=>({action:'save',subscriptionId:sid,...await h.guard('subscription',{},sid),title:'October transition',conditions,decision:'consider',reason:'Cost and capacity',outcome:''});
 const financial=h=>JSON.stringify(h.sql.prepare("SELECT * FROM private_records WHERE kind!='costComparison' ORDER BY id").all());
@@ -40,4 +41,21 @@ test('a source mutation after calculation but before insert rejects the entire s
 });
 test('unauthenticated and cross-origin requests cannot save or delete private scenarios',async()=>{
  const {h,sid,endpoint}=await setup(),b=await body(h,sid);assert.equal((await h.call(endpoint.POST,b,'POST',{Origin:'https://unrelated.invalid'})).status,403);h.user(null);assert.equal((await h.call(endpoint.POST,b)).status,401);
+});
+
+test('comparison switch dates stop being eligible at Seoul midnight after the switch day',async()=>{
+ let now='2026-09-12T00:00:00.000Z';
+ const {h,sid,endpoint}=await setup(()=>now);
+ for(const [instant,day,status] of [
+  ['2026-09-30T14:59:59.999Z','2026-09-30',200],
+  ['2026-09-30T15:00:00.000Z','2026-10-01',200],
+  ['2026-10-01T15:00:00.000Z','2026-10-02',400],
+ ]){
+  now=instant;
+  const before=JSON.stringify(h.sql.prepare('SELECT * FROM private_records ORDER BY id').all());
+  const result=await h.call(endpoint.POST,await body(h,sid));
+  assert.equal(result.status,status,instant);
+  if(status===200)assert.equal(result.data.record.payload.result.asOf,day);
+  else assert.equal(JSON.stringify(h.sql.prepare('SELECT * FROM private_records ORDER BY id').all()),before);
+ }
 });

@@ -1,6 +1,8 @@
+import {toolGenres} from './tool-genres';
+import {getToolPricing} from './tool-pricing';
 import type {Feature,Tool} from './catalog';
 
-export type SearchOptions={category?:string;kind?:string;free?:boolean;korean?:boolean;owned?:string[]};
+export type SearchOptions={genre?:string;category?:string;kind?:string;free?:boolean;korean?:boolean;owned?:string[]};
 type Exclusion={type:'category'|'kind'|'tool'|'purpose';value:string;label:string};
 export type QueryMeaning={positive:string;exclusions:Exclusion[];unresolvedExclusions:string[];requirements:string[];free:boolean};
 export type SearchMatch=Tool&{relevance:number;matchedFeatures:Feature[];matchedUseCases:string[];unverifiedRequirements:string[]};
@@ -98,7 +100,7 @@ export function rankCatalog(items:Tool[],query:string,options:SearchOptions={}):
  const evidenceTexts=items.map(t=>normalize([t.summary,t.description,...t.useCases,...t.features.map(f=>f.name+' '+f.description)].join(' ')));
  const weights=new Map(direct.map(term=>[term,1+Math.log(1+items.length/(1+evidenceTexts.filter(text=>hasTerm(text,term)).length))]));
  const score=(raw:string,expand=true)=>{const text=normalize(raw);let value=direct.reduce((n,term)=>n+(hasTerm(text,term)?weights.get(term)!:0),0);if(meaning.positive.length>1&&text.includes(meaning.positive))value+=8;if(expand)for(const group of activeConcepts)if(group.some(term=>hasTerm(text,term)))value+=1.25;return value;};
- return items.filter(t=>(!options.category||options.category==='all'||t.category===options.category)&&(!options.kind||options.kind==='all'||t.kind===options.kind)&&(!(options.free||meaning.free)||t.pricing.includes('무료'))&&(!options.korean||t.korean==='지원')&&(!options.owned||options.owned.includes(t.id))&&!meaning.exclusions.some(e=>e.type==='tool'?t.id===e.value:e.type==='kind'?t.kind===e.value:e.type==='purpose'?t.category==='development'||['코딩','코드'].some(term=>hasTerm(normalize(t.summary),term)):t.category===e.value)).map(t=>{
+ return items.filter(t=>(!options.genre||options.genre==='all'||toolGenres(t).includes(options.genre))&&(!options.category||options.category==='all'||t.category===options.category)&&(!options.kind||options.kind==='all'||t.kind===options.kind)&&(!(options.free||meaning.free)||(getToolPricing(t.id)?getToolPricing(t.id)!.freeTier==='available':t.pricing.includes('무료')&&!t.pricing.includes('체험')))&&(!options.korean||t.korean==='지원')&&(!options.owned||options.owned.includes(t.id))&&!meaning.exclusions.some(e=>e.type==='tool'?t.id===e.value:e.type==='kind'?t.kind===e.value:e.type==='purpose'?t.category==='development'||['코딩','코드'].some(term=>hasTerm(normalize(t.summary),term)):t.category===e.value)).map(t=>{
   const features=t.features.filter(f=>matchesObject(f.name+' '+f.description)).map(f=>({feature:f,score:score(f.name)*2+score(f.description)})).filter(f=>f.score>0).sort((a,b)=>b.score-a.score);
   const uses=t.useCases.filter(matchesObject).map(use=>({use,score:score(use)})).filter(u=>u.score>0).sort((a,b)=>b.score-a.score);
   const name=normalize(t.name),exact=name===meaning.positive||t.aliases?.some(a=>normalize(a)===meaning.positive);

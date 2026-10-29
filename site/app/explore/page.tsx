@@ -1,2 +1,7 @@
 import Explore from '@/components/Explore';
-export default async function Page({searchParams}:{searchParams:Promise<{q?:string;category?:string}>}){const p=await searchParams;return <main id="main" className="container page"><Explore initialQuery={p.q} initialCategory={p.category}/></main>;}
+import {readExploreFilters} from '@/lib/explore-filters';
+export default async function Page({searchParams}:{searchParams:Promise<Record<string,string|string[]|undefined>>}){
+  const input=await searchParams,params=new URLSearchParams();
+  for(const [key,value] of Object.entries(input))if(typeof value==='string')params.set(key,value);
+  return <main id="main" className="container page"><Explore initialFilters={readExploreFilters(params)}/></main>;
+}

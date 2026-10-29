@@ -2,8 +2,10 @@ import {waitUntil} from 'cloudflare:workers';
 import {syncBatch} from '@/lib/source-sync';
 import type { Metadata } from "next";
 import "./globals.css";
+import "@/components/home-polish.css";
 import {getChatGPTUser} from './chatgpt-auth';
 import {Provider} from '@/components/Provider';
+import {PreferredGenres} from '@/components/PreferredGenres';
 import {Header,Footer,CompareDock} from '@/components/Shell';
 import PerformanceDiagnostics from '@/components/PerformanceDiagnostics';
 
@@ -25,7 +27,7 @@ export default async function RootLayout({
   waitUntil(syncBatch().catch(e=>console.error('Source sync failed',e.message)));
   return (
     <html lang="ko">
-      <body><Provider user={user?{name:user.fullName||'회원'}:null}><Header/>{children}<Footer/><CompareDock/><PerformanceDiagnostics/></Provider></body>
+      <body><Provider user={user?{name:user.fullName||'회원'}:null}><Header/><PreferredGenres/>{children}<Footer/><CompareDock/><PerformanceDiagnostics/></Provider></body>
     </html>
   );
 }

@@ -46,7 +46,7 @@ test('server infrastructure project resources do not mean workflow project manag
  const api=harness().load('lib/catalog.ts');
  const results=api.similarTools(api.findTool('supabase'),api.catalog);
  const falseMatch=results.filter(x=>['linear','notion'].includes(x.tool.id)).flatMap(x=>x.matches.filter(m=>m.id==='projects'&&m.sourceFeatures.some(f=>f.name==='프로젝트 자원 확장')).map(m=>({candidate:x.tool.id,source:m.sourceFeatures.map(f=>f.name),candidateFeatures:m.candidateFeatures.map(f=>f.name)})));
- assert.deepEqual(falseMatch,[],'Infrastructure capacity does not establish work planning functionality');
+ assert.deepEqual(Array.from(falseMatch),[],'Infrastructure capacity does not establish work planning functionality');
 });
 
 test('current development-agent feature evidence links Cursor and GitHub Copilot',()=>{
@@ -69,4 +69,44 @@ test('compound feature labels distinguish generation, input, collaboration and m
  assert.equal(api.similarTools(input,[tool('generate',[feature('이미지 생성')],{kind:'model'})]).length,0);
  const moodboard=tool('moodboard',[feature('창작 보드'),feature('영상 편집 타임라인')]);
  assert.equal(api.similarTools(moodboard,[tool('pm',[feature('프로젝트 관리')])]).length,0);
+});
+
+test('focused alternatives outrank a broad tool with the same matching function',()=>{
+ const source=tool('source',[feature('코드 작성')]);
+ const focused=tool('z-focused',[feature('코드 생성')]);
+ const broad=tool('a-broad',[feature('코드 생성'),feature('이미지 생성'),feature('화상 회의'),feature('음성 전사')]);
+ const results=api.similarTools(source,[source,broad,focused]);
+ assert.equal(results[0].tool.id,'z-focused');
+ assert.equal(results[0].sourceCapabilityCount,1);
+ assert.equal(results[0].missingCapabilities.length,0);
+});
+test('supported evidence ranks ahead of conditional evidence and duplicate labels cannot inflate score',()=>{
+ const source=tool('source',[feature('문서 작성'),feature('웹 검색')]);
+ const conditional=tool('a-conditional',[feature('문서 초안','conditional','유료'),feature('웹 검색','conditional','유료')]);
+ const supported=tool('z-supported',[feature('문서 작성'),feature('웹 검색')]);
+ const duplicate=tool('duplicate',[feature('문서 작성'),feature('문서 초안'),feature('웹 검색')]);
+ const results=api.similarTools(source,[source,conditional,supported,duplicate]);
+ assert.ok(results.find(x=>x.tool.id==='z-supported').score>results.find(x=>x.tool.id==='a-conditional').score);
+ assert.equal(results.find(x=>x.tool.id==='duplicate').score,results.find(x=>x.tool.id==='z-supported').score);
+});
+test('missing capabilities expose the scope an alternative does not document',()=>{
+ const result=api.similarTools(tool('source',[feature('이미지 생성'),feature('영상 생성')]),[tool('image',[feature('이미지 생성')])])[0];
+ assert.equal(result.sourceCapabilityCount,2);
+ assert.deepEqual(Array.from(result.missingCapabilities,x=>x.id),['video-generation']);
+});
+
+test('code block formatting and multichannel audio never imply coding or team messaging',()=>{
+ const cursor=api.findTool('cursor'),asana=api.findTool('asana'),transcribe=api.findTool('grok-voice-transcribe-2'),slack=api.findTool('slack');
+ assert.ok(!api.similarTools(cursor,[asana]).some(r=>r.matches.some(m=>m.id==='coding')));
+ assert.ok(!api.similarTools(slack,[transcribe]).some(r=>r.matches.some(m=>m.id==='team-messaging')));
+ const {toolGenres}=harness().load('lib/tool-genres.ts');
+ assert.ok(!toolGenres(asana).includes('development'));
+ assert.ok(!toolGenres(transcribe).includes('collaboration'));
+});
+
+test('video background removal is never cited as image editing evidence',()=>{
+ const result=api.similarTools(api.findTool('canva'),[api.findTool('adobe-firefly')])[0];
+ const image=result.matches.find(m=>m.id==='image-editing');
+ assert.ok(image);
+ assert.ok(!image.candidateFeatures.some(f=>f.name==='영상 배경 제거'));
 });

@@ -46,7 +46,11 @@ test('matched features retain the actual condition and official source instead o
 });
 test('direct image generation evidence outranks category-only design matches',()=>{
  const result=searchCatalog('이미지 생성',{free:true,korean:true});
- assert.ok(result.slice(0,2).some(t=>['chatgpt','gemini'].includes(t.id)));
+ assert.ok(result.slice(0,2).every(t=>t.matchedFeatures.some(f=>/이미지.*생성|이미지 생성/.test(f.name)&&f.status!=='unknown'&&f.sourceUrl)));
+ const {rankCatalog}=h.load('lib/catalog-search.ts');
+ const source=catalog.find(t=>t.id==='chatgpt');
+ const categoryOnly={...source,id:'design-only',name:'Design only',category:'image',summary:'디자인 도구',description:'디자인 업무 지원',useCases:[],features:[]};
+ assert.equal(rankCatalog([categoryOnly,source],'이미지 생성')[0].id,'chatgpt');
  assert.ok(result.every(t=>t.id!=='midjourney'));
 });
 test('names and aliases remain searchable without mutating catalog facts',()=>{
@@ -109,4 +113,10 @@ test('expanded categories and aliases find the new services while exclusions sta
  for(const [category,wanted]of [['project-management','asana'],['collaboration','microsoft-teams'],['audio','elevenlabs'],['video','runway']]){
   const result=searchCatalog('',{category});assert.ok(result.some(t=>t.id===wanted));assert.ok(result.every(t=>t.category===category));
  }
+});
+
+test('free search distinguishes recurring free plans from one-time generation credits',()=>{
+ assert.ok(ids('영상 생성').includes('runway'));
+ assert.ok(!ids('영상 생성',{free:true}).includes('runway'));
+ assert.ok(ids('이미지 생성',{free:true}).includes('adobe-firefly'));
 });

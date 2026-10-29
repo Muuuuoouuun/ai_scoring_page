@@ -1,0 +1,37 @@
+{
+  "id": "appgdep_6ada26a99a34819180384f1b735ddfa1",
+  "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+  "title": "AIs — AI·SaaS 탐색과 활용",
+  "version_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_7918ffafe8008191b952e37200e27654",
+  "type": "publish",
+  "status": "succeeded",
+  "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+  "has_mcp": false,
+  "screenshot_asset_pointer": null,
+  "provider_deployment_id": "site---6aa42f3ab3ec81919d0048d508baa661",
+  "failure_message": null,
+  "env_set_revision": 2,
+  "updated_at": "2026-10-22T15:07:43.385404+00:00",
+  "version_number": 27,
+  "source_commit": "3e58167de0e2450f5084c3bc577feadbdd52cce2",
+  "archive": "/tmp/ais-release-2026-10-22/site-release-v27.tar.gz",
+  "archive_hash": "sha256:e39fe96614ffc5021e6f86e5cafd2fecdbd7fa6572491b8b57a1ede694aa7cd1",
+  "verification": {
+    "regression_tests": 360,
+    "streaming_tests": 4,
+    "typescript": "passed",
+    "production_build": "passed",
+    "tool_and_news_urls": 86,
+    "mobile_routes": 9,
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "authenticated_production_ui": "not_verified",
+    "local_ui": "passed",
+    "final_local_console_errors": 0
+  },
+  "access_mode": "custom"
+}

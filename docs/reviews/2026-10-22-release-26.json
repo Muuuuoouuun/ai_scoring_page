@@ -1,0 +1,47 @@
+{
+  "deployment": {
+    "id": "appgdep_6ada20e665648191b2e748c8d4b215f7",
+    "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+    "title": "AIs — AI·SaaS 탐색과 활용",
+    "version_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_b0ee4f99e4508191aac745ef1f6fa12f",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6aa42f3ab3ec81919d0048d508baa661",
+    "failure_message": null,
+    "env_set_revision": 2,
+    "updated_at": "2026-10-22T14:43:10.917671+00:00"
+  },
+  "version": {
+    "id": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_b0ee4f99e4508191aac745ef1f6fa12f",
+    "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+    "version_number": 26,
+    "source": {
+      "commit_sha": "7608502e6fb4969d93dda008e78f481808bb5fd1"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000ebfc81f5915296d71871e3c7",
+      "content_hash": "sha256:0d70ac4c98fe3e266a101f95661801646df992e460ffbc17367f4d71e3b4b53a",
+      "size_bytes": 4034560,
+      "file_count": 237
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "source": {
+    "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+    "checkout_path": "/private/tmp/ais-release-2026-10-22/source",
+    "commit_sha": "7608502e6fb4969d93dda008e78f481808bb5fd1",
+    "archive": "/tmp/ais-release-2026-10-22/site-release.tar.gz"
+  },
+  "verification": {
+    "typecheck": "passed",
+    "regression": "passed in publication checkout",
+    "homeStreaming": "4 passed",
+    "build": "passed",
+    "browser": "local desktop/mobile feed, thread and composer verified; production login gate displayed"
+  }
+}

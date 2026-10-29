@@ -1,0 +1,55 @@
+{
+  "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+  "version": 29,
+  "version_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_7cb8174c7744819182d1a1c5da8b1a20",
+  "commit_sha": "afe7a72ef5a703fe69b7d8821c7351635cc2b8d8",
+  "archive": "/tmp/ais-release-2026-10-22/site-release-v29.tar.gz",
+  "archive_sha256": "sha256:696fbeba2a7e2203978b176f80bc1fddcc11f95d2e733cb4db2f95f15c0625fb",
+  "deployment": {
+    "id": "appgdep_6ada2ff3322c8191ad596396d42ae4e6",
+    "project_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661",
+    "title": "AIs — AI·SaaS 탐색과 활용",
+    "version_id": "appgprj_6aa42f3ab3ec81919d0048d508baa661~appgver_7cb8174c7744819182d1a1c5da8b1a20",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://ais-discovery-hub.aaahaaah19.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6aa42f3ab3ec81919d0048d508baa661",
+    "failure_message": null,
+    "env_set_revision": 2,
+    "updated_at": "2026-10-22T15:47:18.517122+00:00"
+  },
+  "verification": {
+    "regression_tests": 364,
+    "home_streaming_tests": 4,
+    "typescript": "passed",
+    "build": "passed",
+    "production_logged_in": true,
+    "viewport_checks": {
+      "320": 7,
+      "390": 23,
+      "768": 7,
+      "1440": 23
+    },
+    "production_console_errors": 0,
+    "private_test_record": "created, reloaded, edited, deleted; absence verified",
+    "upstream_logo_limitation": "Midjourney returns HTTP403; existing official cached image remains",
+    "not_executed": [
+      "real payment",
+      "real outgoing email",
+      "new public community post"
+    ]
+  },
+  "images": {
+    "generated_by": "built-in image_gen",
+    "desktop_asset": "site/public/images/discovery-studio.webp",
+    "small_asset": "site/public/images/discovery-studio-small.webp"
+  },
+  "proofs": [
+    "/tmp/ais-v29-final-tests.log",
+    "/tmp/ais-v28-final-home-streaming.log",
+    "/tmp/ais-v28-production-qa.json",
+    "/tmp/ais-v29-source-proof.json"
+  ]
+}

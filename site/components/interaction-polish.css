@@ -1,0 +1,96 @@
+/* Shared interactions use short, finite motion and retain their resting state without JS. */
+.site-header .nav-link-arrow{display:none}
+.site-header .header-actions .icon-button,.site-header .account-button{min-height:44px;min-width:44px}
+.site-header .account-button{display:inline-flex;align-items:center;justify-content:center}
+.site-header .mobile-menu[aria-expanded="true"]{background:#edf2ff;color:var(--blue)}
+.site-header .header-actions .icon-button:hover{background:#edf2ff;color:var(--blue)}
+.site-header nav a:focus-visible{outline-offset:-5px}
+
+.interaction-tool-card{isolation:isolate}
+.interaction-tool-card:has(.compare-button[aria-pressed="true"]){border-color:#a7baf3;background:linear-gradient(145deg,#fff 65%,#f4f7ff)}
+.interaction-tool-card .tool-logo{box-shadow:0 2px 5px #16203905}
+.interaction-tool-card .tool-name{min-height:44px}
+.interaction-tool-card .tool-name:focus-visible{outline:none}
+.interaction-tool-card:has(.tool-name:focus-visible){outline:3px solid var(--blue);outline-offset:4px}
+.button.compare-button{min-height:44px;min-width:74px;white-space:nowrap;gap:6px}
+.compare-button-icon{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px}
+.button.compare-button.selected{border-color:#a7baf3;background:#edf2ff;color:var(--blue)}
+.button.compare-button.selected:hover{background:#e0e9ff}
+.interaction-tool-card .compare-button:focus-visible{outline-offset:3px}
+.interaction-tool-card .tool-card-bottom strong{color:var(--ink);font-weight:550}
+
+.compare-dock.interaction-compare-dock{background:var(--paper);box-shadow:0 10px 36px #21396220,0 2px 5px #21396208;gap:14px;padding:10px 12px 10px 16px}
+.compare-dock-symbol{display:grid;place-items:center;width:36px;height:36px;flex-shrink:0;background:#fff2a7;border:1px solid #f0df8f;border-radius:10px;color:#4c4324}
+.compare-dock-summary{display:flex;align-items:center;gap:9px;white-space:nowrap}
+.compare-dock-summary strong{display:inline-flex;align-items:baseline;justify-content:center;min-width:37px;color:var(--blue);font-size:17px;font-variant-numeric:tabular-nums;line-height:1.2}
+.compare-dock-summary strong span{font-size:12px;font-weight:500;color:var(--muted);margin-left:2px}
+.interaction-compare-dock .button,.interaction-compare-dock .icon-button{min-height:44px;min-width:44px}
+.interaction-compare-dock .icon-button{color:var(--muted)}
+.interaction-compare-dock .icon-button:hover{background:var(--soft);color:var(--ink)}
+.interaction-compare-dock .button{white-space:nowrap}
+.toast{width:max-content;text-align:center;line-height:1.7;box-shadow:0 6px 24px #16203920}
+
+html:has(.interaction-modal[open]){overflow:hidden}
+.modal-dialog.interaction-modal{border:1px solid #e0e5ef;border-radius:18px;box-shadow:0 28px 80px #0d1c3c33;max-height:calc(100dvh - 32px)}
+.interaction-modal::backdrop{background:#101e3b80;backdrop-filter:blur(3px)}
+.interaction-modal .modal{border-radius:17px;padding:28px;max-height:calc(100dvh - 34px);overscroll-behavior:contain;scrollbar-gutter:stable}
+.interaction-modal .modal-head{align-items:flex-start;padding-bottom:18px;border-bottom:1px solid var(--line);gap:18px}
+.interaction-modal .modal-head h2{padding-top:5px;line-height:1.5;overflow-wrap:anywhere}
+.interaction-modal .modal-head h2:focus{outline:none}
+.interaction-modal .modal-head .icon-button{min-width:44px;min-height:44px;margin-top:-1px;background:var(--soft);flex-shrink:0}
+.interaction-modal .modal-head .icon-button:hover{background:#e8edfa;color:var(--blue)}
+.interaction-modal .button{min-height:44px}
+.interaction-modal :focus-visible{scroll-margin-block:20px;outline-offset:3px}
+
+@media (prefers-reduced-motion:no-preference){
+  .site-header nav a{transition:background-color 150ms ease,color 150ms ease}
+  .site-header nav a:after{transition:opacity 150ms ease}
+  .site-header .header-actions .icon-button{transition:background-color 150ms ease,color 150ms ease}
+  .interaction-tool-card{transition:border-color 180ms ease,box-shadow 180ms ease,transform 180ms ease}
+  .interaction-tool-card .tool-name svg{transition:opacity 150ms ease,transform 180ms ease}
+  .compare-button{transition:background-color 150ms ease,border-color 150ms ease,color 150ms ease}
+  .compare-button[aria-pressed="true"] .compare-button-icon{animation:interaction-confirm 180ms ease-out}
+  .compare-dock-summary strong{animation:interaction-confirm 180ms ease-out}
+  .compare-dock.interaction-compare-dock{animation:interaction-dock-enter 230ms cubic-bezier(.2,.7,.3,1)}
+  .modal-dialog.interaction-modal[open]{animation:interaction-dialog-enter 220ms cubic-bezier(.2,.7,.3,1)}
+  .interaction-modal[open]::backdrop{animation:interaction-backdrop-enter 180ms ease-out}
+  .toast{transition:opacity 180ms ease,transform 180ms ease}
+}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .interaction-tool-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #2037610d}
+  .interaction-tool-card:hover .tool-name svg{transform:translate(2px,-2px)}
+}
+@media (hover:none){.interaction-tool-card:hover{transform:none}}
+
+@media (max-width:760px){
+  .site-header nav#primary-navigation{left:12px;right:12px;top:calc(100% + 8px);padding:10px;border:1px solid #dce3f2;border-radius:15px;background:var(--paper);box-shadow:0 15px 35px #1620391a;max-height:calc(100dvh - 110px);overflow-y:auto;overscroll-behavior:contain;gap:3px}
+  .site-header nav#primary-navigation a{display:flex;justify-content:space-between;min-height:48px;padding:11px 14px;font-size:14px;line-height:1.6;border-radius:9px}
+  .site-header nav#primary-navigation a.active{background:#edf2ff;color:var(--blue)}
+  .site-header nav#primary-navigation a.active:after{display:none}
+  .site-header nav#primary-navigation a:hover{background:var(--soft)}
+  .site-header nav#primary-navigation a:focus-visible{outline-offset:-3px}
+  .site-header .nav-link-arrow{display:block;opacity:.45}
+  .site-header a.active .nav-link-arrow{opacity:1}
+  .compare-dock.interaction-compare-dock{bottom:max(12px,env(safe-area-inset-bottom));max-width:calc(100% - 24px);gap:8px;padding:8px 8px 8px 13px;border-radius:14px}
+  .interaction-compare-dock .compare-dock-symbol{display:none}
+  .compare-dock-summary{gap:4px;font-size:12px}
+  .compare-dock-summary strong{min-width:33px;font-size:16px}
+  .interaction-compare-dock .button{padding:9px 11px;font-size:12px;gap:6px}
+  .interaction-compare-dock .icon-button{min-width:44px}
+  .modal-dialog.interaction-modal{max-width:calc(100% - 24px);max-height:calc(100dvh - 24px);border-radius:16px}
+  .interaction-modal .modal{padding:20px;max-height:calc(100dvh - 26px);border-radius:15px}
+  .interaction-modal .modal-head{padding-bottom:15px;gap:12px}
+  .interaction-modal .modal-head h2{font-size:20px}
+  .toast{bottom:calc(94px + env(safe-area-inset-bottom));max-width:calc(100% - 32px);font-size:13px;padding:12px 16px}
+}
+@media (max-width:760px) and (prefers-reduced-motion:no-preference){
+  .site-header nav#primary-navigation.open{animation:interaction-menu-enter 180ms cubic-bezier(.2,.7,.3,1)}
+}
+@media (prefers-reduced-motion:reduce){
+  .interaction-tool-card:hover,.interaction-tool-card:active{transform:none}
+}
+@keyframes interaction-confirm{from{opacity:.6;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+@keyframes interaction-dock-enter{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
+@keyframes interaction-dialog-enter{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes interaction-backdrop-enter{from{opacity:0}to{opacity:1}}
+@keyframes interaction-menu-enter{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}

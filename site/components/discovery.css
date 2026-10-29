@@ -1,0 +1,17 @@
+.preferred-genres{background:#f6f8fe;border-bottom:1px solid #e3e8f3}
+.preferred-inner{width:min(1180px,calc(100% - 64px));margin:auto;display:flex;align-items:center;gap:20px;min-height:60px}
+.preferred-label{font-size:12px;font-weight:650;color:#59657b;white-space:nowrap}
+.preferred-links{display:flex;gap:6px;align-items:center;overflow:auto;min-width:0;padding:5px}
+.preferred-links a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 14px;font-size:13px;white-space:nowrap;border-radius:30px;color:#304d8b}
+.preferred-links a:hover{background:#e7edff}
+.preferred-edit{margin-left:auto;border:0;background:transparent;color:var(--blue);white-space:nowrap;font-size:13px;min-height:44px;padding:8px}
+.discovery-description{font-size:14px;margin-bottom:22px;line-height:1.8}
+.discovery-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:18px}
+.discovery-choice{display:flex;align-items:center;gap:9px;padding:12px;border:1px solid var(--line);border-radius:10px;min-height:48px;font-size:14px;cursor:pointer}
+.discovery-choice.selected{background:#eff3ff;border-color:#91a8f2;color:#244bb6}
+.discovery-dialog-actions{margin-top:20px}
+.discovery-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.discovery-picks .eyebrow{display:block;margin-bottom:6px}
+@media(prefers-reduced-motion:no-preference){.discovery-picks .grid-3{animation:discovery-reveal 180ms ease-out}.tool-card{transition:transform 160ms ease-out,border-color 160ms ease-out,box-shadow 160ms ease-out}.tool-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px #2537690a}.modal-dialog[open]{animation:discovery-reveal 160ms ease-out}@keyframes discovery-reveal{from{opacity:.65;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}}
+@media(max-width:1080px){.header-inner{gap:28px}.site-header nav{gap:20px}}
+@media(max-width:760px){.preferred-inner{width:calc(100% - 36px);gap:8px;flex-wrap:wrap;padding:9px 0}.preferred-label{order:0}.preferred-edit{order:1}.preferred-links{order:2;flex-basis:100%;padding:0;gap:4px}.preferred-links a{background:white;border:1px solid #e0e7f5;padding:6px 12px}.discovery-picks .section-heading{align-items:flex-start}.discovery-choices{gap:8px}.discovery-choice{font-size:13px;padding:10px}}

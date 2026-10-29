@@ -1,0 +1,3214 @@
+[
+  {
+    "toolId": "chatgpt",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "대화·자료 작업에 쓰는 AI 앱으로, 프레젠테이션 공동 편집과 음성 대화까지 작업 범위를 넓히고 있습니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "ChatGPT 공식 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      }
+    ],
+    "features": [
+      {
+        "name": "잠긴 대화",
+        "description": "선택한 대화를 일반 기록과 검색에서 숨기고 PIN 또는 기기 인증으로 엽니다.",
+        "status": "conditional",
+        "condition": "Free·Go·Plus·Pro에 순차 제공됩니다.",
+        "sourceUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      {
+        "name": "Slides 공동 편집",
+        "description": "자료나 개요로 슬라이드를 만들고 팀과 함께 편집·발표·내보내기합니다.",
+        "status": "conditional",
+        "condition": "Space 접근 권한이 있는 대상 Pro·Business·Enterprise 계정에 순차 제공됩니다.",
+        "sourceUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      {
+        "name": "다국어 음성 대화",
+        "description": "GPT-Live-1.1을 사용한 음성 대화와 한국어를 포함한 새 음성 선택지를 제공합니다.",
+        "status": "conditional",
+        "condition": "표시되는 음성은 지역·계정에 따라 다릅니다.",
+        "sourceUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      {
+        "name": "도구를 이용한 병렬 작업",
+        "description": "GPT-6 Pro가 도구와 여러 에이전트를 이용해 작업을 나누어 수행합니다.",
+        "status": "conditional",
+        "condition": "대상 Pro 계정에 순차 제공되며 관리형 워크스페이스 설정이 적용됩니다.",
+        "sourceUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      }
+    ],
+    "updates": [
+      {
+        "id": "chatgpt-2026-10-20-locked-chats",
+        "title": "잠긴 대화 추가",
+        "summary": "대화를 기록과 검색에서 숨기고 인증 후 다시 여는 기능을 순차 배포합니다.",
+        "highlights": [
+          "PIN 또는 기기 인증",
+          "기존 보관·모델 개선 설정 유지"
+        ],
+        "publishedAt": "2026-10-20",
+        "sourceUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+        "audience": "Free·Go·Plus·Pro 사용자",
+        "rollout": "웹·iOS·Android·새 데스크톱 앱에 순차 제공"
+      },
+      {
+        "id": "chatgpt-2026-10-16-slides",
+        "title": "Slides 제작·공동 편집",
+        "summary": "대화·파일·개요에서 프레젠테이션을 만들고 Space에서 함께 편집할 수 있습니다.",
+        "highlights": [
+          "실시간 공동 편집과 댓글",
+          "웹에서 PowerPoint·PDF·Google Slides 내보내기"
+        ],
+        "publishedAt": "2026-10-16",
+        "sourceUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+        "audience": "Space 접근 권한이 있는 대상 Pro·Business·Enterprise 사용자",
+        "rollout": "웹·데스크톱에 순차 제공"
+      }
+    ],
+    "notes": [
+      "이 문서의 최신 확인 항목은 2026-10-20입니다. 계정에 실제 제공되는 기능은 배포 상태에 따라 다릅니다."
+    ]
+  },
+  {
+    "toolId": "claude",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "문서·코드·자료 분석을 함께 처리하는 AI 앱입니다. 편집 가능한 문서와 슬라이드를 만들고 연결 데이터로 대시보드를 구성합니다.",
+    "sources": [
+      {
+        "kind": "docs",
+        "label": "Claude 플랜별 기능",
+        "url": "https://claude.com/pricing"
+      },
+      {
+        "kind": "changelog",
+        "label": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      {
+        "kind": "blog",
+        "label": "Claude Duet 발표",
+        "url": "https://claude.com/resources/articles/claude-duet"
+      },
+      {
+        "kind": "blog",
+        "label": "Dashboards·Motion 및 문서 도구 발표",
+        "url": "https://claude.com/resources/articles/dashboards-and-motion"
+      }
+    ],
+    "features": [
+      {
+        "name": "문서·슬라이드·디자인 제작",
+        "description": "Docs·Slides·Design으로 결과물을 만들고 편집합니다.",
+        "status": "conditional",
+        "condition": "무료를 포함한 모든 플랜에 제공되며 사용량 한도가 적용됩니다.",
+        "sourceUrl": "https://claude.com/resources/articles/dashboards-and-motion"
+      },
+      {
+        "name": "웹 검색·파일 생성·코드 실행",
+        "description": "웹을 검색하고 파일을 만들며 코드로 자료를 처리합니다.",
+        "status": "conditional",
+        "condition": "플랜별 사용량 제한이 적용됩니다.",
+        "sourceUrl": "https://claude.com/pricing"
+      },
+      {
+        "name": "연결 데이터 대시보드",
+        "description": "데이터 플랫폼이나 CRM을 연결해 갱신 가능한 대시보드와 근거 쿼리를 확인합니다.",
+        "status": "conditional",
+        "condition": "유료 플랜 베타이며 데이터 연결 권한이 필요합니다.",
+        "sourceUrl": "https://claude.com/resources/articles/dashboards-and-motion"
+      },
+      {
+        "name": "Research",
+        "description": "여러 자료를 조사하는 심층 리서치를 사용합니다.",
+        "status": "conditional",
+        "condition": "개인 플랜에서는 Pro·Max에 포함됩니다.",
+        "sourceUrl": "https://claude.com/pricing"
+      }
+    ],
+    "updates": [
+      {
+        "id": "claude-2026-10-21-duet",
+        "title": "Claude 계열: Duet 연구 미리보기",
+        "summary": "연결 앱을 살펴보고 브리핑과 위임 작업을 수행하는 별도 에이전트 앱을 발표했습니다.",
+        "highlights": [
+          "iOS·Android·claude.ai",
+          "기존 Claude 사용 한도 공유"
+        ],
+        "publishedAt": "2026-10-21",
+        "sourceUrl": "https://claude.com/resources/articles/claude-duet",
+        "audience": "미국 Pro·Max 구독자부터",
+        "rollout": "대기 명단을 통한 연구 미리보기"
+      },
+      {
+        "id": "claude-2026-10-08-creative-tools",
+        "title": "대시보드·모션 베타와 문서 도구 정식 제공",
+        "summary": "Dashboards와 Motion을 베타로 공개하고 Docs·Slides·Design을 무료 포함 모든 플랜에 제공합니다.",
+        "highlights": [
+          "데이터를 갱신하는 대시보드",
+          "편집 가능한 코드 기반 애니메이션"
+        ],
+        "publishedAt": "2026-10-08",
+        "sourceUrl": "https://claude.com/resources/articles/dashboards-and-motion",
+        "audience": "Claude 사용자·조직",
+        "rollout": "Dashboards 유료 베타 · Motion Team·Enterprise 베타"
+      }
+    ],
+    "notes": [
+      "Duet는 별도 앱의 연구 미리보기입니다. 모든 Claude 사용자에게 즉시 제공되는 기능으로 표시하면 안 됩니다."
+    ]
+  },
+  {
+    "toolId": "gemini",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "Google의 멀티모달 AI 앱입니다. 복잡한 문서 작업, 연결 앱 사용, Mac에서의 코딩 작업을 대화와 함께 처리합니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "Gemini 앱 릴리스 노트",
+        "url": "https://gemini.google/release-notes/"
+      }
+    ],
+    "features": [
+      {
+        "name": "Gemini 4 Argon",
+        "description": "복잡한 분석·자료 제작·여러 단계의 작업에 새 모델을 선택할 수 있습니다.",
+        "status": "conditional",
+        "condition": "Google AI Pro·Ultra에 전 세계 순차 제공됩니다.",
+        "sourceUrl": "https://gemini.google/release-notes/"
+      },
+      {
+        "name": "Mac 코딩 에이전트",
+        "description": "macOS 앱의 Antigravity에서 계획을 승인하고 코드 작성·테스트를 진행합니다.",
+        "status": "conditional",
+        "condition": "영어, 18세 이상 개인·대상 업무 계정, 지원 지역이 필요합니다.",
+        "sourceUrl": "https://gemini.google/release-notes/"
+      },
+      {
+        "name": "앱·Skills 맞춤 설정",
+        "description": "Customize에서 앱 연결과 재사용 지침을 관리합니다.",
+        "status": "conditional",
+        "condition": "연결 앱별 계정·권한 및 제공 조건이 적용됩니다.",
+        "sourceUrl": "https://gemini.google/release-notes/"
+      }
+    ],
+    "updates": [
+      {
+        "id": "gemini-2026-10-13-argon",
+        "title": "Gemini 앱에 4 Argon 추가",
+        "summary": "복잡한 분석과 결과물 제작용 모델을 Google AI Pro·Ultra에 순차 제공합니다.",
+        "highlights": [
+          "복잡한 자료 분석",
+          "문서·덱·프로토타입 작업"
+        ],
+        "publishedAt": "2026-10-13",
+        "sourceUrl": "https://gemini.google/release-notes/",
+        "audience": "Google AI Pro·Ultra 구독자",
+        "rollout": "전 세계 순차 제공"
+      },
+      {
+        "id": "gemini-2026-10-13-antigravity",
+        "title": "Mac 앱에 Antigravity와 Customize 추가",
+        "summary": "Mac에서 코딩 에이전트를 실행하고 Customize에서 앱과 Skills를 관리할 수 있습니다.",
+        "highlights": [
+          "코드 작성·테스트를 백그라운드에서 진행",
+          "40개 이상 앱·서비스 연결 안내"
+        ],
+        "publishedAt": "2026-10-13",
+        "sourceUrl": "https://gemini.google/release-notes/",
+        "audience": "대상 Gemini macOS 앱 사용자 및 앱 연결 사용자",
+        "rollout": "Antigravity는 영어·18세 이상·지원 지역 조건"
+      }
+    ],
+    "notes": [
+      "Gemini 앱의 4 Argon 업데이트를 Gemini 3.8 Flash 모델 자체의 변경으로 사용하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "notebooklm",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "내 자료에 근거해 질문하고 학습·발표 자료를 만드는 Gemini Notebook입니다. 소스 선택과 결과물 제작 전 검토를 지원합니다.",
+    "sources": [
+      {
+        "kind": "docs",
+        "label": "Gemini Notebook 소스 기반 대화",
+        "url": "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+      },
+      {
+        "kind": "blog",
+        "label": "슬라이드·영상 공동 제작 흐름",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/co-create-slides-videos/"
+      },
+      {
+        "kind": "blog",
+        "label": "Gemini Notebook 학습 도구",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-study-tools-september-2026/"
+      }
+    ],
+    "features": [
+      {
+        "name": "선택한 소스로 질문",
+        "description": "노트북의 자료를 선택하고 해당 자료에 대해 질문하거나 작업을 요청합니다.",
+        "status": "conditional",
+        "condition": "모바일 앱에서는 일부 기능이 제한될 수 있습니다.",
+        "sourceUrl": "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+      },
+      {
+        "name": "슬라이드·영상 구성 사전 검토",
+        "description": "최종 생성 전에 슬라이드 개요나 영상 제작 노트를 확인하고 수정 의견을 전달합니다.",
+        "status": "conditional",
+        "condition": "전 세계 사용자에게 순차 배포 중입니다.",
+        "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-notebook/co-create-slides-videos/"
+      },
+      {
+        "name": "음성·학습 자료",
+        "description": "자료를 바탕으로 실시간 음성 대화, 퀴즈와 플래시카드 등 학습 도구를 활용합니다.",
+        "status": "conditional",
+        "condition": "기능별 제공 범위와 사용량 제한이 적용됩니다.",
+        "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-study-tools-september-2026/"
+      }
+    ],
+    "updates": [
+      {
+        "id": "notebooklm-2026-10-19-co-create",
+        "title": "슬라이드·영상 생성 전 구성 검토",
+        "summary": "소스를 바탕으로 주제와 스타일을 정하고, 개요·제작 노트를 검토한 후 생성할 수 있습니다.",
+        "highlights": [
+          "Review 토글로 생성 전 피드백",
+          "검토를 건너뛴 빠른 생성도 유지"
+        ],
+        "publishedAt": "2026-10-19",
+        "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-notebook/co-create-slides-videos/",
+        "audience": "Gemini Notebook 사용자",
+        "rollout": "발표 후 일주일에 걸쳐 전 세계 순차 배포"
+      },
+      {
+        "id": "notebooklm-2026-09-15-study-tools",
+        "title": "음성 대화와 학습 도구 확대",
+        "summary": "노트북과의 실시간 음성 대화, 모바일 녹음, 인터랙티브 학습 자료를 발표했습니다.",
+        "highlights": [
+          "강의와 생각을 모바일로 녹음",
+          "퀴즈·플래시카드·짧은 영상 요약"
+        ],
+        "publishedAt": "2026-09-15",
+        "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-study-tools-september-2026/",
+        "audience": "Gemini Notebook 학습 사용자",
+        "rollout": "기능별 순차 제공·사용 한도 적용"
+      }
+    ],
+    "notes": [
+      "기존 ID notebooklm은 유지했습니다. 현재 공식 자료는 Gemini Notebook 명칭을 사용합니다."
+    ]
+  },
+  {
+    "toolId": "perplexity",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "검색에서 조사·자료 제작·반복 작업으로 이어지는 AI 서비스입니다. Computer에서 모델과 속도를 선택하고 로컬 파일도 활용합니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "Perplexity 공식 변경 로그",
+        "url": "https://www.perplexity.ai/changelog"
+      },
+      {
+        "kind": "changelog",
+        "label": "10월 19일 제품 업데이트",
+        "url": "https://www.perplexity.ai/changelog/ultrafast-computer-models-decisions-api-and-connector-controls"
+      },
+      {
+        "kind": "changelog",
+        "label": "10월 5일 제품 업데이트",
+        "url": "https://www.perplexity.ai/changelog/automations-inline-visualizations-and-gpt-6-1-sol"
+      }
+    ],
+    "features": [
+      {
+        "name": "반복·이벤트 자동화",
+        "description": "Computer가 일정이나 연결 앱 이벤트에 따라 작업을 실행합니다.",
+        "status": "conditional",
+        "condition": "웹 Computer와 필요한 연결 권한이 있어야 합니다.",
+        "sourceUrl": "https://www.perplexity.ai/changelog/automations-inline-visualizations-and-gpt-6-1-sol"
+      },
+      {
+        "name": "대화 안의 시각화",
+        "description": "차트와 인터랙티브 시각화를 작업 대화에서 생성합니다.",
+        "status": "conditional",
+        "condition": "Computer 접근 권한이 필요합니다.",
+        "sourceUrl": "https://www.perplexity.ai/changelog/automations-inline-visualizations-and-gpt-6-1-sol"
+      },
+      {
+        "name": "Mac 프로젝트 폴더",
+        "description": "Project에 로컬 폴더를 연결해 파일을 읽고 저장합니다.",
+        "status": "conditional",
+        "condition": "Mac 앱 26.38 이상이며 연결 폴더는 본인만 사용합니다.",
+        "sourceUrl": "https://www.perplexity.ai/changelog/ultrafast-computer-models-decisions-api-and-connector-controls"
+      },
+      {
+        "name": "Computer 모델·속도 선택",
+        "description": "GPT-6 Astra·GPT-6.1 Sol의 Ultrafast 속도를 선택합니다.",
+        "status": "conditional",
+        "condition": "웹의 Max 구독자 대상이며 일반·Fast보다 크레딧을 더 사용합니다.",
+        "sourceUrl": "https://www.perplexity.ai/changelog/ultrafast-computer-models-decisions-api-and-connector-controls"
+      }
+    ],
+    "updates": [
+      {
+        "id": "perplexity-2026-10-19-computer",
+        "title": "Ultrafast·로컬 폴더·연결 권한 개선",
+        "summary": "Computer의 고속 모델 선택과 Mac 프로젝트 폴더 연결, Enterprise의 역할별 커넥터 제어를 추가했습니다.",
+        "highlights": [
+          "Max의 Ultrafast",
+          "Mac 26.38 이상 프로젝트 폴더",
+          "영업 계약 Enterprise의 역할별 커넥터 권한"
+        ],
+        "publishedAt": "2026-10-19",
+        "sourceUrl": "https://www.perplexity.ai/changelog/ultrafast-computer-models-decisions-api-and-connector-controls",
+        "audience": "Max·Mac 앱·대상 Enterprise 사용자",
+        "rollout": "기능마다 플랜·앱 버전 조건 적용"
+      },
+      {
+        "id": "perplexity-2026-10-05-automations",
+        "title": "자동화와 인터랙티브 시각화",
+        "summary": "Computer에서 반복·이벤트 작업을 실행하고 대화 중 차트와 설명 시각화를 만들 수 있습니다.",
+        "highlights": [
+          "메모리·Skills·커넥터를 사용하는 자동화",
+          "대화 안에서 차트·3D 설명"
+        ],
+        "publishedAt": "2026-10-05",
+        "sourceUrl": "https://www.perplexity.ai/changelog/automations-inline-visualizations-and-gpt-6-1-sol",
+        "audience": "Computer 사용자",
+        "rollout": "웹과 기능별 대상 플랜에 제공"
+      }
+    ],
+    "notes": [
+      "API용 Decisions·임베딩 모델과 일반 사용자 앱 기능은 구분했습니다."
+    ]
+  },
+  {
+    "toolId": "cursor",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "코드 작업을 맡기고 검토하는 개발 AI 도구입니다. 클라우드 작업 환경, 공유 가능한 결과물, iOS 원격 제어를 제공합니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "Cursor 공식 변경 로그",
+        "url": "https://cursor.com/changelog"
+      },
+      {
+        "kind": "changelog",
+        "label": "클라우드 에이전트·환경 개선",
+        "url": "https://cursor.com/changelog/cloud-agent-canvases-and-environments"
+      }
+    ],
+    "features": [
+      {
+        "name": "클라우드 에이전트 Canvas",
+        "description": "클라우드 에이전트가 인터랙티브 Canvas를 만들고 링크로 팀에 공유합니다.",
+        "status": "conditional",
+        "condition": "클라우드 에이전트 접근 권한이 필요합니다.",
+        "sourceUrl": "https://cursor.com/changelog"
+      },
+      {
+        "name": "환경 관리 API",
+        "description": "클라우드 작업 환경을 프로그래밍 방식으로 만들고 관리합니다.",
+        "status": "conditional",
+        "condition": "Environments API 베타입니다.",
+        "sourceUrl": "https://cursor.com/changelog"
+      },
+      {
+        "name": "iOS에서 로컬 에이전트 제어",
+        "description": "iOS 앱에서 컴퓨터의 에이전트 작업을 보고 메시지를 보냅니다.",
+        "status": "conditional",
+        "condition": "데스크톱에서 기기 연결을 승인하고 컴퓨터를 켜서 온라인으로 유지해야 합니다. Enterprise는 관리자 활성화가 필요합니다.",
+        "sourceUrl": "https://cursor.com/changelog"
+      }
+    ],
+    "updates": [
+      {
+        "id": "cursor-2026-10-16-cloud-canvases",
+        "title": "클라우드 Canvas와 환경 개선",
+        "summary": "클라우드 에이전트의 Canvas 제작·공유, 환경 관리 API 베타와 큰 환경 개선을 공개했습니다.",
+        "highlights": [
+          "최대 300개 저장소 환경",
+          "공유 가능한 Canvas"
+        ],
+        "publishedAt": "2026-10-16",
+        "sourceUrl": "https://cursor.com/changelog/cloud-agent-canvases-and-environments",
+        "audience": "Cursor 클라우드 에이전트 사용자·개발자",
+        "rollout": "환경 API 베타"
+      },
+      {
+        "id": "cursor-2026-10-06-remote-control",
+        "title": "iOS에서 로컬 에이전트 원격 제어",
+        "summary": "컴퓨터에서 실행 중인 에이전트의 진행 상황을 iPhone에서 확인하고 후속 지시를 보낼 수 있습니다.",
+        "highlights": [
+          "실행은 원래 컴퓨터에서 계속",
+          "컴퓨터 전원·인터넷 연결 필요"
+        ],
+        "publishedAt": "2026-10-06",
+        "sourceUrl": "https://cursor.com/changelog",
+        "audience": "Cursor iOS·데스크톱 사용자",
+        "rollout": "Enterprise 외 기본 활성화 · 기기 페어링 필요"
+      }
+    ],
+    "notes": [
+      "10월 13일 Origin 마켓플레이스 공지는 별도 제품 범위여서 핵심 Cursor 앱 기능으로 확장하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "github-copilot",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "GitHub·개발 환경에서 코드 작성과 설명, 리뷰, 에이전트 작업을 이어주는 개발 AI입니다.",
+    "sources": [
+      {
+        "kind": "docs",
+        "label": "GitHub Copilot 소개",
+        "url": "https://docs.github.com/en/copilot/get-started/about-github-copilot"
+      },
+      {
+        "kind": "changelog",
+        "label": "모델 정책 API 정식 제공",
+        "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams/"
+      },
+      {
+        "kind": "changelog",
+        "label": "코드 스캔 Agentic autofix",
+        "url": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/"
+      }
+    ],
+    "features": [
+      {
+        "name": "코드 제안·질문",
+        "description": "입력 중 코드를 제안하고 코드베이스에 대한 질문에 답합니다.",
+        "status": "conditional",
+        "condition": "사용 환경과 플랜에 따라 제공 범위가 다릅니다.",
+        "sourceUrl": "https://docs.github.com/en/copilot/get-started/about-github-copilot"
+      },
+      {
+        "name": "코드 리뷰·작업 위임",
+        "description": "변경 사항을 리뷰하고 맡긴 작업을 Pull Request로 이어갑니다.",
+        "status": "conditional",
+        "condition": "저장소 권한과 조직 정책이 적용됩니다.",
+        "sourceUrl": "https://docs.github.com/en/copilot/get-started/about-github-copilot"
+      },
+      {
+        "name": "보안 경고 자동 수정",
+        "description": "CodeQL을 다시 실행해 수정안을 검증하고 검토할 초안 PR을 만듭니다.",
+        "status": "conditional",
+        "condition": "Enterprise Cloud의 Code Security·Advanced Security 고객 대상이며 관리자 활성화·Copilot 청구 수단이 필요합니다.",
+        "sourceUrl": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/"
+      }
+    ],
+    "updates": [
+      {
+        "id": "github-copilot-2026-10-19-model-policy",
+        "title": "모델 정책 REST API 정식 제공",
+        "summary": "기업·팀·Agent 앱·조직 수준의 Copilot 모델 정책을 API로 조회하고 수정합니다.",
+        "highlights": [
+          "네 수준의 모델 정책 관리",
+          "조직·팀별 제어 위임"
+        ],
+        "publishedAt": "2026-10-19",
+        "sourceUrl": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams/",
+        "audience": "Copilot 조직·기업 관리자",
+        "rollout": "GET·PATCH 엔드포인트 정식 제공"
+      },
+      {
+        "id": "github-copilot-2026-10-15-agentic-autofix",
+        "title": "보안 경고 Agentic autofix 정식 제공",
+        "summary": "코드베이스를 조사하고 수정한 뒤 CodeQL로 재검증해 초안 PR을 만듭니다.",
+        "highlights": [
+          "기본 브랜치 경고 대상",
+          "최대 25개 경고를 한 PR로 처리"
+        ],
+        "publishedAt": "2026-10-15",
+        "sourceUrl": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/",
+        "audience": "Enterprise Cloud의 Code Security·Advanced Security 고객",
+        "rollout": "관리자 활성화 필요 · AI Credits와 Actions 사용량 발생"
+      }
+    ],
+    "notes": [
+      "Agentic autofix를 모든 개인 Copilot 플랜의 기본 기능으로 표시하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "midjourney",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "텍스트와 편집 작업으로 이미지를 만드는 생성 AI입니다. Alpha 웹에서 이미지 재검토 생성과 공동 폴더 작업을 시험하고 있습니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "Midjourney Alpha 변경 로그",
+        "url": "https://updates.midjourney.com/alpha-changelog-10-7-26/"
+      },
+      {
+        "kind": "blog",
+        "label": "Thinking Mode 시험 공지",
+        "url": "https://updates.midjourney.com/testing-thinking-mode/"
+      }
+    ],
+    "features": [
+      {
+        "name": "Thinking 재생성",
+        "description": "8.2 이미지·편집 작업을 다시 살펴보고 프롬프트와 맞지 않는 부분을 개선해 재생성합니다.",
+        "status": "conditional",
+        "condition": "Alpha 웹의 초기 시험 기능입니다.",
+        "sourceUrl": "https://updates.midjourney.com/alpha-changelog-10-7-26/"
+      },
+      {
+        "name": "공유 폴더",
+        "description": "협업자와 뷰어를 초대해 이미지를 모으고 함께 생성합니다.",
+        "status": "conditional",
+        "condition": "Alpha 웹 초기 기능이며 공유 설정이 이미지의 Stealth 여부를 바꾸지 않습니다.",
+        "sourceUrl": "https://updates.midjourney.com/alpha-changelog-10-7-26/"
+      },
+      {
+        "name": "스타일 미리보기·정리",
+        "description": "사용자 정의 스타일의 Live Style Preview와 폴더 고정을 지원합니다.",
+        "status": "conditional",
+        "condition": "Alpha 웹 기준입니다.",
+        "sourceUrl": "https://updates.midjourney.com/alpha-changelog-10-7-26/"
+      }
+    ],
+    "updates": [
+      {
+        "id": "midjourney-2026-10-08-thinking",
+        "title": "Thinking Mode 초기 시험",
+        "summary": "이미지를 다시 검토해 프롬프트 정확도와 글자·구성 일관성을 개선하는 재생성을 시험합니다.",
+        "highlights": [
+          "작업 화면의 Rerun (Thinking)",
+          "사용자 피드백 수집"
+        ],
+        "publishedAt": "2026-10-08",
+        "sourceUrl": "https://updates.midjourney.com/testing-thinking-mode/",
+        "audience": "alpha.midjourney.com 사용자",
+        "rollout": "초기 시험 · 넓은 일반 제공 확정 아님"
+      },
+      {
+        "id": "midjourney-2026-10-08-shared-folders",
+        "title": "Alpha 공유 폴더와 편집 안정성 개선",
+        "summary": "폴더별 공동 작업·보기 권한을 추가하고 편집 제출 및 화면 오류를 개선했습니다.",
+        "highlights": [
+          "Collaborator·Viewer 역할",
+          "공유해도 이미지 프라이버시 설정은 유지"
+        ],
+        "publishedAt": "2026-10-08",
+        "sourceUrl": "https://updates.midjourney.com/alpha-changelog-10-7-26/",
+        "audience": "Midjourney Alpha 사용자",
+        "rollout": "초기 공유 폴더 기능"
+      }
+    ],
+    "notes": [
+      "공지 제목의 10/7/26과 게시일 10월 8일을 구분해 publishedAt은 2026-10-08로 기록했습니다."
+    ]
+  },
+  {
+    "toolId": "gpt-6-astra",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "복잡한 추론·코딩·리서치·문서 제작과 도구 실행에 사용하는 OpenAI 모델입니다.",
+    "sources": [
+      {
+        "kind": "docs",
+        "label": "GPT-6 Astra 모델 문서",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      },
+      {
+        "kind": "changelog",
+        "label": "OpenAI API 변경 로그",
+        "url": "https://developers.openai.com/api/docs/changelog"
+      },
+      {
+        "kind": "blog",
+        "label": "GPT-6 Astra 발표",
+        "url": "https://openai.com/index/gpt-6-astra/"
+      }
+    ],
+    "features": [
+      {
+        "name": "추론 강도 조절",
+        "description": "low·medium·high·xhigh·max 추론 수준을 선택합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      },
+      {
+        "name": "긴 문맥과 이미지 입력",
+        "description": "약 105만 토큰 문맥과 텍스트·이미지 입력을 지원합니다.",
+        "status": "conditional",
+        "condition": "입력 이미지 지원이며 오디오·비디오 입력은 모델 문서상 지원하지 않습니다.",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      },
+      {
+        "name": "도구와 구조화 출력",
+        "description": "함수 호출·구조화 출력, 검색·코드 실행·컴퓨터 사용 등 도구를 연결합니다.",
+        "status": "conditional",
+        "condition": "도구 사용은 Responses API와 별도 실행 환경·권한·비용 조건이 적용됩니다.",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      }
+    ],
+    "updates": [
+      {
+        "id": "gpt-6-astra-2026-09-29-ultrafast",
+        "title": "Astra API에 Ultrafast 추가",
+        "summary": "Responses API에서 출력 토큰 생성 간격을 줄이는 Ultrafast 처리 옵션을 추가했습니다.",
+        "highlights": [
+          "service_tier: ultrafast",
+          "글로벌·미국 데이터 레지던시, EU 미지원 안내"
+        ],
+        "publishedAt": "2026-09-29",
+        "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+        "audience": "OpenAI API 고객",
+        "rollout": "요청 한도와 별도 요금 적용"
+      }
+    ],
+    "notes": [
+      "모델의 이미지 입력과 이미지 생성 도구 지원을 구분했습니다. 공급사의 성능 우위 표현을 독립 검증 결과로 옮기지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "claude-fable-5-1",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "고난도 코딩·지식 업무·과학 연구 지원에 쓰는 Anthropic 모델입니다. 일반 제공 모델이며 별도의 Mythos 접근 프로그램과 구분됩니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "Claude Fable 5.1 발표",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+      },
+      {
+        "kind": "docs",
+        "label": "Claude Fable 제품·발표 목록",
+        "url": "https://www.anthropic.com/claude/fable"
+      }
+    ],
+    "features": [
+      {
+        "name": "코딩·지식 작업",
+        "description": "여러 단계의 소프트웨어 개발과 전문 자료 작업에 활용합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+      },
+      {
+        "name": "연구 지원",
+        "description": "복잡한 과학 연구 문제의 분석을 지원합니다.",
+        "status": "conditional",
+        "condition": "분야별 보호 장치와 접근 정책이 적용됩니다.",
+        "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+      },
+      {
+        "name": "입력 캐시 재사용",
+        "description": "이전에 처리한 문맥을 캐시에서 읽어 반복 작업 비용을 줄입니다.",
+        "status": "conditional",
+        "condition": "API 등 토큰 기반 청구에서 캐시 읽기 요금이 적용됩니다.",
+        "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+      }
+    ],
+    "updates": [
+      {
+        "id": "claude-fable-5-1-2026-09-01",
+        "title": "Claude Fable 5.1 출시",
+        "summary": "코딩·지식 작업 모델을 공개하고 캐시 읽기 가격을 100만 토큰당 0.25달러로 낮췄습니다.",
+        "highlights": [
+          "API 모델 ID claude-fable-5-1",
+          "캐시 읽기 요금 인하"
+        ],
+        "publishedAt": "2026-09-01",
+        "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "audience": "Claude API·클라우드 플랫폼 개발자",
+        "rollout": "일반 제공 · 플랫폼별 접근 조건 적용"
+      }
+    ],
+    "notes": [
+      "발표 본문은 September 2026으로 표시하지만 공식 Fable 발표 목록에서 Sep 1, 2026을 확인했습니다. Mythos 5.1의 제한 접근 기능을 Fable 기능으로 혼합하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "gemini-3-8-flash",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "장시간 코딩과 에이전트·기업 워크플로를 겨냥한 Google Flash 모델입니다. 여러 입력 형식을 받아 텍스트를 출력합니다.",
+    "sources": [
+      {
+        "kind": "docs",
+        "label": "Gemini 3.8 Flash 모델 문서",
+        "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+      },
+      {
+        "kind": "changelog",
+        "label": "Gemini API 릴리스 노트",
+        "url": "https://ai.google.dev/gemini-api/docs/changelog"
+      }
+    ],
+    "features": [
+      {
+        "name": "멀티모달 입력",
+        "description": "텍스트·이미지·영상·오디오·PDF를 입력하고 텍스트를 출력합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+      },
+      {
+        "name": "긴 문맥·추론 조절",
+        "description": "입력 1,048,576토큰과 low·medium·high 추론 수준을 지원합니다.",
+        "status": "conditional",
+        "condition": "minimal 추론 수준은 지원하지 않습니다.",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+      },
+      {
+        "name": "검색·코드·함수 도구",
+        "description": "검색 근거 연결, 코드 실행, 함수 호출과 구조화 출력을 지원합니다.",
+        "status": "conditional",
+        "condition": "도구별 API 설정·한도·요금이 적용됩니다.",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+      },
+      {
+        "name": "컴퓨터 사용",
+        "description": "컴퓨터 사용 도구를 연결할 수 있습니다.",
+        "status": "conditional",
+        "condition": "Preview 기능입니다.",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+      }
+    ],
+    "updates": [
+      {
+        "id": "gemini-3-8-flash-2026-10-08-routing",
+        "title": "3.7 Flash 요청을 3.8로 자동 연결",
+        "summary": "3.7 Flash가 더 이상 AI Studio 선택 목록에 표시되지 않으며 해당 API 요청을 3.8 Flash로 연결합니다.",
+        "highlights": [
+          "기존 API 엔드포인트는 자동 연결",
+          "3.8 가이드로 이전 확인"
+        ],
+        "publishedAt": "2026-10-08",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/changelog",
+        "audience": "기존 gemini-3.7-flash API 사용자",
+        "rollout": "자동 라우팅 · 모델 문자열 갱신 권장"
+      },
+      {
+        "id": "gemini-3-8-flash-2026-09-02-ga",
+        "title": "Gemini 3.8 Flash 정식 출시",
+        "summary": "장시간 개발·자율 에이전트·기업 워크플로용 Flash 모델을 정식 제공했습니다.",
+        "highlights": [
+          "모델 ID gemini-3.8-flash"
+        ],
+        "publishedAt": "2026-09-02",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/changelog",
+        "audience": "Gemini API 개발자",
+        "rollout": "정식 제공"
+      }
+    ],
+    "notes": [
+      "Gemini 4 Argon의 출시는 별도 모델 소식으로 분리했습니다. 3.8 Flash의 Live API·이미지 생성·오디오 생성은 모델 문서상 지원하지 않습니다."
+    ]
+  },
+  {
+    "toolId": "notion",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "문서·데이터베이스에 팀의 지식과 업무를 모으고, 연결된 AI 에이전트가 같은 맥락을 활용하도록 돕는 협업 공간입니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "공식 릴리스",
+        "url": "https://www.notion.com/releases"
+      },
+      {
+        "kind": "blog",
+        "label": "Notion AI 업데이트",
+        "url": "https://www.notion.com/blog/notion-ai-more-for-less"
+      }
+    ],
+    "features": [
+      {
+        "name": "에이전트의 장시간 작업",
+        "description": "전용 컴퓨터와 브라우저를 사용해 최대 24시간 작업을 이어갑니다.",
+        "status": "conditional",
+        "condition": "AI 크레딧과 계정별 이용 조건 적용",
+        "sourceUrl": "https://www.notion.com/releases/2026-10-19"
+      },
+      {
+        "name": "MCP 도구 연결",
+        "description": "Notion Agent와 Custom Agents가 외부 도구의 정보를 읽고 작업합니다.",
+        "status": "conditional",
+        "condition": "연결한 도구의 인증·권한 필요",
+        "sourceUrl": "https://www.notion.com/releases/2026-10-13"
+      },
+      {
+        "name": "공유 스킬 관리",
+        "description": "팀의 반복 작업 지침을 공유하고 Skills API로 외부 에이전트에 연결합니다.",
+        "status": "conditional",
+        "condition": "외부 연결과 동기화 설정 필요",
+        "sourceUrl": "https://www.notion.com/releases/2026-10-13"
+      },
+      {
+        "name": "외부 에이전트 메모리 동기화",
+        "description": "Notion MCP를 통해 다른 에이전트가 공통 맥락과 기억을 활용합니다.",
+        "status": "conditional",
+        "condition": "MCP 연결 필요; MCP를 통한 스킬 제공은 출시 예정",
+        "sourceUrl": "https://www.notion.com/releases/2026-10-19"
+      }
+    ],
+    "updates": [
+      {
+        "id": "notion-2026-10-19",
+        "title": "Notion Agent 실행 능력과 AI 크레딧 체계 개편",
+        "summary": "에이전트에 컴퓨터·브라우저와 검토 모드를 추가하고, AI 사용량을 새 크레딧 체계로 통합했습니다.",
+        "highlights": [
+          "최대 24시간 작업",
+          "MCP 메모리 동기화",
+          "개인 Agent에 ChatGPT 구독 연결"
+        ],
+        "publishedAt": "2026-10-19",
+        "sourceUrl": "https://www.notion.com/releases/2026-10-19",
+        "audience": "Notion AI 이용자·워크스페이스 관리자",
+        "rollout": "제공 기능과 요금 조건별 적용 · BYOK는 Enterprise 비공개 알파 · AI Command Center는 출시 예정"
+      },
+      {
+        "id": "notion-2026-10-13",
+        "title": "Notion 3.8: 에이전트가 공유하는 업무 맥락",
+        "summary": "MCP 연결과 스킬 동기화를 확장해 팀의 자료를 여러 에이전트와 함께 활용하도록 개선했습니다.",
+        "highlights": [
+          "150개 이상 MCP 도구 연결 안내",
+          "Skills API",
+          "Teams에서 Notion 알림 응답"
+        ],
+        "publishedAt": "2026-10-13",
+        "sourceUrl": "https://www.notion.com/releases/2026-10-13",
+        "audience": "Notion 이용 팀과 연결 도구 관리자",
+        "rollout": "도구별 연결 권한과 관리자 정책 적용"
+      }
+    ],
+    "notes": [
+      "공식 성능·비용 절감 수치는 자체 평가이므로 요약에서 제외했습니다."
+    ]
+  },
+  {
+    "toolId": "figma",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "화면 디자인과 프로토타입을 팀이 함께 만들고, 디자인 시스템과 코드 작업을 연결하는 제품 제작 도구입니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "공식 릴리스 노트",
+        "url": "https://www.figma.com/release-notes/"
+      },
+      {
+        "kind": "blog",
+        "label": "Config India 2026 발표",
+        "url": "https://www.figma.com/blog/build-by-design/"
+      },
+      {
+        "kind": "docs",
+        "label": "Figma Design 안내",
+        "url": "https://www.figma.com/design/"
+      }
+    ],
+    "features": [
+      {
+        "name": "재사용 컴포넌트·변수",
+        "description": "색상·간격과 UI 요소를 공유해 여러 화면을 일관되게 수정합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.figma.com/design/"
+      },
+      {
+        "name": "반응형 자동 배치",
+        "description": "내용에 따라 프레임 크기와 요소 배치가 자동으로 바뀝니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.figma.com/design/"
+      },
+      {
+        "name": "Code layers",
+        "description": "디자인 프레임·GitHub 코드·프롬프트에서 코드 기반 프로토타입을 만듭니다.",
+        "status": "conditional",
+        "condition": "공개 베타 순차 제공; 유료 플랜의 생성·편집 무료 기간은 11월 4일까지 안내",
+        "sourceUrl": "https://www.figma.com/release-notes/"
+      },
+      {
+        "name": "Figma Specs",
+        "description": "의도·시각 자료·기술 정보를 팀과 에이전트가 함께 참조하도록 정리합니다.",
+        "status": "conditional",
+        "condition": "유료 플랜 공개 베타",
+        "sourceUrl": "https://www.figma.com/release-notes/"
+      }
+    ],
+    "updates": [
+      {
+        "id": "figma-2026-10-15",
+        "title": "Config India: 코드 레이어·Specs·Payload 연결",
+        "summary": "캔버스의 코드 프로토타입, 공유 명세, Figma Make의 Payload 백엔드를 발표했습니다.",
+        "highlights": [
+          "Code layers 공개 베타",
+          "Specs 유료 플랜 공개 베타",
+          "Payload 백엔드 전 플랜 순차 제공"
+        ],
+        "publishedAt": "2026-10-15",
+        "sourceUrl": "https://www.figma.com/release-notes/",
+        "audience": "디자이너·개발자·Figma Make 이용자",
+        "rollout": "기능별 공개·비공개 베타 및 미리보기 구분"
+      },
+      {
+        "id": "figma-2026-10-13",
+        "title": "Figma Make에 Gemini 4 Argon 추가",
+        "summary": "Figma Make 채팅창의 모델 선택기에서 Gemini 4 Argon을 선택하도록 순차 제공했습니다.",
+        "highlights": [
+          "모델 선택기에서 전환",
+          "모든 플랜 대상"
+        ],
+        "publishedAt": "2026-10-13",
+        "sourceUrl": "https://www.figma.com/release-notes/",
+        "audience": "Figma Make 이용자",
+        "rollout": "전 플랜 순차 제공"
+      }
+    ],
+    "notes": [
+      "중앙 디자인 시스템 묶음은 preview only여서 사용 가능 기능으로 표시하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "canva",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "템플릿과 편집 도구로 발표자료·소셜 콘텐츠·브랜드 디자인을 만들고 팀에 공유하는 시각 콘텐츠 제작 플랫폼입니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "Canva 공식 뉴스",
+        "url": "https://www.canva.com/newsroom/news/"
+      },
+      {
+        "kind": "blog",
+        "label": "Muse 연결 발표",
+        "url": "https://www.canva.com/newsroom/news/canva-meta-muse/"
+      },
+      {
+        "kind": "blog",
+        "label": "ProSuite 발표",
+        "url": "https://www.canva.com/newsroom/news/canva-prosuite-launch/"
+      }
+    ],
+    "features": [
+      {
+        "name": "대화에서 디자인 생성",
+        "description": "연결한 Muse 대화에서 Canva 디자인을 생성하고 다시 편집합니다.",
+        "status": "conditional",
+        "condition": "미국·캐나다 Muse 이용자; Canva 계정 연결 필요",
+        "sourceUrl": "https://www.canva.com/newsroom/news/canva-meta-muse/"
+      },
+      {
+        "name": "브랜드 자산 활용",
+        "description": "연결된 AI가 Canva 계정의 글꼴·색상·자산을 참고해 디자인합니다.",
+        "status": "conditional",
+        "condition": "해당 연결 기능과 브랜드 자산 접근 권한 필요",
+        "sourceUrl": "https://www.canva.com/newsroom/news/canva-meta-muse/"
+      },
+      {
+        "name": "디자인 검색·내보내기",
+        "description": "AI 연결에서 디자인 라이브러리를 찾고 완성 파일을 내보냅니다.",
+        "status": "conditional",
+        "condition": "Muse의 Canva 연결 및 지역 조건 적용",
+        "sourceUrl": "https://www.canva.com/newsroom/news/canva-meta-muse/"
+      },
+      {
+        "name": "전문 제작 도구 연결",
+        "description": "ProSuite가 Affinity·Cavalry·Flourish·Leonardo의 제작 흐름을 연결합니다.",
+        "status": "conditional",
+        "condition": "도구별 이용 조건 확인; 일부 Canva 내 애니메이션 편집은 예정 기능",
+        "sourceUrl": "https://www.canva.com/newsroom/news/canva-prosuite-launch/"
+      }
+    ],
+    "updates": [
+      {
+        "id": "canva-2026-09-29",
+        "title": "Meta Muse에서 Canva 디자인 만들기",
+        "summary": "Muse와 Canva 계정을 연결해 대화에서 브랜드 디자인을 만들고 검색·내보내기를 수행합니다.",
+        "highlights": [
+          "브랜드 글꼴·색상 활용",
+          "생성 결과 재편집",
+          "미국·캐나다 제공"
+        ],
+        "publishedAt": "2026-09-29",
+        "sourceUrl": "https://www.canva.com/newsroom/news/canva-meta-muse/",
+        "audience": "미국·캐나다의 Muse 및 Canva 이용자",
+        "rollout": "대상 지역 제공 · 계정 연결 필요"
+      },
+      {
+        "id": "canva-2026-09-16",
+        "title": "Canva ProSuite 발표",
+        "summary": "Affinity·Cavalry·Flourish·Leonardo를 연결하는 전문 제작 도구 구성을 발표했습니다.",
+        "highlights": [
+          "Affinity 블렌드·스크립팅 개선",
+          "RAW 사진 작업 개선",
+          "Canva와의 브랜드·데이터 연결"
+        ],
+        "publishedAt": "2026-09-16",
+        "sourceUrl": "https://www.canva.com/newsroom/news/canva-prosuite-launch/",
+        "audience": "전문 디자인·모션·데이터 시각화 제작자",
+        "rollout": "도구별 기능 적용 · 일부 연동은 예정"
+      }
+    ],
+    "notes": [
+      "게시일은 공식 뉴스 목록의 날짜로 교차 확인했습니다: https://www.canva.com/newsroom/news/?Sid=1",
+      "신규 연구·교육·템플릿 게시물도 확인했으나 정확한 게시일을 확인하지 못해 최근 검증된 제품 발표 2건을 수록했습니다."
+    ]
+  },
+  {
+    "toolId": "slack",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "채널 대화와 파일·업무 도구를 한곳에 연결하고, 알림·할 일·자동화로 팀의 후속 작업을 관리하는 협업 서비스입니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "Slack 업데이트와 변경 사항",
+        "url": "https://slack.com/help/articles/115004846068-Slack-updates-and-changes."
+      },
+      {
+        "kind": "docs",
+        "label": "Slack 도움말",
+        "url": "https://slack.com/help"
+      }
+    ],
+    "features": [
+      {
+        "name": "메시지를 할 일로 관리",
+        "description": "메시지와 파일을 To-dos에 넣고 알림과 완료 상태를 관리합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://slack.com/help/articles/115004846068-Slack-updates-and-changes."
+      },
+      {
+        "name": "워크플로에서 에이전트 시작",
+        "description": "워크플로에서 수집한 정보로 Slackbot 또는 에이전트 대화를 시작합니다.",
+        "status": "conditional",
+        "condition": "워크플로·연결 에이전트 사용 권한 필요",
+        "sourceUrl": "https://slack.com/help/articles/115004846068-Slack-updates-and-changes."
+      },
+      {
+        "name": "사람·에이전트 알림 필터",
+        "description": "Activity에서 사람·에이전트·앱의 알림을 구분해 확인합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://slack.com/help/articles/115004846068-Slack-updates-and-changes."
+      },
+      {
+        "name": "채널 분석",
+        "description": "채널 상세에서 인기 메시지·반응과 활동·참여 추이를 봅니다.",
+        "status": "conditional",
+        "condition": "Enterprise 조직의 Channel Manager; 50명 이상 채널",
+        "sourceUrl": "https://slack.com/help/articles/115004846068-Slack-updates-and-changes."
+      }
+    ],
+    "updates": [
+      {
+        "id": "slack-2026-10-todos-workflows",
+        "title": "10월: To-dos와 워크플로 에이전트 연결",
+        "summary": "Later를 To-dos로 바꾸고, 워크플로에서 Slackbot·에이전트 대화를 시작하는 기능을 안내했습니다.",
+        "highlights": [
+          "할 일 알림·완료 처리",
+          "보관 항목은 Home의 Saved로 이동",
+          "Enterprise 채널 상세 분석"
+        ],
+        "publishedAt": null,
+        "sourceUrl": "https://slack.com/help/articles/115004846068-Slack-updates-and-changes.",
+        "audience": "Slack 이용자; 분석은 Enterprise Channel Manager",
+        "rollout": "2026년 10월 월별 안내 · 항목별 일자 미공개 · 순차 제공 가능"
+      },
+      {
+        "id": "slack-2026-09-activity-passkeys",
+        "title": "9월: Activity 필터와 패스키 로그인",
+        "summary": "사람·에이전트 알림을 구분하고, 지원 워크스페이스에서 생체 인증이나 기기 PIN으로 로그인할 수 있습니다.",
+        "highlights": [
+          "Activity 필터",
+          "Free·Pro·Business+ 패스키",
+          "사이드바 탭 순서 변경"
+        ],
+        "publishedAt": null,
+        "sourceUrl": "https://slack.com/help/articles/115004846068-Slack-updates-and-changes.",
+        "audience": "Slack 이용자; 패스키는 Free·Pro·Business+",
+        "rollout": "2026년 9월 월별 안내 · 항목별 일자 미공개"
+      }
+    ],
+    "notes": [
+      "월만 공개된 공지는 임의로 월초 날짜를 부여하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "zapier",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "앱의 이벤트와 작업을 연결해 반복 업무를 자동화하고, 데이터·AI 도구를 업무 흐름에 붙이는 서비스입니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "공식 제품 업데이트",
+        "url": "https://help.zapier.com/hc/en-us/categories/13951101412877-Product-updates"
+      },
+      {
+        "kind": "blog",
+        "label": "공식 통합 업데이트",
+        "url": "https://community.zapier.com/product-updates/what-s-new-39-updated-integrations-for-september-2026-53860"
+      },
+      {
+        "kind": "docs",
+        "label": "필드 매핑 안내",
+        "url": "https://help.zapier.com/hc/en-us/articles/46001908703757-Enhanced-field-mapping-makes-structured-data-easier-to-work-with"
+      }
+    ],
+    "features": [
+      {
+        "name": "중첩 데이터 매핑",
+        "description": "객체·배열을 트리로 보고 단일 값이나 전체 구조를 다음 단계에 전달합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://help.zapier.com/hc/en-us/articles/46001908703757-Enhanced-field-mapping-makes-structured-data-easier-to-work-with"
+      },
+      {
+        "name": "데이터 형식 확인",
+        "description": "각 필드의 문자열·숫자·배열·객체 형식을 확인하고 매핑합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://help.zapier.com/hc/en-us/articles/46001908703757-Enhanced-field-mapping-makes-structured-data-easier-to-work-with"
+      },
+      {
+        "name": "데이터베이스 작업 연결",
+        "description": "Databricks SQL 실행·조회와 CRM 검색 등 앱 작업을 자동화에 연결합니다.",
+        "status": "conditional",
+        "condition": "해당 앱 계정과 권한 필요",
+        "sourceUrl": "https://community.zapier.com/product-updates/what-s-new-39-updated-integrations-for-september-2026-53860"
+      },
+      {
+        "name": "AI·데이터 도구 연결",
+        "description": "Zaps·Tables·AI Agents 등으로 업무 흐름을 구성합니다.",
+        "status": "conditional",
+        "condition": "도구별 플랜과 사용량 조건 적용",
+        "sourceUrl": "https://zapier.com/blog/updates"
+      }
+    ],
+    "updates": [
+      {
+        "id": "zapier-2026-09-28",
+        "title": "9월: 39개 앱 연동 기능·오류 수정",
+        "summary": "공식 파트너 운영팀이 39개 통합의 추가 작업과 수정 사항을 정리했습니다.",
+        "highlights": [
+          "Databricks SQL 실행·조회",
+          "ActiveCampaign 거래 검색 확장",
+          "HubSpot·Canva 등 통합 수정"
+        ],
+        "publishedAt": "2026-09-28",
+        "sourceUrl": "https://community.zapier.com/product-updates/what-s-new-39-updated-integrations-for-september-2026-53860",
+        "audience": "해당 앱을 Zapier로 연결하는 이용자",
+        "rollout": "통합별 새 기능·수정 적용 · 앱 계정 권한 필요"
+      },
+      {
+        "id": "zapier-2026-05-20",
+        "title": "중첩 필드 매핑 개선",
+        "summary": "복잡한 API·웹훅·AI 결과를 계층 구조 그대로 확인하고 다음 단계에 매핑하도록 개선했습니다.",
+        "highlights": [
+          "객체·배열 트리 보기",
+          "필드 타입 표시",
+          "전체 값·객체 선택"
+        ],
+        "publishedAt": "2026-05-20",
+        "sourceUrl": "https://help.zapier.com/hc/en-us/articles/46001908703757-Enhanced-field-mapping-makes-structured-data-easier-to-work-with",
+        "audience": "모든 Zapier 플랜 이용자",
+        "rollout": "전 플랜 제공 · 배포 중에는 이전 보기 전환 지원"
+      }
+    ],
+    "notes": [
+      "10월 날짜의 공식 제품 릴리스는 확인하지 못했습니다. 최신 검증 통합 공지는 9월 28일입니다.",
+      "blog/updates에는 종료 안내된 Functions가 메뉴에 남아 있어 해당 기능을 추천 목록에서 제외했습니다."
+    ]
+  },
+  {
+    "toolId": "make",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "여러 앱과 AI 작업을 시나리오로 이어 데이터 이동·분기·반복 업무를 자동화하는 시각적 워크플로 도구입니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "2026 릴리스 노트",
+        "url": "https://help.make.com/2026"
+      },
+      {
+        "kind": "docs",
+        "label": "Make 도움말",
+        "url": "https://help.make.com/"
+      }
+    ],
+    "features": [
+      {
+        "name": "AI 공급자 예비 연결",
+        "description": "주 AI 공급자나 모델이 실패하면 예비 연결로 한 번 재시도합니다.",
+        "status": "conditional",
+        "condition": "Make AI Agent 앱 전 플랜; 연결 설정 필요",
+        "sourceUrl": "https://help.make.com/make-ai-agent-improvements-new-ai-models-sso-login-routing-and-mcp-tools-for-audit-logs"
+      },
+      {
+        "name": "프롬프트 캐싱",
+        "description": "반복되는 지침과 도구 정의를 재사용해 지연과 크레딧 사용을 줄입니다.",
+        "status": "conditional",
+        "condition": "지원 Anthropic·OpenAI 모델별 캐싱 조건 적용",
+        "sourceUrl": "https://help.make.com/make-ai-agent-improvements-new-ai-models-sso-login-routing-and-mcp-tools-for-audit-logs"
+      },
+      {
+        "name": "Drive 메타데이터·권한 자동화",
+        "description": "파일을 다운로드하지 않고 메타데이터와 권한 목록을 조회합니다.",
+        "status": "conditional",
+        "condition": "Google Drive 연결과 접근 권한 필요",
+        "sourceUrl": "https://help.make.com/twilio-autopilot-retirement-workday-connections-mondaycom-agents-and-bug-fixes"
+      },
+      {
+        "name": "monday.com 에이전트 연결",
+        "description": "채팅·멘션·업무 할당으로 시나리오를 시작하고 응답을 돌려줍니다.",
+        "status": "conditional",
+        "condition": "베타 모듈과 monday.com Agent API 키 필요",
+        "sourceUrl": "https://help.make.com/twilio-autopilot-retirement-workday-connections-mondaycom-agents-and-bug-fixes"
+      }
+    ],
+    "updates": [
+      {
+        "id": "make-2026-10-16",
+        "title": "Workday 인증·Drive 모듈·monday 에이전트 추가",
+        "summary": "앱 연결과 자동화 모듈을 확장하고 작동이 종료된 Twilio Autopilot 앱을 폐기했습니다.",
+        "highlights": [
+          "Workday 사용자별 OAuth 연결",
+          "Drive 메타데이터·권한 조회",
+          "monday 에이전트 베타"
+        ],
+        "publishedAt": "2026-10-16",
+        "sourceUrl": "https://help.make.com/twilio-autopilot-retirement-workday-connections-mondaycom-agents-and-bug-fixes",
+        "audience": "관련 앱을 연결한 Make 이용자",
+        "rollout": "추가 모듈 제공 · monday 에이전트는 베타 · Twilio 기존 시나리오는 수정 필요"
+      },
+      {
+        "id": "make-2026-10-09",
+        "title": "AI Agent 예비 연결과 프롬프트 캐싱",
+        "summary": "AI 공급자 장애에 대비하는 예비 연결과 반복 프롬프트 캐싱을 추가했습니다.",
+        "highlights": [
+          "예비 연결로 1회 재시도",
+          "지원 모델 프롬프트 캐싱",
+          "전 플랜 AI Agent 지원"
+        ],
+        "publishedAt": "2026-10-09",
+        "sourceUrl": "https://help.make.com/make-ai-agent-improvements-new-ai-models-sso-login-routing-and-mcp-tools-for-audit-logs",
+        "audience": "Make AI Agent 이용자",
+        "rollout": "전 플랜 제공 · 모델별 캐싱 조건 적용"
+      }
+    ],
+    "notes": []
+  },
+  {
+    "toolId": "linear",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "이슈·프로젝트를 중심으로 개발 업무를 추적하고, 코딩 에이전트와 코드 리뷰를 같은 업무 맥락에서 진행하는 도구입니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "공식 변경 기록",
+        "url": "https://linear.app/changelog"
+      },
+      {
+        "kind": "docs",
+        "label": "Linear 문서",
+        "url": "https://linear.app/docs"
+      }
+    ],
+    "features": [
+      {
+        "name": "연결된 PR 리뷰",
+        "description": "누적된 PR의 관계와 리뷰·CI·병합 상태를 한곳에서 확인합니다.",
+        "status": "conditional",
+        "condition": "GitHub 연결과 리뷰 권한 필요",
+        "sourceUrl": "https://linear.app/changelog/2026-10-08-stacked-pull-requests"
+      },
+      {
+        "name": "실시간 코드 변경 확인",
+        "description": "코딩 세션 중 미커밋 변경까지 확인하고 에이전트를 조정합니다.",
+        "status": "conditional",
+        "condition": "Linear 코딩 세션 이용 조건 적용",
+        "sourceUrl": "https://linear.app/changelog/2026-10-08-stacked-pull-requests"
+      },
+      {
+        "name": "AI 사용량·한도 관리",
+        "description": "팀·사용자·기능별 지출을 보고 워크스페이스·사용자·루프 한도를 설정합니다.",
+        "status": "conditional",
+        "condition": "청구 관리자·소유자 권한 필요",
+        "sourceUrl": "https://linear.app/changelog/2026-10-08-stacked-pull-requests"
+      },
+      {
+        "name": "클라우드 코딩 세션",
+        "description": "이슈를 맡긴 에이전트가 코드를 작성·테스트하고 PR을 엽니다.",
+        "status": "conditional",
+        "condition": "관리자의 모델·환경·비밀 설정과 AI 이용 조건 적용",
+        "sourceUrl": "https://linear.app/changelog/2026-09-24-new-controls-for-linear-coding-agent"
+      }
+    ],
+    "updates": [
+      {
+        "id": "linear-2026-10-08",
+        "title": "누적 PR과 실시간 코드 변경 리뷰",
+        "summary": "Linear Diffs에서 연결된 PR 묶음을 보고, 에이전트 작업 중 코드와 AI 지출을 추적하도록 개선했습니다.",
+        "highlights": [
+          "PR 스택 상태 표시",
+          "미커밋 변경 실시간 보기",
+          "AI 지출 탐색·한도"
+        ],
+        "publishedAt": "2026-10-08",
+        "sourceUrl": "https://linear.app/changelog/2026-10-08-stacked-pull-requests",
+        "audience": "Linear 개발 팀·청구 관리자",
+        "rollout": "기능별 권한 적용 · Guided Reviews는 Basic에도 제공"
+      },
+      {
+        "id": "linear-2026-09-24",
+        "title": "코딩 에이전트 실행 제어 확장",
+        "summary": "작업 난도별 모델 라우팅과 환경 비밀, 공개 가중치 모델 설정을 추가했습니다.",
+        "highlights": [
+          "자동 모델 라우팅",
+          "환경 설정용 비밀",
+          "관리자 모델 허용 설정"
+        ],
+        "publishedAt": "2026-09-24",
+        "sourceUrl": "https://linear.app/changelog/2026-09-24-new-controls-for-linear-coding-agent",
+        "audience": "Linear 코딩 세션 이용 팀",
+        "rollout": "워크스페이스 관리자·소유자 모델 설정 적용"
+      }
+    ],
+    "notes": []
+  },
+  {
+    "toolId": "supabase",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "Postgres 데이터베이스에 인증·파일 저장·실시간 동기화·서버 함수를 연결해 앱 백엔드를 만드는 플랫폼입니다.",
+    "sources": [
+      {
+        "kind": "docs",
+        "label": "Supabase 공식 문서",
+        "url": "https://supabase.com/docs"
+      },
+      {
+        "kind": "changelog",
+        "label": "공식 변경 기록",
+        "url": "https://supabase.com/changelog"
+      }
+    ],
+    "features": [
+      {
+        "name": "Postgres 데이터베이스",
+        "description": "프로젝트별 Postgres에 백업·확장 기능과 API를 연결합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://supabase.com/docs"
+      },
+      {
+        "name": "사용자 인증",
+        "description": "이메일·비밀번호, 비밀번호 없는 로그인, OAuth 등 인증을 구성합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://supabase.com/docs"
+      },
+      {
+        "name": "파일 저장·실시간 동기화",
+        "description": "접근 정책으로 파일을 관리하고 데이터 변경·클라이언트 상태를 동기화합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://supabase.com/docs"
+      },
+      {
+        "name": ".NET 관측 데이터",
+        "description": "Auth·Postgrest·Storage·Functions 호출의 트레이스와 지표를 수집합니다.",
+        "status": "conditional",
+        "condition": "지원 SDK 및 리스너 설정 필요; Realtime은 아직 대상 아님",
+        "sourceUrl": "https://supabase.com/changelog/dotnet-opentelemetry-support"
+      }
+    ],
+    "updates": [
+      {
+        "id": "supabase-2026-10-14",
+        "title": ".NET SDK에 OpenTelemetry 계측 추가",
+        "summary": "SDK 호출을 앱의 트레이스·지표와 함께 확인할 수 있도록 계측을 추가했습니다.",
+        "highlights": [
+          "4개 클라이언트 계측",
+          "구독할 때만 활성화",
+          "Realtime은 제외"
+        ],
+        "publishedAt": "2026-10-14",
+        "sourceUrl": "https://supabase.com/changelog/dotnet-opentelemetry-support",
+        "audience": ".NET SDK 개발자",
+        "rollout": "Supabase 8.0.0 사용 예시 안내 · 별도 수집 설정 필요"
+      },
+      {
+        "id": "supabase-2026-10-12",
+        "title": "일부 오래된 TLS 1.2 암호군 종료 예고",
+        "summary": "프로젝트 HTTP API에서 CBC 방식 암호군 4종을 가장 빨라도 11월 10일부터 제거한다고 안내했습니다.",
+        "highlights": [
+          "구형 OS·기기 연결 점검",
+          "TLS 1.3은 변경 없음",
+          "직접 Postgres·Management API 제외"
+        ],
+        "publishedAt": "2026-10-12",
+        "sourceUrl": "https://supabase.com/changelog/cbc-tls-ciphers-deprecated",
+        "audience": "구형 클라이언트로 Supabase HTTP API를 호출하는 개발자",
+        "rollout": "예고 단계 · 2026-11-10 이전에는 적용하지 않음"
+      }
+    ],
+    "notes": []
+  },
+  {
+    "toolId": "vercel",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "Git 저장소나 CLI에서 웹 앱을 배포하고, 미리보기·서버 함수·네트워크 기능을 함께 운영하는 개발 플랫폼입니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "Vercel 변경 기록",
+        "url": "https://vercel.com/changelog"
+      },
+      {
+        "kind": "docs",
+        "label": "배포 문서",
+        "url": "https://vercel.com/docs/deployments"
+      }
+    ],
+    "features": [
+      {
+        "name": "Git·CLI 배포",
+        "description": "연결한 저장소의 커밋·PR 또는 CLI·REST API로 배포합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://vercel.com/docs/deployments"
+      },
+      {
+        "name": "미리보기 환경",
+        "description": "각 배포에 고유 URL을 만들어 운영 적용 전에 변경 사항을 확인합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://vercel.com/docs/deployments"
+      },
+      {
+        "name": "Python 라우팅 미들웨어",
+        "description": "앱에 도달하기 전 요청을 Python으로 재작성·리디렉션·응답합니다.",
+        "status": "conditional",
+        "condition": "ASGI·WSGI 미들웨어와 의존성 설정 필요",
+        "sourceUrl": "https://vercel.com/changelog/routing-middleware-now-supports-python"
+      },
+      {
+        "name": "WebSocket 서버 함수",
+        "description": "실시간 채팅·스트리밍·멀티플레이 앱의 양방향 연결을 처리합니다.",
+        "status": "conditional",
+        "condition": "다른 Functions와 동일한 한도·과금 적용",
+        "sourceUrl": "https://vercel.com/changelog/websocket-support-is-now-generally-available"
+      }
+    ],
+    "updates": [
+      {
+        "id": "vercel-2026-10-21",
+        "title": "Python 라우팅 미들웨어 지원",
+        "summary": "FastAPI·Flask·Django 등에서 앱 요청 전에 Python 미들웨어를 실행할 수 있습니다.",
+        "highlights": [
+          "요청 재작성·리디렉션",
+          "ASGI·WSGI 지원",
+          "미들웨어 의존성 분리"
+        ],
+        "publishedAt": "2026-10-21",
+        "sourceUrl": "https://vercel.com/changelog/routing-middleware-now-supports-python",
+        "audience": "Python 웹 앱 개발자",
+        "rollout": "공식 제공 · 프로젝트 설정 필요"
+      },
+      {
+        "id": "vercel-2026-10-20",
+        "title": "Vercel Functions WebSocket 정식 제공",
+        "summary": "6월 공개 베타였던 WebSocket 지원이 정식 제공으로 전환되었습니다.",
+        "highlights": [
+          "양방향 실시간 연결",
+          "AI 채팅·스트리밍 활용",
+          "기존 Functions 한도·과금 적용"
+        ],
+        "publishedAt": "2026-10-20",
+        "sourceUrl": "https://vercel.com/changelog/websocket-support-is-now-generally-available",
+        "audience": "실시간 웹 앱 개발자",
+        "rollout": "정식 제공"
+      }
+    ],
+    "notes": []
+  },
+  {
+    "toolId": "microsoft-copilot",
+    "checkedAt": "2026-10-22",
+    "verification": "partial",
+    "overview": "문서와 이미지에 관해 질문하고 콘텐츠를 만드는 Microsoft AI입니다. 개인용과 업무용 Copilot의 기능·라이선스 범위는 구분해야 합니다.",
+    "sources": [
+      {
+        "kind": "docs",
+        "label": "Copilot 파일 업로드",
+        "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/file-upload-in-microsoft-copilot"
+      },
+      {
+        "kind": "docs",
+        "label": "Copilot 이미지 생성",
+        "url": "https://support.microsoft.com/en-us/microsoft-copilot/using-image-generation-in-microsoft-copilot"
+      },
+      {
+        "kind": "blog",
+        "label": "Copilot 제품군 Home·Code·Autopilot 발표",
+        "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/"
+      }
+    ],
+    "features": [
+      {
+        "name": "파일 기반 질문",
+        "description": "문서·이미지·표 파일을 올려 요약과 질문을 이어갑니다.",
+        "status": "conditional",
+        "condition": "대화당 최대 20개, 파일당 최대 50MB이며 지원 형식이 적용됩니다.",
+        "sourceUrl": "https://support.microsoft.com/en-us/microsoft-365-copilot/file-upload-in-microsoft-copilot"
+      },
+      {
+        "name": "이미지 생성·변형",
+        "description": "텍스트로 이미지를 만들거나 업로드한 이미지를 변형합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://support.microsoft.com/en-us/microsoft-copilot/using-image-generation-in-microsoft-copilot"
+      },
+      {
+        "name": "업무용 Home·Code",
+        "description": "업무 대화·위임 작업을 모으고 자연어로 앱·대시보드 등을 만듭니다.",
+        "status": "conditional",
+        "condition": "업무용 Frontier 배포 범위이며 개인 Premium·Pro의 Code는 연내 미리보기 예정으로 발표했습니다.",
+        "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/"
+      }
+    ],
+    "updates": [
+      {
+        "id": "microsoft-copilot-2026-09-25-family-home-code",
+        "title": "Copilot 제품군: Home·Code·Autopilot 발표",
+        "summary": "업무용 Copilot에 Home·Code와 지속 실행 에이전트 Autopilot을 발표했습니다. 기능별로 배포·미리보기 일정이 다릅니다.",
+        "highlights": [
+          "Home에서 Chat·Cowork 통합",
+          "Code의 앱·대시보드 제작",
+          "Autopilot의 지속 업무"
+        ],
+        "publishedAt": "2026-09-25",
+        "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+        "audience": "업무용 Copilot Frontier·초대 대상 조직",
+        "rollout": "Home·Code 순차 배포 안내 · Autopilot 비공개 미리보기"
+      }
+    ],
+    "notes": [
+      "업데이트는 업무용 Copilot 제품군 범위입니다. 무료 개인용 Copilot에 Home·Code·Autopilot이 모두 제공된다고 해석하면 안 됩니다.",
+      "공식 발표의 예정 사항을 10월 22일 완료된 배포로 단정하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "adobe-firefly",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "이미지·영상·음성을 생성하고 편집하는 Adobe 도구입니다. 타임라인 편집과 생성 결과를 정리하는 작업 공간을 함께 제공합니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "Adobe Firefly 새 기능",
+        "url": "https://helpx.adobe.com/firefly/web/whats-new/new-features/whats-new.html"
+      }
+    ],
+    "features": [
+      {
+        "name": "영상 배경 제거",
+        "description": "클립의 주제를 찾아 영상 전체에서 배경을 제거합니다.",
+        "status": "conditional",
+        "condition": "기능별 플랜·크레딧 조건이 적용됩니다.",
+        "sourceUrl": "https://helpx.adobe.com/firefly/web/whats-new/new-features/whats-new.html"
+      },
+      {
+        "name": "자동 리프레임",
+        "description": "영상의 주제를 화면 안에 유지하면서 여러 비율로 바꿉니다.",
+        "status": "conditional",
+        "condition": "Firefly 영상 편집기 베타입니다.",
+        "sourceUrl": "https://helpx.adobe.com/firefly/web/whats-new/new-features/whats-new.html"
+      },
+      {
+        "name": "생성·편집 작업 공간",
+        "description": "이미지·영상을 만들고 프로젝트 자산과 영상 타임라인을 함께 정리합니다.",
+        "status": "conditional",
+        "condition": "새 생성·편집 환경 베타입니다.",
+        "sourceUrl": "https://helpx.adobe.com/firefly/web/whats-new/new-features/whats-new.html"
+      },
+      {
+        "name": "음성·음악 제작",
+        "description": "텍스트에서 표현력 있는 음성을 만들고 영상에 맞는 음악을 생성합니다.",
+        "status": "conditional",
+        "condition": "언어·모델·사용량 조건이 적용됩니다.",
+        "sourceUrl": "https://helpx.adobe.com/firefly/web/whats-new/new-features/whats-new.html"
+      }
+    ],
+    "updates": [
+      {
+        "id": "adobe-firefly-2026-09-background-removal",
+        "title": "2026년 9월: 영상 배경 제거",
+        "summary": "영상의 피사체를 자동으로 식별해 클립 전체의 배경을 제거하는 기능을 안내했습니다.",
+        "highlights": [
+          "클립 전체 배경 제거"
+        ],
+        "publishedAt": null,
+        "sourceUrl": "https://helpx.adobe.com/firefly/web/whats-new/new-features/whats-new.html",
+        "audience": "Firefly 영상 작업 사용자",
+        "rollout": "9월 업데이트 · 정확한 기능 출시일 미표기"
+      },
+      {
+        "id": "adobe-firefly-2026-08-workspace",
+        "title": "2026년 8월: 편집 공간과 음성·음악 작업",
+        "summary": "생성·편집 통합 공간, 자동 리프레임, 타임라인 녹음과 음악·음성 생성 기능을 안내했습니다.",
+        "highlights": [
+          "생성·편집·자산 정리",
+          "타임라인 음성 녹음"
+        ],
+        "publishedAt": null,
+        "sourceUrl": "https://helpx.adobe.com/firefly/web/whats-new/new-features/whats-new.html",
+        "audience": "Firefly 제작 사용자",
+        "rollout": "작업 공간·자동 리프레임 등 일부 베타"
+      }
+    ],
+    "notes": [
+      "공식 페이지의 마지막 수정일은 2026-09-18이며 개별 기능은 월 단위로만 묶여 있습니다. 9월 18일을 기능 출시일로 사용하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "runway",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "이미지·영상 제작과 편집을 위한 생성 AI 서비스입니다. 에이전트·MCP에서 영상, 음향과 자산 처리 기능을 연결할 수 있습니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "Runway 공식 제품 변경 로그",
+        "url": "https://runway.com/changelog"
+      }
+    ],
+    "features": [
+      {
+        "name": "빠른 영상 초안",
+        "description": "Agent에서 Seedance 2.5 Draft로 480p 초안을 만든 뒤 개선합니다.",
+        "status": "conditional",
+        "condition": "전체 플랜 대상 기능이며 생성 크레딧 등 한도가 적용됩니다.",
+        "sourceUrl": "https://runway.com/changelog"
+      },
+      {
+        "name": "클립용 효과음",
+        "description": "영상과 설명을 제공해 편집에 사용할 별도 음향 트랙을 만듭니다.",
+        "status": "conditional",
+        "condition": "Mirelo SFX 2.0을 사용하는 Runway MCP·유료 플랜 기능입니다.",
+        "sourceUrl": "https://runway.com/changelog"
+      },
+      {
+        "name": "이미지 배경 제거",
+        "description": "이미지의 전경을 자동으로 찾아 배경을 제거합니다.",
+        "status": "conditional",
+        "condition": "BiRefNet v2를 사용하는 Runway MCP·유료 플랜 기능입니다.",
+        "sourceUrl": "https://runway.com/changelog"
+      },
+      {
+        "name": "프로젝트 예산 한도",
+        "description": "프로젝트별 크레딧 상한을 정하고 소진 시 생성을 멈춥니다.",
+        "status": "conditional",
+        "condition": "Enterprise 관리자 기능이며 계정 담당자를 통해 활성화합니다.",
+        "sourceUrl": "https://runway.com/changelog"
+      }
+    ],
+    "updates": [
+      {
+        "id": "runway-2026-10-15-sfx",
+        "title": "MCP에 Mirelo SFX 2.0 추가",
+        "summary": "클립과 원하는 소리를 전달해 별도 효과음 트랙을 생성할 수 있습니다.",
+        "highlights": [
+          "클립 기반 효과음",
+          "별도 오디오 트랙"
+        ],
+        "publishedAt": "2026-10-15",
+        "sourceUrl": "https://runway.com/changelog",
+        "audience": "Runway MCP 유료 플랜 사용자",
+        "rollout": "유료 플랜 제공"
+      },
+      {
+        "id": "runway-2026-10-15-background",
+        "title": "MCP에 BiRefNet v2 배경 제거 추가",
+        "summary": "제품 사진·일러스트 등 이미지의 전경을 찾아 자동으로 배경을 제거합니다.",
+        "highlights": [
+          "자동 전경 감지",
+          "합성·레이아웃용 자산 준비"
+        ],
+        "publishedAt": "2026-10-15",
+        "sourceUrl": "https://runway.com/changelog",
+        "audience": "Runway MCP 유료 플랜 사용자",
+        "rollout": "유료 플랜 제공"
+      }
+    ],
+    "notes": [
+      "MCP에서 추가된 파트너 모델을 Runway 자체 모델의 신규 버전으로 표현하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "elevenlabs",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "음성 합성·보이스 제작과 음악 생성에 쓰는 오디오 AI 플랫폼입니다. 표현 방식과 언어를 조절하고 저지연 음성 에이전트에도 연결합니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "Eleven v4 공식 발표",
+        "url": "https://elevenlabs.io/blog/eleven-v4"
+      },
+      {
+        "kind": "blog",
+        "label": "Music v2.5 공식 발표",
+        "url": "https://elevenlabs.io/blog/music-v2-5-model"
+      },
+      {
+        "kind": "blog",
+        "label": "ElevenLabs 공식 블로그",
+        "url": "https://elevenlabs.io/blog"
+      }
+    ],
+    "features": [
+      {
+        "name": "표현력 있는 음성 합성",
+        "description": "문맥과 전달 지시, 오디오 태그를 이용해 말투·감정·속도를 조절합니다.",
+        "status": "conditional",
+        "condition": "모델·플랜·사용량 조건이 적용됩니다.",
+        "sourceUrl": "https://elevenlabs.io/blog/eleven-v4"
+      },
+      {
+        "name": "다국어 보이스",
+        "description": "Eleven v4·Turbo에서 90개 이상 언어의 음성을 생성합니다.",
+        "status": "conditional",
+        "condition": "언어별 품질과 사용 가능한 보이스는 확인이 필요합니다.",
+        "sourceUrl": "https://elevenlabs.io/blog/eleven-v4"
+      },
+      {
+        "name": "저지연 음성 에이전트",
+        "description": "v4 Turbo를 이용해 대화형 에이전트용 음성을 생성합니다.",
+        "status": "conditional",
+        "condition": "ElevenAgents 또는 API 등 제공 환경과 사용량 조건이 적용됩니다.",
+        "sourceUrl": "https://elevenlabs.io/blog/eleven-v4"
+      },
+      {
+        "name": "음악 생성",
+        "description": "프롬프트나 참조를 기반으로 Music v2.5 음악을 만듭니다.",
+        "status": "conditional",
+        "condition": "다운로드 한도와 참조곡 관련 제한이 적용됩니다.",
+        "sourceUrl": "https://elevenlabs.io/blog/music-v2-5-model"
+      }
+    ],
+    "updates": [
+      {
+        "id": "elevenlabs-2026-09-28-v4",
+        "title": "Eleven v4·Turbo 출시",
+        "summary": "감정과 대화 문맥을 반영하는 음성 합성과 저지연 변형을 공개했습니다.",
+        "highlights": [
+          "90개 이상 언어",
+          "자연어 전달 지시·오디오 태그",
+          "보이스 복제 개선"
+        ],
+        "publishedAt": "2026-09-28",
+        "sourceUrl": "https://elevenlabs.io/blog/eleven-v4",
+        "audience": "ElevenCreative·ElevenAgents·API 사용자",
+        "rollout": "제품·플랜별 사용량 조건 적용"
+      },
+      {
+        "id": "elevenlabs-2026-09-11-music-v2-5",
+        "title": "ElevenMusic 기본 모델을 Music v2.5로 변경",
+        "summary": "프롬프트·참조 기반 음악 생성의 기본 모델을 v2.5로 전환했습니다.",
+        "highlights": [
+          "자연스러운 악기 표현 개선",
+          "참조곡 사용 트랙의 다운로드 제한 안내"
+        ],
+        "publishedAt": "2026-09-11",
+        "sourceUrl": "https://elevenlabs.io/blog/music-v2-5-model",
+        "audience": "ElevenMusic 사용자",
+        "rollout": "기본 모델 적용 · 플랜별 다운로드 한도"
+      }
+    ],
+    "notes": [
+      "Eleven v4 글의 10월 19일은 최종 수정일이며 최초 발표일은 9월 28일입니다. 새 출시일로 바꾸지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "deepseek-v4-1-flash",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "시각 입력과 긴 문맥을 지원하는 DeepSeek 모델입니다. 현재 deepseek-flash 별칭은 10월 17일 개선판을 가리킵니다.",
+    "sources": [
+      {
+        "kind": "docs",
+        "label": "DeepSeek 모델·기능 문서",
+        "url": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      {
+        "kind": "changelog",
+        "label": "DeepSeek 공식 변경 로그",
+        "url": "https://api-docs.deepseek.com/updates/"
+      },
+      {
+        "kind": "blog",
+        "label": "V4.1 Flash 출시 발표",
+        "url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/"
+      }
+    ],
+    "features": [
+      {
+        "name": "시각 이해",
+        "description": "텍스트와 함께 시각 입력을 처리합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      {
+        "name": "추론·일반 모드",
+        "description": "추론 모드와 비추론 모드를 선택합니다.",
+        "status": "conditional",
+        "condition": "추론 모드가 기본값이며 FIM은 비추론 모드만 지원합니다.",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      {
+        "name": "긴 문맥과 구조화 응답",
+        "description": "1M 문맥, JSON 출력과 도구 호출을 지원합니다.",
+        "status": "conditional",
+        "condition": "최대 출력 및 사용량 한도는 API 문서를 확인해야 합니다.",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      {
+        "name": "여러 API 형식",
+        "description": "Responses API와 Anthropic 호환 API를 지원합니다.",
+        "status": "conditional",
+        "condition": "엔드포인트와 호출 형식에 맞춘 연동이 필요합니다.",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/"
+      }
+    ],
+    "updates": [
+      {
+        "id": "deepseek-v4-1-flash-2026-10-17",
+        "title": "Flash-1017 개선판 적용",
+        "summary": "웹·앱과 deepseek-flash API를 개선판으로 갱신했습니다. 호출 방식과 모델 요금은 유지됩니다.",
+        "highlights": [
+          "작업 실행 시간·출력 길이 개선 발표",
+          "호환 호출 방식 유지"
+        ],
+        "publishedAt": "2026-10-17",
+        "sourceUrl": "https://api-docs.deepseek.com/updates/",
+        "audience": "DeepSeek 웹·앱·API 사용자",
+        "rollout": "deepseek-flash 별칭에 적용"
+      },
+      {
+        "id": "deepseek-v4-1-flash-2026-09-10",
+        "title": "DeepSeek-V4.1-Flash 출시",
+        "summary": "시각 이해를 포함하는 새 구조의 Flash 모델을 API에 공개했습니다.",
+        "highlights": [
+          "기본 시각 이해",
+          "피크·비피크 요금 체계"
+        ],
+        "publishedAt": "2026-09-10",
+        "sourceUrl": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+        "audience": "DeepSeek API 개발자",
+        "rollout": "deepseek-flash로 제공"
+      }
+    ],
+    "notes": [
+      "10월 17일 Search·Fetch API 공개는 별도 서비스 변경입니다. 모델 자체에 무료 웹 검색이 기본 내장된다고 표현하지 않았습니다.",
+      "9월의 V4-Pro 임시 라우팅 안내보다 현재 모델 문서를 우선해, V4-Pro의 현재 상태를 확정하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "mistral-vibe",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "리서치·문서 업무와 코딩을 위한 Mistral의 통합 AI 에이전트입니다. Work와 Code 모드를 작업 환경에 맞춰 사용합니다.",
+    "sources": [
+      {
+        "kind": "docs",
+        "label": "Mistral Vibe 개요",
+        "url": "https://docs.mistral.ai/vibe"
+      },
+      {
+        "kind": "changelog",
+        "label": "Mistral 제품 릴리스 노트",
+        "url": "https://docs.mistral.ai/resources/release-notes"
+      },
+      {
+        "kind": "docs",
+        "label": "Mistral Vibe 제품 소개",
+        "url": "https://mistral.ai/products/vibe/"
+      }
+    ],
+    "features": [
+      {
+        "name": "통합 대화와 Fast·Think",
+        "description": "질문과 여러 단계의 작업을 한 대화에서 처리하고 추론 깊이를 선택합니다.",
+        "status": "conditional",
+        "condition": "계정별 통합 경험 전환이 순차 진행됩니다.",
+        "sourceUrl": "https://docs.mistral.ai/vibe"
+      },
+      {
+        "name": "리서치·Skills",
+        "description": "자료와 연결 도구를 활용하고 재사용 지침 및 Deep Research Skill을 실행합니다.",
+        "status": "conditional",
+        "condition": "연결 도구 권한과 플랜별 한도가 적용됩니다.",
+        "sourceUrl": "https://docs.mistral.ai/resources/release-notes"
+      },
+      {
+        "name": "스프레드시트 분석·편집",
+        "description": "Excel·CSV 자료를 분석하고 Canvas에서 결과를 편집한 뒤 XLSX로 받습니다.",
+        "status": "conditional",
+        "condition": "유료 플랜의 Serverless 환경에서 제공됩니다.",
+        "sourceUrl": "https://docs.mistral.ai/resources/release-notes"
+      },
+      {
+        "name": "터미널·에디터·원격 코딩",
+        "description": "Code 모드로 터미널, VS Code 또는 원격 클라우드 세션에서 개발합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://docs.mistral.ai/vibe"
+      }
+    ],
+    "updates": [
+      {
+        "id": "mistral-vibe-2026-09-22-unified",
+        "title": "Chat·Work를 한 Vibe 경험으로 통합",
+        "summary": "대화 목록과 작업 공간을 합치고 Fast·Think 선택, Skills와 Knowledge Base를 제공합니다.",
+        "highlights": [
+          "한 대화 목록",
+          "Fast·Think 선택",
+          "Chat Agents를 Skills로 전환"
+        ],
+        "publishedAt": "2026-09-22",
+        "sourceUrl": "https://docs.mistral.ai/resources/release-notes",
+        "audience": "Free·Pro·Teams 및 Enterprise 사용자",
+        "rollout": "개인·팀 순차 전환 · Enterprise는 10월 1일부터 관리자 선택"
+      },
+      {
+        "id": "mistral-vibe-2026-09-22-spreadsheets",
+        "title": "Vibe Work 스프레드시트 추가",
+        "summary": "Excel·CSV 데이터를 분석·정리하고 Canvas에서 셀·수식을 확인하거나 편집해 XLSX로 내려받습니다.",
+        "highlights": [
+          "자료 병합·변형",
+          "Canvas 검토·셀 편집"
+        ],
+        "publishedAt": "2026-09-22",
+        "sourceUrl": "https://docs.mistral.ai/resources/release-notes",
+        "audience": "유료 Vibe Work 사용자",
+        "rollout": "Serverless 유료 플랜 제공"
+      }
+    ],
+    "notes": [
+      "제품 릴리스 노트는 9월 22일 게시일과 9월 14일 순차 전환 시작을 함께 명시합니다. 날짜를 구분했습니다.",
+      "10월의 Mistral Large 4·Studio Managed Deployments를 Vibe에 즉시 포함되는 기능으로 추정하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "asana",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "업무·프로젝트·문서를 연결해 담당자와 진행 상황을 관리하고, 규칙과 AI로 후속 작업을 줄이는 협업 도구입니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "공식 9월 릴리스",
+        "url": "https://forum.asana.com/t/asana-release-notes-september-2026/1157124"
+      },
+      {
+        "kind": "docs",
+        "label": "Asana 릴리스 노트",
+        "url": "https://help.asana.com/s/article/release-notes"
+      }
+    ],
+    "features": [
+      {
+        "name": "Markdown·코드 작성",
+        "description": "Markdown 붙여넣기를 리치 텍스트로 바꾸고 코드 블록 구문을 강조합니다.",
+        "status": "conditional",
+        "condition": "Personal 이상",
+        "sourceUrl": "https://forum.asana.com/t/asana-release-notes-september-2026/1157124"
+      },
+      {
+        "name": "스레드 댓글",
+        "description": "댓글에 직접 답글을 달아 웹·모바일에서 논의 맥락을 유지합니다.",
+        "status": "conditional",
+        "condition": "Personal 이상",
+        "sourceUrl": "https://forum.asana.com/t/asana-release-notes-september-2026/1157124"
+      },
+      {
+        "name": "균등 업무 배정",
+        "description": "규칙의 담당자 설정에 라운드 로빈을 적용해 신규 업무를 분산합니다.",
+        "status": "conditional",
+        "condition": "Starter 이상",
+        "sourceUrl": "https://forum.asana.com/t/asana-release-notes-september-2026/1157124"
+      },
+      {
+        "name": "삭제한 사용자 정의 필드 복구",
+        "description": "복구 기간 안에 삭제한 필드와 관련 값·규칙·차트를 되돌립니다.",
+        "status": "conditional",
+        "condition": "Starter 이상; 복구 기간 적용",
+        "sourceUrl": "https://forum.asana.com/t/asana-release-notes-september-2026/1157124"
+      }
+    ],
+    "updates": [
+      {
+        "id": "asana-2026-10-01",
+        "title": "9월 릴리스: 댓글·필드 복구·업무 분배 개선",
+        "summary": "스레드 댓글과 Markdown 편집을 추가하고, 삭제한 필드 복구와 균등 담당자 배정을 지원했습니다.",
+        "highlights": [
+          "Personal의 댓글·코드 편집 개선",
+          "Starter의 필드 복구·라운드 로빈",
+          "Slack에서 Asana 작업 연결"
+        ],
+        "publishedAt": "2026-10-01",
+        "sourceUrl": "https://forum.asana.com/t/asana-release-notes-september-2026/1157124",
+        "audience": "Asana Personal·Starter 이상 이용자",
+        "rollout": "9월 변경 사항을 10월 1일 게시 · 기능별 플랜 적용"
+      }
+    ],
+    "notes": [
+      "게시일과 기능 적용 월을 구분했습니다."
+    ]
+  },
+  {
+    "toolId": "monday",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "보드에 업무·고객·프로젝트 정보를 모으고, 자동화와 AI를 연결해 팀의 실행 흐름을 관리하는 플랫폼입니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "공식 제품 변경 기록",
+        "url": "https://monday.com/whats-new/whats-new-page"
+      },
+      {
+        "kind": "docs",
+        "label": "AI 기능별 조건",
+        "url": "https://support.monday.com/hc/en-us/articles/24047211522194-AI-Feature-Catalog"
+      }
+    ],
+    "features": [
+      {
+        "name": "승인에 따른 자동화 분기",
+        "description": "AI Workflows에서 사람에게 승인을 요청하고 응답에 따라 다음 작업을 나눕니다.",
+        "status": "conditional",
+        "condition": "AI Workflows 이용 조건 적용",
+        "sourceUrl": "https://monday.com/whats-new/whats-new-page"
+      },
+      {
+        "name": "MCP 앱 작업 연결",
+        "description": "공개 MCP 서버가 있는 외부 앱의 작업을 워크플로에 추가합니다.",
+        "status": "conditional",
+        "condition": "공개 MCP 서버와 연결 인증 필요",
+        "sourceUrl": "https://monday.com/whats-new/whats-new-page"
+      },
+      {
+        "name": "에이전트로 자동화 관리",
+        "description": "Sidekick·MCP에서 자동화를 만들고 조회·삭제·비활성화합니다.",
+        "status": "conditional",
+        "condition": "계정 권한과 API 이용 한도 적용",
+        "sourceUrl": "https://monday.com/whats-new/whats-new-page"
+      },
+      {
+        "name": "AI 문서·보드 생성",
+        "description": "프롬프트로 문서·보드·폼을 만들고 텍스트를 요약·수정합니다.",
+        "status": "conditional",
+        "condition": "계정의 monday AI 활성화 필요; 기능별 크레딧 조건 확인",
+        "sourceUrl": "https://support.monday.com/hc/en-us/articles/24047211522194-AI-Feature-Catalog"
+      }
+    ],
+    "updates": [
+      {
+        "id": "monday-2026-08-04",
+        "title": "AI Workflows에 사람 승인 단계 추가",
+        "summary": "사람의 승인 응답을 받아 워크플로 경로를 분기할 수 있습니다.",
+        "highlights": [
+          "승인 요청",
+          "응답별 경로 분기"
+        ],
+        "publishedAt": "2026-08-04",
+        "sourceUrl": "https://monday.com/whats-new/whats-new-page",
+        "audience": "monday AI Workflows 이용자",
+        "rollout": "공식 변경 기록에 제공 안내"
+      },
+      {
+        "id": "monday-2026-07-16",
+        "title": "MCP 블록으로 외부 앱 작업 실행",
+        "summary": "공개 MCP 서버가 있는 앱의 작업을 AI Workflows에 연결합니다.",
+        "highlights": [
+          "외부 앱 작업 호출",
+          "MCP 서버 연결"
+        ],
+        "publishedAt": "2026-07-16",
+        "sourceUrl": "https://monday.com/whats-new/whats-new-page",
+        "audience": "외부 도구를 연결하는 워크플로 제작자",
+        "rollout": "연결 가능한 공개 MCP 서버와 인증 필요"
+      }
+    ],
+    "notes": [
+      "페이지의 중복 모바일 목록에서 연도까지 확인했습니다. 상단 데스크톱 목록은 월·일만 표시합니다.",
+      "10월의 더 최근 제품 릴리스는 확인하지 못했습니다."
+    ]
+  },
+  {
+    "toolId": "clickup",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "업무·문서·채팅·일정을 함께 관리하고, 회의 기록과 AI 에이전트를 프로젝트 실행에 연결하는 협업 도구입니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "공식 변경 기록",
+        "url": "https://feedback.clickup.com/changelog"
+      },
+      {
+        "kind": "docs",
+        "label": "ClickUp 도움말",
+        "url": "https://help.clickup.com/"
+      }
+    ],
+    "features": [
+      {
+        "name": "템플릿으로 목록 자동 생성",
+        "description": "자동화가 목록 템플릿을 적용하고 기준 이벤트에 맞춰 날짜를 옮깁니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://feedback.clickup.com/changelog"
+      },
+      {
+        "name": "휴가·업무량 연동",
+        "description": "개인의 휴무를 일정·업무량·캘린더·타임시트에 반영하고 충돌을 표시합니다.",
+        "status": "conditional",
+        "condition": "Business Plus·Enterprise",
+        "sourceUrl": "https://feedback.clickup.com/changelog"
+      },
+      {
+        "name": "하위 업무 날짜 동기화",
+        "description": "하위 업무의 가장 이른 시작과 늦은 마감에 맞춰 상위 업무 날짜를 갱신합니다.",
+        "status": "conditional",
+        "condition": "Business Plus·Enterprise; 목록별 동기화 활성화",
+        "sourceUrl": "https://feedback.clickup.com/changelog"
+      },
+      {
+        "name": "회의 기록 통합 검색",
+        "description": "여러 회의 도구의 노트·녹화를 한곳에 모으고 결정·할 일을 찾습니다.",
+        "status": "conditional",
+        "condition": "AI Notetaker에 접근 가능한 워크스페이스",
+        "sourceUrl": "https://feedback.clickup.com/changelog"
+      }
+    ],
+    "updates": [
+      {
+        "id": "clickup-2026-10-17",
+        "title": "4.09: 템플릿 자동화와 실제 가용 시간 반영",
+        "summary": "자동화로 목록을 만들고, 휴무와 하위 업무 일정을 프로젝트 계획에 반영합니다.",
+        "highlights": [
+          "템플릿 기반 목록 생성",
+          "휴가·업무량 연동",
+          "상위 업무 날짜 자동 동기화"
+        ],
+        "publishedAt": "2026-10-17",
+        "sourceUrl": "https://feedback.clickup.com/changelog",
+        "audience": "ClickUp 이용 팀; 일정 고급 기능은 Business Plus·Enterprise",
+        "rollout": "기능별 플랜 적용"
+      },
+      {
+        "id": "clickup-2026-09-18",
+        "title": "4.08: Meetings Hub와 에이전트 재사용",
+        "summary": "회의 기록을 통합 검색하고 기존 Super Agent를 복제하거나 공유 템플릿으로 저장하도록 개선했습니다.",
+        "highlights": [
+          "Meetings Hub",
+          "에이전트 복제·템플릿",
+          "ZoomInfo MCP 연결"
+        ],
+        "publishedAt": "2026-09-18",
+        "sourceUrl": "https://feedback.clickup.com/changelog",
+        "audience": "AI Notetaker·Super Agents 이용 팀",
+        "rollout": "회의 허브는 AI Notetaker 접근 필요 · ZoomInfo는 별도 해당 구독 필요"
+      }
+    ],
+    "notes": []
+  },
+  {
+    "toolId": "trello",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "보드·목록·카드로 할 일을 정리하고, 체크리스트와 AI 도구 연결로 계획을 실행 항목으로 바꾸는 업무 관리 도구입니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "Trello MCP 공식 발표",
+        "url": "https://www.atlassian.com/blog/trello/connect-trello-to-your-favorite-ai-assistants-with-trello-mcp"
+      },
+      {
+        "kind": "docs",
+        "label": "Trello MCP 연결",
+        "url": "https://trello.com/mcp"
+      }
+    ],
+    "features": [
+      {
+        "name": "보드·카드·체크리스트",
+        "description": "계획을 목록과 카드로 나누고 세부 체크리스트를 관리합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://www.atlassian.com/blog/trello/connect-trello-to-your-favorite-ai-assistants-with-trello-mcp"
+      },
+      {
+        "name": "AI 대화에서 업무 생성",
+        "description": "대화한 계획을 보드·목록·카드로 생성하도록 호환 AI에 요청합니다.",
+        "status": "conditional",
+        "condition": "MCP 호환 AI 도구와 Trello 계정 연결 필요",
+        "sourceUrl": "https://www.atlassian.com/blog/trello/connect-trello-to-your-favorite-ai-assistants-with-trello-mcp"
+      },
+      {
+        "name": "카드 이동·마감 확인",
+        "description": "연결한 AI에서 카드를 이동하거나 체크리스트를 추가하고 예정 업무를 조회합니다.",
+        "status": "conditional",
+        "condition": "연결된 계정의 Trello 접근 권한 적용",
+        "sourceUrl": "https://www.atlassian.com/blog/trello/connect-trello-to-your-favorite-ai-assistants-with-trello-mcp"
+      }
+    ],
+    "updates": [
+      {
+        "id": "trello-2026-07-22",
+        "title": "Trello 공식 MCP 서버 출시",
+        "summary": "호환 AI 어시스턴트에서 자연어로 보드·목록·카드·체크리스트를 관리할 수 있습니다.",
+        "highlights": [
+          "대화한 계획을 보드로 생성",
+          "카드·체크리스트 수정",
+          "기한이 있는 업무 조회"
+        ],
+        "publishedAt": "2026-07-22",
+        "sourceUrl": "https://www.atlassian.com/blog/trello/connect-trello-to-your-favorite-ai-assistants-with-trello-mcp",
+        "audience": "모든 Trello 이용자와 호환 AI 도구 사용자",
+        "rollout": "전체 Trello 이용자 대상 · AI 도구 연결 필요"
+      }
+    ],
+    "notes": [
+      "공식 Trello 제품 발표에서 더 최근 업데이트를 확인하지 못했습니다. 7월 공지를 10월 출시로 표시하면 안 됩니다."
+    ]
+  },
+  {
+    "toolId": "jira",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "업무 항목과 개발 진행 상황을 추적하고, 관련 작업·댓글·첨부 자료를 함께 관리하는 프로젝트 도구입니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "새 업무 항목 화면 공식 발표",
+        "url": "https://community.atlassian.com/forums/discussion/3287672/general-availability-the-new-jira-work-item-view/p1"
+      },
+      {
+        "kind": "docs",
+        "label": "Jira Cloud 지원",
+        "url": "https://support.atlassian.com/jira-software-cloud/"
+      }
+    ],
+    "features": [
+      {
+        "name": "관련 업무 인라인 편집",
+        "description": "업무 화면을 떠나지 않고 하위 항목과 연결 항목을 추가·수정합니다.",
+        "status": "conditional",
+        "condition": "새 업무 항목 화면 순차 제공",
+        "sourceUrl": "https://community.atlassian.com/forums/discussion/3287672/general-availability-the-new-jira-work-item-view/p1"
+      },
+      {
+        "name": "개인별 필드 구성",
+        "description": "필드를 고정·재정렬·숨겨 본인에게 맞게 화면을 구성합니다.",
+        "status": "conditional",
+        "condition": "새 화면 적용 필요; 다른 팀원의 구성에는 영향 없음",
+        "sourceUrl": "https://community.atlassian.com/forums/discussion/3287672/general-availability-the-new-jira-work-item-view/p1"
+      },
+      {
+        "name": "첨부 자료 통합 보기",
+        "description": "파일·Confluence 페이지·Loom 녹화·링크를 한곳에서 확인합니다.",
+        "status": "conditional",
+        "condition": "새 업무 항목 화면 적용 필요",
+        "sourceUrl": "https://community.atlassian.com/forums/discussion/3287672/general-availability-the-new-jira-work-item-view/p1"
+      },
+      {
+        "name": "음성으로 설명·댓글 입력",
+        "description": "브라우저에서 설명과 댓글 필드에 음성 입력을 사용합니다.",
+        "status": "conditional",
+        "condition": "새 업무 항목 화면 적용 필요",
+        "sourceUrl": "https://community.atlassian.com/forums/discussion/3287672/general-availability-the-new-jira-work-item-view/p1"
+      }
+    ],
+    "updates": [
+      {
+        "id": "jira-2026-09-24-work-item-view",
+        "title": "새 Jira 업무 항목 화면 정식 배포 안내",
+        "summary": "관련 업무 편집, 개인별 필드 구성, 첨부 자료와 개발 활동 확인을 새 화면에 모았습니다.",
+        "highlights": [
+          "하위·연결 업무 인라인 편집",
+          "필드 개인화",
+          "설명·댓글 음성 입력"
+        ],
+        "publishedAt": "2026-09-24",
+        "sourceUrl": "https://community.atlassian.com/forums/discussion/3287672/general-availability-the-new-jira-work-item-view/p1",
+        "audience": "Jira Cloud 이용자·사이트 관리자",
+        "rollout": "10월 9일 수정 안내 · 2026-10-19부터 연말까지 순차 배포 · 관리자 해제와 개인별 이전 화면 전환 가능"
+      }
+    ],
+    "notes": [
+      "공식 Atlassian Team 작성자를 확인했습니다. 최초 게시일 9월 24일, 수정일 10월 9일, 배포 시작일 10월 19일을 구분했습니다."
+    ]
+  },
+  {
+    "toolId": "airtable",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "연결된 테이블과 업무 데이터를 바탕으로 앱·자동화·보고서를 만들고, 사람과 에이전트의 작업을 함께 관리하는 플랫폼입니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "가을 제품 발표",
+        "url": "https://www.airtable.com/articles/fall-release"
+      },
+      {
+        "kind": "blog",
+        "label": "공식 팀의 가을 릴리스 안내",
+        "url": "https://community.airtable.com/announcements-6/fall-release-omni-2-0-airtable-canvas-a-bigger-mcp-agent-audit-logs-and-upcoming-agent-permissions-48850"
+      },
+      {
+        "kind": "changelog",
+        "label": "제품 업데이트",
+        "url": "https://www.airtable.com/whatsnew"
+      }
+    ],
+    "features": [
+      {
+        "name": "Omni 2.0 앱 구성",
+        "description": "파일을 읽어 테이블·연결 관계·자동화·AI 필드를 구성합니다.",
+        "status": "conditional",
+        "condition": "전 플랜 제공; AI 크레딧 한도 적용",
+        "sourceUrl": "https://www.airtable.com/articles/fall-release"
+      },
+      {
+        "name": "MCP에서 데이터 작업",
+        "description": "연결한 AI 도구에서 레코드를 읽고 쓰거나 폼·자동화·인터페이스를 구성합니다.",
+        "status": "conditional",
+        "condition": "관리자 허용·앱 연결·베이스 권한 적용",
+        "sourceUrl": "https://www.airtable.com/articles/fall-release"
+      },
+      {
+        "name": "AI 필드 자동화",
+        "description": "Field Agents로 레코드 요약·분류·정보 보강을 설정합니다.",
+        "status": "conditional",
+        "condition": "AI 사용량 조건 적용",
+        "sourceUrl": "https://www.airtable.com/articles/fall-release"
+      },
+      {
+        "name": "에이전트 감사 기록",
+        "description": "사람과 에이전트가 베이스에서 수행한 작업을 추적합니다.",
+        "status": "conditional",
+        "condition": "공식 담당자 추가 답변 기준 Enterprise Scale",
+        "sourceUrl": "https://community.airtable.com/announcements-6/fall-release-omni-2-0-airtable-canvas-a-bigger-mcp-agent-audit-logs-and-upcoming-agent-permissions-48850"
+      }
+    ],
+    "updates": [
+      {
+        "id": "airtable-2026-10-21",
+        "title": "가을 릴리스: Omni 2.0·MCP와 에이전트 기록",
+        "summary": "Omni와 MCP를 확장하고 에이전트 작업을 추적하는 감사 기록 개선을 발표했습니다.",
+        "highlights": [
+          "Omni 2.0 전 플랜 제공",
+          "MCP의 외부 AI 연결 확대",
+          "Canvas 공개 베타는 해당 주 예정"
+        ],
+        "publishedAt": "2026-10-21",
+        "sourceUrl": "https://community.airtable.com/announcements-6/fall-release-omni-2-0-airtable-canvas-a-bigger-mcp-agent-audit-logs-and-upcoming-agent-permissions-48850",
+        "audience": "Airtable 이용자·관리자",
+        "rollout": "Omni·MCP 제공 · 감사 기록은 Enterprise Scale · Canvas 베타·별도 에이전트 권한은 제공 단계 구분"
+      }
+    ],
+    "notes": [
+      "Airtable Canvas는 원문에서 해당 주 공개 베타 예정으로 표현하므로 이미 모든 계정에 제공된다고 단정하지 않았습니다.",
+      "블로그의 감사 로그 문구가 넓지만 공식 Community Manager가 Enterprise Scale 전용이라고 명확히 답변했습니다.",
+      "Bring Your Own Agent와 세분화된 에이전트 권한은 coming soon이므로 사용 가능 기능에서 제외했습니다."
+    ]
+  },
+  {
+    "toolId": "miro",
+    "checkedAt": "2026-10-22",
+    "verification": "partial",
+    "overview": "화이트보드에 문서·다이어그램·프로토타입을 모아 아이디어를 비교하고 팀의 결정과 실행 계획을 정리하는 시각 협업 도구입니다.",
+    "sources": [
+      {
+        "kind": "changelog",
+        "label": "Miro 공식 변경 기록",
+        "url": "https://miro.com/changelog/"
+      },
+      {
+        "kind": "blog",
+        "label": "공식 신기능 안내",
+        "url": "https://miro.com/whats-new/"
+      },
+      {
+        "kind": "docs",
+        "label": "Miro 도움말",
+        "url": "https://help.miro.com/"
+      }
+    ],
+    "features": [
+      {
+        "name": "프로토타입 대안 비교",
+        "description": "한 프롬프트에서 여러 프로토타입 방향을 생성해 나란히 비교합니다.",
+        "status": "conditional",
+        "condition": "Miro Prototypes 이용 조건 적용",
+        "sourceUrl": "https://miro.com/changelog/"
+      },
+      {
+        "name": "Claude Design 가져오기",
+        "description": "Claude Design의 결과를 Miro 보드로 보내 팀과 검토합니다.",
+        "status": "conditional",
+        "condition": "Claude Design 연결 및 접근 권한 필요",
+        "sourceUrl": "https://miro.com/changelog/"
+      },
+      {
+        "name": "코드를 프로토타입으로 전환",
+        "description": "MCP로 코딩 에이전트의 탐색 결과를 보드의 프로토타입 화면으로 가져옵니다.",
+        "status": "conditional",
+        "condition": "Miro Prototypes와 MCP 연결 필요",
+        "sourceUrl": "https://miro.com/changelog/"
+      },
+      {
+        "name": "반복 가능한 AI 흐름",
+        "description": "캔버스에서 AI 워크플로를 구성하고 팀과 실행·개선합니다.",
+        "status": "conditional",
+        "condition": "Flows 및 연결 도구 이용 조건 적용",
+        "sourceUrl": "https://miro.com/whats-new/"
+      }
+    ],
+    "updates": [
+      {
+        "id": "miro-2026-06-22",
+        "title": "프로토타입 대안 생성과 Claude Design 연결",
+        "summary": "여러 디자인 방향을 비교하고 Claude Design 결과를 보드로 가져오는 기능을 안내했습니다.",
+        "highlights": [
+          "한 프롬프트의 여러 대안",
+          "Claude Design에서 보드로 전송"
+        ],
+        "publishedAt": "2026-06-22",
+        "sourceUrl": "https://miro.com/changelog/",
+        "audience": "Miro Prototypes 이용 팀",
+        "rollout": "Prototypes·연결 기능별 이용 조건 적용"
+      },
+      {
+        "id": "miro-2026-06-08",
+        "title": "코딩 에이전트 결과를 프로토타입으로 가져오기",
+        "summary": "MCP로 Claude Code 등 코딩 에이전트와 연결해 결과를 Miro 프로토타입으로 검토합니다.",
+        "highlights": [
+          "MCP 연결",
+          "보드에서 프로토타입 검토"
+        ],
+        "publishedAt": "2026-06-08",
+        "sourceUrl": "https://miro.com/changelog/",
+        "audience": "코딩 에이전트와 Miro Prototypes를 쓰는 팀",
+        "rollout": "Miro Prototypes 포함 · MCP 연결 필요"
+      }
+    ],
+    "notes": [
+      "공식 제품 변경 기록의 최상단이 2026년 6월 22일이었습니다. 10월 제품 변경 여부는 확인하지 못했으며 확인일을 출시일로 사용하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "microsoft-teams",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "채팅·회의·통화와 업무 앱을 연결하고, 회의 요약과 자동화로 팀의 후속 작업을 돕는 Microsoft 협업 서비스입니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "공식 8~9월 제품 업데이트",
+        "url": "https://techcommunity.microsoft.com/blog/microsoftteamsblog/whats-new-in-microsoft-teams--august---september-2026/4556438"
+      },
+      {
+        "kind": "blog",
+        "label": "Microsoft Teams 공식 블로그",
+        "url": "https://techcommunity.microsoft.com/category/microsoftteams/blog/microsoftteamsblog"
+      },
+      {
+        "kind": "docs",
+        "label": "회의 요약 앱 안내",
+        "url": "https://support.microsoft.com/en-us/teams/meetings/meeting-recap-app-teams"
+      }
+    ],
+    "features": [
+      {
+        "name": "회의 기록 통합",
+        "description": "Meeting Recaps 앱에서 권한이 있는 회의 녹화·전사·요약을 찾습니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://support.microsoft.com/en-us/teams/meetings/meeting-recap-app-teams"
+      },
+      {
+        "name": "동영상·오디오 요약",
+        "description": "회의 핵심을 내레이션 영상이나 여러 회의를 묶은 오디오로 확인합니다.",
+        "status": "conditional",
+        "condition": "Microsoft Copilot 라이선스 필요; 동영상은 녹화·전사 등 요건 적용",
+        "sourceUrl": "https://support.microsoft.com/en-us/teams/meetings/meeting-recap-app-teams"
+      },
+      {
+        "name": "회의 도구 모음 구성",
+        "description": "자주 쓰는 회의 제어를 고정·해제하고 순서를 바꿉니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://techcommunity.microsoft.com/blog/microsoftteamsblog/whats-new-in-microsoft-teams--august---september-2026/4556438"
+      },
+      {
+        "name": "대규모 소회의실",
+        "description": "회의·이벤트를 최대 100개 방과 1,000명 규모의 소그룹으로 나눕니다.",
+        "status": "conditional",
+        "condition": "지원 Teams 회의·이벤트 및 해당 이용 조건 적용",
+        "sourceUrl": "https://techcommunity.microsoft.com/blog/microsoftteamsblog/whats-new-in-microsoft-teams--august---september-2026/4556438"
+      }
+    ],
+    "updates": [
+      {
+        "id": "microsoft-teams-2026-10-01",
+        "title": "8~9월 업데이트: 영상 요약과 회의·통화 개선",
+        "summary": "영상 회의 요약, 편집 가능한 회의 도구 모음, Teams Phone Agent 등을 묶어 발표했습니다.",
+        "highlights": [
+          "영상 요약 23개 언어 안내",
+          "회의 도구 모음 개인화",
+          "소회의실 최대 100개·1,000명"
+        ],
+        "publishedAt": "2026-10-01",
+        "sourceUrl": "https://techcommunity.microsoft.com/blog/microsoftteamsblog/whats-new-in-microsoft-teams--august---september-2026/4556438",
+        "audience": "Teams 이용자·Teams Phone 조직·관리자",
+        "rollout": "별도 표시 없는 항목은 정식 제공 · AI·Phone·Rooms 기능별 라이선스 적용"
+      }
+    ],
+    "notes": [
+      "게시일은 Microsoft Teams 공식 블로그 목록에서 2026-10-01로 확인했습니다. 8~9월 기능 묶음의 발행일입니다.",
+      "개별 글 직접 열기는 시간 초과가 있었으나 공식 검색 색인에서 본문과 공식 목록의 발행일을 교차 확인했습니다.",
+      "오디오·영상 요약은 Copilot 라이선스가 필요하며 Teams Premium만으로 제공된다고 적지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "claude-opus-5-5",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "복잡하고 긴 코딩·지식 작업을 겨냥한 Claude 모델입니다. 넓은 코드 변경과 문서 업무에 사용하며 더 빠른 처리 옵션도 제공합니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "Claude Opus 5.5 공식 발표",
+        "url": "https://www.anthropic.com/claude-opus-5-5"
+      }
+    ],
+    "features": [
+      {
+        "name": "장시간 코딩 작업",
+        "description": "코드베이스 전반의 변경·마이그레이션·감사 같은 작업에 사용합니다.",
+        "status": "conditional",
+        "condition": "실행 도구·개발 환경과 작업 권한이 필요합니다.",
+        "sourceUrl": "https://www.anthropic.com/claude-opus-5-5"
+      },
+      {
+        "name": "전문 자료·컴퓨터 작업",
+        "description": "여러 단계의 지식 업무와 연결된 컴퓨터 사용 작업을 지원합니다.",
+        "status": "conditional",
+        "condition": "컴퓨터 도구와 제공 앱·API 조건이 적용됩니다.",
+        "sourceUrl": "https://www.anthropic.com/claude-opus-5-5"
+      },
+      {
+        "name": "Fast 모드",
+        "description": "Claude Code·Claude Platform에서 빠른 출력 옵션을 사용합니다.",
+        "status": "conditional",
+        "condition": "일반 모드보다 높은 요금이 적용됩니다.",
+        "sourceUrl": "https://www.anthropic.com/claude-opus-5-5"
+      }
+    ],
+    "updates": [
+      {
+        "id": "claude-opus-5-5-2026-09-22",
+        "title": "Claude Opus 5.5 출시",
+        "summary": "복잡한 코딩·지식 작업용 5.5 계열 모델을 발표하고 Fast 모드를 함께 안내했습니다.",
+        "highlights": [
+          "기본 입력 4달러·출력 20달러/100만 토큰",
+          "Claude Code·Platform Fast 모드"
+        ],
+        "publishedAt": "2026-09-22",
+        "sourceUrl": "https://www.anthropic.com/claude-opus-5-5",
+        "audience": "Claude·Claude Code·Claude API 사용자",
+        "rollout": "플랫폼·플랜별 접근 조건 적용"
+      }
+    ],
+    "notes": [
+      "속도·성능·작업당 비용 개선 수치는 Anthropic 평가이며 독립 평가로 표현하지 않았습니다.",
+      "일부 고위험 영역 요청은 보호 장치에 따라 다른 모델로 전환될 수 있습니다."
+    ]
+  },
+  {
+    "toolId": "claude-sonnet-5-5",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "일상 코딩·버그 수정·문서 제작처럼 범위가 명확한 작업을 위한 Claude 모델입니다. 추론 강도를 조절해 응답 속도와 작업 깊이를 선택합니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "Claude Sonnet 5.5 공식 발표",
+        "url": "https://www.anthropic.com/claude-sonnet-5-5"
+      }
+    ],
+    "features": [
+      {
+        "name": "코드 작성·버그 수정",
+        "description": "코드베이스를 파악하고 반복 개발과 버그 수정 작업을 수행합니다.",
+        "status": "conditional",
+        "condition": "코드 실행에는 개발 환경과 권한이 필요합니다.",
+        "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5"
+      },
+      {
+        "name": "업무 문서 제작",
+        "description": "문서·슬라이드·스프레드시트 제작 작업을 지원합니다.",
+        "status": "conditional",
+        "condition": "실제 파일 생성은 사용하는 Claude 앱·도구 환경에 따라 다릅니다.",
+        "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5"
+      },
+      {
+        "name": "추론 강도 조절",
+        "description": "일상 작업과 어려운 작업에 맞춰 추론 강도를 선택합니다.",
+        "status": "conditional",
+        "condition": "Claude 앱·Code의 기본값은 Medium, Claude Platform의 기본값은 High입니다.",
+        "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5"
+      }
+    ],
+    "updates": [
+      {
+        "id": "claude-sonnet-5-5-2026-09-28",
+        "title": "Claude Sonnet 5.5 출시",
+        "summary": "일상 코딩과 업무 자료 제작을 겨냥한 새 Sonnet을 공개했습니다.",
+        "highlights": [
+          "일상 작업·버그 수정 강화",
+          "앱과 API의 추론 기본값 구분"
+        ],
+        "publishedAt": "2026-09-28",
+        "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5",
+        "audience": "Claude·Claude Code·Claude API 사용자",
+        "rollout": "계정별 모델 접근 조건 적용"
+      }
+    ],
+    "notes": [
+      "출력 속도와 비용 개선은 Anthropic 자체 평가입니다. 이후 다른 Claude 모델의 발표를 Sonnet 자체 업그레이드로 합치지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "gpt-6-1-sol",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "복잡한 코딩·컴퓨터 사용·전문 업무용 OpenAI 모델입니다. 긴 문맥과 도구 호출을 지원하며 Ultrafast 처리 옵션을 제공합니다.",
+    "sources": [
+      {
+        "kind": "docs",
+        "label": "GPT-6.1 Sol 모델 문서",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+      },
+      {
+        "kind": "changelog",
+        "label": "OpenAI API 변경 로그",
+        "url": "https://developers.openai.com/api/docs/changelog"
+      },
+      {
+        "kind": "blog",
+        "label": "DevDay 2026 발표",
+        "url": "https://openai.com/index/devday-2026-recap/"
+      }
+    ],
+    "features": [
+      {
+        "name": "코딩·전문 작업",
+        "description": "복잡한 개발과 전문 자료 작업을 텍스트·이미지 입력으로 처리합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+      },
+      {
+        "name": "긴 문맥·추론 조절",
+        "description": "약 105만 토큰 문맥과 low부터 max까지의 추론 수준을 지원합니다.",
+        "status": "conditional",
+        "condition": "none·minimal 추론 수준은 지원하지 않습니다.",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+      },
+      {
+        "name": "도구 호출",
+        "description": "검색·코드 실행·컴퓨터 사용 등 도구를 연결해 작업합니다.",
+        "status": "conditional",
+        "condition": "도구 호출에는 Responses API가 필요하며 Chat Completions는 도구 호출 없이 지원됩니다.",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+      },
+      {
+        "name": "Ultrafast",
+        "description": "빠른 출력용 처리 계층을 선택합니다.",
+        "status": "conditional",
+        "condition": "Responses API에서 별도 요금·요청 한도가 적용되며 미국·EU 데이터 레지던시를 지원합니다.",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+      }
+    ],
+    "updates": [
+      {
+        "id": "gpt-6-1-sol-2026-10-08-ultrafast",
+        "title": "Sol API에 Ultrafast 추가",
+        "summary": "Responses API에서 출력 생성 간격을 줄이는 Ultrafast를 추가했습니다.",
+        "highlights": [
+          "미국·EU 데이터 레지던시",
+          "service_tier: ultrafast"
+        ],
+        "publishedAt": "2026-10-08",
+        "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+        "audience": "OpenAI API 사용자",
+        "rollout": "요청 한도·별도 요금 적용"
+      },
+      {
+        "id": "gpt-6-1-sol-2026-09-29-release",
+        "title": "GPT-6.1 Sol API 출시",
+        "summary": "코딩·전문 업무 모델을 API에 공개하고 Responses API의 다중 에이전트 베타를 안내했습니다.",
+        "highlights": [
+          "Responses API 도구 호출",
+          "272K 이하 입력 기준 기본 입력 2달러·출력 10달러/100만 토큰"
+        ],
+        "publishedAt": "2026-09-29",
+        "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+        "audience": "OpenAI API 개발자",
+        "rollout": "API 제공 · 다중 에이전트 베타"
+      }
+    ],
+    "notes": [
+      "API의 Ultrafast 제공 조건과 ChatGPT·Codex 구독 조건은 서로 다릅니다."
+    ]
+  },
+  {
+    "toolId": "openai-dots",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "지속적인 업무를 맡아 클라우드에서 수행하는 OpenAI 에이전트입니다. 연결 앱의 맥락과 피드백을 활용하고 필요한 작업을 이어갑니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "OpenAI dots 공식 발표",
+        "url": "https://openai.com/index/introducing-dots/"
+      }
+    ],
+    "features": [
+      {
+        "name": "상시 클라우드 작업",
+        "description": "자체 클라우드 컴퓨터에서 목표와 지속 업무를 수행합니다.",
+        "status": "conditional",
+        "condition": "대상 플랜·지역과 업무 사용 한도가 적용됩니다.",
+        "sourceUrl": "https://openai.com/index/introducing-dots/"
+      },
+      {
+        "name": "업무 앱과 대화",
+        "description": "ChatGPT·Slack·Teams에서 대화하고 플러그인으로 앱을 연결합니다.",
+        "status": "conditional",
+        "condition": "앱 연결·조직 권한이 필요합니다.",
+        "sourceUrl": "https://openai.com/index/introducing-dots/"
+      },
+      {
+        "name": "선호와 피드백 학습",
+        "description": "함께 일하며 사용자의 선호와 피드백을 후속 작업에 반영합니다.",
+        "status": "conditional",
+        "condition": "연결·메모리 설정과 접근 권한이 적용됩니다.",
+        "sourceUrl": "https://openai.com/index/introducing-dots/"
+      }
+    ],
+    "updates": [
+      {
+        "id": "openai-dots-2026-09-29-release",
+        "title": "상시 업무 에이전트 dots 발표",
+        "summary": "클라우드 컴퓨터와 연결 앱을 사용하는 지속 실행 에이전트를 공개했습니다.",
+        "highlights": [
+          "첫 dot 포함 및 업무 사용 한도",
+          "데스크톱 앱·브라우저 초기 설정 후 모바일 대화"
+        ],
+        "publishedAt": "2026-09-29",
+        "sourceUrl": "https://openai.com/index/introducing-dots/",
+        "audience": "대상 지역 Pro·Business Premium 및 관리자 승인 기업 조직",
+        "rollout": "Pro·Business Premium 순차 제공 · Enterprise·Edu·Healthcare 베타"
+      }
+    ],
+    "notes": [
+      "Enterprise 계열은 관리자가 활성화해야 합니다. dots의 대화 한도와 위임된 Codex·Work 작업의 사용 한도를 구분해야 합니다."
+    ]
+  },
+  {
+    "toolId": "codex-cloud",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "저장소와 개발 도구를 갖춘 클라우드 환경에서 코딩 작업을 실행하는 Codex입니다. 컴퓨터가 잠든 동안에도 작업하고 여러 기기에서 결과를 검토합니다.",
+    "sources": [
+      {
+        "kind": "docs",
+        "label": "Codex Cloud 공식 안내",
+        "url": "https://learn.chatgpt.com/docs/cloud"
+      },
+      {
+        "kind": "changelog",
+        "label": "ChatGPT·Codex 변경 로그",
+        "url": "https://learn.chatgpt.com/docs/changelog"
+      }
+    ],
+    "features": [
+      {
+        "name": "원격 코딩 작업",
+        "description": "버그 조사와 기능 구현을 클라우드에서 실행하고 웹·모바일·데스크톱에서 이어갑니다.",
+        "status": "conditional",
+        "condition": "저장소·도구 접근 권한과 클라우드 환경이 필요합니다.",
+        "sourceUrl": "https://learn.chatgpt.com/docs/cloud"
+      },
+      {
+        "name": "재사용 가능한 환경",
+        "description": "저장소·의존성·도구 설정을 재사용하며 작업마다 별도 작업 공간을 만듭니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://learn.chatgpt.com/docs/cloud"
+      },
+      {
+        "name": "검토 후 PR 생성",
+        "description": "변경 파일과 검사 결과를 보고 후속 수정을 요청하거나 커밋·PR을 만듭니다.",
+        "status": "conditional",
+        "condition": "연결 저장소의 권한이 적용됩니다.",
+        "sourceUrl": "https://learn.chatgpt.com/docs/cloud"
+      },
+      {
+        "name": "GitLab 연결",
+        "description": "GitLab 이슈·Merge Request에서 작업을 시작하거나 리뷰를 요청합니다.",
+        "status": "conditional",
+        "condition": "베타이며 관리자·Webhook 권한이 필요합니다. Self-Managed·Dedicated에는 별도 연결 설정이 필요합니다.",
+        "sourceUrl": "https://learn.chatgpt.com/docs/changelog"
+      }
+    ],
+    "updates": [
+      {
+        "id": "codex-cloud-2026-10-14-model-family",
+        "title": "Codex 공통: GPT-5.5 종료·모델 전환 안내",
+        "summary": "ChatGPT 로그인 기반 Codex에서 GPT-5.5 제공을 종료하고 가능한 환경에서 GPT-6.1 Sol 사용을 안내했습니다.",
+        "highlights": [
+          "저장된 모델·자동화 설정 점검",
+          "클라우드 전용 출시가 아닌 Codex 공통 변경"
+        ],
+        "publishedAt": "2026-10-14",
+        "sourceUrl": "https://learn.chatgpt.com/docs/changelog",
+        "audience": "ChatGPT 계정으로 로그인한 Codex 사용자",
+        "rollout": "API 키 인증 세션과 OpenAI API는 영향 없음"
+      },
+      {
+        "id": "codex-cloud-2026-08-19-gitlab",
+        "title": "Codex Cloud에 GitLab 베타",
+        "summary": "GitLab 프로젝트 환경을 연결하고 이슈·Merge Request에서 Codex 작업과 리뷰를 시작합니다.",
+        "highlights": [
+          "일회성·자동 Merge Request 리뷰",
+          "관리형 GitLab 연결 지원"
+        ],
+        "publishedAt": "2026-08-19",
+        "sourceUrl": "https://learn.chatgpt.com/docs/changelog",
+        "audience": "GitLab과 Codex Cloud 사용자",
+        "rollout": "모든 ChatGPT 플랜 베타 · 조직 정책·권한 적용"
+      }
+    ],
+    "notes": [
+      "10월 항목은 Codex 제품군 공통 변경으로 명시했습니다. 9월 29일을 Codex Cloud 최초 출시일이라고 단정하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "grok-4-7",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "코딩·지식 업무와 긴 에이전트 작업을 위한 Grok 모델입니다. Cursor·Grok Build와 API 등에서 사용할 수 있습니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "Grok 4.7 공식 발표",
+        "url": "https://x.ai/news/grok-4-7"
+      },
+      {
+        "kind": "changelog",
+        "label": "Grok API 릴리스 노트",
+        "url": "https://docs.x.ai/developers/release-notes"
+      }
+    ],
+    "features": [
+      {
+        "name": "장시간 코딩",
+        "description": "긴 코드 작업과 문맥 관리, 결과 재검토를 겨냥한 모델입니다.",
+        "status": "conditional",
+        "condition": "작업 실행에는 개발 도구·환경이 필요합니다.",
+        "sourceUrl": "https://x.ai/news/grok-4-7"
+      },
+      {
+        "name": "문서·발표 자료 작업",
+        "description": "문서와 프레젠테이션 등 전문 지식 작업을 지원합니다.",
+        "status": "conditional",
+        "condition": "파일 제작은 사용하는 앱과 실행 도구에 따라 다릅니다.",
+        "sourceUrl": "https://x.ai/news/grok-4-7"
+      },
+      {
+        "name": "고속 변형 모델",
+        "description": "출력 속도를 높인 fast 변형을 선택할 수 있습니다.",
+        "status": "conditional",
+        "condition": "공식 발표 기준 일반 모델의 2배 가격이며 채널별 접근 조건이 다릅니다.",
+        "sourceUrl": "https://x.ai/news/grok-4-7"
+      }
+    ],
+    "updates": [
+      {
+        "id": "grok-4-7-2026-09-21-release",
+        "title": "Grok 4.7 출시",
+        "summary": "코딩·지식 작업 모델을 Cursor·Grok Build·Grok API 등에 공개했습니다.",
+        "highlights": [
+          "기본 입력 2달러·출력 6달러/100만 토큰부터",
+          "고속 변형 별도 요금"
+        ],
+        "publishedAt": "2026-09-21",
+        "sourceUrl": "https://x.ai/news/grok-4-7",
+        "audience": "개발자·Grok Build·Cursor 사용자",
+        "rollout": "제공 채널별 계정·사용량 조건 적용"
+      }
+    ],
+    "notes": [
+      "공식 페이지의 현재 브랜드 표기는 SpaceXSI이나 하단 법인 표기는 SpaceXAI LLC입니다. 기존 카탈로그 모델 ID와 이름은 유지했습니다.",
+      "속도·성능 비교는 제공사 평가 조건에 따른 주장입니다."
+    ]
+  },
+  {
+    "toolId": "grok-team-bots",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "팀의 자료·도구·기술을 함께 사용하는 공유 Grok Bot입니다. 공통 전문성을 활용하면서 개인 대화와 개인 기억은 분리합니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "Grok Team Bots 공식 발표",
+        "url": "https://x.ai/news/team-bots"
+      }
+    ],
+    "features": [
+      {
+        "name": "팀 봇 공유",
+        "description": "역할·업무 흐름별 자료·지침·Skills를 묶은 봇을 팀과 공유합니다.",
+        "status": "conditional",
+        "condition": "Teams·Enterprise 공개 베타입니다.",
+        "sourceUrl": "https://x.ai/news/team-bots"
+      },
+      {
+        "name": "도구와 API 연결",
+        "description": "플러그인과 자격 증명으로 업무 앱·외부 API를 연결합니다.",
+        "status": "conditional",
+        "condition": "사용자·팀 단위 연결과 접근 권한 설정이 필요합니다.",
+        "sourceUrl": "https://x.ai/news/team-bots"
+      },
+      {
+        "name": "개인 대화 분리",
+        "description": "공유 기술을 활용하면서 개인별 대화·맥락·기억을 별도로 유지합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://x.ai/news/team-bots"
+      },
+      {
+        "name": "Slack 공동 작업",
+        "description": "팀 봇을 Slack 채널에 초대해 여러 사람이 질문하고 결과를 확인합니다.",
+        "status": "conditional",
+        "condition": "Slack 연결 및 채널 접근 권한이 필요합니다.",
+        "sourceUrl": "https://x.ai/news/team-bots"
+      }
+    ],
+    "updates": [
+      {
+        "id": "grok-team-bots-2026-09-28-beta",
+        "title": "Team Bots 공개 베타",
+        "summary": "자료·앱·기술·기억을 활용하는 팀 공유 봇을 공개했습니다.",
+        "highlights": [
+          "개인 대화는 분리",
+          "Slack 채널 협업",
+          "영업·제품·마케팅·분석용 예시 봇"
+        ],
+        "publishedAt": "2026-09-28",
+        "sourceUrl": "https://x.ai/news/team-bots",
+        "audience": "Grok Teams·Enterprise 조직",
+        "rollout": "공개 베타"
+      }
+    ],
+    "notes": [
+      "Grok Bot 전반의 다른 활용 사례를 Team Bots의 신규 기능 출시로 오인하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "grok-build",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "코드 작업과 앱·웹사이트 제작을 돕는 Grok 개발 도구입니다. CLI의 프로젝트 기억과 웹·모바일의 앱 제작 기능은 환경별로 구분됩니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "Grok Build 프로젝트 기억",
+        "url": "https://x.ai/news/grok-build-memory"
+      },
+      {
+        "kind": "blog",
+        "label": "Grok Build 웹·모바일 제공",
+        "url": "https://x.ai/news/grok-build-for-everyone"
+      }
+    ],
+    "features": [
+      {
+        "name": "프로젝트 기억",
+        "description": "완료한 작업의 관례·결정·프로젝트 정보를 기록해 다음 세션에 활용합니다.",
+        "status": "conditional",
+        "condition": "CLI 메모리 기능이며 새 세션부터 적용됩니다.",
+        "sourceUrl": "https://x.ai/news/grok-build-memory"
+      },
+      {
+        "name": "메모리 확인·정리",
+        "description": "/memory로 저장 파일을 확인하고 /dream으로 주제별 메모를 정리합니다.",
+        "status": "conditional",
+        "condition": "Grok Build CLI에서 사용합니다.",
+        "sourceUrl": "https://x.ai/news/grok-build-memory"
+      },
+      {
+        "name": "대화로 앱 제작",
+        "description": "웹·iOS·Android의 대화에서 앱·게임·사이트·대시보드를 만듭니다.",
+        "status": "conditional",
+        "condition": "플랜별 사용량 한도가 적용됩니다.",
+        "sourceUrl": "https://x.ai/news/grok-build-for-everyone"
+      },
+      {
+        "name": "앱 게시와 공유",
+        "description": "생성 앱을 grok.me 주소에 게시하고 열람 범위를 선택합니다.",
+        "status": "conditional",
+        "condition": "웹·모바일 Build의 게시 기능이며 도메인 설정은 별도입니다.",
+        "sourceUrl": "https://x.ai/news/grok-build-for-everyone"
+      }
+    ],
+    "updates": [
+      {
+        "id": "grok-build-2026-09-16-memory",
+        "title": "CLI에 프로젝트 메모리 추가",
+        "summary": "완료한 작업에서 지속할 정보를 기록하고 이후 관련 코드를 다룰 때 다시 읽습니다.",
+        "highlights": [
+          "프로젝트·전역 범위 Markdown 메모",
+          "/memory·/dream"
+        ],
+        "publishedAt": "2026-09-16",
+        "sourceUrl": "https://x.ai/news/grok-build-memory",
+        "audience": "Grok Build CLI 개발자",
+        "rollout": "새 세션부터 메모리 적용"
+      },
+      {
+        "id": "grok-build-2026-08-19-web-mobile",
+        "title": "웹·모바일 Build를 모든 플랜으로 확대",
+        "summary": "대화에서 앱을 만들고 링크로 게시·공유하는 Build를 웹·iOS·Android의 모든 플랜으로 확대했습니다.",
+        "highlights": [
+          "앱·게임·웹사이트 생성",
+          "grok.me 공유와 접근 범위 선택"
+        ],
+        "publishedAt": "2026-08-19",
+        "sourceUrl": "https://x.ai/news/grok-build-for-everyone",
+        "audience": "Grok 웹·iOS·Android 사용자",
+        "rollout": "모든 플랜 · 사용량 조건 적용"
+      }
+    ],
+    "notes": [
+      "CLI 기능을 웹·모바일에서 동일하게 쓸 수 있다고 일반화하지 않았습니다."
+    ]
+  },
+  {
+    "toolId": "grok-voice-transcribe-2",
+    "checkedAt": "2026-10-22",
+    "verification": "verified",
+    "overview": "녹음 파일과 실시간 음성을 텍스트로 바꾸는 Grok 전사 모델입니다. 화자와 단어 시간 정보, 도메인 용어와 여러 채널을 지원합니다.",
+    "sources": [
+      {
+        "kind": "blog",
+        "label": "Grok Voice Transcribe 2.0 발표",
+        "url": "https://x.ai/news/grok-voice-transcribe-2"
+      },
+      {
+        "kind": "changelog",
+        "label": "Grok 음성 API 릴리스 노트",
+        "url": "https://docs.x.ai/developers/release-notes"
+      }
+    ],
+    "features": [
+      {
+        "name": "파일·실시간 전사",
+        "description": "녹음 파일·URL과 실시간 오디오 스트림을 전사합니다.",
+        "status": "conditional",
+        "condition": "배치와 스트리밍 요금이 다릅니다.",
+        "sourceUrl": "https://x.ai/news/grok-voice-transcribe-2"
+      },
+      {
+        "name": "화자·단어 시간 정보",
+        "description": "화자를 분리하고 단어별 시작·종료 시간과 신뢰도를 제공합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://x.ai/news/grok-voice-transcribe-2"
+      },
+      {
+        "name": "다중 채널·용어 보정",
+        "description": "최대 8채널을 독립 처리하고 요청당 최대 100개 전문 용어를 지정합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://x.ai/news/grok-voice-transcribe-2"
+      },
+      {
+        "name": "전사 후처리",
+        "description": "숫자·날짜 등을 표기 형식으로 바꾸고 불필요한 추임새를 제거합니다.",
+        "status": "supported",
+        "condition": "",
+        "sourceUrl": "https://x.ai/news/grok-voice-transcribe-2"
+      }
+    ],
+    "updates": [
+      {
+        "id": "grok-voice-transcribe-2-2026-10-02-routing",
+        "title": "전사 1.0 요청을 2.0으로 전환",
+        "summary": "1.0 모델이 종료되고 해당 모델 ID 요청은 동일 가격으로 2.0에 연결됩니다.",
+        "highlights": [
+          "API 모델 전환",
+          "기존 가격 유지"
+        ],
+        "publishedAt": "2026-10-02",
+        "sourceUrl": "https://docs.x.ai/developers/release-notes",
+        "audience": "기존 Grok Voice Transcribe 1.0 API 사용자",
+        "rollout": "1.0 요청 자동 연결"
+      },
+      {
+        "id": "grok-voice-transcribe-2-2026-09-18-release",
+        "title": "Grok Voice Transcribe 2.0 출시",
+        "summary": "배치·스트리밍 전사와 화자·시간·용어 정보를 제공하는 새 전사 모델을 공개했습니다.",
+        "highlights": [
+          "오디오 시간당 배치 0.10달러·스트리밍 0.20달러",
+          "화자·시간·용어 기능 포함"
+        ],
+        "publishedAt": "2026-09-18",
+        "sourceUrl": "https://x.ai/news/grok-voice-transcribe-2",
+        "audience": "Speech-to-Text API 개발자",
+        "rollout": "API 제공"
+      }
+    ],
+    "notes": [
+      "기존 카탈로그의 '기본 모델 전환 추후 예정'은 10월 2일 변경 로그로 갱신해야 합니다.",
+      "10월 14일 Grok Voice 3.0은 Speech-to-Speech 모델입니다. Transcribe 2.0의 후속 전사 모델로 표시하면 안 됩니다."
+    ]
+  }
+]

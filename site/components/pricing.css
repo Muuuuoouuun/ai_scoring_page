@@ -1,0 +1,21 @@
+.tool-price-summary{min-width:0;display:grid;gap:6px}
+.tool-price-heading{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tool-price-plan{font-size:13px;font-weight:600;margin:0}
+.tool-price-amount{display:flex;align-items:baseline;gap:5px;margin:0;color:var(--ink)}
+.tool-price-amount strong{font-size:22px;letter-spacing:-.04em}
+.tool-price-amount span{font-size:12px;color:var(--muted)}
+.tool-price-term{font-size:12px;font-weight:600;color:var(--muted);margin:0}
+.tool-price-condition,.tool-price-free-note{font-size:12px;line-height:1.65;color:var(--muted);margin:0}
+.tool-price-source{display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:11px;color:var(--muted);margin-top:3px}
+.tool-price-source .text-link{font-size:11px}
+.recommendation-price{padding:18px 20px;background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.recommendation-price>.metadata{margin:4px 0 12px}
+.price-comparison-label{font-size:13px;font-weight:700}
+.price-lower{color:var(--blue)}
+.price-higher{color:var(--muted)}
+.tool-price-caveat{font-size:11px;color:var(--muted);line-height:1.65;margin:12px 0 0}
+.similar-price-controls{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.similar-source-price{padding:16px;margin:18px 0;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
+@media(max-width:600px){.similar-price-controls{grid-template-columns:1fr}.recommendation-price{padding:16px}.tool-price-amount strong{font-size:20px}}
+
+.similar-source-price summary{cursor:pointer;font-size:14px;font-weight:600;min-height:44px;line-height:1.8}.similar-source-price[open]>.tool-price-summary{border-top:1px solid var(--line);padding-top:16px;margin-top:12px}.similar-source-price summary .metadata{font-weight:400}

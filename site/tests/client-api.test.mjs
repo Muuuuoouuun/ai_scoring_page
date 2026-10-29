@@ -3,11 +3,13 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import {createRequire} from 'node:module';
+import {harness} from './api-harness.mjs';
 const require=createRequire(import.meta.url),ts=require('typescript');
+const h=harness();
 function client(fetcher){
   const module={exports:{}};
   const code=ts.transpileModule(fs.readFileSync(new URL('../components/Provider.tsx',import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.React}}).outputText;
-  vm.runInNewContext(code,{module,exports:module.exports,require,fetch:fetcher});
+  vm.runInNewContext(code,{module,exports:module.exports,require:name=>name.startsWith('@/')?h.load(name.slice(2)+'.ts'):require(name),fetch:fetcher});
   return module.exports.api;
 }
 test('a failed network request provides a readable recovery action and does not retry a write',async()=>{
